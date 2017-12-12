@@ -21,8 +21,6 @@
     self.window.rootViewController = [[AppContext alloc] init].rootVC;
     [self.window makeKeyAndVisible];
     
-    [AppContext alloc].language;
-    
     return YES;
 }
 
