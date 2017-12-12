@@ -1,0 +1,640 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9B14351AA3E79009169839B2 /* libPods-SelfSell.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EFF52A7EC8F1C623676E10C /* libPods-SelfSell.a */; };
+		D5029CE81FDF6B1C0063D82A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D5029CE61FDF6B1C0063D82A /* AppDelegate.m */; };
+		D5029CED1FDF6BAC0063D82A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D5029CEC1FDF6BAC0063D82A /* main.m */; };
+		D5029CF21FDF6C7D0063D82A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5029CF01FDF6C7D0063D82A /* Assets.xcassets */; };
+		D5029CF61FDF6CE00063D82A /* AppContext.m in Sources */ = {isa = PBXBuildFile; fileRef = D5029CF51FDF6CE00063D82A /* AppContext.m */; };
+		D5029CF91FDF6E180063D82A /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D5029CF81FDF6E180063D82A /* Info.plist */; };
+		D5515F041FDF5A5500278579 /* SelfSellTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D5515F031FDF5A5500278579 /* SelfSellTests.m */; };
+		D5515F0F1FDF5A5500278579 /* SelfSellUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D5515F0E1FDF5A5500278579 /* SelfSellUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D5515F001FDF5A5500278579 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D5515EDF1FDF5A5500278579 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D5515EE61FDF5A5500278579;
+			remoteInfo = SelfSell;
+		};
+		D5515F0B1FDF5A5500278579 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D5515EDF1FDF5A5500278579 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D5515EE61FDF5A5500278579;
+			remoteInfo = SelfSell;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		9D18FA091712F14E3B41300F /* Pods-SelfSell.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SelfSell.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SelfSell/Pods-SelfSell.debug.xcconfig"; sourceTree = "<group>"; };
+		9EFF52A7EC8F1C623676E10C /* libPods-SelfSell.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SelfSell.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B95743EA1191B400556286F0 /* Pods-SelfSell.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SelfSell.release.xcconfig"; path = "Pods/Target Support Files/Pods-SelfSell/Pods-SelfSell.release.xcconfig"; sourceTree = "<group>"; };
+		D5029CE61FDF6B1C0063D82A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D5029CE71FDF6B1C0063D82A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D5029CEC1FDF6BAC0063D82A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D5029CF01FDF6C7D0063D82A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = SelfSell/Assets.xcassets; sourceTree = SOURCE_ROOT; };
+		D5029CF41FDF6CE00063D82A /* AppContext.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppContext.h; sourceTree = "<group>"; };
+		D5029CF51FDF6CE00063D82A /* AppContext.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppContext.m; sourceTree = "<group>"; };
+		D5029CF71FDF6D6B0063D82A /* SelfSell-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SelfSell-Prefix.pch"; sourceTree = "<group>"; };
+		D5029CF81FDF6E180063D82A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D519D34F1FDF683A00D4C9FD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D519D3501FDF684600D4C9FD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		D5515EE71FDF5A5500278579 /* SelfSell.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SelfSell.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5515EFF1FDF5A5500278579 /* SelfSellTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SelfSellTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5515F031FDF5A5500278579 /* SelfSellTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SelfSellTests.m; sourceTree = "<group>"; };
+		D5515F051FDF5A5500278579 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D5515F0A1FDF5A5500278579 /* SelfSellUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SelfSellUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5515F0E1FDF5A5500278579 /* SelfSellUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SelfSellUITests.m; sourceTree = "<group>"; };
+		D5515F101FDF5A5500278579 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D5515EE41FDF5A5500278579 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9B14351AA3E79009169839B2 /* libPods-SelfSell.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D5515EFC1FDF5A5500278579 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D5515F071FDF5A5500278579 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7F9310C7E6FC9DE930356DFF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D519D3501FDF684600D4C9FD /* UIKit.framework */,
+				D519D34F1FDF683A00D4C9FD /* Foundation.framework */,
+				9EFF52A7EC8F1C623676E10C /* libPods-SelfSell.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9B5CF5E07DAEE47E03015881 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9D18FA091712F14E3B41300F /* Pods-SelfSell.debug.xcconfig */,
+				B95743EA1191B400556286F0 /* Pods-SelfSell.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D5029CE51FDF6B070063D82A /* Context */ = {
+			isa = PBXGroup;
+			children = (
+				D5029CF41FDF6CE00063D82A /* AppContext.h */,
+				D5029CF51FDF6CE00063D82A /* AppContext.m */,
+				D5029CE71FDF6B1C0063D82A /* AppDelegate.h */,
+				D5029CE61FDF6B1C0063D82A /* AppDelegate.m */,
+				D5029CEC1FDF6BAC0063D82A /* main.m */,
+			);
+			path = Context;
+			sourceTree = "<group>";
+		};
+		D5029CE91FDF6B370063D82A /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				D5029CF01FDF6C7D0063D82A /* Assets.xcassets */,
+				D5029CF81FDF6E180063D82A /* Info.plist */,
+				D5029CF71FDF6D6B0063D82A /* SelfSell-Prefix.pch */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		D5515EDE1FDF5A5500278579 = {
+			isa = PBXGroup;
+			children = (
+				D5515EE91FDF5A5500278579 /* SelfSell */,
+				D5515F021FDF5A5500278579 /* SelfSellTests */,
+				D5515F0D1FDF5A5500278579 /* SelfSellUITests */,
+				D5515EE81FDF5A5500278579 /* Products */,
+				9B5CF5E07DAEE47E03015881 /* Pods */,
+				7F9310C7E6FC9DE930356DFF /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		D5515EE81FDF5A5500278579 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D5515EE71FDF5A5500278579 /* SelfSell.app */,
+				D5515EFF1FDF5A5500278579 /* SelfSellTests.xctest */,
+				D5515F0A1FDF5A5500278579 /* SelfSellUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D5515EE91FDF5A5500278579 /* SelfSell */ = {
+			isa = PBXGroup;
+			children = (
+				D5029CE51FDF6B070063D82A /* Context */,
+				D5029CE91FDF6B370063D82A /* Resource */,
+			);
+			path = SelfSell;
+			sourceTree = "<group>";
+		};
+		D5515F021FDF5A5500278579 /* SelfSellTests */ = {
+			isa = PBXGroup;
+			children = (
+				D5515F031FDF5A5500278579 /* SelfSellTests.m */,
+				D5515F051FDF5A5500278579 /* Info.plist */,
+			);
+			path = SelfSellTests;
+			sourceTree = "<group>";
+		};
+		D5515F0D1FDF5A5500278579 /* SelfSellUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D5515F0E1FDF5A5500278579 /* SelfSellUITests.m */,
+				D5515F101FDF5A5500278579 /* Info.plist */,
+			);
+			path = SelfSellUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D5515EE61FDF5A5500278579 /* SelfSell */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D5515F131FDF5A5500278579 /* Build configuration list for PBXNativeTarget "SelfSell" */;
+			buildPhases = (
+				70B55F366A0FEF07E4974EA1 /* [CP] Check Pods Manifest.lock */,
+				D5515EE31FDF5A5500278579 /* Sources */,
+				D5515EE41FDF5A5500278579 /* Frameworks */,
+				D5515EE51FDF5A5500278579 /* Resources */,
+				48B1AA8F0510176BBA65A377 /* [CP] Embed Pods Frameworks */,
+				CED382B58FBC210815906CCB /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SelfSell;
+			productName = SelfSell;
+			productReference = D5515EE71FDF5A5500278579 /* SelfSell.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D5515EFE1FDF5A5500278579 /* SelfSellTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D5515F161FDF5A5500278579 /* Build configuration list for PBXNativeTarget "SelfSellTests" */;
+			buildPhases = (
+				D5515EFB1FDF5A5500278579 /* Sources */,
+				D5515EFC1FDF5A5500278579 /* Frameworks */,
+				D5515EFD1FDF5A5500278579 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D5515F011FDF5A5500278579 /* PBXTargetDependency */,
+			);
+			name = SelfSellTests;
+			productName = SelfSellTests;
+			productReference = D5515EFF1FDF5A5500278579 /* SelfSellTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D5515F091FDF5A5500278579 /* SelfSellUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D5515F191FDF5A5500278579 /* Build configuration list for PBXNativeTarget "SelfSellUITests" */;
+			buildPhases = (
+				D5515F061FDF5A5500278579 /* Sources */,
+				D5515F071FDF5A5500278579 /* Frameworks */,
+				D5515F081FDF5A5500278579 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D5515F0C1FDF5A5500278579 /* PBXTargetDependency */,
+			);
+			name = SelfSellUITests;
+			productName = SelfSellUITests;
+			productReference = D5515F0A1FDF5A5500278579 /* SelfSellUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D5515EDF1FDF5A5500278579 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0910;
+				ORGANIZATIONNAME = Goopal;
+				TargetAttributes = {
+					D5515EE61FDF5A5500278579 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+					};
+					D5515EFE1FDF5A5500278579 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = D5515EE61FDF5A5500278579;
+					};
+					D5515F091FDF5A5500278579 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = D5515EE61FDF5A5500278579;
+					};
+				};
+			};
+			buildConfigurationList = D5515EE21FDF5A5500278579 /* Build configuration list for PBXProject "SelfSell" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D5515EDE1FDF5A5500278579;
+			productRefGroup = D5515EE81FDF5A5500278579 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D5515EE61FDF5A5500278579 /* SelfSell */,
+				D5515EFE1FDF5A5500278579 /* SelfSellTests */,
+				D5515F091FDF5A5500278579 /* SelfSellUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D5515EE51FDF5A5500278579 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D5029CF91FDF6E180063D82A /* Info.plist in Resources */,
+				D5029CF21FDF6C7D0063D82A /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D5515EFD1FDF5A5500278579 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D5515F081FDF5A5500278579 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		48B1AA8F0510176BBA65A377 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SelfSell/Pods-SelfSell-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		70B55F366A0FEF07E4974EA1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SelfSell-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CED382B58FBC210815906CCB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SelfSell/Pods-SelfSell-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D5515EE31FDF5A5500278579 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D5029CED1FDF6BAC0063D82A /* main.m in Sources */,
+				D5029CE81FDF6B1C0063D82A /* AppDelegate.m in Sources */,
+				D5029CF61FDF6CE00063D82A /* AppContext.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D5515EFB1FDF5A5500278579 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D5515F041FDF5A5500278579 /* SelfSellTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D5515F061FDF5A5500278579 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D5515F0F1FDF5A5500278579 /* SelfSellUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D5515F011FDF5A5500278579 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D5515EE61FDF5A5500278579 /* SelfSell */;
+			targetProxy = D5515F001FDF5A5500278579 /* PBXContainerItemProxy */;
+		};
+		D5515F0C1FDF5A5500278579 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D5515EE61FDF5A5500278579 /* SelfSell */;
+			targetProxy = D5515F0B1FDF5A5500278579 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		D5515F111FDF5A5500278579 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		D5515F121FDF5A5500278579 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D5515F141FDF5A5500278579 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9D18FA091712F14E3B41300F /* Pods-SelfSell.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FA78T6VRG8;
+				GCC_PREFIX_HEADER = "SelfSell/Resource/SelfSell-Prefix.pch";
+				INFOPLIST_FILE = SelfSell/Resource/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Goopal.SelfSell;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		D5515F151FDF5A5500278579 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B95743EA1191B400556286F0 /* Pods-SelfSell.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FA78T6VRG8;
+				GCC_PREFIX_HEADER = "SelfSell/Resource/SelfSell-Prefix.pch";
+				INFOPLIST_FILE = SelfSell/Resource/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Goopal.SelfSell;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		D5515F171FDF5A5500278579 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FA78T6VRG8;
+				INFOPLIST_FILE = SelfSellTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Goopal.SelfSellTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SelfSell.app/SelfSell";
+			};
+			name = Debug;
+		};
+		D5515F181FDF5A5500278579 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FA78T6VRG8;
+				INFOPLIST_FILE = SelfSellTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Goopal.SelfSellTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SelfSell.app/SelfSell";
+			};
+			name = Release;
+		};
+		D5515F1A1FDF5A5500278579 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FA78T6VRG8;
+				INFOPLIST_FILE = SelfSellUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Goopal.SelfSellUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SelfSell;
+			};
+			name = Debug;
+		};
+		D5515F1B1FDF5A5500278579 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FA78T6VRG8;
+				INFOPLIST_FILE = SelfSellUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Goopal.SelfSellUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SelfSell;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D5515EE21FDF5A5500278579 /* Build configuration list for PBXProject "SelfSell" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D5515F111FDF5A5500278579 /* Debug */,
+				D5515F121FDF5A5500278579 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D5515F131FDF5A5500278579 /* Build configuration list for PBXNativeTarget "SelfSell" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D5515F141FDF5A5500278579 /* Debug */,
+				D5515F151FDF5A5500278579 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D5515F161FDF5A5500278579 /* Build configuration list for PBXNativeTarget "SelfSellTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D5515F171FDF5A5500278579 /* Debug */,
+				D5515F181FDF5A5500278579 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D5515F191FDF5A5500278579 /* Build configuration list for PBXNativeTarget "SelfSellUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D5515F1A1FDF5A5500278579 /* Debug */,
+				D5515F1B1FDF5A5500278579 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D5515EDF1FDF5A5500278579 /* Project object */;
+}

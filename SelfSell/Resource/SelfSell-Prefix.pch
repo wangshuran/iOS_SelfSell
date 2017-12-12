@@ -1,0 +1,25 @@
+//
+//  SelfSell-Prefix.pch
+//  SelfSell
+//
+//  Created by liqiang on 2017/12/12.
+//  Copyright © 2017年 Goopal. All rights reserved.
+//
+
+#ifndef SelfSell_Prefix_pch
+#define SelfSell_Prefix_pch
+
+#ifdef __OBJC__
+
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+
+#import "LBaseClass.h"
+
+#import "AppContext.h"
+#import "AppDelegate.h"
+
+
+#endif
+
+#endif /* SelfSell_Prefix_pch */
