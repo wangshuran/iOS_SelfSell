@@ -25,12 +25,31 @@
 - (LNavigationController *)n1VC {
     if (!_n1VC) {
         LViewController *v1 = [[LViewController alloc] init];
-        v1.view.backgroundColor = [LColor randomColor];
+        v1.view.backgroundColor = [LColor randomColor];        
         
-        _n1VC = [[LNavigationController alloc] initWithRootViewController:v1];        
+        _n1VC = [[LNavigationController alloc] initWithRootViewController:v1];
     }
     
     return _n1VC;
+}
+
+- (Language)language {
+    if (_language == LanguageNone) {
+        NSArray *allLanguages = [NSUserDefaults.standardUserDefaults objectForKey:@"AppleLanguages"];
+        NSString *preferredLang = [allLanguages objectAtIndex:0];
+        
+        if ([preferredLang isEqualToString:@"zh-Hant-US"]) {            
+            _language = LanguageTC;
+        }else if ([preferredLang isEqualToString:@"zh-Hans-US"]) {
+            _language = LanguageSC;
+        }else if ([preferredLang isEqualToString:@"en"]) {
+            _language = LanguageEN;
+        }else {
+            _language = LanguageEN;
+        }
+    }
+    
+    return _language;
 }
 
 @end

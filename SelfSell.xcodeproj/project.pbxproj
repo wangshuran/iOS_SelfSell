@@ -10,11 +10,11 @@
 		9B14351AA3E79009169839B2 /* libPods-SelfSell.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EFF52A7EC8F1C623676E10C /* libPods-SelfSell.a */; };
 		D5029CE81FDF6B1C0063D82A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D5029CE61FDF6B1C0063D82A /* AppDelegate.m */; };
 		D5029CED1FDF6BAC0063D82A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D5029CEC1FDF6BAC0063D82A /* main.m */; };
-		D5029CF21FDF6C7D0063D82A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5029CF01FDF6C7D0063D82A /* Assets.xcassets */; };
 		D5029CF61FDF6CE00063D82A /* AppContext.m in Sources */ = {isa = PBXBuildFile; fileRef = D5029CF51FDF6CE00063D82A /* AppContext.m */; };
 		D5029CF91FDF6E180063D82A /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D5029CF81FDF6E180063D82A /* Info.plist */; };
 		D53B6B8D1FDF7A77006AEB46 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D53B6B8F1FDF7A77006AEB46 /* Localizable.strings */; };
 		D53B6B981FDF7DAD006AEB46 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D53B6B9A1FDF7DAD006AEB46 /* InfoPlist.strings */; };
+		D540F5421FDF83DF00AECCB7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D540F5411FDF83DF00AECCB7 /* Assets.xcassets */; };
 		D5515F041FDF5A5500278579 /* SelfSellTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D5515F031FDF5A5500278579 /* SelfSellTests.m */; };
 		D5515F0F1FDF5A5500278579 /* SelfSellUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D5515F0E1FDF5A5500278579 /* SelfSellUITests.m */; };
 /* End PBXBuildFile section */
@@ -43,7 +43,6 @@
 		D5029CE61FDF6B1C0063D82A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		D5029CE71FDF6B1C0063D82A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D5029CEC1FDF6BAC0063D82A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		D5029CF01FDF6C7D0063D82A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = SelfSell/Assets.xcassets; sourceTree = SOURCE_ROOT; };
 		D5029CF41FDF6CE00063D82A /* AppContext.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppContext.h; sourceTree = "<group>"; };
 		D5029CF51FDF6CE00063D82A /* AppContext.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppContext.m; sourceTree = "<group>"; };
 		D5029CF71FDF6D6B0063D82A /* SelfSell-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SelfSell-Prefix.pch"; sourceTree = "<group>"; };
@@ -56,6 +55,7 @@
 		D53B6B991FDF7DAD006AEB46 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D53B6B9B1FDF7DB3006AEB46 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		D53B6B9C1FDF7DB4006AEB46 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		D540F5411FDF83DF00AECCB7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D5515EE71FDF5A5500278579 /* SelfSell.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SelfSell.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5515EFF1FDF5A5500278579 /* SelfSellTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SelfSellTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5515F031FDF5A5500278579 /* SelfSellTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SelfSellTests.m; sourceTree = "<group>"; };
@@ -125,10 +125,10 @@
 		D5029CE91FDF6B370063D82A /* Resource */ = {
 			isa = PBXGroup;
 			children = (
-				D5029CF01FDF6C7D0063D82A /* Assets.xcassets */,
 				D5029CF81FDF6E180063D82A /* Info.plist */,
 				D53B6B9A1FDF7DAD006AEB46 /* InfoPlist.strings */,
 				D53B6B8F1FDF7A77006AEB46 /* Localizable.strings */,
+				D540F5411FDF83DF00AECCB7 /* Assets.xcassets */,
 				D5029CF71FDF6D6B0063D82A /* SelfSell-Prefix.pch */,
 			);
 			path = Resource;
@@ -294,10 +294,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D540F5421FDF83DF00AECCB7 /* Assets.xcassets in Resources */,
 				D5029CF91FDF6E180063D82A /* Info.plist in Resources */,
 				D53B6B981FDF7DAD006AEB46 /* InfoPlist.strings in Resources */,
 				D53B6B8D1FDF7A77006AEB46 /* Localizable.strings in Resources */,
-				D5029CF21FDF6C7D0063D82A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

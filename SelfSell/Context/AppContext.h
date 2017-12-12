@@ -8,6 +8,18 @@
 
 #import <LBaseClass/LBaseClass.h>
 
+typedef enum : NSUInteger {
+    LanguageNone,//未知
+    LanguageEN,//英文
+    LanguageTC,//繁体中文
+    LanguageSC,//简体中文
+} Language;
+
+
+
+/**
+ 上下文
+ */
 @interface AppContext : LObject
 
 /**
@@ -19,5 +31,10 @@
  DEMO_N1
  */
 @property (nonatomic, strong) LNavigationController *n1VC;
+
+/**
+ 当前语言
+ */
+@property (nonatomic, assign) Language language;
 
 @end
