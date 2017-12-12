@@ -7,46 +7,48 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		067EFC31BF07362A1F40248438BFB95A /* LColor.m in Sources */ = {isa = PBXBuildFile; fileRef = B4026CD6E061989E1FF33C6835EDBB3D /* LColor.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		0935E90F4FFC629BCC7BE84AD8586709 /* LTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = A4208E68E02003197F036B4B77AD4AAF /* LTabBar.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		0CD110108D9DE611BB7C3C41FE9ADB36 /* LNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C793F1D0DAC935413C9FB44F020F7D9 /* LNavigationController.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		1440CA04795D0EEAE42638E041336F23 /* LTabBarController.h in Headers */ = {isa = PBXBuildFile; fileRef = 2FAAAEFA7AD556E2593FDAAED7661915 /* LTabBarController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2992EB9C5AF0589879F8A7EEEA592B81 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		053AD592EEFBB07D82C932E907CEDD93 /* LTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92710136F7BBAFE7536C6884EF2A53E6 /* LTabBarController.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		25FDAE61DFA88C7D8B10936892DC1CB9 /* LImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA38E5B3FC09512648EF3436247E2705 /* LImageView.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		28F91ED1AC2FE4139960EA5FA495F840 /* LTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 147BB5FDEA50B57B44CF904197C3FC41 /* LTableViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2B2D9B85CA033E7335F6072DB0EDD596 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		2D3EB5DA1C2BA7423B8CC159DA809CDA /* LTabBar.h in Headers */ = {isa = PBXBuildFile; fileRef = AA88E2CC82DC0DFD02B0520BFC2C6DA8 /* LTabBar.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3595EB4EF5E56E930A6125A6D39E25E7 /* LTableView.h in Headers */ = {isa = PBXBuildFile; fileRef = 131DE19B0FAEF80F6C0C1CB4C0FD0BD7 /* LTableView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3828941D9FE283AF81DAF6EFFC5852B5 /* LContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D08C8DB3B6293B1B61B327D15822BA1 /* LContext.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		4B97588A3C5D29FE8B6CA0E1AA8000D8 /* LImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E2914A818105A309BA30E5E4B166A5 /* LImageView.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		50BA534FEF77FF8353B8A8264F7CA30B /* LImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AB18CE810C9503D07D950B7FE2072DE /* LImageView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		592D30EF7801B9F413C4F9D33E311EE7 /* LInitProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 894AA0381F0760EB76E6F80F589FACAF /* LInitProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5B72ADA95041C3DEE1F140E8FF3B18BF /* LColor.h in Headers */ = {isa = PBXBuildFile; fileRef = F210DF61A1EB1E2B35490B060C524CD9 /* LColor.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5E00DA3DA7B26957ED7DA250F25EB521 /* LView.h in Headers */ = {isa = PBXBuildFile; fileRef = 245BE4A51600D3C27FCC39E589752E56 /* LView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		64367B980852C296E6643CA5044E3CEF /* LScrollView.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E04F6AB1A9AAB2C848A19A4EE46EA92 /* LScrollView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6B70AC8B6F261757F3428A59A61C4B17 /* LView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0370C80BAA0B5022C828E05365DD39A2 /* LView.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		6C9B2D2DBCC3F1898BF136012F4E813E /* LLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E4298D50E3083F9B258D92E3EB36A55 /* LLabel.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		7D8FA0B14C380DCCF183D6F5A9B06FD3 /* LTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = BE06DF00805557F73FE1BAFE4BBF1D0F /* LTableViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8870CCB152AC8AFA1DA3898E93EEEF58 /* LTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D1739A92ED90B431E03AD067D76FED9 /* LTabBarController.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		98DD641F5C2BBC742E8125D151BEFB76 /* LViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 516746EBAFB1913710908060A66FC9DE /* LViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9DD99398DA17A3C5C5A828E09F6C0DF4 /* LNavigationController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BC8FF5A4DC16FA0D37A5706C1FBF4A9 /* LNavigationController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AA23C004EC206EC8C0B68B6BC5B21BAD /* LLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = 44A7FEE2B6A8A25F3CFE59011F8A1CE9 /* LLabel.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AF6E660C360C302DA3FD8D7AB80E1AAB /* LObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 3458AB4EBFD545F1DE905030C37D1FDC /* LObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B610981D4898623329CED4B0B0649B0F /* LViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 239EEC3A516BD5B95855ED3126194D51 /* LViewController.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		2E5F19AE417A901B4778AF822AA18B1F /* UIDevice+IdentifierAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = FC584570260685FC1DB53A66CF960171 /* UIDevice+IdentifierAddition.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		39FD019865B54DE16B71A841B66755EC /* LBaseClass-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DCFC4B20971F2333D97ED4A7CB023FB /* LBaseClass-dummy.m */; };
+		3AE76D17B69598FB31B87BD06E4EB7D6 /* LObject.h in Headers */ = {isa = PBXBuildFile; fileRef = B0A4DC03B20EB7502DC0F72EC8548EA9 /* LObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3C162A8024B714D98C48EC3E0CDFD136 /* LObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1008539AAAED6D003AB57F9ECC8556E4 /* LObject.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		420B5CAD8257E3F55EE9DA4B78D89AC8 /* LTabBar.h in Headers */ = {isa = PBXBuildFile; fileRef = 88DF624EB7B6051BDADBBF3B4DC8EBB0 /* LTabBar.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		44E2582ECC965E1AA45272F742E241E1 /* LView.h in Headers */ = {isa = PBXBuildFile; fileRef = 81946232C163F6808649C21398963EA9 /* LView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4E8AC59F79C030458C170A9F1AD1945B /* LImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F5505C3C03BCA2BB28FBB3B4587C066 /* LImageView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		53A47356921A355FAC24A3E58E5F45F7 /* LView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F6E08A882E9F6AF0CB70746DA74030E /* LView.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		53F0B323D8BEAD563CC1260198A13101 /* LBaseClass.h in Headers */ = {isa = PBXBuildFile; fileRef = E7FAA35DFB213440BDC9E225394F8985 /* LBaseClass.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5BD00F029414383B588CF4207F95BE34 /* LNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA2BE27E34AE44564F815261DA6E39D5 /* LNavigationController.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		61CE3A0750EF346165F50BB7C71BF602 /* LContext.h in Headers */ = {isa = PBXBuildFile; fileRef = 04536A1D071AE94EB16B6011DE41ED63 /* LContext.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6570BF61454ACF4038D91D0C6CA02916 /* LColor.h in Headers */ = {isa = PBXBuildFile; fileRef = C22D680F400439D79F50834D855C9276 /* LColor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7754F0AEA9A8492BE5DC7AB81CD9A409 /* LTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E42452DC3FE6D0E222745A9B5AD7AF5 /* LTextField.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		825764A6ACAB284E11EDC65E788CF8BD /* LViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 601CBDFFF6FA32C8BB2570AC348FD023 /* LViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		87F5BCDF50EAC6E68972962A5694820A /* LLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = D5832884B4A93E81E87EF1F62FBF6B27 /* LLabel.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		88C29223246419F1C155FB77BCBF0E7F /* LViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 903959FA7E376A7AF85BB87591B28DB9 /* LViewController.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		8BDAE60D6B9F80D102F92390BA2C32F7 /* LScrollView.h in Headers */ = {isa = PBXBuildFile; fileRef = 8A0F2B1A0D23764744A6F46D79E301F9 /* LScrollView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		916DDBBA0FBCC94425DBE77E74B71ABD /* LSingleton.h in Headers */ = {isa = PBXBuildFile; fileRef = 9BF54F9629284A5A90F5429B11B6D73D /* LSingleton.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9C2D8ACEAC0D312DF03161347911C55B /* LButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 55F850ECE43F6960EB2A6EE7D229D90D /* LButton.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		A02C70BDEF219CCD4B05FA6A94CDCFB1 /* LContext.m in Sources */ = {isa = PBXBuildFile; fileRef = AA03DD98EAE7976290E5B4F64DC8A678 /* LContext.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		A145754E97D57FD65D8FC3ABA02C87C6 /* LTabBarController.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FE3433A5FBD76B44E1E46F07B8239A9 /* LTabBarController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ADCC91F550DA0CC4CE5993407FF1FDBE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		B3D0605EFC93B7F7CC58F34DBA9A3DCE /* LTableView.h in Headers */ = {isa = PBXBuildFile; fileRef = 96C6248517A8CF28AE7C839B8731254C /* LTableView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B85837EC7B35A0BDBF7D6874A082A80B /* Pods-SelfSell-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 674302844D041E01FE62EA44852FF47B /* Pods-SelfSell-dummy.m */; };
-		BB71FFEB396578C32FDD8B791E236C28 /* LBaseClass-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CA418A44660926DBF1A06E8A548217C /* LBaseClass-dummy.m */; };
-		BE4B3411E8FB0CE46A02F55157B949F4 /* LButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F1E545F1E2B2B1CC640A1A7ED0D1E36 /* LButton.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		CE255562F4138B50C7DE45F8ABC0A2C6 /* LTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = 43638B281F90FA7CBE42962D5ED8E27E /* LTextField.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DF3A3F21C189749A2C6BD1C2C1EB0A75 /* LObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E79303AA47E526D2C1DBC0483988DF8 /* LObject.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		DFFCF3ED1A89C618FCA2FF97605BF627 /* UIDevice+IdentifierAddition.h in Headers */ = {isa = PBXBuildFile; fileRef = 61588B9EB8A2BD80C47BE554D1DB67F3 /* UIDevice+IdentifierAddition.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E439D085FF2CB0765ACFB333AE5F8C6A /* LBaseClass.h in Headers */ = {isa = PBXBuildFile; fileRef = E33A4DA2E481AF5F4380BA7DB9F16CF5 /* LBaseClass.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E58780C89C08B060D93A093864ACC62E /* LContext.h in Headers */ = {isa = PBXBuildFile; fileRef = AD83A4C369589839FB3753BB0180E557 /* LContext.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E86DF6560A1AAEB5BE593C07AC3B2918 /* LTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 51E7D3E654BB746E98CBAA0B86A5B9FD /* LTableView.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		E8A7C38DD48C34167F36AD9FABEB3934 /* LModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D9AEE519AA84A4659F6DA6F00C9BE6B /* LModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E939212C8A761B5656B5C19BAC263E4E /* UIDevice+IdentifierAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BA61FFC6287E598165F3C387EF50BAF /* UIDevice+IdentifierAddition.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		EF526E9133F8A89F4793A220E11765F0 /* LModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 87155344333E2EB04C9A9A1B1320756C /* LModel.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		F0FA64896BC97E3A86D47699DAA07E39 /* LButton.h in Headers */ = {isa = PBXBuildFile; fileRef = BD42FD5C878563FE5A7375DCB92A813C /* LButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F2788C74430DC01C90AE265E09E0776F /* LTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A50C237F705CA891E55400F74D117932 /* LTableViewController.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		F299B7E08E6230FD041C997EA778AAC6 /* LTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = D20077A251393F40A11CC39BDD724539 /* LTextField.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		FC117165BB136B7D71A04359B06810AF /* LScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 48DA39A284A96B5D48326FA47490803B /* LScrollView.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		C6A37DAAD5337504271A96CC8E2B943C /* LNavigationController.h in Headers */ = {isa = PBXBuildFile; fileRef = 563C0EA9F21B4B30A7BFD0C864AE39FA /* LNavigationController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C9D088B1E47E67E48D6FB39FE0DDF990 /* LLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A47111A8048B9C5B5DBA14624B558E6 /* LLabel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CA477146D5C774C8CC41B55115E3230E /* Singleton.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A651BFD2A00C1AE51C60259662F4889 /* Singleton.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CF60CEDB2A24163CBBD4E1DD18108A24 /* LModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 7C6737D50572B11077EE1805CA0FC566 /* LModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D068539DDB74DDABF769C7FF58CBF58D /* LScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = D107EEC5BB4ED5B1AB5CF34A59D2FEA7 /* LScrollView.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		D10E4997AB15C8F0DA3113D585588E93 /* LInitProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 61DEC45B97FA58934E78E7AB36CE8E99 /* LInitProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D219DA1EC4003A5174A9326231E08165 /* LButton.h in Headers */ = {isa = PBXBuildFile; fileRef = C0F872E1BB8DBC29832EC25535C0417E /* LButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D255F83A279B2977CBED41A8467B21CC /* LColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A3FE4BC13E955FC0910CFFE89F943AA /* LColor.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		D35FB5C072D873BEB5639DFAD90C7DD9 /* LModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 79FC87FA2425D5693C7AFAFCAA80AE03 /* LModel.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		D9FE354594F16EBA07591E4BF4DFDC02 /* LTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E75384A22B5BD822D1C0A50D6A39838 /* LTableViewController.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		DE655C860ADFA36947A608003AD687C9 /* LTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 28B5C88F26AAA5117A8D048524C72C14 /* LTabBar.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		EC4C7766029C24EF4E3FF02C66EC6A19 /* LTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = A5FF0809FA8F9F6D59FD68AD7E6A4BCC /* LTextField.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EDCC7A878A5191B2E666A88A11EC4317 /* UIDevice+IdentifierAddition.h in Headers */ = {isa = PBXBuildFile; fileRef = C1DD7B766489178980D7E1F0BB4111E0 /* UIDevice+IdentifierAddition.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FD9108BA1B802FDCCFC21E7EFBF8E1F9 /* LTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = AA33AA9CDB9F6A1BDA334540DF1B577F /* LTableView.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,70 +56,72 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 4B645FB0C0B2D043E84585202E74466C;
+			remoteGlobalIDString = 2D2138DDF51FA89814BAD4F716FBEB57;
 			remoteInfo = LBaseClass;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		000CAB8BC43EAED1447339C7A49C9928 /* Pods-SelfSell-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SelfSell-frameworks.sh"; sourceTree = "<group>"; };
-		0370C80BAA0B5022C828E05365DD39A2 /* LView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LView.m; path = LBaseClass/LBaseClass/LView/LView.m; sourceTree = "<group>"; };
-		0BC8FF5A4DC16FA0D37A5706C1FBF4A9 /* LNavigationController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LNavigationController.h; path = LBaseClass/LBaseClass/LController/LNavigationController.h; sourceTree = "<group>"; };
-		0CA418A44660926DBF1A06E8A548217C /* LBaseClass-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LBaseClass-dummy.m"; sourceTree = "<group>"; };
-		0E4298D50E3083F9B258D92E3EB36A55 /* LLabel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LLabel.m; path = LBaseClass/LBaseClass/LView/LLabel.m; sourceTree = "<group>"; };
-		131DE19B0FAEF80F6C0C1CB4C0FD0BD7 /* LTableView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LTableView.h; path = LBaseClass/LBaseClass/LView/LTableView.h; sourceTree = "<group>"; };
+		04536A1D071AE94EB16B6011DE41ED63 /* LContext.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LContext.h; path = LBaseClass/LBaseClass/LContext/LContext.h; sourceTree = "<group>"; };
+		1008539AAAED6D003AB57F9ECC8556E4 /* LObject.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LObject.m; path = LBaseClass/LBaseClass/LModel/LObject.m; sourceTree = "<group>"; };
+		1122F3B8C6A17CD72B7772BB67BE531A /* LBaseClass-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LBaseClass-prefix.pch"; sourceTree = "<group>"; };
+		147BB5FDEA50B57B44CF904197C3FC41 /* LTableViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LTableViewController.h; path = LBaseClass/LBaseClass/LController/LTableViewController.h; sourceTree = "<group>"; };
+		189F3D1F215BC80EC412C53AA8856353 /* LBaseClass.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LBaseClass.xcconfig; sourceTree = "<group>"; };
+		1A651BFD2A00C1AE51C60259662F4889 /* Singleton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Singleton.h; path = LBaseClass/LBaseClass/LSingleton/Singleton.h; sourceTree = "<group>"; };
 		1B34739FFD75EC6DABF2EF1F410B3115 /* Pods-SelfSell-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SelfSell-acknowledgements.markdown"; sourceTree = "<group>"; };
 		1E4A19267BB389759F8B8E8EF83F9B8A /* Pods-SelfSell.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SelfSell.debug.xcconfig"; sourceTree = "<group>"; };
-		1E79303AA47E526D2C1DBC0483988DF8 /* LObject.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LObject.m; path = LBaseClass/LBaseClass/LModel/LObject.m; sourceTree = "<group>"; };
-		239EEC3A516BD5B95855ED3126194D51 /* LViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LViewController.m; path = LBaseClass/LBaseClass/LController/LViewController.m; sourceTree = "<group>"; };
-		245BE4A51600D3C27FCC39E589752E56 /* LView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LView.h; path = LBaseClass/LBaseClass/LView/LView.h; sourceTree = "<group>"; };
-		2D9AEE519AA84A4659F6DA6F00C9BE6B /* LModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LModel.h; path = LBaseClass/LBaseClass/LModel/LModel.h; sourceTree = "<group>"; };
-		2FAAAEFA7AD556E2593FDAAED7661915 /* LTabBarController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LTabBarController.h; path = LBaseClass/LBaseClass/LController/LTabBarController.h; sourceTree = "<group>"; };
-		3458AB4EBFD545F1DE905030C37D1FDC /* LObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LObject.h; path = LBaseClass/LBaseClass/LModel/LObject.h; sourceTree = "<group>"; };
-		3BA61FFC6287E598165F3C387EF50BAF /* UIDevice+IdentifierAddition.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIDevice+IdentifierAddition.m"; path = "LBaseClass/LBaseClass/LCategory/UIDevice+IdentifierAddition.m"; sourceTree = "<group>"; };
-		434D2F205CC82B3D625FB99C4E547CE0 /* LBaseClass.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LBaseClass.xcconfig; sourceTree = "<group>"; };
-		43638B281F90FA7CBE42962D5ED8E27E /* LTextField.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LTextField.h; path = LBaseClass/LBaseClass/LView/LTextField.h; sourceTree = "<group>"; };
-		44A7FEE2B6A8A25F3CFE59011F8A1CE9 /* LLabel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LLabel.h; path = LBaseClass/LBaseClass/LView/LLabel.h; sourceTree = "<group>"; };
-		48DA39A284A96B5D48326FA47490803B /* LScrollView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LScrollView.m; path = LBaseClass/LBaseClass/LView/LScrollView.m; sourceTree = "<group>"; };
-		4AB18CE810C9503D07D950B7FE2072DE /* LImageView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LImageView.h; path = LBaseClass/LBaseClass/LView/LImageView.h; sourceTree = "<group>"; };
+		1F5505C3C03BCA2BB28FBB3B4587C066 /* LImageView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LImageView.h; path = LBaseClass/LBaseClass/LView/LImageView.h; sourceTree = "<group>"; };
+		28B5C88F26AAA5117A8D048524C72C14 /* LTabBar.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LTabBar.m; path = LBaseClass/LBaseClass/LView/LTabBar.m; sourceTree = "<group>"; };
+		2E75384A22B5BD822D1C0A50D6A39838 /* LTableViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LTableViewController.m; path = LBaseClass/LBaseClass/LController/LTableViewController.m; sourceTree = "<group>"; };
+		2F6E08A882E9F6AF0CB70746DA74030E /* LView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LView.m; path = LBaseClass/LBaseClass/LView/LView.m; sourceTree = "<group>"; };
 		4FF5C4BD0B4B7E981E73F27DBACCD3CB /* libPods-SelfSell.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-SelfSell.a"; path = "libPods-SelfSell.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		516746EBAFB1913710908060A66FC9DE /* LViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LViewController.h; path = LBaseClass/LBaseClass/LController/LViewController.h; sourceTree = "<group>"; };
-		51E7D3E654BB746E98CBAA0B86A5B9FD /* LTableView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LTableView.m; path = LBaseClass/LBaseClass/LView/LTableView.m; sourceTree = "<group>"; };
+		55F850ECE43F6960EB2A6EE7D229D90D /* LButton.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LButton.m; path = LBaseClass/LBaseClass/LView/LButton.m; sourceTree = "<group>"; };
+		563C0EA9F21B4B30A7BFD0C864AE39FA /* LNavigationController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LNavigationController.h; path = LBaseClass/LBaseClass/LController/LNavigationController.h; sourceTree = "<group>"; };
 		595FA8B83064C358466ABB376B98B0E0 /* Pods-SelfSell.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SelfSell.release.xcconfig"; sourceTree = "<group>"; };
-		61588B9EB8A2BD80C47BE554D1DB67F3 /* UIDevice+IdentifierAddition.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIDevice+IdentifierAddition.h"; path = "LBaseClass/LBaseClass/LCategory/UIDevice+IdentifierAddition.h"; sourceTree = "<group>"; };
+		5DCFC4B20971F2333D97ED4A7CB023FB /* LBaseClass-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LBaseClass-dummy.m"; sourceTree = "<group>"; };
+		601CBDFFF6FA32C8BB2570AC348FD023 /* LViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LViewController.h; path = LBaseClass/LBaseClass/LController/LViewController.h; sourceTree = "<group>"; };
+		61DEC45B97FA58934E78E7AB36CE8E99 /* LInitProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LInitProtocol.h; path = LBaseClass/LBaseClass/LProtocol/LInitProtocol.h; sourceTree = "<group>"; };
 		629B1D4220894CBB3CA98F9FB8F416D5 /* Pods-SelfSell-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SelfSell-resources.sh"; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		674302844D041E01FE62EA44852FF47B /* Pods-SelfSell-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SelfSell-dummy.m"; sourceTree = "<group>"; };
-		6F1E545F1E2B2B1CC640A1A7ED0D1E36 /* LButton.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LButton.m; path = LBaseClass/LBaseClass/LView/LButton.m; sourceTree = "<group>"; };
-		73F3CFB363145C1A86FB47790C3999D4 /* LBaseClass-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LBaseClass-prefix.pch"; sourceTree = "<group>"; };
+		79FC87FA2425D5693C7AFAFCAA80AE03 /* LModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LModel.m; path = LBaseClass/LBaseClass/LModel/LModel.m; sourceTree = "<group>"; };
 		7C6626DDD74B58062F05BDC340D395BC /* libLBaseClass.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libLBaseClass.a; path = libLBaseClass.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		87155344333E2EB04C9A9A1B1320756C /* LModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LModel.m; path = LBaseClass/LBaseClass/LModel/LModel.m; sourceTree = "<group>"; };
+		7C6737D50572B11077EE1805CA0FC566 /* LModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LModel.h; path = LBaseClass/LBaseClass/LModel/LModel.h; sourceTree = "<group>"; };
+		7E42452DC3FE6D0E222745A9B5AD7AF5 /* LTextField.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LTextField.m; path = LBaseClass/LBaseClass/LView/LTextField.m; sourceTree = "<group>"; };
+		81946232C163F6808649C21398963EA9 /* LView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LView.h; path = LBaseClass/LBaseClass/LView/LView.h; sourceTree = "<group>"; };
+		88DF624EB7B6051BDADBBF3B4DC8EBB0 /* LTabBar.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LTabBar.h; path = LBaseClass/LBaseClass/LView/LTabBar.h; sourceTree = "<group>"; };
 		89121DB9BEB0F98453F9B8AFE0EB2750 /* Pods-SelfSell-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SelfSell-acknowledgements.plist"; sourceTree = "<group>"; };
-		894AA0381F0760EB76E6F80F589FACAF /* LInitProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LInitProtocol.h; path = LBaseClass/LBaseClass/LProtocol/LInitProtocol.h; sourceTree = "<group>"; };
-		8E04F6AB1A9AAB2C848A19A4EE46EA92 /* LScrollView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LScrollView.h; path = LBaseClass/LBaseClass/LView/LScrollView.h; sourceTree = "<group>"; };
+		8A0F2B1A0D23764744A6F46D79E301F9 /* LScrollView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LScrollView.h; path = LBaseClass/LBaseClass/LView/LScrollView.h; sourceTree = "<group>"; };
+		8A3FE4BC13E955FC0910CFFE89F943AA /* LColor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LColor.m; path = LBaseClass/LBaseClass/LView/LColor.m; sourceTree = "<group>"; };
+		903959FA7E376A7AF85BB87591B28DB9 /* LViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LViewController.m; path = LBaseClass/LBaseClass/LController/LViewController.m; sourceTree = "<group>"; };
+		92710136F7BBAFE7536C6884EF2A53E6 /* LTabBarController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LTabBarController.m; path = LBaseClass/LBaseClass/LController/LTabBarController.m; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9C793F1D0DAC935413C9FB44F020F7D9 /* LNavigationController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LNavigationController.m; path = LBaseClass/LBaseClass/LController/LNavigationController.m; sourceTree = "<group>"; };
-		9D08C8DB3B6293B1B61B327D15822BA1 /* LContext.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LContext.m; path = LBaseClass/LBaseClass/LContext/LContext.m; sourceTree = "<group>"; };
-		9D1739A92ED90B431E03AD067D76FED9 /* LTabBarController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LTabBarController.m; path = LBaseClass/LBaseClass/LController/LTabBarController.m; sourceTree = "<group>"; };
-		A4208E68E02003197F036B4B77AD4AAF /* LTabBar.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LTabBar.m; path = LBaseClass/LBaseClass/LView/LTabBar.m; sourceTree = "<group>"; };
-		A50C237F705CA891E55400F74D117932 /* LTableViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LTableViewController.m; path = LBaseClass/LBaseClass/LController/LTableViewController.m; sourceTree = "<group>"; };
-		AA88E2CC82DC0DFD02B0520BFC2C6DA8 /* LTabBar.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LTabBar.h; path = LBaseClass/LBaseClass/LView/LTabBar.h; sourceTree = "<group>"; };
-		AD83A4C369589839FB3753BB0180E557 /* LContext.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LContext.h; path = LBaseClass/LBaseClass/LContext/LContext.h; sourceTree = "<group>"; };
-		B4026CD6E061989E1FF33C6835EDBB3D /* LColor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LColor.m; path = LBaseClass/LBaseClass/LView/LColor.m; sourceTree = "<group>"; };
-		BD42FD5C878563FE5A7375DCB92A813C /* LButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LButton.h; path = LBaseClass/LBaseClass/LView/LButton.h; sourceTree = "<group>"; };
-		BE06DF00805557F73FE1BAFE4BBF1D0F /* LTableViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LTableViewController.h; path = LBaseClass/LBaseClass/LController/LTableViewController.h; sourceTree = "<group>"; };
-		C4E2914A818105A309BA30E5E4B166A5 /* LImageView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LImageView.m; path = LBaseClass/LBaseClass/LView/LImageView.m; sourceTree = "<group>"; };
-		D20077A251393F40A11CC39BDD724539 /* LTextField.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LTextField.m; path = LBaseClass/LBaseClass/LView/LTextField.m; sourceTree = "<group>"; };
-		E33A4DA2E481AF5F4380BA7DB9F16CF5 /* LBaseClass.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LBaseClass.h; path = LBaseClass/LBaseClass/LBaseClass.h; sourceTree = "<group>"; };
-		F210DF61A1EB1E2B35490B060C524CD9 /* LColor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LColor.h; path = LBaseClass/LBaseClass/LView/LColor.h; sourceTree = "<group>"; };
+		96C6248517A8CF28AE7C839B8731254C /* LTableView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LTableView.h; path = LBaseClass/LBaseClass/LView/LTableView.h; sourceTree = "<group>"; };
+		9A47111A8048B9C5B5DBA14624B558E6 /* LLabel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LLabel.h; path = LBaseClass/LBaseClass/LView/LLabel.h; sourceTree = "<group>"; };
+		9BF54F9629284A5A90F5429B11B6D73D /* LSingleton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LSingleton.h; path = LBaseClass/LBaseClass/LSingleton/LSingleton.h; sourceTree = "<group>"; };
+		9FE3433A5FBD76B44E1E46F07B8239A9 /* LTabBarController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LTabBarController.h; path = LBaseClass/LBaseClass/LController/LTabBarController.h; sourceTree = "<group>"; };
+		A5FF0809FA8F9F6D59FD68AD7E6A4BCC /* LTextField.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LTextField.h; path = LBaseClass/LBaseClass/LView/LTextField.h; sourceTree = "<group>"; };
+		AA03DD98EAE7976290E5B4F64DC8A678 /* LContext.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LContext.m; path = LBaseClass/LBaseClass/LContext/LContext.m; sourceTree = "<group>"; };
+		AA2BE27E34AE44564F815261DA6E39D5 /* LNavigationController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LNavigationController.m; path = LBaseClass/LBaseClass/LController/LNavigationController.m; sourceTree = "<group>"; };
+		AA33AA9CDB9F6A1BDA334540DF1B577F /* LTableView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LTableView.m; path = LBaseClass/LBaseClass/LView/LTableView.m; sourceTree = "<group>"; };
+		B0A4DC03B20EB7502DC0F72EC8548EA9 /* LObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LObject.h; path = LBaseClass/LBaseClass/LModel/LObject.h; sourceTree = "<group>"; };
+		C0F872E1BB8DBC29832EC25535C0417E /* LButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LButton.h; path = LBaseClass/LBaseClass/LView/LButton.h; sourceTree = "<group>"; };
+		C1DD7B766489178980D7E1F0BB4111E0 /* UIDevice+IdentifierAddition.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIDevice+IdentifierAddition.h"; path = "LBaseClass/LBaseClass/LCategory/UIDevice+IdentifierAddition.h"; sourceTree = "<group>"; };
+		C22D680F400439D79F50834D855C9276 /* LColor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LColor.h; path = LBaseClass/LBaseClass/LView/LColor.h; sourceTree = "<group>"; };
+		D107EEC5BB4ED5B1AB5CF34A59D2FEA7 /* LScrollView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LScrollView.m; path = LBaseClass/LBaseClass/LView/LScrollView.m; sourceTree = "<group>"; };
+		D5832884B4A93E81E87EF1F62FBF6B27 /* LLabel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LLabel.m; path = LBaseClass/LBaseClass/LView/LLabel.m; sourceTree = "<group>"; };
+		DA38E5B3FC09512648EF3436247E2705 /* LImageView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LImageView.m; path = LBaseClass/LBaseClass/LView/LImageView.m; sourceTree = "<group>"; };
+		E7FAA35DFB213440BDC9E225394F8985 /* LBaseClass.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LBaseClass.h; path = LBaseClass/LBaseClass/LBaseClass.h; sourceTree = "<group>"; };
+		FC584570260685FC1DB53A66CF960171 /* UIDevice+IdentifierAddition.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIDevice+IdentifierAddition.m"; path = "LBaseClass/LBaseClass/LCategory/UIDevice+IdentifierAddition.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		DEF64B6B1D5A92D83D4D516BE0438761 /* Frameworks */ = {
+		5C6BA204D5FD0FDD530AF214A5635CB5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2992EB9C5AF0589879F8A7EEEA592B81 /* Foundation.framework in Frameworks */,
+				ADCC91F550DA0CC4CE5993407FF1FDBE /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,14 +144,6 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		2B1F8DD098818BFA179D196FF4B6FDCB /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				62062B2EC97A665B3A71ECCFE03EE874 /* LBaseClass */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		3312DE8C5E9D51BE9B9ED598B7A8AA48 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -157,46 +153,48 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		62062B2EC97A665B3A71ECCFE03EE874 /* LBaseClass */ = {
+		617E7224F513E40B1B2B8D7F1607DC03 /* LBaseClass */ = {
 			isa = PBXGroup;
 			children = (
-				E33A4DA2E481AF5F4380BA7DB9F16CF5 /* LBaseClass.h */,
-				BD42FD5C878563FE5A7375DCB92A813C /* LButton.h */,
-				6F1E545F1E2B2B1CC640A1A7ED0D1E36 /* LButton.m */,
-				F210DF61A1EB1E2B35490B060C524CD9 /* LColor.h */,
-				B4026CD6E061989E1FF33C6835EDBB3D /* LColor.m */,
-				AD83A4C369589839FB3753BB0180E557 /* LContext.h */,
-				9D08C8DB3B6293B1B61B327D15822BA1 /* LContext.m */,
-				4AB18CE810C9503D07D950B7FE2072DE /* LImageView.h */,
-				C4E2914A818105A309BA30E5E4B166A5 /* LImageView.m */,
-				894AA0381F0760EB76E6F80F589FACAF /* LInitProtocol.h */,
-				44A7FEE2B6A8A25F3CFE59011F8A1CE9 /* LLabel.h */,
-				0E4298D50E3083F9B258D92E3EB36A55 /* LLabel.m */,
-				2D9AEE519AA84A4659F6DA6F00C9BE6B /* LModel.h */,
-				87155344333E2EB04C9A9A1B1320756C /* LModel.m */,
-				0BC8FF5A4DC16FA0D37A5706C1FBF4A9 /* LNavigationController.h */,
-				9C793F1D0DAC935413C9FB44F020F7D9 /* LNavigationController.m */,
-				3458AB4EBFD545F1DE905030C37D1FDC /* LObject.h */,
-				1E79303AA47E526D2C1DBC0483988DF8 /* LObject.m */,
-				8E04F6AB1A9AAB2C848A19A4EE46EA92 /* LScrollView.h */,
-				48DA39A284A96B5D48326FA47490803B /* LScrollView.m */,
-				AA88E2CC82DC0DFD02B0520BFC2C6DA8 /* LTabBar.h */,
-				A4208E68E02003197F036B4B77AD4AAF /* LTabBar.m */,
-				2FAAAEFA7AD556E2593FDAAED7661915 /* LTabBarController.h */,
-				9D1739A92ED90B431E03AD067D76FED9 /* LTabBarController.m */,
-				131DE19B0FAEF80F6C0C1CB4C0FD0BD7 /* LTableView.h */,
-				51E7D3E654BB746E98CBAA0B86A5B9FD /* LTableView.m */,
-				BE06DF00805557F73FE1BAFE4BBF1D0F /* LTableViewController.h */,
-				A50C237F705CA891E55400F74D117932 /* LTableViewController.m */,
-				43638B281F90FA7CBE42962D5ED8E27E /* LTextField.h */,
-				D20077A251393F40A11CC39BDD724539 /* LTextField.m */,
-				245BE4A51600D3C27FCC39E589752E56 /* LView.h */,
-				0370C80BAA0B5022C828E05365DD39A2 /* LView.m */,
-				516746EBAFB1913710908060A66FC9DE /* LViewController.h */,
-				239EEC3A516BD5B95855ED3126194D51 /* LViewController.m */,
-				61588B9EB8A2BD80C47BE554D1DB67F3 /* UIDevice+IdentifierAddition.h */,
-				3BA61FFC6287E598165F3C387EF50BAF /* UIDevice+IdentifierAddition.m */,
-				8DF384DFC57287B0A3DD1744A78C63DB /* Support Files */,
+				E7FAA35DFB213440BDC9E225394F8985 /* LBaseClass.h */,
+				C0F872E1BB8DBC29832EC25535C0417E /* LButton.h */,
+				55F850ECE43F6960EB2A6EE7D229D90D /* LButton.m */,
+				C22D680F400439D79F50834D855C9276 /* LColor.h */,
+				8A3FE4BC13E955FC0910CFFE89F943AA /* LColor.m */,
+				04536A1D071AE94EB16B6011DE41ED63 /* LContext.h */,
+				AA03DD98EAE7976290E5B4F64DC8A678 /* LContext.m */,
+				1F5505C3C03BCA2BB28FBB3B4587C066 /* LImageView.h */,
+				DA38E5B3FC09512648EF3436247E2705 /* LImageView.m */,
+				61DEC45B97FA58934E78E7AB36CE8E99 /* LInitProtocol.h */,
+				9A47111A8048B9C5B5DBA14624B558E6 /* LLabel.h */,
+				D5832884B4A93E81E87EF1F62FBF6B27 /* LLabel.m */,
+				7C6737D50572B11077EE1805CA0FC566 /* LModel.h */,
+				79FC87FA2425D5693C7AFAFCAA80AE03 /* LModel.m */,
+				563C0EA9F21B4B30A7BFD0C864AE39FA /* LNavigationController.h */,
+				AA2BE27E34AE44564F815261DA6E39D5 /* LNavigationController.m */,
+				B0A4DC03B20EB7502DC0F72EC8548EA9 /* LObject.h */,
+				1008539AAAED6D003AB57F9ECC8556E4 /* LObject.m */,
+				8A0F2B1A0D23764744A6F46D79E301F9 /* LScrollView.h */,
+				D107EEC5BB4ED5B1AB5CF34A59D2FEA7 /* LScrollView.m */,
+				9BF54F9629284A5A90F5429B11B6D73D /* LSingleton.h */,
+				88DF624EB7B6051BDADBBF3B4DC8EBB0 /* LTabBar.h */,
+				28B5C88F26AAA5117A8D048524C72C14 /* LTabBar.m */,
+				9FE3433A5FBD76B44E1E46F07B8239A9 /* LTabBarController.h */,
+				92710136F7BBAFE7536C6884EF2A53E6 /* LTabBarController.m */,
+				96C6248517A8CF28AE7C839B8731254C /* LTableView.h */,
+				AA33AA9CDB9F6A1BDA334540DF1B577F /* LTableView.m */,
+				147BB5FDEA50B57B44CF904197C3FC41 /* LTableViewController.h */,
+				2E75384A22B5BD822D1C0A50D6A39838 /* LTableViewController.m */,
+				A5FF0809FA8F9F6D59FD68AD7E6A4BCC /* LTextField.h */,
+				7E42452DC3FE6D0E222745A9B5AD7AF5 /* LTextField.m */,
+				81946232C163F6808649C21398963EA9 /* LView.h */,
+				2F6E08A882E9F6AF0CB70746DA74030E /* LView.m */,
+				601CBDFFF6FA32C8BB2570AC348FD023 /* LViewController.h */,
+				903959FA7E376A7AF85BB87591B28DB9 /* LViewController.m */,
+				1A651BFD2A00C1AE51C60259662F4889 /* Singleton.h */,
+				C1DD7B766489178980D7E1F0BB4111E0 /* UIDevice+IdentifierAddition.h */,
+				FC584570260685FC1DB53A66CF960171 /* UIDevice+IdentifierAddition.m */,
+				CD3C15BEB913EAE679F4455839476AD0 /* Support Files */,
 			);
 			name = LBaseClass;
 			path = LBaseClass;
@@ -207,21 +205,10 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				2B1F8DD098818BFA179D196FF4B6FDCB /* Pods */,
+				FB6B1A1EADFFA87AD75D5474598EF91E /* Pods */,
 				3312DE8C5E9D51BE9B9ED598B7A8AA48 /* Products */,
 				1889EB98DB86B445AACC89AC080A5047 /* Targets Support Files */,
 			);
-			sourceTree = "<group>";
-		};
-		8DF384DFC57287B0A3DD1744A78C63DB /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				434D2F205CC82B3D625FB99C4E547CE0 /* LBaseClass.xcconfig */,
-				0CA418A44660926DBF1A06E8A548217C /* LBaseClass-dummy.m */,
-				73F3CFB363145C1A86FB47790C3999D4 /* LBaseClass-prefix.pch */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/LBaseClass";
 			sourceTree = "<group>";
 		};
 		B666BA892A698C462A4DB142E0A5BAE3 /* Pods-SelfSell */ = {
@@ -247,6 +234,17 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		CD3C15BEB913EAE679F4455839476AD0 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				189F3D1F215BC80EC412C53AA8856353 /* LBaseClass.xcconfig */,
+				5DCFC4B20971F2333D97ED4A7CB023FB /* LBaseClass-dummy.m */,
+				1122F3B8C6A17CD72B7772BB67BE531A /* LBaseClass-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/LBaseClass";
+			sourceTree = "<group>";
+		};
 		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -255,38 +253,65 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
+		FB6B1A1EADFFA87AD75D5474598EF91E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				617E7224F513E40B1B2B8D7F1607DC03 /* LBaseClass */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		D87702F9373BA29BF17848811F8FE46E /* Headers */ = {
+		D98248B0FC735FF39AAB374E17443BA3 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E439D085FF2CB0765ACFB333AE5F8C6A /* LBaseClass.h in Headers */,
-				F0FA64896BC97E3A86D47699DAA07E39 /* LButton.h in Headers */,
-				5B72ADA95041C3DEE1F140E8FF3B18BF /* LColor.h in Headers */,
-				E58780C89C08B060D93A093864ACC62E /* LContext.h in Headers */,
-				50BA534FEF77FF8353B8A8264F7CA30B /* LImageView.h in Headers */,
-				592D30EF7801B9F413C4F9D33E311EE7 /* LInitProtocol.h in Headers */,
-				AA23C004EC206EC8C0B68B6BC5B21BAD /* LLabel.h in Headers */,
-				E8A7C38DD48C34167F36AD9FABEB3934 /* LModel.h in Headers */,
-				9DD99398DA17A3C5C5A828E09F6C0DF4 /* LNavigationController.h in Headers */,
-				AF6E660C360C302DA3FD8D7AB80E1AAB /* LObject.h in Headers */,
-				64367B980852C296E6643CA5044E3CEF /* LScrollView.h in Headers */,
-				2D3EB5DA1C2BA7423B8CC159DA809CDA /* LTabBar.h in Headers */,
-				1440CA04795D0EEAE42638E041336F23 /* LTabBarController.h in Headers */,
-				3595EB4EF5E56E930A6125A6D39E25E7 /* LTableView.h in Headers */,
-				7D8FA0B14C380DCCF183D6F5A9B06FD3 /* LTableViewController.h in Headers */,
-				CE255562F4138B50C7DE45F8ABC0A2C6 /* LTextField.h in Headers */,
-				5E00DA3DA7B26957ED7DA250F25EB521 /* LView.h in Headers */,
-				98DD641F5C2BBC742E8125D151BEFB76 /* LViewController.h in Headers */,
-				DFFCF3ED1A89C618FCA2FF97605BF627 /* UIDevice+IdentifierAddition.h in Headers */,
+				53F0B323D8BEAD563CC1260198A13101 /* LBaseClass.h in Headers */,
+				D219DA1EC4003A5174A9326231E08165 /* LButton.h in Headers */,
+				6570BF61454ACF4038D91D0C6CA02916 /* LColor.h in Headers */,
+				61CE3A0750EF346165F50BB7C71BF602 /* LContext.h in Headers */,
+				4E8AC59F79C030458C170A9F1AD1945B /* LImageView.h in Headers */,
+				D10E4997AB15C8F0DA3113D585588E93 /* LInitProtocol.h in Headers */,
+				C9D088B1E47E67E48D6FB39FE0DDF990 /* LLabel.h in Headers */,
+				CF60CEDB2A24163CBBD4E1DD18108A24 /* LModel.h in Headers */,
+				C6A37DAAD5337504271A96CC8E2B943C /* LNavigationController.h in Headers */,
+				3AE76D17B69598FB31B87BD06E4EB7D6 /* LObject.h in Headers */,
+				8BDAE60D6B9F80D102F92390BA2C32F7 /* LScrollView.h in Headers */,
+				916DDBBA0FBCC94425DBE77E74B71ABD /* LSingleton.h in Headers */,
+				420B5CAD8257E3F55EE9DA4B78D89AC8 /* LTabBar.h in Headers */,
+				A145754E97D57FD65D8FC3ABA02C87C6 /* LTabBarController.h in Headers */,
+				B3D0605EFC93B7F7CC58F34DBA9A3DCE /* LTableView.h in Headers */,
+				28F91ED1AC2FE4139960EA5FA495F840 /* LTableViewController.h in Headers */,
+				EC4C7766029C24EF4E3FF02C66EC6A19 /* LTextField.h in Headers */,
+				44E2582ECC965E1AA45272F742E241E1 /* LView.h in Headers */,
+				825764A6ACAB284E11EDC65E788CF8BD /* LViewController.h in Headers */,
+				CA477146D5C774C8CC41B55115E3230E /* Singleton.h in Headers */,
+				EDCC7A878A5191B2E666A88A11EC4317 /* UIDevice+IdentifierAddition.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		2D2138DDF51FA89814BAD4F716FBEB57 /* LBaseClass */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FCC1E5B5583EAF938EAAA86303F6DBBA /* Build configuration list for PBXNativeTarget "LBaseClass" */;
+			buildPhases = (
+				FBA22D55F9BD0099D9C959C55ED8B592 /* Sources */,
+				5C6BA204D5FD0FDD530AF214A5635CB5 /* Frameworks */,
+				D98248B0FC735FF39AAB374E17443BA3 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LBaseClass;
+			productName = LBaseClass;
+			productReference = 7C6626DDD74B58062F05BDC340D395BC /* libLBaseClass.a */;
+			productType = "com.apple.product-type.library.static";
+		};
 		3585F55A9A8577B6AD7745261DADAC46 /* Pods-SelfSell */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8727EE731532FE065C1F577FEDFA493F /* Build configuration list for PBXNativeTarget "Pods-SelfSell" */;
@@ -302,23 +327,6 @@
 			name = "Pods-SelfSell";
 			productName = "Pods-SelfSell";
 			productReference = 4FF5C4BD0B4B7E981E73F27DBACCD3CB /* libPods-SelfSell.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		4B645FB0C0B2D043E84585202E74466C /* LBaseClass */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 84A2D976C158E2DCEB321DB648CA03EA /* Build configuration list for PBXNativeTarget "LBaseClass" */;
-			buildPhases = (
-				DECBED52D150CDEC27D1D7B2622E437E /* Sources */,
-				DEF64B6B1D5A92D83D4D516BE0438761 /* Frameworks */,
-				D87702F9373BA29BF17848811F8FE46E /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = LBaseClass;
-			productName = LBaseClass;
-			productReference = 7C6626DDD74B58062F05BDC340D395BC /* libLBaseClass.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -342,7 +350,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4B645FB0C0B2D043E84585202E74466C /* LBaseClass */,
+				2D2138DDF51FA89814BAD4F716FBEB57 /* LBaseClass */,
 				3585F55A9A8577B6AD7745261DADAC46 /* Pods-SelfSell */,
 			);
 		};
@@ -357,28 +365,28 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DECBED52D150CDEC27D1D7B2622E437E /* Sources */ = {
+		FBA22D55F9BD0099D9C959C55ED8B592 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB71FFEB396578C32FDD8B791E236C28 /* LBaseClass-dummy.m in Sources */,
-				BE4B3411E8FB0CE46A02F55157B949F4 /* LButton.m in Sources */,
-				067EFC31BF07362A1F40248438BFB95A /* LColor.m in Sources */,
-				3828941D9FE283AF81DAF6EFFC5852B5 /* LContext.m in Sources */,
-				4B97588A3C5D29FE8B6CA0E1AA8000D8 /* LImageView.m in Sources */,
-				6C9B2D2DBCC3F1898BF136012F4E813E /* LLabel.m in Sources */,
-				EF526E9133F8A89F4793A220E11765F0 /* LModel.m in Sources */,
-				0CD110108D9DE611BB7C3C41FE9ADB36 /* LNavigationController.m in Sources */,
-				DF3A3F21C189749A2C6BD1C2C1EB0A75 /* LObject.m in Sources */,
-				FC117165BB136B7D71A04359B06810AF /* LScrollView.m in Sources */,
-				0935E90F4FFC629BCC7BE84AD8586709 /* LTabBar.m in Sources */,
-				8870CCB152AC8AFA1DA3898E93EEEF58 /* LTabBarController.m in Sources */,
-				E86DF6560A1AAEB5BE593C07AC3B2918 /* LTableView.m in Sources */,
-				F2788C74430DC01C90AE265E09E0776F /* LTableViewController.m in Sources */,
-				F299B7E08E6230FD041C997EA778AAC6 /* LTextField.m in Sources */,
-				6B70AC8B6F261757F3428A59A61C4B17 /* LView.m in Sources */,
-				B610981D4898623329CED4B0B0649B0F /* LViewController.m in Sources */,
-				E939212C8A761B5656B5C19BAC263E4E /* UIDevice+IdentifierAddition.m in Sources */,
+				39FD019865B54DE16B71A841B66755EC /* LBaseClass-dummy.m in Sources */,
+				9C2D8ACEAC0D312DF03161347911C55B /* LButton.m in Sources */,
+				D255F83A279B2977CBED41A8467B21CC /* LColor.m in Sources */,
+				A02C70BDEF219CCD4B05FA6A94CDCFB1 /* LContext.m in Sources */,
+				25FDAE61DFA88C7D8B10936892DC1CB9 /* LImageView.m in Sources */,
+				87F5BCDF50EAC6E68972962A5694820A /* LLabel.m in Sources */,
+				D35FB5C072D873BEB5639DFAD90C7DD9 /* LModel.m in Sources */,
+				5BD00F029414383B588CF4207F95BE34 /* LNavigationController.m in Sources */,
+				3C162A8024B714D98C48EC3E0CDFD136 /* LObject.m in Sources */,
+				D068539DDB74DDABF769C7FF58CBF58D /* LScrollView.m in Sources */,
+				DE655C860ADFA36947A608003AD687C9 /* LTabBar.m in Sources */,
+				053AD592EEFBB07D82C932E907CEDD93 /* LTabBarController.m in Sources */,
+				FD9108BA1B802FDCCFC21E7EFBF8E1F9 /* LTableView.m in Sources */,
+				D9FE354594F16EBA07591E4BF4DFDC02 /* LTableViewController.m in Sources */,
+				7754F0AEA9A8492BE5DC7AB81CD9A409 /* LTextField.m in Sources */,
+				53A47356921A355FAC24A3E58E5F45F7 /* LView.m in Sources */,
+				88C29223246419F1C155FB77BCBF0E7F /* LViewController.m in Sources */,
+				2E5F19AE417A901B4778AF822AA18B1F /* UIDevice+IdentifierAddition.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -388,34 +396,12 @@
 		64C8B0529EC38D34FD4FB507BA23D906 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = LBaseClass;
-			target = 4B645FB0C0B2D043E84585202E74466C /* LBaseClass */;
+			target = 2D2138DDF51FA89814BAD4F716FBEB57 /* LBaseClass */;
 			targetProxy = 60872BB8C6B826B71D9F4AB6B72DD868 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		3664E85602F1F5C462201AA4CEEAE10D /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 434D2F205CC82B3D625FB99C4E547CE0 /* LBaseClass.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/LBaseClass/LBaseClass-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
 		58E1FDAE7201710703FCEDACBB3A7B36 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1E4A19267BB389759F8B8E8EF83F9B8A /* Pods-SelfSell.debug.xcconfig */;
@@ -436,9 +422,9 @@
 			};
 			name = Debug;
 		};
-		5DF33F42ECF9A7351EE9D1DBB404B084 /* Debug */ = {
+		5AEFBE8990A5312E6FEA7DA9DF34533B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 434D2F205CC82B3D625FB99C4E547CE0 /* LBaseClass.xcconfig */;
+			baseConfigurationReference = 189F3D1F215BC80EC412C53AA8856353 /* LBaseClass.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -454,8 +440,9 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 			};
-			name = Debug;
+			name = Release;
 		};
 		6F9224530522DD3C735EC96CF142642E /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -572,6 +559,27 @@
 			};
 			name = Debug;
 		};
+		DA8552C2250DD6B04FEC6B07542132BA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 189F3D1F215BC80EC412C53AA8856353 /* LBaseClass.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/LBaseClass/LBaseClass-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
 		E80E5FB53CC6B10F3CEA9481BA1E3D82 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 595FA8B83064C358466ABB376B98B0E0 /* Pods-SelfSell.release.xcconfig */;
@@ -605,20 +613,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		84A2D976C158E2DCEB321DB648CA03EA /* Build configuration list for PBXNativeTarget "LBaseClass" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				5DF33F42ECF9A7351EE9D1DBB404B084 /* Debug */,
-				3664E85602F1F5C462201AA4CEEAE10D /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		8727EE731532FE065C1F577FEDFA493F /* Build configuration list for PBXNativeTarget "Pods-SelfSell" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				58E1FDAE7201710703FCEDACBB3A7B36 /* Debug */,
 				E80E5FB53CC6B10F3CEA9481BA1E3D82 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FCC1E5B5583EAF938EAAA86303F6DBBA /* Build configuration list for PBXNativeTarget "LBaseClass" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA8552C2250DD6B04FEC6B07542132BA /* Debug */,
+				5AEFBE8990A5312E6FEA7DA9DF34533B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
