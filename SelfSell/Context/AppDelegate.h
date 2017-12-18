@@ -13,6 +13,9 @@
  */
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
+/**
+ 主窗体
+ */
 @property (strong, nonatomic) UIWindow *window;
 
 

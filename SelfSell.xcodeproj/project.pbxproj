@@ -545,6 +545,7 @@
 			baseConfigurationReference = 9D18FA091712F14E3B41300F /* Pods-SelfSell.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FA78T6VRG8;
 				GCC_PREFIX_HEADER = "SelfSell/Resource/SelfSell-Prefix.pch";
@@ -562,6 +563,7 @@
 			baseConfigurationReference = B95743EA1191B400556286F0 /* Pods-SelfSell.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FA78T6VRG8;
 				GCC_PREFIX_HEADER = "SelfSell/Resource/SelfSell-Prefix.pch";
