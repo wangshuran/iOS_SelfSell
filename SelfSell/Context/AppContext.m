@@ -25,7 +25,7 @@
 - (LNavigationController *)n1VC {
     if (!_n1VC) {
         LViewController *v1 = [[LViewController alloc] init];
-        v1.view.backgroundColor = [LColor randomColor];        
+        v1.view.backgroundColor = [LColor randomColor];
         
         _n1VC = [[LNavigationController alloc] initWithRootViewController:v1];
     }
