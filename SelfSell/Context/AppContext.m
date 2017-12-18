@@ -14,7 +14,7 @@
 
 - (LTabBarController *)rootVC {
     if (!_rootVC) {
-        _rootVC = [[LTabBarController alloc] init];
+        _rootVC = [[NSClassFromString(@"STabBarController") alloc] init];
         _rootVC.viewControllers = [NSArray arrayWithObjects:self.n1VC, nil];
         _rootVC.selectedViewController = self.n1VC;
     }
@@ -23,11 +23,13 @@
 }
 
 - (LNavigationController *)n1VC {
-    if (!_n1VC) {
-        LViewController *v1 = [[LViewController alloc] init];
-        v1.view.backgroundColor = [LColor randomColor];
+    if (!_n1VC) {        
+        LViewController *v1 = [[NSClassFromString(@"SViewController") alloc] init];
+        v1.view.backgroundColor = [UIColor randomColor];
+        v1.title = @"dsds";
+        v1.visibleNavbar = YES;
         
-        _n1VC = [[LNavigationController alloc] initWithRootViewController:v1];
+        _n1VC = [[NSClassFromString(@"SNavigationController") alloc] initWithRootViewController:v1];
     }
     
     return _n1VC;

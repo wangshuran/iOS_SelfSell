@@ -26,4 +26,19 @@
  */
 @property (nonatomic, assign, readonly) NSTimeInterval destroyTime;
 
+/**
+ 设置默认文本字体
+ */
+- (void)setPlaceholderFont:(UIFont *)font;
+
+/**
+ 设置默认文本颜色
+ */
+- (void)setPlaceholderColor:(UIColor *)color;
+
+/**
+ 设置默认文本对齐方式
+ */
+- (void)setPlaceholderAligment:(NSTextAlignment)alignment;
+
 @end

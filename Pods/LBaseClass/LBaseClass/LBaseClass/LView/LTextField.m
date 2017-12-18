@@ -40,6 +40,18 @@
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
+- (void)setPlaceholderFont:(UIFont *)font {
+    [self setValue:font forKey:@"_placeholderLabel.font"];
+}
+
+- (void)setPlaceholderColor:(UIColor *)color {
+    [self setValue:color forKey:@"_placeholderLabel.textColor"];
+}
+
+- (void)setPlaceholderAligment:(NSTextAlignment)alignment {
+    [self setValue:[NSNumber numberWithInteger:alignment] forKey:@"_placeholderLabel.textAligment"];
+}
+
 #pragma mark - LInitProtocol
 
 - (void)initialize {
@@ -48,6 +60,8 @@
         self.uid = [NSUUID UUID].UUIDString;
         _createTime = [[NSDate date] timeIntervalSince1970];
     });
+    
+    self.clearButtonMode = UITextFieldViewModeWhileEditing;
 }
 
 @end

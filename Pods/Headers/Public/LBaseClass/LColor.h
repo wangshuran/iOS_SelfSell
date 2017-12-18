@@ -1,1 +1,0 @@
-../../../LBaseClass/LBaseClass/LBaseClass/LView/LColor.h
