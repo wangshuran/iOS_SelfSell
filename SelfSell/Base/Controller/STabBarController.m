@@ -17,7 +17,11 @@
 #pragma mark - Interface
 
 - (UIInterfaceOrientationMask)supportedInterfaceOrientations {
-    return UIInterfaceOrientationMaskPortrait;
+    return [super supportedInterfaceOrientations];
+}
+
+- (UIStatusBarStyle)preferredStatusBarStyle {
+    return [super preferredStatusBarStyle];
 }
 
 @end
