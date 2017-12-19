@@ -12,7 +12,7 @@
 
 #pragma mark - Interface
 
-- (LTabBarController *)rootVC {
+- (STabBarController *)rootVC {
     if (!_rootVC) {
         _rootVC = [[NSClassFromString(@"STabBarController") alloc] init];
         _rootVC.viewControllers = [NSArray arrayWithObjects:self.n1VC, nil];
@@ -22,21 +22,12 @@
     return _rootVC;
 }
 
-- (LNavigationController *)n1VC {
-    if (!_n1VC) {        
-        LViewController * v1 = [[NSClassFromString(@"SViewController") alloc] init];
-        v1.view.backgroundColor = [UIColor randomColor];
-        v1.title = @"dsds";
-        v1.visibleNavbar = YES;
+- (SNavigationController *)n1VC {
+    if (!_n1VC) {
+        SViewController * v1 = [[NSClassFromString(@"LoginController") alloc] init];        
+        v1.title = @"dsds1";
         
         _n1VC = [[NSClassFromString(@"SNavigationController") alloc] initWithRootViewController:v1];
-        
-        
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3.0f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            UIViewController * z1 = _n1VC.topViewController;
-            UIViewController * z2 = v1;
-            z2 = z1;
-        });
     }
     
     return _n1VC;

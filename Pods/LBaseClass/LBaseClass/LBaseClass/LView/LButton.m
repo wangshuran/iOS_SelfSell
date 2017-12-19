@@ -43,11 +43,8 @@
 #pragma mark - LInitProtocol
 
 - (void)initialize {
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        self.uid = [NSUUID UUID].UUIDString;
-        _createTime = [[NSDate date] timeIntervalSince1970];
-    });
+    self.uid = [NSUUID UUID].UUIDString;
+    _createTime = [[NSDate date] timeIntervalSince1970];
     
     //添加点击事件
     [self addTarget:self action:@selector(click:) forControlEvents:UIControlEventTouchUpInside];

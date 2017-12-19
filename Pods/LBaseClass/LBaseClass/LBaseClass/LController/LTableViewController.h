@@ -44,11 +44,11 @@
 /**
  是否显示导航控制器
  */
-@property (nonatomic, assign) BOOL visibleNavbar;
+@property (nonatomic, assign) BOOL hiddenNavbar;
 
 /**
  是否显示导航控制器
  */
-@property (nonatomic, assign) BOOL visibleTabar;
+@property (nonatomic, assign) BOOL hiddenTabar;
 
 @end

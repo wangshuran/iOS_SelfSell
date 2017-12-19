@@ -26,12 +26,12 @@ typedef enum : NSUInteger {
 /**
  根控制器
  */
-@property (nonatomic, strong) LTabBarController *rootVC;
+@property (nonatomic, strong) STabBarController *rootVC;
 
 /**
  DEMO_N1
  */
-@property (nonatomic, strong) LNavigationController *n1VC;
+@property (nonatomic, strong) SNavigationController *n1VC;
 
 /**
  当前语言

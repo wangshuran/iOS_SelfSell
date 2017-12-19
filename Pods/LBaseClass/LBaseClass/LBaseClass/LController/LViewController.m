@@ -7,6 +7,7 @@
 //
 
 #import "LViewController.h"
+#import "UIColor+Category.h"
 #import <objc/runtime.h>
 
 @interface LViewController ()
@@ -59,24 +60,12 @@
     
     self.enterTime = [[NSDate date] timeIntervalSince1970];
     
-    if (self.visibleNavbar) {
-        if (self.navigationController && self.navigationController.navigationBar.hidden) {
-            self.navigationController.navigationBar.hidden = NO;
-        }
-    } else {
-        if (self.navigationController && !self.navigationController.navigationBar.hidden) {
-            self.navigationController.navigationBar.hidden = YES;
-        }
+    if (self.navigationController && self.hiddenNavbar != self.navigationController.navigationBar.hidden) {
+        self.navigationController.navigationBar.hidden = self.hiddenNavbar;
     }
     
-    if (self.visibleTabar) {
-        if (self.tabBarController && self.tabBarController.tabBar.hidden) {
-            self.tabBarController.tabBar.hidden = NO;
-        }
-    } else {
-        if (self.tabBarController && !self.tabBarController.tabBar.hidden) {
-            self.tabBarController.tabBar.hidden = YES;
-        }
+    if (self.tabBarController && self.hiddenTabar != self.tabBarController.tabBar.hidden) {
+        self.tabBarController.tabBar.hidden = self.hiddenTabar;
     }
 }
 
@@ -111,31 +100,40 @@
     return statisticsInfo;
 }
 
-- (void)setVisibleNavbar:(BOOL)visibleNavbar {
-    _visibleNavbar = visibleNavbar;
+- (void)setHiddenNavbar:(BOOL)hiddenNavbar {
+    _hiddenNavbar = hiddenNavbar;
     
-    if (_visibleNavbar) {
-        if (self.navigationController && self.navigationController.navigationBar.hidden) {
-            self.navigationController.navigationBar.hidden = NO;
-        }
-    } else {
-        if (self.navigationController && !self.navigationController.navigationBar.hidden) {
-            self.navigationController.navigationBar.hidden = YES;
-        }
+    if (self.navigationController && hiddenNavbar != self.navigationController.navigationBar.hidden) {
+        self.navigationController.navigationBar.hidden = hiddenNavbar;
     }
 }
 
-- (void)setVisibleTabar:(BOOL)visibleTabar {
-    _visibleTabar = visibleTabar;
+- (void)setHiddenTabar:(BOOL)hiddenTabar {
+    _hiddenTabar = hiddenTabar;
     
-    if (_visibleTabar) {
-        if (self.tabBarController && self.tabBarController.tabBar.hidden) {
-            self.tabBarController.tabBar.hidden = NO;
-        }
-    } else {
-        if (self.tabBarController && !self.tabBarController.tabBar.hidden) {
-            self.tabBarController.tabBar.hidden = YES;
-        }
+    if (self.tabBarController && hiddenTabar != self.tabBarController.tabBar.hidden) {
+        self.tabBarController.tabBar.hidden = hiddenTabar;
+    }
+}
+
+- (void)setNavbarBackgroundColor:(UIColor *)color {
+    if (color && self.navigationController) {
+        self.navigationController.navigationBar.barTintColor = color;
+        
+        //自动识别状态栏颜色，根据导航栏背景颜色色系
+        self.navigationController.navigationBar.barStyle = [color isDark] ? UIStatusBarStyleLightContent : UIStatusBarStyleDefault;
+    }
+}
+
+- (void)setNavbarBackColor:(UIColor *)color {
+    if (color && self.navigationController) {
+        self.navigationController.navigationBar.tintColor = color;
+    }
+}
+
+- (void)setNavbarTitleColor:(UIColor *)color {
+    if (color && self.navigationController) {
+        self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName:color};
     }
 }
 
@@ -148,17 +146,18 @@
 #pragma mark - LInitProtocol
 
 - (void)initialize {
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        self.visibleNavbar = NO;
-        self.visibleTabar = NO;
-        
-        self.uid = [NSUUID UUID].UUIDString;
-        _createTime = [[NSDate date] timeIntervalSince1970];
-        _destroyTime = 0;
-        self.enterTime = 0;
-        _stayTime = 0;
-    });
+    self.hiddenNavbar = NO;
+    self.hiddenTabar = YES;
+    
+    self.uid = [NSUUID UUID].UUIDString;
+    _createTime = [[NSDate date] timeIntervalSince1970];
+    _destroyTime = 0;
+    self.enterTime = 0;
+    _stayTime = 0;
+    
+    [self setNavbarBackgroundColor:[UIColor whiteColor]];
+    [self setNavbarBackColor:[UIColor whiteColor]];
+    [self setNavbarTitleColor:[UIColor blackColor]];
 }
 
 @end
