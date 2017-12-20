@@ -14,7 +14,7 @@
 /**
  唯一标识
  */
-@property (nonatomic, strong) NSString *uid;
+@property (nonatomic, copy, readonly) NSString * uid;
 
 /**
  创建时间
@@ -34,12 +34,7 @@
 /**
  类名称
  */
-@property (nonatomic, strong, readonly) NSString *className;
-
-/**
- 页面统计信息
- */
-@property (nonatomic, strong, readonly) NSDictionary *statisticsInfo;
+@property (nonatomic, copy, readonly) NSString * className;
 
 /**
  是否显示导航控制器

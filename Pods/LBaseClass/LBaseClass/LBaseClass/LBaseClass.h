@@ -32,6 +32,7 @@
 
 //--------------------LProtocol--------------------
 #import "LInitProtocol.h"
+#import "LPropertyProtocol.h"
 
 
 //--------------------LSingleton--------------------

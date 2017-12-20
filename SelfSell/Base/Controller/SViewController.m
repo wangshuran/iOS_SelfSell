@@ -19,6 +19,12 @@
 
 #pragma mark - Interface
 
+- (void)initialize {
+    [super initialize];
+    
+    self.navigationItem.backBarButtonItem.title = @"";
+}
+
 - (UIInterfaceOrientationMask)supportedInterfaceOrientations {
     return UIInterfaceOrientationMaskPortrait;
 }
@@ -34,21 +40,14 @@
     return UIStatusBarStyleDefault;
 }
 
-//-(void)viewWillAppear:(BOOL)animated{
-//    [super viewWillAppear:animated];
-//    
-//    
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    
+//    self.navigationItem.backBarButtonItem.title = @"";
 //    if (self.navigationController) {
-//        
-//    
-//    self.navigationController.navigationBar.tintColor = [UIColor redColor];
-//    self.navigationController.navigationBar.barTintColor = [UIColor blueColor];
-//    
-//    self.navigationController.navigationBar.barStyle = UIStatusBarStyleDefault;
-//        
-//        self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName:[UIColor whiteColor]};
-//        
+//        self.navigationController.navigationItem.leftBarButtonItem.title = @"";
+        //self.navigationController.navigationItem.backBarButtonItem.title = @"";
 //    }
-//}
+}
 
 @end

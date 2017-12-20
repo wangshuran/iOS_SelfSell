@@ -51,7 +51,11 @@
 #pragma mark - LInitProtocol
 
 - (void)initialize {
-    self.uid = [NSUUID UUID].UUIDString;
+    if (self.uid) {
+        @throw [NSException exceptionWithName:[NSString stringWithFormat:@"repeat execute %@", NSStringFromSelector(_cmd)] reason:[NSString stringWithFormat:@"repeat execute %@", NSStringFromSelector(_cmd)] userInfo:nil];
+    }
+    
+    _uid = [NSUUID UUID].UUIDString;
     _createTime = [[NSDate date] timeIntervalSince1970];
 }
 

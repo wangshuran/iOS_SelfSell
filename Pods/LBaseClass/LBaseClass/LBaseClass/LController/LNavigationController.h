@@ -8,13 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import "LInitProtocol.h"
+#import "LPropertyProtocol.h"
 
 @interface LNavigationController : UINavigationController<LInitProtocol>
 
 /**
  唯一标识
  */
-@property (nonatomic, strong) NSString *uid;
+@property (nonatomic, copy, readonly) NSString * uid;
 
 
 /**

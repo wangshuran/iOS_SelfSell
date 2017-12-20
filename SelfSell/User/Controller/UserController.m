@@ -16,12 +16,15 @@
 
 #pragma mark - Interface
 
+- (void)initialize {
+    [super initialize];
+        
+    self.title = self.className;
+}
+
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
-    [self setNavbarBackgroundColor:[UIColor randomColor]];
-    [self setNavbarTitleColor:[UIColor randomColor]];
-    [self setNavbarBackColor:[UIColor randomColor]];
 }
 
 @end

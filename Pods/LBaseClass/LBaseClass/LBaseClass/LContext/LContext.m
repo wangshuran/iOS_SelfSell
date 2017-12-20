@@ -21,7 +21,7 @@
 }
 
 - (UIViewController *)getTopViewController {
-    UIViewController *vc = [UIApplication sharedApplication].keyWindow.rootViewController;
+    UIViewController * vc = [UIApplication sharedApplication].keyWindow.rootViewController;
     
     while (YES) {
         if ([vc isKindOfClass:[UITabBarController class]]) {

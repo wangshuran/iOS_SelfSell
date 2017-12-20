@@ -16,18 +16,19 @@
 
 #pragma mark - Interface
 
+- (void)initialize {
+    [super initialize];
+    
+    self.title = self.className;    
+}
+
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
-    [self setNavbarBackgroundColor:[UIColor randomColor]];
-    [self setNavbarTitleColor:[UIColor randomColor]];
-    [self setNavbarBackColor:[UIColor randomColor]];
-
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        SViewController * v2 = [[NSClassFromString(@"UserController") alloc] init];
-        v2.title = @"dsds2";
-        
-        [self.navigationController pushViewController:v2 animated:YES];
+        SViewController * vc = [[NSClassFromString(@"UserController") alloc] init];
+
+        [self.navigationController pushViewController:vc animated:YES];
     });
 }
 

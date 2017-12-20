@@ -24,10 +24,9 @@
 
 - (SNavigationController *)n1VC {
     if (!_n1VC) {
-        SViewController * v1 = [[NSClassFromString(@"LoginController") alloc] init];        
-        v1.title = @"dsds1";
+        SViewController * vc = [[NSClassFromString(@"LoginController") alloc] init];
         
-        _n1VC = [[NSClassFromString(@"SNavigationController") alloc] initWithRootViewController:v1];
+        _n1VC = [[SNavigationController alloc] initWithRootViewController:vc];
     }
     
     return _n1VC;

@@ -38,21 +38,21 @@
     return self;
 }
 
-- (instancetype)initWithNibName:(nullable NSString *)nibNameOrNil bundle:(nullable NSBundle *)nibBundleOrNil {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    
-    [self initialize];
-    
-    return self;
-}
-
-- (instancetype)initWithCoder:(NSCoder *)aDecoder {
-    self = [super initWithCoder:aDecoder];
-    
-    [self initialize];
-    
-    return self;
-}
+//- (instancetype)initWithNibName:(nullable NSString *)nibNameOrNil bundle:(nullable NSBundle *)nibBundleOrNil {
+//    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+//
+//    [self initialize];
+//
+//    return self;
+//}
+//
+//- (instancetype)initWithCoder:(NSCoder *)aDecoder {
+//    self = [super initWithCoder:aDecoder];
+//
+//    [self initialize];
+//
+//    return self;
+//}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -87,26 +87,6 @@
     return NSStringFromClass([self class]);
 }
 
-- (NSDictionary *)statisticsInfo {
-    unsigned int outCount, i;
-    objc_property_t *properties = class_copyPropertyList([self class], &outCount);
-    NSMutableDictionary *statisticsInfo = [[NSMutableDictionary alloc] initWithCapacity:outCount];
-    
-    for (i = 0; i < outCount; i++) {
-        objc_property_t property = properties[i];
-        NSString *propertyName = [[NSString alloc] initWithCString:property_getName(property) encoding:NSUTF8StringEncoding];
-        
-        id value = [self valueForKey:propertyName];
-        if (![value isEqual:[NSNull null]] && value != nil) {
-            [statisticsInfo setObject:value forKey:propertyName];
-        }
-    }
-    
-    free(properties);
-    
-    return statisticsInfo;
-}
-
 - (void)setHiddenNavbar:(BOOL)hiddenNavbar {
     _hiddenNavbar = hiddenNavbar;
     
@@ -132,14 +112,66 @@
 #pragma mark - LInitProtocol
 
 - (void)initialize {
+    if (self.uid) {
+        @throw [NSException exceptionWithName:[NSString stringWithFormat:@"repeat execute %@", NSStringFromSelector(_cmd)] reason:[NSString stringWithFormat:@"repeat execute %@", NSStringFromSelector(_cmd)] userInfo:nil];
+    }
+    
     self.hiddenNavbar = NO;
     self.hiddenTabar = YES;
     
-    self.uid = [NSUUID UUID].UUIDString;
+    _uid = [NSUUID UUID].UUIDString;
     _createTime = [[NSDate date] timeIntervalSince1970];
     _destroyTime = 0;
     self.enterTime = 0;
     _stayTime = 0;
+}
+
+#pragma mark - LPropertyProtocol
+
+- (NSMutableDictionary *)propertyKeyValues:(BOOL)isIncludeParent {
+    NSMutableSet * keys = [self propertyKeys:isIncludeParent];
+    NSMutableDictionary * keyValues = [[NSMutableDictionary alloc] initWithCapacity:keys.count];
+    
+    for (NSString * key in keys) {
+        id value = [self valueForKey:key];
+        if ([value isEqual:[NSNull null]] || value == nil) {
+            continue;
+        }
+        
+        [keyValues setObject:value forKey:key];
+    }
+    
+    return keyValues.count == 0 ? nil : keyValues;
+}
+
+- (NSMutableSet *)propertyKeys:(BOOL)isIncludeParent {
+    return [[self class] propertyKeys:isIncludeParent];
+}
+
++ (NSMutableSet *)propertyKeys:(BOOL)isIncludeParent {
+    NSMutableSet * keys = [[NSMutableSet alloc] init];
+    Class aClass = self;
+    
+    while (YES) {
+        unsigned int outCount, i;
+        objc_property_t * properties = class_copyPropertyList(aClass, &outCount);
+        
+        for (i = 0; i < outCount; i++) {
+            objc_property_t property = properties[i];
+            NSString * propertyName = [[NSString alloc] initWithCString:property_getName(property) encoding:NSUTF8StringEncoding];
+            [keys addObject:propertyName];
+        }
+        
+        free(properties);
+        
+        if (!isIncludeParent || aClass == nil || aClass == [UITableViewController class]) {
+            break;
+        }
+        
+        aClass = [aClass superclass];
+    }
+    
+    return keys.count == 0 ? nil : keys;
 }
 
 @end

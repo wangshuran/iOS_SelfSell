@@ -17,35 +17,6 @@
 #pragma mark - Interface
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    
-    
-    
-    
-    
-    CGFloat R, G, B, A;
-    
-    UIColor *uiColor = [UIColor redColor];
-    CGColorRef color = [uiColor CGColor];
-    size_t numComponents = CGColorGetNumberOfComponents(color);
-    if (numComponents == 4)
-    {
-        const CGFloat *components = CGColorGetComponents(color);
-        R = components[0];
-        G = components[1];
-        B = components[2];
-        A = components[3];
-    }
-    
-//    while (YES) {
-//        uint32_t z = arc4random_uniform(255);
-//        NSLog(@"%d", z);
-//        if (z > 253) {
-//            NSLog(@"%d", z);
-//        }
-//    }
-
-    
-    
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.rootViewController = [[AppContext alloc] init].rootVC;
     [self.window makeKeyAndVisible];

@@ -1,11 +1,11 @@
 PODS:
-  - LBaseClass (1.0.21)
+  - LBaseClass (1.0.24)
 
 DEPENDENCIES:
   - LBaseClass
 
 SPEC CHECKSUMS:
-  LBaseClass: 0a308680a2d712d3b8b6c4d99f78dd22ba4894f0
+  LBaseClass: 4bd7121c7cd2992cf4256affbffa31917878d1d1
 
 PODFILE CHECKSUM: 6016fd679283fac5767fd924b78d84c521a0bf3a
 

@@ -14,7 +14,7 @@
 /**
  唯一标示
  */
-@property (nonatomic, strong) NSString *uid;
+@property (nonatomic, copy, readonly) NSString * uid;
 
 /**
  创建时间
