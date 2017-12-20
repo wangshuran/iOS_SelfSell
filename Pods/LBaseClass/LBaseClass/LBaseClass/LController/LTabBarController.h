@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "LInitProtocol.h"
+#import "LPropertyProtocol.h"
 
-@interface LTabBarController : UITabBarController<LInitProtocol>
+@interface LTabBarController : UITabBarController<LInitProtocol, LPropertyProtocol>
 
 /**
  唯一标识

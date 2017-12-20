@@ -11,6 +11,11 @@
 @interface SRequest : SModel
 
 /**
+ 通过主机地址初始化
+ */
+- (instancetype)initWithHost:(NSString *)host;
+
+/**
  编译号
  */
 @property (nonatomic, copy) NSString * CFBundleVersion;
@@ -24,5 +29,20 @@
  版本号
  */
 @property (nonatomic, copy) NSString * CFBundleShortVersionString;
+
+/**
+ 设备序列号
+ */
+@property (nonatomic, copy) NSString * deviceIdentifier;
+
+/**
+ 查询参数
+ */
+- (NSString *)getQuery;
+
+/**
+ 查询参数
+ */
+- (NSMutableDictionary *)getParameter;
 
 @end

@@ -10,7 +10,7 @@
 #import "LInitProtocol.h"
 #import "LPropertyProtocol.h"
 
-@interface LNavigationController : UINavigationController<LInitProtocol>
+@interface LNavigationController : UINavigationController<LInitProtocol, LPropertyProtocol>
 
 /**
  唯一标识
