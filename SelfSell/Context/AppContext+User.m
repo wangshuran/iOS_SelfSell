@@ -7,6 +7,7 @@
 //
 
 #import "AppContext+User.h"
+#import "SLoginController.h"
 
 @implementation AppContext(User)
 
@@ -16,7 +17,11 @@
  去登录通知
  */
 - (void)noticeToLogin:(NSNotification *)notification {
+    //此处最好加独占锁，防止连续发送两次通知，弹出两个登录视图
+    SLoginController * vc = [[SLoginController alloc] init];
+    SNavigationController * nav = [[SNavigationController alloc] initWithRootViewController:vc];
     
+    [[AppContext sharedAppContext] presentViewController:nav];
 }
 
 /**

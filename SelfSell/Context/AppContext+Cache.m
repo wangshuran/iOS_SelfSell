@@ -20,5 +20,4 @@
     [[SDImageCache sharedImageCache] clearDiskOnCompletion:nil];//清除闪存缓存
 }
 
-
 @end

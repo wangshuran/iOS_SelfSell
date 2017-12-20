@@ -12,6 +12,7 @@
 #define SNotificationCenter [NSNotificationCenter defaultCenter]//通知对象
 #define SAddObsver(methodName, noteName) [SNotificationCenter addObserver:self selector:@selector(methodName) name:noteName object:nil];//添加监听
 #define SRemoveObsver [SNotificationCenter removeObserver:self];//移除监听
+#define SPostNotification(noteName) [SNotificationCenter postNotificationName:noteName object:nil];//发送通知
 
 
 #define kNoticeClearCache @"kNoticeClearCache"//清空缓存通知

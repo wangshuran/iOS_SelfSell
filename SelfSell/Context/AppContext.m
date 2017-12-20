@@ -42,7 +42,7 @@ LSingleton_m(AppContext);
 
 - (SNavigationController *)n1VC {
     if (!_n1VC) {
-        SViewController * vc = [[NSClassFromString(@"SLoginController") alloc] init];
+        SViewController * vc = [[NSClassFromString(@"SUserController") alloc] init];
         
         _n1VC = [[SNavigationController alloc] initWithRootViewController:vc];
     }
@@ -69,5 +69,34 @@ LSingleton_m(AppContext);
     return _language;
 }
 
+- (UIViewController *)getTopController {
+    UIViewController * vc = [UIApplication sharedApplication].keyWindow.rootViewController;
+    
+    while (YES) {
+        if ([vc isKindOfClass:[UITabBarController class]]) {
+            vc = ((UITabBarController *)vc).selectedViewController;
+        }
+        
+        if ([vc isKindOfClass:[UINavigationController class]]) {
+            vc = ((UINavigationController *)vc).visibleViewController;
+        }
+        
+        if (vc.presentedViewController) {
+            vc = vc.presentedViewController;
+        }else{
+            break;
+        }
+    }
+    
+    return vc;
+}
+
+- (void)presentViewController:(UIViewController *)viewControllerToPresent {
+    [self presentViewController:viewControllerToPresent animated:YES completion:nil];
+}
+
+- (void)presentViewController:(UIViewController *)viewControllerToPresent animated: (BOOL)flag completion:(void (^ )(void))completion {
+    [[self getTopController] presentViewController:viewControllerToPresent animated:flag completion:completion];
+}
 
 @end
