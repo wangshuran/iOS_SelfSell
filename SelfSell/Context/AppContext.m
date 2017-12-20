@@ -12,6 +12,22 @@
 
 #pragma mark - Interface
 
+- (void)startMoniter {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored"-Wundeclared-selector"
+    
+    SAddObsver(noticeClearCache:, kNoticeClearCache);
+    SAddObsver(noticeToLogin:, kNoticeToLogin);
+    SAddObsver(noticeFinishLogin:, kNoticeFinishLogin);
+    SAddObsver(noticeToLogout:, kNoticeToLogout);
+    SAddObsver(noticeFinishLogout:, kNoticeFinishLogout);
+    
+#pragma clang diagnostic pop
+    
+    
+    
+}
+
 - (STabBarController *)rootVC {
     if (!_rootVC) {
         _rootVC = [[NSClassFromString(@"STabBarController") alloc] init];
@@ -50,5 +66,6 @@
     
     return _language;
 }
+
 
 @end

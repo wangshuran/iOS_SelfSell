@@ -8,7 +8,6 @@
 
 #import <LBaseClass/LBaseClass.h>
 
-
 typedef enum : NSUInteger {
     LanguageNone,//未知
     LanguageEN,//英文
@@ -21,7 +20,6 @@ typedef enum : NSUInteger {
  上下文
  */
 @interface AppContext : LObject
-
 
 /**
  根控制器
@@ -37,5 +35,10 @@ typedef enum : NSUInteger {
  当前语言
  */
 @property (nonatomic, assign) Language language;
+
+/**
+ 开启监听
+ */
+- (void)startMoniter;
 
 @end
