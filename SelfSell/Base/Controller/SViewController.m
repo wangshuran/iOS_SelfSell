@@ -19,12 +19,6 @@
 
 #pragma mark - Interface
 
-- (void)initialize {
-    [super initialize];
-    
-    self.navigationItem.backBarButtonItem.title = @"";
-}
-
 - (UIInterfaceOrientationMask)supportedInterfaceOrientations {
     return UIInterfaceOrientationMaskPortrait;
 }
@@ -42,12 +36,15 @@
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    
-//    self.navigationItem.backBarButtonItem.title = @"";
-//    if (self.navigationController) {
-//        self.navigationController.navigationItem.leftBarButtonItem.title = @"";
-        //self.navigationController.navigationItem.backBarButtonItem.title = @"";
-//    }
 }
+
+#pragma mark - LInitProtocol
+
+- (void)initialize {
+    [super initialize];
+    
+    //self.navigationItem.backBarButtonItem.title = @"";
+}
+
 
 @end

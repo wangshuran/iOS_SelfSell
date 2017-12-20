@@ -16,15 +16,17 @@
 
 #pragma mark - Interface
 
-- (void)initialize {
-    [super initialize];
-        
-    self.title = self.className;
-}
-
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
+}
+
+#pragma mark - LInitProtocol
+
+- (void)initialize {
+    [super initialize];
+    
+    self.title = self.className;
 }
 
 @end

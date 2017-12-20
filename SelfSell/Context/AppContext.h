@@ -7,6 +7,7 @@
 //
 
 #import "SObject.h"
+#import "SUserModel.h"
 
 /**
  上下文
@@ -34,6 +35,11 @@ LSingleton_h(AppContext);
  登录类型
  */
 @property (nonatomic, assign) LoginType loginType;
+
+/**
+ 用户信息
+ */
+@property (nonatomic, strong) SUserModel * userModel;
 
 /**
  开启监听

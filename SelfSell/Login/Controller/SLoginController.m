@@ -16,10 +16,12 @@
 
 #pragma mark - Interface
 
-- (void)initialize {
-    [super initialize];
-    
-    self.title = self.className;    
+- (void)viewDidLoad {
+    [super viewDidLoad];
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -30,6 +32,14 @@
 
         [self.navigationController pushViewController:vc animated:YES];
     });
+}
+
+#pragma mark - LInitProtocol
+
+- (void)initialize {
+    [super initialize];
+    
+    self.title = self.className;
 }
 
 @end
