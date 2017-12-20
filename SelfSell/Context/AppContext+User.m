@@ -11,6 +11,71 @@
 
 @implementation AppContext(User)
 
+#pragma mark - Interface
+
+- (NSString *)getCurrentUserPath {
+    NSString * libraryPath = [NSHomeDirectory() stringByAppendingPathComponent:@"Library"];
+    NSString * userIdentifier = self.loginType == LoginTypeNone ? [[UIDevice currentDevice] uniqueDeviceIdentifier] : self.userModel.userid;
+    userIdentifier = [userIdentifier MD5];
+    NSString * selfsellPath = [libraryPath stringByAppendingPathComponent:userIdentifier];
+    
+    NSFileManager * fileManager = [NSFileManager defaultManager];
+    
+    @synchronized(self) {
+        if (![fileManager fileExistsAtPath:selfsellPath]) {
+            [fileManager createDirectoryAtPath:selfsellPath withIntermediateDirectories:YES attributes:nil error:nil];
+        }
+    }
+    
+    return selfsellPath;
+}
+
+- (void)updateUserInfo:(id)value key:(NSString *)key {
+    if (key.length == 0 || value == nil) {
+        return;
+    }
+    
+    NSString * userIdentifier = self.loginType == LoginTypeNone ? [[UIDevice currentDevice] uniqueDeviceIdentifier] : self.userModel.userid;
+    userIdentifier = [userIdentifier MD5];
+    
+    NSUserDefaults * userDefaults = [NSUserDefaults standardUserDefaults];
+
+    @synchronized(self) {
+        NSMutableDictionary * info = [userDefaults objectForKey:userIdentifier];
+        
+        if (info) {
+            info = [info mutableCopy];
+        }else {
+            info = [[NSMutableDictionary alloc] init];
+        }
+        
+        [info setObject:value forKey:key];
+        [userDefaults setObject:info forKey:userIdentifier];
+        [userDefaults synchronize];
+    }
+}
+
+- (id)getUserInfo:(NSString *)key {
+    if (key.length == 0) {
+        return nil;
+    }
+    
+    NSString * userIdentifier = self.loginType == LoginTypeNone ? [[UIDevice currentDevice] uniqueDeviceIdentifier] : self.userModel.userid;
+    userIdentifier = [userIdentifier MD5];
+    
+    NSUserDefaults * userDefaults = [NSUserDefaults standardUserDefaults];
+    
+    @synchronized(self) {
+        NSMutableDictionary * info = [userDefaults objectForKey:userIdentifier];
+        
+        if (info == nil) {
+            return nil;
+        }
+        
+        return [info objectForKey:key];
+    }
+}
+
 #pragma mark - NSNotification
 
 /**
@@ -21,7 +86,7 @@
     SLoginController * vc = [[SLoginController alloc] init];
     SNavigationController * nav = [[SNavigationController alloc] initWithRootViewController:vc];
     
-    [[AppContext sharedAppContext] presentViewController:nav];
+    [LContext presentViewController:nav];
 }
 
 /**

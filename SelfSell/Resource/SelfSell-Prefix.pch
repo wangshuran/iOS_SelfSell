@@ -61,6 +61,8 @@
 
 //--------------------Context--------------------
 #import "AppContext.h"
+#import "AppContext+Cache.h"
+#import "AppContext+User.h"
 #import "AppDelegate.h"
 
 

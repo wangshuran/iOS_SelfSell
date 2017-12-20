@@ -10,4 +10,19 @@
 
 @interface SRequest : SModel
 
+/**
+ 编译号
+ */
+@property (nonatomic, copy) NSString * CFBundleVersion;
+
+/**
+ ID
+ */
+@property (nonatomic, copy) NSString * CFBundleIdentifier;
+
+/**
+ 版本号
+ */
+@property (nonatomic, copy) NSString * CFBundleShortVersionString;
+
 @end

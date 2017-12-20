@@ -28,13 +28,13 @@
     return self;
 }
 
-- (instancetype)initWithCoder:(NSCoder *)aDecoder {
-    self = [super initWithCoder:aDecoder];
-    
-    [self initialize];
-    
-    return self;
-}
+//- (instancetype)initWithCoder:(NSCoder *)aDecoder {
+//    self = [super initWithCoder:aDecoder];
+//    
+//    [self initialize];
+//    
+//    return self;
+//}
 
 - (void)dealloc {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
@@ -62,6 +62,7 @@
     _uid = [NSUUID UUID].UUIDString;
     _createTime = [[NSDate date] timeIntervalSince1970];
     
+    self.backgroundColor = [UIColor whiteColor];
     self.clearButtonMode = UITextFieldViewModeWhileEditing;
 }
 

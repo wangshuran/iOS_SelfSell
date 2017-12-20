@@ -7,7 +7,23 @@
 //
 
 #import <WebKit/WebKit.h>
+#import "LInitProtocol.h"
 
 @interface LWebView : WKWebView
+
+/**
+ 唯一标示
+ */
+@property (nonatomic, copy, readonly) NSString * uid;
+
+/**
+ 创建时间
+ */
+@property (nonatomic, assign, readonly) NSTimeInterval createTime;
+
+/**
+ 销毁时间
+ */
+@property (nonatomic, assign, readonly) NSTimeInterval destroyTime;
 
 @end

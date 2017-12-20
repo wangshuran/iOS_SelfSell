@@ -20,13 +20,13 @@
     return self;
 }
 
-- (instancetype)initWithCoder:(NSCoder *)aDecoder {
-    self = [super initWithCoder:aDecoder];
-    
-    [self initialize];
-    
-    return self;
-}
+//- (instancetype)initWithCoder:(NSCoder *)aDecoder {
+//    self = [super initWithCoder:aDecoder];
+//
+//    [self initialize];
+//
+//    return self;
+//}
 
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
@@ -49,6 +49,9 @@
     
     _uid = [NSUUID UUID].UUIDString;
     _createTime = [[NSDate date] timeIntervalSince1970];
+    
+    self.backgroundColor = [UIColor whiteColor];
+    
     
     //添加点击事件
     [self addTarget:self action:@selector(click:) forControlEvents:UIControlEventTouchUpInside];

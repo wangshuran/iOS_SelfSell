@@ -10,4 +10,18 @@
 
 @implementation SRequest
 
+#pragma mark - Interface
+
+- (NSString *)CFBundleVersion {
+    return [LApp CFBundleVersion];
+}
+
+- (NSString *)CFBundleIdentifier {
+    return [LApp CFBundleIdentifier];
+}
+
+- (NSString *)CFBundleShortVersionString {
+    return [LApp CFBundleShortVersionString];
+}
+
 @end

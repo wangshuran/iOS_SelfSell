@@ -12,15 +12,7 @@
 
 #pragma mark - Interface
 
-- (NSString *)getBundleIdentifier {
-    return [NSBundle mainBundle].bundleIdentifier;
-}
-
-- (NSString *)getCurrentVersionInBundle {
-    return [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
-}
-
-- (UIViewController *)getTopViewController {
++ (UIViewController *)getTopController {
     UIViewController * vc = [UIApplication sharedApplication].keyWindow.rootViewController;
     
     while (YES) {
@@ -40,6 +32,14 @@
     }
     
     return vc;
+}
+
++ (void)presentViewController:(UIViewController *)viewControllerToPresent {
+    [self presentViewController:viewControllerToPresent animated:YES completion:nil];
+}
+
++ (void)presentViewController:(UIViewController *)viewControllerToPresent animated: (BOOL)flag completion:(void (^ )(void))completion {
+    [[self getTopController] presentViewController:viewControllerToPresent animated:flag completion:completion];
 }
 
 @end

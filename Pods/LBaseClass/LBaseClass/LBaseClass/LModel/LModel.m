@@ -15,4 +15,11 @@
 
 
 
+#pragma mark - LInitProtocol
+
+- (void)initialize {
+    [super initialize];
+    
+}
+
 @end

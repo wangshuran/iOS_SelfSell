@@ -9,9 +9,17 @@
 #ifndef LBaseClass_h
 #define LBaseClass_h
 
+//--------------------LApp--------------------
+#import "LApp.h"
+
+
 //--------------------LCategory--------------------
-#import "UIDevice+IdentifierAddition.h"
+#import "NSData+Hex.h"
+#import "NSString+Hex.h"
+#import "NSString+MD5.h"
 #import "UIColor+Category.h"
+#import "UIDevice+IdentifierAddition.h"
+
 
 //--------------------LContext--------------------
 #import "LContext.h"
