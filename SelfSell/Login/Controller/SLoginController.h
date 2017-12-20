@@ -1,5 +1,5 @@
 //
-//  LoginController.h
+//  SLoginController.h
 //  SelfSell
 //
 //  Created by liqiang on 2017/12/19.
@@ -8,6 +8,6 @@
 
 #import "SViewController.h"
 
-@interface LoginController : SViewController
+@interface SLoginController : SViewController
 
 @end

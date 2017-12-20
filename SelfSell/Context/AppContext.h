@@ -6,35 +6,34 @@
 //  Copyright © 2017年 Goopal. All rights reserved.
 //
 
-#import <LBaseClass/LBaseClass.h>
-
-typedef enum : NSUInteger {
-    LanguageNone,//未知
-    LanguageEN,//英文
-    LanguageTC,//繁体中文
-    LanguageSC,//简体中文
-} Language;
-
+#import "SObject.h"
 
 /**
  上下文
  */
-@interface AppContext : LObject
+@interface AppContext : SObject
+
+LSingleton_h(AppContext);
 
 /**
  根控制器
  */
-@property (nonatomic, strong) STabBarController *rootVC;
+@property (nonatomic, strong) STabBarController * rootVC;
 
 /**
  DEMO_N1
  */
-@property (nonatomic, strong) SNavigationController *n1VC;
+@property (nonatomic, strong) SNavigationController * n1VC;
 
 /**
- 当前语言
+ 语言类型
  */
 @property (nonatomic, assign) Language language;
+
+/**
+ 登录类型
+ */
+@property (nonatomic, assign) LoginType loginType;
 
 /**
  开启监听

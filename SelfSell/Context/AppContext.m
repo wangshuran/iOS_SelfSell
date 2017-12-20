@@ -12,6 +12,8 @@
 
 #pragma mark - Interface
 
+LSingleton_m(AppContext);
+
 - (void)startMoniter {
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored"-Wundeclared-selector"
@@ -40,7 +42,7 @@
 
 - (SNavigationController *)n1VC {
     if (!_n1VC) {
-        SViewController * vc = [[NSClassFromString(@"LoginController") alloc] init];
+        SViewController * vc = [[NSClassFromString(@"SLoginController") alloc] init];
         
         _n1VC = [[SNavigationController alloc] initWithRootViewController:vc];
     }

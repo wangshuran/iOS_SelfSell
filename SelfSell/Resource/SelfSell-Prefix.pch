@@ -55,6 +55,7 @@
 
 //--------------------define--------------------
 #import "define.h"
+#import "define_enum.h"
 #import "define_notice.h"
 
 

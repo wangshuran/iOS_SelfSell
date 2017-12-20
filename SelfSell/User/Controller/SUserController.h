@@ -1,5 +1,5 @@
 //
-//  UserController.h
+//  SUserController.h
 //  SelfSell
 //
 //  Created by liqiang on 2017/12/19.
@@ -8,6 +8,6 @@
 
 #import "SViewController.h"
 
-@interface UserController : SViewController
+@interface SUserController : SViewController
 
 @end

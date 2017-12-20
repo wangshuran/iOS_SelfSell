@@ -1,18 +1,18 @@
 //
-//  LoginController.m
+//  SLoginController.m
 //  SelfSell
 //
 //  Created by liqiang on 2017/12/19.
 //  Copyright © 2017年 Goopal. All rights reserved.
 //
 
-#import "LoginController.h"
+#import "SLoginController.h"
 
-@interface LoginController ()
+@interface SLoginController ()
 
 @end
 
-@implementation LoginController
+@implementation SLoginController
 
 #pragma mark - Interface
 
@@ -26,7 +26,7 @@
     [super viewWillAppear:animated];
     
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        SViewController * vc = [[NSClassFromString(@"UserController") alloc] init];
+        SViewController * vc = [[NSClassFromString(@"SUserController") alloc] init];
 
         [self.navigationController pushViewController:vc animated:YES];
     });

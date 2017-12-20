@@ -1,18 +1,18 @@
 //
-//  UserController.m
+//  SUserController.m
 //  SelfSell
 //
 //  Created by liqiang on 2017/12/19.
 //  Copyright © 2017年 Goopal. All rights reserved.
 //
 
-#import "UserController.h"
+#import "SUserController.h"
 
-@interface UserController ()
+@interface SUserController ()
 
 @end
 
-@implementation UserController
+@implementation SUserController
 
 #pragma mark - Interface
 
