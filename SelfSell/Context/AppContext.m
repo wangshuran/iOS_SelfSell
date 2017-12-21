@@ -14,7 +14,7 @@
 
 LSingleton_m(AppContext);
 
-- (void)startMoniter {
+- (void)startMonitoring {
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored"-Wundeclared-selector"
     
@@ -67,6 +67,14 @@ LSingleton_m(AppContext);
     }
     
     return _language;
+}
+
+#pragma mark - LInitProtocol
+
+- (void)initialize {
+    [super initialize];
+    
+    self.netStatus = AFNetworkReachabilityStatusUnknown;
 }
 
 @end

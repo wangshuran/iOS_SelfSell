@@ -22,7 +22,7 @@
 
 //--------------------SDImageCache--------------------
 #import <SDImageCache.h>
-
+#import <AFNetworking.h>
 
 //--------------------LBaseClass--------------------
 #import "LBaseClass.h"

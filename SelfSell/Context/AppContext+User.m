@@ -20,11 +20,8 @@
     NSString * selfsellPath = [libraryPath stringByAppendingPathComponent:userIdentifier];
     
     NSFileManager * fileManager = [NSFileManager defaultManager];
-    
-    @synchronized(self) {
-        if (![fileManager fileExistsAtPath:selfsellPath]) {
-            [fileManager createDirectoryAtPath:selfsellPath withIntermediateDirectories:YES attributes:nil error:nil];
-        }
+    if (![fileManager fileExistsAtPath:selfsellPath]) {
+        [fileManager createDirectoryAtPath:selfsellPath withIntermediateDirectories:YES attributes:nil error:nil];
     }
     
     return selfsellPath;
@@ -39,7 +36,7 @@
     userIdentifier = [userIdentifier MD5];
     
     NSUserDefaults * userDefaults = [NSUserDefaults standardUserDefaults];
-
+    
     @synchronized(self) {
         NSMutableDictionary * info = [userDefaults objectForKey:userIdentifier];
         
@@ -84,9 +81,10 @@
 - (void)noticeToLogin:(NSNotification *)notification {
     //此处最好加独占锁，防止连续发送两次通知，弹出两个登录视图
     SLoginController * vc = [[SLoginController alloc] init];
-    SNavigationController * nav = [[SNavigationController alloc] initWithRootViewController:vc];
-    
-    [LContext presentViewController:nav];
+    //SNavigationController * nav = [[SNavigationController alloc] initWithRootViewController:vc];
+    //
+    //[UIViewController present:nav];
+    [[AppContext sharedAppContext].n1VC push:vc];
 }
 
 /**

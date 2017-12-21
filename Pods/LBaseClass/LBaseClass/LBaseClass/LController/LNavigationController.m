@@ -69,10 +69,6 @@
     return [super description];
 }
 
-- (void)dealloc {
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
-}
-
 - (BOOL)shouldAutorotate {
     return self.topViewController.shouldAutorotate;
 }
@@ -99,6 +95,10 @@
 
 - (UIStatusBarAnimation)preferredStatusBarUpdateAnimation {
     return self.topViewController.preferredStatusBarUpdateAnimation;
+}
+
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 #pragma mark - LInitProtocol

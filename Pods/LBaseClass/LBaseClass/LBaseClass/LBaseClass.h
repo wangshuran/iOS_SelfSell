@@ -19,6 +19,7 @@
 #import "NSString+MD5.h"
 #import "UIColor+Category.h"
 #import "UIDevice+IdentifierAddition.h"
+#import "UIViewController+Category.h"
 
 
 //--------------------LContext--------------------

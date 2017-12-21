@@ -12,19 +12,4 @@
 
 @interface LContext : LObject
 
-/**
- 获取顶层Controller
- */
-+ (UIViewController *)getTopController;
-
-/**
- presentController
- */
-+ (void)presentViewController:(UIViewController *)viewControllerToPresent;
-
-/**
- presentController
- */
-+ (void)presentViewController:(UIViewController *)viewControllerToPresent animated: (BOOL)flag completion:(void (^ )(void))completion;
-
 @end

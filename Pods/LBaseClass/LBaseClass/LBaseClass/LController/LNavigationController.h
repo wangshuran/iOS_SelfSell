@@ -29,4 +29,5 @@
  */
 @property (nonatomic, assign, readonly) NSTimeInterval destroyTime;
 
+
 @end

@@ -32,6 +32,11 @@ LSingleton_h(AppContext);
 @property (nonatomic, assign) Language language;
 
 /**
+ 网络状态
+ */
+@property (nonatomic, assign) AFNetworkReachabilityStatus netStatus;
+
+/**
  登录类型
  */
 @property (nonatomic, assign) LoginType loginType;
@@ -44,6 +49,6 @@ LSingleton_h(AppContext);
 /**
  开启监听
  */
-- (void)startMoniter;
+- (void)startMonitoring;
 
 @end
