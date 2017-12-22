@@ -5,6 +5,7 @@ target 'SelfSell' do
     pod 'Masonry'
     pod 'MJRefresh'
     pod 'MJExtension'
+    pod 'MBProgressHUD'
     
     pod 'LBaseClass'
 end

@@ -7,6 +7,7 @@
 //
 
 #import "LObject.h"
+#import "LDefine.h"
 #import <objc/runtime.h>
 
 @implementation LObject
@@ -21,8 +22,14 @@
     return self;
 }
 
+- (NSString *)description {
+    return [NSString stringWithFormat:@"uid:%@__createTime:%f", self.uid, self.createTime];
+}
+
 - (void)dealloc {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
+    
+    debugDescription();
 }
 
 #pragma mark - LInitProtocol
@@ -36,7 +43,7 @@
     _createTime = [[NSDate date] timeIntervalSince1970];
 }
 
-#pragma mark - LPropertyProtocol
+#pragma mark - LReflectProtocol
 
 - (NSMutableDictionary *)propertyKeyValues:(BOOL)isIncludeParent {
     NSMutableSet * keys = [self propertyKeys:isIncludeParent];
@@ -82,6 +89,28 @@
     }
     
     return keys.count == 0 ? nil : keys;
+}
+
+- (BOOL)reflect:(NSObject *)obj {    
+    return NO;
+}
+
+#pragma mark - LSerializableProtocol
+
+- (NSString *)getJSON {
+    return nil;
+}
+
+- (NSString *)getXML {
+    return nil;
+}
+
+- (NSString *)getQuery {
+    return nil;
+}
+
+- (NSMutableDictionary *)getParameter {
+    return nil;
 }
 
 @end

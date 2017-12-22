@@ -11,7 +11,7 @@
 @interface LApp : NSObject
 
 /**
- ID
+ 包ID
  */
 + (NSString *)CFBundleIdentifier;
 

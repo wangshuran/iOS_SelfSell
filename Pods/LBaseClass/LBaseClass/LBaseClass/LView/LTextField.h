@@ -22,11 +22,6 @@
 @property (nonatomic, assign, readonly) NSTimeInterval createTime;
 
 /**
- 销毁时间
- */
-@property (nonatomic, assign, readonly) NSTimeInterval destroyTime;
-
-/**
  设置默认文本字体
  */
 - (void)setPlaceholderFont:(UIFont *)font;

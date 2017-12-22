@@ -7,6 +7,7 @@
 //
 
 #import "LTextField.h"
+#import "LDefine.h"
 
 @implementation LTextField
 
@@ -36,8 +37,14 @@
 //    return self;
 //}
 
+- (NSString *)description {
+    return [NSString stringWithFormat:@"uid:%@__createTime:%f", self.uid, self.createTime];
+}
+
 - (void)dealloc {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
+    
+    debugDescription();
 }
 
 - (void)setPlaceholderFont:(UIFont *)font {

@@ -7,6 +7,7 @@
 //
 
 #import "SRequest.h"
+#import "SLoginByAccountResponse.h"
 
 @interface SLoginByAccountRequest : SRequest
 

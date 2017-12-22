@@ -2,12 +2,12 @@
 //  SResponse.h
 //  SelfSell
 //
-//  Created by liqiang on 2017/12/20.
+//  Created by liqiang on 2017/12/21.
 //  Copyright © 2017年 Goopal. All rights reserved.
 //
 
-#import "SModel.h"
+#import <LBaseClass/LBaseClass.h>
 
-@interface SResponse : SModel
+@interface SResponse : LResponse
 
 @end

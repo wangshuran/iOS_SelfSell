@@ -1,12 +1,12 @@
 //
-//  LPropertyProtocol.h
+//  LReflectProtocol.h
 //  LBaseClass
 //
-//  Created by liqiang on 2017/12/20.
+//  Created by liqiang on 2017/12/21.
 //  Copyright © 2017年 liqiang. All rights reserved.
 //
 
-@protocol LPropertyProtocol <NSObject>
+@protocol LReflectProtocol <NSObject>
 
 @optional
 
@@ -30,5 +30,10 @@
  @param isIncludeParent 是否包含父类
  */
 + (NSMutableSet *)propertyKeys:(BOOL)isIncludeParent;
+
+/**
+ 反射
+ */
+- (BOOL)reflect:(NSObject *)obj;
 
 @end

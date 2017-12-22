@@ -7,6 +7,7 @@
 //
 
 #import "LImageView.h"
+#import "LDefine.h"
 
 @implementation LImageView
 
@@ -52,8 +53,14 @@
     return self;
 }
 
+- (NSString *)description {
+    return [NSString stringWithFormat:@"uid:%@__createTime:%f", self.uid, self.createTime];
+}
+
 - (void)dealloc {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
+    
+    debugDescription();
 }
 
 #pragma mark - LInitProtocol

@@ -74,7 +74,9 @@ LSingleton_m(AppContext);
 - (void)initialize {
     [super initialize];
     
+    self.language = LanguageNone;
     self.netStatus = AFNetworkReachabilityStatusUnknown;
+    self.loginType = LoginTypeNone;
 }
 
 @end

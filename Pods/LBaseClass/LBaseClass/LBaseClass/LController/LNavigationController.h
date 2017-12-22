@@ -8,26 +8,18 @@
 
 #import <UIKit/UIKit.h>
 #import "LInitProtocol.h"
-#import "LPropertyProtocol.h"
+#import "LReflectProtocol.h"
 
-@interface LNavigationController : UINavigationController<LInitProtocol, LPropertyProtocol>
+@interface LNavigationController : UINavigationController<LInitProtocol, LReflectProtocol>
 
 /**
  唯一标识
  */
 @property (nonatomic, copy, readonly) NSString * uid;
 
-
 /**
  创建时间
  */
 @property (nonatomic, assign, readonly) NSTimeInterval createTime;
-
-
-/**
- 销毁时间
- */
-@property (nonatomic, assign, readonly) NSTimeInterval destroyTime;
-
 
 @end

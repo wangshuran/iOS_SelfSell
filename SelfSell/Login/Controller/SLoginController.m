@@ -38,8 +38,6 @@
 
 - (void)initialize {
     [super initialize];
-    
-    self.title = self.className;
 }
 
 @end
