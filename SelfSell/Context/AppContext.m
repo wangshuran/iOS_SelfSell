@@ -32,7 +32,7 @@ LSingleton_m(AppContext);
 
 - (STabBarController *)rootVC {
     if (!_rootVC) {
-        _rootVC = [[NSClassFromString(@"STabBarController") alloc] init];
+        _rootVC = [NSClassFromString(@"STabBarController") new];
         _rootVC.viewControllers = [NSArray arrayWithObjects:self.n1VC, nil];
         _rootVC.selectedViewController = self.n1VC;
     }
@@ -42,7 +42,7 @@ LSingleton_m(AppContext);
 
 - (SNavigationController *)n1VC {
     if (!_n1VC) {
-        SViewController * vc = [[NSClassFromString(@"SSettingController") alloc] init];
+        SViewController * vc = [NSClassFromString(@"SUserController") new];
         
         _n1VC = [[SNavigationController alloc] initWithRootViewController:vc];
     }

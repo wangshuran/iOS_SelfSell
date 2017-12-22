@@ -43,7 +43,7 @@
         if (info) {
             info = [info mutableCopy];
         }else {
-            info = [[NSMutableDictionary alloc] init];
+            info = [NSMutableDictionary new];
         }
         
         [info setObject:value forKey:key];
@@ -80,11 +80,11 @@
  */
 - (void)noticeToLogin:(NSNotification *)notification {
     //此处最好加独占锁，防止连续发送两次通知，弹出两个登录视图
-    SLoginController * vc = [[SLoginController alloc] init];
-    //SNavigationController * nav = [[SNavigationController alloc] initWithRootViewController:vc];
-    //
-    //[UIViewController present:nav];
-    [[AppContext sharedAppContext].n1VC push:vc];
+    SLoginController * vc = [SLoginController new];
+    vc = [NSClassFromString(@"SCheckVersionController") new];
+    SNavigationController * nav = [[SNavigationController alloc] initWithRootViewController:vc];
+    [UIViewController present:nav];
+    //[[AppContext sharedAppContext].n1VC push:vc];
 }
 
 /**

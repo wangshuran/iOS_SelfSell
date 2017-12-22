@@ -29,6 +29,9 @@
 		D53B6B8D1FDF7A77006AEB46 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D53B6B8F1FDF7A77006AEB46 /* Localizable.strings */; };
 		D53B6B981FDF7DAD006AEB46 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D53B6B9A1FDF7DAD006AEB46 /* InfoPlist.strings */; };
 		D540F5421FDF83DF00AECCB7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D540F5411FDF83DF00AECCB7 /* Assets.xcassets */; };
+		D54483401FED03A000D2F681 /* SCheckVersionController.m in Sources */ = {isa = PBXBuildFile; fileRef = D544833F1FED03A000D2F681 /* SCheckVersionController.m */; };
+		D54483451FED040800D2F681 /* SVersionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D54483441FED040800D2F681 /* SVersionModel.m */; };
+		D54483481FED049300D2F681 /* SVersionService.m in Sources */ = {isa = PBXBuildFile; fileRef = D54483471FED049300D2F681 /* SVersionService.m */; };
 		D5515F041FDF5A5500278579 /* SelfSellTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D5515F031FDF5A5500278579 /* SelfSellTests.m */; };
 		D5515F0F1FDF5A5500278579 /* SelfSellUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D5515F0E1FDF5A5500278579 /* SelfSellUITests.m */; };
 		D5DB07081FEA462900A347B1 /* AppContext+Cache.m in Sources */ = {isa = PBXBuildFile; fileRef = D5DB07071FEA462900A347B1 /* AppContext+Cache.m */; };
@@ -116,6 +119,12 @@
 		D53B6B9B1FDF7DB3006AEB46 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		D53B6B9C1FDF7DB4006AEB46 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		D540F5411FDF83DF00AECCB7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D544833E1FED03A000D2F681 /* SCheckVersionController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCheckVersionController.h; sourceTree = "<group>"; };
+		D544833F1FED03A000D2F681 /* SCheckVersionController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCheckVersionController.m; sourceTree = "<group>"; };
+		D54483431FED040800D2F681 /* SVersionModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SVersionModel.h; sourceTree = "<group>"; };
+		D54483441FED040800D2F681 /* SVersionModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SVersionModel.m; sourceTree = "<group>"; };
+		D54483461FED049300D2F681 /* SVersionService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SVersionService.h; sourceTree = "<group>"; };
+		D54483471FED049300D2F681 /* SVersionService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SVersionService.m; sourceTree = "<group>"; };
 		D5515EE71FDF5A5500278579 /* SelfSell.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SelfSell.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5515EFF1FDF5A5500278579 /* SelfSellTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SelfSellTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5515F031FDF5A5500278579 /* SelfSellTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SelfSellTests.m; sourceTree = "<group>"; };
@@ -298,6 +307,67 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		D54483391FED037D00D2F681 /* Version */ = {
+			isa = PBXGroup;
+			children = (
+				D544833A1FED037D00D2F681 /* Controller  */,
+				D54483421FED03F400D2F681 /* Model */,
+				D54483411FED03DD00D2F681 /* Service */,
+				D544833B1FED037D00D2F681 /* View */,
+				D544833C1FED037D00D2F681 /* ViewManager */,
+				D544833D1FED037D00D2F681 /* ViewModel */,
+			);
+			path = Version;
+			sourceTree = "<group>";
+		};
+		D544833A1FED037D00D2F681 /* Controller  */ = {
+			isa = PBXGroup;
+			children = (
+				D544833E1FED03A000D2F681 /* SCheckVersionController.h */,
+				D544833F1FED03A000D2F681 /* SCheckVersionController.m */,
+			);
+			path = "Controller ";
+			sourceTree = "<group>";
+		};
+		D544833B1FED037D00D2F681 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D544833C1FED037D00D2F681 /* ViewManager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewManager;
+			sourceTree = "<group>";
+		};
+		D544833D1FED037D00D2F681 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		D54483411FED03DD00D2F681 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				D54483461FED049300D2F681 /* SVersionService.h */,
+				D54483471FED049300D2F681 /* SVersionService.m */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		D54483421FED03F400D2F681 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D54483431FED040800D2F681 /* SVersionModel.h */,
+				D54483441FED040800D2F681 /* SVersionModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		D5515EDE1FDF5A5500278579 = {
 			isa = PBXGroup;
 			children = (
@@ -323,13 +393,14 @@
 		D5515EE91FDF5A5500278579 /* SelfSell */ = {
 			isa = PBXGroup;
 			children = (
-				D5DB072F1FEA508E00A347B1 /* Setting */,
 				D52654891FE7E02800FE8D08 /* Base */,
 				D5029CE51FDF6B070063D82A /* Context */,
 				D5F53C3F1FE92DAC000EED16 /* Login */,
 				D5DB07201FEA4F6400A347B1 /* Network */,
 				D5029CE91FDF6B370063D82A /* Resource */,
+				D5DB072F1FEA508E00A347B1 /* Setting */,
 				D5F53C3A1FE92D6E000EED16 /* User */,
+				D54483391FED037D00D2F681 /* Version */,
 			);
 			path = SelfSell;
 			sourceTree = "<group>";
@@ -733,7 +804,10 @@
 				D5029CE81FDF6B1C0063D82A /* AppDelegate.m in Sources */,
 				D52654CB1FE7E13800FE8D08 /* SObject.m in Sources */,
 				D5029CF61FDF6CE00063D82A /* AppContext.m in Sources */,
+				D54483451FED040800D2F681 /* SVersionModel.m in Sources */,
 				D52654D41FE7E16100FE8D08 /* SLabel.m in Sources */,
+				D54483401FED03A000D2F681 /* SCheckVersionController.m in Sources */,
+				D54483481FED049300D2F681 /* SVersionService.m in Sources */,
 				D5E137191FECB36900581313 /* SSettingViewModel.m in Sources */,
 				D52654D71FE7E17400FE8D08 /* SScrollView.m in Sources */,
 				D52654C81FE7E12D00FE8D08 /* SModel.m in Sources */,
