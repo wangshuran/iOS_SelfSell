@@ -36,10 +36,16 @@
 		D5DB07151FEA4C7C00A347B1 /* SUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D5DB07141FEA4C7C00A347B1 /* SUserModel.m */; };
 		D5DB072B1FEA4FD400A347B1 /* SLoginByAccountRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = D5DB072A1FEA4FD400A347B1 /* SLoginByAccountRequest.m */; };
 		D5DB072E1FEA4FE500A347B1 /* SLoginByAccountResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = D5DB072D1FEA4FE500A347B1 /* SLoginByAccountResponse.m */; };
-		D5DB07331FEA50A100A347B1 /* SSettingController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5DB07321FEA50A100A347B1 /* SSettingController.m */; };
 		D5DB07441FEA692F00A347B1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D5DB07431FEA692F00A347B1 /* main.m */; };
 		D5E136EB1FEBA9EB00581313 /* SRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E136EA1FEBA9EB00581313 /* SRequest.m */; };
 		D5E136EE1FEBAA3900581313 /* SResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E136ED1FEBAA3900581313 /* SResponse.m */; };
+		D5E137181FECB36900581313 /* SSettingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E137111FECB36800581313 /* SSettingModel.m */; };
+		D5E137191FECB36900581313 /* SSettingViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E137141FECB36900581313 /* SSettingViewModel.m */; };
+		D5E1371A1FECB36900581313 /* SSettingController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E137171FECB36900581313 /* SSettingController.m */; };
+		D5E1371D1FECB4F900581313 /* SSetNicknameView.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E1371C1FECB4F900581313 /* SSetNicknameView.m */; };
+		D5E137211FECB7D000581313 /* SSettingService.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E137201FECB7D000581313 /* SSettingService.m */; };
+		D5E137251FECB95300581313 /* SSettingDao.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E137241FECB95300581313 /* SSettingDao.m */; };
+		D5E137291FECBA1800581313 /* SSettingCache.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E137281FECBA1800581313 /* SSettingCache.m */; };
 		D5F53C3E1FE92D90000EED16 /* SUserController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5F53C3D1FE92D90000EED16 /* SUserController.m */; };
 		D5F53C431FE92DBB000EED16 /* SLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5F53C421FE92DBB000EED16 /* SLoginController.m */; };
 /* End PBXBuildFile section */
@@ -130,13 +136,25 @@
 		D5DB072A1FEA4FD400A347B1 /* SLoginByAccountRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SLoginByAccountRequest.m; sourceTree = "<group>"; };
 		D5DB072C1FEA4FE500A347B1 /* SLoginByAccountResponse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLoginByAccountResponse.h; sourceTree = "<group>"; };
 		D5DB072D1FEA4FE500A347B1 /* SLoginByAccountResponse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SLoginByAccountResponse.m; sourceTree = "<group>"; };
-		D5DB07311FEA50A100A347B1 /* SSettingController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSettingController.h; sourceTree = "<group>"; };
-		D5DB07321FEA50A100A347B1 /* SSettingController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSettingController.m; sourceTree = "<group>"; };
 		D5DB07431FEA692F00A347B1 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D5E136E91FEBA9EB00581313 /* SRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SRequest.h; sourceTree = "<group>"; };
 		D5E136EA1FEBA9EB00581313 /* SRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SRequest.m; sourceTree = "<group>"; };
 		D5E136EC1FEBAA3900581313 /* SResponse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SResponse.h; sourceTree = "<group>"; };
 		D5E136ED1FEBAA3900581313 /* SResponse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SResponse.m; sourceTree = "<group>"; };
+		D5E137101FECB36800581313 /* SSettingModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSettingModel.h; sourceTree = "<group>"; };
+		D5E137111FECB36800581313 /* SSettingModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSettingModel.m; sourceTree = "<group>"; };
+		D5E137131FECB36900581313 /* SSettingViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSettingViewModel.h; sourceTree = "<group>"; };
+		D5E137141FECB36900581313 /* SSettingViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSettingViewModel.m; sourceTree = "<group>"; };
+		D5E137161FECB36900581313 /* SSettingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSettingController.h; sourceTree = "<group>"; };
+		D5E137171FECB36900581313 /* SSettingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSettingController.m; sourceTree = "<group>"; };
+		D5E1371B1FECB4F900581313 /* SSetNicknameView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSetNicknameView.h; sourceTree = "<group>"; };
+		D5E1371C1FECB4F900581313 /* SSetNicknameView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSetNicknameView.m; sourceTree = "<group>"; };
+		D5E1371F1FECB7D000581313 /* SSettingService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSettingService.h; sourceTree = "<group>"; };
+		D5E137201FECB7D000581313 /* SSettingService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSettingService.m; sourceTree = "<group>"; };
+		D5E137231FECB95300581313 /* SSettingDao.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSettingDao.h; sourceTree = "<group>"; };
+		D5E137241FECB95300581313 /* SSettingDao.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSettingDao.m; sourceTree = "<group>"; };
+		D5E137271FECBA1800581313 /* SSettingCache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSettingCache.h; sourceTree = "<group>"; };
+		D5E137281FECBA1800581313 /* SSettingCache.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSettingCache.m; sourceTree = "<group>"; };
 		D5F53C3C1FE92D90000EED16 /* SUserController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SUserController.h; sourceTree = "<group>"; };
 		D5F53C3D1FE92D90000EED16 /* SUserController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SUserController.m; sourceTree = "<group>"; };
 		D5F53C411FE92DBB000EED16 /* SLoginController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLoginController.h; sourceTree = "<group>"; };
@@ -377,18 +395,86 @@
 		D5DB072F1FEA508E00A347B1 /* Setting */ = {
 			isa = PBXGroup;
 			children = (
-				D5DB07301FEA508E00A347B1 /* Controller */,
+				D5E137261FECBA0500581313 /* Cache */,
+				D5E137151FECB36900581313 /* Controller */,
+				D5E137221FECB8F600581313 /* Dao */,
+				D5E1370F1FECB36800581313 /* Model */,
+				D5E1371E1FECB7A900581313 /* Service */,
+				D5E1370D1FECB35E00581313 /* View */,
+				D5E1370E1FECB35E00581313 /* ViewManager */,
+				D5E137121FECB36900581313 /* ViewModel */,
 			);
 			path = Setting;
 			sourceTree = "<group>";
 		};
-		D5DB07301FEA508E00A347B1 /* Controller */ = {
+		D5E1370D1FECB35E00581313 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				D5DB07311FEA50A100A347B1 /* SSettingController.h */,
-				D5DB07321FEA50A100A347B1 /* SSettingController.m */,
+				D5E1371B1FECB4F900581313 /* SSetNicknameView.h */,
+				D5E1371C1FECB4F900581313 /* SSetNicknameView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D5E1370E1FECB35E00581313 /* ViewManager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewManager;
+			sourceTree = "<group>";
+		};
+		D5E1370F1FECB36800581313 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D5E137101FECB36800581313 /* SSettingModel.h */,
+				D5E137111FECB36800581313 /* SSettingModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D5E137121FECB36900581313 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				D5E137131FECB36900581313 /* SSettingViewModel.h */,
+				D5E137141FECB36900581313 /* SSettingViewModel.m */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		D5E137151FECB36900581313 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D5E137161FECB36900581313 /* SSettingController.h */,
+				D5E137171FECB36900581313 /* SSettingController.m */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		D5E1371E1FECB7A900581313 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				D5E1371F1FECB7D000581313 /* SSettingService.h */,
+				D5E137201FECB7D000581313 /* SSettingService.m */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		D5E137221FECB8F600581313 /* Dao */ = {
+			isa = PBXGroup;
+			children = (
+				D5E137231FECB95300581313 /* SSettingDao.h */,
+				D5E137241FECB95300581313 /* SSettingDao.m */,
+			);
+			path = Dao;
+			sourceTree = "<group>";
+		};
+		D5E137261FECBA0500581313 /* Cache */ = {
+			isa = PBXGroup;
+			children = (
+				D5E137271FECBA1800581313 /* SSettingCache.h */,
+				D5E137281FECBA1800581313 /* SSettingCache.m */,
+			);
+			path = Cache;
 			sourceTree = "<group>";
 		};
 		D5F53C3A1FE92D6E000EED16 /* User */ = {
@@ -631,22 +717,28 @@
 				D5E136EB1FEBA9EB00581313 /* SRequest.m in Sources */,
 				D52654C21FE7E10E00FE8D08 /* STableViewController.m in Sources */,
 				D52654E31FE7E1A600FE8D08 /* SView.m in Sources */,
-				D5DB07331FEA50A100A347B1 /* SSettingController.m in Sources */,
 				D5DB07081FEA462900A347B1 /* AppContext+Cache.m in Sources */,
 				D5DB070D1FEA486600A347B1 /* AppContext+User.m in Sources */,
+				D5E137211FECB7D000581313 /* SSettingService.m in Sources */,
+				D5E137251FECB95300581313 /* SSettingDao.m in Sources */,
+				D5E1371A1FECB36900581313 /* SSettingController.m in Sources */,
 				D52654D11FE7E15400FE8D08 /* SImageView.m in Sources */,
 				D5DB072B1FEA4FD400A347B1 /* SLoginByAccountRequest.m in Sources */,
 				D5F53C3E1FE92D90000EED16 /* SUserController.m in Sources */,
 				D52654BC1FE7E0DD00FE8D08 /* SNavigationController.m in Sources */,
 				D52654BF1FE7E0FB00FE8D08 /* STabBarController.m in Sources */,
 				D5E136EE1FEBAA3900581313 /* SResponse.m in Sources */,
+				D5E137181FECB36900581313 /* SSettingModel.m in Sources */,
 				D52654E61FE7E1B100FE8D08 /* SWebView.m in Sources */,
 				D5029CE81FDF6B1C0063D82A /* AppDelegate.m in Sources */,
 				D52654CB1FE7E13800FE8D08 /* SObject.m in Sources */,
 				D5029CF61FDF6CE00063D82A /* AppContext.m in Sources */,
 				D52654D41FE7E16100FE8D08 /* SLabel.m in Sources */,
+				D5E137191FECB36900581313 /* SSettingViewModel.m in Sources */,
 				D52654D71FE7E17400FE8D08 /* SScrollView.m in Sources */,
 				D52654C81FE7E12D00FE8D08 /* SModel.m in Sources */,
+				D5E1371D1FECB4F900581313 /* SSetNicknameView.m in Sources */,
+				D5E137291FECBA1800581313 /* SSettingCache.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

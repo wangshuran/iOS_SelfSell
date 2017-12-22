@@ -42,7 +42,7 @@ LSingleton_m(AppContext);
 
 - (SNavigationController *)n1VC {
     if (!_n1VC) {
-        SViewController * vc = [[NSClassFromString(@"SUserController") alloc] init];
+        SViewController * vc = [[NSClassFromString(@"SSettingController") alloc] init];
         
         _n1VC = [[SNavigationController alloc] initWithRootViewController:vc];
     }

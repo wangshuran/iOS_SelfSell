@@ -13,6 +13,10 @@
 
 #pragma mark - Interface
 
+- (NSString *)className {
+    return NSStringFromClass(self.class);
+}
+
 + (UIViewController *)getTopController {
     UIViewController * vc = [UIApplication sharedApplication].keyWindow.rootViewController;
     

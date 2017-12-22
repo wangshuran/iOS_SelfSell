@@ -15,8 +15,10 @@
 
 //--------------------LCategory--------------------
 #import "NSData+Hex.h"
+#import "NSObject+Category.h"
 #import "NSString+Hex.h"
 #import "NSString+MD5.h"
+#import "NSString+Parser.h"
 #import "UIColor+Category.h"
 #import "UIDevice+IdentifierAddition.h"
 #import "UIViewController+Category.h"

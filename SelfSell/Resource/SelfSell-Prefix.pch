@@ -23,6 +23,7 @@
 //--------------------SDImageCache--------------------
 #import <SDImageCache.h>
 #import <AFNetworking.h>
+#import <ReactiveObjC/ReactiveObjC.h>
 
 //--------------------LBaseClass--------------------
 #import "LBaseClass.h"

@@ -6,6 +6,7 @@ target 'SelfSell' do
     pod 'MJRefresh'
     pod 'MJExtension'
     pod 'MBProgressHUD'
+    pod 'ReactiveObjC'
     
     pod 'LBaseClass'
 end

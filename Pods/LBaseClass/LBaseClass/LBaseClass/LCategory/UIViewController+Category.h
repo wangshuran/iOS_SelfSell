@@ -11,6 +11,11 @@
 @interface UIViewController(Category)
 
 /**
+ 类名称
+ */
+- (NSString *)className;
+
+/**
  获取顶层VC
  */
 + (UIViewController *)getTopController;
