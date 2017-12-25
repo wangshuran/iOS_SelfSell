@@ -1,5 +1,5 @@
 //
-//  SSettingService.h
+//  SService.m
 //  SelfSell
 //
 //  Created by liqiang on 2017/12/25.
@@ -7,10 +7,10 @@
 //
 
 #import "SService.h"
-#import "SSettingModel.h"
 
-@interface SSettingService : SService
+@implementation SService
 
-- (NSArray<SSettingModel *> *)getAll;
+#pragma mark - LServiceProtocol
+
 
 @end

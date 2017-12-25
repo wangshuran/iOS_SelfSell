@@ -13,6 +13,10 @@
 #import "LApp.h"
 
 
+//--------------------LCache--------------------
+#import "LCache.h"
+
+
 //--------------------LCategory--------------------
 #import "NSData+Hex.h"
 #import "NSObject+Category.h"
@@ -36,6 +40,10 @@
 #import "LViewController.h"
 
 
+//--------------------LDao--------------------
+#import "LDao.h"
+
+
 //--------------------LModel--------------------
 #import "LModel.h"
 #import "LObject.h"
@@ -54,6 +62,10 @@
 
 //--------------------LResource--------------------
 #import "LDefine.h"
+
+
+//--------------------LService--------------------
+#import "LService.h"
 
 
 //--------------------LSingleton--------------------
