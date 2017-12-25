@@ -11,10 +11,10 @@
 @implementation SSettingService
 
 - (NSArray<SSettingModel *> *)getAll {
-    NSMutableArray *datas = [NSMutableArray new];
+    NSMutableArray *datas = [[NSMutableArray alloc] init];
     
     for (NSInteger i = 0; i < 20; i++) {
-        SSettingModel *model = [SSettingModel new];
+        SSettingModel *model = [[SSettingModel alloc] init];
         model.title = [NSUUID UUID].UUIDString;
         
         [datas addObject:model];

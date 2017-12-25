@@ -8,6 +8,7 @@
 
 #import "AppContext+User.h"
 #import "SLoginController.h"
+#import "SCheckVersionView.h"
 
 @implementation AppContext(User)
 
@@ -43,7 +44,7 @@
         if (info) {
             info = [info mutableCopy];
         }else {
-            info = [NSMutableDictionary new];
+            info = [[NSMutableDictionary alloc] init];
         }
         
         [info setObject:value forKey:key];
@@ -76,15 +77,22 @@
 #pragma mark - NSNotification
 
 /**
+ 显示版本检查通知
+ */
+- (void)noticeShowVersionCheck:(NSNotification *)notification {
+    SCheckVersionView * view = [[SCheckVersionView alloc] init];
+    view.frame = [UIScreen mainScreen].bounds;
+    //[[UIApplication sharedApplication].keyWindow addSubview:view];
+}
+    
+/**
  去登录通知
  */
 - (void)noticeToLogin:(NSNotification *)notification {
     //此处最好加独占锁，防止连续发送两次通知，弹出两个登录视图
-    SLoginController * vc = [SLoginController new];
-    vc = [NSClassFromString(@"SCheckVersionController") new];
+    SLoginController * vc = [[SLoginController alloc] init];
     SNavigationController * nav = [[SNavigationController alloc] initWithRootViewController:vc];
     [UIViewController present:nav];
-    //[[AppContext sharedAppContext].n1VC push:vc];
 }
 
 /**

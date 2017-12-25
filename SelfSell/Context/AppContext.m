@@ -23,6 +23,7 @@ LSingleton_m(AppContext);
     SAddObsver(noticeFinishLogin:, kNoticeFinishLogin);
     SAddObsver(noticeToLogout:, kNoticeToLogout);
     SAddObsver(noticeFinishLogout:, kNoticeFinishLogout);
+    SAddObsver(noticeShowVersionCheck:, kNoticeShowVersionCheck);    
     
 #pragma clang diagnostic pop
     
@@ -32,7 +33,7 @@ LSingleton_m(AppContext);
 
 - (STabBarController *)rootVC {
     if (!_rootVC) {
-        _rootVC = [NSClassFromString(@"STabBarController") new];
+        _rootVC = [[NSClassFromString(@"STabBarController") alloc] init];
         _rootVC.viewControllers = [NSArray arrayWithObjects:self.n1VC, nil];
         _rootVC.selectedViewController = self.n1VC;
     }
@@ -42,7 +43,7 @@ LSingleton_m(AppContext);
 
 - (SNavigationController *)n1VC {
     if (!_n1VC) {
-        SViewController * vc = [NSClassFromString(@"SUserController") new];
+        SViewController * vc = [[NSClassFromString(@"SUserController") alloc] init];
         
         _n1VC = [[SNavigationController alloc] initWithRootViewController:vc];
     }

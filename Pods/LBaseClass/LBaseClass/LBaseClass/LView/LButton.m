@@ -50,28 +50,17 @@
 #pragma mark - LInitProtocol
 
 - (void)initialize {
-    if (self.uid) {
-        @throw [NSException exceptionWithName:[NSString stringWithFormat:@"repeat execute %@", NSStringFromSelector(_cmd)] reason:[NSString stringWithFormat:@"repeat execute %@", NSStringFromSelector(_cmd)] userInfo:nil];
-    }
-    
-    _uid = [NSUUID UUID].UUIDString;
-    _createTime = [[NSDate date] timeIntervalSince1970];
-    
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        if (self.uid) {
+            @throw [NSException exceptionWithName:[NSString stringWithFormat:@"repeat execute %@", NSStringFromSelector(_cmd)] reason:[NSString stringWithFormat:@"repeat execute %@", NSStringFromSelector(_cmd)] userInfo:nil];
+        }
+        
+        _uid = [NSUUID UUID].UUIDString;
+        _createTime = [[NSDate date] timeIntervalSince1970];
+    });
+        
     self.backgroundColor = [UIColor whiteColor];
-    
-    
-    //添加点击事件
-    [self addTarget:self action:@selector(click:) forControlEvents:UIControlEventTouchUpInside];
-}
-
-/**
- 点击事件
- */
-- (void)click:(LButton *)sender {
-    if (self.clickBlock) {
-        __weak typeof(self) weakSelf = self;
-        self.clickBlock(weakSelf);
-    }
 }
 
 @end

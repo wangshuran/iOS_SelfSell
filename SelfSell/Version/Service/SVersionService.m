@@ -13,9 +13,9 @@
 #pragma mark - Interface
     
 - (SVersionModel *)getVersionModel {
-    SVersionModel * model = [SVersionModel new];
+    SVersionModel * model = [[SVersionModel alloc] init];
     model.minAppVersion = @"3.2.1";
-    model = [SVersionModel new];
+    
     return model;
 }
     

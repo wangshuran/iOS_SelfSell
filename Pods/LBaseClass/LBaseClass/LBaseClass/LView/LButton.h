@@ -28,9 +28,4 @@ typedef void(^LButtonClick)(LButton *);
  */
 @property (nonatomic, assign, readonly) NSTimeInterval createTime;
 
-/**
- 设置按钮点击事件
- */
-@property (nonatomic, assign) LButtonClick clickBlock;
-
 @end

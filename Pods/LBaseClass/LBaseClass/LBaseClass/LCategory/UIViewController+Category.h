@@ -33,12 +33,12 @@
 /**
  presentVC
  */
-+ (void)present:(UIViewController *)vc animated:(BOOL)animated completion:(void (^ )(void))completion;
++ (void)present:(UIViewController *)vc animated:(BOOL)animated completion:(void (^)(void))completion;
 
 /**
  presentVC
  */
-- (void)present:(UIViewController *)vc animated:(BOOL)animated completion:(void (^ )(void))completion;
+- (void)present:(UIViewController *)vc animated:(BOOL)animated completion:(void (^)(void))completion;
 
 /**
  pushVC
@@ -54,10 +54,20 @@
  popVC
  */
 - (void)pop;
-
+    
 /**
  popVC
  */
 - (void)pop:(BOOL)animated;
+
+/**
+ dismissVC
+ */
+- (void)dismiss;
+    
+/**
+ dismissVC
+ */
+- (void)dismiss:(BOOL)animated completion:(void (^)(void))completion;
 
 @end

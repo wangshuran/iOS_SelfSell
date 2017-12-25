@@ -1,13 +1,13 @@
 //
-//  SCheckVersionController.h
+//  SCheckVersionView.h
 //  SelfSell
 //
 //  Created by liqiang on 2017/12/22.
 //  Copyright © 2017年 Goopal. All rights reserved.
 //
 
-#import "SViewController.h"
+#import "SView.h"
 
-@interface SCheckVersionController : SViewController
+@interface SCheckVersionView : SView
 
 @end

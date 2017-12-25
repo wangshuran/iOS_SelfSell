@@ -122,15 +122,18 @@
 #pragma mark - LInitProtocol
 
 - (void)initialize {
-    if (self.uid) {
-        @throw [NSException exceptionWithName:[NSString stringWithFormat:@"repeat execute %@", NSStringFromSelector(_cmd)] reason:[NSString stringWithFormat:@"repeat execute %@", NSStringFromSelector(_cmd)] userInfo:nil];
-    }
-    
-    self.hiddenNavbar = NO;
-    self.hiddenTabar = YES;
-    
-    _uid = [NSUUID UUID].UUIDString;
-    _createTime = [[NSDate date] timeIntervalSince1970];
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        if (self.uid) {
+            @throw [NSException exceptionWithName:[NSString stringWithFormat:@"repeat execute %@", NSStringFromSelector(_cmd)] reason:[NSString stringWithFormat:@"repeat execute %@", NSStringFromSelector(_cmd)] userInfo:nil];
+        }
+        
+        _uid = [NSUUID UUID].UUIDString;
+        _createTime = [[NSDate date] timeIntervalSince1970];
+        
+        self.hiddenNavbar = NO;
+        self.hiddenTabar = YES;
+    });
     
     self.view.backgroundColor = [UIColor whiteColor];
 }
