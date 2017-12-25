@@ -9,5 +9,7 @@
 #ifndef define_h
 #define define_h
 
+//读取本地化语言
+#define SLocal(key) [[AppContext sharedAppContext] getLocalValue:key];
 
 #endif /* define_h */

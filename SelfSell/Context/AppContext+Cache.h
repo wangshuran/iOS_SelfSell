@@ -8,4 +8,9 @@
 
 @interface AppContext(Cache)
 
+/**
+ 获取本地化语言
+ */
+- (NSString *)getLocalValue:(NSString *)key;
+
 @end

@@ -34,6 +34,6 @@
 /**
  反射
  */
-- (BOOL)reflect:(NSObject *)obj;
+- (BOOL)reflect:(NSDictionary *)obj;
 
 @end

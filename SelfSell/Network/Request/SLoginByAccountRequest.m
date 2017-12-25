@@ -10,4 +10,13 @@
 
 @implementation SLoginByAccountRequest
 
+
+#pragma mark - LInitProtocol
+
+- (void)initialize {
+    [super initialize];
+    
+    self.url = [[AppContext sharedAppContext].host stringByAppendingString:@""];    
+}
+
 @end

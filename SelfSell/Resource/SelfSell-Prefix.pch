@@ -9,7 +9,7 @@
 #ifndef SelfSell_Prefix_pch
 #define SelfSell_Prefix_pch
 
-#ifdef __OBJC__
+//#ifdef __OBJC__
 
 
 //--------------------UIKit--------------------
@@ -20,14 +20,13 @@
 #import <Foundation/Foundation.h>
 
 
-//--------------------SDImageCache--------------------
-#import <SDImageCache.h>
-#import <AFNetworking.h>
-#import <ReactiveObjC/ReactiveObjC.h>
+////--------------------SDImageCache--------------------
+//#import <SDImageCache.h>
+//#import <AFNetworking.h>
+//#import <ReactiveObjC/ReactiveObjC.h>
 
-//--------------------LBaseClass--------------------
-#import "LBaseClass.h"
-
+//--------------------PodsLib--------------------
+#import <LBaseClass/LBaseClass.h>
 
 //--------------------LController--------------------
 #import "SNavigationController.h"
@@ -74,6 +73,6 @@
 
 
 
-#endif
+//#endif
 
 #endif /* SelfSell_Prefix_pch */

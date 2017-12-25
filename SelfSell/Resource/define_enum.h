@@ -23,4 +23,5 @@ typedef enum : NSUInteger {
     LoginTypeAccount,//账号登录
 } LoginType;//登录类型
 
+
 #endif /* define_enum_h */

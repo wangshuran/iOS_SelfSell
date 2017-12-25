@@ -12,18 +12,10 @@
 
 #pragma mark - Interface
 
-- (instancetype)initWithUrl:(NSString *)url {
-    self = [self init];
-    
-    return self;
-}
-
-
 #pragma mark - LInitProtocol
 
 - (void)initialize {
-    [super initialize];
-    
+    [super initialize];    
 }
 
 @end

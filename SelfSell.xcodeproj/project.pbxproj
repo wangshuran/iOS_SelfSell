@@ -40,6 +40,7 @@
 		D54894861FF09A0500F2019B /* SDao.m in Sources */ = {isa = PBXBuildFile; fileRef = D54894851FF09A0500F2019B /* SDao.m */; };
 		D54894891FF09A3C00F2019B /* SService.m in Sources */ = {isa = PBXBuildFile; fileRef = D54894881FF09A3C00F2019B /* SService.m */; };
 		D548948C1FF09B3B00F2019B /* SSettingService.m in Sources */ = {isa = PBXBuildFile; fileRef = D548948B1FF09B3B00F2019B /* SSettingService.m */; };
+		D54894931FF0F2AB00F2019B /* SupportLanguage.plist in Resources */ = {isa = PBXBuildFile; fileRef = D54894921FF0F2AB00F2019B /* SupportLanguage.plist */; };
 		D5515F041FDF5A5500278579 /* SelfSellTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D5515F031FDF5A5500278579 /* SelfSellTests.m */; };
 		D5515F0F1FDF5A5500278579 /* SelfSellUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D5515F0E1FDF5A5500278579 /* SelfSellUITests.m */; };
 		D5DB07081FEA462900A347B1 /* AppContext+Cache.m in Sources */ = {isa = PBXBuildFile; fileRef = D5DB07071FEA462900A347B1 /* AppContext+Cache.m */; };
@@ -146,6 +147,7 @@
 		D54894881FF09A3C00F2019B /* SService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SService.m; sourceTree = "<group>"; };
 		D548948A1FF09B3B00F2019B /* SSettingService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSettingService.h; sourceTree = "<group>"; };
 		D548948B1FF09B3B00F2019B /* SSettingService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSettingService.m; sourceTree = "<group>"; };
+		D54894921FF0F2AB00F2019B /* SupportLanguage.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = SupportLanguage.plist; sourceTree = "<group>"; };
 		D5515EE71FDF5A5500278579 /* SelfSell.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SelfSell.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5515EFF1FDF5A5500278579 /* SelfSellTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SelfSellTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5515F031FDF5A5500278579 /* SelfSellTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SelfSellTests.m; sourceTree = "<group>"; };
@@ -257,6 +259,7 @@
 				D53B6B8F1FDF7A77006AEB46 /* Localizable.strings */,
 				D5DB07431FEA692F00A347B1 /* main.m */,
 				D5029CF71FDF6D6B0063D82A /* SelfSell-Prefix.pch */,
+				D54894921FF0F2AB00F2019B /* SupportLanguage.plist */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -728,6 +731,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D540F5421FDF83DF00AECCB7 /* Assets.xcassets in Resources */,
+				D54894931FF0F2AB00F2019B /* SupportLanguage.plist in Resources */,
 				D5029CF91FDF6E180063D82A /* Info.plist in Resources */,
 				D53B6B981FDF7DAD006AEB46 /* InfoPlist.strings in Resources */,
 				D53B6B8D1FDF7A77006AEB46 /* Localizable.strings in Resources */,

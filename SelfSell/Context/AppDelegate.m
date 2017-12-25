@@ -7,7 +7,6 @@
 //
 
 #import "AppDelegate.h"
-//#import "AppContext+User.h"
 
 @interface AppDelegate ()
 
@@ -18,13 +17,24 @@
 #pragma mark - Interface
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+#ifdef DEBUG
+    
+    [AppContext sharedAppContext].host = @"http://www.suizhi.com/DRM";
+    
+#else
+    
+    [AppContext sharedAppContext].host = @"http://www.suizhi.com/DRM";
+    
+#endif
+    
     AFNetworkReachabilityManager * afManager = [AFNetworkReachabilityManager sharedManager];
     [afManager startMonitoring];
     [afManager setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {//网络监听
         //if ([AppContext sharedAppContext].netStatus == AFNetworkReachabilityStatusUnknown) {
         //
         //}
-        
+
         [AppContext sharedAppContext].netStatus = status;
     }];
     [[AppContext sharedAppContext] startMonitoring];//自定义监听

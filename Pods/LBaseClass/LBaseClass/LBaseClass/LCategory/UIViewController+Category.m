@@ -21,11 +21,11 @@
     UIViewController * vc = [UIApplication sharedApplication].keyWindow.rootViewController;
     
     while (YES) {
-        if ([vc isKindOfClass:[UITabBarController class]]) {
+        if ([vc isKindOfClass:UITabBarController.class]) {
             vc = ((UITabBarController *)vc).selectedViewController;
         }
         
-        if ([vc isKindOfClass:[UINavigationController class]]) {
+        if ([vc isKindOfClass:UINavigationController.class]) {
             vc = ((UINavigationController *)vc).visibleViewController;
         }
         

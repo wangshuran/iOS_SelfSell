@@ -10,9 +10,4 @@
 
 @interface SRequest : LRequest
 
-/**
- 通过Url初始化
- */
-- (instancetype)initWithUrl:(NSString *)url;
-
 @end

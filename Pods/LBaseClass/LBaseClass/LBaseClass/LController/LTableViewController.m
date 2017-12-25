@@ -152,18 +152,28 @@
         
         free(properties);
         
-        if (!isIncludeParent || aClass == nil || aClass == [UITableViewController class]) {
+        if (!isIncludeParent || aClass == nil || aClass == LTableViewController.class) {
             break;
         }
         
-        aClass = [aClass superclass];
+        aClass = aClass.superclass;
     }
     
     return keys.count == 0 ? nil : keys;
 }
 
-- (BOOL)reflect:(NSObject *)obj {
-    return NO;
+- (BOOL)reflect:(NSDictionary *)obj {
+    NSMutableSet * keys = [self propertyKeys:YES];
+    for (NSString * key in keys) {
+        id value = [obj valueForKey:key];
+        if ([value isEqual:[NSNull null]] || value == nil) {
+            continue;
+        }
+        
+        [self setValue:value forKey:key];
+    }
+    
+    return YES;
 }
 
 @end
