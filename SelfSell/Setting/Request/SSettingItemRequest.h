@@ -1,5 +1,5 @@
 //
-//  SCheckVersionRequest.h
+//  SSettingItemRequest.h
 //  SelfSell
 //
 //  Created by liqiang on 2017/12/26.
@@ -7,8 +7,8 @@
 //
 
 #import "SRequest.h"
-#import "SCheckVersionResponse.h"
+#import "SSettingItemResponse.h"
 
-@interface SCheckVersionRequest : SRequest
+@interface SSettingItemRequest : SRequest
 
 @end

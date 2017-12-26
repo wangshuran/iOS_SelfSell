@@ -55,6 +55,8 @@
 		D54894E81FF2388E00F2019B /* test006.m in Sources */ = {isa = PBXBuildFile; fileRef = D54894E71FF2388E00F2019B /* test006.m */; };
 		D54894ED1FF23A9600F2019B /* SCheckVersionRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = D54894EC1FF23A9600F2019B /* SCheckVersionRequest.m */; };
 		D54894F01FF23AAB00F2019B /* SCheckVersionResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = D54894EF1FF23AAB00F2019B /* SCheckVersionResponse.m */; };
+		D54894F81FF23BCA00F2019B /* SSettingItemResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = D54894F61FF23BC900F2019B /* SSettingItemResponse.m */; };
+		D54894FB1FF23BE100F2019B /* SSettingItemRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = D54894FA1FF23BE100F2019B /* SSettingItemRequest.m */; };
 		D5515F041FDF5A5500278579 /* SelfSellTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D5515F031FDF5A5500278579 /* SelfSellTests.m */; };
 		D5515F0F1FDF5A5500278579 /* SelfSellUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D5515F0E1FDF5A5500278579 /* SelfSellUITests.m */; };
 		D5DB07441FEA692F00A347B1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D5DB07431FEA692F00A347B1 /* main.m */; };
@@ -182,6 +184,10 @@
 		D54894EC1FF23A9600F2019B /* SCheckVersionRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCheckVersionRequest.m; sourceTree = "<group>"; };
 		D54894EE1FF23AAB00F2019B /* SCheckVersionResponse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCheckVersionResponse.h; sourceTree = "<group>"; };
 		D54894EF1FF23AAB00F2019B /* SCheckVersionResponse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCheckVersionResponse.m; sourceTree = "<group>"; };
+		D54894F61FF23BC900F2019B /* SSettingItemResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSettingItemResponse.m; sourceTree = "<group>"; };
+		D54894F71FF23BCA00F2019B /* SSettingItemResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSettingItemResponse.h; sourceTree = "<group>"; };
+		D54894F91FF23BE100F2019B /* SSettingItemRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSettingItemRequest.h; sourceTree = "<group>"; };
+		D54894FA1FF23BE100F2019B /* SSettingItemRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSettingItemRequest.m; sourceTree = "<group>"; };
 		D5515EE71FDF5A5500278579 /* SelfSell.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SelfSell.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5515EFF1FDF5A5500278579 /* SelfSellTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SelfSellTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5515F031FDF5A5500278579 /* SelfSellTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SelfSellTests.m; sourceTree = "<group>"; };
@@ -657,6 +663,24 @@
 			path = Response;
 			sourceTree = "<group>";
 		};
+		D54894F11FF23B9700F2019B /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				D54894F91FF23BE100F2019B /* SSettingItemRequest.h */,
+				D54894FA1FF23BE100F2019B /* SSettingItemRequest.m */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		D54894F21FF23B9700F2019B /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				D54894F71FF23BCA00F2019B /* SSettingItemResponse.h */,
+				D54894F61FF23BC900F2019B /* SSettingItemResponse.m */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
 		D5515EDE1FDF5A5500278579 = {
 			isa = PBXGroup;
 			children = (
@@ -720,6 +744,8 @@
 			children = (
 				D5E137151FECB36900581313 /* Controller */,
 				D5E1370F1FECB36800581313 /* Model */,
+				D54894F11FF23B9700F2019B /* Request */,
+				D54894F21FF23B9700F2019B /* Response */,
 				D5E1371E1FECB7A900581313 /* Service */,
 				D5E1370D1FECB35E00581313 /* View */,
 				D5E1370E1FECB35E00581313 /* ViewManager */,
@@ -1006,6 +1032,7 @@
 				D54894F01FF23AAB00F2019B /* SCheckVersionResponse.m in Sources */,
 				D548945F1FF0935A00F2019B /* test001.m in Sources */,
 				D52654E01FE7E19900FE8D08 /* STextField.m in Sources */,
+				D54894F81FF23BCA00F2019B /* SSettingItemResponse.m in Sources */,
 				D5DB07441FEA692F00A347B1 /* main.m in Sources */,
 				D54894E81FF2388E00F2019B /* test006.m in Sources */,
 				D52654DD1FE7E18E00FE8D08 /* STableView.m in Sources */,
@@ -1043,6 +1070,7 @@
 				D54894831FF099E100F2019B /* SCache.m in Sources */,
 				D52654C81FE7E12D00FE8D08 /* SModel.m in Sources */,
 				D5E1371D1FECB4F900581313 /* SSetNicknameView.m in Sources */,
+				D54894FB1FF23BE100F2019B /* SSettingItemRequest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
