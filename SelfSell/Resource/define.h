@@ -12,4 +12,6 @@
 //读取本地化语言
 #define SLocal(key) [[AppContext sharedAppContext] getLocalValue:key];
 
+#define kCurrentLanguageCode @"kCurrentLanguageCode"
+
 #endif /* define_h */

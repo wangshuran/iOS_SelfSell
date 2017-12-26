@@ -7,7 +7,12 @@
 //
 
 #import "SObject.h"
-#import "SUserModel.h"
+#import "STalentsController.h"
+#import "SMarketController.h"
+#import "SVotesController.h"
+#import "SViewsController.h"
+#import "SAccountController.h"
+#import "SAccountModel.h"
 
 /**
  上下文
@@ -21,19 +26,22 @@ LSingleton_h(AppContext);
  */
 @property (nonatomic, strong) STabBarController * rootVC;
 
-/**
- DEMO_N1
- */
-@property (nonatomic, strong) SNavigationController * n1VC;
-@property (nonatomic, strong) SNavigationController * n2VC;
-@property (nonatomic, strong) SNavigationController * n3VC;
-@property (nonatomic, strong) SNavigationController * n4VC;
-@property (nonatomic, strong) SNavigationController * n5VC;
+@property (nonatomic, strong) SNavigationController * talentsNav;
+@property (nonatomic, strong) SNavigationController * marketNav;
+@property (nonatomic, strong) SNavigationController * votesNav;
+@property (nonatomic, strong) SNavigationController * viewsNav;
+@property (nonatomic, strong) SNavigationController * accountNav;
+
+@property (nonatomic, strong) STalentsController * talentsVC;
+@property (nonatomic, strong) SMarketController * marketVC;
+@property (nonatomic, strong) SVotesController * votesVC;
+@property (nonatomic, strong) SViewsController * viewsVC;
+@property (nonatomic, strong) SAccountController * accountVC;
 
 /**
  语言类型
  */
-@property (nonatomic, assign) Language language;
+@property (nonatomic, assign, readonly) Language language;
 
 /**
  语言类型代码
@@ -53,7 +61,7 @@ LSingleton_h(AppContext);
 /**
  用户信息
  */
-@property (nonatomic, strong) SUserModel * userModel;
+@property (nonatomic, strong) SAccountModel * accountModel;
 
 /**
  主机地址
@@ -63,11 +71,16 @@ LSingleton_h(AppContext);
 /**
  国际化缓存
  */
-@property (nonatomic, strong) NSMutableDictionary * languageCache;
+@property (nonatomic, strong, readonly) NSMutableDictionary * languageCache;
 
 /**
  开启监听
  */
 - (void)startMonitoring;
+
+/**
+ 获取支持语言
+ */
+- (NSArray *)getAppSupportLanguage;
 
 @end

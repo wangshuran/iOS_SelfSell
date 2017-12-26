@@ -30,7 +30,7 @@
  获取本地化语言
  */
 - (NSString *)getLocalValue:(NSString *)key {
-    NSString * k = [NSString stringWithFormat:@"%ld%@", self.language, key];
+    NSString * k = [self.languageCode stringByAppendingString:key];
     NSString * v = [self.languageCache objectForKey:k];
     if (v) {
         return v;

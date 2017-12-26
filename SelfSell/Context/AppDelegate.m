@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "SLoginByAccountRequest.h"
 
 @interface AppDelegate ()
 
@@ -17,17 +18,6 @@
 #pragma mark - Interface
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    
-#ifdef DEBUG
-    
-    [AppContext sharedAppContext].host = @"http://www.suizhi.com/DRM";
-    
-#else
-    
-    [AppContext sharedAppContext].host = @"http://www.suizhi.com/DRM";
-    
-#endif
-    
     AFNetworkReachabilityManager * afManager = [AFNetworkReachabilityManager sharedManager];
     [afManager startMonitoring];
     [afManager setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {//网络监听
@@ -42,6 +32,34 @@
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.rootViewController = [AppContext sharedAppContext].rootVC;
     [self.window makeKeyAndVisible];
+    
+    SLoginByAccountRequest * request = [[SLoginByAccountRequest alloc] init];
+    //TODO，属性赋值
+    
+    [LNetwork request:request block:^(LRequest * request, LResponse * response) {
+        if (!response.status) {
+            [AppContext sharedAppContext].loginType = LoginTypeNone;
+            [AppContext sharedAppContext].accountModel = nil;
+            NSString * languageCode = [[AppContext sharedAppContext] getCurrentAccountSpaceInfo:kCurrentLanguageCode];
+            if (!languageCode) {
+                languageCode = [LLanguage getOSDefaultLanguage];
+            }
+            [AppContext sharedAppContext].languageCode = languageCode;
+            //TODO，继续其他操作
+        } else {
+            SAccountModel * accountModel = ((SLoginByAccountResponse *)response).accountModel;
+            //TODO，不一定只有账户登录
+            [AppContext sharedAppContext].loginType = LoginTypeAccount;
+            [AppContext sharedAppContext].accountModel = accountModel;
+            NSString * languageCode = [[AppContext sharedAppContext] getCurrentAccountSpaceInfo:kCurrentLanguageCode];
+            if (!languageCode) {
+                languageCode = [LLanguage getOSDefaultLanguage];
+            }
+            [AppContext sharedAppContext].languageCode = languageCode;
+            [[AppContext sharedAppContext] updateLoginAccount:accountModel];
+            //TODO，继续其他操作
+        }
+    }];
     
     return YES;
 }

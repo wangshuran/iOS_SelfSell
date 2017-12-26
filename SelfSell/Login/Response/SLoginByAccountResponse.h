@@ -7,7 +7,10 @@
 //
 
 #import "SResponse.h"
+#import "SAccountModel.h"
 
 @interface SLoginByAccountResponse : SResponse
+
+@property (nonatomic, strong) SAccountModel * accountModel;
 
 @end

@@ -7,10 +7,10 @@
 //
 
 #import "SView.h"
-#import "SUserModel.h"
+#import "SAccountModel.h"
 
 @interface SSetNicknameView : SView
 
-@property (nonatomic, strong) SUserModel * userModel;
+@property (nonatomic, strong) SAccountModel * accountModel;
 
 @end

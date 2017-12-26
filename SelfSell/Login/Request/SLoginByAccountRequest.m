@@ -16,7 +16,8 @@
 - (void)initialize {
     [super initialize];
     
-    self.url = [[AppContext sharedAppContext].host stringByAppendingString:@""];    
+    self.url = [[AppContext sharedAppContext].host stringByAppendingString:@""];
+    self.responseClass = SLoginByAccountResponse.class;
 }
 
 @end
