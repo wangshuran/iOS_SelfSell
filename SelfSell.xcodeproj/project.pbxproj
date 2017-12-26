@@ -33,7 +33,6 @@
 		D548945F1FF0935A00F2019B /* test001.m in Sources */ = {isa = PBXBuildFile; fileRef = D548945E1FF0935A00F2019B /* test001.m */; };
 		D54894621FF0938400F2019B /* test002.m in Sources */ = {isa = PBXBuildFile; fileRef = D54894611FF0938400F2019B /* test002.m */; };
 		D54894651FF0938C00F2019B /* test003.m in Sources */ = {isa = PBXBuildFile; fileRef = D54894641FF0938C00F2019B /* test003.m */; };
-		D54894681FF0939A00F2019B /* test004.m in Sources */ = {isa = PBXBuildFile; fileRef = D54894671FF0939A00F2019B /* test004.m */; };
 		D54894831FF099E100F2019B /* SCache.m in Sources */ = {isa = PBXBuildFile; fileRef = D54894821FF099E100F2019B /* SCache.m */; };
 		D54894861FF09A0500F2019B /* SDao.m in Sources */ = {isa = PBXBuildFile; fileRef = D54894851FF09A0500F2019B /* SDao.m */; };
 		D54894891FF09A3C00F2019B /* SService.m in Sources */ = {isa = PBXBuildFile; fileRef = D54894881FF09A3C00F2019B /* SService.m */; };
@@ -53,6 +52,9 @@
 		D54894E01FF235AD00F2019B /* AppContext+Account.m in Sources */ = {isa = PBXBuildFile; fileRef = D54894DA1FF235AD00F2019B /* AppContext+Account.m */; };
 		D54894E11FF235AD00F2019B /* AppContext.m in Sources */ = {isa = PBXBuildFile; fileRef = D54894DC1FF235AD00F2019B /* AppContext.m */; };
 		D54894E21FF235AD00F2019B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D54894DE1FF235AD00F2019B /* AppDelegate.m */; };
+		D54894E81FF2388E00F2019B /* test006.m in Sources */ = {isa = PBXBuildFile; fileRef = D54894E71FF2388E00F2019B /* test006.m */; };
+		D54894ED1FF23A9600F2019B /* SCheckVersionRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = D54894EC1FF23A9600F2019B /* SCheckVersionRequest.m */; };
+		D54894F01FF23AAB00F2019B /* SCheckVersionResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = D54894EF1FF23AAB00F2019B /* SCheckVersionResponse.m */; };
 		D5515F041FDF5A5500278579 /* SelfSellTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D5515F031FDF5A5500278579 /* SelfSellTests.m */; };
 		D5515F0F1FDF5A5500278579 /* SelfSellUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D5515F0E1FDF5A5500278579 /* SelfSellUITests.m */; };
 		D5DB07441FEA692F00A347B1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D5DB07431FEA692F00A347B1 /* main.m */; };
@@ -137,8 +139,6 @@
 		D54894611FF0938400F2019B /* test002.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = test002.m; sourceTree = "<group>"; };
 		D54894631FF0938C00F2019B /* test003.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = test003.h; sourceTree = "<group>"; };
 		D54894641FF0938C00F2019B /* test003.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = test003.m; sourceTree = "<group>"; };
-		D54894661FF0939A00F2019B /* test004.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = test004.h; sourceTree = "<group>"; };
-		D54894671FF0939A00F2019B /* test004.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = test004.m; sourceTree = "<group>"; };
 		D54894811FF099E100F2019B /* SCache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCache.h; sourceTree = "<group>"; };
 		D54894821FF099E100F2019B /* SCache.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCache.m; sourceTree = "<group>"; };
 		D54894841FF09A0500F2019B /* SDao.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDao.h; sourceTree = "<group>"; };
@@ -176,6 +176,12 @@
 		D54894DC1FF235AD00F2019B /* AppContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppContext.m; sourceTree = "<group>"; };
 		D54894DD1FF235AD00F2019B /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D54894DE1FF235AD00F2019B /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D54894E61FF2388E00F2019B /* test006.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = test006.h; sourceTree = "<group>"; };
+		D54894E71FF2388E00F2019B /* test006.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = test006.m; sourceTree = "<group>"; };
+		D54894EB1FF23A9600F2019B /* SCheckVersionRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCheckVersionRequest.h; sourceTree = "<group>"; };
+		D54894EC1FF23A9600F2019B /* SCheckVersionRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCheckVersionRequest.m; sourceTree = "<group>"; };
+		D54894EE1FF23AAB00F2019B /* SCheckVersionResponse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCheckVersionResponse.h; sourceTree = "<group>"; };
+		D54894EF1FF23AAB00F2019B /* SCheckVersionResponse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCheckVersionResponse.m; sourceTree = "<group>"; };
 		D5515EE71FDF5A5500278579 /* SelfSell.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SelfSell.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5515EFF1FDF5A5500278579 /* SelfSellTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SelfSellTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5515F031FDF5A5500278579 /* SelfSellTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SelfSellTests.m; sourceTree = "<group>"; };
@@ -332,6 +338,8 @@
 			children = (
 				D544833A1FED037D00D2F681 /* Controller  */,
 				D54483421FED03F400D2F681 /* Model */,
+				D54894E91FF23A4200F2019B /* Request */,
+				D54894EA1FF23A4200F2019B /* Response */,
 				D54483411FED03DD00D2F681 /* Service */,
 				D544833B1FED037D00D2F681 /* View */,
 				D544833C1FED037D00D2F681 /* ViewManager */,
@@ -343,8 +351,8 @@
 		D544833A1FED037D00D2F681 /* Controller  */ = {
 			isa = PBXGroup;
 			children = (
-				D54894661FF0939A00F2019B /* test004.h */,
-				D54894671FF0939A00F2019B /* test004.m */,
+				D54894E61FF2388E00F2019B /* test006.h */,
+				D54894E71FF2388E00F2019B /* test006.m */,
 			);
 			path = "Controller ";
 			sourceTree = "<group>";
@@ -629,6 +637,24 @@
 				D54894DE1FF235AD00F2019B /* AppDelegate.m */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		D54894E91FF23A4200F2019B /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				D54894EB1FF23A9600F2019B /* SCheckVersionRequest.h */,
+				D54894EC1FF23A9600F2019B /* SCheckVersionRequest.m */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		D54894EA1FF23A4200F2019B /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				D54894EE1FF23AAB00F2019B /* SCheckVersionResponse.h */,
+				D54894EF1FF23AAB00F2019B /* SCheckVersionResponse.m */,
+			);
+			path = Response;
 			sourceTree = "<group>";
 		};
 		D5515EDE1FDF5A5500278579 = {
@@ -973,12 +999,15 @@
 				D54894A31FF1F26400F2019B /* SResponse.m in Sources */,
 				D54894D21FF22C7100F2019B /* SAccountController.m in Sources */,
 				D548949C1FF1F21B00F2019B /* SLoginByAccountRequest.m in Sources */,
+				D54894ED1FF23A9600F2019B /* SCheckVersionRequest.m in Sources */,
 				D54894C61FF22C1400F2019B /* SVotesController.m in Sources */,
 				D52654C51FE7E11E00FE8D08 /* SViewController.m in Sources */,
 				D52654CE1FE7E14700FE8D08 /* SButton.m in Sources */,
+				D54894F01FF23AAB00F2019B /* SCheckVersionResponse.m in Sources */,
 				D548945F1FF0935A00F2019B /* test001.m in Sources */,
 				D52654E01FE7E19900FE8D08 /* STextField.m in Sources */,
 				D5DB07441FEA692F00A347B1 /* main.m in Sources */,
+				D54894E81FF2388E00F2019B /* test006.m in Sources */,
 				D52654DD1FE7E18E00FE8D08 /* STableView.m in Sources */,
 				D5F53C431FE92DBB000EED16 /* SLoginController.m in Sources */,
 				D54894E11FF235AD00F2019B /* AppContext.m in Sources */,
@@ -1002,7 +1031,6 @@
 				D548949B1FF1F21B00F2019B /* SLoginByAccountResponse.m in Sources */,
 				D54894D51FF22CAD00F2019B /* SAccountModel.m in Sources */,
 				D52654CB1FE7E13800FE8D08 /* SObject.m in Sources */,
-				D54894681FF0939A00F2019B /* test004.m in Sources */,
 				D54894E01FF235AD00F2019B /* AppContext+Account.m in Sources */,
 				D54894CF1FF22C5300F2019B /* SMarketController.m in Sources */,
 				D54483451FED040800D2F681 /* SVersionModel.m in Sources */,

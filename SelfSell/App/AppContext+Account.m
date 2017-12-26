@@ -156,7 +156,7 @@
 - (void)noticeShowVersionCheck:(NSNotification *)notification {
     SCheckVersionView * view = [[SCheckVersionView alloc] init];
     view.frame = [UIScreen mainScreen].bounds;
-    //[[UIApplication sharedApplication].keyWindow addSubview:view];
+    [[UIApplication sharedApplication].keyWindow addSubview:view];
 }
     
 /**

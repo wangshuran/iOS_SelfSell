@@ -1,14 +1,15 @@
 //
-//  SLoginByAccountRequest.m
+//  SCheckVersionRequest.m
 //  SelfSell
 //
-//  Created by liqiang on 2017/12/20.
+//  Created by liqiang on 2017/12/26.
 //  Copyright © 2017年 Goopal. All rights reserved.
 //
 
-#import "SLoginByAccountRequest.h"
+#import "SCheckVersionRequest.h"
 
-@implementation SLoginByAccountRequest
+@implementation SCheckVersionRequest
+
 
 #pragma mark - LInitProtocol
 
@@ -16,7 +17,7 @@
     [super initialize];
     
     self.url = [[AppContext sharedAppContext].host stringByAppendingString:@""];
-    self.responseClass = SLoginByAccountResponse.class;
+    self.responseClass = SCheckVersionResponse.class;
 }
 
 @end

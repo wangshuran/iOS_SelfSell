@@ -59,6 +59,9 @@
             [[AppContext sharedAppContext] updateLoginAccount:accountModel];
             //TODO，继续其他操作
         }
+        
+        SPostNotification(kNoticeFinishLogin);//完成登录发出通知
+        SPostNotification(kNoticeShowVersionCheck);//版本检查通知
     }];
     
     return YES;
