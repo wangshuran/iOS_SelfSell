@@ -25,4 +25,9 @@
  */
 @property (nonatomic, assign) NSTimeInterval loginTime;
 
+/**
+ 令牌
+ */
+@property (nonatomic, copy) NSString * token;
+
 @end
