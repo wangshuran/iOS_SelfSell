@@ -9,8 +9,6 @@
 #ifndef SelfSell_Prefix_pch
 #define SelfSell_Prefix_pch
 
-//#ifdef __OBJC__
-
 
 //--------------------UIKit--------------------
 #import <UIKit/UIKit.h>
@@ -80,7 +78,5 @@
 #import "AppContext+Cache.h"
 #import "AppDelegate.h"
 
-
-//#endif
 
 #endif /* SelfSell_Prefix_pch */

@@ -63,7 +63,7 @@ typedef enum : NSUInteger {
 @property (nonatomic, assign) BOOL isCache;
 
 /**
- 
+ 缓存时长
  */
 @property (nonatomic, assign) NSTimeInterval cacheInterval;
 
