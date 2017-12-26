@@ -51,9 +51,6 @@ LSingleton_m(AppContext);
     SAddObsver(noticeShowVersionCheck:, kNoticeShowVersionCheck);
     
 #pragma clang diagnostic pop
-    
-    
-    
 }
 
 - (NSArray *)getAppSupportLanguage {
