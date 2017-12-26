@@ -62,7 +62,7 @@
 //--------------------Context--------------------
 #import "AppContext.h"
 #import "AppContext+Cache.h"
-#import "AppContext+User.h"
+#import "AppContext+Account.h"
 #import "AppDelegate.h"
 
 

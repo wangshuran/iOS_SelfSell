@@ -6,7 +6,7 @@
 //  Copyright © 2017年 Goopal. All rights reserved.
 //
 
-@interface AppContext(User)
+@interface AppContext(Account)
 
 /**
  获取当前用户表示

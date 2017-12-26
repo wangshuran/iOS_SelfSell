@@ -6,11 +6,11 @@
 //  Copyright © 2017年 Goopal. All rights reserved.
 //
 
-#import "AppContext+User.h"
+#import "AppContext+Account.h"
 #import "SLoginController.h"
 #import "SCheckVersionView.h"
 
-@implementation AppContext(User)
+@implementation AppContext(Account)
 
 #pragma mark - Interface
 
