@@ -32,8 +32,8 @@
     return selfsellPath;
 }
 
-- (void)updateCurrentAccountSpaceInfo:(id)value key:(NSString *)key {
-    if (key.length == 0 || value == nil || [value isEqual:[NSNull null]]) {
+- (void)updateCurrentAccountSpaceInfo:(id)value key:(NSString *)key {    
+    if ([NSString isNullOrEmpty:key] || value == nil || [value isEqual:[NSNull null]]) {
         return;
     }
     
@@ -58,7 +58,7 @@
 }
 
 - (id)getCurrentAccountSpaceInfo:(NSString *)key {
-    if (key.length == 0) {
+    if ([NSString isNullOrEmpty:key]) {
         return nil;
     }
     

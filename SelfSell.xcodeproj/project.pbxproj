@@ -57,6 +57,7 @@
 		D54894FB1FF23BE100F2019B /* SSettingItemRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = D54894FA1FF23BE100F2019B /* SSettingItemRequest.m */; };
 		D54895021FF23F0D00F2019B /* SLoginByAccountRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = D54894FE1FF23F0C00F2019B /* SLoginByAccountRequest.m */; };
 		D54895031FF23F0D00F2019B /* SLoginByAccountResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = D54895011FF23F0C00F2019B /* SLoginByAccountResponse.m */; };
+		D54895061FF23F3700F2019B /* SLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = D54895051FF23F3700F2019B /* SLoginController.m */; };
 		D5515F041FDF5A5500278579 /* SelfSellTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D5515F031FDF5A5500278579 /* SelfSellTests.m */; };
 		D5515F0F1FDF5A5500278579 /* SelfSellUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D5515F0E1FDF5A5500278579 /* SelfSellUITests.m */; };
 		D5DB07441FEA692F00A347B1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D5DB07431FEA692F00A347B1 /* main.m */; };
@@ -187,6 +188,8 @@
 		D54894FE1FF23F0C00F2019B /* SLoginByAccountRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLoginByAccountRequest.m; sourceTree = "<group>"; };
 		D54895001FF23F0C00F2019B /* SLoginByAccountResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLoginByAccountResponse.h; sourceTree = "<group>"; };
 		D54895011FF23F0C00F2019B /* SLoginByAccountResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLoginByAccountResponse.m; sourceTree = "<group>"; };
+		D54895041FF23F3700F2019B /* SLoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLoginController.h; sourceTree = "<group>"; };
+		D54895051FF23F3700F2019B /* SLoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLoginController.m; sourceTree = "<group>"; };
 		D5515EE71FDF5A5500278579 /* SelfSell.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SelfSell.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5515EFF1FDF5A5500278579 /* SelfSellTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SelfSellTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5515F031FDF5A5500278579 /* SelfSellTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SelfSellTests.m; sourceTree = "<group>"; };
@@ -486,10 +489,10 @@
 		D54894AF1FF22BE400F2019B /* Account */ = {
 			isa = PBXGroup;
 			children = (
-				D54894FC1FF23F0C00F2019B /* Request */,
-				D54894FF1FF23F0C00F2019B /* Response */,
 				D54894B01FF22BE400F2019B /* Controller */,
 				D54894B31FF22BE400F2019B /* Model */,
+				D54894FC1FF23F0C00F2019B /* Request */,
+				D54894FF1FF23F0C00F2019B /* Response */,
 			);
 			path = Account;
 			sourceTree = "<group>";
@@ -497,6 +500,8 @@
 		D54894B01FF22BE400F2019B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				D54895041FF23F3700F2019B /* SLoginController.h */,
+				D54895051FF23F3700F2019B /* SLoginController.m */,
 				D54894D01FF22C7100F2019B /* SAccountController.h */,
 				D54894D11FF22C7100F2019B /* SAccountController.m */,
 			);
@@ -1035,6 +1040,7 @@
 				D54894861FF09A0500F2019B /* SDao.m in Sources */,
 				D54895031FF23F0D00F2019B /* SLoginByAccountResponse.m in Sources */,
 				D54894D51FF22CAD00F2019B /* SAccountModel.m in Sources */,
+				D54895061FF23F3700F2019B /* SLoginController.m in Sources */,
 				D52654CB1FE7E13800FE8D08 /* SObject.m in Sources */,
 				D54894E01FF235AD00F2019B /* AppContext+Account.m in Sources */,
 				D54894CF1FF22C5300F2019B /* SMarketController.m in Sources */,
