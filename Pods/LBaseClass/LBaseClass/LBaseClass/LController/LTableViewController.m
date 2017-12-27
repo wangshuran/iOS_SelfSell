@@ -94,7 +94,7 @@
 - (void)dealloc {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
     
-    debugDescription();
+    _logImport();
 }
 
 #pragma mark - LInitProtocol

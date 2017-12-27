@@ -44,7 +44,7 @@
 - (void)dealloc {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
     
-    debugDescription();
+    _logImport();
 }
 
 - (void)setPlaceholderFont:(UIFont *)font {

@@ -94,6 +94,7 @@
 #import <MJRefresh/MJRefresh.h>
 #import <ReactiveObjC/ReactiveObjC.h>
 #import <SDWebImage/SDImageCache.h>
+#import <YYModel/YYModel.h>
 
 
 #endif /* LBaseClass_h */
