@@ -11,7 +11,7 @@
 #import "SMarketController.h"
 #import "SVotesController.h"
 #import "SViewsController.h"
-#import "SAccountController.h"
+#import "SSettingController.h"
 #import "SAccountModel.h"
 
 /**
@@ -36,7 +36,7 @@ LSingleton_h(AppContext);
 @property (nonatomic, strong) SMarketController * marketVC;
 @property (nonatomic, strong) SVotesController * votesVC;
 @property (nonatomic, strong) SViewsController * viewsVC;
-@property (nonatomic, strong) SAccountController * accountVC;
+@property (nonatomic, strong) SSettingController * settingVC;
 
 /**
  语言类型
