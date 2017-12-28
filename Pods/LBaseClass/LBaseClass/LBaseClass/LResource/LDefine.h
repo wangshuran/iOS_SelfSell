@@ -9,6 +9,7 @@
 #ifndef LDefine_h
 #define LDefine_h
 
+
 //配置控制台输出颜色
 #define XCODE_COLORS_ESCAPE @"\033["
 #define XCODE_COLORS_RESET_FG XCODE_COLORS_ESCAPE @"fg;" // Clear any foreground color
@@ -30,11 +31,14 @@
 //信息
 #define _logInfo(frmt, ...) NSLog((XCODE_COLORS_ESCAPE @"fg0,0,0;" frmt XCODE_COLORS_RESET), ##__VA_ARGS__);
 //重要
-#define _logImport(frmt, ...) NSLog((XCODE_COLORS_ESCAPE @"fg0,0,255;" @"%s" frmt XCODE_COLORS_RESET), __FUNCTION__, ##__VA_ARGS__);
+#define _logImport(frmt, ...) NSLog((XCODE_COLORS_ESCAPE @"fg0,0,255;" @"<%@:%@>" frmt XCODE_COLORS_RESET), NSStringFromClass(self.class), NSStringFromSelector(_cmd), ##__VA_ARGS__);
 //警告
 #define _logWarn(frmt, ...) NSLog((XCODE_COLORS_ESCAPE @"fg255,255,0;" frmt XCODE_COLORS_RESET), ##__VA_ARGS__);
 //错误
-#define _logError(frmt, ...) NSLog((XCODE_COLORS_ESCAPE @"fg255,0,0;" @"%s" frmt XCODE_COLORS_RESET), __FUNCTION__, ##__VA_ARGS__);
+#define _logError(frmt, ...) NSLog((XCODE_COLORS_ESCAPE @"fg255,0,0;" @"<%@:%@>" frmt XCODE_COLORS_RESET), NSStringFromClass(self.class), NSStringFromSelector(_cmd), ##__VA_ARGS__);
+
+//输出引用计数
+#define _logRetainCount(obj) _logBlue(@"RetainCount:%ld", obj == nil ? -100 : CFGetRetainCount((__bridge CFTypeRef)obj));
 
 #else
 
@@ -57,7 +61,12 @@
 //错误
 #define _logError(frmt, ...) nil;
 
+//输出引用计数
+#define _logRetainCount(obj) nil;
+
 #endif
+
+
 
 
 #endif /* LDefine_h */

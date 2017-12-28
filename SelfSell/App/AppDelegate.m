@@ -24,7 +24,7 @@
         //if ([AppContext sharedAppContext].netStatus == AFNetworkReachabilityStatusUnknown) {
         //
         //}
-
+        
         [AppContext sharedAppContext].netStatus = status;
     }];
     [[AppContext sharedAppContext] startMonitoring];//自定义监听
@@ -32,6 +32,7 @@
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.rootViewController = [AppContext sharedAppContext].rootVC;
     [self.window makeKeyAndVisible];
+    _logRetainCount([AppContext sharedAppContext].rootVC);
     
     SLoginByAccountRequest * request = [[SLoginByAccountRequest alloc] init];
     //TODO，属性赋值
