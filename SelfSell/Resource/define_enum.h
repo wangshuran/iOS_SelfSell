@@ -24,4 +24,10 @@ typedef enum : NSUInteger {
 } LoginType;//登录类型
 
 
+typedef enum : NSUInteger {
+    CmdTypeNone,
+    CmdType1,
+    CmdType2,
+} CmdType;
+
 #endif /* define_enum_h */

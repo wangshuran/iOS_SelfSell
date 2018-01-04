@@ -16,6 +16,7 @@
     for (NSInteger i = 0; i < 20; i++) {
         SSettingModel *model = [[SSettingModel alloc] init];
         model.title = [NSUUID UUID].UUIDString;
+        model.code = [NSUUID UUID].UUIDString;
         
         [datas addObject:model];
     }

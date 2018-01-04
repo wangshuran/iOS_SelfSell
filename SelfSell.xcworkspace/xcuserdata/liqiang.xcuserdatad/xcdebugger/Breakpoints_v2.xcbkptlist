@@ -116,12 +116,12 @@
                   moduleName = "SelfSell"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/liqiang/Documents/GitHub/iOS_SelfSell/Pods/MJExtension/MJExtension/NSObject+MJKeyValue.m"
-                  timestampString = "536123100.549694"
+                  timestampString = "536147717.143341"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "230"
                   endingLineNumber = "230"
-                  offsetFromSymbolStart = "52">
+                  offsetFromSymbolStart = "39">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -131,12 +131,124 @@
                   moduleName = "SelfSell"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/liqiang/Documents/GitHub/iOS_SelfSell/Pods/MJExtension/MJExtension/NSObject+MJKeyValue.m"
-                  timestampString = "536123100.551985"
+                  timestampString = "536147717.147737"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "230"
                   endingLineNumber = "230"
-                  offsetFromSymbolStart = "140">
+                  offsetFromSymbolStart = "117">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SelfSell/Setting/Controller/SSettingController.m"
+            timestampString = "536147716.428029"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "-viewDidLoad"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SelfSell/Setting/ViewModel/SSettingVM.m"
+            timestampString = "536147716.428546"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
+            landmarkName = "-command"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[SSettingVM command]"
+                  moduleName = "SelfSell"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/liqiang/Documents/GitHub/iOS_SelfSell/SelfSell/Setting/ViewModel/SSettingVM.m"
+                  timestampString = "536147717.171774"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "38">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__21-[SSettingVM command]_block_invoke"
+                  moduleName = "SelfSell"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/liqiang/Documents/GitHub/iOS_SelfSell/SelfSell/Setting/ViewModel/SSettingVM.m"
+                  timestampString = "536147717.174846"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "48">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SelfSell/Setting/ViewModel/SSettingVM.m"
+            timestampString = "536147716.43003"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "-command"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__21-[SSettingVM command]_block_invoke"
+                  moduleName = "SelfSell"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/liqiang/Documents/GitHub/iOS_SelfSell/SelfSell/Setting/ViewModel/SSettingVM.m"
+                  timestampString = "536147717.181879"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "48">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__21-[SSettingVM command]_block_invoke_2"
+                  moduleName = "SelfSell"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/liqiang/Documents/GitHub/iOS_SelfSell/SelfSell/Setting/ViewModel/SSettingVM.m"
+                  timestampString = "536147717.185037"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "16">
                </Location>
             </Locations>
          </BreakpointContent>

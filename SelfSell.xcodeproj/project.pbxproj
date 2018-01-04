@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		9B14351AA3E79009169839B2 /* libPods-SelfSell.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EFF52A7EC8F1C623676E10C /* libPods-SelfSell.a */; };
 		D5029CF91FDF6E180063D82A /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D5029CF81FDF6E180063D82A /* Info.plist */; };
+		D5130E721FF4F1D8001C446D /* SSettingVM2.m in Sources */ = {isa = PBXBuildFile; fileRef = D5130E711FF4F1D8001C446D /* SSettingVM2.m */; };
+		D5130E7B1FF4F4BA001C446D /* SInput.m in Sources */ = {isa = PBXBuildFile; fileRef = D5130E7A1FF4F4BA001C446D /* SInput.m */; };
+		D5130E7E1FF4F4CD001C446D /* SCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = D5130E7D1FF4F4CD001C446D /* SCommand.m */; };
+		D5130E811FF4F9C3001C446D /* SOutput.m in Sources */ = {isa = PBXBuildFile; fileRef = D5130E801FF4F9C3001C446D /* SOutput.m */; };
 		D52654BC1FE7E0DD00FE8D08 /* SNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D52654BB1FE7E0DD00FE8D08 /* SNavigationController.m */; };
 		D52654BF1FE7E0FB00FE8D08 /* STabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = D52654BE1FE7E0FB00FE8D08 /* STabBarController.m */; };
 		D52654C21FE7E10E00FE8D08 /* STableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D52654C11FE7E10E00FE8D08 /* STableViewController.m */; };
@@ -63,7 +67,7 @@
 		D5515F0F1FDF5A5500278579 /* SelfSellUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D5515F0E1FDF5A5500278579 /* SelfSellUITests.m */; };
 		D5DB07441FEA692F00A347B1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D5DB07431FEA692F00A347B1 /* main.m */; };
 		D5E137181FECB36900581313 /* SSettingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E137111FECB36800581313 /* SSettingModel.m */; };
-		D5E137191FECB36900581313 /* SSettingViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E137141FECB36900581313 /* SSettingViewModel.m */; };
+		D5E137191FECB36900581313 /* SSettingVM.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E137141FECB36900581313 /* SSettingVM.m */; };
 		D5E1371A1FECB36900581313 /* SSettingController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E137171FECB36900581313 /* SSettingController.m */; };
 		D5E1371D1FECB4F900581313 /* SSetNicknameView.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E1371C1FECB4F900581313 /* SSetNicknameView.m */; };
 /* End PBXBuildFile section */
@@ -91,6 +95,14 @@
 		B95743EA1191B400556286F0 /* Pods-SelfSell.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SelfSell.release.xcconfig"; path = "Pods/Target Support Files/Pods-SelfSell/Pods-SelfSell.release.xcconfig"; sourceTree = "<group>"; };
 		D5029CF71FDF6D6B0063D82A /* SelfSell-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SelfSell-Prefix.pch"; sourceTree = "<group>"; };
 		D5029CF81FDF6E180063D82A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D5130E701FF4F1D8001C446D /* SSettingVM2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSettingVM2.h; sourceTree = "<group>"; };
+		D5130E711FF4F1D8001C446D /* SSettingVM2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSettingVM2.m; sourceTree = "<group>"; };
+		D5130E791FF4F4BA001C446D /* SInput.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SInput.h; sourceTree = "<group>"; };
+		D5130E7A1FF4F4BA001C446D /* SInput.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SInput.m; sourceTree = "<group>"; };
+		D5130E7C1FF4F4CD001C446D /* SCommand.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCommand.h; sourceTree = "<group>"; };
+		D5130E7D1FF4F4CD001C446D /* SCommand.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCommand.m; sourceTree = "<group>"; };
+		D5130E7F1FF4F9C3001C446D /* SOutput.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SOutput.h; sourceTree = "<group>"; };
+		D5130E801FF4F9C3001C446D /* SOutput.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SOutput.m; sourceTree = "<group>"; };
 		D519D34F1FDF683A00D4C9FD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D519D3501FDF684600D4C9FD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D52654BA1FE7E0DC00FE8D08 /* SNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SNavigationController.h; sourceTree = "<group>"; };
@@ -206,8 +218,8 @@
 		D5DB07431FEA692F00A347B1 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D5E137101FECB36800581313 /* SSettingModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSettingModel.h; sourceTree = "<group>"; };
 		D5E137111FECB36800581313 /* SSettingModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSettingModel.m; sourceTree = "<group>"; };
-		D5E137131FECB36900581313 /* SSettingViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSettingViewModel.h; sourceTree = "<group>"; };
-		D5E137141FECB36900581313 /* SSettingViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSettingViewModel.m; sourceTree = "<group>"; };
+		D5E137131FECB36900581313 /* SSettingVM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSettingVM.h; sourceTree = "<group>"; };
+		D5E137141FECB36900581313 /* SSettingVM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSettingVM.m; sourceTree = "<group>"; };
 		D5E137161FECB36900581313 /* SSettingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSettingController.h; sourceTree = "<group>"; };
 		D5E137171FECB36900581313 /* SSettingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSettingController.m; sourceTree = "<group>"; };
 		D5E1371B1FECB4F900581313 /* SSetNicknameView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSetNicknameView.h; sourceTree = "<group>"; };
@@ -808,8 +820,16 @@
 		D5E137121FECB36900581313 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				D5E137131FECB36900581313 /* SSettingViewModel.h */,
-				D5E137141FECB36900581313 /* SSettingViewModel.m */,
+				D5E137131FECB36900581313 /* SSettingVM.h */,
+				D5E137141FECB36900581313 /* SSettingVM.m */,
+				D5130E701FF4F1D8001C446D /* SSettingVM2.h */,
+				D5130E711FF4F1D8001C446D /* SSettingVM2.m */,
+				D5130E791FF4F4BA001C446D /* SInput.h */,
+				D5130E7A1FF4F4BA001C446D /* SInput.m */,
+				D5130E7C1FF4F4CD001C446D /* SCommand.h */,
+				D5130E7D1FF4F4CD001C446D /* SCommand.m */,
+				D5130E7F1FF4F9C3001C446D /* SOutput.h */,
+				D5130E801FF4F9C3001C446D /* SOutput.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -1033,6 +1053,7 @@
 				D54894C61FF22C1400F2019B /* SVotesController.m in Sources */,
 				D52654C51FE7E11E00FE8D08 /* SViewController.m in Sources */,
 				D52654CE1FE7E14700FE8D08 /* SButton.m in Sources */,
+				D5130E7E1FF4F4CD001C446D /* SCommand.m in Sources */,
 				D54894F01FF23AAB00F2019B /* SCheckVersionResponse.m in Sources */,
 				D548945F1FF0935A00F2019B /* test001.m in Sources */,
 				D52654E01FE7E19900FE8D08 /* STextField.m in Sources */,
@@ -1044,11 +1065,14 @@
 				D54894E11FF235AD00F2019B /* AppContext.m in Sources */,
 				D52654DA1FE7E18300FE8D08 /* STabBar.m in Sources */,
 				D544834B1FED114200D2F681 /* SCheckVersionView.m in Sources */,
+				D5130E811FF4F9C3001C446D /* SOutput.m in Sources */,
+				D5130E721FF4F1D8001C446D /* SSettingVM2.m in Sources */,
 				D52654C21FE7E10E00FE8D08 /* STableViewController.m in Sources */,
 				D54894C91FF22C2C00F2019B /* SViewsController.m in Sources */,
 				D52654E31FE7E1A600FE8D08 /* SView.m in Sources */,
 				D54894651FF0938C00F2019B /* test003.m in Sources */,
 				D5E1371A1FECB36900581313 /* SSettingController.m in Sources */,
+				D5130E7B1FF4F4BA001C446D /* SInput.m in Sources */,
 				D52654D11FE7E15400FE8D08 /* SImageView.m in Sources */,
 				D54894891FF09A3C00F2019B /* SService.m in Sources */,
 				D54894CC1FF22C3E00F2019B /* STalentsController.m in Sources */,
@@ -1069,7 +1093,7 @@
 				D54483451FED040800D2F681 /* SVersionModel.m in Sources */,
 				D52654D41FE7E16100FE8D08 /* SLabel.m in Sources */,
 				D54483481FED049300D2F681 /* SVersionService.m in Sources */,
-				D5E137191FECB36900581313 /* SSettingViewModel.m in Sources */,
+				D5E137191FECB36900581313 /* SSettingVM.m in Sources */,
 				D52654D71FE7E17400FE8D08 /* SScrollView.m in Sources */,
 				D54894A41FF1F26400F2019B /* SRequest.m in Sources */,
 				D548948C1FF09B3B00F2019B /* SSettingService.m in Sources */,

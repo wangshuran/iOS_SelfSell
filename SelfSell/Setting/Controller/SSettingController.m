@@ -7,10 +7,13 @@
 //
 
 #import "SSettingController.h"
+#import "SSettingVM.h"
 
 @interface SSettingController ()
 
 @property (nonatomic, strong) LTextField * test1;
+
+@property (nonatomic, strong) SSettingVM * settingVM;
 
 @end
 
@@ -20,6 +23,7 @@
     [super viewDidLoad];
     
     [self.view addSubview:self.test1];
+    [self.settingVM.command execute:NSStringFromSelector(_cmd)];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -37,6 +41,14 @@
     }
     
     return _test1;
+}
+
+- (SSettingVM *)settingVM {
+    if (!_settingVM) {
+        _settingVM = [[SSettingVM alloc] init];
+    }
+    
+    return _settingVM;
 }
 
 #pragma mark - LInitProtocol

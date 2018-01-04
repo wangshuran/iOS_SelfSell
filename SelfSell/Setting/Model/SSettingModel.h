@@ -15,4 +15,10 @@
  */
 @property (nonatomic, copy) NSString * title;
 
+/**
+ 代码
+ */
+@property (nonatomic, copy) NSString * code;
+
+
 @end
