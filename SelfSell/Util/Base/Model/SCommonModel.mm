@@ -28,6 +28,7 @@ WCDB_INDEX(SCommonModel, "_index", createTime)
 
 #pragma mark - 绑定表和字段
 
+WCDB_SYNTHESIZE(SCommonModel, uid)
 WCDB_SYNTHESIZE(SCommonModel, createTime)
 WCDB_SYNTHESIZE(SCommonModel, displayOrder)
 WCDB_SYNTHESIZE(SCommonModel, version)

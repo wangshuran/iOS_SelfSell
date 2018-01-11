@@ -195,7 +195,7 @@ LSingleton_m(AppContext);
 
 - (SDao *)commonDao {
     if (!_commonDao) {        
-        _commonDao = [SDao dbPath:[NSString stringWithFormat:@"%@%@.sqlite", [LFile libraryPath], [@"commondb" MD5]] secret:nil];
+        _commonDao = [SDao dbPath:[NSString stringWithFormat:@"%@/%@.sqlite", [LFile libraryPath], [@"commondb" MD5]] secret:nil];
     }
     
     return _commonDao;

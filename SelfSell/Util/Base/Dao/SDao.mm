@@ -11,6 +11,10 @@
 
 @interface SDao(WCTTableCoding)<WCTTableCoding>
 
+@end
+
+@interface SDao()
+
 @property (nonatomic, strong) WCTDatabase * wcdb;
 
 @end
@@ -75,6 +79,18 @@
     }
 }
 
+- (BOOL)isTableExists:(SModel *)model {
+    if (!model) {
+        return NO;
+    }
+    
+    @try {
+        return [self.wcdb isTableExists:NSStringFromClass(model.class)];
+    }@catch(NSException * e) {
+        return NO;
+    }
+}
+
 - (BOOL)insertObject:(SModel *)model {
     if (!model) {
         return NO;
@@ -103,8 +119,8 @@
     if (!model) {
         return NO;
     }
-    
-    @try {
+    [self.wcdb isTableExists:@""];
+    @try {        
         return [self.wcdb deleteAllObjectsFromTable:NSStringFromClass(model.class)];
     }@catch(NSException * e) {
         return NO;

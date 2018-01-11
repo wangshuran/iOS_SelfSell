@@ -12,8 +12,8 @@
 
 #pragma mark - 声明表的字段
 
-WCDB_PROPERTY(uid)
-WCDB_PROPERTY(createTime)
+//WCDB_PROPERTY(uid)
+//WCDB_PROPERTY(createTime)
 WCDB_PROPERTY(displayOrder)
 WCDB_PROPERTY(version)
 

@@ -28,6 +28,9 @@
 //删除表
 - (BOOL)dropTable:(SModel *)model;
 
+//查询表是否存在
+- (BOOL)isTableExists:(SModel *)model;
+
 //插入对象
 - (BOOL)insertObject:(SModel *)model;
 

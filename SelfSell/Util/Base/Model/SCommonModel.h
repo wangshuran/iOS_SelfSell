@@ -13,12 +13,12 @@
 /**
  键
  */
-@property (nonatomic, strong) id key;
+@property (nonatomic, copy) NSString * key;
 
 /**
  值
  */
-@property (nonatomic, strong) id value;
+@property (nonatomic, copy) NSString * value;
 
 @property (nonatomic, strong) NSArray * data;
 

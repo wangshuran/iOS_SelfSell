@@ -18,17 +18,17 @@ WCDB_IMPLEMENTATION(SModel)
 
 #pragma mark - 主键
 
-WCDB_PRIMARY(SModel, uid)
+//WCDB_PRIMARY(SModel, uid)
 
 
 #pragma mark - 索引
 
-WCDB_INDEX(SModel, "_index", createTime)
+//WCDB_INDEX(SModel, "_index", createTime)
 
 
 #pragma mark - 绑定表和字段
 
-WCDB_SYNTHESIZE(SModel, createTime)
+//WCDB_SYNTHESIZE(SModel, createTime)
 WCDB_SYNTHESIZE(SModel, displayOrder)
 WCDB_SYNTHESIZE(SModel, version)
 
