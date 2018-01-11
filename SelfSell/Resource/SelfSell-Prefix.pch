@@ -22,6 +22,11 @@
 #import <LBaseClass/LBaseClass.h>
 
 
+//--------------------SModel--------------------
+#import "SModel.h"
+#import "SObject.h"
+
+
 //--------------------SCache--------------------
 #import "SCache.h"
 
@@ -35,11 +40,6 @@
 
 //--------------------SDao--------------------
 #import "SDao.h"
-
-
-//--------------------SModel--------------------
-#import "SModel.h"
-#import "SObject.h"
 
 
 //--------------------SRequest--------------------

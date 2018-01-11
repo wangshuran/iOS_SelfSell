@@ -21,13 +21,13 @@
     return self;
 }
 
-- (instancetype)initWithFrame:(CGRect)frame {
-    self = [super initWithFrame:frame];
-    
-    [self initialize];
-    
-    return self;
-}
+//- (instancetype)initWithFrame:(CGRect)frame {
+//    self = [super initWithFrame:frame];
+//    
+//    [self initialize];
+//    
+//    return self;
+//}
 
 //- (instancetype)initWithCoder:(NSCoder *)aDecoder {
 //    self = [super initWithCoder:aDecoder];
@@ -38,13 +38,19 @@
 //}
 
 - (NSString *)description {
-    return [NSString stringWithFormat:@"uid:%@__createTime:%f", self.uid, self.createTime];
+    _logRetainCount(self);
+    
+    return [NSString stringWithFormat:@"class:%@__uid:%@__createTime:%f", self.class, self.uid, self.createTime];
 }
 
 - (void)dealloc {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
     
     _logImport();
+}
+
+- (void)layoutUI {
+    
 }
 
 - (void)setPlaceholderFont:(UIFont *)font {
@@ -62,16 +68,16 @@
 #pragma mark - LInitProtocol
 
 - (void)initialize {
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        if (self.uid) {
-            @throw [NSException exceptionWithName:[NSString stringWithFormat:@"repeat execute %@", NSStringFromSelector(_cmd)] reason:[NSString stringWithFormat:@"repeat execute %@", NSStringFromSelector(_cmd)] userInfo:nil];
-        }
-        
-        _uid = [NSUUID UUID].UUIDString;
-        _createTime = [[NSDate date] timeIntervalSince1970];
-    });
-        
+    //static dispatch_once_t onceToken;
+    //dispatch_once(&onceToken, ^{
+    if (self.uid) {
+        @throw [NSException exceptionWithName:[NSString stringWithFormat:@"repeat execute %@", NSStringFromSelector(_cmd)] reason:[NSString stringWithFormat:@"repeat execute %@", NSStringFromSelector(_cmd)] userInfo:nil];
+    }
+    
+    _uid = [NSUUID UUID].UUIDString;
+    _createTime = [[NSDate date] timeIntervalSince1970];
+    //});
+    
     self.backgroundColor = [UIColor whiteColor];
     self.clearButtonMode = UITextFieldViewModeWhileEditing;
 }

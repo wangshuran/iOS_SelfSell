@@ -23,7 +23,13 @@
     [super viewDidLoad];
     
     [self.view addSubview:self.test1];
-    [self.settingVM.command execute:NSStringFromSelector(_cmd)];
+    
+    [self.settingVM.command.executionSignals.switchToLatest subscribeNext:^(id x) {
+        NSLog(@"%@", x);
+    }];
+    
+    
+    [self.settingVM.command execute:[SInput inputWithType:0 info:NSStringFromSelector(_cmd)]];
 }
 
 - (void)didReceiveMemoryWarning {

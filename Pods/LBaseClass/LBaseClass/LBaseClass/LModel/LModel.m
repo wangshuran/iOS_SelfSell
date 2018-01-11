@@ -7,19 +7,7 @@
 //
 
 #import "LModel.h"
-#import <objc/runtime.h>
 
 @implementation LModel
-
-#pragma mark - Interface
-
-
-
-#pragma mark - LInitProtocol
-
-- (void)initialize {
-    [super initialize];
-    
-}
 
 @end

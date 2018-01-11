@@ -10,7 +10,11 @@
 
 @implementation SInput
 
-- (instancetype)initWithType:(CmdType)type info:(id)info {
++ (instancetype)inputWithType:(NSUInteger)type info:(id)info {
+    return [[self alloc] initWithType:type info:info];
+}
+
+- (instancetype)initWithType:(NSUInteger)type info:(id)info {
     self = [super init];
     
     self.type = type;

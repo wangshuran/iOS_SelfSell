@@ -10,9 +10,11 @@
 
 @interface SInput : SObject
 
-- (instancetype)initWithType:(CmdType)type info:(id)info;
++ (instancetype)inputWithType:(NSUInteger)type info:(id)info;
 
-@property (nonatomic, assign) CmdType type;
+- (instancetype)initWithType:(NSUInteger)type info:(id)info;
+
+@property (nonatomic, assign) NSUInteger type;
 
 @property (nonatomic, strong) id info;
 

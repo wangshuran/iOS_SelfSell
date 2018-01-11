@@ -31,14 +31,14 @@
 //信息
 #define _logInfo(frmt, ...) NSLog((XCODE_COLORS_ESCAPE @"fg0,0,0;" frmt XCODE_COLORS_RESET), ##__VA_ARGS__);
 //重要
-#define _logImport(frmt, ...) NSLog((XCODE_COLORS_ESCAPE @"fg0,0,255;" @"<%@:%@>" frmt XCODE_COLORS_RESET), NSStringFromClass(self.class), NSStringFromSelector(_cmd), ##__VA_ARGS__);
+#define _logImport(frmt, ...) NSLog((XCODE_COLORS_ESCAPE @"fg0,0,255;" @"%@:%@:%d:" frmt XCODE_COLORS_RESET), NSStringFromClass(self.class), NSStringFromSelector(_cmd), __LINE__, ##__VA_ARGS__);
 //警告
 #define _logWarn(frmt, ...) NSLog((XCODE_COLORS_ESCAPE @"fg255,255,0;" frmt XCODE_COLORS_RESET), ##__VA_ARGS__);
 //错误
-#define _logError(frmt, ...) NSLog((XCODE_COLORS_ESCAPE @"fg255,0,0;" @"<%@:%@>" frmt XCODE_COLORS_RESET), NSStringFromClass(self.class), NSStringFromSelector(_cmd), ##__VA_ARGS__);
+#define _logError(frmt, ...) NSLog((XCODE_COLORS_ESCAPE @"fg255,0,0;" @"%@:%@:%d:" frmt XCODE_COLORS_RESET), NSStringFromClass(self.class), NSStringFromSelector(_cmd), __LINE__, ##__VA_ARGS__);
 
 //输出引用计数
-#define _logRetainCount(obj) _logBlue(@"RetainCount:%ld", obj == nil ? -100 : CFGetRetainCount((__bridge CFTypeRef)obj));
+#define _logRetainCount(obj) _logBlue(@"RetainCount:%@:%ld", obj == nil ? @"nil" : NSStringFromClass([obj class]), obj == nil ? -100 : CFGetRetainCount((__bridge CFTypeRef)obj));
 
 #else
 

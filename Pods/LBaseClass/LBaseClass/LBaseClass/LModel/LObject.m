@@ -14,6 +14,11 @@
 
 #pragma mark - Interface
 
+//liqiang
+//+ (void)load {
+//    _logImport()
+//}
+
 - (instancetype)init {
     self = [super init];
     
@@ -23,7 +28,9 @@
 }
 
 - (NSString *)description {
-    return [NSString stringWithFormat:@"uid:%@__createTime:%f", self.uid, self.createTime];
+    _logRetainCount(self);
+    
+    return [NSString stringWithFormat:@"class:%@__uid:%@__createTime:%f", self.class, self.uid, self.createTime];
 }
 
 - (void)dealloc {
@@ -35,15 +42,15 @@
 #pragma mark - LInitProtocol
 
 - (void)initialize {
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        if (self.uid) {
-            @throw [NSException exceptionWithName:[NSString stringWithFormat:@"repeat execute %@", NSStringFromSelector(_cmd)] reason:[NSString stringWithFormat:@"repeat execute %@", NSStringFromSelector(_cmd)] userInfo:nil];
-        }
-        
-        _uid = [NSUUID UUID].UUIDString;
-        _createTime = [[NSDate date] timeIntervalSince1970];        
-    });
+    //static dispatch_once_t onceToken;
+    //dispatch_once(&onceToken, ^{
+    if (self.uid) {
+        @throw [NSException exceptionWithName:[NSString stringWithFormat:@"repeat execute %@", NSStringFromSelector(_cmd)] reason:[NSString stringWithFormat:@"repeat execute %@", NSStringFromSelector(_cmd)] userInfo:nil];
+    }
+    
+    _uid = [NSUUID UUID].UUIDString;
+    _createTime = [[NSDate date] timeIntervalSince1970];        
+    //});
 }
 
 #pragma mark - LReflectProtocol

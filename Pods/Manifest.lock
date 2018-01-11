@@ -14,7 +14,7 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
-  - LBaseClass (1.0.56):
+  - LBaseClass (1.0.59):
     - AFNetworking
     - Masonry
     - MBProgressHUD
@@ -27,10 +27,10 @@ PODS:
   - MBProgressHUD (1.1.0)
   - MJExtension (3.0.13)
   - MJRefresh (3.1.15.1)
-  - ReactiveObjC (3.0.0)
-  - SDWebImage (4.2.2):
-    - SDWebImage/Core (= 4.2.2)
-  - SDWebImage/Core (4.2.2)
+  - ReactiveObjC (3.1.0)
+  - SDWebImage (4.2.3):
+    - SDWebImage/Core (= 4.2.3)
+  - SDWebImage/Core (4.2.3)
   - YYModel (1.0.4)
 
 DEPENDENCIES:
@@ -38,13 +38,13 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
-  LBaseClass: 261befe9b9be197a4b85a8c5861d600b7b20d344
+  LBaseClass: 58e4dfcc5a7e4038c9c930641cba9afff2091632
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
   MJExtension: 5932755f451458eefa24239358817f8d291240c7
   MJRefresh: 5f8552bc25ca8751c010f621c1098dbdaacbccd6
-  ReactiveObjC: ce79989e8684b9086b5f8d0c74bc7b81a8729c9e
-  SDWebImage: 89a9d32cd520bbb46eb14e541d5109b3564af198
+  ReactiveObjC: 2a38ea15335de4119d8b17caf1db1484f61db902
+  SDWebImage: 791bb72962b3492327ddcac4b1880bd1b5458431
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
 PODFILE CHECKSUM: 6016fd679283fac5767fd924b78d84c521a0bf3a

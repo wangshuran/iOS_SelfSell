@@ -12,4 +12,13 @@
 
 #pragma mark - Interface
 
+#pragma mark - LInitProtocol
+
+- (void)initialize {
+    [super initialize];
+    
+    self.status = NO;
+    self.msg = nil;
+}
+
 @end

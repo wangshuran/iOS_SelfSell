@@ -12,14 +12,6 @@
 	</dict>
 	<dict>
 		<key>index</key>
-		<string>2</string>
-		<key>code</key>
-		<string>zh-Hant</string>
-		<key>value</key>
-		<string>繁體中文</string>
-	</dict>
-	<dict>
-		<key>index</key>
 		<string>3</string>
 		<key>code</key>
 		<string>zh-Hans</string>

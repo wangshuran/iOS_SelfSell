@@ -22,6 +22,11 @@
 @property (nonatomic, assign, readonly) NSTimeInterval createTime;
 
 /**
+ 布局UI
+ */
+- (void)layoutUI;
+
+/**
  设置默认文本字体
  */
 - (void)setPlaceholderFont:(UIFont *)font;

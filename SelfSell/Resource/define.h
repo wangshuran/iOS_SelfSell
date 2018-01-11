@@ -9,9 +9,8 @@
 #ifndef define_h
 #define define_h
 
-//读取本地化语言
-#define SLocal(key) [[AppContext sharedAppContext] getLocalValue:key];
+#define SLocal(key) [[AppContext sharedAppContext] getLocalValue:key];//读取本地化语言
 
-#define kCurrentLanguageCode @"kCurrentLanguageCode"
+#define kCurrentLanguageCode @"kCurrentLanguageCode"//用户当前使用语言
 
 #endif /* define_h */

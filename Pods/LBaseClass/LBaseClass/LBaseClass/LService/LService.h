@@ -7,8 +7,14 @@
 //
 
 #import "LObject.h"
-#import "LServiceProtocol.h"
+#import "LCmdProtocol.h"
 
-@interface LService : LObject<LServiceProtocol>
+
+FOUNDATION_EXPORT LCmd * const LCmdGetAll;//全部数据
+FOUNDATION_EXPORT LCmd * const LCmdGetLastPage;//上一页数据
+FOUNDATION_EXPORT LCmd * const LCmdGetNextPage;//下一页数据
+
+
+@interface LService : LObject<LCmdProtocol>
 
 @end

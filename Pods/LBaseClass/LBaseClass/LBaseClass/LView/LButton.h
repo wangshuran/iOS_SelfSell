@@ -28,4 +28,9 @@ typedef void(^LButtonClick)(LButton *);
  */
 @property (nonatomic, assign, readonly) NSTimeInterval createTime;
 
+/**
+ 布局UI
+ */
+- (void)layoutUI;
+
 @end
