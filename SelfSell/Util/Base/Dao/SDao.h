@@ -8,7 +8,6 @@
 
 @interface SDao : SObject
 
-
 //打开数据库
 + (instancetype)dbPath:(NSString *)dbPath secret:(NSString *)secret;
 

@@ -6,8 +6,8 @@
 //  Copyright © 2017年 Goopal. All rights reserved.
 //
 
-#import "SObject.h"
+#import <LBaseClass/LBaseClass.h>
 
-@interface SModel : SObject
+@interface SModel : LModel
 
 @end
