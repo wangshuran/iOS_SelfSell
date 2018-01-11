@@ -96,12 +96,10 @@
 		D519D3501FDF684600D4C9FD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D536005120034DC200A46722 /* SInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SInput.h; sourceTree = "<group>"; };
 		D536005220034DC200A46722 /* SInput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SInput.m; sourceTree = "<group>"; };
-		D53B6B911FDF7A8D006AEB46 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		D53B6B931FDF7ABB006AEB46 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D53B6B941FDF7B32006AEB46 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		D53B6B991FDF7DAD006AEB46 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D53B6B9B1FDF7DB3006AEB46 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
-		D53B6B9C1FDF7DB4006AEB46 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		D540F5411FDF83DF00AECCB7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D54483431FED040800D2F681 /* SVersionModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SVersionModel.h; sourceTree = "<group>"; };
 		D54483441FED040800D2F681 /* SVersionModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SVersionModel.m; sourceTree = "<group>"; };
@@ -929,7 +927,6 @@
 				en,
 				Base,
 				"zh-Hans",
-				"zh-Hant",
 			);
 			mainGroup = D5515EDE1FDF5A5500278579;
 			productRefGroup = D5515EE81FDF5A5500278579 /* Products */;
@@ -1121,7 +1118,6 @@
 		D53B6B8F1FDF7A77006AEB46 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				D53B6B911FDF7A8D006AEB46 /* zh-Hant */,
 				D53B6B931FDF7ABB006AEB46 /* en */,
 				D53B6B941FDF7B32006AEB46 /* zh-Hans */,
 			);
@@ -1133,7 +1129,6 @@
 			children = (
 				D53B6B991FDF7DAD006AEB46 /* en */,
 				D53B6B9B1FDF7DB3006AEB46 /* zh-Hans */,
-				D53B6B9C1FDF7DB4006AEB46 /* zh-Hant */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
