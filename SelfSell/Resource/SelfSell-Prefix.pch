@@ -24,6 +24,7 @@
 
 //--------------------SModel--------------------
 #import "SModel.h"
+#import "SCommonModel.h"
 #import "SObject.h"
 
 

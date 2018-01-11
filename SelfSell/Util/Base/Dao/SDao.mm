@@ -97,6 +97,18 @@
     }
     
     @try {
+        NSMutableSet *keys = [model collectionPropertyKeys];
+        for (NSString * key in keys) {
+            id<NSFastEnumeration> values =[model valueForKey:key];
+            if (values) {
+                for (id value in values) {
+                    if ([value isKindOfClass:LModel.class]) {
+                        [self.wcdb insertObject:value into:NSStringFromClass(((LModel *)value).class)];
+                    }
+                }
+            }
+        }
+        
         return [self.wcdb insertObject:model into:NSStringFromClass(model.class)];
     }@catch(NSException * e) {
         return NO;
@@ -120,7 +132,7 @@
         return NO;
     }
     [self.wcdb isTableExists:@""];
-    @try {        
+    @try {
         return [self.wcdb deleteAllObjectsFromTable:NSStringFromClass(model.class)];
     }@catch(NSException * e) {
         return NO;

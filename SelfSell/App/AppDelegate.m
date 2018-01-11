@@ -36,9 +36,12 @@
     
     
     {
+        
+        
         SCommonModel * model = [[SCommonModel alloc] init];
         model.key = [NSUUID UUID].UUIDString;
         model.value = [NSUUID UUID].UUIDString;
+        model.data0 = [NSArray arrayWithObjects:[[SModel alloc] init], [[SModel alloc] init], [[SModel alloc] init], nil];
         BOOL status = [[AppContext sharedAppContext].commonDao isTableExists:[[SCommonModel alloc] init]];
         status = [[AppContext sharedAppContext].commonDao dropTable:[[SCommonModel alloc] init]];
         status = [[AppContext sharedAppContext].commonDao createTable:[[SCommonModel alloc] init]];

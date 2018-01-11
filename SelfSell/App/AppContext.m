@@ -196,6 +196,8 @@ LSingleton_m(AppContext);
 - (SDao *)commonDao {
     if (!_commonDao) {        
         _commonDao = [SDao dbPath:[NSString stringWithFormat:@"%@/%@.sqlite", [LFile libraryPath], [@"commondb" MD5]] secret:nil];
+        [_commonDao createTable:[[SModel alloc] init]];
+        [_commonDao createTable:[[SCommonModel alloc] init]];        
     }
     
     return _commonDao;

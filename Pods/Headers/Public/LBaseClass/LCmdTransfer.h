@@ -1,1 +1,0 @@
-../../../LBaseClass/LBaseClass/LBaseClass/LCmd/LCmdTransfer.h

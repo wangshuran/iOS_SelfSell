@@ -9,6 +9,10 @@
 #import "SCommonModel.h"
 #import "SCommonModel+WCTTableCoding.h"
 
+
+#import <objc/runtime.h>
+
+
 @implementation SCommonModel
 
 #pragma mark - 绑定表对应的类
@@ -34,6 +38,6 @@ WCDB_SYNTHESIZE(SCommonModel, displayOrder)
 WCDB_SYNTHESIZE(SCommonModel, version)
 WCDB_SYNTHESIZE(SCommonModel, key)
 WCDB_SYNTHESIZE(SCommonModel, value)
-WCDB_SYNTHESIZE(SCommonModel, data)
+
 
 @end

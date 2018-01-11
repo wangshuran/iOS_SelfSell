@@ -20,6 +20,12 @@
  */
 @property (nonatomic, copy) NSString * value;
 
-@property (nonatomic, strong) NSArray * data;
+@property (nonatomic, strong) NSArray * data0;
+
+@property (nonatomic, strong) NSMutableArray * data1;
+
+@property (nonatomic, strong) NSSet * data2;
+
+@property (nonatomic, strong) NSMutableSet * data3;
 
 @end

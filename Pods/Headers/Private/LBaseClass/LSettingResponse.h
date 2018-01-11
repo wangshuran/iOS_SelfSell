@@ -1,1 +1,0 @@
-../../../LBaseClass/LBaseClass/LBaseClass/LSetting/Response/LSettingResponse.h
