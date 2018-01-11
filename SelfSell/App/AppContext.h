@@ -66,7 +66,12 @@ LSingleton_h(AppContext);
 /**
  用户数据库
  */
-@property (nonatomic, strong) SDao * dao;
+@property (nonatomic, strong) SDao * accountDao;
+
+/**
+ 通用数据库
+ */
+@property (nonatomic, strong) SDao * commonDao;
 
 /**
  主机地址

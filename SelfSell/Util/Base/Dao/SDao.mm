@@ -29,7 +29,7 @@
     @try {
         self.wcdb = [[WCTDatabase alloc] initWithPath:dbPath];
         if ([NSString isNullOrEmpty:secret]) {
-            [self.wcdb setCipherKey:[[LApp CFBundleIdentifier] dataUsingEncoding:NSASCIIStringEncoding]];
+            [self.wcdb setCipherKey:[[LAppInfo CFBundleIdentifier] dataUsingEncoding:NSASCIIStringEncoding]];
         }else {
             [self.wcdb setCipherKey:[secret dataUsingEncoding:NSASCIIStringEncoding]];
         }

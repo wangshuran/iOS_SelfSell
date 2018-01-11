@@ -1,14 +1,14 @@
 //
-//  LApp.h
+//  LAppInfo.h
 //  LBaseClass
 //
 //  Created by liqiang on 2017/12/20.
 //  Copyright © 2017年 liqiang. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "LObject.h"
 
-@interface LApp : NSObject
+@interface LAppInfo : LObject
 
 /**
  包ID

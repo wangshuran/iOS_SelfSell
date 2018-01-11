@@ -10,7 +10,6 @@
 
 @implementation SCheckVersionRequest
 
-
 #pragma mark - LInitProtocol
 
 - (void)initialize {

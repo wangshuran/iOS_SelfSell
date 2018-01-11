@@ -7,7 +7,7 @@
 //
 
 #import "LRequest.h"
-#import "LApp.h"
+#import "LAppInfo.h"
 #import "UIDevice+IdentifierAddition.h"
 
 @implementation LRequest
@@ -22,9 +22,9 @@
     
     self.method = HttpMethodGet;
     self.timeoutInterval = 30;
-    self.bundleIdentifier = [LApp CFBundleIdentifier];
-    self.releaseVersion = [LApp CFBundleShortVersionString];
-    self.buildVersion = [LApp CFBundleVersion];
+    self.bundleIdentifier = [LAppInfo CFBundleIdentifier];
+    self.releaseVersion = [LAppInfo CFBundleShortVersionString];
+    self.buildVersion = [LAppInfo CFBundleVersion];
     self.deviceIdentifier = [[UIDevice currentDevice] uniqueDeviceIdentifier];
     self.responseClass = LResponse.class;
     self.isCache = NO;

@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "SCommonModel.h"
 #import "SLoginByAccountRequest.h"
 
 @interface AppDelegate ()
@@ -32,6 +33,15 @@
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.rootViewController = [AppContext sharedAppContext].rootVC;
     [self.window makeKeyAndVisible];
+    
+    
+    {
+        SCommonModel * model = [[SCommonModel alloc] init];
+        BOOL status = [[AppContext sharedAppContext].commonDao insertObject:model];
+        NSArray * data = [[AppContext sharedAppContext].commonDao getAllObjectsFromTable:[[SCommonModel alloc] init]];
+        
+        status = NO;
+    }
     
     SLoginByAccountRequest * request = [[SLoginByAccountRequest alloc] init];
     //TODO，属性赋值

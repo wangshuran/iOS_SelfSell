@@ -63,6 +63,7 @@
 		D5957AF920073B9000F6EE60 /* SView.m in Sources */ = {isa = PBXBuildFile; fileRef = D5957AE420073B9000F6EE60 /* SView.m */; };
 		D5957AFA20073B9000F6EE60 /* SWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = D5957AE620073B9000F6EE60 /* SWebView.m */; };
 		D5957B072007466C00F6EE60 /* SDao+Category.mm in Sources */ = {isa = PBXBuildFile; fileRef = D5957B062007466C00F6EE60 /* SDao+Category.mm */; };
+		D5957B0E200750FA00F6EE60 /* SCommonModel.mm in Sources */ = {isa = PBXBuildFile; fileRef = D5957B0D200750FA00F6EE60 /* SCommonModel.mm */; };
 		D5DB07441FEA692F00A347B1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D5DB07431FEA692F00A347B1 /* main.m */; };
 		D5E137181FECB36900581313 /* SSettingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E137111FECB36800581313 /* SSettingModel.m */; };
 		D5E137191FECB36900581313 /* SSettingVM.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E137141FECB36900581313 /* SSettingVM.m */; };
@@ -205,6 +206,9 @@
 		D5957AFF2007409A00F6EE60 /* SModel+WCTTableCoding.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SModel+WCTTableCoding.h"; sourceTree = "<group>"; };
 		D5957B052007466C00F6EE60 /* SDao+Category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SDao+Category.h"; sourceTree = "<group>"; };
 		D5957B062007466C00F6EE60 /* SDao+Category.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = "SDao+Category.mm"; sourceTree = "<group>"; };
+		D5957B0C200750FA00F6EE60 /* SCommonModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCommonModel.h; sourceTree = "<group>"; };
+		D5957B0D200750FA00F6EE60 /* SCommonModel.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = SCommonModel.mm; sourceTree = "<group>"; };
+		D5957B0F2007515300F6EE60 /* SCommonModel+WCTTableCoding.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SCommonModel+WCTTableCoding.h"; sourceTree = "<group>"; };
 		D5DB07041FEA440000A347B1 /* define_notice.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = define_notice.h; sourceTree = "<group>"; };
 		D5DB07051FEA443C00A347B1 /* define.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = define.h; sourceTree = "<group>"; };
 		D5DB071F1FEA4E0A00A347B1 /* define_enum.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = define_enum.h; sourceTree = "<group>"; };
@@ -710,6 +714,9 @@
 		D5957AC620073B9000F6EE60 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D5957B0C200750FA00F6EE60 /* SCommonModel.h */,
+				D5957B0D200750FA00F6EE60 /* SCommonModel.mm */,
+				D5957B0F2007515300F6EE60 /* SCommonModel+WCTTableCoding.h */,
 				D5957AC720073B9000F6EE60 /* SModel.h */,
 				D5957AC820073B9000F6EE60 /* SModel.mm */,
 				D5957AFF2007409A00F6EE60 /* SModel+WCTTableCoding.h */,
@@ -1067,6 +1074,7 @@
 				D536005320034DC300A46722 /* SInput.m in Sources */,
 				D54894DF1FF235AD00F2019B /* AppContext+Cache.m in Sources */,
 				D5E137181FECB36900581313 /* SSettingModel.m in Sources */,
+				D5957B0E200750FA00F6EE60 /* SCommonModel.mm in Sources */,
 				D548950D1FF2536D00F2019B /* SNetwork.m in Sources */,
 				D54894621FF0938400F2019B /* test002.m in Sources */,
 				D5957AE920073B9000F6EE60 /* STabBarController.m in Sources */,

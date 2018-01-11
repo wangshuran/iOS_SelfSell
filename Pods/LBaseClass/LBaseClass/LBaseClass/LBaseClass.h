@@ -10,7 +10,7 @@
 #define LBaseClass_h
 
 //--------------------LApp--------------------
-#import "LApp.h"
+#import "LAppInfo.h"
 
 
 //--------------------LCache--------------------
@@ -41,6 +41,10 @@
 #import "LTabBarController.h"
 #import "LTableViewController.h"
 #import "LViewController.h"
+
+
+//--------------------LFile--------------------
+#import "LFile.h"
 
 
 //--------------------LFont--------------------

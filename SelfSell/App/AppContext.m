@@ -7,6 +7,7 @@
 //
 
 #import "AppContext.h"
+#import <LBaseClass/NSString+MD5.h>
 
 @interface AppContext()
 
@@ -192,6 +193,13 @@ LSingleton_m(AppContext);
     return _settingVC;
 }
 
+- (SDao *)commonDao {
+    if (!_commonDao) {        
+        _commonDao = [SDao dbPath:[NSString stringWithFormat:@"%@%@.sqlite", [LFile libraryPath], [@"commondb" MD5]] secret:nil];
+    }
+    
+    return _commonDao;
+}
 #pragma mark - LInitProtocol
 
 - (void)initialize {

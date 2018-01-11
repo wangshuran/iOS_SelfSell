@@ -1,14 +1,14 @@
 //
-//  LApp.m
+//  LAppInfo.m
 //  LBaseClass
 //
 //  Created by liqiang on 2017/12/20.
 //  Copyright © 2017年 liqiang. All rights reserved.
 //
 
-#import "LApp.h"
+#import "LAppInfo.h"
 
-@implementation LApp
+@implementation LAppInfo
 
 #pragma mark - Interface
 
@@ -23,5 +23,9 @@
 + (NSString *)CFBundleVersion {
     return [[NSBundle mainBundle].infoDictionary objectForKey:@"CFBundleVersion"];
 }
+
+
+
+
 
 @end
