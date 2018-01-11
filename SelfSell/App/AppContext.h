@@ -64,6 +64,11 @@ LSingleton_h(AppContext);
 @property (nonatomic, strong) SAccountModel * accountModel;
 
 /**
+ 用户数据库
+ */
+@property (nonatomic, strong) SDao * dao;
+
+/**
  主机地址
  */
 @property (nonatomic, copy) NSString * host;
