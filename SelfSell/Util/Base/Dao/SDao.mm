@@ -97,17 +97,17 @@
     }
     
     @try {
-        NSMutableSet *keys = [model collectionPropertyKeys];
-        for (NSString * key in keys) {
-            id<NSFastEnumeration> values =[model valueForKey:key];
-            if (values) {
-                for (id value in values) {
-                    if ([value isKindOfClass:LModel.class]) {
-                        [self.wcdb insertObject:value into:NSStringFromClass(((LModel *)value).class)];
-                    }
-                }
-            }
-        }
+        //NSMutableSet *keys = [model collectionPropertyKeys:YES];
+        //for (NSString * key in keys) {
+        //    id<NSFastEnumeration> values =[model valueForKey:key];
+        //    if (values) {
+        //        for (id value in values) {
+        //            if ([value isKindOfClass:SModel.class]) {
+        //                [self.wcdb insertObject:value into:NSStringFromClass(((SModel *)value).class)];
+        //            }
+        //        }
+        //    }
+        //}
         
         return [self.wcdb insertObject:model into:NSStringFromClass(model.class)];
     }@catch(NSException * e) {
@@ -121,6 +121,20 @@
     }
     
     @try {
+        //for (SModel * model in models) {
+        //    NSMutableSet *keys = [model collectionPropertyKeys:YES];
+        //    for (NSString * key in keys) {
+        //        id<NSFastEnumeration> values =[model valueForKey:key];
+        //        if (values) {
+        //            for (id value in values) {
+        //                if ([value isKindOfClass:SModel.class]) {
+        //                    [self.wcdb insertObject:value into:NSStringFromClass(((SModel *)value).class)];
+        //                }
+        //            }
+        //        }
+        //    }
+        //}
+        
         return [self.wcdb insertObjects:models into:NSStringFromClass(models.firstObject.class)];
     }@catch(NSException * e) {
         return NO;

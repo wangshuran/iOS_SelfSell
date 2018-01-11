@@ -10,6 +10,4 @@
 
 @interface SModel : LModel
 
-
-
 @end

@@ -32,6 +32,20 @@
 + (NSMutableSet *)propertyKeys:(BOOL)isIncludeParent;
 
 /**
+ 属性类型为集合的集合
+
+ @param isIncludeParent 是否包含父类
+ */
+- (NSMutableSet *)collectionPropertyKeys:(BOOL)isIncludeParent;
+
+/**
+ 属性类型为集合的集合
+
+ @param isIncludeParent 是否包含父类
+ */
++ (NSMutableSet *)collectionPropertyKeys:(BOOL)isIncludeParent;
+
+/**
  反射
  */
 - (BOOL)reflect:(NSDictionary *)obj;

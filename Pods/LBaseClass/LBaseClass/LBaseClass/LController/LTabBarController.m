@@ -123,7 +123,7 @@
 }
 
 - (NSMutableSet *)propertyKeys:(BOOL)isIncludeParent {
-    return [[self class] propertyKeys:isIncludeParent];
+    return [self.class propertyKeys:isIncludeParent];
 }
 
 + (NSMutableSet *)propertyKeys:(BOOL)isIncludeParent {
@@ -150,6 +150,29 @@
     }
     
     return keys.count == 0 ? nil : keys;
+}
+
+- (NSMutableSet *)collectionPropertyKeys:(BOOL)isIncludeParent {
+    return [self.class collectionPropertyKeys:isIncludeParent];
+}
+
++ (NSMutableSet *)collectionPropertyKeys:(BOOL)isIncludeParent {
+    Class aClass = self;
+    
+    NSMutableSet * propertyKeys = [aClass propertyKeys:isIncludeParent];
+    NSMutableSet * keys = [[NSMutableSet alloc] init];
+    
+    for (NSString * key in propertyKeys) {
+        objc_property_t property = class_getProperty(aClass, [key UTF8String]);
+        const char *attr = property_getAttributes(property);
+        NSString *strAttr = [NSString stringWithUTF8String:attr];
+        
+        if ([strAttr rangeOfString:NSStringFromClass([NSArray class])].location != NSNotFound || [strAttr rangeOfString:NSStringFromClass([NSMutableArray class])].location != NSNotFound || [strAttr rangeOfString:NSStringFromClass([NSSet class])].location != NSNotFound || [strAttr rangeOfString:NSStringFromClass([NSMutableSet class])].location != NSNotFound) {
+            [keys addObject:key];
+        }
+    }
+    
+    return keys.count > 0 ? keys : nil;
 }
 
 - (BOOL)reflect:(NSDictionary *)obj {
