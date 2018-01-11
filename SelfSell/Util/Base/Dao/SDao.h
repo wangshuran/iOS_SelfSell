@@ -6,6 +6,9 @@
 //  Copyright © 2017年 Goopal. All rights reserved.
 //
 
+#import "SObject.h"
+#import <WCDB/WCDB.h>
+
 @interface SDao : SObject
 
 //打开数据库
