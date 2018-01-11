@@ -7,10 +7,9 @@
 //
 
 #import "SDao.h"
-#import "SDao+WCTTableCoding.h"
 #import "SModel+WCTTableCoding.h"
 
-@interface SDao()
+@interface SDao(WCTTableCoding)<WCTTableCoding>
 
 @property (nonatomic, strong) WCTDatabase * wcdb;
 
@@ -46,6 +45,10 @@
         [self.wcdb close];
     }@catch(NSException * e) {
     }
+}
+
+- (id)client {
+    return self.wcdb;
 }
 
 - (BOOL)createTable:(SModel *)model {
@@ -108,19 +111,6 @@
     }
 }
 
-- (BOOL)deleteObjectsFromTable:(SModel *)model condition:(const WCTCondition &)condition {
-    if (!model) {
-        return NO;
-    }
-    
-    @try {
-        return [self.wcdb deleteObjectsFromTable:NSStringFromClass(model.class) where:condition];
-    }@catch(NSException * e) {
-        return NO;
-    }
-}
-
-
 - (NSArray<SModel *> *)getAllObjectsFromTable:(SModel *)model {
     if (!model) {
         return nil;
@@ -133,78 +123,6 @@
     }
 }
 
-- (NSArray<SModel *> *)getObjectsFromTable:(SModel *)model condition:(const WCTCondition &)condition {
-    if (!model) {
-        return nil;
-    }
-    
-    @try {
-        return [self.wcdb getObjectsOfClass:model.class fromTable:NSStringFromClass(model.class) where:condition];
-    }@catch(NSException * e) {
-        return nil;
-    }
-}
-
-- (NSArray<SModel *> *)getObjectsFromTable:(SModel *)model orderList:(const WCTOrderByList &)orderList {
-    if (!model) {
-        return nil;
-    }
-    
-    @try {
-        return [self.wcdb getObjectsOfClass:model.class fromTable:NSStringFromClass(model.class) orderBy:orderList];
-    }@catch(NSException * e) {
-        return nil;
-    }
-}
-
-- (NSArray<SModel *> *)getObjectsFromTable:(SModel *)model condition:(const WCTCondition &)condition orderList:(const WCTOrderByList &)orderList {
-    if (!model) {
-        return nil;
-    }
-    
-    @try {
-        return [self.wcdb getObjectsOfClass:model.class fromTable:NSStringFromClass(model.class) where:condition orderBy:orderList];
-    }@catch(NSException * e) {
-        return nil;
-    }
-}
-
-- (SModel *)getObjectFromTable:(SModel *)model condition:(const WCTCondition &)condition {
-    if (!model) {
-        return nil;
-    }
-    
-    @try {
-        return [self.wcdb getOneObjectOfClass:model.class fromTable:NSStringFromClass(model.class) where:condition];
-    }@catch(NSException * e) {
-        return nil;
-    }
-}
-
-- (SModel *)getObjectFromTable:(SModel *)model orderList:(const WCTOrderByList &)orderList {
-    if (!model) {
-        return nil;
-    }
-    
-    @try {
-        return [self.wcdb getOneObjectOfClass:model.class fromTable:NSStringFromClass(model.class) orderBy:orderList];
-    }@catch(NSException * e) {
-        return nil;
-    }
-}
-
-- (SModel *)getObjectFromTable:(SModel *)model condition:(const WCTCondition &)condition orderList:(const WCTOrderByList &)orderList {
-    if (!model) {
-        return nil;
-    }
-    
-    @try {
-        return [self.wcdb getOneObjectOfClass:model.class fromTable:NSStringFromClass(model.class) where:condition orderBy:orderList];
-    }@catch(NSException * e) {
-        return nil;
-    }
-}
-
 - (BOOL)updateObject:(SModel *)model {
     if (!model) {
         return NO;
@@ -212,18 +130,6 @@
     
     @try {
         return [self.wcdb updateAllRowsInTable:NSStringFromClass(model.class) onProperties:[model.class AllProperties] withObject:model];
-    }@catch(NSException * e) {
-        return NO;
-    }
-}
-
-- (BOOL)updateObject:(SModel *)model property:(const WCTProperty &)property {
-    if (!model) {
-        return NO;
-    }
-    
-    @try {
-        return [self.wcdb updateAllRowsInTable:NSStringFromClass(model.class) onProperty:property withObject:model];
     }@catch(NSException * e) {
         return NO;
     }

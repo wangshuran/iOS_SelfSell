@@ -7,7 +7,6 @@
 //
 
 #import "SObject.h"
-#import <WCDB/WCDB.h>
 
 @interface SDao : SObject
 
@@ -19,6 +18,9 @@
 
 //关闭连接
 - (void)close;
+
+//获取实例
+- (id)client;
 
 //创建表
 - (BOOL)createTable:(SModel *)model;
@@ -35,34 +37,10 @@
 //删除全部对象
 - (BOOL)deleteAllObjectsFromTable:(SModel *)model;
 
-//按条件删除对象
-//- (BOOL)deleteObjectsFromTable:(SModel *)model condition:(const WCTCondition &)condition;
-
 //获取全部对象
 - (NSArray<SModel *> *)getAllObjectsFromTable:(SModel *)model;
 
-//按条件获取全部对象
-//- (NSArray<SModel *> *)getObjectsFromTable:(SModel *)model condition:(const WCTCondition &)condition;
-
-//按顺序获取全部对象
-//- (NSArray<SModel *> *)getObjectsFromTable:(SModel *)model orderList:(const WCTOrderByList &)orderList;
-
-//按条件、顺序获取全部对象
-//- (NSArray<SModel *> *)getObjectsFromTable:(SModel *)model condition:(const WCTCondition &)condition orderList:(const WCTOrderByList &)orderList;
-
-//按条件获取一个对象
-//- (SModel *)getObjectFromTable:(SModel *)model condition:(const WCTCondition &)condition;
-
-//按顺序获取一个对象
-//- (SModel *)getObjectFromTable:(SModel *)model orderList:(const WCTOrderByList &)orderList;
-
-//按条件、顺序获取一个对象
-//- (SModel *)getObjectFromTable:(SModel *)model condition:(const WCTCondition &)condition orderList:(const WCTOrderByList &)orderList;
-
 //更新对象
 - (BOOL)updateObject:(SModel *)model;
-
-//更新对象
-//- (BOOL)updateObject:(SModel *)model property:(const WCTProperty &)property;
 
 @end

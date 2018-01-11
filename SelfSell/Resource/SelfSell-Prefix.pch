@@ -38,6 +38,10 @@
 #import "SViewController.h"
 
 
+//--------------------SDao--------------------
+#import "SDao.h"
+
+
 //--------------------SRequest--------------------
 #import "SRequest.h"
 
