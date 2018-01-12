@@ -6,4 +6,5 @@
   Copyright © 2017年 Goopal. All rights reserved.
 */
 
-key = "jiantizhongwen";
+security_touch_unlocktitle = "通过验证指纹解锁";
+security_touch_pwdunlock = "密码验证";

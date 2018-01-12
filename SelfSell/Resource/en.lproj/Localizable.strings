@@ -6,4 +6,4 @@
   Copyright © 2017年 Goopal. All rights reserved.
 */
 
-key = "yingwen";
+security_touch_unlocktitle = "通过验证指纹解锁";

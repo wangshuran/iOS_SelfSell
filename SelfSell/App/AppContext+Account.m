@@ -22,7 +22,7 @@
 }
 
 - (NSString *)getCurrentAccountSpacePath {
-    NSString * libraryPath = [NSHomeDirectory() stringByAppendingPathComponent:@"Library"];    
+    NSString * libraryPath = [NSHomeDirectory() stringByAppendingPathComponent:@"Library"];
     NSString * selfsellPath = [libraryPath stringByAppendingPathComponent:[self getCurrentAccountID]];
     
     NSFileManager * fileManager = [NSFileManager defaultManager];
@@ -82,7 +82,7 @@
     if (accountModel == nil) {
         return;
     }
-
+    
     NSString * identifier = [@"loginlist" MD5];
     NSUserDefaults * userDefaults = [NSUserDefaults standardUserDefaults];
     
@@ -167,14 +167,14 @@
 - (void)noticeShowSecurityCheck:(NSNotification *)notification {
     STouchID * touch = [[STouchID alloc] init];
     if ([touch canPolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics]) {
-        [touch openTouchIDWithPolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics fallbackTitle:@"fallbackTitle" msg:@"msg" touchIDBlock:^(BOOL status, BOOL isFallbackTitle, NSString * msg) {
+        [touch openTouchIDWithPolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics fallbackTitle:SLocal(@"security_touch_pwdunlock") msg:SLocal(@"security_touch_unlocktitle") touchIDBlock:^(BOOL status, BOOL isFallbackTitle, NSString * msg) {
             
         }];
     }else {
         
     }
 }
-    
+
 /**
  去登录通知
  */
