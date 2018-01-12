@@ -69,6 +69,7 @@
 		D5E137191FECB36900581313 /* SSettingVM.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E137141FECB36900581313 /* SSettingVM.m */; };
 		D5E1371A1FECB36900581313 /* SSettingController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E137171FECB36900581313 /* SSettingController.m */; };
 		D5E1371D1FECB4F900581313 /* SSetNicknameView.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E1371C1FECB4F900581313 /* SSetNicknameView.m */; };
+		D5E610C8200884AD003C847A /* STouchID.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E610C7200884AD003C847A /* STouchID.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -221,6 +222,8 @@
 		D5E137171FECB36900581313 /* SSettingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSettingController.m; sourceTree = "<group>"; };
 		D5E1371B1FECB4F900581313 /* SSetNicknameView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSetNicknameView.h; sourceTree = "<group>"; };
 		D5E1371C1FECB4F900581313 /* SSetNicknameView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSetNicknameView.m; sourceTree = "<group>"; };
+		D5E610C6200884AD003C847A /* STouchID.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STouchID.h; sourceTree = "<group>"; };
+		D5E610C7200884AD003C847A /* STouchID.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STouchID.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -591,6 +594,7 @@
 			children = (
 				D5957AB620073B9000F6EE60 /* Base */,
 				D548950A1FF2535900F2019B /* Network */,
+				D5E610C520088492003C847A /* TouchID */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -849,6 +853,15 @@
 			path = Service;
 			sourceTree = "<group>";
 		};
+		D5E610C520088492003C847A /* TouchID */ = {
+			isa = PBXGroup;
+			children = (
+				D5E610C6200884AD003C847A /* STouchID.h */,
+				D5E610C7200884AD003C847A /* STouchID.m */,
+			);
+			path = TouchID;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1042,6 +1055,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5E610C8200884AD003C847A /* STouchID.m in Sources */,
 				D5957AEC20073B9000F6EE60 /* SDao.mm in Sources */,
 				D54894E21FF235AD00F2019B /* AppDelegate.m in Sources */,
 				D54894D21FF22C7100F2019B /* SAccountController.m in Sources */,

@@ -50,6 +50,7 @@ LSingleton_m(AppContext);
     SAddObsver(noticeToLogout:, kNoticeToLogout);
     SAddObsver(noticeFinishLogout:, kNoticeFinishLogout);
     SAddObsver(noticeShowVersionCheck:, kNoticeShowVersionCheck);
+    SAddObsver(noticeShowSecurityCheck:, kNoticeShowSecurityCheck);
     
 #pragma clang diagnostic pop
 }

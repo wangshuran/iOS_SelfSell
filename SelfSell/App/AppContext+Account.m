@@ -9,6 +9,7 @@
 #import "AppContext+Account.h"
 #import "SLoginController.h"
 #import "SCheckVersionView.h"
+#import "STouchID.h"
 
 @implementation AppContext(Account)
 
@@ -157,6 +158,21 @@
     SCheckVersionView * view = [[SCheckVersionView alloc] init];
     view.frame = [UIScreen mainScreen].bounds;
     [[UIApplication sharedApplication].keyWindow addSubview:view];
+}
+
+
+/**
+ 显示安全检查通知
+ */
+- (void)noticeShowSecurityCheck:(NSNotification *)notification {
+    STouchID * touch = [[STouchID alloc] init];
+    if ([touch canPolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics]) {
+        [touch openTouchIDWithPolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics fallbackTitle:@"fallbackTitle" msg:@"msg" touchIDBlock:^(BOOL status, BOOL isFallbackTitle, NSString * msg) {
+            
+        }];
+    }else {
+        
+    }
 }
     
 /**

@@ -43,6 +43,10 @@
 #import "LViewController.h"
 
 
+//--------------------LDeviceInfo--------------------
+#import "LDeviceInfo.h"
+
+
 //--------------------LFile--------------------
 #import "LFile.h"
 
@@ -85,6 +89,10 @@
 
 //--------------------LSingleton--------------------
 #import "LSingleton.h"
+
+
+//--------------------LSystemInfo--------------------
+#import "LSystemInfo.h"
 
 
 //--------------------LView--------------------

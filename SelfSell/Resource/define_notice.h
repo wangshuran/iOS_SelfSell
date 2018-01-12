@@ -21,5 +21,6 @@
 #define kNoticeToLogout @"kNoticeToLogout"//去登出通知
 #define kNoticeFinishLogout @"kNoticeFinishLogout"//完成登出通知
 #define kNoticeShowVersionCheck @"kNoticeShowVersionCheck"//显示版本检查通知
+#define kNoticeShowSecurityCheck @"kNoticeShowSecurityCheck"//显示安全检查通知
 
 #endif /* define_notice_h */
