@@ -74,13 +74,13 @@ LSingleton_m(AppContext);
 - (SNavigationController *)fundNav {
     if (!_fundNav) {
         NSDictionary * normal = [NSDictionary dictionaryWithObjectsAndKeys:[UIColor redColor], NSForegroundColorAttributeName, nil];
-        NSDictionary * highlighted = [NSDictionary dictionaryWithObjectsAndKeys:[UIColor yellowColor], NSForegroundColorAttributeName, nil];
+        NSDictionary * selected = [NSDictionary dictionaryWithObjectsAndKeys:[UIColor yellowColor], NSForegroundColorAttributeName, nil];
         
         _fundNav = [[SNavigationController alloc] initWithRootViewController:self.fundVC];
         _fundNav.tabBarItem.image = [UIImage imageNamed:@"qqzoneShare"];
         _fundNav.tabBarItem.selectedImage = [UIImage imageNamed:@"qqzoneShare"];
         [_fundNav.tabBarItem setTitleTextAttributes:normal forState:UIControlStateNormal];
-        [_fundNav.tabBarItem setTitleTextAttributes:highlighted forState:UIControlStateHighlighted];
+        [_fundNav.tabBarItem setTitleTextAttributes:selected forState:UIControlStateSelected];
     }
     
     return _fundNav;
@@ -89,13 +89,13 @@ LSingleton_m(AppContext);
 - (SNavigationController *)activityNav {
     if (!_activityNav) {
         NSDictionary * normal = [NSDictionary dictionaryWithObjectsAndKeys:[UIColor redColor], NSForegroundColorAttributeName, nil];
-        NSDictionary * highlighted = [NSDictionary dictionaryWithObjectsAndKeys:[UIColor yellowColor], NSForegroundColorAttributeName, nil];
+        NSDictionary * selected = [NSDictionary dictionaryWithObjectsAndKeys:[UIColor yellowColor], NSForegroundColorAttributeName, nil];
         
         _activityNav = [[SNavigationController alloc] initWithRootViewController:self.activityVC];
         _activityNav.tabBarItem.image = [UIImage imageNamed:@"qqzoneShare"];
         _activityNav.tabBarItem.selectedImage = [UIImage imageNamed:@"qqzoneShare"];
         [_activityNav.tabBarItem setTitleTextAttributes:normal forState:UIControlStateNormal];
-        [_activityNav.tabBarItem setTitleTextAttributes:highlighted forState:UIControlStateHighlighted];
+        [_activityNav.tabBarItem setTitleTextAttributes:selected forState:UIControlStateSelected];
     }
     
     return _activityNav;
@@ -104,13 +104,13 @@ LSingleton_m(AppContext);
 - (SNavigationController *)accountNav {
     if (!_accountNav) {
         NSDictionary * normal = [NSDictionary dictionaryWithObjectsAndKeys:[UIColor redColor], NSForegroundColorAttributeName, nil];
-        NSDictionary * highlighted = [NSDictionary dictionaryWithObjectsAndKeys:[UIColor yellowColor], NSForegroundColorAttributeName, nil];
+        NSDictionary * selected = [NSDictionary dictionaryWithObjectsAndKeys:[UIColor yellowColor], NSForegroundColorAttributeName, nil];
         
         _accountNav = [[SNavigationController alloc] initWithRootViewController:self.accountVC];
         _accountNav.tabBarItem.image = [UIImage imageNamed:@"qqzoneShare"];
         _accountNav.tabBarItem.selectedImage = [UIImage imageNamed:@"qqzoneShare"];
         [_accountNav.tabBarItem setTitleTextAttributes:normal forState:UIControlStateNormal];
-        [_accountNav.tabBarItem setTitleTextAttributes:highlighted forState:UIControlStateHighlighted];
+        [_accountNav.tabBarItem setTitleTextAttributes:selected forState:UIControlStateSelected];
     }
     
     return _accountNav;

@@ -72,6 +72,7 @@
 		D5E610C8200884AD003C847A /* STouchID.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E610C7200884AD003C847A /* STouchID.m */; };
 		D5E610D320089528003C847A /* SFundController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E610D220089528003C847A /* SFundController.m */; };
 		D5E610D620089546003C847A /* SActivityController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E610D520089546003C847A /* SActivityController.m */; };
+		D5E610DE2008A669003C847A /* SWelcomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E610DD2008A669003C847A /* SWelcomeController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -230,6 +231,8 @@
 		D5E610D220089528003C847A /* SFundController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SFundController.m; sourceTree = "<group>"; };
 		D5E610D420089546003C847A /* SActivityController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SActivityController.h; sourceTree = "<group>"; };
 		D5E610D520089546003C847A /* SActivityController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SActivityController.m; sourceTree = "<group>"; };
+		D5E610DC2008A669003C847A /* SWelcomeController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWelcomeController.h; sourceTree = "<group>"; };
+		D5E610DD2008A669003C847A /* SWelcomeController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWelcomeController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -651,6 +654,7 @@
 				D54483391FED037D00D2F681 /* Version */,
 				D54894BE1FF22BE400F2019B /* Views */,
 				D54894BA1FF22BE400F2019B /* Votes */,
+				D5E610D82008A651003C847A /* Welcome */,
 			);
 			path = SelfSell;
 			sourceTree = "<group>";
@@ -936,6 +940,47 @@
 			path = Response;
 			sourceTree = "<group>";
 		};
+		D5E610D82008A651003C847A /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				D5E610D92008A651003C847A /* Controller */,
+				D5E610DA2008A651003C847A /* Request */,
+				D5E610DB2008A651003C847A /* Response */,
+				D5E610DF2008A69C003C847A /* ViewModel */,
+			);
+			path = Welcome;
+			sourceTree = "<group>";
+		};
+		D5E610D92008A651003C847A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D5E610DC2008A669003C847A /* SWelcomeController.h */,
+				D5E610DD2008A669003C847A /* SWelcomeController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D5E610DA2008A651003C847A /* Request */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		D5E610DB2008A651003C847A /* Response */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		D5E610DF2008A69C003C847A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1167,6 +1212,7 @@
 				D5957B0E200750FA00F6EE60 /* SCommonModel.mm in Sources */,
 				D548950D1FF2536D00F2019B /* SNetwork.m in Sources */,
 				D54894621FF0938400F2019B /* test002.m in Sources */,
+				D5E610DE2008A669003C847A /* SWelcomeController.m in Sources */,
 				D5957AE920073B9000F6EE60 /* STabBarController.m in Sources */,
 				D5957AF320073B9000F6EE60 /* SImageView.m in Sources */,
 				D54895031FF23F0D00F2019B /* SLoginByAccountResponse.m in Sources */,
