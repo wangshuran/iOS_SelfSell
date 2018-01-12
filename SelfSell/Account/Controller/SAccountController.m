@@ -24,6 +24,10 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (NSString *)title {
+    return [self className];
+}
+
 #pragma mark - Interface
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -36,8 +40,6 @@
 
 - (void)initialize {
     [super initialize];
-    
-    self.title = [self className];
 }
 
 @end

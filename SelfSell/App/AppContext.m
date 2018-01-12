@@ -62,71 +62,43 @@ LSingleton_m(AppContext);
 - (STabBarController *)rootVC {
     if (!_rootVC) {
         _rootVC = [[NSClassFromString(@"STabBarController") alloc] init];
-        _rootVC.viewControllers = [NSArray arrayWithObjects:self.talentsNav, self.marketNav, self.votesNav, self.viewsNav, self.accountNav, nil];
+        _rootVC.viewControllers = [NSArray arrayWithObjects:self.activityNav, self.fundNav, self.accountNav, nil];
         _rootVC.tabBar.tintColor = [UIColor colorWithRed:1.0f / 255.0f green:199.0f / 255.0f blue:209.0f / 255.0f alpha:1.0f];
         
-        _rootVC.selectedViewController = self.talentsNav;
+        _rootVC.selectedViewController = self.activityNav;
     }
     
     return _rootVC;
 }
 
-- (SNavigationController *)talentsNav {
-    if (!_talentsNav) {
+- (SNavigationController *)fundNav {
+    if (!_fundNav) {
         NSDictionary * normal = [NSDictionary dictionaryWithObjectsAndKeys:[UIColor redColor], NSForegroundColorAttributeName, nil];
         NSDictionary * highlighted = [NSDictionary dictionaryWithObjectsAndKeys:[UIColor yellowColor], NSForegroundColorAttributeName, nil];
         
-        _talentsNav = [[SNavigationController alloc] initWithRootViewController:self.talentsVC];
-        _talentsNav.tabBarItem.image = [UIImage imageNamed:@"qqzoneShare"];
-        _talentsNav.tabBarItem.selectedImage = [UIImage imageNamed:@"qqzoneShare"];
-        [_talentsNav.tabBarItem setTitleTextAttributes:normal forState:UIControlStateNormal];
-        [_talentsNav.tabBarItem setTitleTextAttributes:highlighted forState:UIControlStateHighlighted];
+        _fundNav = [[SNavigationController alloc] initWithRootViewController:self.fundVC];
+        _fundNav.tabBarItem.image = [UIImage imageNamed:@"qqzoneShare"];
+        _fundNav.tabBarItem.selectedImage = [UIImage imageNamed:@"qqzoneShare"];
+        [_fundNav.tabBarItem setTitleTextAttributes:normal forState:UIControlStateNormal];
+        [_fundNav.tabBarItem setTitleTextAttributes:highlighted forState:UIControlStateHighlighted];
     }
     
-    return _talentsNav;
+    return _fundNav;
 }
 
-- (SNavigationController *)marketNav {
-    if (!_marketNav) {
+- (SNavigationController *)activityNav {
+    if (!_activityNav) {
         NSDictionary * normal = [NSDictionary dictionaryWithObjectsAndKeys:[UIColor redColor], NSForegroundColorAttributeName, nil];
         NSDictionary * highlighted = [NSDictionary dictionaryWithObjectsAndKeys:[UIColor yellowColor], NSForegroundColorAttributeName, nil];
         
-        _marketNav = [[SNavigationController alloc] initWithRootViewController:self.marketVC];
-        _marketNav.tabBarItem.image = [UIImage imageNamed:@"qqzoneShare"];
-        _marketNav.tabBarItem.selectedImage = [UIImage imageNamed:@"qqzoneShare"];
-        [_marketNav.tabBarItem setTitleTextAttributes:normal forState:UIControlStateNormal];
-        [_marketNav.tabBarItem setTitleTextAttributes:highlighted forState:UIControlStateHighlighted];
+        _activityNav = [[SNavigationController alloc] initWithRootViewController:self.activityVC];
+        _activityNav.tabBarItem.image = [UIImage imageNamed:@"qqzoneShare"];
+        _activityNav.tabBarItem.selectedImage = [UIImage imageNamed:@"qqzoneShare"];
+        [_activityNav.tabBarItem setTitleTextAttributes:normal forState:UIControlStateNormal];
+        [_activityNav.tabBarItem setTitleTextAttributes:highlighted forState:UIControlStateHighlighted];
     }
     
-    return _marketNav;
-}
-
-- (SNavigationController *)votesNav {
-    if (!_votesNav) {
-        NSDictionary * normal = [NSDictionary dictionaryWithObjectsAndKeys:[UIColor redColor], NSForegroundColorAttributeName, nil];
-        NSDictionary * highlighted = [NSDictionary dictionaryWithObjectsAndKeys:[UIColor yellowColor], NSForegroundColorAttributeName, nil];
-        
-        _votesNav = [[SNavigationController alloc] initWithRootViewController:self.votesVC];
-        _votesNav.tabBarItem.image = [UIImage imageNamed:@"qqzoneShare"];
-        _votesNav.tabBarItem.selectedImage = [UIImage imageNamed:@"qqzoneShare"];
-        [_votesNav.tabBarItem setTitleTextAttributes:normal forState:UIControlStateNormal];
-        [_votesNav.tabBarItem setTitleTextAttributes:highlighted forState:UIControlStateHighlighted];    }
-    
-    return _votesNav;
-}
-
-- (SNavigationController *)viewsNav {
-    if (!_viewsNav) {
-        NSDictionary * normal = [NSDictionary dictionaryWithObjectsAndKeys:[UIColor redColor], NSForegroundColorAttributeName, nil];
-        NSDictionary * highlighted = [NSDictionary dictionaryWithObjectsAndKeys:[UIColor yellowColor], NSForegroundColorAttributeName, nil];
-        
-        _viewsNav = [[SNavigationController alloc] initWithRootViewController:self.viewsVC];
-        _viewsNav.tabBarItem.image = [UIImage imageNamed:@"qqzoneShare"];
-        _viewsNav.tabBarItem.selectedImage = [UIImage imageNamed:@"qqzoneShare"];
-        [_viewsNav.tabBarItem setTitleTextAttributes:normal forState:UIControlStateNormal];
-        [_viewsNav.tabBarItem setTitleTextAttributes:highlighted forState:UIControlStateHighlighted];    }
-    
-    return _viewsNav;
+    return _activityNav;
 }
 
 - (SNavigationController *)accountNav {
@@ -144,44 +116,24 @@ LSingleton_m(AppContext);
     return _accountNav;
 }
 
-- (STalentsController *)talentsVC {
-    if (!_talentsVC) {
-        _talentsVC = [[STalentsController alloc] init];
-        _talentsVC.hiddenNavbar = YES;
-        _talentsVC.hiddenTabar = NO;
+- (SFundController *)fundVC {
+    if (!_fundVC) {
+        _fundVC = [[SFundController alloc] init];
+        _fundVC.hiddenNavbar = YES;
+        _fundVC.hiddenTabar = NO;
     }
     
-    return _talentsVC;
+    return _fundVC;
 }
 
-- (SMarketController *)marketVC {
-    if (!_marketVC) {
-        _marketVC = [[SMarketController alloc] init];
-        _marketVC.hiddenNavbar = YES;
-        _marketVC.hiddenTabar = NO;
+- (SActivityController *)activityVC {
+    if (!_activityVC) {
+        _activityVC = [[SActivityController alloc] init];
+        _activityVC.hiddenNavbar = YES;
+        _activityVC.hiddenTabar = NO;
     }
     
-    return _marketVC;
-}
-
-- (SVotesController *)votesVC {
-    if (!_votesVC) {
-        _votesVC = [[SVotesController alloc] init];
-        _votesVC.hiddenNavbar = YES;
-        _votesVC.hiddenTabar = NO;
-    }
-    
-    return _votesVC;
-}
-
-- (SViewsController *)viewsVC {
-    if (!_viewsVC) {
-        _viewsVC = [[SViewsController alloc] init];
-        _viewsVC.hiddenNavbar = YES;
-        _viewsVC.hiddenTabar = NO;
-    }
-    
-    return _viewsVC;
+    return _activityVC;
 }
 
 - (SSettingController *)settingVC {
@@ -195,10 +147,10 @@ LSingleton_m(AppContext);
 }
 
 - (SDao *)commonDao {
-    if (!_commonDao) {        
+    if (!_commonDao) {
         _commonDao = [SDao dbPath:[NSString stringWithFormat:@"%@/%@.sqlite", [LFile libraryPath], [@"commondb" MD5]] secret:nil];
         [_commonDao createTable:[[SModel alloc] init]];
-        [_commonDao createTable:[[SCommonModel alloc] init]];        
+        [_commonDao createTable:[[SCommonModel alloc] init]];
     }
     
     return _commonDao;
@@ -207,7 +159,7 @@ LSingleton_m(AppContext);
 
 - (void)initialize {
     [super initialize];
-        
+    
     self.languageCode = [LLanguage getOSDefaultLanguage];
     self.netStatus = AFNetworkReachabilityStatusUnknown;
     self.loginType = LoginTypeNone;

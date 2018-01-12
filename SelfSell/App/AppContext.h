@@ -7,12 +7,9 @@
 //
 
 #import "SObject.h"
-#import "STalentsController.h"
-#import "SMarketController.h"
-#import "SVotesController.h"
-#import "SViewsController.h"
+#import "SFundController.h"
+#import "SActivityController.h"
 #import "SSettingController.h"
-#import "SAccountModel.h"
 
 /**
  上下文
@@ -26,16 +23,12 @@ LSingleton_h(AppContext);
  */
 @property (nonatomic, strong) STabBarController * rootVC;
 
-@property (nonatomic, strong) SNavigationController * talentsNav;
-@property (nonatomic, strong) SNavigationController * marketNav;
-@property (nonatomic, strong) SNavigationController * votesNav;
-@property (nonatomic, strong) SNavigationController * viewsNav;
+@property (nonatomic, strong) SNavigationController * activityNav;
+@property (nonatomic, strong) SNavigationController * fundNav;
 @property (nonatomic, strong) SNavigationController * accountNav;
 
-@property (nonatomic, strong) STalentsController * talentsVC;
-@property (nonatomic, strong) SMarketController * marketVC;
-@property (nonatomic, strong) SVotesController * votesVC;
-@property (nonatomic, strong) SViewsController * viewsVC;
+@property (nonatomic, strong) SActivityController * activityVC;
+@property (nonatomic, strong) SFundController * fundVC;
 @property (nonatomic, strong) SSettingController * settingVC;
 
 /**
