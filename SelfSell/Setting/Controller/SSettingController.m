@@ -19,6 +19,8 @@
 
 @implementation SSettingController
 
+#pragma mark - Interface
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -34,6 +36,10 @@
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
+}
+
+- (NSString *)title {
+    return SLocal(@"setting_title");
 }
 
 - (LTextField *)test1 {
@@ -61,8 +67,6 @@
 
 - (void)initialize {
     [super initialize];
-    
-    self.title = [self className];
 }
 
 @end

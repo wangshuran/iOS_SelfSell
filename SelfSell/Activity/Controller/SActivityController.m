@@ -27,7 +27,7 @@
 }
 
 - (NSString *)title {
-    return [self className];
+    return SLocal(@"activity_title");
 }
 
 @end

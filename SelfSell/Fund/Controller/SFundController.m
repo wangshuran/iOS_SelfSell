@@ -27,7 +27,7 @@
 }
 
 - (NSString *)title {
-    return [self className];
+    return SLocal(@"fund_title");
 }
 
 @end

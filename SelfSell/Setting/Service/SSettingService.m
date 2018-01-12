@@ -10,10 +10,23 @@
 
 @implementation SSettingService
 
+#pragma mark - LCmdProtocol
+
+- (RACDisposable *)cmdHandle:(LCmdTransfer *)transfer subscriber:(id<RACSubscriber>)subscriber {
+    if ([transfer.cmd isEqualToString:LCmdGetAll]) {
+        [self.subject sendNext:[LCmdTransfer cmd:transfer.cmd value:[self getAll]]];
+    }
+    
+    [subscriber sendNext:transfer];
+    [subscriber sendCompleted];
+    
+    return nil;
+}
+
 - (NSArray<SSettingModel *> *)getAll {
     NSMutableArray *datas = [[NSMutableArray alloc] init];
     
-    for (NSInteger i = 0; i < 20; i++) {
+    for (NSInteger i = 0; i < 1; i++) {
         SSettingModel *model = [[SSettingModel alloc] init];
         model.title = [NSUUID UUID].UUIDString;
         model.code = [NSUUID UUID].UUIDString;

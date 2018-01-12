@@ -9,7 +9,7 @@
 #import "SObject.h"
 #import "SFundController.h"
 #import "SActivityController.h"
-#import "SSettingController.h"
+#import "SAccountController.h"
 
 /**
  上下文
@@ -29,7 +29,7 @@ LSingleton_h(AppContext);
 
 @property (nonatomic, strong) SActivityController * activityVC;
 @property (nonatomic, strong) SFundController * fundVC;
-@property (nonatomic, strong) SSettingController * settingVC;
+@property (nonatomic, strong) SAccountController * accountVC;
 
 /**
  语言类型

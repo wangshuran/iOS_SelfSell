@@ -7,8 +7,11 @@
 //
 
 #import "SAccountController.h"
+#import "SSettingService.h"
 
 @interface SAccountController ()
+
+@property (nonatomic, strong) SSettingService * settingService;
 
 @end
 
@@ -25,7 +28,19 @@
 }
 
 - (NSString *)title {
-    return [self className];
+    return SLocal(@"account_title");
+}
+
+- (SSettingService *)settingService {
+    if (!_settingService) {
+        __weak typeof(self) weakSelf = self;
+        _settingService = [[SSettingService alloc] init];
+        [_settingService subscribeNext:LCmdGetAll nextBlock:^(LCmdTransfer * x) {
+            NSLog(@"%@", x);
+        }];
+    }
+    
+    return _settingService;
 }
 
 #pragma mark - Interface
@@ -40,6 +55,8 @@
 
 - (void)initialize {
     [super initialize];
+    
+    [self.settingService execute:[LCmdTransfer cmd:LCmdGetAll value:nil]];
 }
 
 @end
