@@ -15,11 +15,11 @@
 /**
  唯一标识
  */
-@property (nonatomic, copy, readonly) NSString * uid;
+@property (nonatomic, copy) NSString * uid;
 
 /**
  创建时间
  */
-@property (nonatomic, assign, readonly) NSTimeInterval createTime;
+@property (nonatomic, assign) NSTimeInterval createTime;
 
 @end

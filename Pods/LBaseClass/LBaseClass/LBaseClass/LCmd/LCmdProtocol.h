@@ -19,6 +19,9 @@
 //}];
 //[service execute:[LCmdTransfer cmd:LCmdGetAll value:nil]];
 
+//子类实现该路由方法
+//- (RACDisposable *)cmdHandle:(LCmdTransfer *)transfer subscriber:(id<RACSubscriber>)subscriber;
+
 
 
 @protocol LCmdProtocol <NSObject>
@@ -39,7 +42,7 @@
 /**
  订阅具体类型的命令，建议使用该方法订阅命令，使代码更清晰
  */
-- (RACDisposable *)subscribeNext:(LCmd *)cmd nextBlock:(void (^)(LCmdTransfer * x))nextBlock;
+- (RACDisposable *)subscribeNext:(LCmd *)cmd nextBlock:(void (^)(LCmdTransfer * transfer))nextBlock;
 
 /**
  执行具体类型的命令，建议使用该方法执行命令，使代码更清晰
@@ -47,7 +50,7 @@
 - (RACSignal *)execute:(LCmdTransfer *)transfer;
 
 /**
- 命令处理中心，外部不调用
+ 命令处理中心，外部不调用，子类处理
  */
 - (RACDisposable *)cmdHandle:(LCmdTransfer *)transfer subscriber:(id<RACSubscriber>)subscriber;
 

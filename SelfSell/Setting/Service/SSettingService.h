@@ -7,7 +7,7 @@
 //
 
 #import "SService.h"
-#import "SSettingModel.h"
+#import "TBModel.h"
 
 @interface SSettingService : SService
 

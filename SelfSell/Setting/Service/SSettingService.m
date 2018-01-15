@@ -27,18 +27,18 @@
 /**
  获取全部设置项
  */
-- (NSArray<SSettingModel *> *)getAll {
+- (NSArray<NSArray<TBModel *> *> *)getAll {
     NSMutableArray *datas = [[NSMutableArray alloc] init];
     
-    for (NSInteger i = 0; i < 1; i++) {
-        SSettingModel *model = [[SSettingModel alloc] init];
+    for (NSInteger i = 0; i < 100; i++) {
+        TBModel *model = [[TBModel alloc] init];
         model.title = [NSUUID UUID].UUIDString;
         model.code = [NSUUID UUID].UUIDString;
         
         [datas addObject:model];
     }
     
-    return datas;
+    return [NSArray arrayWithObject:datas];
 }
 
 @end

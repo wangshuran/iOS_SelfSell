@@ -13,13 +13,13 @@
 
 #pragma mark - Interface
 
-- (instancetype)init {
-    self = [super init];
-    
-    [self initialize];
-    
-    return self;
-}
+//- (instancetype)init {
+//    self = [super init];
+//    
+//    [self initialize];
+//    
+//    return self;
+//}
 
 //- (instancetype)initWithFrame:(CGRect)frame {
 //    self = [super initWithFrame:frame];
@@ -57,6 +57,12 @@
     _logImport();
 }
 
+- (void)layoutSubviews {
+    [super layoutSubviews];
+    
+    self.backgroundColor = [UIColor whiteColor];
+}
+
 - (void)layoutUI {
     
 }
@@ -73,8 +79,6 @@
     _uid = [NSUUID UUID].UUIDString;
     _createTime = [[NSDate date] timeIntervalSince1970];
     //});
-    
-    self.backgroundColor = [UIColor whiteColor];
 }
 
 @end

@@ -7,3 +7,10 @@
 */
 
 security_touch_unlocktitle = "通过验证指纹解锁";
+security_touch_pwdunlock = "密码验证";
+
+activity_title = "活动";
+
+fund_title = "资金";
+
+setting_title = "账户";

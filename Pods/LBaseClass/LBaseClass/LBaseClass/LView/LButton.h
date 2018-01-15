@@ -21,12 +21,12 @@ typedef void(^LButtonClick)(LButton *);
 /**
  唯一标示
  */
-@property (nonatomic, copy, readonly) NSString * uid;
+@property (nonatomic, copy) NSString * uid;
 
 /**
  创建时间
  */
-@property (nonatomic, assign, readonly) NSTimeInterval createTime;
+@property (nonatomic, assign) NSTimeInterval createTime;
 
 /**
  布局UI

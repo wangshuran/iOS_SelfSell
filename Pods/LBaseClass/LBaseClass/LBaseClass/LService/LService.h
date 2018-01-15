@@ -15,6 +15,10 @@ FOUNDATION_EXPORT LCmd * const LCmdGetLastPage;//上一页数据
 FOUNDATION_EXPORT LCmd * const LCmdGetNextPage;//下一页数据
 
 
+
+/**
+ 服务层。通过命令、订阅实现
+ */
 @interface LService : LObject<LCmdProtocol>
 
 @end

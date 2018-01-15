@@ -29,7 +29,7 @@ LCmd * const LCmdGetNextPage = @"LCmdGetNextPage";//下一页数据
     if (!_command) {
         __weak typeof(self) weakSelf = self;
         _command = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
-            if (input == nil || [NSString isNullOrEmpty:((LCmdTransfer *)input).cmd]) {
+            if (input == nil || ![input isKindOfClass:LCmdTransfer.class] || [NSString isNullOrEmpty:((LCmdTransfer *)input).cmd]) {
                 return nil;
             }
             __strong typeof(weakSelf) strongSelf = weakSelf;
@@ -60,7 +60,7 @@ LCmd * const LCmdGetNextPage = @"LCmdGetNextPage";//下一页数据
     return [self.subject subscribeNext:^(id x) {
         LCmdTransfer * transfer = x;
         if ([transfer.cmd isEqualToString:cmd] && nextBlock) {
-            nextBlock(x);
+            nextBlock(transfer);
         }
     }];
 }

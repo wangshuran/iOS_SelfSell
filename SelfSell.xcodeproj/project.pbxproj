@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		9B14351AA3E79009169839B2 /* libPods-SelfSell.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EFF52A7EC8F1C623676E10C /* libPods-SelfSell.a */; };
-		D50297E7200C50CC008375F9 /* SSettingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D50297D1200C50CC008375F9 /* SSettingModel.m */; };
 		D50297E8200C50CC008375F9 /* SSettingRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = D50297D4200C50CC008375F9 /* SSettingRequest.m */; };
 		D50297E9200C50CC008375F9 /* SSettingResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = D50297D7200C50CC008375F9 /* SSettingResponse.m */; };
 		D50297EA200C50CC008375F9 /* SSettingService.m in Sources */ = {isa = PBXBuildFile; fileRef = D50297DA200C50CC008375F9 /* SSettingService.m */; };
@@ -101,8 +100,6 @@
 		9D18FA091712F14E3B41300F /* Pods-SelfSell.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SelfSell.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SelfSell/Pods-SelfSell.debug.xcconfig"; sourceTree = "<group>"; };
 		9EFF52A7EC8F1C623676E10C /* libPods-SelfSell.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SelfSell.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B95743EA1191B400556286F0 /* Pods-SelfSell.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SelfSell.release.xcconfig"; path = "Pods/Target Support Files/Pods-SelfSell/Pods-SelfSell.release.xcconfig"; sourceTree = "<group>"; };
-		D50297D0200C50CC008375F9 /* SSettingModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSettingModel.h; sourceTree = "<group>"; };
-		D50297D1200C50CC008375F9 /* SSettingModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSettingModel.m; sourceTree = "<group>"; };
 		D50297D3200C50CC008375F9 /* SSettingRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSettingRequest.h; sourceTree = "<group>"; };
 		D50297D4200C50CC008375F9 /* SSettingRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSettingRequest.m; sourceTree = "<group>"; };
 		D50297D6200C50CC008375F9 /* SSettingResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSettingResponse.h; sourceTree = "<group>"; };
@@ -322,8 +319,6 @@
 		D50297CF200C50CC008375F9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				D50297D0200C50CC008375F9 /* SSettingModel.h */,
-				D50297D1200C50CC008375F9 /* SSettingModel.m */,
 				D5029801200C578F008375F9 /* TBArrowModel.h */,
 				D5029802200C578F008375F9 /* TBArrowModel.m */,
 				D5029804200C57B7008375F9 /* TBExitModel.h */,
@@ -1250,7 +1245,6 @@
 				D5957AF220073B9000F6EE60 /* SButton.m in Sources */,
 				D54895061FF23F3700F2019B /* SLoginController.m in Sources */,
 				D5029803200C578F008375F9 /* TBArrowModel.m in Sources */,
-				D50297E7200C50CC008375F9 /* SSettingModel.m in Sources */,
 				D54894E01FF235AD00F2019B /* AppContext+Account.m in Sources */,
 				D50297EA200C50CC008375F9 /* SSettingService.m in Sources */,
 				D5957AF720073B9000F6EE60 /* STableView.m in Sources */,

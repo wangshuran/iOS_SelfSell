@@ -7,7 +7,10 @@
 //
 
 #import <LBaseClass/LBaseClass.h>
+#import "TBModel.h"
 
 @interface TBTableView : LTableView
+
+@property (nonatomic, strong) NSArray<NSArray<TBModel *> *> * data;
 
 @end

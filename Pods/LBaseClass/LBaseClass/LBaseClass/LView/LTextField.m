@@ -49,6 +49,12 @@
     _logImport();
 }
 
+- (void)layoutSubviews {
+    [super layoutSubviews];
+    
+    self.backgroundColor = [UIColor whiteColor];
+}
+
 - (void)layoutUI {
     
 }
@@ -78,7 +84,6 @@
     _createTime = [[NSDate date] timeIntervalSince1970];
     //});
     
-    self.backgroundColor = [UIColor whiteColor];
     self.clearButtonMode = UITextFieldViewModeWhileEditing;
 }
 

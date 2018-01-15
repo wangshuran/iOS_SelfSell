@@ -65,6 +65,12 @@
     _logImport();
 }
 
+- (void)layoutSubviews {
+    [super layoutSubviews];
+    
+    self.backgroundColor = [UIColor whiteColor];
+}
+
 - (void)layoutUI {
     
 }
@@ -81,8 +87,6 @@
     _uid = [NSUUID UUID].UUIDString;
     _createTime = [[NSDate date] timeIntervalSince1970];
     //});
-    
-    self.backgroundColor = [UIColor whiteColor];
 }
 
 @end
