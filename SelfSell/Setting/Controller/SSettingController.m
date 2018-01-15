@@ -8,10 +8,15 @@
 
 #import "SSettingController.h"
 #import "SSettingService.h"
+#import "TBTableView.h"
 
 @interface SSettingController ()
 
 @property (nonatomic, strong) SSettingService * settingService;
+
+@property (nonatomic, strong) TBTableView * tbTableView;
+
+
 
 @end
 
@@ -41,6 +46,15 @@
     }
     
     return _settingService;
+}
+
+- (TBTableView *)tbTableView {
+    if (!_tbTableView) {
+        _tbTableView = [[TBTableView alloc] init];
+        
+    }
+    
+    return _tbTableView;
 }
 
 #pragma mark - Interface
