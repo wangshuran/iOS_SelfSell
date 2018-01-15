@@ -11,6 +11,4 @@
 
 @interface SSettingService : SService
 
-//- (NSArray<SSettingModel *> *)getAll;
-
 @end

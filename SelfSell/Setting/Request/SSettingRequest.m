@@ -1,14 +1,14 @@
 //
-//  SSettingItemRequest.m
+//  SSettingRequest.m
 //  SelfSell
 //
 //  Created by liqiang on 2017/12/26.
 //  Copyright © 2017年 Goopal. All rights reserved.
 //
 
-#import "SSettingItemRequest.h"
+#import "SSettingRequest.h"
 
-@implementation SSettingItemRequest
+@implementation SSettingRequest
 
 #pragma mark - LInitProtocol
 

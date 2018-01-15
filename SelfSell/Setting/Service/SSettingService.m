@@ -23,6 +23,10 @@
     return nil;
 }
 
+
+/**
+ 获取全部设置项
+ */
 - (NSArray<SSettingModel *> *)getAll {
     NSMutableArray *datas = [[NSMutableArray alloc] init];
     

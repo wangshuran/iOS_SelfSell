@@ -2,71 +2,61 @@
 //  SSettingController.m
 //  SelfSell
 //
-//  Created by liqiang on 2017/12/20.
+//  Created by liqiang on 2017/12/26.
 //  Copyright © 2017年 Goopal. All rights reserved.
 //
 
 #import "SSettingController.h"
-#import "SSettingVM.h"
+#import "SSettingService.h"
 
 @interface SSettingController ()
 
-@property (nonatomic, strong) LTextField * test1;
-
-@property (nonatomic, strong) SSettingVM * settingVM;
+@property (nonatomic, strong) SSettingService * settingService;
 
 @end
 
 @implementation SSettingController
 
-#pragma mark - Interface
-
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    [self.view addSubview:self.test1];
-    
-    [self.settingVM.command.executionSignals.switchToLatest subscribeNext:^(id x) {
-        NSLog(@"%@", x);
-    }];
-    
-    
-    [self.settingVM.command execute:[SInput inputWithType:0 info:NSStringFromSelector(_cmd)]];
+    // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
 }
 
 - (NSString *)title {
     return SLocal(@"setting_title");
 }
 
-- (LTextField *)test1 {
-    if (!_test1) {
-        _test1 = [[LTextField alloc] initWithFrame:CGRectMake(10.0f, 100.0f, 200.0f, 50.0f)];
-        _test1.backgroundColor = [UIColor randomColor];
-        [_test1.rac_textSignal subscribeNext:^(id x) {
+- (SSettingService *)settingService {
+    if (!_settingService) {
+        __weak typeof(self) weakSelf = self;
+        _settingService = [[SSettingService alloc] init];
+        [_settingService subscribeNext:LCmdGetAll nextBlock:^(LCmdTransfer * x) {
             NSLog(@"%@", x);
         }];
-        
     }
     
-    return _test1;
+    return _settingService;
 }
 
-- (SSettingVM *)settingVM {
-    if (!_settingVM) {
-        _settingVM = [[SSettingVM alloc] init];
-    }
+#pragma mark - Interface
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
     
-    return _settingVM;
+    
 }
 
 #pragma mark - LInitProtocol
 
 - (void)initialize {
     [super initialize];
+    
+    [self.settingService execute:[LCmdTransfer cmd:LCmdGetAll value:nil]];
 }
 
 @end
