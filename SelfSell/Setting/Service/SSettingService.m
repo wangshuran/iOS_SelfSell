@@ -30,15 +30,26 @@
 - (NSArray<NSArray<TBModel *> *> *)getAll {
     NSMutableArray *datas = [[NSMutableArray alloc] init];
     
-    for (NSInteger i = 0; i < 100; i++) {
-        TBModel *model = [[TBModel alloc] init];
-        model.title = [NSUUID UUID].UUIDString;
-        model.code = [NSUUID UUID].UUIDString;
-        
-        [datas addObject:model];
+    NSMutableArray * classs = [[NSMutableArray alloc] init];
+    [classs addObject:@"TBArrowCell"];
+    [classs addObject:@"TBExitCell"];
+    [classs addObject:@"TBSwitchCell"];
+    [classs addObject:@"TBTextCell"];
+    
+    for (NSString * cl in classs) {
+        for (NSInteger i = 0; i < 100; i++) {
+            TBModel *model = [[NSClassFromString(cl) alloc] init];
+            //model.title = [NSUUID UUID].UUIDString;
+            //model.code = [NSUUID UUID].UUIDString;
+            
+            [datas addObject:model];
+        }
     }
     
-    return [NSArray arrayWithObject:datas];
+    TBSectionModel * section = [[TBSectionModel alloc] init];
+    section.items = datas;
+    
+    return [NSArray arrayWithObject:section];
 }
 
 @end

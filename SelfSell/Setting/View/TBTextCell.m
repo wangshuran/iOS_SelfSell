@@ -1,14 +1,14 @@
 //
-//  TBArrowCell.m
+//  TBTextCell.m
 //  SelfSell
 //
-//  Created by liqiang on 2018/1/15.
+//  Created by liqiang on 2018/1/16.
 //  Copyright © 2018年 Goopal. All rights reserved.
 //
 
-#import "TBArrowCell.h"
+#import "TBTextCell.h"
 
-@implementation TBArrowCell
+@implementation TBTextCell
 
 #pragma mark - Interface
 
@@ -30,7 +30,7 @@
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
-
+    
     // Configure the view for the selected state
 }
 

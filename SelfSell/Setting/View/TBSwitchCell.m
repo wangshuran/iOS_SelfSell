@@ -10,6 +10,19 @@
 
 @implementation TBSwitchCell
 
+#pragma mark - Interface
+
+- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
+    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
+    
+    return self;
+}
+
+- (void)setModel:(TBModel *)model {
+    [super setModel:model];
+    
+}
+
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code

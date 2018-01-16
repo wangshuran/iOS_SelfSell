@@ -7,7 +7,10 @@
 //
 
 #import <LBaseClass/LBaseClass.h>
+#import "TBModel.h"
 
 @interface TBCell : LTableViewCell
+
+@property (nonatomic, strong) TBModel * model;
 
 @end

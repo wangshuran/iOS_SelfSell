@@ -40,7 +40,7 @@
         __weak typeof(self) weakSelf = self;
         _settingService = [[SSettingService alloc] init];
         [_settingService subscribeNext:LCmdGetAll nextBlock:^(LCmdTransfer * transfer) {
-            NSArray<NSArray<TBModel *> *> * model = transfer.value;
+            NSArray<TBSectionModel *> * model = transfer.value;
             
             weakSelf.tbTableView.data = model;
         }];
@@ -51,7 +51,7 @@
 
 - (TBTableView *)tbTableView {
     if (!_tbTableView) {
-        _tbTableView = [[TBTableView alloc] init];
+        _tbTableView = [[TBTableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
     }
     
     return _tbTableView;
@@ -82,8 +82,6 @@
 
 - (void)initialize {
     [super initialize];
-    
-    //[self.view addSubview:self.tbTableView];
     
     [self.settingService execute:[LCmdTransfer cmd:LCmdGetAll value:nil]];
 }

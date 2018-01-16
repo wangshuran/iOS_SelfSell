@@ -10,4 +10,15 @@
 
 @implementation TBModel
 
+#pragma mark - Interface
+
+
+
+#pragma mark - LInitProtocol
+
+- (void)initialize {
+    [super initialize];
+    
+}
+
 @end

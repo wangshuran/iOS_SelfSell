@@ -10,8 +10,4 @@
 
 @interface TBModel : LModel
 
-@property (nonatomic, copy) NSString * title;
-
-@property (nonatomic, copy) NSString * code;
-
 @end

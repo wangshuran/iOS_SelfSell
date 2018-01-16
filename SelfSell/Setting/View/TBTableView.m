@@ -7,7 +7,11 @@
 //
 
 #import "TBTableView.h"
+#import "TBArrowCell.h"
 #import "TBCell.h"
+#import "TBExitCell.h"
+#import "TBSwitchCell.h"
+#import "TBTextCell.h"
 
 @interface TBTableView()<UITableViewDelegate, UITableViewDataSource>
 
@@ -25,13 +29,10 @@
     self.dataSource = self;
     self.delegate = self;
     
-    [self registerClass:TBCell.class forCellReuseIdentifier:NSStringFromClass(TBCell.class)];
-    [self registerClass:TBCell.class forCellReuseIdentifier:NSStringFromClass(TBCell.class)];
-    [self registerClass:TBCell.class forCellReuseIdentifier:NSStringFromClass(TBCell.class)];
-    [self registerClass:TBCell.class forCellReuseIdentifier:NSStringFromClass(TBCell.class)];
-    [self registerClass:TBCell.class forCellReuseIdentifier:NSStringFromClass(TBCell.class)];
-    [self registerClass:TBCell.class forCellReuseIdentifier:NSStringFromClass(TBCell.class)];
-    [self registerClass:TBCell.class forCellReuseIdentifier:NSStringFromClass(TBCell.class)];
+    [self registerClass:TBArrowCell.class forCellReuseIdentifier:NSStringFromClass(TBArrowCell.class)];
+    [self registerClass:TBExitCell.class forCellReuseIdentifier:NSStringFromClass(TBExitCell.class)];
+    [self registerClass:TBSwitchCell.class forCellReuseIdentifier:NSStringFromClass(TBSwitchCell.class)];
+    [self registerClass:TBTextCell.class forCellReuseIdentifier:NSStringFromClass(TBTextCell.class)];
     self.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
         [weakSelf.mj_header endRefreshing];
     }];
@@ -52,15 +53,26 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    if (self.data.count > section) {
+    if (self.data.count <= section) {
         return 0;
     }
-    
-    return [self.data objectAtIndex:section].count;
+    return [self.data objectAtIndex:section].items.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return nil;
+    if (self.data.count <= indexPath.section) {
+        return nil;
+    }
+    TBSectionModel * section =[self.data objectAtIndex:indexPath.section];
+    if (section.items.count <= indexPath.row) {
+        return nil;
+    }
+    
+    TBModel * model = [section.items objectAtIndex:indexPath.row];
+    TBCell * cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass(model.class) forIndexPath:indexPath];
+    cell.model = model;
+    
+    return cell;
 }
 
 @end
