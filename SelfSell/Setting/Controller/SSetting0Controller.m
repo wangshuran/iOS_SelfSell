@@ -7,12 +7,12 @@
 //
 
 #import "SSetting0Controller.h"
-#import "SSetting0Service.h"
+#import "SSettingService.h"
 #import "TBTableView.h"
 
 @interface SSetting0Controller ()
 
-@property (nonatomic, strong) SSetting0Service * setting0Service;
+@property (nonatomic, strong) SSettingService * settingService;
 
 @property (nonatomic, strong) TBTableView * tbTableView;
 
@@ -24,6 +24,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self push:[[NSClassFromString(@"SSetting1Controller") alloc] init]];
+    });
 }
 
 - (void)didReceiveMemoryWarning {
@@ -32,14 +36,14 @@
 }
 
 - (NSString *)title {
-    return SLocal(@"setting_title");
+    return SLocal(@"setting0_title");
 }
 
-- (SSetting0Service *)setting0Service {
-    if (!_setting0Service) {
+- (SSettingService *)settingService {
+    if (!_settingService) {
         __weak typeof(self) weakSelf = self;
-        _setting0Service = [[SSetting0Service alloc] init];
-        [_setting0Service subscribeNext:LCmdGetAll nextBlock:^(LCmdTransfer * transfer) {
+        _settingService = [[SSettingService alloc] init];
+        [_settingService subscribeNext:LCmdGetSetting0 nextBlock:^(LCmdTransfer * transfer) {
             NSArray<TBSectionModel *> * model = transfer.value;
             
             weakSelf.tbTableView.data = model;
@@ -47,7 +51,7 @@
         }];
     }
     
-    return _setting0Service;
+    return _settingService;
 }
 
 - (TBTableView *)tbTableView {
@@ -69,7 +73,7 @@
     }];
     
     
-    [self.setting0Service execute:[LCmdTransfer cmd:LCmdGetAll value:nil]];
+    [self.settingService execute:[LCmdTransfer cmd:LCmdGetSetting0 value:nil]];
 }
 
 #pragma mark - Interface

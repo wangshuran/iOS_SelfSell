@@ -1,5 +1,5 @@
 //
-//  SSetting0Service.h
+//  SSettingService.h
 //  SelfSell
 //
 //  Created by liqiang on 2017/12/25.
@@ -14,6 +14,11 @@
 #import "TBSwitchModel.h"
 #import "TBTextModel.h"
 
-@interface SSetting0Service : SService
+
+FOUNDATION_EXPORT LCmd * const LCmdGetSetting0;
+FOUNDATION_EXPORT LCmd * const LCmdGetSetting1;
+
+
+@interface SSettingService : SService
 
 @end
