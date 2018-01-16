@@ -99,8 +99,8 @@
         @throw [NSException exceptionWithName:[NSString stringWithFormat:@"repeat execute %@", NSStringFromSelector(_cmd)] reason:[NSString stringWithFormat:@"repeat execute %@", NSStringFromSelector(_cmd)] userInfo:nil];
     }
     
-    _uid = [NSUUID UUID].UUIDString;
-    _createTime = [[NSDate date] timeIntervalSince1970];        
+    self.uid = [NSUUID UUID].UUIDString;
+    self.createTime = [[NSDate date] timeIntervalSince1970];
     //});
 }
 
@@ -163,7 +163,7 @@
     NSMutableSet * keys = [[NSMutableSet alloc] init];
     
     for (NSString * key in propertyKeys) {
-        objc_property_t property = class_getProperty(aClass, [key UTF8String]);
+        objc_property_t property = class_getProperty(aClass, key.UTF8String);
         const char *attr = property_getAttributes(property);
         NSString *strAttr = [NSString stringWithUTF8String:attr];
         

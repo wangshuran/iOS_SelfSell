@@ -10,4 +10,6 @@
 
 @interface TBSwitchModel : TBModel
 
+@property (nonatomic, assign) BOOL isOn;
+
 @end

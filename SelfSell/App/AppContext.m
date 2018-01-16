@@ -119,7 +119,7 @@ LSingleton_m(AppContext);
 - (SFundController *)fundVC {
     if (!_fundVC) {
         _fundVC = [[SFundController alloc] init];
-        _fundVC.hiddenNavbar = YES;
+        _fundVC.hiddenNavbar = NO;
         _fundVC.hiddenTabar = NO;
     }
     
@@ -129,7 +129,7 @@ LSingleton_m(AppContext);
 - (SActivityController *)activityVC {
     if (!_activityVC) {
         _activityVC = [[SActivityController alloc] init];
-        _activityVC.hiddenNavbar = YES;
+        _activityVC.hiddenNavbar = NO;
         _activityVC.hiddenTabar = NO;
     }
     
@@ -139,7 +139,7 @@ LSingleton_m(AppContext);
 - (SSettingController *)settingVC {
     if (!_settingVC) {
         _settingVC = [[SSettingController alloc] init];
-        _settingVC.hiddenNavbar = YES;
+        _settingVC.hiddenNavbar = NO;
         _settingVC.hiddenTabar = NO;
     }
     

@@ -37,11 +37,10 @@
     [classs addObject:@"TBTextModel"];
     
     for (NSString * cl in classs) {
-        for (NSInteger i = 0; i < 100; i++) {
+        for (NSInteger i = 0; i < 1; i++) {
             TBModel *model = [[NSClassFromString(cl) alloc] init];
-            //model.title = [NSUUID UUID].UUIDString;
-            //model.code = [NSUUID UUID].UUIDString;
-            
+            model.title = [NSUUID UUID].UUIDString;
+            model.value = [NSUUID UUID].UUIDString;
             [datas addObject:model];
         }
     }

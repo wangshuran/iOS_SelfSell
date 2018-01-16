@@ -76,9 +76,7 @@
 #pragma mark - Interface
 
 - (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-    
-    
+    [super viewWillAppear:animated];    
 }
 
 #pragma mark - LInitProtocol

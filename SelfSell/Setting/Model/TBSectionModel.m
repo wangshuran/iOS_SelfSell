@@ -10,4 +10,11 @@
 
 @implementation TBSectionModel
 
++ (instancetype)sectionWithItems:(NSArray<TBModel *> *)items {
+    TBSectionModel * model = [[TBSectionModel alloc] init];
+    model.items = items;
+    
+    return model;
+}
+
 @end

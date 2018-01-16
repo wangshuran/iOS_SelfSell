@@ -11,6 +11,8 @@
 
 @interface TBSectionModel : LModel
 
++ (instancetype)sectionWithItems:(NSArray<TBModel *> *)items;
+
 @property (nonatomic, strong) NSArray<TBModel *> * items;
 
 @end

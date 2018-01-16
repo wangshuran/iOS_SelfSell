@@ -76,8 +76,8 @@
         @throw [NSException exceptionWithName:[NSString stringWithFormat:@"repeat execute %@", NSStringFromSelector(_cmd)] reason:[NSString stringWithFormat:@"repeat execute %@", NSStringFromSelector(_cmd)] userInfo:nil];
     }
     
-    _uid = [NSUUID UUID].UUIDString;
-    _createTime = [[NSDate date] timeIntervalSince1970];
+    self.uid = [NSUUID UUID].UUIDString;
+    self.createTime = [[NSDate date] timeIntervalSince1970];
     //});
 }
 
