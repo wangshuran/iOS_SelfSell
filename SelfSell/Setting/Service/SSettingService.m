@@ -39,8 +39,8 @@
     for (NSString * cl in classs) {
         for (NSInteger i = 0; i < 1; i++) {
             TBModel *model = [[NSClassFromString(cl) alloc] init];
-            model.title = [NSUUID UUID].UUIDString;
-            model.value = [NSUUID UUID].UUIDString;
+            model.title = [[NSUUID UUID].UUIDString substringToIndex:8];
+            model.value = [[NSUUID UUID].UUIDString substringToIndex:6];
             [datas addObject:model];
         }
     }

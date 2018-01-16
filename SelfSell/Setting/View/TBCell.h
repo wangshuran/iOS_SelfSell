@@ -9,8 +9,16 @@
 #import <LBaseClass/LBaseClass.h>
 #import "TBModel.h"
 
+#define kTitleFont [LFont bold_15]
+
+#define kValueFont [LFont thin_14]
+
 @interface TBCell : LTableViewCell
 
 @property (nonatomic, strong) TBModel * model;
+
+@property (nonatomic, strong) UILabel * lbTitle;
+
+@property (nonatomic, strong) UILabel * lbValue;
 
 @end

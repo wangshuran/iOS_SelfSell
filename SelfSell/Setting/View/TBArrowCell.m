@@ -14,25 +14,39 @@
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
+    self.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    
+    __weak typeof(self) weakSelf = self;
+    [self.lbTitle mas_updateConstraints:^(MASConstraintMaker * make) {
+        make.top.mas_equalTo(10.0f);
+        make.bottom.mas_equalTo(-10.0f);
+        make.left.mas_equalTo(10.0f);
+        make.right.mas_equalTo(-10.0f);
+        make.height.mas_greaterThanOrEqualTo(30.0f);
+    }];
+    
+    [self.lbValue mas_updateConstraints:^(MASConstraintMaker * make) {
+        make.top.mas_equalTo(10.0f);
+        make.bottom.mas_equalTo(-10.0f);
+        make.left.mas_equalTo(10.0f);
+        make.right.mas_equalTo(-10.0f);
+        make.height.mas_greaterThanOrEqualTo(30.0f);
+    }];
     
     return self;
 }
 
 - (void)setModel:(TBModel *)model {
     [super setModel:model];
-    
 }
 
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
-    
-    
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
-    
     // Configure the view for the selected state
 }
 

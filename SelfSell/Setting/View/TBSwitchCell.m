@@ -10,8 +10,6 @@
 
 @interface TBSwitchCell()
 
-@property (nonatomic, strong) UILabel * lbTitle;
-
 @property (nonatomic, strong) UISwitch * btnSwitch;
 
 @end
@@ -24,7 +22,6 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     self.selectionStyle = UITableViewCellSelectionStyleNone;
     
-    [self.contentView addSubview:self.lbTitle];
     [self.contentView addSubview:self.btnSwitch];
     
     __weak typeof(self) weakSelf = self;
@@ -71,21 +68,14 @@
     // Configure the view for the selected state
 }
 
-- (UILabel *)lbTitle {
-    if (!_lbTitle) {
-        _lbTitle = [[UILabel alloc] init];
-        _lbTitle.numberOfLines = 0;
-        _lbTitle.font = [LFont thin_15];
-    }
-    
-    return _lbTitle;
-}
-
 - (UISwitch *)btnSwitch {
     if (!_btnSwitch) {
         _btnSwitch = [[UISwitch alloc] init];
         _btnSwitch.onTintColor = [UIColor greenColor];
         _btnSwitch.tintColor = [UIColor grayColor];
+        [[_btnSwitch rac_newOnChannel] subscribeNext:^(NSNumber * x) {
+            BOOL value = x.boolValue;
+        }];
     }
     
     return _btnSwitch;
