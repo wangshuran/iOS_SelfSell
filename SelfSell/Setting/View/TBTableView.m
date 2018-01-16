@@ -25,6 +25,8 @@
     self = [super initWithFrame:frame style:style];
     self.dataSource = self;
     self.delegate = self;
+    self.estimatedRowHeight = 60.0f;
+    self.rowHeight = UITableViewAutomaticDimension;
     [self registerClass:TBCell.class forCellReuseIdentifier:NSStringFromClass(TBModel.class)];
     [self registerClass:TBArrowCell.class forCellReuseIdentifier:NSStringFromClass(TBArrowModel.class)];
     [self registerClass:TBExitCell.class forCellReuseIdentifier:NSStringFromClass(TBExitModel.class)];
@@ -44,6 +46,9 @@
 
 #pragma mark - UITableViewDelegate
 
+//- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+//    return 200.0f;
+//}
 
 #pragma mark - UITableViewDataSource
 

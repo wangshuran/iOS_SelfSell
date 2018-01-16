@@ -50,37 +50,37 @@
         status = NO;
     }
     
-    SLoginByAccountRequest * request = [[SLoginByAccountRequest alloc] init];
-    //TODO，属性赋值
-    
-    [LNetwork request:request block:^(LRequest * request, LResponse * response) {
-        if (!response.status) {
-            [AppContext sharedAppContext].loginType = LoginTypeNone;
-            [AppContext sharedAppContext].accountModel = nil;
-            NSString * languageCode = [[AppContext sharedAppContext] getCurrentAccountSpaceInfo:kCurrentLanguageCode];
-            if (!languageCode) {
-                languageCode = [LLanguage getOSDefaultLanguage];
-            }
-            [AppContext sharedAppContext].languageCode = languageCode;
-            //TODO，继续其他操作
-        } else {
-            SAccountModel * accountModel = ((SLoginByAccountResponse *)response).accountModel;
-            //TODO，不一定只有账户登录
-            [AppContext sharedAppContext].loginType = LoginTypeAccount;
-            [AppContext sharedAppContext].accountModel = accountModel;
-            NSString * languageCode = [[AppContext sharedAppContext] getCurrentAccountSpaceInfo:kCurrentLanguageCode];
-            if (!languageCode) {
-                languageCode = [LLanguage getOSDefaultLanguage];
-            }
-            [AppContext sharedAppContext].languageCode = languageCode;
-            [[AppContext sharedAppContext] updateLoginAccount:accountModel];
-            //TODO，继续其他操作
-        }
-        
-        SPostNotification(kNoticeFinishLogin);//完成登录发出通知
-        SPostNotification(kNoticeShowVersionCheck);//版本检查通知
-        SPostNotification(kNoticeShowSecurityCheck);//安全检查通知
-    }];
+    //SLoginByAccountRequest * request = [[SLoginByAccountRequest alloc] init];
+    ////TODO，属性赋值
+    //
+    //[LNetwork request:request block:^(LRequest * request, LResponse * response) {
+    //    if (!response.status) {
+    //        [AppContext sharedAppContext].loginType = LoginTypeNone;
+    //        [AppContext sharedAppContext].accountModel = nil;
+    //        NSString * languageCode = [[AppContext sharedAppContext] getCurrentAccountSpaceInfo:kCurrentLanguageCode];
+    //        if (!languageCode) {
+    //            languageCode = [LLanguage getOSDefaultLanguage];
+    //        }
+    //        [AppContext sharedAppContext].languageCode = languageCode;
+    //        //TODO，继续其他操作
+    //    } else {
+    //        SAccountModel * accountModel = ((SLoginByAccountResponse *)response).accountModel;
+    //        //TODO，不一定只有账户登录
+    //        [AppContext sharedAppContext].loginType = LoginTypeAccount;
+    //        [AppContext sharedAppContext].accountModel = accountModel;
+    //        NSString * languageCode = [[AppContext sharedAppContext] getCurrentAccountSpaceInfo:kCurrentLanguageCode];
+    //        if (!languageCode) {
+    //            languageCode = [LLanguage getOSDefaultLanguage];
+    //        }
+    //        [AppContext sharedAppContext].languageCode = languageCode;
+    //        [[AppContext sharedAppContext] updateLoginAccount:accountModel];
+    //        //TODO，继续其他操作
+    //    }
+    //    
+    //    SPostNotification(kNoticeFinishLogin);//完成登录发出通知
+    //    SPostNotification(kNoticeShowVersionCheck);//版本检查通知
+    //    SPostNotification(kNoticeShowSecurityCheck);//安全检查通知
+    //}];
     
     
     

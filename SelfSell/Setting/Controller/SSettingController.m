@@ -60,7 +60,6 @@
 
 - (void)loadView {
     [super loadView];
-    
     __weak typeof(self) weakSelf = self;
     
     [self.view addSubview:self.tbTableView];

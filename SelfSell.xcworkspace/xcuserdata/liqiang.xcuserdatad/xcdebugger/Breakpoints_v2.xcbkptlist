@@ -106,12 +106,12 @@
                   moduleName = "SelfSell"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/liqiang/Documents/GitHub/iOS_SelfSell/Pods/MJExtension/MJExtension/NSObject+MJKeyValue.m"
-                  timestampString = "537775944.318529"
+                  timestampString = "537782256.831055"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "230"
                   endingLineNumber = "230"
-                  offsetFromSymbolStart = "39">
+                  offsetFromSymbolStart = "52">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -121,12 +121,12 @@
                   moduleName = "SelfSell"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/liqiang/Documents/GitHub/iOS_SelfSell/Pods/MJExtension/MJExtension/NSObject+MJKeyValue.m"
-                  timestampString = "537775944.321252"
+                  timestampString = "537782256.833153"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "230"
                   endingLineNumber = "230"
-                  offsetFromSymbolStart = "117">
+                  offsetFromSymbolStart = "140">
                </Location>
             </Locations>
          </BreakpointContent>

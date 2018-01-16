@@ -65,7 +65,7 @@ LSingleton_m(AppContext);
         _rootVC.viewControllers = [NSArray arrayWithObjects:self.activityNav, self.fundNav, self.accountNav, nil];
         _rootVC.tabBar.tintColor = [UIColor colorWithRed:1.0f / 255.0f green:199.0f / 255.0f blue:209.0f / 255.0f alpha:1.0f];
         
-        _rootVC.selectedViewController = self.activityNav;
+        _rootVC.selectedViewController = self.accountNav;
     }
     
     return _rootVC;
