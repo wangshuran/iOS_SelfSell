@@ -31,10 +31,10 @@
     NSMutableArray *datas = [[NSMutableArray alloc] init];
     
     NSMutableArray * classs = [[NSMutableArray alloc] init];
-    [classs addObject:@"TBArrowCell"];
-    [classs addObject:@"TBExitCell"];
-    [classs addObject:@"TBSwitchCell"];
-    [classs addObject:@"TBTextCell"];
+    [classs addObject:@"TBArrowModel"];
+    [classs addObject:@"TBExitModel"];
+    [classs addObject:@"TBSwitchModel"];
+    [classs addObject:@"TBTextModel"];
     
     for (NSString * cl in classs) {
         for (NSInteger i = 0; i < 100; i++) {

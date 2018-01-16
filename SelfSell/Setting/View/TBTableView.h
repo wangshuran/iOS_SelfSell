@@ -9,7 +9,7 @@
 #import <LBaseClass/LBaseClass.h>
 #import "TBSectionModel.h"
 
-@interface TBTableView : LTableView
+@interface TBTableView : UITableView
 
 @property (nonatomic, strong) NSArray<TBSectionModel *> * data;
 

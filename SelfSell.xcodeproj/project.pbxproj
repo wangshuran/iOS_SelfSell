@@ -51,6 +51,7 @@
 		D548950D1FF2536D00F2019B /* SNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = D548950C1FF2536D00F2019B /* SNetwork.m */; };
 		D5515F041FDF5A5500278579 /* SelfSellTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D5515F031FDF5A5500278579 /* SelfSellTests.m */; };
 		D5515F0F1FDF5A5500278579 /* SelfSellUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D5515F0E1FDF5A5500278579 /* SelfSellUITests.m */; };
+		D5709CBA200DAABA007BBD4C /* TBTextModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D5709CB9200DAABA007BBD4C /* TBTextModel.m */; };
 		D5957AE720073B9000F6EE60 /* SCache.m in Sources */ = {isa = PBXBuildFile; fileRef = D5957AB920073B9000F6EE60 /* SCache.m */; };
 		D5957AE820073B9000F6EE60 /* SNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5957ABC20073B9000F6EE60 /* SNavigationController.m */; };
 		D5957AE920073B9000F6EE60 /* STabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5957ABE20073B9000F6EE60 /* STabBarController.m */; };
@@ -190,6 +191,8 @@
 		D5515F0A1FDF5A5500278579 /* SelfSellUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SelfSellUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5515F0E1FDF5A5500278579 /* SelfSellUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SelfSellUITests.m; sourceTree = "<group>"; };
 		D5515F101FDF5A5500278579 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D5709CB8200DAABA007BBD4C /* TBTextModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TBTextModel.h; sourceTree = "<group>"; };
+		D5709CB9200DAABA007BBD4C /* TBTextModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TBTextModel.m; sourceTree = "<group>"; };
 		D5957AB820073B9000F6EE60 /* SCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCache.h; sourceTree = "<group>"; };
 		D5957AB920073B9000F6EE60 /* SCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCache.m; sourceTree = "<group>"; };
 		D5957ABB20073B9000F6EE60 /* SNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNavigationController.h; sourceTree = "<group>"; };
@@ -332,6 +335,8 @@
 				D50297F9200C56EA008375F9 /* TBSectionModel.m */,
 				D50297FE200C5770008375F9 /* TBSwitchModel.h */,
 				D50297FF200C5770008375F9 /* TBSwitchModel.m */,
+				D5709CB8200DAABA007BBD4C /* TBTextModel.h */,
+				D5709CB9200DAABA007BBD4C /* TBTextModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1219,6 +1224,7 @@
 				D54894E81FF2388E00F2019B /* test006.m in Sources */,
 				D5E610D320089528003C847A /* SFundController.m in Sources */,
 				D54895021FF23F0D00F2019B /* SLoginByAccountRequest.m in Sources */,
+				D5709CBA200DAABA007BBD4C /* TBTextModel.m in Sources */,
 				D5957AF520073B9000F6EE60 /* SScrollView.m in Sources */,
 				D5957AED20073B9000F6EE60 /* SModel.mm in Sources */,
 				D50297FD200C570D008375F9 /* TBModel.m in Sources */,

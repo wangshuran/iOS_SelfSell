@@ -7,6 +7,7 @@
 //
 
 #import "TBCell.h"
+#import "TBArrowModel.h"
 
 @interface TBArrowCell : TBCell
 

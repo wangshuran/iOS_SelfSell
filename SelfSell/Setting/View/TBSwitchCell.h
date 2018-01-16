@@ -7,6 +7,7 @@
 //
 
 #import "TBCell.h"
+#import "TBSwitchModel.h"
 
 @interface TBSwitchCell : TBCell
 

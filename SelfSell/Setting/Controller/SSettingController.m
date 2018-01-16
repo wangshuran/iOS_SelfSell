@@ -43,6 +43,7 @@
             NSArray<TBSectionModel *> * model = transfer.value;
             
             weakSelf.tbTableView.data = model;
+            [weakSelf.tbTableView reloadData];
         }];
     }
     
@@ -66,8 +67,10 @@
     
     [self.tbTableView mas_updateConstraints:^(MASConstraintMaker * make) {
         make.top.bottom.left.right.mas_equalTo(weakSelf.view);
-        //make.top.bottom.left.right.equalTo(self.view);
     }];
+    
+    
+    [self.settingService execute:[LCmdTransfer cmd:LCmdGetAll value:nil]];
 }
 
 #pragma mark - Interface
@@ -83,7 +86,6 @@
 - (void)initialize {
     [super initialize];
     
-    [self.settingService execute:[LCmdTransfer cmd:LCmdGetAll value:nil]];
 }
 
 @end

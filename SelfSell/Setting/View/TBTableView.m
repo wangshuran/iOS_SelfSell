@@ -21,18 +21,16 @@
 
 #pragma mark - Interface
 
-- (instancetype)init {
-    self = [super init];
-    
-    __weak typeof(self) weakSelf = self;
-    
+- (instancetype)initWithFrame:(CGRect)frame style:(UITableViewStyle)style {
+    self = [super initWithFrame:frame style:style];
     self.dataSource = self;
     self.delegate = self;
+    [self registerClass:TBArrowCell.class forCellReuseIdentifier:NSStringFromClass(TBArrowModel.class)];
+    [self registerClass:TBExitCell.class forCellReuseIdentifier:NSStringFromClass(TBExitModel.class)];
+    [self registerClass:TBSwitchCell.class forCellReuseIdentifier:NSStringFromClass(TBSwitchModel.class)];
+    [self registerClass:TBTextCell.class forCellReuseIdentifier:NSStringFromClass(TBTextModel.class)];
     
-    [self registerClass:TBArrowCell.class forCellReuseIdentifier:NSStringFromClass(TBArrowCell.class)];
-    [self registerClass:TBExitCell.class forCellReuseIdentifier:NSStringFromClass(TBExitCell.class)];
-    [self registerClass:TBSwitchCell.class forCellReuseIdentifier:NSStringFromClass(TBSwitchCell.class)];
-    [self registerClass:TBTextCell.class forCellReuseIdentifier:NSStringFromClass(TBTextCell.class)];
+    __weak typeof(self) weakSelf = self;
     self.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
         [weakSelf.mj_header endRefreshing];
     }];

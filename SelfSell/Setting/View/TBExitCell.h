@@ -7,6 +7,7 @@
 //
 
 #import "TBCell.h"
+#import "TBExitModel.h"
 
 @interface TBExitCell : TBCell
 
