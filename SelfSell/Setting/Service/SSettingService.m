@@ -28,25 +28,31 @@
  获取全部设置项
  */
 - (NSArray<NSArray<TBModel *> *> *)getAll {
-    NSMutableArray *datas = [[NSMutableArray alloc] init];
-    
-    NSMutableArray * classs = [[NSMutableArray alloc] init];
-    [classs addObject:@"TBArrowModel"];
-    [classs addObject:@"TBExitModel"];
-    [classs addObject:@"TBSwitchModel"];
-    [classs addObject:@"TBTextModel"];
-    
-    for (NSString * cl in classs) {
-        for (NSInteger i = 0; i < 1; i++) {
-            TBModel *model = [[NSClassFromString(cl) alloc] init];
-            model.title = [[NSUUID UUID].UUIDString substringToIndex:8];
-            model.value = [[NSUUID UUID].UUIDString substringToIndex:6];
-            [datas addObject:model];
-        }
+    NSMutableArray *data = [[NSMutableArray alloc] init];
+    {
+        TBArrowModel * model = [[TBArrowModel alloc] init];
+        model.title = @"我的推荐码";
+        model.value = @"677844";
+        [data addObject:model];
+    }{
+        TBArrowModel * model = [[TBArrowModel alloc] init];
+        model.title = @"谷歌验证";
+        model.value = @"已开启";
+        [data addObject:model];
+    }{
+        TBArrowModel * model = [[TBArrowModel alloc] init];
+        model.title = @"设置";
+        model.value = nil;
+        [data addObject:model];
+    }{
+        TBBtnModel * model = [[TBBtnModel alloc] init];
+        model.title = @"退出";
+        model.value = nil;
+        [data addObject:model];
     }
     
     TBSectionModel * section = [[TBSectionModel alloc] init];
-    section.items = datas;
+    section.items = data;
     
     return [NSArray arrayWithObject:section];
 }

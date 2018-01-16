@@ -1,14 +1,13 @@
 //
-//  TBExitCell.h
+//  TBExitModel.m
 //  SelfSell
 //
 //  Created by liqiang on 2018/1/15.
 //  Copyright © 2018年 Goopal. All rights reserved.
 //
 
-#import "TBCell.h"
-#import "TBExitModel.h"
+#import "TBBtnModel.h"
 
-@interface TBExitCell : TBCell
+@implementation TBBtnModel
 
 @end

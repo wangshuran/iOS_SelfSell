@@ -6,9 +6,9 @@
 //  Copyright © 2018年 Goopal. All rights reserved.
 //
 
-#import "TBExitCell.h"
+#import "TBBtnCell.h"
 
-@implementation TBExitCell
+@implementation TBBtnCell
 
 #pragma mark - Interface
 

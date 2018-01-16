@@ -12,8 +12,6 @@
 
 #pragma mark - Interface
 
-
-
 #pragma mark - LInitProtocol
 
 - (void)initialize {

@@ -9,7 +9,7 @@
 #import "TBTableView.h"
 #import "TBArrowCell.h"
 #import "TBCell.h"
-#import "TBExitCell.h"
+#import "TBBtnCell.h"
 #import "TBSwitchCell.h"
 #import "TBTextCell.h"
 
@@ -29,7 +29,7 @@
     self.rowHeight = UITableViewAutomaticDimension;
     [self registerClass:TBCell.class forCellReuseIdentifier:NSStringFromClass(TBModel.class)];
     [self registerClass:TBArrowCell.class forCellReuseIdentifier:NSStringFromClass(TBArrowModel.class)];
-    [self registerClass:TBExitCell.class forCellReuseIdentifier:NSStringFromClass(TBExitModel.class)];
+    [self registerClass:TBBtnCell.class forCellReuseIdentifier:NSStringFromClass(TBBtnModel.class)];
     [self registerClass:TBSwitchCell.class forCellReuseIdentifier:NSStringFromClass(TBSwitchModel.class)];
     [self registerClass:TBTextCell.class forCellReuseIdentifier:NSStringFromClass(TBTextModel.class)];
     

@@ -16,12 +16,12 @@
 		D50297FD200C570D008375F9 /* TBModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D50297FC200C570D008375F9 /* TBModel.m */; };
 		D5029800200C5770008375F9 /* TBSwitchModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D50297FF200C5770008375F9 /* TBSwitchModel.m */; };
 		D5029803200C578F008375F9 /* TBArrowModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D5029802200C578F008375F9 /* TBArrowModel.m */; };
-		D5029806200C57B7008375F9 /* TBExitModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D5029805200C57B7008375F9 /* TBExitModel.m */; };
+		D5029806200C57B7008375F9 /* TBBtnModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D5029805200C57B7008375F9 /* TBBtnModel.m */; };
 		D502980C200C58CC008375F9 /* TBCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D502980B200C58CC008375F9 /* TBCell.m */; };
 		D5029810200C5A4F008375F9 /* TBTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = D502980F200C5A4F008375F9 /* TBTableView.m */; };
 		D5029813200C5B41008375F9 /* TBSwitchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D5029812200C5B41008375F9 /* TBSwitchCell.m */; };
 		D5029816200C5BE7008375F9 /* TBArrowCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D5029815200C5BE7008375F9 /* TBArrowCell.m */; };
-		D5029819200C5BF6008375F9 /* TBExitCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D5029818200C5BF6008375F9 /* TBExitCell.m */; };
+		D5029819200C5BF6008375F9 /* TBBtnCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D5029818200C5BF6008375F9 /* TBBtnCell.m */; };
 		D502981E200D9127008375F9 /* TBTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D502981D200D9127008375F9 /* TBTextCell.m */; };
 		D5029CF91FDF6E180063D82A /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D5029CF81FDF6E180063D82A /* Info.plist */; };
 		D53B6B8D1FDF7A77006AEB46 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D53B6B8F1FDF7A77006AEB46 /* Localizable.strings */; };
@@ -118,8 +118,8 @@
 		D50297FF200C5770008375F9 /* TBSwitchModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TBSwitchModel.m; sourceTree = "<group>"; };
 		D5029801200C578F008375F9 /* TBArrowModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TBArrowModel.h; sourceTree = "<group>"; };
 		D5029802200C578F008375F9 /* TBArrowModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TBArrowModel.m; sourceTree = "<group>"; };
-		D5029804200C57B7008375F9 /* TBExitModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TBExitModel.h; sourceTree = "<group>"; };
-		D5029805200C57B7008375F9 /* TBExitModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TBExitModel.m; sourceTree = "<group>"; };
+		D5029804200C57B7008375F9 /* TBBtnModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TBBtnModel.h; sourceTree = "<group>"; };
+		D5029805200C57B7008375F9 /* TBBtnModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TBBtnModel.m; sourceTree = "<group>"; };
 		D502980A200C58CC008375F9 /* TBCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TBCell.h; sourceTree = "<group>"; };
 		D502980B200C58CC008375F9 /* TBCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TBCell.m; sourceTree = "<group>"; };
 		D502980E200C5A4F008375F9 /* TBTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TBTableView.h; sourceTree = "<group>"; };
@@ -128,8 +128,8 @@
 		D5029812200C5B41008375F9 /* TBSwitchCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TBSwitchCell.m; sourceTree = "<group>"; };
 		D5029814200C5BE7008375F9 /* TBArrowCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TBArrowCell.h; sourceTree = "<group>"; };
 		D5029815200C5BE7008375F9 /* TBArrowCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TBArrowCell.m; sourceTree = "<group>"; };
-		D5029817200C5BF6008375F9 /* TBExitCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TBExitCell.h; sourceTree = "<group>"; };
-		D5029818200C5BF6008375F9 /* TBExitCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TBExitCell.m; sourceTree = "<group>"; };
+		D5029817200C5BF6008375F9 /* TBBtnCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TBBtnCell.h; sourceTree = "<group>"; };
+		D5029818200C5BF6008375F9 /* TBBtnCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TBBtnCell.m; sourceTree = "<group>"; };
 		D502981C200D9127008375F9 /* TBTextCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TBTextCell.h; sourceTree = "<group>"; };
 		D502981D200D9127008375F9 /* TBTextCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TBTextCell.m; sourceTree = "<group>"; };
 		D5029CF71FDF6D6B0063D82A /* SelfSell-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SelfSell-Prefix.pch"; sourceTree = "<group>"; };
@@ -327,8 +327,8 @@
 			children = (
 				D5029801200C578F008375F9 /* TBArrowModel.h */,
 				D5029802200C578F008375F9 /* TBArrowModel.m */,
-				D5029804200C57B7008375F9 /* TBExitModel.h */,
-				D5029805200C57B7008375F9 /* TBExitModel.m */,
+				D5029804200C57B7008375F9 /* TBBtnModel.h */,
+				D5029805200C57B7008375F9 /* TBBtnModel.m */,
 				D50297FB200C570D008375F9 /* TBModel.h */,
 				D50297FC200C570D008375F9 /* TBModel.m */,
 				D50297F8200C56EA008375F9 /* TBSectionModel.h */,
@@ -375,8 +375,8 @@
 				D5029815200C5BE7008375F9 /* TBArrowCell.m */,
 				D502980A200C58CC008375F9 /* TBCell.h */,
 				D502980B200C58CC008375F9 /* TBCell.m */,
-				D5029817200C5BF6008375F9 /* TBExitCell.h */,
-				D5029818200C5BF6008375F9 /* TBExitCell.m */,
+				D5029817200C5BF6008375F9 /* TBBtnCell.h */,
+				D5029818200C5BF6008375F9 /* TBBtnCell.m */,
 				D5029811200C5B41008375F9 /* TBSwitchCell.h */,
 				D5029812200C5B41008375F9 /* TBSwitchCell.m */,
 				D502980E200C5A4F008375F9 /* TBTableView.h */,
@@ -1218,7 +1218,7 @@
 				D54894C61FF22C1400F2019B /* SVotesController.m in Sources */,
 				D54894F01FF23AAB00F2019B /* SCheckVersionResponse.m in Sources */,
 				D5957AE720073B9000F6EE60 /* SCache.m in Sources */,
-				D5029819200C5BF6008375F9 /* TBExitCell.m in Sources */,
+				D5029819200C5BF6008375F9 /* TBBtnCell.m in Sources */,
 				D5957AEA20073B9000F6EE60 /* STableViewController.m in Sources */,
 				D5DB07441FEA692F00A347B1 /* main.m in Sources */,
 				D54894E81FF2388E00F2019B /* test006.m in Sources */,
@@ -1244,7 +1244,7 @@
 				D5029813200C5B41008375F9 /* TBSwitchCell.m in Sources */,
 				D502981E200D9127008375F9 /* TBTextCell.m in Sources */,
 				D5957B0E200750FA00F6EE60 /* SCommonModel.mm in Sources */,
-				D5029806200C57B7008375F9 /* TBExitModel.m in Sources */,
+				D5029806200C57B7008375F9 /* TBBtnModel.m in Sources */,
 				D548950D1FF2536D00F2019B /* SNetwork.m in Sources */,
 				D54894621FF0938400F2019B /* test002.m in Sources */,
 				D5E610DE2008A669003C847A /* SWelcomeController.m in Sources */,
