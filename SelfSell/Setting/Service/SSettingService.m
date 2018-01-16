@@ -45,12 +45,10 @@ LCmd * const LCmdGetSetting1 = @"LCmdGetSetting1";
     }{
         TBArrowModel * model = [[TBArrowModel alloc] init];
         model.title = @"设置";
-        model.value = nil;
         [data addObject:model];
     }{
         TBExitModel * model = [[TBExitModel alloc] init];
         model.title = @"退出";
-        model.value = nil;
         [data addObject:model];
     }
     
@@ -64,23 +62,21 @@ LCmd * const LCmdGetSetting1 = @"LCmdGetSetting1";
     NSMutableArray *data = [[NSMutableArray alloc] init];
     {
         TBArrowModel * model = [[TBArrowModel alloc] init];
-        model.title = @"我的推荐码";
-        model.value = @"677844";
+        model.title = @"更改密码";
+        [data addObject:model];
+    }{
+        TBSwitchModel * model = [[TBSwitchModel alloc] init];
+        model.title = @"指纹";
+        model.isOn = NO;
         [data addObject:model];
     }{
         TBArrowModel * model = [[TBArrowModel alloc] init];
-        model.title = @"谷歌验证";
-        model.value = @"已开启";
+        model.title = @"语言";
         [data addObject:model];
     }{
         TBArrowModel * model = [[TBArrowModel alloc] init];
-        model.title = @"设置";
-        model.value = nil;
-        [data addObject:model];
-    }{
-        TBExitModel * model = [[TBExitModel alloc] init];
-        model.title = @"退出";
-        model.value = nil;
+        model.title = @"关于";
+        model.value = [LAppInfo CFBundleShortVersionString];
         [data addObject:model];
     }
     

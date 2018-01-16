@@ -16,11 +16,11 @@
 
 @property (nonatomic, strong) TBTableView * tbTableView;
 
-
-
 @end
 
 @implementation SSetting0Controller
+
+#pragma mark - Interface
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -75,8 +75,6 @@
     
     [self.settingService execute:[LCmdTransfer cmd:LCmdGetSetting0 value:nil]];
 }
-
-#pragma mark - Interface
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];    

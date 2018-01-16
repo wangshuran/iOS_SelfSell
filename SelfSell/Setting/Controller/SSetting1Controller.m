@@ -7,12 +7,20 @@
 //
 
 #import "SSetting1Controller.h"
+#import "SSettingService.h"
+#import "TBTableView.h"
 
 @interface SSetting1Controller ()
+
+@property (nonatomic, strong) SSettingService * settingService;
+
+@property (nonatomic, strong) TBTableView * tbTableView;
 
 @end
 
 @implementation SSetting1Controller
+
+#pragma mark - Interface
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -24,14 +32,45 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (NSString *)title {
+    return SLocal(@"setting0_title");
 }
-*/
+
+- (SSettingService *)settingService {
+    if (!_settingService) {
+        __weak typeof(self) weakSelf = self;
+        _settingService = [[SSettingService alloc] init];
+        [_settingService subscribeNext:LCmdGetSetting1 nextBlock:^(LCmdTransfer * transfer) {
+            NSArray<TBSectionModel *> * model = transfer.value;
+            
+            weakSelf.tbTableView.data = model;
+            [weakSelf.tbTableView reloadData];
+        }];
+    }
+    
+    return _settingService;
+}
+
+- (TBTableView *)tbTableView {
+    if (!_tbTableView) {
+        _tbTableView = [[TBTableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
+    }
+    
+    return _tbTableView;
+}
+
+- (void)loadView {
+    [super loadView];
+    __weak typeof(self) weakSelf = self;
+    
+    [self.view addSubview:self.tbTableView];
+    
+    [self.tbTableView mas_updateConstraints:^(MASConstraintMaker * make) {
+        make.top.bottom.left.right.mas_equalTo(weakSelf.view);
+    }];
+    
+    
+    [self.settingService execute:[LCmdTransfer cmd:LCmdGetSetting1 value:nil]];
+}
 
 @end
