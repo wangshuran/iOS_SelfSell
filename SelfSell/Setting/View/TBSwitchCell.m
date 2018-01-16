@@ -27,7 +27,7 @@
     [self.contentView addSubview:self.lbTitle];
     [self.contentView addSubview:self.btnSwitch];
     
-    __weak typeof(self) weakSelf = self;    
+    __weak typeof(self) weakSelf = self;
     [self.btnSwitch mas_updateConstraints:^(MASConstraintMaker * make) {
         make.right.mas_equalTo(-20.0f);
         make.height.mas_equalTo(31.0f);
@@ -40,6 +40,7 @@
         make.bottom.mas_equalTo(-10.0f);
         make.left.mas_equalTo(10.0f);
         make.right.mas_equalTo(weakSelf.btnSwitch.mas_left).offset(-10.0f);
+        make.height.mas_greaterThanOrEqualTo(30.0f);
     }];
     
     return self;
