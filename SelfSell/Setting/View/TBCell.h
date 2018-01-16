@@ -9,6 +9,10 @@
 #import <LBaseClass/LBaseClass.h>
 #import "TBModel.h"
 
+#define kTitleColor [UIColor blackColor]
+
+#define kValueColor [UIColor blackColor]
+
 #define kTitleFont [LFont bold_15]
 
 #define kValueFont [LFont thin_14]

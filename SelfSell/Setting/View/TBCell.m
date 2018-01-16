@@ -46,6 +46,7 @@
         _lbTitle.numberOfLines = 0;
         _lbTitle.font = kTitleFont;
         _lbTitle.textAlignment = NSTextAlignmentLeft;
+        _lbTitle.textColor = kTitleColor;
     }
     
     return _lbTitle;
@@ -57,6 +58,7 @@
         _lbValue.numberOfLines = 0;
         _lbValue.font = kValueFont;
         _lbValue.textAlignment = NSTextAlignmentRight;
+        _lbValue.textColor = kValueColor;
     }
     
     return _lbValue;

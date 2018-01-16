@@ -27,6 +27,7 @@
     self.delegate = self;
     self.estimatedRowHeight = 60.0f;
     self.rowHeight = UITableViewAutomaticDimension;
+    self.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self registerClass:TBCell.class forCellReuseIdentifier:NSStringFromClass(TBModel.class)];
     [self registerClass:TBArrowCell.class forCellReuseIdentifier:NSStringFromClass(TBArrowModel.class)];
     [self registerClass:TBExitCell.class forCellReuseIdentifier:NSStringFromClass(TBExitModel.class)];
