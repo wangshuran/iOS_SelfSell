@@ -1,5 +1,5 @@
 //
-//  SSettingService.h
+//  SSetting0Service.h
 //  SelfSell
 //
 //  Created by liqiang on 2017/12/25.
@@ -14,6 +14,6 @@
 #import "TBSwitchModel.h"
 #import "TBTextModel.h"
 
-@interface SSettingService : SService
+@interface SSetting0Service : SService
 
 @end

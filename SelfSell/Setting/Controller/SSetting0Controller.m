@@ -1,18 +1,18 @@
 //
-//  SSettingController.m
+//  SSetting0Controller.m
 //  SelfSell
 //
 //  Created by liqiang on 2017/12/26.
 //  Copyright © 2017年 Goopal. All rights reserved.
 //
 
-#import "SSettingController.h"
-#import "SSettingService.h"
+#import "SSetting0Controller.h"
+#import "SSetting0Service.h"
 #import "TBTableView.h"
 
-@interface SSettingController ()
+@interface SSetting0Controller ()
 
-@property (nonatomic, strong) SSettingService * settingService;
+@property (nonatomic, strong) SSetting0Service * setting0Service;
 
 @property (nonatomic, strong) TBTableView * tbTableView;
 
@@ -20,7 +20,7 @@
 
 @end
 
-@implementation SSettingController
+@implementation SSetting0Controller
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -35,11 +35,11 @@
     return SLocal(@"setting_title");
 }
 
-- (SSettingService *)settingService {
-    if (!_settingService) {
+- (SSetting0Service *)setting0Service {
+    if (!_setting0Service) {
         __weak typeof(self) weakSelf = self;
-        _settingService = [[SSettingService alloc] init];
-        [_settingService subscribeNext:LCmdGetAll nextBlock:^(LCmdTransfer * transfer) {
+        _setting0Service = [[SSetting0Service alloc] init];
+        [_setting0Service subscribeNext:LCmdGetAll nextBlock:^(LCmdTransfer * transfer) {
             NSArray<TBSectionModel *> * model = transfer.value;
             
             weakSelf.tbTableView.data = model;
@@ -47,7 +47,7 @@
         }];
     }
     
-    return _settingService;
+    return _setting0Service;
 }
 
 - (TBTableView *)tbTableView {
@@ -69,7 +69,7 @@
     }];
     
     
-    [self.settingService execute:[LCmdTransfer cmd:LCmdGetAll value:nil]];
+    [self.setting0Service execute:[LCmdTransfer cmd:LCmdGetAll value:nil]];
 }
 
 #pragma mark - Interface

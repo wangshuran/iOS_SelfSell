@@ -106,7 +106,7 @@ LSingleton_m(AppContext);
         NSDictionary * normal = [NSDictionary dictionaryWithObjectsAndKeys:[UIColor redColor], NSForegroundColorAttributeName, nil];
         NSDictionary * selected = [NSDictionary dictionaryWithObjectsAndKeys:[UIColor yellowColor], NSForegroundColorAttributeName, nil];
         
-        _accountNav = [[SNavigationController alloc] initWithRootViewController:self.settingVC];
+        _accountNav = [[SNavigationController alloc] initWithRootViewController:self.setting0VC];
         _accountNav.tabBarItem.image = [UIImage imageNamed:@"qqzoneShare"];
         _accountNav.tabBarItem.selectedImage = [UIImage imageNamed:@"qqzoneShare"];
         [_accountNav.tabBarItem setTitleTextAttributes:normal forState:UIControlStateNormal];
@@ -136,14 +136,14 @@ LSingleton_m(AppContext);
     return _activityVC;
 }
 
-- (SSettingController *)settingVC {
-    if (!_settingVC) {
-        _settingVC = [[SSettingController alloc] init];
-        _settingVC.hiddenNavbar = NO;
-        _settingVC.hiddenTabar = NO;
+- (SSetting0Controller *)setting0VC {
+    if (!_setting0VC) {
+        _setting0VC = [[SSetting0Controller alloc] init];
+        _setting0VC.hiddenNavbar = NO;
+        _setting0VC.hiddenTabar = NO;
     }
     
-    return _settingVC;
+    return _setting0VC;
 }
 
 - (SDao *)commonDao {

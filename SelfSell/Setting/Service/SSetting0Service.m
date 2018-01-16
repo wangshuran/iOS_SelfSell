@@ -1,14 +1,14 @@
 //
-//  SSettingService.m
+//  SSetting0Service.m
 //  SelfSell
 //
 //  Created by liqiang on 2017/12/25.
 //  Copyright © 2017年 Goopal. All rights reserved.
 //
 
-#import "SSettingService.h"
+#import "SSetting0Service.h"
 
-@implementation SSettingService
+@implementation SSetting0Service
 
 #pragma mark - LCmdProtocol
 
