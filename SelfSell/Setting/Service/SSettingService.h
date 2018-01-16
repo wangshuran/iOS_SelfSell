@@ -8,7 +8,7 @@
 
 #import "SService.h"
 #import "TBArrowModel.h"
-#import "TBBtnModel.h"
+#import "TBExitModel.h"
 #import "TBModel.h"
 #import "TBSectionModel.h"
 #import "TBSwitchModel.h"

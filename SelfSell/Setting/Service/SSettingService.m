@@ -45,7 +45,7 @@
         model.value = nil;
         [data addObject:model];
     }{
-        TBBtnModel * model = [[TBBtnModel alloc] init];
+        TBExitModel * model = [[TBExitModel alloc] init];
         model.title = @"退出";
         model.value = nil;
         [data addObject:model];
