@@ -16,7 +16,7 @@
 @property (nonatomic, copy) NSString * title;
 
 /**
- 值
+ 标题值
  */
 @property (nonatomic, copy) NSString * value;
 

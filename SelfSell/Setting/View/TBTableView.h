@@ -9,6 +9,8 @@
 #import <LBaseClass/LBaseClass.h>
 #import "TBSectionModel.h"
 
+#define kNoticeCellSelect @"kNoticeCellSelect"//单元格选中通知
+
 @interface TBTableView : UITableView
 
 @property (nonatomic, strong) NSArray<TBSectionModel *> * data;

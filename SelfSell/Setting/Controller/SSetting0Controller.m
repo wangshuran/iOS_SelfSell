@@ -24,10 +24,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [self push:[[NSClassFromString(@"SSetting1Controller") alloc] init]];
-    });
 }
 
 - (void)didReceiveMemoryWarning {
@@ -77,7 +73,7 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];    
+    [super viewWillAppear:animated];
 }
 
 #pragma mark - LInitProtocol
@@ -85,6 +81,26 @@
 - (void)initialize {
     [super initialize];
     
+    SAddObsver(noticeCellSelect:, kNoticeCellSelect)
+}
+
+#pragma mark - NSNotification
+
+- (void)noticeCellSelect:(NSNotification *)notification {
+    TBModel * model = notification.object;
+    if (!model) {
+        return;
+    }
+    
+    if ([model.uid isEqualToString:@"wodetuijianma"]) {
+        
+    }else if ([model.uid isEqualToString:@"gugeyanzheng"]) {
+        
+    }else if ([model.uid isEqualToString:@"shezhi"]) {
+        [self push:[[NSClassFromString(@"SSetting1Controller") alloc] init]];
+    }else if ([model.uid isEqualToString:@"tuichu"]) {
+        
+    }
 }
 
 @end

@@ -30,9 +30,8 @@
         make.bottom.mas_equalTo(-10.0f);
         make.left.mas_equalTo(10.0f);
         make.right.mas_equalTo(-10.0f);
-        make.height.mas_greaterThanOrEqualTo(30.0f);
+        make.height.mas_greaterThanOrEqualTo(40.0f);
     }];
-    
     
     return self;
 }

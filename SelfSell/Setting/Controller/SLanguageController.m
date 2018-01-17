@@ -1,24 +1,24 @@
 //
-//  SSetting1Controller.m
+//  SLanguageController.m
 //  SelfSell
 //
-//  Created by liqiang on 2018/1/16.
+//  Created by liqiang on 2018/1/17.
 //  Copyright © 2018年 Goopal. All rights reserved.
 //
 
-#import "SSetting1Controller.h"
-#import "SSettingService.h"
+#import "SLanguageController.h"
+#import "SLanguageService.h"
 #import "TBTableView.h"
 
-@interface SSetting1Controller ()
+@interface SLanguageController ()
 
-@property (nonatomic, strong) SSettingService * settingService;
+@property (nonatomic, strong) SLanguageService * languageService;
 
 @property (nonatomic, strong) TBTableView * tbTableView;
 
 @end
 
-@implementation SSetting1Controller
+@implementation SLanguageController
 
 #pragma mark - Interface
 
@@ -33,14 +33,14 @@
 }
 
 - (NSString *)title {
-    return SLocal(@"setting1_title");
+    return SLocal(@"language_title");
 }
 
-- (SSettingService *)settingService {
-    if (!_settingService) {
+- (SLanguageService *)languageService {
+    if (!_languageService) {
         __weak typeof(self) weakSelf = self;
-        _settingService = [[SSettingService alloc] init];
-        [_settingService subscribeNext:LCmdGetSetting1 nextBlock:^(LCmdTransfer * transfer) {
+        _languageService = [[SLanguageService alloc] init];
+        [_languageService subscribeNext:LCmdGetAll nextBlock:^(LCmdTransfer * transfer) {
             NSArray<TBSectionModel *> * model = transfer.value;
             
             weakSelf.tbTableView.data = model;
@@ -48,7 +48,7 @@
         }];
     }
     
-    return _settingService;
+    return _languageService;
 }
 
 - (TBTableView *)tbTableView {
@@ -70,7 +70,11 @@
     }];
     
     
-    [self.settingService execute:[LCmdTransfer cmd:LCmdGetSetting1 value:nil]];
+    [self.languageService execute:[LCmdTransfer cmd:LCmdGetAll value:nil]];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
 }
 
 #pragma mark - LInitProtocol
@@ -81,7 +85,6 @@
     SAddObsver(noticeCellSelect:, kNoticeCellSelect)
 }
 
-
 #pragma mark - NSNotification
 
 - (void)noticeCellSelect:(NSNotification *)notification {
@@ -90,14 +93,10 @@
         return;
     }
     
-    if ([model.uid isEqualToString:@"genggaimima"]) {
-        [self push:[[NSClassFromString(@"SUpdatePWDController") alloc] init]];
-    }else if ([model.uid isEqualToString:@"zhiwen"]) {
+    if ([model.uid isEqualToString:@"wodetuijianma"]) {
         
-    }else if ([model.uid isEqualToString:@"yuyan"]) {
-        [self push:[[NSClassFromString(@"SLanguageController") alloc] init]];
-    }else if ([model.uid isEqualToString:@"guanyu"]) {
-        [self push:[[NSClassFromString(@"SAboutController") alloc] init]];
+    }else if ([model.uid isEqualToString:@"gugeyanzheng"]) {
+        
     }
 }
 

@@ -9,6 +9,7 @@
 #import "TBTableView.h"
 #import "TBArrowCell.h"
 #import "TBCell.h"
+#import "TBCheckCell.h"
 #import "TBExitCell.h"
 #import "TBSwitchCell.h"
 #import "TBTextCell.h"
@@ -28,8 +29,9 @@
     self.estimatedRowHeight = 60.0f;
     self.rowHeight = UITableViewAutomaticDimension;
     self.separatorStyle = UITableViewCellSeparatorStyleNone;
-    [self registerClass:TBCell.class forCellReuseIdentifier:NSStringFromClass(TBModel.class)];
     [self registerClass:TBArrowCell.class forCellReuseIdentifier:NSStringFromClass(TBArrowModel.class)];
+    [self registerClass:TBCell.class forCellReuseIdentifier:NSStringFromClass(TBModel.class)];
+    [self registerClass:TBCheckCell.class forCellReuseIdentifier:NSStringFromClass(TBCheckModel.class)];    
     [self registerClass:TBExitCell.class forCellReuseIdentifier:NSStringFromClass(TBExitModel.class)];
     [self registerClass:TBSwitchCell.class forCellReuseIdentifier:NSStringFromClass(TBSwitchModel.class)];
     [self registerClass:TBTextCell.class forCellReuseIdentifier:NSStringFromClass(TBTextModel.class)];
@@ -50,6 +52,16 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
+    if (self.data.count <= indexPath.section) {
+        return;
+    }
+    TBSectionModel * section =[self.data objectAtIndex:indexPath.section];
+    if (section.items.count <= indexPath.row) {
+        return;
+    }
+    
+    TBModel * model = [section.items objectAtIndex:indexPath.row];
+    [SNotificationCenter postNotificationName:kNoticeCellSelect object:model];
 }
 
 #pragma mark - UITableViewDataSource
