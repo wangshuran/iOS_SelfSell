@@ -16,10 +16,13 @@
 - (NSArray *)getAppSupportLanguage;
 
 /**
- 获取APP默认语言
+ 获取APP当前语言
  */
-- (NSString *)getAppDefaultLanguage;
+- (NSString *)getAppCurrentLanguage;
 
-
+/**
+ 设置当前语言
+ */
+- (BOOL)setAppCurrentLanguage:(NSString *)languageCode;
 
 @end

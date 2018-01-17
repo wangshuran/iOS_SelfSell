@@ -10,6 +10,7 @@
 #import "SFundController.h"
 #import "SActivityController.h"
 #import "SSetting0Controller.h"
+#import "SLanguage.h"
 
 /**
  上下文
@@ -80,5 +81,10 @@ LSingleton_h(AppContext);
  开启监听
  */
 - (void)startMonitoring;
+
+/**
+ 重新加载根控制器
+ */
+- (void)reloadRootVC;
 
 @end

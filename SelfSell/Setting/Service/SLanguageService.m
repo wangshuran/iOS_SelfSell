@@ -39,6 +39,7 @@
         TBCheckModel * model = [[TBCheckModel alloc] init];
         model.uid = code;
         model.title = value;
+        model.code = code;
         model.isCheck = ischeck.boolValue;
         [data addObject:model];
     }

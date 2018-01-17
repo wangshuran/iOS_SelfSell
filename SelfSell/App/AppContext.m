@@ -8,7 +8,6 @@
 
 #import "AppContext.h"
 #import <LBaseClass/NSString+MD5.h>
-#import "SLanguage.h"
 
 @interface AppContext()
 
@@ -53,15 +52,19 @@ LSingleton_m(AppContext);
     SAddObsver(noticeFinishLogout:, kNoticeFinishLogout);
     SAddObsver(noticeShowVersionCheck:, kNoticeShowVersionCheck);
     SAddObsver(noticeShowSecurityCheck:, kNoticeShowSecurityCheck);
+    SAddObsver(noticeSwitchLanguage:, kNoticeSwitchLanguage);
     
 #pragma clang diagnostic pop
 }
 
+- (void)reloadRootVC {
+    _rootVC.viewControllers = [NSArray arrayWithObjects:self.activityNav, self.fundNav, self.accountNav, nil];
+}
 
 - (STabBarController *)rootVC {
     if (!_rootVC) {
         _rootVC = [[NSClassFromString(@"STabBarController") alloc] init];
-        _rootVC.viewControllers = [NSArray arrayWithObjects:self.activityNav, self.fundNav, self.accountNav, nil];
+        [self reloadRootVC];
         _rootVC.tabBar.tintColor = [UIColor colorWithRed:1.0f / 255.0f green:199.0f / 255.0f blue:209.0f / 255.0f alpha:1.0f];
         
         _rootVC.selectedViewController = self.accountNav;
@@ -160,7 +163,7 @@ LSingleton_m(AppContext);
 - (void)initialize {
     [super initialize];
     
-    self.languageCode = [[[SLanguage alloc] init] getAppDefaultLanguage];
+    self.languageCode = [[[SLanguage alloc] init] getAppCurrentLanguage];
     self.netStatus = AFNetworkReachabilityStatusUnknown;
     self.loginType = LoginTypeNone;
     self.accountModel = nil;

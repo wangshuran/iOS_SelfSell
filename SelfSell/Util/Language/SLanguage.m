@@ -19,7 +19,7 @@
     return [NSObject mj_objectArrayWithFile:path];
 }
 
-- (NSString *)getAppDefaultLanguage {
+- (NSString *)getAppCurrentLanguage {
     NSArray * languages = [self getAppSupportLanguage];
     for (NSMutableDictionary * language in languages) {
         NSNumber * ischeck =  [language objectForKey:@"ischeck"];
@@ -29,6 +29,24 @@
     }
     
     return nil;
+}
+
+- (BOOL)setAppCurrentLanguage:(NSString *)languageCode {
+    BOOL isDefault = NO;
+    NSArray * languages = [self getAppSupportLanguage];
+    for (NSMutableDictionary * language in languages) {
+        [language setObject:[NSNumber numberWithBool:NO] forKey:@"ischeck"];
+        if ([[language objectForKey:@"code"] isEqualToString:languageCode]) {
+            [language setObject:[NSNumber numberWithBool:YES] forKey:@"ischeck"];
+            isDefault = YES;
+        }
+    }
+    if (isDefault) {
+        NSString * path = [[LFile libraryPath] stringByAppendingPathComponent:@"SupportLanguage.plist"];
+        isDefault = [languages writeToFile:path atomically:YES];
+    }
+    
+    return isDefault;
 }
 
 #pragma mark - Private

@@ -206,4 +206,21 @@
     
 }
 
+/**
+ 切换语言通知
+ */
+- (void)noticeSwitchLanguage:(NSNotification *)notification {
+    self.languageCode = [[[SLanguage alloc] init] getAppCurrentLanguage];
+    
+    self.activityNav = nil;
+    self.fundNav = nil;
+    self.accountNav = nil;
+    
+    self.activityVC = nil;
+    self.fundVC = nil;
+    self.setting0VC = nil;
+    
+    [self reloadRootVC];
+}
+
 @end

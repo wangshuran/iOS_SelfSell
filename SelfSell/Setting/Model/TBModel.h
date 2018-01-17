@@ -20,4 +20,9 @@
  */
 @property (nonatomic, copy) NSString * value;
 
+/**
+ 代码值
+ */
+@property (nonatomic, copy) NSString * code;
+
 @end
