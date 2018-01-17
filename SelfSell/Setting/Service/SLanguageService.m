@@ -7,6 +7,7 @@
 //
 
 #import "SLanguageService.h"
+#import "SLanguage.h"
 
 @implementation SLanguageService
 
@@ -26,7 +27,8 @@
 #pragma mark - Private
 
 - (NSArray<NSArray<TBModel *> *> *)getAll {
-    NSArray * languages = [[AppContext sharedAppContext] getAppSupportLanguage];
+    SLanguage * language = [[SLanguage alloc] init];
+    NSArray * languages = [language getAppSupportLanguage];
     NSMutableArray *data = [[NSMutableArray alloc] initWithCapacity:languages.count];
     for (NSDictionary * language in languages) {
         NSNumber * index = [language objectForKey:@"index"];

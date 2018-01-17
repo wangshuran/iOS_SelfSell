@@ -3,6 +3,15 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "-[NSObject(MJKeyValue) mj_JSONData]:NSObject+MJKeyValue.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[LViewController viewWillAppear:]:LViewController.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[TBCheckCell setModel:]:TBCheckCell.m">
+      </ContextState>
+      <ContextState
          contextName = "-[SSettingController test1]:SSettingController.m">
          <PersistentStrings>
             <PersistentString
@@ -11,15 +20,15 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "__38-[SLanguageController languageService]_block_invoke:SLanguageController.m">
+      </ContextState>
+      <ContextState
          contextName = "-[SSettingController tbTableView]:SSettingController.m">
          <PersistentStrings>
             <PersistentString
                value = "_tbTableView">
             </PersistentString>
          </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "-[NSObject(MJKeyValue) mj_JSONData]:NSObject+MJKeyValue.m">
       </ContextState>
    </ContextStates>
 </VariablesViewState>

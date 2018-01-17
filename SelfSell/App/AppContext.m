@@ -8,6 +8,7 @@
 
 #import "AppContext.h"
 #import <LBaseClass/NSString+MD5.h>
+#import "SLanguage.h"
 
 @interface AppContext()
 
@@ -20,7 +21,8 @@
 LSingleton_m(AppContext);
 
 - (void)setLanguageCode:(NSString *)languageCode {
-    NSArray * languages = [self getAppSupportLanguage];
+    SLanguage * language = [[SLanguage alloc] init];
+    NSArray * languages = [language getAppSupportLanguage];
     
     for (NSDictionary * language in languages) {
         if ([languageCode hasPrefix:[language objectForKey:@"code"]]) {
@@ -55,9 +57,6 @@ LSingleton_m(AppContext);
 #pragma clang diagnostic pop
 }
 
-- (NSArray *)getAppSupportLanguage {
-    return [NSObject mj_objectArrayWithFilename:@"SupportLanguage.plist"];
-}
 
 - (STabBarController *)rootVC {
     if (!_rootVC) {
@@ -161,7 +160,7 @@ LSingleton_m(AppContext);
 - (void)initialize {
     [super initialize];
     
-    self.languageCode = [LLanguage getOSDefaultLanguage];
+    self.languageCode = [[[SLanguage alloc] init] getAppDefaultLanguage];
     self.netStatus = AFNetworkReachabilityStatusUnknown;
     self.loginType = LoginTypeNone;
     self.accountModel = nil;

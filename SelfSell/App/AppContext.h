@@ -81,9 +81,4 @@ LSingleton_h(AppContext);
  */
 - (void)startMonitoring;
 
-/**
- 获取支持语言
- */
-- (NSArray *)getAppSupportLanguage;
-
 @end

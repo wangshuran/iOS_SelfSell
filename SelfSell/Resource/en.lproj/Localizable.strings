@@ -6,11 +6,19 @@
   Copyright © 2017年 Goopal. All rights reserved.
 */
 
-security_touch_unlocktitle = "通过验证指纹解锁";
-security_touch_pwdunlock = "密码验证";
+security_touch_unlocktitle = "security_touch_unlocktitle";
+security_touch_pwdunlock = "security_touch_pwdunlock";
 
-activity_title = "活动";
+activity_title = "activity_title";
 
-fund_title = "资金";
+fund_title = "fund_title";
 
-setting0_title = "账户";
+setting0_title = "setting0_title";
+
+setting1_title = "setting1_title";
+
+about_title = "about_title";
+
+language_title = "language_title";
+
+updatepwd_title = "updatepwd_title";
