@@ -15,4 +15,8 @@
 
 @property (nonatomic, strong) NSArray<TBSectionModel *> * data;
 
+@property (nonatomic, assign) BOOL isEnableHeader;
+
+@property (nonatomic, assign) BOOL isEnableFooter;
+
 @end

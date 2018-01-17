@@ -155,6 +155,7 @@ LSingleton_m(AppContext);
     
     return _commonDao;
 }
+
 #pragma mark - LInitProtocol
 
 - (void)initialize {
@@ -171,7 +172,6 @@ LSingleton_m(AppContext);
 #else
     self.host = @"http://www.suizhi.com/DRM";
 #endif
-    
 }
 
 @end

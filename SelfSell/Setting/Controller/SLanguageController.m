@@ -54,6 +54,8 @@
 - (TBTableView *)tbTableView {
     if (!_tbTableView) {
         _tbTableView = [[TBTableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
+        _tbTableView.isEnableFooter = NO;
+        _tbTableView.isEnableHeader = NO;
     }
     
     return _tbTableView;
@@ -88,16 +90,22 @@
 #pragma mark - NSNotification
 
 - (void)noticeCellSelect:(NSNotification *)notification {
-    TBModel * model = notification.object;
+    TBCheckModel * model = notification.object;
     if (!model) {
         return;
     }
     
-    if ([model.uid isEqualToString:@"wodetuijianma"]) {
-        
-    }else if ([model.uid isEqualToString:@"gugeyanzheng"]) {
-        
+    NSArray<TBSectionModel *> * sections = self.tbTableView.data;
+    for (TBSectionModel * section in sections) {
+        for (TBCheckModel * item in section.items) {
+            item.isCheck = [model.uid isEqualToString:item.uid];
+        }
     }
+    
+    __weak typeof(self) weakSelf = self;
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.2f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [weakSelf.tbTableView reloadData];
+    });
 }
 
 @end

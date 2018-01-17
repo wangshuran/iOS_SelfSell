@@ -24,6 +24,8 @@
 
 - (instancetype)initWithFrame:(CGRect)frame style:(UITableViewStyle)style {
     self = [super initWithFrame:frame style:style];
+    self.isEnableHeader = YES;
+    self.isEnableFooter = YES;
     self.dataSource = self;
     self.delegate = self;
     self.estimatedRowHeight = 60.0f;
@@ -31,20 +33,38 @@
     self.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self registerClass:TBArrowCell.class forCellReuseIdentifier:NSStringFromClass(TBArrowModel.class)];
     [self registerClass:TBCell.class forCellReuseIdentifier:NSStringFromClass(TBModel.class)];
-    [self registerClass:TBCheckCell.class forCellReuseIdentifier:NSStringFromClass(TBCheckModel.class)];    
+    [self registerClass:TBCheckCell.class forCellReuseIdentifier:NSStringFromClass(TBCheckModel.class)];
     [self registerClass:TBExitCell.class forCellReuseIdentifier:NSStringFromClass(TBExitModel.class)];
     [self registerClass:TBSwitchCell.class forCellReuseIdentifier:NSStringFromClass(TBSwitchModel.class)];
     [self registerClass:TBTextCell.class forCellReuseIdentifier:NSStringFromClass(TBTextModel.class)];
     
-    __weak typeof(self) weakSelf = self;
-    self.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
-        [weakSelf.mj_header endRefreshing];
-    }];
-    self.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingBlock:^{
-        [weakSelf.mj_footer endRefreshing];
-    }];
-    
     return self;
+}
+
+- (void)setIsEnableHeader:(BOOL)isEnableHeader {
+    _isEnableHeader = isEnableHeader;
+    
+    if (_isEnableHeader) {
+        __weak typeof(self) weakSelf = self;
+        self.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+            [weakSelf.mj_header endRefreshing];
+        }];
+    }else {
+        self.mj_header = nil;
+    }
+}
+
+- (void)setIsEnableFooter:(BOOL)isEnableFooter {
+    _isEnableFooter = isEnableFooter;
+    
+    if (_isEnableFooter) {
+        __weak typeof(self) weakSelf = self;
+        self.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingBlock:^{
+            [weakSelf.mj_footer endRefreshing];
+        }];
+    }else {
+        self.mj_footer = nil;
+    }
 }
 
 #pragma mark - UITableViewDelegate

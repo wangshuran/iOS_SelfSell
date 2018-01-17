@@ -61,7 +61,8 @@
         _btnExit.layer.borderColor = [UIColor grayColor].CGColor;
         _btnExit.layer.borderWidth = 0.5f;
         _btnExit.titleLabel.font = kTitleFont;
-        [_btnExit setTitleColor:kTitleColor forState:UIControlStateNormal];
+        [_btnExit setTitleColor:kTitleNormalColor forState:UIControlStateNormal];
+        [_btnExit setTitleColor:kTitleSelectColor forState:UIControlStateHighlighted];
     }
     
     return _btnExit;

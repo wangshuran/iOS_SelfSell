@@ -9,7 +9,9 @@
 #import <LBaseClass/LBaseClass.h>
 #import "TBModel.h"
 
-#define kTitleColor [UIColor blackColor]
+#define kTitleNormalColor [UIColor colorWithRed:0.0f green:0.0f blue:0.0f alpha:1.0f]
+
+#define kTitleSelectColor [UIColor colorWithRed:0.0f green:0.0f blue:0.0f alpha:0.4f]
 
 #define kValueColor [UIColor blackColor]
 

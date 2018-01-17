@@ -29,14 +29,15 @@
     NSArray * languages = [[AppContext sharedAppContext] getAppSupportLanguage];
     NSMutableArray *data = [[NSMutableArray alloc] initWithCapacity:languages.count];
     for (NSDictionary * language in languages) {
-        id index = [language objectForKey:@"index"];
+        NSNumber * index = [language objectForKey:@"index"];
         NSString * code = [language objectForKey:@"code"];
         NSString * value = [language objectForKey:@"value"];
+        NSNumber * ischeck = [language objectForKey:@"ischeck"];
         
         TBCheckModel * model = [[TBCheckModel alloc] init];
         model.uid = code;
         model.title = value;
-        model.isCheck = YES;
+        model.isCheck = ischeck.boolValue;
         [data addObject:model];
     }
     
