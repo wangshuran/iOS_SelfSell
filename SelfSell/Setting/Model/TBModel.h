@@ -25,4 +25,9 @@
  */
 @property (nonatomic, copy) NSString * code;
 
+/**
+ 目的VC类名
+ */
+@property (nonatomic, assign) Class destVCClass;
+
 @end

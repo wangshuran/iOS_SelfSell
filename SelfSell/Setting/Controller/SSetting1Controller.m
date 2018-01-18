@@ -92,15 +92,12 @@
         return;
     }
     
-    if ([model.uid isEqualToString:@"genggaimima"]) {
-        [self push:[[NSClassFromString(@"SUpdatePWDController") alloc] init]];
-    }else if ([model.uid isEqualToString:@"zhiwen"]) {
+    if (model.destVCClass) {
+        [self push:[[model.destVCClass alloc] init]];
         
-    }else if ([model.uid isEqualToString:@"yuyan"]) {
-        [self push:[[NSClassFromString(@"SLanguageController") alloc] init]];
-    }else if ([model.uid isEqualToString:@"guanyu"]) {
-        [self push:[[NSClassFromString(@"SAboutController") alloc] init]];
+        return;
     }
+    
 }
 
 @end

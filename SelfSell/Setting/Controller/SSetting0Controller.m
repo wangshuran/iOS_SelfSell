@@ -64,12 +64,10 @@
     [super loadView];
     __weak typeof(self) weakSelf = self;
     
-    [self.view addSubview:self.tbTableView];
-    
+    [self.view addSubview:self.tbTableView];    
     [self.tbTableView mas_updateConstraints:^(MASConstraintMaker * make) {
         make.top.bottom.left.right.mas_equalTo(weakSelf.view);
     }];
-    
     
     [self.settingService execute:[LCmdTransfer cmd:LCmdGetSetting0 value:nil]];
 }
@@ -94,14 +92,10 @@
         return;
     }
     
-    if ([model.uid isEqualToString:@"wodetuijianma"]) {
+    if (model.destVCClass) {
+        [self push:[[model.destVCClass alloc] init]];
         
-    }else if ([model.uid isEqualToString:@"gugeyanzheng"]) {
-        
-    }else if ([model.uid isEqualToString:@"shezhi"]) {
-        [self push:[[NSClassFromString(@"SSetting1Controller") alloc] init]];
-    }else if ([model.uid isEqualToString:@"tuichu"]) {
-        
+        return;
     }
 }
 

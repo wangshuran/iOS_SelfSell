@@ -7,7 +7,11 @@
 //
 
 #import "SSettingService.h"
-
+#import "SGoogleValidateController.h"
+#import "SSetting1Controller.h"
+#import "SUpdatePWDController.h"
+#import "SLanguageController.h"
+#import "SAboutController.h"
 
 LCmd * const LCmdGetSetting0 = @"LCmdGetSetting0";
 LCmd * const LCmdGetSetting1 = @"LCmdGetSetting1";
@@ -45,11 +49,13 @@ LCmd * const LCmdGetSetting1 = @"LCmdGetSetting1";
         model.uid = @"gugeyanzheng";
         model.title = @"谷歌验证";
         model.value = @"已开启";
+        model.destVCClass = SGoogleValidateController.class;
         [data addObject:model];
     }{
         TBArrowModel * model = [[TBArrowModel alloc] init];
         model.uid = @"shezhi";
         model.title = @"设置";
+        model.destVCClass = SSetting1Controller.class;
         [data addObject:model];
     }{
         TBExitModel * model = [[TBExitModel alloc] init];
@@ -70,6 +76,7 @@ LCmd * const LCmdGetSetting1 = @"LCmdGetSetting1";
         TBArrowModel * model = [[TBArrowModel alloc] init];
         model.uid = @"genggaimima";
         model.title = @"更改密码";
+        model.destVCClass = SUpdatePWDController.class;
         [data addObject:model];
     }{
         TBSwitchModel * model = [[TBSwitchModel alloc] init];
@@ -81,12 +88,14 @@ LCmd * const LCmdGetSetting1 = @"LCmdGetSetting1";
         TBArrowModel * model = [[TBArrowModel alloc] init];
         model.uid = @"yuyan";
         model.title = @"语言";
+        model.destVCClass = SLanguageController.class;
         [data addObject:model];
     }{
         TBArrowModel * model = [[TBArrowModel alloc] init];
         model.uid = @"guanyu";
         model.title = @"关于";
         model.value = [NSString stringWithFormat:@"%@.%@", [LAppInfo CFBundleShortVersionString], [LAppInfo CFBundleVersion]];
+        model.destVCClass = SAboutController.class;
         [data addObject:model];
     }
     
