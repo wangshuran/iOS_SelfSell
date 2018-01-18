@@ -7,8 +7,8 @@
 //
 
 #import "AppDelegate.h"
-#import "SCommonModel.h"
 #import "SLoginByAccountRequest.h"
+#import "SWelcomeController.h"
 
 @interface AppDelegate ()
 
@@ -29,26 +29,13 @@
         [AppContext sharedAppContext].netStatus = status;
     }];
     [[AppContext sharedAppContext] startMonitoring];//自定义监听
+    [self initDB];
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.rootViewController = [AppContext sharedAppContext].rootVC;
     [self.window makeKeyAndVisible];
     
     
-    {
-        SCommonModel * model = [[SCommonModel alloc] init];
-        model.key = [NSUUID UUID].UUIDString;
-        model.value = [NSUUID UUID].UUIDString;
-        model.data0 = [NSArray arrayWithObjects:[[SModel alloc] init], [[SModel alloc] init], [[SModel alloc] init], nil];
-        BOOL status = [[AppContext sharedAppContext].commonDao isTableExists:[[SCommonModel alloc] init]];
-        status = [[AppContext sharedAppContext].commonDao dropTable:[[SCommonModel alloc] init]];
-        status = [[AppContext sharedAppContext].commonDao createTable:[[SCommonModel alloc] init]];
-        status = [[AppContext sharedAppContext].commonDao deleteAllObjectsFromTable:[[SCommonModel alloc] init]];
-        status = [[AppContext sharedAppContext].commonDao insertObject:model];
-        NSArray * data = [[AppContext sharedAppContext].commonDao getAllObjectsFromTable:[[SCommonModel alloc] init]];
-        
-        status = NO;
-    }
     
     //SLoginByAccountRequest * request = [[SLoginByAccountRequest alloc] init];
     ////TODO，属性赋值
@@ -82,7 +69,7 @@
     //    SPostNotification(kNoticeShowSecurityCheck);//安全检查通知
     //}];
     
-    
+    [self.window.rootViewController present:[[SWelcomeController alloc] init] animated:NO completion:nil];
     
     return YES;
 }
@@ -117,6 +104,35 @@
 
 - (void)dealloc {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+#pragma mark - Private
+
+
+/**
+ 初始化数据库
+ */
+- (void)initDB {
+//    {
+//        SCommonModel * model = [[SCommonModel alloc] init];
+//        model.key = [NSUUID UUID].UUIDString;
+//        model.value = [NSUUID UUID].UUIDString;
+//        model.data0 = [NSArray arrayWithObjects:[[SModel alloc] init], [[SModel alloc] init], [[SModel alloc] init], nil];
+//        BOOL status = [[AppContext sharedAppContext].commonDao isTableExists:[[SCommonModel alloc] init]];
+//        status = [[AppContext sharedAppContext].commonDao dropTable:[[SCommonModel alloc] init]];
+//        status = [[AppContext sharedAppContext].commonDao createTable:[[SCommonModel alloc] init]];
+//        status = [[AppContext sharedAppContext].commonDao deleteAllObjectsFromTable:[[SCommonModel alloc] init]];
+//        status = [[AppContext sharedAppContext].commonDao insertObject:model];
+//        NSArray * data = [[AppContext sharedAppContext].commonDao getAllObjectsFromTable:[[SCommonModel alloc] init]];
+//        
+//        status = NO;
+//    }
+    
+    [[AppContext sharedAppContext].commonDao createTable:[[SCommonModel alloc] init]];
+    
+    
+
+
 }
 
 @end

@@ -15,7 +15,7 @@
 + (NSString *)getOSDefaultLanguage {
     NSArray * appLanguages = [NSUserDefaults.standardUserDefaults objectForKey:@"AppleLanguages"];
     
-    return appLanguages.count > 0 ? [appLanguages objectAtIndex:0] : nil;
+    return appLanguages.firstObject;
 }
 
 + (NSArray<NSString *> *)getOSSupportLanguage {

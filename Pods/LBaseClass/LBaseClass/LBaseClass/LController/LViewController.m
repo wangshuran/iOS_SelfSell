@@ -69,7 +69,10 @@
 
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
-    
+}
+
+- (BOOL)prefersStatusBarHidden {
+    return NO;
 }
 
 - (void)setHiddenNavbar:(BOOL)hiddenNavbar {

@@ -83,8 +83,8 @@
     }
     if (!isDefault) {
         for (NSMutableDictionary * language in languages) {
-            //if ([[language objectForKey:@"code"] isEqualToString:@"zh-Hans"]) {
-            if ([[language objectForKey:@"code"] isEqualToString:@"en"]) {
+            if ([[language objectForKey:@"code"] isEqualToString:@"zh-Hans"]) {
+            //if ([[language objectForKey:@"code"] isEqualToString:@"en"]) {
                 [language setObject:[NSNumber numberWithBool:YES] forKey:@"ischeck"];
                 
                 break;

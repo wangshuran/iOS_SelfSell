@@ -53,6 +53,8 @@
 - (TBTableView *)tbTableView {
     if (!_tbTableView) {
         _tbTableView = [[TBTableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
+        _tbTableView.isEnableHeader = NO;
+        _tbTableView.isEnableFooter = NO;
     }
     
     return _tbTableView;

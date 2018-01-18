@@ -83,7 +83,7 @@
 		D5E610C8200884AD003C847A /* STouchID.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E610C7200884AD003C847A /* STouchID.m */; };
 		D5E610D320089528003C847A /* SFundController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E610D220089528003C847A /* SFundController.m */; };
 		D5E610D620089546003C847A /* SActivityController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E610D520089546003C847A /* SActivityController.m */; };
-		D5E610DE2008A669003C847A /* SWelcomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E610DD2008A669003C847A /* SWelcomeController.m */; };
+		D5E610DE2008A669003C847A /* SWelcomeController.mm in Sources */ = {isa = PBXBuildFile; fileRef = D5E610DD2008A669003C847A /* SWelcomeController.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -266,7 +266,7 @@
 		D5E610D420089546003C847A /* SActivityController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SActivityController.h; sourceTree = "<group>"; };
 		D5E610D520089546003C847A /* SActivityController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SActivityController.m; sourceTree = "<group>"; };
 		D5E610DC2008A669003C847A /* SWelcomeController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWelcomeController.h; sourceTree = "<group>"; };
-		D5E610DD2008A669003C847A /* SWelcomeController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWelcomeController.m; sourceTree = "<group>"; };
+		D5E610DD2008A669003C847A /* SWelcomeController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = SWelcomeController.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1020,7 +1020,7 @@
 			isa = PBXGroup;
 			children = (
 				D5E610DC2008A669003C847A /* SWelcomeController.h */,
-				D5E610DD2008A669003C847A /* SWelcomeController.m */,
+				D5E610DD2008A669003C847A /* SWelcomeController.mm */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1285,7 +1285,7 @@
 				D5029806200C57B7008375F9 /* TBExitModel.m in Sources */,
 				D548950D1FF2536D00F2019B /* SNetwork.m in Sources */,
 				D54894621FF0938400F2019B /* test002.m in Sources */,
-				D5E610DE2008A669003C847A /* SWelcomeController.m in Sources */,
+				D5E610DE2008A669003C847A /* SWelcomeController.mm in Sources */,
 				D5029816200C5BE7008375F9 /* TBArrowCell.m in Sources */,
 				D5709CBD200E081B007BBD4C /* SSetting1Controller.m in Sources */,
 				D5957AE920073B9000F6EE60 /* STabBarController.m in Sources */,
