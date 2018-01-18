@@ -18,6 +18,5 @@ WCDB_PROPERTY(displayOrder)
 WCDB_PROPERTY(version)
 WCDB_PROPERTY(key)
 WCDB_PROPERTY(value)
-WCDB_PROPERTY(data)
 
 @end
