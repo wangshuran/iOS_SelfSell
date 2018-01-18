@@ -40,7 +40,7 @@
         [[AppContext sharedAppContext].commonDao insertObject:model];
     }
     
-    self.numberOfPages = 5;
+    self.numberOfPages = 3;
     self = [super init];
     
     return self;
@@ -84,6 +84,7 @@
         _pageControl.hidesForSinglePage = YES;
         _pageControl.userInteractionEnabled = NO;
         _pageControl.currentPage = 0;
+        _pageControl.pageIndicatorTintColor = [UIColor blackColor];
         _pageControl.currentPageIndicatorTintColor = [UIColor colorWithRed:66.0f / 255.0f green:179.0f / 255.0f blue:227.0f / 255.0f alpha:1.0f];
         _pageControl.numberOfPages = self.numberOfPages;
     }
