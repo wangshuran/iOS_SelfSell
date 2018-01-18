@@ -19,6 +19,11 @@
 - (NSString *)getCurrentAccountSpacePath;
 
 /**
+ 获取通用用户空间路径
+ */
+- (NSString *)getCommonAccountSpacePath;
+
+/**
  更新用户空间的数据
  */
 - (void)updateCurrentAccountSpaceInfo:(id)value key:(NSString *)key;

@@ -10,8 +10,6 @@
 
 @interface TBSwitchCell()
 
-@property (nonatomic, strong) UISwitch * btnSwitch;
-
 @end
 
 @implementation TBSwitchCell
@@ -21,7 +19,6 @@
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     self.selectionStyle = UITableViewCellSelectionStyleNone;
-    
     [self.contentView addSubview:self.btnSwitch];
     
     __weak typeof(self) weakSelf = self;
@@ -73,12 +70,20 @@
         _btnSwitch = [[UISwitch alloc] init];
         _btnSwitch.onTintColor = [UIColor greenColor];
         _btnSwitch.tintColor = [UIColor grayColor];
-        [[_btnSwitch rac_newOnChannel] subscribeNext:^(NSNumber * x) {
-            BOOL value = x.boolValue;
-        }];
+        //[[_btnSwitch rac_newOnChannel] subscribeNext:^(NSNumber * x) {
+        //[SNotificationCenter postNotificationName:kNoticeCellEvent object:weakSelf];
+        //}];
+        [_btnSwitch addTarget:self action:@selector(updateSwitch:) forControlEvents:UIControlEventTouchUpInside];
     }
     
     return _btnSwitch;
+}
+
+#pragma mark - Private
+
+- (void)updateSwitch:(UISwitch *)sender {
+    __weak typeof(self) weakSelf = self;
+    [SNotificationCenter postNotificationName:kNoticeCellEvent object:weakSelf];
 }
 
 @end

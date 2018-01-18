@@ -17,8 +17,6 @@
     [self.contentView addSubview:self.lbTitle];
     [self.contentView addSubview:self.lbValue];
     
-    //self.contentView.backgroundColor = [UIColor randomColor];
-    
     return self;
 }
 

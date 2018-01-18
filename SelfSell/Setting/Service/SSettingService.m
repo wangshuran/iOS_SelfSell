@@ -40,26 +40,26 @@ LCmd * const LCmdGetSetting1 = @"LCmdGetSetting1";
     NSMutableArray *data = [[NSMutableArray alloc] init];
     {
         TBArrowModel * model = [[TBArrowModel alloc] init];
-        model.uid = @"wodetuijianma";
+        model.uid = kwodetuijianma;
         model.title = @"我的推荐码";
         model.value = @"677844";
         [data addObject:model];
     }{
         TBArrowModel * model = [[TBArrowModel alloc] init];
-        model.uid = @"gugeyanzheng";
+        model.uid = kgugeyanzheng;
         model.title = @"谷歌验证";
         model.value = @"已开启";
         model.destVCClass = SGoogleValidateController.class;
         [data addObject:model];
     }{
         TBArrowModel * model = [[TBArrowModel alloc] init];
-        model.uid = @"shezhi";
+        model.uid = kshezhi;
         model.title = @"设置";
         model.destVCClass = SSetting1Controller.class;
         [data addObject:model];
     }{
         TBExitModel * model = [[TBExitModel alloc] init];
-        model.uid = @"tuichu";
+        model.uid = ktuichu;
         model.title = @"退出";
         [data addObject:model];
     }
@@ -74,25 +74,25 @@ LCmd * const LCmdGetSetting1 = @"LCmdGetSetting1";
     NSMutableArray *data = [[NSMutableArray alloc] init];
     {
         TBArrowModel * model = [[TBArrowModel alloc] init];
-        model.uid = @"genggaimima";
+        model.uid = kgenggaimima;
         model.title = @"更改密码";
         model.destVCClass = SUpdatePWDController.class;
         [data addObject:model];
     }{
         TBSwitchModel * model = [[TBSwitchModel alloc] init];
-        model.uid = @"zhiwen";
+        model.uid = kzhiwen;
         model.title = @"指纹";
         model.isOn = NO;
         [data addObject:model];
     }{
         TBArrowModel * model = [[TBArrowModel alloc] init];
-        model.uid = @"yuyan";
+        model.uid = kyuyan;
         model.title = @"语言";
         model.destVCClass = SLanguageController.class;
         [data addObject:model];
     }{
         TBArrowModel * model = [[TBArrowModel alloc] init];
-        model.uid = @"guanyu";
+        model.uid = kguanyu;
         model.title = @"关于";
         model.value = [NSString stringWithFormat:@"%@.%@", [LAppInfo CFBundleShortVersionString], [LAppInfo CFBundleVersion]];
         model.destVCClass = SAboutController.class;

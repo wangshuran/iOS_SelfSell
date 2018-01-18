@@ -148,11 +148,20 @@ LSingleton_m(AppContext);
     return _setting0VC;
 }
 
+- (SDao *)accountDao {
+    if (!_accountDao) {
+        NSString * name = self.loginType == LoginTypeNone ? [[UIDevice currentDevice] uniqueDeviceIdentifier] : self.accountModel.accountID;
+        name = [name MD5];
+        _accountDao = [SDao dbPath:[[self getCurrentAccountSpacePath] stringByAppendingPathComponent:name] secret:name];
+    }
+    
+    return _accountDao;
+}
+
 - (SDao *)commonDao {
     if (!_commonDao) {
-        _commonDao = [SDao dbPath:[NSString stringWithFormat:@"%@/%@.sqlite", [LFile libraryPath], [@"commondb" MD5]] secret:nil];
-        [_commonDao createTable:[[SModel alloc] init]];
-        [_commonDao createTable:[[SCommonModel alloc] init]];
+        NSString * name = [@"common" MD5];
+        _commonDao = [SDao dbPath:[[self getCommonAccountSpacePath] stringByAppendingPathComponent:name] secret:name];
     }
     
     return _commonDao;

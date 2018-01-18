@@ -6,10 +6,10 @@
          contextName = "-[NSObject(MJKeyValue) mj_JSONData]:NSObject+MJKeyValue.m">
       </ContextState>
       <ContextState
-         contextName = "-[LViewController viewWillAppear:]:LViewController.m">
+         contextName = "-[TBCheckCell setModel:]:TBCheckCell.m">
       </ContextState>
       <ContextState
-         contextName = "-[TBCheckCell setModel:]:TBCheckCell.m">
+         contextName = "-[LViewController viewWillAppear:]:LViewController.m">
       </ContextState>
       <ContextState
          contextName = "-[SSettingController test1]:SSettingController.m">
@@ -18,6 +18,9 @@
                value = "_test1">
             </PersistentString>
          </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[AppDelegate application:didFinishLaunchingWithOptions:]:AppDelegate.m">
       </ContextState>
       <ContextState
          contextName = "__38-[SLanguageController languageService]_block_invoke:SLanguageController.m">

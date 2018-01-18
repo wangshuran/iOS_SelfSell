@@ -7,6 +7,7 @@
 //
 
 #import "SLoginController.h"
+#import "STouchID.h"
 
 @interface SLoginController ()
 
@@ -29,9 +30,16 @@
     
     [self setNavbarBackgroundColor:[UIColor randomColor]];
     
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [self dismissViewControllerAnimated:YES completion:nil];
-    });    
+    STouchID * touch = [[STouchID alloc] init];
+    if ([touch canPolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics]) {
+        [touch openTouchIDWithPolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics fallbackTitle:SLocal(@"security_touch_pwdunlock") msg:SLocal(@"security_touch_unlocktitle") touchIDBlock:^(BOOL status, BOOL isFallbackTitle, NSString * msg) {
+            if (status) {
+                [self dismiss];
+            }
+        }];
+    }else {
+        [self dismiss];
+    }
 }
 
 #pragma mark - LInitProtocol

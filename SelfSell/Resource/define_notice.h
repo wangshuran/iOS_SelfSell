@@ -23,5 +23,6 @@
 #define kNoticeShowVersionCheck @"kNoticeShowVersionCheck"//显示版本检查通知
 #define kNoticeShowSecurityCheck @"kNoticeShowSecurityCheck"//显示安全检查通知
 #define kNoticeSwitchLanguage @"kNoticeSwitchLanguage"//切换语言通知
+#define kNoticeCellEvent @"kNoticeCellEvent"//单元格各类事件通知
 
 #endif /* define_notice_h */

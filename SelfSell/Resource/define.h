@@ -13,4 +13,10 @@
 
 #define kCurrentLanguageCode @"kCurrentLanguageCode"//用户当前使用语言
 
+
+#define kLastInitDBVersion @"kLastInitDBVersion"//最后初始化数据库版本
+#define kIsOpenTouchID @"kIsOpenTouchID"//是否开启指纹验证
+#define kLastWelcomeVersion @"kLastWelcomeVersion"//最后显示欢迎页的版本
+
+
 #endif /* define_h */

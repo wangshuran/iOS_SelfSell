@@ -7,12 +7,6 @@
 //
 
 #import "TBTableView.h"
-#import "TBArrowCell.h"
-#import "TBCell.h"
-#import "TBCheckCell.h"
-#import "TBExitCell.h"
-#import "TBSwitchCell.h"
-#import "TBTextCell.h"
 
 @interface TBTableView()<UITableViewDelegate, UITableViewDataSource>
 
@@ -72,16 +66,17 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    if (self.data.count <= indexPath.section) {
-        return;
-    }
-    TBSectionModel * section =[self.data objectAtIndex:indexPath.section];
-    if (section.items.count <= indexPath.row) {
-        return;
-    }
-    
-    TBModel * model = [section.items objectAtIndex:indexPath.row];
-    [SNotificationCenter postNotificationName:kNoticeCellSelect object:model];
+    //if (self.data.count <= indexPath.section) {
+    //    return;
+    //}
+    //TBSectionModel * section =[self.data objectAtIndex:indexPath.section];
+    //if (section.items.count <= indexPath.row) {
+    //    return;
+    //}
+    //
+    //TBModel * model = [section.items objectAtIndex:indexPath.row];
+    //[SNotificationCenter postNotificationName:kNoticeCellEvent object:model];    
+    [SNotificationCenter postNotificationName:kNoticeCellEvent object:[tableView cellForRowAtIndexPath:indexPath]];
 }
 
 #pragma mark - UITableViewDataSource

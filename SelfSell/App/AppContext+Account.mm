@@ -10,6 +10,8 @@
 #import "SLoginController.h"
 #import "SCheckVersionView.h"
 #import "STouchID.h"
+#import "SDao+Category.h"
+#import "SCommonModel+WCTTableCoding.h"
 
 @implementation AppContext(Account)
 
@@ -22,15 +24,25 @@
 }
 
 - (NSString *)getCurrentAccountSpacePath {
-    NSString * libraryPath = [NSHomeDirectory() stringByAppendingPathComponent:@"Library"];
-    NSString * selfsellPath = [libraryPath stringByAppendingPathComponent:[self getCurrentAccountID]];
+    NSString * path = [[LFile libraryPath] stringByAppendingPathComponent:[self getCurrentAccountID]];
     
     NSFileManager * fileManager = [NSFileManager defaultManager];
-    if (![fileManager fileExistsAtPath:selfsellPath]) {
-        [fileManager createDirectoryAtPath:selfsellPath withIntermediateDirectories:YES attributes:nil error:nil];
+    if (![fileManager fileExistsAtPath:path]) {
+        [fileManager createDirectoryAtPath:path withIntermediateDirectories:YES attributes:nil error:nil];
     }
     
-    return selfsellPath;
+    return path;
+}
+
+- (NSString *)getCommonAccountSpacePath {
+    NSString * path = [[LFile libraryPath] stringByAppendingPathComponent:[@"common" MD5]];
+    
+    NSFileManager * fileManager = [NSFileManager defaultManager];
+    if (![fileManager fileExistsAtPath:path]) {
+        [fileManager createDirectoryAtPath:path withIntermediateDirectories:YES attributes:nil error:nil];
+    }
+    
+    return path;
 }
 
 - (void)updateCurrentAccountSpaceInfo:(id)value key:(NSString *)key {    
@@ -165,13 +177,14 @@
  显示安全检查通知
  */
 - (void)noticeShowSecurityCheck:(NSNotification *)notification {
-    STouchID * touch = [[STouchID alloc] init];
-    if ([touch canPolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics]) {
-        [touch openTouchIDWithPolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics fallbackTitle:SLocal(@"security_touch_pwdunlock") msg:SLocal(@"security_touch_unlocktitle") touchIDBlock:^(BOOL status, BOOL isFallbackTitle, NSString * msg) {
+    SCommonModel * commonModel = (SCommonModel *)[[AppContext sharedAppContext].accountDao getObjectFromTable:[[SCommonModel alloc] init] condition:SCommonModel.key == kIsOpenTouchID];
+    if (commonModel.value.boolValue) {
+        STouchID * touch = [[STouchID alloc] init];
+        if ([touch canPolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics]) {            
+            [[UIViewController getTopController] present:[[SNavigationController alloc] initWithRootViewController:[[SLoginController alloc] init]] animated:NO completion:nil];
+        }else {
             
-        }];
-    }else {
-        
+        }
     }
 }
 

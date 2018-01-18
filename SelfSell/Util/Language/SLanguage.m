@@ -71,17 +71,17 @@
         [language setObject:[NSNumber numberWithBool:NO] forKey:@"ischeck"];
         [languages addObject:language];
     }
-    BOOL isDefault = NO;
+    BOOL isExit = NO;
     NSString * code = [LLanguage getOSDefaultLanguage];
     for (NSMutableDictionary * language in languages) {
         if ([[language objectForKey:@"code"] isEqualToString:code]) {
             [language setObject:[NSNumber numberWithBool:YES] forKey:@"ischeck"];
-            isDefault = YES;
+            isExit = YES;
             
             break;
         }
     }
-    if (!isDefault) {
+    if (!isExit) {
         for (NSMutableDictionary * language in languages) {
             if ([[language objectForKey:@"code"] isEqualToString:@"zh-Hans"]) {
             //if ([[language objectForKey:@"code"] isEqualToString:@"en"]) {

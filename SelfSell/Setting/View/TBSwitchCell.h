@@ -11,4 +11,6 @@
 
 @interface TBSwitchCell : TBCell
 
+@property (nonatomic, strong) UISwitch * btnSwitch;
+
 @end

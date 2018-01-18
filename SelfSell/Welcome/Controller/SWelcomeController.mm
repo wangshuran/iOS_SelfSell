@@ -10,7 +10,6 @@
 #import "SDao+Category.h"
 #import "SCommonModel+WCTTableCoding.h"
 
-#define kLastWelcomeVersion @"kLastWelcomeVersion"
 
 @interface SWelcomeController ()<UIScrollViewDelegate>
 
@@ -26,21 +25,14 @@
 
 - (instancetype)init {
     SCommonModel * model = (SCommonModel *)[[AppContext sharedAppContext].commonDao getObjectFromTable:[[SCommonModel alloc] init] condition:SCommonModel.key == kLastWelcomeVersion];
-    if (model && [model.value isEqualToString:[LAppInfo CFBundleShortVersionString]]) {
+    if ([model.value isEqualToString:[LAppInfo CFBundleShortVersionString]]) {
         return nil;
     }
-    
-    if (model) {
-        model.value = [LAppInfo CFBundleShortVersionString];
-        [[AppContext sharedAppContext].commonDao updateObject:model property:SCommonModel.value];
-    }else {
-        model = [[SCommonModel alloc] init];
-        model.key = kLastWelcomeVersion;
-        model.value = [LAppInfo CFBundleShortVersionString];
-        [[AppContext sharedAppContext].commonDao insertObject:model];
-    }
+    model.value = [LAppInfo CFBundleShortVersionString];
+    [[AppContext sharedAppContext].commonDao updateObject:model property:SCommonModel.value];
     
     self.numberOfPages = 3;
+    
     self = [super init];
     
     return self;

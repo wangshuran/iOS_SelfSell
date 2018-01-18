@@ -23,13 +23,13 @@
 
 #pragma mark - Interface
 
-+ (instancetype)dbPath:(NSString *)dbPath secret:(NSString *)secret{
++ (instancetype)dbPath:(NSString *)dbPath secret:(NSString *)secret {
     SDao * dao = [[SDao alloc] init];
     
     return [dao openWithDBPath:dbPath secret:secret] ? dao : nil;
 }
 
-- (BOOL)openWithDBPath:(NSString *)dbPath secret:(NSString *)secret{
+- (BOOL)openWithDBPath:(NSString *)dbPath secret:(NSString *)secret {
     @try {
         self.wcdb = [[WCTDatabase alloc] initWithPath:dbPath];
         if ([NSString isNullOrEmpty:secret]) {

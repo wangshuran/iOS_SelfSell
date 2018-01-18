@@ -35,8 +35,6 @@
     self.window.rootViewController = [AppContext sharedAppContext].rootVC;
     [self.window makeKeyAndVisible];
     
-    
-    
     //SLoginByAccountRequest * request = [[SLoginByAccountRequest alloc] init];
     ////TODO，属性赋值
     //
@@ -63,7 +61,7 @@
     //        [[AppContext sharedAppContext] updateLoginAccount:accountModel];
     //        //TODO，继续其他操作
     //    }
-    //    
+    //
     //    SPostNotification(kNoticeFinishLogin);//完成登录发出通知
     //    SPostNotification(kNoticeShowVersionCheck);//版本检查通知
     //    SPostNotification(kNoticeShowSecurityCheck);//安全检查通知
@@ -113,26 +111,30 @@
  初始化数据库
  */
 - (void)initDB {
-//    {
-//        SCommonModel * model = [[SCommonModel alloc] init];
-//        model.key = [NSUUID UUID].UUIDString;
-//        model.value = [NSUUID UUID].UUIDString;
-//        model.data0 = [NSArray arrayWithObjects:[[SModel alloc] init], [[SModel alloc] init], [[SModel alloc] init], nil];
-//        BOOL status = [[AppContext sharedAppContext].commonDao isTableExists:[[SCommonModel alloc] init]];
-//        status = [[AppContext sharedAppContext].commonDao dropTable:[[SCommonModel alloc] init]];
-//        status = [[AppContext sharedAppContext].commonDao createTable:[[SCommonModel alloc] init]];
-//        status = [[AppContext sharedAppContext].commonDao deleteAllObjectsFromTable:[[SCommonModel alloc] init]];
-//        status = [[AppContext sharedAppContext].commonDao insertObject:model];
-//        NSArray * data = [[AppContext sharedAppContext].commonDao getAllObjectsFromTable:[[SCommonModel alloc] init]];
-//        
-//        status = NO;
-//    }
-    
+    [[AppContext sharedAppContext].commonDao createTable:[[SModel alloc] init]];
     [[AppContext sharedAppContext].commonDao createTable:[[SCommonModel alloc] init]];
     
+    [[AppContext sharedAppContext].accountDao createTable:[[SModel alloc] init]];
+    [[AppContext sharedAppContext].accountDao createTable:[[SCommonModel alloc] init]];
     
-
-
+    NSUserDefaults * userDefaults = [NSUserDefaults standardUserDefaults];
+    NSString * lastInitDBVersion = [userDefaults objectForKey:kLastInitDBVersion];
+    if (![lastInitDBVersion isEqualToString:[LAppInfo CFBundleShortVersionString]]) {
+        {
+            SCommonModel * model = [[SCommonModel alloc] init];
+            model.key = kLastWelcomeVersion;
+            model.value = @"";
+            [[AppContext sharedAppContext].commonDao insertObject:model];
+        }{
+            SCommonModel * model = [[SCommonModel alloc] init];
+            model.key = kIsOpenTouchID;
+            model.value = @"0";
+            [[AppContext sharedAppContext].accountDao insertObject:model];
+        }
+        
+        [userDefaults setObject:[LAppInfo CFBundleShortVersionString] forKey:kLastInitDBVersion];
+        [userDefaults synchronize];
+    }
 }
 
 @end

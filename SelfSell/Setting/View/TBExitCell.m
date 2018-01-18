@@ -20,8 +20,7 @@
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
-    self.selectionStyle = UITableViewCellSelectionStyleNone;
-    
+    self.selectionStyle = UITableViewCellSelectionStyleNone;    
     [self.contentView addSubview:self.btnExit];
     
     __weak typeof(self) weakSelf = self;

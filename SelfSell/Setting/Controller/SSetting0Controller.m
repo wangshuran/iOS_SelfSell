@@ -64,7 +64,7 @@
     [super loadView];
     __weak typeof(self) weakSelf = self;
     
-    [self.view addSubview:self.tbTableView];    
+    [self.view addSubview:self.tbTableView];
     [self.tbTableView mas_updateConstraints:^(MASConstraintMaker * make) {
         make.top.bottom.left.right.mas_equalTo(weakSelf.view);
     }];
@@ -81,22 +81,35 @@
 - (void)initialize {
     [super initialize];
     
-    SAddObsver(noticeCellSelect:, kNoticeCellSelect)
+    SAddObsver(noticeCellEvent:, kNoticeCellEvent)
 }
 
 #pragma mark - NSNotification
 
-- (void)noticeCellSelect:(NSNotification *)notification {
-    TBModel * model = notification.object;
+- (void)noticeCellEvent:(NSNotification *)notification {
+    TBCell * cell = notification.object;
+    TBModel * model = cell.model;
     if (!model) {
         return;
     }
+    BOOL isExit = NO;
+    NSArray<TBSectionModel *> * sections = self.tbTableView.data;
+    for (TBSectionModel * section in sections) {
+        if ([section.items containsObject:model]) {
+            isExit = YES;
+            break;
+        }
+    }
+    if (!isExit) {
+        return;
+    }
     
-    if (model.destVCClass) {
-        [self push:[[model.destVCClass alloc] init]];
+    if ([model isKindOfClass:TBArrowModel.class]) {
+        [self push:[[((TBArrowModel *)model).destVCClass alloc] init]];
         
         return;
     }
+    
 }
 
 @end

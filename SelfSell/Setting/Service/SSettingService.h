@@ -19,6 +19,16 @@ FOUNDATION_EXPORT LCmd * const LCmdGetSetting0;
 FOUNDATION_EXPORT LCmd * const LCmdGetSetting1;
 
 
+#define kwodetuijianma @"kwodetuijianma"
+#define kgugeyanzheng @"kgugeyanzheng"
+#define kshezhi @"kshezhi"
+#define ktuichu @"ktuichu"
+
+#define kgenggaimima @"kgenggaimima"
+#define kzhiwen @"kzhiwen"
+#define kyuyan @"kyuyan"
+#define kguanyu @"kguanyu"
+
 @interface SSettingService : SService
 
 @end

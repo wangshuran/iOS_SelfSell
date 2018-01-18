@@ -100,24 +100,35 @@
 - (void)initialize {
     [super initialize];
     
-    SAddObsver(noticeCellSelect:, kNoticeCellSelect)
+    SAddObsver(noticeCellEvent:, kNoticeCellEvent)
 }
 
 #pragma mark - NSNotification
 
-- (void)noticeCellSelect:(NSNotification *)notification {
-    TBCheckModel * model = notification.object;
+- (void)noticeCellEvent:(NSNotification *)notification {
+    TBCell * cell = notification.object;
+    TBCheckModel * model = (TBCheckModel *)cell.model;
     if (!model) {
         return;
     }
-    
+    BOOL isExit = NO;
     NSArray<TBSectionModel *> * sections = self.tbTableView.data;
+    for (TBSectionModel * section in sections) {
+        if ([section.items containsObject:model]) {
+            isExit = YES;
+            break;
+        }
+    }
+    if (!isExit) {
+        return;
+    }
+    
+    sections = self.tbTableView.data;
     for (TBSectionModel * section in sections) {
         for (TBCheckModel * item in section.items) {
             item.isCheck = [model.uid isEqualToString:item.uid];
         }
-    }
-    
+    }    
     self.strSelectLanguage = model.code;
     
     __weak typeof(self) weakSelf = self;

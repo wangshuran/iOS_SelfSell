@@ -36,7 +36,7 @@
 		D54894CF1FF22C5300F2019B /* SMarketController.m in Sources */ = {isa = PBXBuildFile; fileRef = D54894CE1FF22C5300F2019B /* SMarketController.m */; };
 		D54894D51FF22CAD00F2019B /* SAccountModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D54894D41FF22CAD00F2019B /* SAccountModel.m */; };
 		D54894DF1FF235AD00F2019B /* AppContext+Cache.m in Sources */ = {isa = PBXBuildFile; fileRef = D54894D81FF235AD00F2019B /* AppContext+Cache.m */; };
-		D54894E01FF235AD00F2019B /* AppContext+Account.m in Sources */ = {isa = PBXBuildFile; fileRef = D54894DA1FF235AD00F2019B /* AppContext+Account.m */; };
+		D54894E01FF235AD00F2019B /* AppContext+Account.mm in Sources */ = {isa = PBXBuildFile; fileRef = D54894DA1FF235AD00F2019B /* AppContext+Account.mm */; };
 		D54894E11FF235AD00F2019B /* AppContext.m in Sources */ = {isa = PBXBuildFile; fileRef = D54894DC1FF235AD00F2019B /* AppContext.m */; };
 		D54894E21FF235AD00F2019B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D54894DE1FF235AD00F2019B /* AppDelegate.m */; };
 		D54894E81FF2388E00F2019B /* test006.m in Sources */ = {isa = PBXBuildFile; fileRef = D54894E71FF2388E00F2019B /* test006.m */; };
@@ -50,7 +50,7 @@
 		D5515F0F1FDF5A5500278579 /* SelfSellUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D5515F0E1FDF5A5500278579 /* SelfSellUITests.m */; };
 		D554813B20107356003C1D5D /* SGoogleValidateController.m in Sources */ = {isa = PBXBuildFile; fileRef = D554813A20107356003C1D5D /* SGoogleValidateController.m */; };
 		D5709CBA200DAABA007BBD4C /* TBTextModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D5709CB9200DAABA007BBD4C /* TBTextModel.m */; };
-		D5709CBD200E081B007BBD4C /* SSetting1Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = D5709CBC200E081B007BBD4C /* SSetting1Controller.m */; };
+		D5709CBD200E081B007BBD4C /* SSetting1Controller.mm in Sources */ = {isa = PBXBuildFile; fileRef = D5709CBC200E081B007BBD4C /* SSetting1Controller.mm */; };
 		D5709CC0200EE00B007BBD4C /* SLanguageController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5709CBF200EE00B007BBD4C /* SLanguageController.m */; };
 		D5709CC3200EE021007BBD4C /* SAboutController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5709CC2200EE021007BBD4C /* SAboutController.m */; };
 		D5709CC6200EE03A007BBD4C /* SUpdatePWDController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5709CC5200EE03A007BBD4C /* SUpdatePWDController.m */; };
@@ -166,7 +166,7 @@
 		D54894D71FF235AD00F2019B /* AppContext+Cache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppContext+Cache.h"; sourceTree = "<group>"; };
 		D54894D81FF235AD00F2019B /* AppContext+Cache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppContext+Cache.m"; sourceTree = "<group>"; };
 		D54894D91FF235AD00F2019B /* AppContext+Account.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppContext+Account.h"; sourceTree = "<group>"; };
-		D54894DA1FF235AD00F2019B /* AppContext+Account.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppContext+Account.m"; sourceTree = "<group>"; };
+		D54894DA1FF235AD00F2019B /* AppContext+Account.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "AppContext+Account.mm"; sourceTree = "<group>"; };
 		D54894DB1FF235AD00F2019B /* AppContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppContext.h; sourceTree = "<group>"; };
 		D54894DC1FF235AD00F2019B /* AppContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppContext.m; sourceTree = "<group>"; };
 		D54894DD1FF235AD00F2019B /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -197,7 +197,7 @@
 		D5709CB8200DAABA007BBD4C /* TBTextModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TBTextModel.h; sourceTree = "<group>"; };
 		D5709CB9200DAABA007BBD4C /* TBTextModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TBTextModel.m; sourceTree = "<group>"; };
 		D5709CBB200E081B007BBD4C /* SSetting1Controller.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSetting1Controller.h; sourceTree = "<group>"; };
-		D5709CBC200E081B007BBD4C /* SSetting1Controller.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSetting1Controller.m; sourceTree = "<group>"; };
+		D5709CBC200E081B007BBD4C /* SSetting1Controller.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = SSetting1Controller.mm; sourceTree = "<group>"; };
 		D5709CBE200EE00B007BBD4C /* SLanguageController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLanguageController.h; sourceTree = "<group>"; };
 		D5709CBF200EE00B007BBD4C /* SLanguageController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SLanguageController.m; sourceTree = "<group>"; };
 		D5709CC1200EE021007BBD4C /* SAboutController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SAboutController.h; sourceTree = "<group>"; };
@@ -344,7 +344,7 @@
 				D50297EF200C5443008375F9 /* SSetting0Controller.h */,
 				D50297F0200C5443008375F9 /* SSetting0Controller.m */,
 				D5709CBB200E081B007BBD4C /* SSetting1Controller.h */,
-				D5709CBC200E081B007BBD4C /* SSetting1Controller.m */,
+				D5709CBC200E081B007BBD4C /* SSetting1Controller.mm */,
 				D5709CC4200EE03A007BBD4C /* SUpdatePWDController.h */,
 				D5709CC5200EE03A007BBD4C /* SUpdatePWDController.m */,
 			);
@@ -684,7 +684,7 @@
 				D54894DB1FF235AD00F2019B /* AppContext.h */,
 				D54894DC1FF235AD00F2019B /* AppContext.m */,
 				D54894D91FF235AD00F2019B /* AppContext+Account.h */,
-				D54894DA1FF235AD00F2019B /* AppContext+Account.m */,
+				D54894DA1FF235AD00F2019B /* AppContext+Account.mm */,
 				D54894D71FF235AD00F2019B /* AppContext+Cache.h */,
 				D54894D81FF235AD00F2019B /* AppContext+Cache.m */,
 				D54894DD1FF235AD00F2019B /* AppDelegate.h */,
@@ -1293,7 +1293,7 @@
 				D54894621FF0938400F2019B /* test002.m in Sources */,
 				D5E610DE2008A669003C847A /* SWelcomeController.mm in Sources */,
 				D5029816200C5BE7008375F9 /* TBArrowCell.m in Sources */,
-				D5709CBD200E081B007BBD4C /* SSetting1Controller.m in Sources */,
+				D5709CBD200E081B007BBD4C /* SSetting1Controller.mm in Sources */,
 				D5957AE920073B9000F6EE60 /* STabBarController.m in Sources */,
 				D502980C200C58CC008375F9 /* TBCell.m in Sources */,
 				D5957AF320073B9000F6EE60 /* SImageView.m in Sources */,
@@ -1303,7 +1303,7 @@
 				D54895061FF23F3700F2019B /* SLoginController.m in Sources */,
 				D5709CC6200EE03A007BBD4C /* SUpdatePWDController.m in Sources */,
 				D5029803200C578F008375F9 /* TBArrowModel.m in Sources */,
-				D54894E01FF235AD00F2019B /* AppContext+Account.m in Sources */,
+				D54894E01FF235AD00F2019B /* AppContext+Account.mm in Sources */,
 				D50297EA200C50CC008375F9 /* SSettingService.m in Sources */,
 				D5957AF720073B9000F6EE60 /* STableView.m in Sources */,
 				D54894CF1FF22C5300F2019B /* SMarketController.m in Sources */,
