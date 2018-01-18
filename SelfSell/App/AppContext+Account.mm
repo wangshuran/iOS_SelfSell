@@ -180,8 +180,13 @@
     SCommonModel * commonModel = (SCommonModel *)[[AppContext sharedAppContext].accountDao getObjectFromTable:[[SCommonModel alloc] init] condition:SCommonModel.key == kIsOpenTouchID];
     if (commonModel.value.boolValue) {
         STouchID * touch = [[STouchID alloc] init];
-        if ([touch canPolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics]) {            
-            [[UIViewController getTopController] present:[[SNavigationController alloc] initWithRootViewController:[[SLoginController alloc] init]] animated:NO completion:nil];
+        if ([touch canPolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics]) {
+            //此处最好加独占锁，防止连续发送两次通知，弹出两个登录视图
+            SLoginController * vc = [[SLoginController alloc] init];
+            SNavigationController * nav = [[SNavigationController alloc] initWithRootViewController:vc];
+            [UIViewController present:nav animated:NO completion:^(){
+                
+            }];
         }else {
             
         }
@@ -195,7 +200,9 @@
     //此处最好加独占锁，防止连续发送两次通知，弹出两个登录视图
     SLoginController * vc = [[SLoginController alloc] init];
     SNavigationController * nav = [[SNavigationController alloc] initWithRootViewController:vc];
-    [UIViewController present:nav];
+    [UIViewController present:nav animated:YES completion:^(){
+        
+    }];
 }
 
 /**
