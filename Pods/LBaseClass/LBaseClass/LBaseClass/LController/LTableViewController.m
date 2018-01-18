@@ -99,12 +99,6 @@
     _logImport();
 }
 
-- (void)loadView {
-    [super loadView];
-    
-    self.view.backgroundColor = [UIColor whiteColor];
-}
-
 #pragma mark - LInitProtocol
 
 - (void)initialize {
@@ -115,10 +109,10 @@
     }
     
     self.uid = [NSUUID UUID].UUIDString;
-    self.createTime = [[NSDate date] timeIntervalSince1970];
-    
+    self.createTime = [[NSDate date] timeIntervalSince1970];    
     self.hiddenNavbar = NO;
     self.hiddenTabar = YES;
+    self.view.backgroundColor = [UIColor whiteColor];
     //});
 }
 
