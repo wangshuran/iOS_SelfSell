@@ -27,7 +27,7 @@
 - (instancetype)init {
     SCommonModel * model = (SCommonModel *)[[AppContext sharedAppContext].commonDao getObjectFromTable:[[SCommonModel alloc] init] condition:SCommonModel.key == kLastWelcomeVersion];
     if (model && [model.value isEqualToString:[LAppInfo CFBundleShortVersionString]]) {
-        //return nil;
+        return nil;
     }
     
     if (model) {

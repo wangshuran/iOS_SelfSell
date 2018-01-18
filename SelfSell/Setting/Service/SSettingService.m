@@ -53,7 +53,7 @@ LCmd * const LCmdGetSetting1 = @"LCmdGetSetting1";
         [data addObject:model];
     }{
         TBExitModel * model = [[TBExitModel alloc] init];
-        model.uid = @"tuichu";        
+        model.uid = @"tuichu";
         model.title = @"退出";
         [data addObject:model];
     }
@@ -84,9 +84,9 @@ LCmd * const LCmdGetSetting1 = @"LCmdGetSetting1";
         [data addObject:model];
     }{
         TBArrowModel * model = [[TBArrowModel alloc] init];
-        model.uid = @"guanyu";        
+        model.uid = @"guanyu";
         model.title = @"关于";
-        model.value = [LAppInfo CFBundleShortVersionString];
+        model.value = [NSString stringWithFormat:@"%@.%@", [LAppInfo CFBundleShortVersionString], [LAppInfo CFBundleVersion]];
         [data addObject:model];
     }
     
