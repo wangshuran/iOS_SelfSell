@@ -27,4 +27,6 @@
 
 @property (nonatomic, strong) UILabel * lbValue;
 
+@property (nonatomic, strong) UIView * vLine;
+
 @end

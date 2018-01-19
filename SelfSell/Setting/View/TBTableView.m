@@ -7,6 +7,7 @@
 //
 
 #import "TBTableView.h"
+#import "SHeaderView.h"
 
 @interface TBTableView()<UITableViewDelegate, UITableViewDataSource>
 
@@ -25,6 +26,7 @@
     self.estimatedRowHeight = 60.0f;
     self.rowHeight = UITableViewAutomaticDimension;
     self.separatorStyle = UITableViewCellSeparatorStyleNone;
+    [self registerClass:SHeaderView.class forHeaderFooterViewReuseIdentifier:NSStringFromClass(TBSectionModel.class)];
     [self registerClass:TBArrowCell.class forCellReuseIdentifier:NSStringFromClass(TBArrowModel.class)];
     [self registerClass:TBCell.class forCellReuseIdentifier:NSStringFromClass(TBModel.class)];
     [self registerClass:TBCheckCell.class forCellReuseIdentifier:NSStringFromClass(TBCheckModel.class)];
@@ -65,21 +67,43 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    
-    //if (self.data.count <= indexPath.section) {
-    //    return;
-    //}
-    //TBSectionModel * section =[self.data objectAtIndex:indexPath.section];
-    //if (section.items.count <= indexPath.row) {
-    //    return;
-    //}
-    //
-    //TBModel * model = [section.items objectAtIndex:indexPath.row];
-    //[SNotificationCenter postNotificationName:kNoticeCellEvent object:model];    
     [SNotificationCenter postNotificationName:kNoticeCellEvent object:[tableView cellForRowAtIndexPath:indexPath]];
 }
 
 #pragma mark - UITableViewDataSource
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    if ([NSString isNullOrEmpty:[self.data objectAtIndex:section].headerTitle]) {
+        SHeaderView * headerView = (SHeaderView *)[tableView dequeueReusableHeaderFooterViewWithIdentifier:NSStringFromClass(TBSectionModel.class)];
+        if (!headerView) {
+            headerView = [[SHeaderView alloc] init];
+        }
+        
+        return headerView;
+    }
+    
+    return nil;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    return [self.data objectAtIndex:section].headerHeight;
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    return [self.data objectAtIndex:section].headerTitle;
+}
+
+//- (UIView *)tableView:(UITableView *)tableView viewForfooterInSection:(NSInteger)section {
+//    return [[SSectionView alloc] init];
+//}
+//
+//- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
+//    return [self.data objectAtIndex:section].footerHeight;
+//}
+//
+//- (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section {
+//    return [self.data objectAtIndex:section].footerTitle;
+//}
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return self.data.count;

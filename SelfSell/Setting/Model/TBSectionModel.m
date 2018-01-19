@@ -10,11 +10,22 @@
 
 @implementation TBSectionModel
 
+#pragma mark - Interface
+
 + (instancetype)sectionWithItems:(NSArray<TBModel *> *)items {
     TBSectionModel * model = [[TBSectionModel alloc] init];
     model.items = items;
     
     return model;
+}
+
+#pragma mark - LInitProtocol
+
+- (void)initialize {
+    [super initialize];
+    
+    self.headerHeight = 0.0f;
+    self.footerHeight = 0.0f;
 }
 
 @end

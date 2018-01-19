@@ -22,17 +22,4 @@
     });
 }
 
-//- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-//    [super touchesBegan:touches withEvent:event];
-//
-//    self.backgroundColor = [UIColor randomColor];
-//}
-//
-//- (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-//    [super touchesEnded:touches withEvent:event];
-//
-//    self.backgroundColor = [UIColor colorWithRed:0.0f green:0.0f blue:0.0f alpha:0.05f];
-//}
-
-
 @end

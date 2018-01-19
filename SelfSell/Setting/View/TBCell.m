@@ -16,7 +16,8 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     [self.contentView addSubview:self.lbTitle];
     [self.contentView addSubview:self.lbValue];
-    
+    [self.contentView addSubview:self.vLine];
+
     return self;
 }
 
@@ -44,7 +45,7 @@
         _lbTitle.numberOfLines = 0;
         _lbTitle.font = kTitleFont;
         _lbTitle.textAlignment = NSTextAlignmentLeft;
-        _lbTitle.textColor = kTitleNormalColor;        
+        _lbTitle.textColor = kTitleNormalColor;
     }
     
     return _lbTitle;
@@ -60,6 +61,15 @@
     }
     
     return _lbValue;
+}
+
+- (UIView *)vLine {
+    if (!_vLine) {
+        _vLine = [[UIView alloc] init];
+        _vLine.backgroundColor = [UIColor randomColor];
+    }
+    
+    return _vLine;
 }
 
 @end

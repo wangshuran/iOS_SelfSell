@@ -27,8 +27,7 @@
         make.height.mas_equalTo(31.0f);
         make.width.mas_equalTo(51.0f);
         make.centerY.mas_equalTo(weakSelf.contentView.mas_centerY);
-    }];
-    
+    }];    
     [self.lbTitle mas_updateConstraints:^(MASConstraintMaker * make) {
         make.top.mas_equalTo(10.0f);
         make.bottom.mas_equalTo(-10.0f);

@@ -13,6 +13,14 @@
 
 + (instancetype)sectionWithItems:(NSArray<TBModel *> *)items;
 
+@property (nonatomic, assign) CGFloat headerHeight;
+
+@property (nonatomic, assign) CGFloat footerHeight;
+
+@property (nonatomic, copy) NSString * headerTitle;
+
+@property (nonatomic, copy) NSString * footerTitle;
+
 @property (nonatomic, strong) NSArray<TBModel *> * items;
 
 @end
