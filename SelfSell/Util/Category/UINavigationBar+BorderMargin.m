@@ -26,7 +26,7 @@ void swizzleInstanceMethod(Class cls, SEL originSelector, SEL swizzledSelector) 
     if (@available(iOS 11.0, *)) {
         static dispatch_once_t onceToken;
         dispatch_once(&onceToken, ^{
-            swizzleInstanceMethod(self, @selector(layoutSubviews), @selector(wx_layoutSubviews));
+            //swizzleInstanceMethod(self, @selector(layoutSubviews), @selector(wx_layoutSubviews));
         });
     }
 }
@@ -34,13 +34,13 @@ void swizzleInstanceMethod(Class cls, SEL originSelector, SEL swizzledSelector) 
 - (void)wx_layoutSubviews {
     //[self wx_layoutSubviews];
     //[self printViewTree];
-    
+
     for (UIView *view in self.subviews) {
         for (UIView *stackView in view.subviews) {
             if (@available(iOS 9.0, *)) {
-                if ([stackView isKindOfClass:[UIStackView class]]) {                
+                if ([stackView isKindOfClass:[UIStackView class]]) {
                     //stackView.superview.layoutMargins = UIEdgeInsetsZero;
-                    view.layoutMargins = UIEdgeInsetsZero;                    
+                    view.layoutMargins = UIEdgeInsetsZero;
 
                     break;
                 }
