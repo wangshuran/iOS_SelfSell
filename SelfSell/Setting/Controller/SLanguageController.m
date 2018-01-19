@@ -29,7 +29,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {
@@ -70,7 +69,9 @@
     if (!_btnRight) {
         _btnRight = [[SButton alloc] init];
         _btnRight.frame = CGRectMake(0.0f, 0.0f, 64.0f, 44.0f);
-        _btnRight.backgroundColor = [UIColor randomColor];
+        [_btnRight setTitle:SLocal(@"保存") forState:UIControlStateNormal];
+        [_btnRight setTitleColor:[UIColor colorWithRed:255.0f / 255.0f green:140.0f / 255.0f blue:0.0f / 255.0f alpha:0.3f] forState:UIControlStateNormal];
+        [_btnRight setTitleColor:[UIColor colorWithRed:255.0f / 255.0f green:140.0f / 255.0f blue:0.0f / 255.0f alpha:0.3f] forState:UIControlStateHighlighted];
         [_btnRight addTarget:self action:@selector(updateLanguage:) forControlEvents:UIControlEventTouchUpInside];
     }
     
@@ -79,10 +80,10 @@
 
 - (void)loadView {
     [super loadView];
-    __weak typeof(self) weakSelf = self;
     
+    __weak typeof(self) weakSelf = self;
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:self.btnRight];
     [self.view addSubview:self.tbTableView];
-    [self updateRightItem];
     
     [self.tbTableView mas_updateConstraints:^(MASConstraintMaker * make) {
         make.top.bottom.left.right.mas_equalTo(weakSelf.view);
@@ -93,6 +94,10 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
 }
 
 #pragma mark - LInitProtocol
@@ -128,7 +133,7 @@
         for (TBCheckModel * item in section.items) {
             item.isCheck = [model.uid isEqualToString:item.uid];
         }
-    }    
+    }
     self.strSelectLanguage = model.code;
     
     __weak typeof(self) weakSelf = self;
@@ -140,16 +145,14 @@
 
 #pragma mark - Private
 
-- (void)updateRightItem {
-    UIBarButtonItem * rightItem = [[UIBarButtonItem alloc] initWithCustomView:self.btnRight];
-    UIBarButtonItem * spaceItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
-    spaceItem.width = 15.0f;//间隔作用
-    
-    self.navigationItem.rightBarButtonItems = @[rightItem, spaceItem];
-}
-
 - (void)updateRightBtn {
-    self.btnRight.backgroundColor = [UIColor randomColor];
+    SLanguage * language = [[SLanguage alloc] init];
+    if ([self.strSelectLanguage isEqualToString:[language getAppCurrentLanguage]]) {
+        [self.btnRight setTitleColor:[UIColor colorWithRed:255.0f / 255.0f green:140.0f / 255.0f blue:0.0f / 255.0f alpha:0.3f] forState:UIControlStateNormal];
+        [self.btnRight setTitleColor:[UIColor colorWithRed:255.0f / 255.0f green:140.0f / 255.0f blue:0.0f / 255.0f alpha:0.3f] forState:UIControlStateHighlighted];
+    }else {
+        [self.btnRight setTitleColor:[UIColor colorWithRed:255.0f / 255.0f green:140.0f / 255.0f blue:0.0f / 255.0f alpha:1.0f] forState:UIControlStateNormal];
+    }
 }
 
 - (void)updateLanguage:(SButton *)sender {

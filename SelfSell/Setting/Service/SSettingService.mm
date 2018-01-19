@@ -12,6 +12,8 @@
 #import "SUpdatePWDController.h"
 #import "SLanguageController.h"
 #import "SAboutController.h"
+#import "SDao+Category.h"
+#import "SCommonModel+WCTTableCoding.h"
 
 LCmd * const LCmdGetSetting0 = @"LCmdGetSetting0";
 LCmd * const LCmdGetSetting1 = @"LCmdGetSetting1";
@@ -82,7 +84,8 @@ LCmd * const LCmdGetSetting1 = @"LCmdGetSetting1";
         TBSwitchModel * model = [[TBSwitchModel alloc] init];
         model.uid = kzhiwen;
         model.title = @"指纹";
-        model.isOn = NO;
+        SCommonModel * commonModel = (SCommonModel *)[[AppContext sharedAppContext].accountDao getObjectFromTable:[[SCommonModel alloc] init] condition:SCommonModel.key == kIsOpenTouchID];
+        model.isOn = commonModel.value.boolValue;
         [data addObject:model];
     }{
         TBArrowModel * model = [[TBArrowModel alloc] init];

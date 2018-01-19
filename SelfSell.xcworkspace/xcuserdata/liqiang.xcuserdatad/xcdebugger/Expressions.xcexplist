@@ -12,6 +12,17 @@
          contextName = "-[LViewController viewWillAppear:]:LViewController.m">
       </ContextState>
       <ContextState
+         contextName = "-[SLanguageController viewDidLoad]:SLanguageController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.navigationItem.rightBarButtonItem">
+            </PersistentString>
+            <PersistentString
+               value = "self.navigationItem">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "-[SSettingController test1]:SSettingController.m">
          <PersistentStrings>
             <PersistentString

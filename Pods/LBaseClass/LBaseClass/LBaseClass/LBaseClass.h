@@ -25,6 +25,7 @@
 #import "NSString+Parser.h"
 #import "UIColor+Category.h"
 #import "UIDevice+IdentifierAddition.h"
+#import "UIView+Category.h"
 #import "UIViewController+Category.h"
 
 

@@ -64,6 +64,9 @@
     if (self.tabBarController && self.hiddenTabar != self.tabBarController.tabBar.hidden) {
         self.tabBarController.tabBar.hidden = self.hiddenTabar;
     }
+    
+    
+    [self setNeedsStatusBarAppearanceUpdate];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {

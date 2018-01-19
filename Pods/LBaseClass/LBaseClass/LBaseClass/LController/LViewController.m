@@ -65,6 +65,8 @@
     [self setNavbarBackgroundColor:[UIColor whiteColor]];
     [self setNavbarBackColor:[UIColor blackColor]];
     [self setNavbarTitleColor:[UIColor blackColor]];
+    
+    [self setNeedsStatusBarAppearanceUpdate];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {

@@ -10,12 +10,18 @@
 
 @implementation SButton
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
+- (void)setTitleColor:(UIColor *)color forState:(UIControlState)state {
+    [super setTitleColor:color forState:state];
+    
+    if (state == UIControlStateNormal) {
+        [self setTitleColor:[UIColor colorWithRed:[color getR] green:[color getG] blue:[color getB] alpha:[color getA] * 0.5f] forState:UIControlStateHighlighted];
+    }
 }
-*/
+
+#pragma mark - LInitProtocol
+
+- (void)initialize {
+    self.titleLabel.font = [LFont thin_17];
+}
 
 @end

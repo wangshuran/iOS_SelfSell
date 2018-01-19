@@ -18,5 +18,4 @@
 #define kIsOpenTouchID @"kIsOpenTouchID"//是否开启指纹验证
 #define kLastWelcomeVersion @"kLastWelcomeVersion"//最后显示欢迎页的版本
 
-
 #endif /* define_h */
