@@ -12,9 +12,11 @@
 
 #pragma mark - Interface
 
-- (void)layoutSubviews {
-    [super layoutSubviews];
+- (instancetype)initWithReuseIdentifier:(NSString *)reuseIdentifier {
+    self = [super initWithReuseIdentifier:reuseIdentifier];
     self.contentView.backgroundColor = [UIColor randomColor];
+    
+    return self;
 }
 
 @end
