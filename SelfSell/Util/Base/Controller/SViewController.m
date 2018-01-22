@@ -35,7 +35,7 @@
 - (SView *)vNavLeft {
     if (!_vNavLeft) {
         _vNavLeft = [[SView alloc] init];
-        _vNavLeft.backgroundColor = [UIColor randomColor];
+        _vNavLeft.backgroundColor = [UIColor clearColor];
         _vNavLeft.frame = CGRectMake(0.0f, 0.0f, 64.0f, 44.0f);
     }
     
