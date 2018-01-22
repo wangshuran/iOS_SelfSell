@@ -34,17 +34,11 @@
     return UIStatusBarStyleDefault;
 }
 
--(void)viewWillAppear:(BOOL)animated{
-    [super viewWillAppear:animated];
-}
-
 #pragma mark - LInitProtocol
 
-- (void)initialize {
-    [super initialize];
-    
-    //self.navigationItem.backBarButtonItem.title = @"";
-}
-
+//- (void)initialize {
+//    [super initialize];
+//    
+//}
 
 @end
