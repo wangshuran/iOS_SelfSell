@@ -138,7 +138,6 @@
 }
 
 - (void)updateLanguage:(SButton *)sender {
-    sender.backgroundColor = [UIColor randomColor];
     SLanguage * language = [[SLanguage alloc] init];
     if ([self.strSelectLanguage isEqualToString:[language getAppCurrentLanguage]]) {
         return;

@@ -14,7 +14,7 @@
 
 - (instancetype)initWithReuseIdentifier:(NSString *)reuseIdentifier {
     self = [super initWithReuseIdentifier:reuseIdentifier];
-    self.contentView.backgroundColor = [UIColor randomColor];
+    self.contentView.backgroundColor = [UIColor clearColor];
     
     return self;
 }
