@@ -58,7 +58,6 @@
 		D5709CCC200EE710007BBD4C /* TBCheckCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D5709CCB200EE710007BBD4C /* TBCheckCell.m */; };
 		D5709CCF200EE73A007BBD4C /* TBCheckModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D5709CCE200EE73A007BBD4C /* TBCheckModel.m */; };
 		D5709CD3200F3852007BBD4C /* SLanguage.m in Sources */ = {isa = PBXBuildFile; fileRef = D5709CD2200F3852007BBD4C /* SLanguage.m */; };
-		D592E1AA20118CA8009B5DF5 /* UINavigationBar+BorderMargin.m in Sources */ = {isa = PBXBuildFile; fileRef = D592E1A920118CA8009B5DF5 /* UINavigationBar+BorderMargin.m */; };
 		D592E1B92011F6BF009B5DF5 /* SHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = D592E1B82011F6BF009B5DF5 /* SHeaderView.m */; };
 		D5957AE720073B9000F6EE60 /* SCache.m in Sources */ = {isa = PBXBuildFile; fileRef = D5957AB920073B9000F6EE60 /* SCache.m */; };
 		D5957AE820073B9000F6EE60 /* SNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5957ABC20073B9000F6EE60 /* SNavigationController.m */; };
@@ -214,8 +213,6 @@
 		D5709CCE200EE73A007BBD4C /* TBCheckModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TBCheckModel.m; sourceTree = "<group>"; };
 		D5709CD1200F3852007BBD4C /* SLanguage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLanguage.h; sourceTree = "<group>"; };
 		D5709CD2200F3852007BBD4C /* SLanguage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SLanguage.m; sourceTree = "<group>"; };
-		D592E1A820118CA8009B5DF5 /* UINavigationBar+BorderMargin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+BorderMargin.h"; sourceTree = "<group>"; };
-		D592E1A920118CA8009B5DF5 /* UINavigationBar+BorderMargin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+BorderMargin.m"; sourceTree = "<group>"; };
 		D592E1B72011F6BF009B5DF5 /* SHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHeaderView.h; sourceTree = "<group>"; };
 		D592E1B82011F6BF009B5DF5 /* SHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SHeaderView.m; sourceTree = "<group>"; };
 		D5957AB820073B9000F6EE60 /* SCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCache.h; sourceTree = "<group>"; };
@@ -830,8 +827,6 @@
 		D592E1A720118C7B009B5DF5 /* Category */ = {
 			isa = PBXGroup;
 			children = (
-				D592E1A820118CA8009B5DF5 /* UINavigationBar+BorderMargin.h */,
-				D592E1A920118CA8009B5DF5 /* UINavigationBar+BorderMargin.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -1304,7 +1299,6 @@
 				D54894DF1FF235AD00F2019B /* AppContext+Cache.m in Sources */,
 				D5029813200C5B41008375F9 /* TBSwitchCell.m in Sources */,
 				D5709CD3200F3852007BBD4C /* SLanguage.m in Sources */,
-				D592E1AA20118CA8009B5DF5 /* UINavigationBar+BorderMargin.m in Sources */,
 				D502981E200D9127008375F9 /* TBTextCell.m in Sources */,
 				D5957B0E200750FA00F6EE60 /* SCommonModel.mm in Sources */,
 				D5029806200C57B7008375F9 /* TBExitModel.m in Sources */,
