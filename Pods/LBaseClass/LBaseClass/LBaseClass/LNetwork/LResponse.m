@@ -18,7 +18,7 @@
     [super initialize];
     
     self.status = NO;
-    self.msg = nil;
+    self.msg = @"";
 }
 
 @end

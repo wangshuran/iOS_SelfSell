@@ -15,8 +15,7 @@
 #pragma mark - Interface
 
 - (instancetype)init {
-    self = [super init];
-    
+    self = [super init];    
     [self initialize];
     
     return self;
@@ -24,7 +23,6 @@
 
 - (instancetype)initWithStyle:(UITableViewStyle)style {
     self = [super initWithStyle:style];
-    
     [self initialize];
     
     return self;
@@ -46,37 +44,19 @@
 //    return self;
 //}
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-}
-
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    
     if (self.navigationController && self.hiddenNavbar != self.navigationController.navigationBar.hidden) {
         self.navigationController.navigationBar.hidden = self.hiddenNavbar;
     }
-    
     if (self.tabBarController && self.hiddenTabar != self.tabBarController.tabBar.hidden) {
         self.tabBarController.tabBar.hidden = self.hiddenTabar;
     }
-    
-    
     [self setNeedsStatusBarAppearanceUpdate];
-}
-
-- (void)viewWillDisappear:(BOOL)animated {
-    [super viewWillDisappear:animated];
-    
 }
 
 - (void)setHiddenNavbar:(BOOL)hiddenNavbar {
     _hiddenNavbar = hiddenNavbar;
-    
     if (self.navigationController && hiddenNavbar != self.navigationController.navigationBar.hidden) {
         self.navigationController.navigationBar.hidden = hiddenNavbar;
     }
@@ -84,7 +64,6 @@
 
 - (void)setHiddenTabar:(BOOL)hiddenTabar {
     _hiddenTabar = hiddenTabar;
-    
     if (self.tabBarController && hiddenTabar != self.tabBarController.tabBar.hidden) {
         self.tabBarController.tabBar.hidden = hiddenTabar;
     }

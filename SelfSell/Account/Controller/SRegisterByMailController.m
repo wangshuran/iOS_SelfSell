@@ -64,6 +64,20 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     self.vNavLeft.hidden = NO;
+    
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+    [self setNavbarBackColor:[UIColor colorWithRed:26.0f / 255.0f green:26.0f / 255.0f blue:26.0f / 255.0f alpha:1.0f]];
+    [self setNavbarBackgroundColor:[UIColor colorWithRed:26.0f / 255.0f green:26.0f / 255.0f blue:26.0f / 255.0f alpha:1.0f]];
+    self.view.backgroundColor = [UIColor colorWithRed:26.0f / 255.0f green:26.0f / 255.0f blue:26.0f / 255.0f alpha:1.0f];
+    
+}
+
+- (NSString *)title {
+    return SLocal(@"register_title");
 }
 
 - (SView *)v0 {
@@ -139,7 +153,7 @@
 - (SImageView *)imgEmail {
     if (!_imgEmail) {
         _imgEmail = [[SImageView alloc] init];
-        _imgEmail.image = [UIImage imageNamed:@"fund_logo_normal"];
+        _imgEmail.image = [UIImage imageNamed:@"login_email"];
     }
     
     return _imgEmail;
@@ -148,7 +162,7 @@
 - (SImageView *)imgCode {
     if (!_imgCode) {
         _imgCode = [[SImageView alloc] init];
-        _imgCode.image = [UIImage imageNamed:@"fund_logo_normal"];
+        _imgCode.image = [UIImage imageNamed:@"login_code"];
     }
     
     return _imgCode;
@@ -157,7 +171,7 @@
 - (SImageView *)imgPwd {
     if (!_imgPwd) {
         _imgPwd = [[SImageView alloc] init];
-        _imgPwd.image = [UIImage imageNamed:@"fund_logo_normal"];
+        _imgPwd.image = [UIImage imageNamed:@"login_lock"];
     }
     
     return _imgPwd;
@@ -166,7 +180,7 @@
 - (SImageView *)imgComfirmPwd {
     if (!_imgComfirmPwd) {
         _imgComfirmPwd = [[SImageView alloc] init];
-        _imgComfirmPwd.image = [UIImage imageNamed:@"fund_logo_normal"];
+        _imgComfirmPwd.image = [UIImage imageNamed:@"login_coinfirmpassword"];
     }
     
     return _imgComfirmPwd;
@@ -175,15 +189,21 @@
 - (SImageView *)imgRecommendCode {
     if (!_imgRecommendCode) {
         _imgRecommendCode = [[SImageView alloc] init];
-        _imgRecommendCode.image = [UIImage imageNamed:@"fund_logo_normal"];
+        _imgRecommendCode.image = [UIImage imageNamed:@"login_recomcode"];
     }
     
     return _imgRecommendCode;
 }
 
+//register_huoqurenzhengma = "获取认证码";
+
 - (STextField *)txEmail {
     if (!_txEmail) {
-        
+        _txEmail = [[STextField alloc] init];
+        _txEmail.placeholder = SLocal(@"register_youxiang");
+        _txEmail.backgroundColor = [UIColor clearColor];
+        _txEmail.keyboardType = UIKeyboardTypeEmailAddress;
+        [_txEmail setPlaceholderColor:[UIColor colorWithRed:52.0f / 255.0f green:52.0f / 255.0f blue:52.0f / 255.0f alpha:1.0f]];
     }
     
     return _txEmail;
@@ -191,7 +211,10 @@
 
 - (STextField *)txCode {
     if (!_txCode) {
-        
+        _txCode = [[STextField alloc] init];
+        _txCode.placeholder = SLocal(@"register_youxiangrenzhengma");
+        _txCode.backgroundColor = [UIColor clearColor];
+        [_txCode setPlaceholderColor:[UIColor colorWithRed:52.0f / 255.0f green:52.0f / 255.0f blue:52.0f / 255.0f alpha:1.0f]];
     }
     
     return _txCode;
@@ -207,7 +230,10 @@
 
 - (STextField *)txPwd {
     if (!_txPwd) {
-        
+        _txPwd = [[STextField alloc] init];
+        _txPwd.placeholder = SLocal(@"register_mima");
+        _txPwd.backgroundColor = [UIColor clearColor];
+        [_txPwd setPlaceholderColor:[UIColor colorWithRed:52.0f / 255.0f green:52.0f / 255.0f blue:52.0f / 255.0f alpha:1.0f]];
     }
     
     return _txPwd;
@@ -215,7 +241,10 @@
 
 - (STextField *)txComfirmPwd {
     if (!_txComfirmPwd) {
-        
+        _txComfirmPwd = [[STextField alloc] init];
+        _txComfirmPwd.placeholder = SLocal(@"register_querenmiam");
+        _txComfirmPwd.backgroundColor = [UIColor clearColor];
+        [_txComfirmPwd setPlaceholderColor:[UIColor colorWithRed:52.0f / 255.0f green:52.0f / 255.0f blue:52.0f / 255.0f alpha:1.0f]];
     }
     
     return _txComfirmPwd;
@@ -223,7 +252,10 @@
 
 - (STextField *)txRecommendCode {
     if (!_txRecommendCode) {
-        
+        _txRecommendCode = [[STextField alloc] init];
+        _txRecommendCode.placeholder = SLocal(@"register_tuijianma");
+        _txRecommendCode.backgroundColor = [UIColor clearColor];
+        [_txRecommendCode setPlaceholderColor:[UIColor colorWithRed:52.0f / 255.0f green:52.0f / 255.0f blue:52.0f / 255.0f alpha:1.0f]];
     }
     
     return _txRecommendCode;
@@ -231,7 +263,9 @@
 
 - (SButton *)btnRegister {
     if (!_btnRegister) {
-        
+        _btnRegister = [[SButton alloc] init];
+        [_btnRegister setTitle:SLocal(@"register_zhuce") forState:UIControlStateNormal];
+        [_btnRegister setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     }
     
     return _btnRegister;
@@ -239,7 +273,8 @@
 
 - (SLabel *)lbInfo {
     if (!_lbInfo) {
-        
+        _lbInfo = [[SLabel alloc] init];
+        _lbInfo.text = SLocal(@"register_yiyouzhanghao");
     }
     
     return _lbInfo;
@@ -247,7 +282,9 @@
 
 - (SButton *)btnLogin {
     if (!_btnLogin) {
-        
+        _btnLogin = [[SButton alloc] init];
+        [_btnLogin setTitle:[SLocal(@"register_yiyouzhanghao") stringByAppendingString:SLocal(@"register_denglu")] forState:UIControlStateNormal];
+        [_btnLogin setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     }
     
     return _btnLogin;
@@ -306,30 +343,66 @@
         make.height.mas_equalTo(weakSelf.v0.mas_height);
     }];
     [self.imgEmail mas_updateConstraints:^(MASConstraintMaker * make) {
-        make.left.mas_equalTo(weakSelf.v0).offset(10.0f);
+        make.left.offset(10.0f);
         make.centerY.mas_equalTo(weakSelf.v0);
+        make.height.mas_equalTo(25.0f);
+        make.width.mas_equalTo(25.0f);
+    }];
+    [self.imgCode mas_updateConstraints:^(MASConstraintMaker * make) {
+        make.left.offset(10.0f);
+        make.centerY.mas_equalTo(weakSelf.v1);
         make.height.mas_equalTo(weakSelf.imgEmail.mas_height);
         make.width.mas_equalTo(weakSelf.imgEmail.mas_width);
     }];
     [self.imgPwd mas_updateConstraints:^(MASConstraintMaker * make) {
-        make.left.mas_equalTo(weakSelf.v2).offset(10.0f);
-        make.centerY.mas_equalTo(weakSelf.v0);
+        make.left.offset(10.0f);
+        make.centerY.mas_equalTo(weakSelf.v2);
         make.height.mas_equalTo(weakSelf.imgEmail.mas_height);
         make.width.mas_equalTo(weakSelf.imgEmail.mas_width);
     }];
     [self.imgComfirmPwd mas_updateConstraints:^(MASConstraintMaker * make) {
-        make.left.mas_equalTo(weakSelf.v3).offset(10.0f);
-        make.centerY.mas_equalTo(weakSelf.v0);
+        make.left.offset(10.0f);
+        make.centerY.mas_equalTo(weakSelf.v3);
         make.height.mas_equalTo(weakSelf.imgEmail.mas_height);
         make.width.mas_equalTo(weakSelf.imgEmail.mas_width);
     }];
     [self.imgRecommendCode mas_updateConstraints:^(MASConstraintMaker * make) {
-        make.left.mas_equalTo(weakSelf.v4).offset(10.0f);
-        make.centerY.mas_equalTo(weakSelf.v0);
+        make.left.offset(10.0f);
+        make.centerY.mas_equalTo(weakSelf.v4);
         make.height.mas_equalTo(weakSelf.imgEmail.mas_height);
         make.width.mas_equalTo(weakSelf.imgEmail.mas_width);
     }];
+    [self.txEmail mas_updateConstraints:^(MASConstraintMaker * make) {
+        make.top.bottom.right.mas_equalTo(weakSelf.v0);
+        make.left.mas_equalTo(weakSelf.imgEmail.mas_right).offset(10.0f);
+    }];
+    [self.txCode mas_updateConstraints:^(MASConstraintMaker * make) {
+        make.top.bottom.right.mas_equalTo(weakSelf.v1);
+        make.left.mas_equalTo(weakSelf.imgCode.mas_right).offset(10.0f);
+    }];
+    [self.txPwd mas_updateConstraints:^(MASConstraintMaker * make) {
+        make.top.bottom.right.mas_equalTo(weakSelf.v2);
+        make.left.mas_equalTo(weakSelf.imgPwd.mas_right).offset(10.0f);
+    }];
+    [self.txComfirmPwd mas_updateConstraints:^(MASConstraintMaker * make) {
+        make.top.bottom.right.mas_equalTo(weakSelf.v3);
+        make.left.mas_equalTo(weakSelf.imgComfirmPwd.mas_right).offset(10.0f);
+    }];
+    [self.txRecommendCode mas_updateConstraints:^(MASConstraintMaker * make) {
+        make.top.bottom.right.mas_equalTo(weakSelf.v4);
+        make.left.mas_equalTo(weakSelf.imgRecommendCode.mas_right).offset(10.0f);
+    }];
     
+    [self.btnRegister mas_updateConstraints:^(MASConstraintMaker * make) {
+        make.top.bottom.left.right.mas_equalTo(weakSelf.v5);
+    }];
+//    [self.lbInfo mas_updateConstraints:^(MASConstraintMaker * make) {
+//        make.top.bottom.right.mas_equalTo(weakSelf.v4);
+//        make.left.mas_equalTo(weakSelf.imgRecommendCode.mas_right).offset(10.0f);
+//    }];
+    [self.btnLogin mas_updateConstraints:^(MASConstraintMaker * make) {
+        make.top.bottom.left.right.mas_equalTo(weakSelf.v6);
+    }];
     
     
 }

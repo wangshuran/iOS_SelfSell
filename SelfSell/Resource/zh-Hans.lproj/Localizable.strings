@@ -10,9 +10,6 @@
 common_baocun = "保存";
 
 
-security_touch_unlocktitle = "通过验证指纹解锁";
-security_touch_pwdunlock = "密码验证";
-
 
 activity_title = "活动";
 
@@ -36,10 +33,28 @@ setting1_guanyu = "关于";
 
 
 about_title = "关于";
+about_ = "xxx";
 
 
 language_title = "语言";
+language_ = "xxx";
 
 
 updatepwd_title = "修改密码";
+updatepwd_ = "xxx";
 
+
+register_title = "注册";
+register_youxiang = "电子邮箱";
+register_youxiangrenzhengma = "邮箱认证码";
+register_huoqurenzhengma = "获取认证码";
+register_mima = "密码不少于6位";
+register_querenmiam = "确认密码";
+register_tuijianma = "推荐码(可选)";
+register_zhuce = "注册";
+register_yiyouzhanghao = "已有账号->";
+register_denglu = "登录";
+
+
+security_touch_unlocktitle = "通过验证指纹解锁";
+security_touch_pwdunlock = "密码验证";

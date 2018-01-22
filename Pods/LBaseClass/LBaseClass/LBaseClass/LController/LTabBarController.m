@@ -42,14 +42,6 @@
 //    return self;
 //}
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-}
-
 - (BOOL)shouldAutorotate {
     return self.selectedViewController.shouldAutorotate;
 }

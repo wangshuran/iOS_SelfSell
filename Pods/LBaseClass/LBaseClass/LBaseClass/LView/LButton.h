@@ -14,9 +14,14 @@
 /**
  按钮点击事件
  */
-typedef void(^LButtonClick)(LButton *);
+//typedef void(^LButtonClick)(LButton *);
 
 @interface LButton : UIButton<LInitProtocol>
+
+/**
+ 弧度为5的圆角按钮
+ */
++ (instancetype)btnCorner_5;
 
 /**
  唯一标示

@@ -54,15 +54,15 @@
 }
 
 - (void)setPlaceholderFont:(UIFont *)font {
-    [self setValue:font forKey:@"_placeholderLabel.font"];
+    [self setValue:font forKeyPath:@"_placeholderLabel.font"];
 }
 
 - (void)setPlaceholderColor:(UIColor *)color {
-    [self setValue:color forKey:@"_placeholderLabel.textColor"];
+    [self setValue:color forKeyPath:@"_placeholderLabel.textColor"];
 }
 
 - (void)setPlaceholderAligment:(NSTextAlignment)alignment {
-    [self setValue:[NSNumber numberWithInteger:alignment] forKey:@"_placeholderLabel.textAligment"];
+    [self setValue:[NSNumber numberWithInteger:alignment] forKeyPath:@"_placeholderLabel.textAligment"];
 }
 
 #pragma mark - LInitProtocol

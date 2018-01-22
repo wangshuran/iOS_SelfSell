@@ -20,8 +20,7 @@
 #pragma mark - Interface
 
 - (instancetype)init {
-    self = [super init];
-    
+    self = [super init];    
     [self initialize];
     
     return self;
@@ -43,34 +42,18 @@
 //    return self;
 //}
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-}
-
 - (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];    
-    
+    [super viewWillAppear:animated];
     if (self.navigationController && self.hiddenNavbar != self.navigationController.navigationBar.hidden) {
         self.navigationController.navigationBar.hidden = self.hiddenNavbar;
     }
-    
     if (self.tabBarController && self.hiddenTabar != self.tabBarController.tabBar.hidden) {
         self.tabBarController.tabBar.hidden = self.hiddenTabar;
     }
-    
     [self setNavbarBackgroundColor:[UIColor whiteColor]];
     [self setNavbarBackColor:[UIColor blackColor]];
     [self setNavbarTitleColor:[UIColor blackColor]];
-    
     [self setNeedsStatusBarAppearanceUpdate];
-}
-
-- (void)viewWillDisappear:(BOOL)animated {
-    [super viewWillDisappear:animated];
 }
 
 - (BOOL)prefersStatusBarHidden {
@@ -79,7 +62,6 @@
 
 - (void)setHiddenNavbar:(BOOL)hiddenNavbar {
     _hiddenNavbar = hiddenNavbar;
-    
     if (self.navigationController && hiddenNavbar != self.navigationController.navigationBar.hidden) {
         self.navigationController.navigationBar.hidden = hiddenNavbar;
     }
@@ -87,7 +69,6 @@
 
 - (void)setHiddenTabar:(BOOL)hiddenTabar {
     _hiddenTabar = hiddenTabar;
-    
     if (self.tabBarController && hiddenTabar != self.tabBarController.tabBar.hidden) {
         self.tabBarController.tabBar.hidden = hiddenTabar;
     }
@@ -95,8 +76,7 @@
 
 - (void)setNavbarBackgroundColor:(UIColor *)color {
     if (color && self.navigationController) {
-        self.navigationController.navigationBar.barTintColor = color;
-        
+        self.navigationController.navigationBar.barTintColor = color;        
         //自动识别状态栏颜色，根据导航栏背景颜色色系
         self.navigationController.navigationBar.barStyle = [color isDark] ? UIStatusBarStyleLightContent : UIStatusBarStyleDefault;
     }

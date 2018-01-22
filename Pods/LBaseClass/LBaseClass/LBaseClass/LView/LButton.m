@@ -13,6 +13,14 @@
 
 #pragma mark - Interface
 
++ (instancetype)btnCorner_5 {
+    LButton * btn = [[LButton alloc] init];
+    btn.layer.cornerRadius = 5.0f;
+    btn.layer.masksToBounds = YES;
+    
+    return btn;
+}
+
 - (instancetype)init {
     self = [super init];
     

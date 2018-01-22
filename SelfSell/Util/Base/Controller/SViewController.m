@@ -34,6 +34,11 @@
     return UIStatusBarStyleDefault;
 }
 
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    [super touchesBegan:touches withEvent:event];
+    [self.view endEditing:YES];
+}
+
 - (SButton *)btnLeft {
     if (!_btnLeft) {
         _btnLeft = [[SButton alloc] init];
