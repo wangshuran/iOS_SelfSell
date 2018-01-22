@@ -43,29 +43,28 @@ LCmd * const LCmdGetSetting1 = @"LCmdGetSetting1";
     {
         TBArrowModel * model = [[TBArrowModel alloc] init];
         model.uid = kwodetuijianma;
-        model.title = @"我的推荐码";
+        model.title = SLocal(@"setting0_tuijianma");        
         model.value = @"677844";
         [data addObject:model];
     }{
         TBArrowModel * model = [[TBArrowModel alloc] init];
         model.uid = kgugeyanzheng;
-        model.title = @"谷歌验证";
-        model.value = @"已开启";
+        model.title = SLocal(@"setting0_gugeyanzheng");
+        model.value = SLocal(@"setting0_gugeyanzhengzhi");
         model.destVCClass = SGoogleValidateController.class;
         [data addObject:model];
     }{
         TBArrowModel * model = [[TBArrowModel alloc] init];
         model.uid = kshezhi;
-        model.title = @"设置";
+        model.title = SLocal(@"setting0_shezhi");
         model.destVCClass = SSetting1Controller.class;
         [data addObject:model];
     }{
         TBExitModel * model = [[TBExitModel alloc] init];
         model.uid = ktuichu;
-        model.title = @"退出";
+        model.title = SLocal(@"setting0_tuichu");
         [data addObject:model];
     }
-    
     TBSectionModel * section = [[TBSectionModel alloc] init];
     section.items = data;
     
@@ -77,36 +76,35 @@ LCmd * const LCmdGetSetting1 = @"LCmdGetSetting1";
     {
         TBArrowModel * model = [[TBArrowModel alloc] init];
         model.uid = kgenggaimima;
-        model.title = @"更改密码";
+        model.title = SLocal(@"setting1_xiugaimima");
         model.destVCClass = SUpdatePWDController.class;
         [data addObject:model];
     }{
         TBSwitchModel * model = [[TBSwitchModel alloc] init];
         model.uid = kzhiwen;
-        model.title = @"指纹";
+        model.title = SLocal(@"setting1_zhiwen");
         SCommonModel * commonModel = (SCommonModel *)[[AppContext sharedAppContext].accountDao getObjectFromTable:[[SCommonModel alloc] init] condition:SCommonModel.key == kIsOpenTouchID];
         model.isOn = commonModel.value.boolValue;
         [data addObject:model];
     }{
         TBArrowModel * model = [[TBArrowModel alloc] init];
         model.uid = kyuyan;
-        model.title = @"语言";
+        model.title = SLocal(@"setting1_yuyan");
         model.destVCClass = SLanguageController.class;
         [data addObject:model];
     }{
         TBArrowModel * model = [[TBArrowModel alloc] init];
         model.uid = kguanyu;
-        model.title = @"关于";
+        model.title = SLocal(@"setting1_guanyu");
         model.value = [NSString stringWithFormat:@"%@.%@", [LAppInfo CFBundleShortVersionString], [LAppInfo CFBundleVersion]];
         model.destVCClass = SAboutController.class;
         [data addObject:model];
-    }
-    
+    }    
     TBSectionModel * section = [[TBSectionModel alloc] init];
     section.headerHeight = 20.0f;
     section.items = data;
     
-    return [NSArray arrayWithObject:section];
+    return [NSArray arrayWithObjects:section, section, section, section, section, section, section, section, section, section, section, section, section, section, section, section, section, section, section, section, section, section, section, section, section, section, section, section, section, section, section, section, section, section, section, section, section, section, section, section, section, section, section, section, section, section, section, nil];
 }
 
 @end

@@ -60,7 +60,7 @@
     if (!_btnRight) {
         _btnRight = [[SButton alloc] init];
         _btnRight.frame = CGRectMake(0.0f, 0.0f, 64.0f, 44.0f);
-        [_btnRight setTitle:SLocal(@"保存") forState:UIControlStateNormal];
+        [_btnRight setTitle:SLocal(@"common_baocun") forState:UIControlStateNormal];
         [_btnRight setTitleColor:[UIColor colorWithRed:255.0f / 255.0f green:140.0f / 255.0f blue:0.0f / 255.0f alpha:0.3f] forState:UIControlStateNormal];
         [_btnRight setTitleColor:[UIColor colorWithRed:255.0f / 255.0f green:140.0f / 255.0f blue:0.0f / 255.0f alpha:0.3f] forState:UIControlStateHighlighted];
         [_btnRight addTarget:self action:@selector(updateLanguage:) forControlEvents:UIControlEventTouchUpInside];
