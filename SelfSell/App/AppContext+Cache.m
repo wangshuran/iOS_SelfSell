@@ -22,7 +22,6 @@
 - (void)noticeClearCache:(NSNotification *)notification {
     [[SDImageCache sharedImageCache] clearMemory];//清除内存缓存
     [[SDImageCache sharedImageCache] clearDiskOnCompletion:nil];//清除闪存缓存
-    
     [self.languageCache removeAllObjects];
 }
 

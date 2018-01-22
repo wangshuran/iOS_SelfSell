@@ -70,10 +70,10 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    if (!self.navigationController || self.navigationController.viewControllers.count < 2) {
-        self.vNavLeft.hidden = YES;
-    }else {
+    if (self.navigationController && self.navigationController.viewControllers.count > 1) {
         self.vNavLeft.hidden = NO;
+    }else {
+        self.vNavLeft.hidden = YES;
     }
 }
 

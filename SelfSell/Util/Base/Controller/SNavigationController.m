@@ -33,7 +33,7 @@
 //    UIBarButtonItem * back = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
 //    item.backBarButtonItem = back;
 //
-//    UIImage *image = [[UIImage imageNamed:@"qqzoneShare"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+//    UIImage *image = [[UIImage imageNamed:@"xxx"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
 //    navigationBar.backIndicatorImage = image;
 //    navigationBar.backIndicatorTransitionMaskImage = image;
 //

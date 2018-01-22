@@ -65,8 +65,8 @@ LSingleton_m(AppContext);
     if (!_rootVC) {
         _rootVC = [[NSClassFromString(@"STabBarController") alloc] init];
         [self reloadRootVC];
-        _rootVC.tabBar.tintColor = [UIColor colorWithRed:1.0f / 255.0f green:199.0f / 255.0f blue:209.0f / 255.0f alpha:1.0f];
-        
+        _rootVC.tabBar.tintColor = kColorOrange;
+        _rootVC.tabBar.barTintColor = kColorBlack;
         _rootVC.selectedViewController = self.accountNav;
     }
     
@@ -75,12 +75,12 @@ LSingleton_m(AppContext);
 
 - (SNavigationController *)fundNav {
     if (!_fundNav) {
-        NSDictionary * normal = [NSDictionary dictionaryWithObjectsAndKeys:[UIColor redColor], NSForegroundColorAttributeName, nil];
-        NSDictionary * selected = [NSDictionary dictionaryWithObjectsAndKeys:[UIColor yellowColor], NSForegroundColorAttributeName, nil];
-        
+        NSDictionary * normal = [NSDictionary dictionaryWithObjectsAndKeys:kColorDarkGray, NSForegroundColorAttributeName, nil];
+        NSDictionary * selected = [NSDictionary dictionaryWithObjectsAndKeys:kColorOrange, NSForegroundColorAttributeName, nil];
+
         _fundNav = [[SNavigationController alloc] initWithRootViewController:self.fundVC];
-        _fundNav.tabBarItem.image = [UIImage imageNamed:@"qqzoneShare"];
-        _fundNav.tabBarItem.selectedImage = [UIImage imageNamed:@"qqzoneShare"];
+        _fundNav.tabBarItem.image = [UIImage imageNamed:@"fund_logo_normal"];
+        _fundNav.tabBarItem.selectedImage = [UIImage imageNamed:@"fund_logo_select"];
         [_fundNav.tabBarItem setTitleTextAttributes:normal forState:UIControlStateNormal];
         [_fundNav.tabBarItem setTitleTextAttributes:selected forState:UIControlStateSelected];
     }
@@ -90,12 +90,12 @@ LSingleton_m(AppContext);
 
 - (SNavigationController *)activityNav {
     if (!_activityNav) {
-        NSDictionary * normal = [NSDictionary dictionaryWithObjectsAndKeys:[UIColor redColor], NSForegroundColorAttributeName, nil];
-        NSDictionary * selected = [NSDictionary dictionaryWithObjectsAndKeys:[UIColor yellowColor], NSForegroundColorAttributeName, nil];
-        
+        NSDictionary * normal = [NSDictionary dictionaryWithObjectsAndKeys:kColorDarkGray, NSForegroundColorAttributeName, nil];
+        NSDictionary * selected = [NSDictionary dictionaryWithObjectsAndKeys:kColorOrange, NSForegroundColorAttributeName, nil];
+
         _activityNav = [[SNavigationController alloc] initWithRootViewController:self.activityVC];
-        _activityNav.tabBarItem.image = [UIImage imageNamed:@"qqzoneShare"];
-        _activityNav.tabBarItem.selectedImage = [UIImage imageNamed:@"qqzoneShare"];
+        _activityNav.tabBarItem.image = [UIImage imageNamed:@"activity_logo_normal"];
+        _activityNav.tabBarItem.selectedImage = [UIImage imageNamed:@"activity_logo_select"];
         [_activityNav.tabBarItem setTitleTextAttributes:normal forState:UIControlStateNormal];
         [_activityNav.tabBarItem setTitleTextAttributes:selected forState:UIControlStateSelected];
     }
@@ -105,12 +105,12 @@ LSingleton_m(AppContext);
 
 - (SNavigationController *)accountNav {
     if (!_accountNav) {
-        NSDictionary * normal = [NSDictionary dictionaryWithObjectsAndKeys:[UIColor redColor], NSForegroundColorAttributeName, nil];
-        NSDictionary * selected = [NSDictionary dictionaryWithObjectsAndKeys:[UIColor yellowColor], NSForegroundColorAttributeName, nil];
+        NSDictionary * normal = [NSDictionary dictionaryWithObjectsAndKeys:kColorDarkGray, NSForegroundColorAttributeName, nil];
+        NSDictionary * selected = [NSDictionary dictionaryWithObjectsAndKeys:kColorOrange, NSForegroundColorAttributeName, nil];
         
         _accountNav = [[SNavigationController alloc] initWithRootViewController:self.setting0VC];
-        _accountNav.tabBarItem.image = [UIImage imageNamed:@"qqzoneShare"];
-        _accountNav.tabBarItem.selectedImage = [UIImage imageNamed:@"qqzoneShare"];
+        _accountNav.tabBarItem.image = [UIImage imageNamed:@"account_logo_normal"];
+        _accountNav.tabBarItem.selectedImage = [UIImage imageNamed:@"account_logo_select"];
         [_accountNav.tabBarItem setTitleTextAttributes:normal forState:UIControlStateNormal];
         [_accountNav.tabBarItem setTitleTextAttributes:selected forState:UIControlStateSelected];
     }
@@ -179,9 +179,9 @@ LSingleton_m(AppContext);
     _languageCache = [[NSMutableDictionary alloc] initWithCapacity:1024];
     
 #ifdef DEBUG
-    self.host = @"http://www.suizhi.com/DRM";
+    self.host = @"http://172.16.33.188:9003";
 #else
-    self.host = @"http://www.suizhi.com/DRM";
+    self.host = @"http://172.16.33.188:9003";
 #endif
 }
 

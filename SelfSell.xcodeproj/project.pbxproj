@@ -86,6 +86,12 @@
 		D5ACA7452015CAB900A6C84F /* UINavigationBarContentView+Margin.m in Sources */ = {isa = PBXBuildFile; fileRef = D5ACA73E2015CAB900A6C84F /* UINavigationBarContentView+Margin.m */; };
 		D5ACA7462015CAB900A6C84F /* UINavigationBarContentViewLayout+Margin.m in Sources */ = {isa = PBXBuildFile; fileRef = D5ACA7402015CAB900A6C84F /* UINavigationBarContentViewLayout+Margin.m */; };
 		D5ACA7472015CAB900A6C84F /* UINavigationItem+Margin.m in Sources */ = {isa = PBXBuildFile; fileRef = D5ACA7422015CAB900A6C84F /* UINavigationItem+Margin.m */; };
+		D5ACA74A2015E72200A6C84F /* SSendMailRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = D5ACA7492015E72200A6C84F /* SSendMailRequest.m */; };
+		D5ACA74D2015E73900A6C84F /* SSendMailResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = D5ACA74C2015E73900A6C84F /* SSendMailResponse.m */; };
+		D5ACA7502015E84200A6C84F /* SRegisterByMailRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = D5ACA74F2015E84200A6C84F /* SRegisterByMailRequest.m */; };
+		D5ACA7532015E85700A6C84F /* SRegisterByMailResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = D5ACA7522015E85700A6C84F /* SRegisterByMailResponse.m */; };
+		D5ACA7562015E89000A6C84F /* SRegisterByMailController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5ACA7552015E89000A6C84F /* SRegisterByMailController.m */; };
+		D5ACA75A2015F28900A6C84F /* LGetTextFiled.m in Sources */ = {isa = PBXBuildFile; fileRef = D5ACA7592015F28900A6C84F /* LGetTextFiled.m */; };
 		D5DB07441FEA692F00A347B1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D5DB07431FEA692F00A347B1 /* main.m */; };
 		D5E610C8200884AD003C847A /* STouchID.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E610C7200884AD003C847A /* STouchID.m */; };
 		D5E610D320089528003C847A /* SFundController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E610D220089528003C847A /* SFundController.m */; };
@@ -276,6 +282,18 @@
 		D5ACA7402015CAB900A6C84F /* UINavigationBarContentViewLayout+Margin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBarContentViewLayout+Margin.m"; sourceTree = "<group>"; };
 		D5ACA7412015CAB900A6C84F /* UINavigationItem+Margin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationItem+Margin.h"; sourceTree = "<group>"; };
 		D5ACA7422015CAB900A6C84F /* UINavigationItem+Margin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationItem+Margin.m"; sourceTree = "<group>"; };
+		D5ACA7482015E72200A6C84F /* SSendMailRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSendMailRequest.h; sourceTree = "<group>"; };
+		D5ACA7492015E72200A6C84F /* SSendMailRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSendMailRequest.m; sourceTree = "<group>"; };
+		D5ACA74B2015E73900A6C84F /* SSendMailResponse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSendMailResponse.h; sourceTree = "<group>"; };
+		D5ACA74C2015E73900A6C84F /* SSendMailResponse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSendMailResponse.m; sourceTree = "<group>"; };
+		D5ACA74E2015E84200A6C84F /* SRegisterByMailRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SRegisterByMailRequest.h; sourceTree = "<group>"; };
+		D5ACA74F2015E84200A6C84F /* SRegisterByMailRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SRegisterByMailRequest.m; sourceTree = "<group>"; };
+		D5ACA7512015E85700A6C84F /* SRegisterByMailResponse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SRegisterByMailResponse.h; sourceTree = "<group>"; };
+		D5ACA7522015E85700A6C84F /* SRegisterByMailResponse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SRegisterByMailResponse.m; sourceTree = "<group>"; };
+		D5ACA7542015E89000A6C84F /* SRegisterByMailController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SRegisterByMailController.h; sourceTree = "<group>"; };
+		D5ACA7552015E89000A6C84F /* SRegisterByMailController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SRegisterByMailController.m; sourceTree = "<group>"; };
+		D5ACA7582015F28900A6C84F /* LGetTextFiled.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LGetTextFiled.h; sourceTree = "<group>"; };
+		D5ACA7592015F28900A6C84F /* LGetTextFiled.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LGetTextFiled.m; sourceTree = "<group>"; };
 		D5DB07041FEA440000A347B1 /* define_notice.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = define_notice.h; sourceTree = "<group>"; };
 		D5DB07051FEA443C00A347B1 /* define.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = define.h; sourceTree = "<group>"; };
 		D5DB071F1FEA4E0A00A347B1 /* define_enum.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = define_enum.h; sourceTree = "<group>"; };
@@ -586,6 +604,10 @@
 			children = (
 				D54895041FF23F3700F2019B /* SLoginController.h */,
 				D54895051FF23F3700F2019B /* SLoginController.m */,
+				D5ACA7542015E89000A6C84F /* SRegisterByMailController.h */,
+				D5ACA7552015E89000A6C84F /* SRegisterByMailController.m */,
+				D5ACA7582015F28900A6C84F /* LGetTextFiled.h */,
+				D5ACA7592015F28900A6C84F /* LGetTextFiled.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -736,6 +758,10 @@
 			children = (
 				D54894FD1FF23F0C00F2019B /* SLoginByAccountRequest.h */,
 				D54894FE1FF23F0C00F2019B /* SLoginByAccountRequest.m */,
+				D5ACA7482015E72200A6C84F /* SSendMailRequest.h */,
+				D5ACA7492015E72200A6C84F /* SSendMailRequest.m */,
+				D5ACA74E2015E84200A6C84F /* SRegisterByMailRequest.h */,
+				D5ACA74F2015E84200A6C84F /* SRegisterByMailRequest.m */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -745,6 +771,10 @@
 			children = (
 				D54895001FF23F0C00F2019B /* SLoginByAccountResponse.h */,
 				D54895011FF23F0C00F2019B /* SLoginByAccountResponse.m */,
+				D5ACA74B2015E73900A6C84F /* SSendMailResponse.h */,
+				D5ACA74C2015E73900A6C84F /* SSendMailResponse.m */,
+				D5ACA7512015E85700A6C84F /* SRegisterByMailResponse.h */,
+				D5ACA7522015E85700A6C84F /* SRegisterByMailResponse.m */,
 			);
 			path = Response;
 			sourceTree = "<group>";
@@ -1290,6 +1320,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5ACA7562015E89000A6C84F /* SRegisterByMailController.m in Sources */,
 				D5E610C8200884AD003C847A /* STouchID.m in Sources */,
 				D5957AEC20073B9000F6EE60 /* SDao.mm in Sources */,
 				D54894E21FF235AD00F2019B /* AppDelegate.m in Sources */,
@@ -1331,11 +1362,13 @@
 				D5957AFA20073B9000F6EE60 /* SWebView.m in Sources */,
 				D54894CC1FF22C3E00F2019B /* STalentsController.m in Sources */,
 				D5ACA7462015CAB900A6C84F /* UINavigationBarContentViewLayout+Margin.m in Sources */,
+				D5ACA7532015E85700A6C84F /* SRegisterByMailResponse.m in Sources */,
 				D5957AEF20073B9000F6EE60 /* SRequest.m in Sources */,
 				D5709CC3200EE021007BBD4C /* SAboutController.m in Sources */,
 				D54894DF1FF235AD00F2019B /* AppContext+Cache.m in Sources */,
 				D5029813200C5B41008375F9 /* TBSwitchCell.m in Sources */,
 				D5709CD3200F3852007BBD4C /* SLanguage.m in Sources */,
+				D5ACA74A2015E72200A6C84F /* SSendMailRequest.m in Sources */,
 				D502981E200D9127008375F9 /* TBTextCell.m in Sources */,
 				D5957B0E200750FA00F6EE60 /* SCommonModel.mm in Sources */,
 				D5029806200C57B7008375F9 /* TBExitModel.m in Sources */,
@@ -1350,8 +1383,10 @@
 				D502980C200C58CC008375F9 /* TBCell.m in Sources */,
 				D5957AF320073B9000F6EE60 /* SImageView.m in Sources */,
 				D54895031FF23F0D00F2019B /* SLoginByAccountResponse.m in Sources */,
+				D5ACA75A2015F28900A6C84F /* LGetTextFiled.m in Sources */,
 				D54894D51FF22CAD00F2019B /* SAccountModel.m in Sources */,
 				D5957AF220073B9000F6EE60 /* SButton.m in Sources */,
+				D5ACA74D2015E73900A6C84F /* SSendMailResponse.m in Sources */,
 				D54895061FF23F3700F2019B /* SLoginController.m in Sources */,
 				D5709CC6200EE03A007BBD4C /* SUpdatePWDController.m in Sources */,
 				D5029803200C578F008375F9 /* TBArrowModel.m in Sources */,
@@ -1364,6 +1399,7 @@
 				D5957AF420073B9000F6EE60 /* SLabel.m in Sources */,
 				D5709CCC200EE710007BBD4C /* TBCheckCell.m in Sources */,
 				D54483481FED049300D2F681 /* SVersionService.m in Sources */,
+				D5ACA7502015E84200A6C84F /* SRegisterByMailRequest.m in Sources */,
 				D5957AEB20073B9000F6EE60 /* SViewController.m in Sources */,
 				D5957AF120073B9000F6EE60 /* SService.m in Sources */,
 			);
