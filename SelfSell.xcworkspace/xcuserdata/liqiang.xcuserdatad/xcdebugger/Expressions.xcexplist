@@ -6,10 +6,10 @@
          contextName = "-[SLanguageController viewDidLoad]:SLanguageController.m">
          <PersistentStrings>
             <PersistentString
-               value = "self.navigationItem.rightBarButtonItem">
+               value = "self.navigationItem">
             </PersistentString>
             <PersistentString
-               value = "self.navigationItem">
+               value = "self.navigationItem.rightBarButtonItem">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -23,10 +23,10 @@
          contextName = "__38-[SLanguageController languageService]_block_invoke:SLanguageController.m">
       </ContextState>
       <ContextState
-         contextName = "-[TBCheckCell setModel:]:TBCheckCell.m">
+         contextName = "-[TBTableView tableView:viewForHeaderInSection:]:TBTableView.m">
       </ContextState>
       <ContextState
-         contextName = "-[TBTableView tableView:viewForHeaderInSection:]:TBTableView.m">
+         contextName = "-[TBCheckCell setModel:]:TBCheckCell.m">
       </ContextState>
       <ContextState
          contextName = "-[NSObject(MJKeyValue) mj_JSONData]:NSObject+MJKeyValue.m">
@@ -51,10 +51,27 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "-[SLanguageController viewDidAppear:]:SLanguageController.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[SViewController viewDidAppear:]:SViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "view.bounds">
+            </PersistentString>
+            <PersistentString
+               value = "stackView.frame">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "::-[SSetting1Controller noticeCellEvent:](NSNotification *):SSetting1Controller.mm">
       </ContextState>
       <ContextState
          contextName = "-[SLanguageController loadView]:SLanguageController.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[SNavigationController navigationBar:didPushItem:]:SNavigationController.m">
       </ContextState>
    </ContextStates>
 </VariablesViewState>
