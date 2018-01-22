@@ -27,10 +27,6 @@
 
 #pragma mark - Interface
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-}
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -69,12 +65,6 @@
     if (!_btnRight) {
         _btnRight = [[SButton alloc] init];
         _btnRight.frame = CGRectMake(0.0f, 0.0f, 64.0f, 44.0f);
-        
-        
-        _btnRight.backgroundColor = [UIColor randomColor];
-        _btnRight.contentHorizontalAlignment = UIControlContentHorizontalAlignmentRight;
-        
-        
         [_btnRight setTitle:SLocal(@"保存") forState:UIControlStateNormal];
         [_btnRight setTitleColor:[UIColor colorWithRed:255.0f / 255.0f green:140.0f / 255.0f blue:0.0f / 255.0f alpha:0.3f] forState:UIControlStateNormal];
         [_btnRight setTitleColor:[UIColor colorWithRed:255.0f / 255.0f green:140.0f / 255.0f blue:0.0f / 255.0f alpha:0.3f] forState:UIControlStateHighlighted];
@@ -88,22 +78,13 @@
     [super loadView];
     
     __weak typeof(self) weakSelf = self;
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:self.btnRight];
+    [self.vNavRight addSubview:self.btnRight];
     [self.view addSubview:self.tbTableView];
-    
     [self.tbTableView mas_updateConstraints:^(MASConstraintMaker * make) {
         make.top.bottom.left.right.mas_equalTo(weakSelf.view);
     }];
     
     [self.languageService execute:[LCmdTransfer cmd:LCmdGetAll value:nil]];
-}
-
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-}
-
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
 }
 
 #pragma mark - LInitProtocol
