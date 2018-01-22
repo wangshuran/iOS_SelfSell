@@ -11,6 +11,8 @@
 
 @interface SViewController ()
 
+@property (nonatomic, strong) SButton * btnLeft;
+
 @end
 
 @implementation SViewController
@@ -32,11 +34,25 @@
     return UIStatusBarStyleDefault;
 }
 
+- (SButton *)btnLeft {
+    if (!_btnLeft) {
+        _btnLeft = [[SButton alloc] init];
+        _btnLeft.frame = CGRectMake(0.0f, 0.0f, 64.0f, 44.0f);
+        _btnLeft.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
+        _btnLeft.imageEdgeInsets = UIEdgeInsetsMake(0.0f, 10.0f, 0.0f, 0.0f);
+        [_btnLeft setImage:[UIImage imageNamed:@"fanhui"] forState:UIControlStateNormal];
+        [_btnLeft addTarget:self action:@selector(pop) forControlEvents:UIControlEventTouchUpInside];
+    }
+    
+    return _btnLeft;
+}
+
 - (SView *)vNavLeft {
     if (!_vNavLeft) {
         _vNavLeft = [[SView alloc] init];
         _vNavLeft.backgroundColor = [UIColor clearColor];
         _vNavLeft.frame = CGRectMake(0.0f, 0.0f, 64.0f, 44.0f);
+        [_vNavLeft addSubview:self.btnLeft];
     }
     
     return _vNavLeft;
@@ -63,7 +79,6 @@
 
 - (void)loadView {
     [super loadView];
-    
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:self.vNavLeft];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:self.vNavRight];
     self.navigationItem.leftMargin = 0.0f;
