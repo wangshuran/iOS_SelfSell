@@ -16,8 +16,8 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     [self.contentView addSubview:self.lbTitle];
     [self.contentView addSubview:self.lbValue];
-    [self.contentView addSubview:self.vLine];
-
+    [self.contentView addSubview:self.vBottomLine];
+    
     return self;
 }
 
@@ -63,13 +63,13 @@
     return _lbValue;
 }
 
-- (UIView *)vLine {
-    if (!_vLine) {
-        _vLine = [[UIView alloc] init];
-        _vLine.backgroundColor = [UIColor randomColor];
+- (UIView *)vBottomLine {
+    if (!_vBottomLine) {
+        _vBottomLine = [[UIView alloc] init];
+        _vBottomLine.backgroundColor = [UIColor randomColor];
     }
     
-    return _vLine;
+    return _vBottomLine;
 }
 
 @end
