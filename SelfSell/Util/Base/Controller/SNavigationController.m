@@ -16,4 +16,11 @@
 
 #pragma mark - Interface
 
+- (BOOL)navigationBar:(UINavigationBar *)navigationBar shouldPushItem:(UINavigationItem *)item {
+    UIBarButtonItem * back = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
+    item.backBarButtonItem = back;
+    
+    return YES;
+}
+
 @end
