@@ -22,15 +22,6 @@
 
 #pragma mark - Interface
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 - (NSString *)title {
     return SLocal(@"setting0_title");
 }

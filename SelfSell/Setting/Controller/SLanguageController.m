@@ -27,11 +27,6 @@
 
 #pragma mark - Interface
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 - (NSString *)title {
     return SLocal(@"language_title");
 }

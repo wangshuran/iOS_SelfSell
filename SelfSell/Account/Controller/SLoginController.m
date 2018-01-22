@@ -17,17 +17,8 @@
 
 #pragma mark - Interface
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-}
-
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    
     [self setNavbarBackgroundColor:[UIColor randomColor]];
     
     STouchID * touch = [[STouchID alloc] init];
