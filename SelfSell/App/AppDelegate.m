@@ -35,6 +35,8 @@
     [[AppContext sharedAppContext] startMonitoring];//自定义监听
     [self initDB];
     
+    SAccountModel * accountModel = [[AppContext sharedAppContext] getLastLoginAccount];
+    
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.rootViewController = [AppContext sharedAppContext].rootVC;
     [self.window makeKeyAndVisible];
@@ -129,9 +131,11 @@
 - (void)initDB {
     [[AppContext sharedAppContext].commonDao createTable:[[SModel alloc] init]];
     [[AppContext sharedAppContext].commonDao createTable:[[SCommonModel alloc] init]];
+    //[[AppContext sharedAppContext].commonDao createTable:[[SAccountModel alloc] init]];
     
     [[AppContext sharedAppContext].accountDao createTable:[[SModel alloc] init]];
     [[AppContext sharedAppContext].accountDao createTable:[[SCommonModel alloc] init]];
+    //[[AppContext sharedAppContext].accountDao createTable:[[SAccountModel alloc] init]];
     
     NSUserDefaults * userDefaults = [NSUserDefaults standardUserDefaults];
     NSString * lastInitDBVersion = [userDefaults objectForKey:kLastInitDBVersion];

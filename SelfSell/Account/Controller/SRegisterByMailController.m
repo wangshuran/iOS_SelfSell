@@ -341,7 +341,7 @@
                     return;
                 }
                 
-                [weakSelf loginByMail:email password:pwd];
+                [weakSelf loginByMail:email pwd:pwd];
             }];
         }];
     }
@@ -543,21 +543,23 @@
     }
 }
 
-- (void)loginByMail:(NSString *)email password:(NSString *)password {
+- (void)loginByMail:(NSString *)email pwd:(NSString *)pwd {
     __weak typeof(self) weakSelf = self;
     SLoginByMailRequest * request = [[SLoginByMailRequest alloc] init];
     request.email = email;
-    request.password = password;
+    request.password = pwd;
     [SNetwork request:request block:^(LRequest * request, LResponse * response) {
         if (!response.status) {//登录错误
             [MBProgressHUD showTitleToView:weakSelf.view postion:NHHUDPostionCenten title:response.msg];
             return;
         }
         SLoginByMailResponse * model = (SLoginByMailResponse *)response;
+        model.data.pwd = pwd;
         [[AppContext sharedAppContext].accountDao close];
         [AppContext sharedAppContext].accountDao = nil;
         [AppContext sharedAppContext].accountModel = model.data;
         [AppContext sharedAppContext].loginType = LoginTypeAccount;
+        [[AppContext sharedAppContext] updateLoginAccount:model.data];
         [weakSelf dismiss];
         SPostNotification(kNoticeFinishLogin);
     }];

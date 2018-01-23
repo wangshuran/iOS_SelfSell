@@ -99,8 +99,7 @@
     NSUserDefaults * userDefaults = [NSUserDefaults standardUserDefaults];
     
     @synchronized(self) {
-        NSMutableDictionary * info = [userDefaults objectForKey:identifier];
-        
+        NSMutableDictionary * info = [userDefaults objectForKey:identifier];        
         if (info) {
             info = [info mutableCopy];
         }else {
@@ -123,12 +122,10 @@
             return nil;
         }
         
-        SAccountModel * model = nil;
-        
+        SAccountModel * model = nil;        
         for (NSDictionary * accountInfo in info.allValues) {
             SAccountModel * accountModel = [SAccountModel mj_objectWithKeyValues:accountInfo];
-            
-            if (accountModel.loginTime > model.loginTime) {
+            if (accountModel.loginTime >= model.loginTime) {
                 model = accountModel;
             }
         }
@@ -148,7 +145,6 @@
         }
         
         NSMutableArray<SAccountModel *> * models = [[NSMutableArray alloc] initWithCapacity:info.count];
-        
         for (NSDictionary * accountInfo in info.allValues) {
             SAccountModel * accountModel = [SAccountModel mj_objectWithKeyValues:accountInfo];
             [models addObject:accountModel];

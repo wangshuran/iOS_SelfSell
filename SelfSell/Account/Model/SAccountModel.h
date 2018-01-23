@@ -15,6 +15,11 @@
  */
 @property (nonatomic, assign) NSTimeInterval loginTime;
 
+/**
+ 密码
+ */
+@property (nonatomic, copy) NSString * pwd;
+
 @property (nonatomic, copy) NSString * token;
 
 @property (nonatomic, copy) NSString * id;

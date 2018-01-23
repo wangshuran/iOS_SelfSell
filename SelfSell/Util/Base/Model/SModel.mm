@@ -33,6 +33,18 @@ WCDB_SYNTHESIZE(SModel, createTime)
 WCDB_SYNTHESIZE(SModel, displayOrder)
 WCDB_SYNTHESIZE(SModel, version)
 
+#pragma mark - LSerializableProtocol
+
+- (NSMutableDictionary *)getParameter {
+    NSMutableDictionary * keyValues = self.mj_keyValues;
+    [keyValues removeObjectForKey:@"debugDescription"];
+    [keyValues removeObjectForKey:@"description"];
+    [keyValues removeObjectForKey:@"hash"];
+    [keyValues removeObjectForKey:@"superclass"];
+    
+    return keyValues;
+}
+
 
 #pragma mark - LReflectProtocol
 

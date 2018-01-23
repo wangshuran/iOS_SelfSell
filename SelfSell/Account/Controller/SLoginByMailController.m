@@ -187,10 +187,12 @@
                     return;
                 }
                 SLoginByMailResponse * model = (SLoginByMailResponse *)response;
+                model.data.pwd = pwd;
                 [[AppContext sharedAppContext].accountDao close];
                 [AppContext sharedAppContext].accountDao = nil;
                 [AppContext sharedAppContext].accountModel = model.data;
                 [AppContext sharedAppContext].loginType = LoginTypeAccount;
+                [[AppContext sharedAppContext] updateLoginAccount:model.data];
                 [weakSelf dismiss];
                 SPostNotification(kNoticeFinishLogin);
                 btn.userInteractionEnabled = YES;
@@ -359,6 +361,9 @@
 }
 
 - (void)updateBtnLogin {
+    self.txEmail.text = @"liqiang01@new4g.cn";
+    self.txPwd.text = @"123456";
+    
     NSString * email = self.txEmail.text;
     NSString * pwd = self.txPwd.text;
     if ([NSString isNullOrEmpty:email] || [NSString isNullOrEmpty:pwd]) {
