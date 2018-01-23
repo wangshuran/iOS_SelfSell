@@ -152,7 +152,7 @@
         _txEmail.backgroundColor = [UIColor clearColor];
         _txEmail.keyboardType = UIKeyboardTypeEmailAddress;
         _txEmail.textColor = [UIColor whiteColor];
-        [_txEmail setPlaceholderColor:[UIColor colorWithRed:52.0f / 255.0f green:52.0f / 255.0f blue:52.0f / 255.0f alpha:1.0f]];
+        [_txEmail setPlaceholderColor:[UIColor colorWithRed:92.0f / 255.0f green:92.0f / 255.0f blue:92.0f / 255.0f alpha:1.0f]];
         [_txEmail.rac_textSignal subscribeNext:^(NSString * _Nullable x) {
             [weakSelf updateBtnLogin];
         }];
@@ -168,7 +168,7 @@
         _txCode.placeholder = SLocal(@"register_youxiangrenzhengma");
         _txCode.backgroundColor = [UIColor clearColor];
         _txCode.textColor = [UIColor whiteColor];
-        [_txCode setPlaceholderColor:[UIColor colorWithRed:52.0f / 255.0f green:52.0f / 255.0f blue:52.0f / 255.0f alpha:1.0f]];
+        [_txCode setPlaceholderColor:[UIColor colorWithRed:92.0f / 255.0f green:92.0f / 255.0f blue:92.0f / 255.0f alpha:1.0f]];
         [_txCode.rac_textSignal subscribeNext:^(NSString * _Nullable x) {
             [weakSelf updateBtnLogin];
         }];
@@ -230,7 +230,7 @@
         _txPwd.backgroundColor = [UIColor clearColor];
         _txPwd.textColor = [UIColor whiteColor];
         _txPwd.secureTextEntry = YES;
-        [_txPwd setPlaceholderColor:[UIColor colorWithRed:52.0f / 255.0f green:52.0f / 255.0f blue:52.0f / 255.0f alpha:1.0f]];
+        [_txPwd setPlaceholderColor:[UIColor colorWithRed:92.0f / 255.0f green:92.0f / 255.0f blue:92.0f / 255.0f alpha:1.0f]];
         [_txPwd.rac_textSignal subscribeNext:^(NSString * _Nullable x) {
             [weakSelf updateBtnLogin];
         }];
@@ -247,7 +247,7 @@
         _txComfirmPwd.backgroundColor = [UIColor clearColor];
         _txComfirmPwd.textColor = [UIColor whiteColor];
         _txComfirmPwd.secureTextEntry = YES;
-        [_txComfirmPwd setPlaceholderColor:[UIColor colorWithRed:52.0f / 255.0f green:52.0f / 255.0f blue:52.0f / 255.0f alpha:1.0f]];
+        [_txComfirmPwd setPlaceholderColor:[UIColor colorWithRed:92.0f / 255.0f green:92.0f / 255.0f blue:92.0f / 255.0f alpha:1.0f]];
         [_txComfirmPwd.rac_textSignal subscribeNext:^(NSString * _Nullable x) {
             [weakSelf updateBtnLogin];
         }];

@@ -134,7 +134,7 @@
         _txEmail.backgroundColor = [UIColor clearColor];
         _txEmail.keyboardType = UIKeyboardTypeEmailAddress;
         _txEmail.textColor = [UIColor whiteColor];
-        [_txEmail setPlaceholderColor:[UIColor colorWithRed:52.0f / 255.0f green:52.0f / 255.0f blue:52.0f / 255.0f alpha:1.0f]];
+        [_txEmail setPlaceholderColor:[UIColor colorWithRed:92.0f / 255.0f green:92.0f / 255.0f blue:92.0f / 255.0f alpha:1.0f]];
         [_txEmail.rac_textSignal subscribeNext:^(NSString * _Nullable x) {
             [weakSelf updateBtnLogin];
         }];
@@ -151,7 +151,7 @@
         _txPwd.backgroundColor = [UIColor clearColor];
         _txPwd.textColor = [UIColor whiteColor];
         _txPwd.secureTextEntry = YES;
-        [_txPwd setPlaceholderColor:[UIColor colorWithRed:52.0f / 255.0f green:52.0f / 255.0f blue:52.0f / 255.0f alpha:1.0f]];
+        [_txPwd setPlaceholderColor:[UIColor colorWithRed:92.0f / 255.0f green:92.0f / 255.0f blue:92.0f / 255.0f alpha:1.0f]];
         [_txPwd.rac_textSignal subscribeNext:^(NSString * _Nullable x) {
             [weakSelf updateBtnLogin];
         }];
