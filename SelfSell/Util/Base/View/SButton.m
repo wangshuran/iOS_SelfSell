@@ -21,7 +21,8 @@
 #pragma mark - LInitProtocol
 
 - (void)initialize {
-    self.titleLabel.font = [LFont thin_17];
+    [super initialize];
+    self.titleLabel.font = kBtnFontNormal;
 }
 
 @end

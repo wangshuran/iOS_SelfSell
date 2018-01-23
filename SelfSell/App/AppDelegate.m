@@ -67,7 +67,7 @@
     //    SPostNotification(kNoticeShowSecurityCheck);//安全检查通知
     //}];
     
-    [self.window.rootViewController present:[[SNavigationController alloc] initWithRootViewController:[[NSClassFromString(@"SRegisterByMailController") alloc] init]]];
+    [self.window.rootViewController present:[[SNavigationController alloc] initWithRootViewController:[[NSClassFromString(@"SLoginByMailController") alloc] init]]];
     //[self.window.rootViewController present:[[SWelcomeController alloc] init] animated:NO completion:nil];
     
     return YES;

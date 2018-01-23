@@ -20,7 +20,6 @@
 
 - (instancetype)init {
     self = [super init];
-    
     [self initialize];
     
     return self;
@@ -28,7 +27,6 @@
 
 //- (instancetype)initWithCoder:(NSCoder *)aDecoder {
 //    self = [super initWithCoder:aDecoder];
-//
 //    [self initialize];
 //
 //    return self;
@@ -36,7 +34,6 @@
 //
 //- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
 //    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-//
 //    [self initialize];
 //
 //    return self;
@@ -44,7 +41,6 @@
 
 - (instancetype)initWithRootViewController:(UIViewController *)rootViewController {
     self = [super initWithRootViewController:rootViewController];
-    
     [self initialize];
     
     return self;
@@ -52,7 +48,6 @@
 
 //- (instancetype)initWithNavigationBarClass:(Class)navigationBarClass toolbarClass:(Class)toolbarClass {
 //    self = [super initWithNavigationBarClass:navigationBarClass toolbarClass:toolbarClass];
-//    
 //    [self initialize];
 //    
 //    return self;

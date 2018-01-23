@@ -42,10 +42,11 @@
 - (SButton *)btnLeft {
     if (!_btnLeft) {
         _btnLeft = [[SButton alloc] init];
+        _btnLeft.backgroundColor = [UIColor clearColor];
         _btnLeft.frame = CGRectMake(0.0f, 0.0f, 64.0f, 44.0f);
         _btnLeft.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
         _btnLeft.imageEdgeInsets = UIEdgeInsetsMake(0.0f, 10.0f, 0.0f, 0.0f);
-        [_btnLeft setImage:[UIImage imageNamed:@"fanhui"] forState:UIControlStateNormal];
+        [_btnLeft setImage:[UIImage imageNamed:@"common_fanhui"] forState:UIControlStateNormal];
         [_btnLeft addTarget:self action:@selector(pop) forControlEvents:UIControlEventTouchUpInside];
     }
     

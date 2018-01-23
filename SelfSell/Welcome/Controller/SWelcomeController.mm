@@ -85,7 +85,7 @@
     }];
     [self.pageControl mas_updateConstraints:^(MASConstraintMaker * make) {
         make.centerX.mas_equalTo(weakSelf.view);
-        make.bottom.mas_equalTo(weakSelf.view).offset(-50.0f);
+        make.bottom.mas_equalTo(weakSelf.view).mas_offset(-50.0f);
         make.height.mas_equalTo(20.0f);
         make.width.mas_equalTo(60.0f);
     }];

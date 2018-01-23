@@ -20,8 +20,7 @@
 //}
 
 - (instancetype)init {
-    self = [super init];
-    
+    self = [super init];    
     [self initialize];
     
     return self;

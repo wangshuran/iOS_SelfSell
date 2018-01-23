@@ -23,7 +23,6 @@
 
 - (instancetype)init {
     self = [super init];
-    
     [self initialize];
     
     return self;
@@ -31,7 +30,6 @@
 
 //- (instancetype)initWithFrame:(CGRect)frame {
 //    self = [super initWithFrame:frame];
-//
 //    [self initialize];
 //
 //    return self;
@@ -39,7 +37,6 @@
 
 //- (instancetype)initWithCoder:(NSCoder *)aDecoder {
 //    self = [super initWithCoder:aDecoder];
-//
 //    [self initialize];
 //
 //    return self;

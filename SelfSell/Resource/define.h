@@ -14,6 +14,19 @@
 #define kCurrentLanguageCode @"kCurrentLanguageCode"//用户当前使用语言
 
 
+
+
+#define isIPhoneX (CGRectGetWidth([UIScreen mainScreen].bounds) == 812.0f)//是否是iPhoneX
+
+
+#define kBtnFontBigger [LFont bold_18]//按钮大字体
+#define kBtnFontNormal [LFont bold_16]//按钮正常字体
+#define kBtnFontSmaller [LFont thin_15]//按钮小字体
+
+#define kLbFontBigger [LFont thin_18]//文本大字体
+#define kLbFontNormal [LFont thin_16]//文本正常字体
+#define kLbFontSmaller [LFont thin_14]//文本小字体
+
 #define kLastInitDBVersion @"kLastInitDBVersion"//最后初始化数据库版本
 #define kIsOpenTouchID @"kIsOpenTouchID"//是否开启指纹验证
 #define kLastWelcomeVersion @"kLastWelcomeVersion"//最后显示欢迎页的版本

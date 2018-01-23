@@ -30,7 +30,6 @@
 
 //- (instancetype)initWithNibName:(nullable NSString *)nibNameOrNil bundle:(nullable NSBundle *)nibBundleOrNil {
 //    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-//
 //    [self initialize];
 //
 //    return self;
@@ -38,7 +37,6 @@
 //
 //- (instancetype)initWithCoder:(NSCoder *)aDecoder {
 //    self = [super initWithCoder:aDecoder];
-//
 //    [self initialize];
 //
 //    return self;

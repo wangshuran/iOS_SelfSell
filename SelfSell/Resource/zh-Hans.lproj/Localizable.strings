@@ -56,5 +56,12 @@ register_yiyouzhanghao = "已有账号->";
 register_denglu = "登录";
 
 
+login_wangjimima = "忘记密码";
+login_meiyouzhanghu = "还没有账户？";
+login_zhuce = "注册";
+login_denglu = "登录";
+login_mima = "密码";
+
+
 security_touch_unlocktitle = "通过验证指纹解锁";
 security_touch_pwdunlock = "密码验证";
