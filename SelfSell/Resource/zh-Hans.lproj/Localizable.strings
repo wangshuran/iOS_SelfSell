@@ -63,5 +63,9 @@ login_denglu = "登录";
 login_mima = "密码";
 
 
+forgetpwd_wangjimima = "忘记密码";
+forgetpwd_tijiao = "提交";
+
+
 security_touch_unlocktitle = "通过验证指纹解锁";
 security_touch_pwdunlock = "密码验证";

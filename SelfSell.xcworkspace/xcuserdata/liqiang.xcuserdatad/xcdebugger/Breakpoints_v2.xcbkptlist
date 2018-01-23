@@ -90,7 +90,7 @@
                   moduleName = "SelfSell"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/liqiang/Documents/GitHub/iOS_SelfSell/Pods/MJExtension/MJExtension/NSObject+MJKeyValue.m"
-                  timestampString = "538385982.643824"
+                  timestampString = "538387995.319996"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "230"
@@ -105,7 +105,7 @@
                   moduleName = "SelfSell"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/liqiang/Documents/GitHub/iOS_SelfSell/Pods/MJExtension/MJExtension/NSObject+MJKeyValue.m"
-                  timestampString = "538385982.645319"
+                  timestampString = "538387995.3214689"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "230"
@@ -228,44 +228,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SelfSell/Account/Controller/SRegisterByMailController.m"
-            timestampString = "538386442.9563299"
+            timestampString = "538387995.061119"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "235"
-            endingLineNumber = "235"
+            startingLineNumber = "243"
+            endingLineNumber = "243"
             landmarkName = "-btnCode"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SelfSell/Account/Controller/SLoginByMailController.m"
-            timestampString = "538386442.9568"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "156"
-            endingLineNumber = "156"
-            landmarkName = "-txPwd"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SelfSell/Account/Controller/SLoginByMailController.m"
-            timestampString = "538386442.956856"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "139"
-            endingLineNumber = "139"
-            landmarkName = "-txEmail"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

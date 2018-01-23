@@ -220,9 +220,9 @@
     if (!_navigationBar) {
         _navigationBar = [[SNavigationBar alloc] init];
         _navigationBar.backgroundColor = [UIColor clearColor];
-        [_navigationBar.btnLeft setImage:[UIImage imageNamed:@"common_fanhui_white"] forState:UIControlStateNormal];
         _navigationBar.lbTitle.text = self.title;
         _navigationBar.lbTitle.textColor = [UIColor whiteColor];
+        [_navigationBar.btnLeft setImage:[UIImage imageNamed:@"common_fanhui_white"] forState:UIControlStateNormal];
         [_navigationBar.btnLeft addTarget:self action:@selector(dismiss) forControlEvents:UIControlEventTouchUpInside];
     }
     
@@ -339,8 +339,9 @@
         [self.btnLogin setTitleColor:kColorDarkGray forState:UIControlStateNormal];
     }else {
         self.btnLogin.userInteractionEnabled = YES;
-        [_btnLogin setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-        [_btnLogin setTitleColor:kColorDarkGray forState:UIControlStateHighlighted];
+        [self.btnLogin setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        [self.btnLogin setTitleColor:kColorDarkGray forState:UIControlStateHighlighted];
     }
 }
+
 @end

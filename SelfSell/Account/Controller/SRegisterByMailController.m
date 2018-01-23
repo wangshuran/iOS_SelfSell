@@ -188,12 +188,16 @@
 
 - (STextField *)txEmail {
     if (!_txEmail) {
+        __weak typeof(self) weakSelf = self;
         _txEmail = [[STextField alloc] init];
         _txEmail.placeholder = SLocal(@"register_youxiang");
         _txEmail.backgroundColor = [UIColor clearColor];
         _txEmail.keyboardType = UIKeyboardTypeEmailAddress;
         _txEmail.textColor = [UIColor whiteColor];
         [_txEmail setPlaceholderColor:[UIColor colorWithRed:52.0f / 255.0f green:52.0f / 255.0f blue:52.0f / 255.0f alpha:1.0f]];
+        [_txEmail.rac_textSignal subscribeNext:^(NSString * _Nullable x) {
+            [weakSelf updateBtnLogin];
+        }];
     }
     
     return _txEmail;
@@ -201,11 +205,15 @@
 
 - (STextField *)txCode {
     if (!_txCode) {
+        __weak typeof(self) weakSelf = self;
         _txCode = [[STextField alloc] init];
         _txCode.placeholder = SLocal(@"register_youxiangrenzhengma");
         _txCode.backgroundColor = [UIColor clearColor];
         _txCode.textColor = [UIColor whiteColor];
         [_txCode setPlaceholderColor:[UIColor colorWithRed:52.0f / 255.0f green:52.0f / 255.0f blue:52.0f / 255.0f alpha:1.0f]];
+        [_txCode.rac_textSignal subscribeNext:^(NSString * _Nullable x) {
+            [weakSelf updateBtnLogin];
+        }];
     }
     
     return _txCode;
@@ -258,12 +266,16 @@
 
 - (STextField *)txPwd {
     if (!_txPwd) {
+        __weak typeof(self) weakSelf = self;
         _txPwd = [[STextField alloc] init];
         _txPwd.placeholder = SLocal(@"register_mima");
         _txPwd.backgroundColor = [UIColor clearColor];
         _txPwd.textColor = [UIColor whiteColor];
         _txPwd.secureTextEntry = YES;
         [_txPwd setPlaceholderColor:[UIColor colorWithRed:52.0f / 255.0f green:52.0f / 255.0f blue:52.0f / 255.0f alpha:1.0f]];
+        [_txPwd.rac_textSignal subscribeNext:^(NSString * _Nullable x) {
+            [weakSelf updateBtnLogin];
+        }];
     }
     
     return _txPwd;
@@ -271,12 +283,16 @@
 
 - (STextField *)txComfirmPwd {
     if (!_txComfirmPwd) {
+        __weak typeof(self) weakSelf = self;
         _txComfirmPwd = [[STextField alloc] init];
         _txComfirmPwd.placeholder = SLocal(@"register_querenmiam");
         _txComfirmPwd.backgroundColor = [UIColor clearColor];
         _txComfirmPwd.textColor = [UIColor whiteColor];
         _txComfirmPwd.secureTextEntry = YES;
         [_txComfirmPwd setPlaceholderColor:[UIColor colorWithRed:52.0f / 255.0f green:52.0f / 255.0f blue:52.0f / 255.0f alpha:1.0f]];
+        [_txComfirmPwd.rac_textSignal subscribeNext:^(NSString * _Nullable x) {
+            [weakSelf updateBtnLogin];
+        }];
     }
     
     return _txComfirmPwd;
@@ -391,7 +407,7 @@
         make.height.mas_equalTo(weakSelf.v0.mas_height);
     }];
     [self.v5 mas_updateConstraints:^(MASConstraintMaker * make) {
-        make.top.mas_equalTo(weakSelf.v4.mas_bottom).mas_offset(10.0f);
+        make.top.mas_equalTo(weakSelf.v4.mas_bottom).mas_offset(20.0f);
         make.left.mas_equalTo(weakSelf.v0.mas_left);
         make.right.mas_equalTo(weakSelf.v0.mas_right);
         make.height.mas_equalTo(weakSelf.v0.mas_height);
@@ -485,6 +501,21 @@
     view.layer.masksToBounds = YES;
     
     return view;
+}
+
+- (void)updateBtnLogin {
+    NSString * email = self.txEmail.text;
+    NSString * code = self.txCode.text;
+    NSString * pwd = self.txPwd.text;
+    NSString * comfirmPwd = self.txComfirmPwd.text;
+    if ([NSString isNullOrEmpty:email] || [NSString isNullOrEmpty:code] || [NSString isNullOrEmpty:pwd] || [NSString isNullOrEmpty:comfirmPwd] || ![pwd isEqualToString:comfirmPwd] || pwd.length < 6) {
+        self.btnRegister.userInteractionEnabled = NO;
+        [self.btnRegister setTitleColor:kColorDarkGray forState:UIControlStateNormal];
+    }else {
+        self.btnRegister.userInteractionEnabled = YES;
+        [self.btnRegister setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        [self.btnRegister setTitleColor:kColorDarkGray forState:UIControlStateHighlighted];
+    }
 }
 
 @end
