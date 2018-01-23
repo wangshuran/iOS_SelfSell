@@ -11,6 +11,7 @@
 #import "SSendMailRequest.h"
 #import "SNavigationBar.h"
 #import "SLoginByMailController.h"
+#import "SLoginByMailRequest.h"
 
 @interface SRegisterByMailController ()
 
@@ -326,7 +327,7 @@
             NSString * email = weakSelf.txEmail.text;
             NSString * code = weakSelf.txCode.text;
             NSString * pwd = weakSelf.txPwd.text;
-            NSString * recommendCode = weakSelf.txRecommendCode.text;
+            NSString * recommendCode = weakSelf.txRecommendCode.text.length > 0 ? weakSelf.txRecommendCode.text : nil;
             
             SRegisterByMailRequest * request = [[SRegisterByMailRequest alloc] init];
             request.email = email;
@@ -335,11 +336,12 @@
             request.inviteCode = recommendCode;
             [SNetwork request:request block:^(LRequest * request, LResponse * response) {
                 btn.userInteractionEnabled = YES;
-                if (!response.status) {
-                    //
+                if (!response.status) {//注册错误
+                    [MBProgressHUD showTitleToView:weakSelf.view postion:NHHUDPostionCenten title:response.msg];
                     return;
                 }
-                //登录
+                
+                [weakSelf loginByMail:email password:pwd];
             }];
         }];
     }
@@ -541,22 +543,24 @@
     }
 }
 
-- (void)fdfdf:(NSString *)email password:(NSString *)password {
-//    __weak typeof(self) weakSelf = self;
-//    slogin * request = [[SRegisterByMailRequest alloc] init];
-//    request.email = email;
-//    request.emailCheckCode = code;
-//    request.password = pwd;
-//    request.inviteCode = recommendCode;
-//    [SNetwork request:request block:^(LRequest * request, LResponse * response) {
-//        btn.userInteractionEnabled = YES;
-//        if (!response.status) {
-//            //
-//            return;
-//        }
-//        
-//        [weakSelf dismiss];
-//    }];
+- (void)loginByMail:(NSString *)email password:(NSString *)password {
+    __weak typeof(self) weakSelf = self;
+    SLoginByMailRequest * request = [[SLoginByMailRequest alloc] init];
+    request.email = email;
+    request.password = password;
+    [SNetwork request:request block:^(LRequest * request, LResponse * response) {
+        if (!response.status) {//登录错误
+            [MBProgressHUD showTitleToView:weakSelf.view postion:NHHUDPostionCenten title:response.msg];
+            return;
+        }
+        SLoginByMailResponse * model = (SLoginByMailResponse *)response;
+        [[AppContext sharedAppContext].accountDao close];
+        [AppContext sharedAppContext].accountDao = nil;
+        [AppContext sharedAppContext].accountModel = model.data;
+        [AppContext sharedAppContext].loginType = LoginTypeAccount;
+        [weakSelf dismiss];
+        SPostNotification(kNoticeFinishLogin);
+    }];
 }
 
 @end

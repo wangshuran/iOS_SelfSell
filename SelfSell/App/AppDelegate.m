@@ -84,6 +84,7 @@
     //[d0 setObject:d1 forKey:@"data"];
     //SLoginByMailResponse * vv = [[SLoginByMailResponse alloc] init];
     //[vv reflect:d0];
+    //[[[NSClassFromString(@"SLoginByMailRequest") alloc] init] getParameter];
     
     return YES;
 }

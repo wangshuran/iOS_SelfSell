@@ -20,6 +20,8 @@
 
 //--------------------PodsLib--------------------
 #import <LBaseClass/LBaseClass.h>
+#import <NHHUDExtend/MBProgressHUD_NHExtend.h>
+#import <NHHUDExtend/MBProgressHUD+NHAdd.h>
 
 
 //--------------------SModel--------------------

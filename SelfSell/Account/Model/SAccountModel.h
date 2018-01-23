@@ -17,8 +17,6 @@
 
 @property (nonatomic, copy) NSString * token;
 
-@property (nonatomic, copy) NSString * investor;
-
 @property (nonatomic, copy) NSString * id;
 
 @property (nonatomic, copy) NSString * email;

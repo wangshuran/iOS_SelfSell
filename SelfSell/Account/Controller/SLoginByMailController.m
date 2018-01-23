@@ -10,6 +10,7 @@
 #import "SNavigationBar.h"
 #import "SForgetPWDByMailController.h"
 #import "SRegisterByMailController.h"
+#import "SLoginByMailRequest.h"
 
 @interface SLoginByMailController ()
 
@@ -162,6 +163,7 @@
 
 - (SButton *)btnLogin {
     if (!_btnLogin) {
+        __weak typeof(self) weakSelf = self;
         _btnLogin = [[SButton alloc] init];
         _btnLogin.layer.cornerRadius = 5.0f;
         _btnLogin.layer.masksToBounds = YES;
@@ -169,6 +171,31 @@
         [_btnLogin setTitle:SLocal(@"login_denglu") forState:UIControlStateNormal];
         [_btnLogin setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         [_btnLogin setTitleColor:kColorDarkGray forState:UIControlStateHighlighted];
+        [[_btnLogin rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
+            SButton * btn = x;
+            btn.userInteractionEnabled = NO;
+            NSString * email = weakSelf.txEmail.text;
+            NSString * pwd = weakSelf.txPwd.text;
+
+            SLoginByMailRequest * request = [[SLoginByMailRequest alloc] init];
+            request.email = email;
+            request.password = pwd;
+            //request.googleAuthCode = pwd;
+            [SNetwork request:request block:^(LRequest * request, LResponse * response) {
+                if (!response.status) {//登录错误
+                    [MBProgressHUD showTitleToView:weakSelf.view postion:NHHUDPostionCenten title:response.msg];
+                    return;
+                }
+                SLoginByMailResponse * model = (SLoginByMailResponse *)response;
+                [[AppContext sharedAppContext].accountDao close];
+                [AppContext sharedAppContext].accountDao = nil;
+                [AppContext sharedAppContext].accountModel = model.data;
+                [AppContext sharedAppContext].loginType = LoginTypeAccount;
+                [weakSelf dismiss];
+                SPostNotification(kNoticeFinishLogin);
+                btn.userInteractionEnabled = YES;
+            }];
+        }];
     }
     
     return _btnLogin;

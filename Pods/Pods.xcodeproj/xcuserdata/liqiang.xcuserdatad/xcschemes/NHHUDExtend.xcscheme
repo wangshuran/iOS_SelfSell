@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '132D334C9E3745B7569E1164FE896368'
-               BlueprintName = 'WCDB'
+               BlueprintIdentifier = 'CD119680CEFF567FE0A3674320FCF142'
+               BlueprintName = 'NHHUDExtend'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'libWCDB.a'>
+               BuildableName = 'libNHHUDExtend.a'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

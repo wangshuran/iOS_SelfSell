@@ -16,6 +16,10 @@
     if (data) {
         SAccountModel * model = [[SAccountModel alloc] init];
         [model reflect:data];
+        NSDictionary * investor = [data objectForKey:@"investor"];
+        if (investor) {
+            [model reflect:investor];
+        }
         self.data = model;
     }
     return YES;

@@ -90,7 +90,7 @@
                   moduleName = "SelfSell"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/liqiang/Documents/GitHub/iOS_SelfSell/Pods/MJExtension/MJExtension/NSObject+MJKeyValue.m"
-                  timestampString = "538395535.383406"
+                  timestampString = "538402229.007447"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "230"
@@ -105,7 +105,7 @@
                   moduleName = "SelfSell"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/liqiang/Documents/GitHub/iOS_SelfSell/Pods/MJExtension/MJExtension/NSObject+MJKeyValue.m"
-                  timestampString = "538395535.386634"
+                  timestampString = "538402229.008985"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "230"
@@ -180,7 +180,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SelfSell/App/AppContext+Account.mm"
-            timestampString = "538395535.261348"
+            timestampString = "538402228.793118"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "198"
@@ -211,194 +211,6 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "SelfSell/Util/Network/SNetwork.m"
-            timestampString = "538395535.261472"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
-            landmarkName = "+request:block:"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "+[SNetwork request:block:]"
-                  moduleName = "SelfSell"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/liqiang/Documents/GitHub/iOS_SelfSell/SelfSell/Util/Network/SNetwork.m"
-                  timestampString = "538395535.404078"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "48"
-                  endingLineNumber = "48"
-                  offsetFromSymbolStart = "1816">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__26+[SNetwork request:block:]_block_invoke_2"
-                  moduleName = "SelfSell"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/liqiang/Documents/GitHub/iOS_SelfSell/SelfSell/Util/Network/SNetwork.m"
-                  timestampString = "538395535.405569"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "48"
-                  endingLineNumber = "48"
-                  offsetFromSymbolStart = "256">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__copy_helper_block_"
-                  moduleName = "SelfSell"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/liqiang/Documents/GitHub/iOS_SelfSell/SelfSell/Util/Network/SNetwork.m"
-                  timestampString = "538395535.407006"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "48"
-                  endingLineNumber = "48"
-                  offsetFromSymbolStart = "104">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__destroy_helper_block_"
-                  moduleName = "SelfSell"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/liqiang/Documents/GitHub/iOS_SelfSell/SelfSell/Util/Network/SNetwork.m"
-                  timestampString = "538395535.408479"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "48"
-                  endingLineNumber = "48"
-                  offsetFromSymbolStart = "64">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__26+[SNetwork request:block:]_block_invoke.57"
-                  moduleName = "SelfSell"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/liqiang/Documents/GitHub/iOS_SelfSell/SelfSell/Util/Network/SNetwork.m"
-                  timestampString = "538395535.410005"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "48"
-                  endingLineNumber = "48"
-                  offsetFromSymbolStart = "24">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SelfSell/Account/Controller/SRegisterByMailController.m"
-            timestampString = "538395535.261539"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "243"
-            endingLineNumber = "243"
-            landmarkName = "-btnCode"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SelfSell/Account/Controller/SRegisterByMailController.m"
-            timestampString = "538395535.261631"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "326"
-            endingLineNumber = "326"
-            landmarkName = "-btnRegister"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SelfSell/Account/Controller/SRegisterByMailController.m"
-            timestampString = "538395535.2616791"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "342"
-            endingLineNumber = "342"
-            landmarkName = "-btnRegister"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__40-[SRegisterByMailController btnRegister]_block_invoke_2"
-                  moduleName = "SelfSell"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/liqiang/Documents/GitHub/iOS_SelfSell/SelfSell/Account/Controller/SRegisterByMailController.m"
-                  timestampString = "538395535.4218121"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "343"
-                  endingLineNumber = "343"
-                  offsetFromSymbolStart = "160">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__copy_helper_block_.178"
-                  moduleName = "SelfSell"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/liqiang/Documents/GitHub/iOS_SelfSell/SelfSell/Account/Controller/SRegisterByMailController.m"
-                  timestampString = "538395535.423272"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "343"
-                  endingLineNumber = "343"
-                  offsetFromSymbolStart = "64">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__destroy_helper_block_.179"
-                  moduleName = "SelfSell"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/liqiang/Documents/GitHub/iOS_SelfSell/SelfSell/Account/Controller/SRegisterByMailController.m"
-                  timestampString = "538395535.42488"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "343"
-                  endingLineNumber = "343"
-                  offsetFromSymbolStart = "36">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "Pods/LBaseClass/LBaseClass/LBaseClass/LModel/LObject.m"
             timestampString = "538393068.5372829"
             startingColumnNumber = "9223372036854775807"
@@ -415,13 +227,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "SelfSell/Util/Base/Response/SResponse.m"
-            timestampString = "538395535.261777"
+            filePath = "SelfSell/Util/Network/SNetwork.m"
+            timestampString = "538402228.793319"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "23"
-            endingLineNumber = "23"
-            landmarkName = "-reflect:"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "+request:block:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -431,13 +243,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "SelfSell/Account/Response/SLoginByMailResponse.m"
-            timestampString = "538395535.262231"
+            filePath = "SelfSell/Util/Network/SNetwork.m"
+            timestampString = "538402228.79339"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "15"
-            endingLineNumber = "15"
-            landmarkName = "-reflect:"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
+            landmarkName = "+request:block:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -447,13 +259,29 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "SelfSell/Util/Base/Response/SResponse.m"
-            timestampString = "538395535.26228"
+            filePath = "SelfSell/Util/Network/SNetwork.m"
+            timestampString = "538402228.793451"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
-            landmarkName = "-reflect:"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
+            landmarkName = "+request:block:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SelfSell/Account/Controller/SLoginByMailController.m"
+            timestampString = "538402228.793612"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "185"
+            endingLineNumber = "185"
+            landmarkName = "-btnLogin"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
