@@ -613,14 +613,14 @@
 			children = (
 				D5ACA7582015F28900A6C84F /* LGetTextFiled.h */,
 				D5ACA7592015F28900A6C84F /* LGetTextFiled.m */,
+				D5D7D869201717F2005CBB11 /* SForgetPWDByMailController.h */,
+				D5D7D86A201717F2005CBB11 /* SForgetPWDByMailController.m */,
 				D5D7D86620170962005CBB11 /* SLoginByMailController.h */,
 				D5D7D86720170962005CBB11 /* SLoginByMailController.m */,
 				D54895041FF23F3700F2019B /* SLoginController.h */,
 				D54895051FF23F3700F2019B /* SLoginController.m */,
 				D5ACA7542015E89000A6C84F /* SRegisterByMailController.h */,
 				D5ACA7552015E89000A6C84F /* SRegisterByMailController.m */,
-				D5D7D869201717F2005CBB11 /* SForgetPWDByMailController.h */,
-				D5D7D86A201717F2005CBB11 /* SForgetPWDByMailController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";

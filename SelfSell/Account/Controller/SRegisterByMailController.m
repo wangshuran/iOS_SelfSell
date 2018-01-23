@@ -62,14 +62,8 @@
 
 #pragma mark - Interface
 
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-}
-
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
-    
-    
+- (UIStatusBarStyle)preferredStatusBarStyle {
+    return UIStatusBarStyleLightContent;
 }
 
 - (NSString *)title {
@@ -222,6 +216,7 @@
         __weak typeof(self) weakSelf = self;
         _btnCode = [[SButton alloc] init];
         _btnCode.backgroundColor = [UIColor clearColor];
+        _btnCode.titleLabel.font = kBtnFontSmaller;
         [_btnCode setTitle:SLocal(@"register_huoqurenzhengma") forState:UIControlStateNormal];
         [_btnCode setTitleColor:kColorOrange forState:UIControlStateNormal];
         [[_btnCode rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
@@ -302,6 +297,7 @@
 - (SButton *)btnRegister {
     if (!_btnRegister) {
         _btnRegister = [[SButton alloc] init];
+        _btnRegister.titleLabel.font = kBtnFontNormal;
         _btnRegister.layer.cornerRadius = 5.0f;
         _btnRegister.layer.masksToBounds = YES;
         [_btnRegister setTitle:SLocal(@"register_zhuce") forState:UIControlStateNormal];
@@ -314,8 +310,10 @@
 
 - (SButton *)btnLogin {
     if (!_btnLogin) {
+        __weak typeof(self) weakSelf = self;
         _btnLogin = [[SButton alloc] init];
         _btnLogin.backgroundColor = [UIColor clearColor];
+        _btnLogin.titleLabel.font = kBtnFontSmaller;
         NSString * textPre = SLocal(@"register_yiyouzhanghao");
         NSString * textSuf = SLocal(@"register_denglu");
         NSString * text = [textPre stringByAppendingString:textSuf];
@@ -325,9 +323,7 @@
         [_btnLogin setTitle:text forState:UIControlStateNormal];
         [_btnLogin setAttributedTitle:attributedText forState:UIControlStateNormal];
         [[_btnLogin rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
-            SButton * btn = x;
-            
-            
+            [weakSelf push:[[SLoginByMailController alloc] init]];
         }];
     }
     
@@ -350,7 +346,6 @@
 - (void)loadView {
     [super loadView];
     __weak typeof(self) weakSelf = self;    
-    self.view.backgroundColor = [UIColor colorWithRed:26.0f / 255.0f green:26.0f / 255.0f blue:26.0f / 255.0f alpha:1.0f];
     [self.view addSubview:self.navigationBar];
     [self.view addSubview:self.v0];
     [self.view addSubview:self.v1];
@@ -369,7 +364,7 @@
         make.top.mas_equalTo(100.0f);
         make.left.mas_equalTo(20.0f);
         make.right.mas_equalTo(-20.0f);
-        make.height.mas_equalTo(60.0f);
+        make.height.mas_equalTo(50.0f);
     }];
     [self.v1 mas_updateConstraints:^(MASConstraintMaker * make) {
         make.top.mas_equalTo(weakSelf.v0.mas_bottom).mas_offset(10.0f);
@@ -478,6 +473,7 @@
 - (void)initialize {
     [super initialize];
     self.hiddenNavbar = YES;
+    self.view.backgroundColor = [UIColor colorWithRed:26.0f / 255.0f green:26.0f / 255.0f blue:26.0f / 255.0f alpha:1.0f];
 }
 
 #pragma mark - Private
