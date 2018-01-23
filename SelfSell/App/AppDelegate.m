@@ -10,6 +10,10 @@
 #import "SLoginByAccountRequest.h"
 #import "SWelcomeController.h"
 
+
+#import "SLoginByMailResponse.h"
+
+
 @interface AppDelegate ()
 
 @end
@@ -69,6 +73,17 @@
     
     [self.window.rootViewController present:[[SNavigationController alloc] initWithRootViewController:[[NSClassFromString(@"SLoginByMailController") alloc] init]]];
     //[self.window.rootViewController present:[[SWelcomeController alloc] init] animated:NO completion:nil];
+    
+    //NSMutableDictionary * d1 = [[NSMutableDictionary alloc] init];
+    //[d1 setObject:@"token" forKey:@"token"];
+    //[d1 setObject:@"investor" forKey:@"investor"];
+    //[d1 setObject:@"id" forKey:@"id"];
+    //
+    //NSMutableDictionary * d0 = [[NSMutableDictionary alloc] init];
+    //[d0 setObject:@"1" forKey:@"success"];
+    //[d0 setObject:d1 forKey:@"data"];
+    //SLoginByMailResponse * vv = [[SLoginByMailResponse alloc] init];
+    //[vv reflect:d0];
     
     return YES;
 }

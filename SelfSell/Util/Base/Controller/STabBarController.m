@@ -16,4 +16,11 @@
 
 #pragma mark - Interface
 
+#pragma mark - LReflectProtocol
+
+- (BOOL)reflect:(NSDictionary *)obj {
+    [self mj_setKeyValues:obj];
+    return YES;
+}
+
 @end

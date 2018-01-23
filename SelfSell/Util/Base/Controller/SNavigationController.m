@@ -49,5 +49,12 @@
 //- (void)navigationBar:(UINavigationBar *)navigationBar didPopItem:(UINavigationItem *)item {
 //}
 
+#pragma mark - LReflectProtocol
+
+- (BOOL)reflect:(NSDictionary *)obj {
+    [self mj_setKeyValues:obj];
+    return YES;
+}
+
 
 @end

@@ -33,4 +33,12 @@ WCDB_SYNTHESIZE(SModel, createTime)
 WCDB_SYNTHESIZE(SModel, displayOrder)
 WCDB_SYNTHESIZE(SModel, version)
 
+
+#pragma mark - LReflectProtocol
+
+- (BOOL)reflect:(NSDictionary *)obj {
+    [self mj_setKeyValues:obj];
+    return YES;
+}
+
 @end

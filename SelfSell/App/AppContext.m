@@ -150,7 +150,7 @@ LSingleton_m(AppContext);
 
 - (SDao *)accountDao {
     if (!_accountDao) {
-        NSString * name = self.loginType == LoginTypeNone ? [[UIDevice currentDevice] uniqueDeviceIdentifier] : self.accountModel.accountID;
+        NSString * name = self.loginType == LoginTypeNone ? [[UIDevice currentDevice] uniqueDeviceIdentifier] : self.accountModel.id;
         name = [name MD5];
         _accountDao = [SDao dbPath:[[self getCurrentAccountSpacePath] stringByAppendingPathComponent:name] secret:name];
     }

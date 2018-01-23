@@ -10,4 +10,14 @@
 
 @implementation SRegisterByMailRequest
 
+#pragma mark - LInitProtocol
+
+- (void)initialize {
+    [super initialize];
+    
+    self.method = HttpMethodPost;
+    self.url = [[AppContext sharedAppContext].host stringByAppendingString:@"/investor/registor"];
+    self.responseClass = SRegisterByMailResponse.class;
+}
+
 @end

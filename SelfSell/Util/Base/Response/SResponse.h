@@ -10,4 +10,6 @@
 
 @interface SResponse : LResponse
 
+@property (nonatomic, copy) NSString * message;
+
 @end

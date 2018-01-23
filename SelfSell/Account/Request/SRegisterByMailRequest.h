@@ -11,4 +11,12 @@
 
 @interface SRegisterByMailRequest : SRequest
 
+@property (nonatomic, copy) NSString * email;
+
+@property (nonatomic, copy) NSString * emailCheckCode;
+
+@property (nonatomic, copy) NSString * password;
+
+@property (nonatomic, copy) NSString * inviteCode;
+
 @end

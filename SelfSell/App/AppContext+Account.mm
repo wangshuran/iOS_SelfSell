@@ -18,7 +18,7 @@
 #pragma mark - Interface
 
 - (NSString *)getCurrentAccountID {
-    NSString * accountIdentifier = self.loginType == LoginTypeNone ? [[UIDevice currentDevice] uniqueDeviceIdentifier] : self.accountModel.accountID;
+    NSString * accountIdentifier = self.loginType == LoginTypeNone ? [[UIDevice currentDevice] uniqueDeviceIdentifier] : self.accountModel.id;
     
     return [accountIdentifier MD5];
 }
@@ -50,7 +50,7 @@
         return;
     }
     
-    NSString * accountIdentifier = self.loginType == LoginTypeNone ? [[UIDevice currentDevice] uniqueDeviceIdentifier] : self.accountModel.accountID;
+    NSString * accountIdentifier = self.loginType == LoginTypeNone ? [[UIDevice currentDevice] uniqueDeviceIdentifier] : self.accountModel.id;
     accountIdentifier = [accountIdentifier MD5];
     
     NSUserDefaults * userDefaults = [NSUserDefaults standardUserDefaults];
@@ -75,7 +75,7 @@
         return nil;
     }
     
-    NSString * accountIdentifier = self.loginType == LoginTypeNone ? [[UIDevice currentDevice] uniqueDeviceIdentifier] : self.accountModel.accountID;
+    NSString * accountIdentifier = self.loginType == LoginTypeNone ? [[UIDevice currentDevice] uniqueDeviceIdentifier] : self.accountModel.id;
     accountIdentifier = [accountIdentifier MD5];
     NSUserDefaults * userDefaults = [NSUserDefaults standardUserDefaults];
     
@@ -107,7 +107,7 @@
             info = [[NSMutableDictionary alloc] init];
         }
         
-        [info setObject:[accountModel getParameter] forKey:[accountModel.accountID MD5]];
+        [info setObject:[accountModel getParameter] forKey:[accountModel.id MD5]];
         [userDefaults setObject:info forKey:identifier];
         [userDefaults synchronize];
     }
@@ -126,8 +126,7 @@
         SAccountModel * model = nil;
         
         for (NSDictionary * accountInfo in info.allValues) {
-            SAccountModel * accountModel = [[SAccountModel alloc] init];
-            [accountModel reflect:accountInfo];
+            SAccountModel * accountModel = [SAccountModel mj_objectWithKeyValues:accountInfo];
             
             if (accountModel.loginTime > model.loginTime) {
                 model = accountModel;
@@ -151,9 +150,7 @@
         NSMutableArray<SAccountModel *> * models = [[NSMutableArray alloc] initWithCapacity:info.count];
         
         for (NSDictionary * accountInfo in info.allValues) {
-            SAccountModel * accountModel = [[SAccountModel alloc] init];
-            [accountModel reflect:accountInfo];
-            
+            SAccountModel * accountModel = [SAccountModel mj_objectWithKeyValues:accountInfo];
             [models addObject:accountModel];
         }
         

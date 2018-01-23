@@ -41,26 +41,14 @@
             
         } success:^(NSURLSessionDataTask * task, id responseObject) {
             if (block) {
-                NSNumber * success = responseObject[@"success"];
-                LResponse * response = nil;
-                if (success.boolValue) {
-                    NSDictionary * data = responseObject[@"data"];
-                    response = data ? [request.responseClass mj_objectWithKeyValues:data] : [[request.responseClass alloc] init];
-                    response.status = YES;
-                }else {
-                    id message = responseObject[@"message"];
-                    response = [[request.responseClass alloc] init];
-                    response.status = YES;
-                    response.msg = [NSString stringWithFormat:@"%@", [NSString isNullOrEmpty:message] ? @"" : message];
-                }
+                LResponse * response = [[request.responseClass alloc] init];
+                [response reflect:responseObject];
                 block(request, response);
             }
         } failure:^(NSURLSessionDataTask * task, NSError * error) {
             if (block) {
                 LResponse * response = [[request.responseClass alloc] init];
-                response.status = NO;
-                response.msg = error.localizedDescription;
-                
+                [response reflect:[NSDictionary dictionaryWithObjectsAndKeys:@"0", @"success", error.localizedDescription, @"message", nil]];
                 block(request, response);
             }
         }];
@@ -69,26 +57,14 @@
             
         } success:^(NSURLSessionDataTask * task, id responseObject) {
             if (block) {
-                NSNumber * success = responseObject[@"success"];
-                LResponse * response = nil;
-                if (success.boolValue) {
-                    NSDictionary * data = responseObject[@"data"];
-                    response = data ? [request.responseClass mj_objectWithKeyValues:data] : [[request.responseClass alloc] init];
-                    response.status = YES;
-                }else {
-                    id message = responseObject[@"message"];
-                    response = [[request.responseClass alloc] init];
-                    response.status = NO;
-                    response.msg = [NSString stringWithFormat:@"%@", [NSString isNullOrEmpty:message] ? @"" : message];
-                }
+                LResponse * response = [[request.responseClass alloc] init];
+                [response reflect:responseObject];
                 block(request, response);
             }
         } failure:^(NSURLSessionDataTask * task, NSError * error) {
             if (block) {
                 LResponse * response = [[request.responseClass alloc] init];
-                response.status = NO;
-                response.msg = error.localizedDescription;
-                
+                [response reflect:[NSDictionary dictionaryWithObjectsAndKeys:@"0", @"success", error.localizedDescription, @"message", nil]];
                 block(request, response);
             }
         }];

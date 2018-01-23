@@ -24,4 +24,11 @@
     return UIStatusBarStyleDefault;
 }
 
+#pragma mark - LReflectProtocol
+
+- (BOOL)reflect:(NSDictionary *)obj {
+    [self mj_setKeyValues:obj];
+    return YES;
+}
+
 @end

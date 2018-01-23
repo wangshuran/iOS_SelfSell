@@ -312,6 +312,7 @@
 
 - (SButton *)btnRegister {
     if (!_btnRegister) {
+        __weak typeof(self) weakSelf = self;
         _btnRegister = [[SButton alloc] init];
         _btnRegister.titleLabel.font = kBtnFontNormal;
         _btnRegister.layer.cornerRadius = 5.0f;
@@ -319,6 +320,28 @@
         [_btnRegister setTitle:SLocal(@"register_zhuce") forState:UIControlStateNormal];
         [_btnRegister setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         [_btnRegister setTitleColor:kColorDarkGray forState:UIControlStateHighlighted];
+        [[_btnRegister rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
+            SButton * btn = x;
+            btn.userInteractionEnabled = NO;
+            NSString * email = weakSelf.txEmail.text;
+            NSString * code = weakSelf.txCode.text;
+            NSString * pwd = weakSelf.txPwd.text;
+            NSString * recommendCode = weakSelf.txRecommendCode.text;
+            
+            SRegisterByMailRequest * request = [[SRegisterByMailRequest alloc] init];
+            request.email = email;
+            request.emailCheckCode = code;
+            request.password = pwd;
+            request.inviteCode = recommendCode;
+            [SNetwork request:request block:^(LRequest * request, LResponse * response) {
+                btn.userInteractionEnabled = YES;
+                if (!response.status) {
+                    //
+                    return;
+                }
+                //登录
+            }];
+        }];
     }
     
     return _btnRegister;
@@ -361,7 +384,7 @@
 
 - (void)loadView {
     [super loadView];
-    __weak typeof(self) weakSelf = self;    
+    __weak typeof(self) weakSelf = self;
     [self.view addSubview:self.navigationBar];
     [self.view addSubview:self.v0];
     [self.view addSubview:self.v1];
@@ -516,6 +539,24 @@
         [self.btnRegister setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         [self.btnRegister setTitleColor:kColorDarkGray forState:UIControlStateHighlighted];
     }
+}
+
+- (void)fdfdf:(NSString *)email password:(NSString *)password {
+//    __weak typeof(self) weakSelf = self;
+//    slogin * request = [[SRegisterByMailRequest alloc] init];
+//    request.email = email;
+//    request.emailCheckCode = code;
+//    request.password = pwd;
+//    request.inviteCode = recommendCode;
+//    [SNetwork request:request block:^(LRequest * request, LResponse * response) {
+//        btn.userInteractionEnabled = YES;
+//        if (!response.status) {
+//            //
+//            return;
+//        }
+//        
+//        [weakSelf dismiss];
+//    }];
 }
 
 @end

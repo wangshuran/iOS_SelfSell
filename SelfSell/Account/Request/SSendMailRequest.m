@@ -10,7 +10,6 @@
 
 @implementation SSendMailRequest
 
-
 #pragma mark - LInitProtocol
 
 - (void)initialize {
@@ -20,6 +19,5 @@
     self.url = [[AppContext sharedAppContext].host stringByAppendingString:@"/send/email"];
     self.responseClass = SSendMailResponse.class;
 }
-
 
 @end

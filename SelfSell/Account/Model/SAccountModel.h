@@ -11,23 +11,24 @@
 @interface SAccountModel : SModel
 
 /**
- 用户标示
- */
-@property (nonatomic, copy) NSString * accountID;
-
-/**
- 用户名
- */
-@property (nonatomic, copy) NSString * accountName;
-
-/**
  登录时间
  */
 @property (nonatomic, assign) NSTimeInterval loginTime;
 
-/**
- 令牌
- */
 @property (nonatomic, copy) NSString * token;
+
+@property (nonatomic, copy) NSString * investor;
+
+@property (nonatomic, copy) NSString * id;
+
+@property (nonatomic, copy) NSString * email;
+
+@property (nonatomic, copy) NSString * status;
+
+@property (nonatomic, copy) NSString * googleAuthStatus;
+
+@property (nonatomic, copy) NSString * inviteCode;
+
+@property (nonatomic, copy) NSString * createTime;
 
 @end

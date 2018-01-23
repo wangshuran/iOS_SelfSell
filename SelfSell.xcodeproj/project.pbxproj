@@ -95,6 +95,8 @@
 		D5D7D8652016E44A005CBB11 /* SNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = D5D7D8642016E44A005CBB11 /* SNavigationBar.m */; };
 		D5D7D86820170962005CBB11 /* SLoginByMailController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5D7D86720170962005CBB11 /* SLoginByMailController.m */; };
 		D5D7D86B201717F2005CBB11 /* SForgetPWDByMailController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5D7D86A201717F2005CBB11 /* SForgetPWDByMailController.m */; };
+		D5D7D86F20172BAE005CBB11 /* SLoginByMailRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = D5D7D86E20172BAE005CBB11 /* SLoginByMailRequest.m */; };
+		D5D7D87220172BED005CBB11 /* SLoginByMailResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = D5D7D87120172BED005CBB11 /* SLoginByMailResponse.m */; };
 		D5DB07441FEA692F00A347B1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D5DB07431FEA692F00A347B1 /* main.m */; };
 		D5E610C8200884AD003C847A /* STouchID.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E610C7200884AD003C847A /* STouchID.m */; };
 		D5E610D320089528003C847A /* SFundController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E610D220089528003C847A /* SFundController.m */; };
@@ -303,6 +305,10 @@
 		D5D7D86720170962005CBB11 /* SLoginByMailController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SLoginByMailController.m; sourceTree = "<group>"; };
 		D5D7D869201717F2005CBB11 /* SForgetPWDByMailController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SForgetPWDByMailController.h; sourceTree = "<group>"; };
 		D5D7D86A201717F2005CBB11 /* SForgetPWDByMailController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SForgetPWDByMailController.m; sourceTree = "<group>"; };
+		D5D7D86D20172BAE005CBB11 /* SLoginByMailRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLoginByMailRequest.h; sourceTree = "<group>"; };
+		D5D7D86E20172BAE005CBB11 /* SLoginByMailRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SLoginByMailRequest.m; sourceTree = "<group>"; };
+		D5D7D87020172BED005CBB11 /* SLoginByMailResponse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLoginByMailResponse.h; sourceTree = "<group>"; };
+		D5D7D87120172BED005CBB11 /* SLoginByMailResponse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SLoginByMailResponse.m; sourceTree = "<group>"; };
 		D5DB07041FEA440000A347B1 /* define_notice.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = define_notice.h; sourceTree = "<group>"; };
 		D5DB07051FEA443C00A347B1 /* define.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = define.h; sourceTree = "<group>"; };
 		D5DB071F1FEA4E0A00A347B1 /* define_enum.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = define_enum.h; sourceTree = "<group>"; };
@@ -771,10 +777,12 @@
 			children = (
 				D54894FD1FF23F0C00F2019B /* SLoginByAccountRequest.h */,
 				D54894FE1FF23F0C00F2019B /* SLoginByAccountRequest.m */,
-				D5ACA7482015E72200A6C84F /* SSendMailRequest.h */,
-				D5ACA7492015E72200A6C84F /* SSendMailRequest.m */,
+				D5D7D86D20172BAE005CBB11 /* SLoginByMailRequest.h */,
+				D5D7D86E20172BAE005CBB11 /* SLoginByMailRequest.m */,
 				D5ACA74E2015E84200A6C84F /* SRegisterByMailRequest.h */,
 				D5ACA74F2015E84200A6C84F /* SRegisterByMailRequest.m */,
+				D5ACA7482015E72200A6C84F /* SSendMailRequest.h */,
+				D5ACA7492015E72200A6C84F /* SSendMailRequest.m */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -784,10 +792,12 @@
 			children = (
 				D54895001FF23F0C00F2019B /* SLoginByAccountResponse.h */,
 				D54895011FF23F0C00F2019B /* SLoginByAccountResponse.m */,
-				D5ACA74B2015E73900A6C84F /* SSendMailResponse.h */,
-				D5ACA74C2015E73900A6C84F /* SSendMailResponse.m */,
+				D5D7D87020172BED005CBB11 /* SLoginByMailResponse.h */,
+				D5D7D87120172BED005CBB11 /* SLoginByMailResponse.m */,
 				D5ACA7512015E85700A6C84F /* SRegisterByMailResponse.h */,
 				D5ACA7522015E85700A6C84F /* SRegisterByMailResponse.m */,
+				D5ACA74B2015E73900A6C84F /* SSendMailResponse.h */,
+				D5ACA74C2015E73900A6C84F /* SSendMailResponse.m */,
 			);
 			path = Response;
 			sourceTree = "<group>";
@@ -1405,6 +1415,7 @@
 				D5029816200C5BE7008375F9 /* TBArrowCell.m in Sources */,
 				D5ACA7472015CAB900A6C84F /* UINavigationItem+Margin.m in Sources */,
 				D5709CBD200E081B007BBD4C /* SSetting1Controller.mm in Sources */,
+				D5D7D87220172BED005CBB11 /* SLoginByMailResponse.m in Sources */,
 				D5957AE920073B9000F6EE60 /* STabBarController.m in Sources */,
 				D502980C200C58CC008375F9 /* TBCell.m in Sources */,
 				D5957AF320073B9000F6EE60 /* SImageView.m in Sources */,
@@ -1422,6 +1433,7 @@
 				D54894CF1FF22C5300F2019B /* SMarketController.m in Sources */,
 				D5957AE820073B9000F6EE60 /* SNavigationController.m in Sources */,
 				D54483451FED040800D2F681 /* SVersionModel.m in Sources */,
+				D5D7D86F20172BAE005CBB11 /* SLoginByMailRequest.m in Sources */,
 				D5957AF420073B9000F6EE60 /* SLabel.m in Sources */,
 				D5709CCC200EE710007BBD4C /* TBCheckCell.m in Sources */,
 				D54483481FED049300D2F681 /* SVersionService.m in Sources */,

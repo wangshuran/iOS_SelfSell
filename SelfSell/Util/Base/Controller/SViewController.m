@@ -91,6 +91,13 @@
     self.navigationItem.rightMargin = 0.0f;
 }
 
+#pragma mark - LReflectProtocol
+
+- (BOOL)reflect:(NSDictionary *)obj {
+    [self mj_setKeyValues:obj];
+    return YES;
+}
+
 //#pragma mark - LInitProtocol
 //
 //- (void)initialize {
