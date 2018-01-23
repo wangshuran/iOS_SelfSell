@@ -128,12 +128,16 @@
 
 - (STextField *)txEmail {
     if (!_txEmail) {
+        __weak typeof(self) weakSelf = self;
         _txEmail = [[STextField alloc] init];
         _txEmail.placeholder = SLocal(@"register_youxiang");
         _txEmail.backgroundColor = [UIColor clearColor];
         _txEmail.keyboardType = UIKeyboardTypeEmailAddress;
         _txEmail.textColor = [UIColor whiteColor];
         [_txEmail setPlaceholderColor:[UIColor colorWithRed:52.0f / 255.0f green:52.0f / 255.0f blue:52.0f / 255.0f alpha:1.0f]];
+        [_txEmail.rac_textSignal subscribeNext:^(NSString * _Nullable x) {
+            [weakSelf updateBtnLogin];
+        }];
     }
     
     return _txEmail;
@@ -141,12 +145,16 @@
 
 - (STextField *)txPwd {
     if (!_txPwd) {
+        __weak typeof(self) weakSelf = self;
         _txPwd = [[STextField alloc] init];
         _txPwd.placeholder = SLocal(@"login_mima");
         _txPwd.backgroundColor = [UIColor clearColor];
         _txPwd.textColor = [UIColor whiteColor];
         _txPwd.secureTextEntry = YES;
         [_txPwd setPlaceholderColor:[UIColor colorWithRed:52.0f / 255.0f green:52.0f / 255.0f blue:52.0f / 255.0f alpha:1.0f]];
+        [_txPwd.rac_textSignal subscribeNext:^(NSString * _Nullable x) {
+            [weakSelf updateBtnLogin];
+        }];
     }
     
     return _txPwd;
@@ -323,15 +331,16 @@
     return view;
 }
 
-- (void)ff {
+- (void)updateBtnLogin {
     NSString * email = self.txEmail.text;
     NSString * pwd = self.txPwd.text;
     if ([NSString isNullOrEmpty:email] || [NSString isNullOrEmpty:pwd]) {
         self.btnLogin.userInteractionEnabled = NO;
-        [_btnLogin setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        [self.btnLogin setTitleColor:kColorDarkGray forState:UIControlStateNormal];
     }else {
         self.btnLogin.userInteractionEnabled = YES;
         [_btnLogin setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        [_btnLogin setTitleColor:kColorDarkGray forState:UIControlStateHighlighted];
     }
 }
 @end
