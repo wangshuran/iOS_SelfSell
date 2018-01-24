@@ -1,5 +1,5 @@
 //
-//  SGoogleValidateController.h
+//  SGoogleValidate01Controller.h
 //  SelfSell
 //
 //  Created by liqiang on 2018/1/18.
@@ -8,6 +8,6 @@
 
 #import "SViewController.h"
 
-@interface SGoogleValidateController : SViewController
+@interface SGoogleValidate01Controller : SViewController
 
 @end

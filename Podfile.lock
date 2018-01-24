@@ -14,7 +14,7 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
-  - LBaseClass (1.0.84):
+  - LBaseClass (1.0.85):
     - AFNetworking
     - Masonry
     - MBProgressHUD
@@ -45,7 +45,7 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
-  LBaseClass: 3031f61883abd89050f56fd02c05fc2a76748938
+  LBaseClass: 2f174487e402d0d426d98ffdbd1b9db45f56c447
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   MJExtension: 5932755f451458eefa24239358817f8d291240c7

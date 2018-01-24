@@ -34,10 +34,10 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "-[SNavigationController navigationBar:didPushItem:]:SNavigationController.m">
+         contextName = "-[UIColor(Category) getR]:UIColor+Category.m">
       </ContextState>
       <ContextState
-         contextName = "-[UIColor(Category) getR]:UIColor+Category.m">
+         contextName = "-[SNavigationController navigationBar:didPushItem:]:SNavigationController.m">
       </ContextState>
       <ContextState
          contextName = "-[TBCheckCell setModel:]:TBCheckCell.m">
@@ -46,10 +46,10 @@
          contextName = "-[SLanguageController viewDidLoad]:SLanguageController.m">
          <PersistentStrings>
             <PersistentString
-               value = "self.navigationItem.rightBarButtonItem">
+               value = "self.navigationItem">
             </PersistentString>
             <PersistentString
-               value = "self.navigationItem">
+               value = "self.navigationItem.rightBarButtonItem">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -60,10 +60,10 @@
          contextName = "-[SViewController viewDidAppear:]:SViewController.m">
          <PersistentStrings>
             <PersistentString
-               value = "stackView.frame">
+               value = "view.bounds">
             </PersistentString>
             <PersistentString
-               value = "view.bounds">
+               value = "stackView.frame">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

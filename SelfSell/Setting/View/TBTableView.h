@@ -15,7 +15,7 @@
 #import "TBSwitchCell.h"
 #import "TBTextCell.h"
 
-@interface TBTableView : UITableView
+@interface TBTableView : STableView
 
 @property (nonatomic, strong) NSArray<TBSectionModel *> * data;
 

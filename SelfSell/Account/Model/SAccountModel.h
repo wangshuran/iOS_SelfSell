@@ -45,6 +45,7 @@
 
 @property (nonatomic, copy) NSString * status;
 
+//ON、OFF
 @property (nonatomic, copy) NSString * googleAuthStatus;
 
 @property (nonatomic, copy) NSString * inviteCode;

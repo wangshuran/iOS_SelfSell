@@ -99,10 +99,11 @@
     return YES;
 }
 
-//#pragma mark - LInitProtocol
-//
-//- (void)initialize {
-//    [super initialize];
-//}
+#pragma mark - LInitProtocol
+
+- (void)initialize {
+    [super initialize];
+    self.view.backgroundColor = kColorLightGray;
+}
 
 @end

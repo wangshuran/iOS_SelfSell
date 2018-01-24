@@ -168,6 +168,7 @@
     if (!_btnFinish) {
         __weak typeof(self) weakSelf = self;
         _btnFinish = [[SButton alloc] init];
+        _btnFinish.backgroundColor = kColorLightGray;
         _btnFinish.layer.cornerRadius = 5.0f;
         _btnFinish.layer.masksToBounds = YES;
         [_btnFinish setTitle:SLocal(@"login_denglu") forState:UIControlStateNormal];
@@ -272,7 +273,7 @@
     [self.view addSubview:self.v4];
     CGFloat navHeight = isIPhoneX ? 84.0f : 64.0f;
     
-    [self.navigationBar mas_updateConstraints:^(MASConstraintMaker *make) {
+    [self.navigationBar mas_updateConstraints:^(MASConstraintMaker * make) {
         make.top.left.right.mas_equalTo(weakSelf.view);
         make.height.mas_equalTo(navHeight);
     }];
@@ -364,8 +365,8 @@
 }
 
 - (void)updateBtnFinish {
-    //self.txEmail.text = @"liqiang01@new4g.cn";
-    //self.txPwd.text = @"123456";
+    self.txEmail.text = @"liqiang01@new4g.cn";
+    self.txPwd.text = @"123456";
     
     NSString * email = self.txEmail.text;
     NSString * pwd = self.txPwd.text;

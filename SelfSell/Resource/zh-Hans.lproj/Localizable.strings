@@ -10,7 +10,6 @@
 common_baocun = "保存";
 
 
-
 activity_title = "活动";
 
 
@@ -20,7 +19,8 @@ fund_title = "资金";
 setting0_title = "账户";
 setting0_tuijianma = "我的推荐码";
 setting0_gugeyanzheng = "谷歌验证";
-setting0_gugeyanzhengzhi = "已开启";
+setting0_gugeyikaiqi = "已开启";
+setting0_gugeyiguanbi = "已关闭";
 setting0_shezhi = "设置";
 setting0_tuichu = "退出";
 
@@ -33,11 +33,9 @@ setting1_guanyu = "关于";
 
 
 about_title = "关于";
-about_ = "xxx";
 
 
 language_title = "语言";
-language_ = "xxx";
 
 
 updatepwd_title = "更改密码";
@@ -72,3 +70,16 @@ forgetpwd_tijiao = "提交";
 
 security_touch_unlocktitle = "通过验证指纹解锁";
 security_touch_pwdunlock = "密码验证";
+
+
+google_title_kaiqi = "开启谷歌认证";
+google_title_guanbi = "关闭谷歌认证";
+google_beifen = "请备份密钥到安全的地方";
+google_kaobeimiyao = "拷贝密钥";
+google_xiayibu = "下一步";
+google_fuzhidao = "已复制到剪切板";
+google_xinxi = "请打开谷歌认证App，并输入认证码";
+google_gugerenzhengma = "谷歌认证码";
+google_kaiqi = "开启";
+google_guanbi = "关闭";
+

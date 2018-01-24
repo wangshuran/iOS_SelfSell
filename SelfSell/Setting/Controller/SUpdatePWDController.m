@@ -170,6 +170,8 @@
                     [MBProgressHUD showTitleToView:weakSelf.view postion:NHHUDPostionCenten title:response.msg];
                     return;
                 }
+                [AppContext sharedAppContext].accountModel.pwd = pwd;
+                [[AppContext sharedAppContext] updateLoginAccount:[AppContext sharedAppContext].accountModel];
                 [weakSelf pop];
             }];
         }];

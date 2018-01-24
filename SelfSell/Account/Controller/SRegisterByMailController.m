@@ -317,6 +317,7 @@
     if (!_btnFinish) {
         __weak typeof(self) weakSelf = self;
         _btnFinish = [[SButton alloc] init];
+        _btnFinish.backgroundColor = kColorLightGray;
         _btnFinish.layer.cornerRadius = 5.0f;
         _btnFinish.layer.masksToBounds = YES;
         [_btnFinish setTitle:SLocal(@"register_zhuce") forState:UIControlStateNormal];
@@ -396,7 +397,7 @@
     [self.view addSubview:self.v6];
     CGFloat navHeight = isIPhoneX ? 84.0f : 64.0f;
     
-    [self.navigationBar mas_updateConstraints:^(MASConstraintMaker *make) {
+    [self.navigationBar mas_updateConstraints:^(MASConstraintMaker * make) {
         make.top.left.right.mas_equalTo(weakSelf.view);
         make.height.mas_equalTo(navHeight);
     }];
