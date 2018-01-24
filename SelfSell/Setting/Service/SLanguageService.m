@@ -34,13 +34,12 @@
         NSNumber * index = [language objectForKey:@"index"];
         NSString * code = [language objectForKey:@"code"];
         NSString * value = [language objectForKey:@"value"];
-        NSNumber * ischeck = [language objectForKey:@"ischeck"];
         
         TBCheckModel * model = [[TBCheckModel alloc] init];
         model.uid = code;
         model.title = value;
         model.code = code;
-        model.isCheck = ischeck.boolValue;
+        model.isCheck = [[AppContext sharedAppContext].accountModel.languageCode isEqualToString:code];
         [data addObject:model];
     }
     
