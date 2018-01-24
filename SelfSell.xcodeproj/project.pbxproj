@@ -22,6 +22,8 @@
 		D5029819200C5BF6008375F9 /* TBExitCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D5029818200C5BF6008375F9 /* TBExitCell.m */; };
 		D502981E200D9127008375F9 /* TBTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D502981D200D9127008375F9 /* TBTextCell.m */; };
 		D5029CF91FDF6E180063D82A /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D5029CF81FDF6E180063D82A /* Info.plist */; };
+		D521BAA120186D16000299FC /* SUpdatePwdRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = D521BAA020186D16000299FC /* SUpdatePwdRequest.m */; };
+		D521BAA420186D27000299FC /* SUpdatePwdResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = D521BAA320186D27000299FC /* SUpdatePwdResponse.m */; };
 		D53B6B8D1FDF7A77006AEB46 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D53B6B8F1FDF7A77006AEB46 /* Localizable.strings */; };
 		D53B6B981FDF7DAD006AEB46 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D53B6B9A1FDF7DAD006AEB46 /* InfoPlist.strings */; };
 		D540F5421FDF83DF00AECCB7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D540F5411FDF83DF00AECCB7 /* Assets.xcassets */; };
@@ -155,6 +157,10 @@
 		D5029CF81FDF6E180063D82A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D519D34F1FDF683A00D4C9FD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D519D3501FDF684600D4C9FD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		D521BA9F20186D16000299FC /* SUpdatePwdRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SUpdatePwdRequest.h; sourceTree = "<group>"; };
+		D521BAA020186D16000299FC /* SUpdatePwdRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SUpdatePwdRequest.m; sourceTree = "<group>"; };
+		D521BAA220186D27000299FC /* SUpdatePwdResponse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SUpdatePwdResponse.h; sourceTree = "<group>"; };
+		D521BAA320186D27000299FC /* SUpdatePwdResponse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SUpdatePwdResponse.m; sourceTree = "<group>"; };
 		D53B6B931FDF7ABB006AEB46 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D53B6B941FDF7B32006AEB46 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		D53B6B991FDF7DAD006AEB46 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -783,6 +789,8 @@
 				D5ACA74F2015E84200A6C84F /* SRegisterByMailRequest.m */,
 				D5ACA7482015E72200A6C84F /* SSendMailRequest.h */,
 				D5ACA7492015E72200A6C84F /* SSendMailRequest.m */,
+				D521BA9F20186D16000299FC /* SUpdatePwdRequest.h */,
+				D521BAA020186D16000299FC /* SUpdatePwdRequest.m */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -798,6 +806,8 @@
 				D5ACA7522015E85700A6C84F /* SRegisterByMailResponse.m */,
 				D5ACA74B2015E73900A6C84F /* SSendMailResponse.h */,
 				D5ACA74C2015E73900A6C84F /* SSendMailResponse.m */,
+				D521BAA220186D27000299FC /* SUpdatePwdResponse.h */,
+				D521BAA320186D27000299FC /* SUpdatePwdResponse.m */,
 			);
 			path = Response;
 			sourceTree = "<group>";
@@ -1361,6 +1371,7 @@
 				D5957AF820073B9000F6EE60 /* STextField.m in Sources */,
 				D5029810200C5A4F008375F9 /* TBTableView.m in Sources */,
 				D5957AF620073B9000F6EE60 /* STabBar.m in Sources */,
+				D521BAA120186D16000299FC /* SUpdatePwdRequest.m in Sources */,
 				D5E610D620089546003C847A /* SActivityController.m in Sources */,
 				D54894ED1FF23A9600F2019B /* SCheckVersionRequest.m in Sources */,
 				D50297FA200C56EA008375F9 /* TBSectionModel.m in Sources */,
@@ -1394,6 +1405,7 @@
 				D5957AF920073B9000F6EE60 /* SView.m in Sources */,
 				D5957AFA20073B9000F6EE60 /* SWebView.m in Sources */,
 				D54894CC1FF22C3E00F2019B /* STalentsController.m in Sources */,
+				D521BAA420186D27000299FC /* SUpdatePwdResponse.m in Sources */,
 				D5ACA7462015CAB900A6C84F /* UINavigationBarContentViewLayout+Margin.m in Sources */,
 				D5ACA7532015E85700A6C84F /* SRegisterByMailResponse.m in Sources */,
 				D5957AEF20073B9000F6EE60 /* SRequest.m in Sources */,

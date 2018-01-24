@@ -86,7 +86,7 @@
 
 - (void)initialize {
     [super initialize];
-    
+    self.selectLanguage = [AppContext sharedAppContext].accountModel.languageCode;
     SAddObsver(noticeCellEvent:, kNoticeCellEvent)
 }
 
@@ -138,7 +138,6 @@
 }
 
 - (void)updateLanguage:(SButton *)sender {
-    SLanguage * language = [[SLanguage alloc] init];
     if ([self.selectLanguage isEqualToString:[AppContext sharedAppContext].accountModel.languageCode]) {
         return;
     }

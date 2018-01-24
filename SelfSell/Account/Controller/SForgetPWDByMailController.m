@@ -157,7 +157,7 @@
         _txEmail.textColor = [UIColor whiteColor];
         [_txEmail setPlaceholderColor:[UIColor colorWithRed:92.0f / 255.0f green:92.0f / 255.0f blue:92.0f / 255.0f alpha:1.0f]];
         [_txEmail.rac_textSignal subscribeNext:^(NSString * _Nullable x) {
-            [weakSelf updateBtnLogin];
+            [weakSelf updateBtnFinish];
         }];
     }
     
@@ -173,7 +173,7 @@
         _txCode.textColor = [UIColor whiteColor];
         [_txCode setPlaceholderColor:[UIColor colorWithRed:92.0f / 255.0f green:92.0f / 255.0f blue:92.0f / 255.0f alpha:1.0f]];
         [_txCode.rac_textSignal subscribeNext:^(NSString * _Nullable x) {
-            [weakSelf updateBtnLogin];
+            [weakSelf updateBtnFinish];
         }];
     }
     
@@ -237,7 +237,7 @@
         _txPwd.secureTextEntry = YES;
         [_txPwd setPlaceholderColor:[UIColor colorWithRed:92.0f / 255.0f green:92.0f / 255.0f blue:92.0f / 255.0f alpha:1.0f]];
         [_txPwd.rac_textSignal subscribeNext:^(NSString * _Nullable x) {
-            [weakSelf updateBtnLogin];
+            [weakSelf updateBtnFinish];
         }];
     }
     
@@ -254,7 +254,7 @@
         _txComfirmPwd.secureTextEntry = YES;
         [_txComfirmPwd setPlaceholderColor:[UIColor colorWithRed:92.0f / 255.0f green:92.0f / 255.0f blue:92.0f / 255.0f alpha:1.0f]];
         [_txComfirmPwd.rac_textSignal subscribeNext:^(NSString * _Nullable x) {
-            [weakSelf updateBtnLogin];
+            [weakSelf updateBtnFinish];
         }];
     }
     
@@ -424,7 +424,7 @@
     return view;
 }
 
-- (void)updateBtnLogin {
+- (void)updateBtnFinish {
     self.txEmail.text = @"liqiang01@new4g.cn";
     self.txPwd.text = @"123456";
     self.txComfirmPwd.text = @"123456";

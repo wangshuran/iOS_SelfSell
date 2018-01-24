@@ -7,6 +7,7 @@
 //
 
 #import "SUpdatePWDController.h"
+#import "SUpdatePwdRequest.h"
 
 @interface SUpdatePWDController ()
 
@@ -108,7 +109,7 @@
         _txOldPwd.backgroundColor = [UIColor clearColor];
         _txOldPwd.secureTextEntry = YES;
         [_txOldPwd.rac_textSignal subscribeNext:^(NSString * _Nullable x) {
-            //[weakSelf updateBtnLogin];
+            [weakSelf updateBtnFinish];
         }];
     }
     
@@ -123,7 +124,7 @@
         _txPwd.backgroundColor = [UIColor clearColor];
         _txPwd.secureTextEntry = YES;
         [_txPwd.rac_textSignal subscribeNext:^(NSString * _Nullable x) {
-            //[weakSelf updateBtnLogin];
+            [weakSelf updateBtnFinish];
         }];
     }
     
@@ -138,7 +139,7 @@
         _txComfirmPwd.backgroundColor = [UIColor clearColor];
         _txComfirmPwd.secureTextEntry = YES;
         [_txComfirmPwd.rac_textSignal subscribeNext:^(NSString * _Nullable x) {
-            //[weakSelf updateBtnLogin];
+            [weakSelf updateBtnFinish];
         }];
     }
     
@@ -155,7 +156,22 @@
         [_btnFinish setTitle:SLocal(@"updatepwd_tijiao") forState:UIControlStateNormal];
         [_btnFinish setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [[_btnFinish rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
-            //[weakSelf push:[[SLoginByMailController alloc] init]];
+            SButton * btn = x;
+            btn.userInteractionEnabled = NO;
+            NSString * oldPwd = self.txOldPwd.text;
+            NSString * pwd = self.txPwd.text;
+            SUpdatePwdRequest * request = [[SUpdatePwdRequest alloc] init];
+            request.id = [AppContext sharedAppContext].accountModel.id;
+            request.password = oldPwd;
+            request.passwordNew = pwd;
+            [SNetwork request:request block:^(LRequest * request, LResponse * response) {
+                btn.userInteractionEnabled = YES;
+                if (!response.status) {
+                    [MBProgressHUD showTitleToView:weakSelf.view postion:NHHUDPostionCenten title:response.msg];
+                    return;
+                }
+                [weakSelf pop];
+            }];
         }];
     }
     
@@ -226,6 +242,25 @@
 - (void)initialize {
     [super initialize];
     self.view.backgroundColor = kColorLightGray;
+}
+
+#pragma mark - Private
+
+- (void)updateBtnFinish {
+    self.txOldPwd.text = [AppContext sharedAppContext].accountModel.pwd;
+    self.txPwd.text = [AppContext sharedAppContext].accountModel.pwd;
+    self.txComfirmPwd.text = [AppContext sharedAppContext].accountModel.pwd;
+    
+    NSString * oldPwd = self.txOldPwd.text;
+    NSString * pwd = self.txPwd.text;
+    NSString * comfirmPwd = self.txComfirmPwd.text;
+    if ([NSString isNullOrEmpty:oldPwd] || [NSString isNullOrEmpty:pwd] || [NSString isNullOrEmpty:comfirmPwd] || ![oldPwd isEqualToString:[AppContext sharedAppContext].accountModel.pwd] || ![pwd isEqualToString:comfirmPwd]) {
+        self.btnFinish.userInteractionEnabled = NO;
+        [self.btnFinish setTitleColor:[kColorLightGray alpha:0.5f] forState:UIControlStateNormal];
+    }else {
+        self.btnFinish.userInteractionEnabled = YES;
+        [self.btnFinish setTitleColor:kColorLightGray forState:UIControlStateNormal];
+    }
 }
 
 @end
