@@ -9,6 +9,8 @@
 #import "SForgetPWDByMailController.h"
 #import "SNavigationBar.h"
 #import "SSendMailRequest.h"
+#import "SForgetPwdByMailRequest.h"
+#import "SLoginByMailController.h"
 
 @interface SForgetPWDByMailController ()
 
@@ -102,6 +104,7 @@
 - (SView *)v4 {
     if (!_v4) {
         _v4 = [self getBlackRect];
+        _v4.backgroundColor = [UIColor clearColor];
         [_v4 addSubview:self.btnFinish];
     }
     
@@ -200,9 +203,10 @@
             [SNetwork request:request block:^(LRequest * request, LResponse * response) {
                 if (!response.status) {
                     btn.userInteractionEnabled = YES;
-                    
+                    [weakSelf.txEmail becomeFirstResponder];
                     return;
                 }
+                [weakSelf.txCode becomeFirstResponder];
                 [btn setTitleColor:kColorDarkGray forState:UIControlStateNormal];
                 __block NSUInteger count = 10;
                 [[[RACSignal interval:1 onScheduler:[RACScheduler mainThreadScheduler]] take:count] subscribeNext:^(NSDate * _Nullable x) {
@@ -258,6 +262,7 @@
 
 - (SButton *)btnFinish {
     if (!_btnFinish) {
+        __weak typeof(self) weakSelf = self;
         _btnFinish = [[SButton alloc] init];
         _btnFinish.titleLabel.font = kBtnFontNormal;
         _btnFinish.layer.cornerRadius = 5.0f;
@@ -265,6 +270,27 @@
         [_btnFinish setTitle:SLocal(@"forgetpwd_tijiao") forState:UIControlStateNormal];
         [_btnFinish setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         [_btnFinish setTitleColor:kColorDarkGray forState:UIControlStateHighlighted];
+        [[_btnFinish rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
+            SButton * btn = x;
+            btn.userInteractionEnabled = NO;
+            [weakSelf.view endEditing:YES];
+            NSString * email = weakSelf.txEmail.text;
+            NSString * code = weakSelf.txCode.text;
+            NSString * pwd = weakSelf.txPwd.text;
+            
+            SForgetPwdByMailRequest * request = [[SForgetPwdByMailRequest alloc] init];
+            request.email = email;
+            request.emailCheckCode = code;
+            request.password = pwd;
+            [SNetwork request:request block:^(LRequest * request, LResponse * response) {
+                btn.userInteractionEnabled = YES;
+                if (!response.status) {
+                    [MBProgressHUD showTitleToView:weakSelf.view postion:NHHUDPostionCenten title:response.msg];
+                    return;
+                }
+                [weakSelf push:[[SLoginByMailController alloc] init]];
+            }];
+        }];
     }
     
     return _btnFinish;
@@ -401,6 +427,10 @@
 }
 
 - (void)updateBtnLogin {
+    self.txEmail.text = @"liqiang01@new4g.cn";
+    self.txPwd.text = @"123456";
+    self.txComfirmPwd.text = @"123456";
+    
     NSString * email = self.txEmail.text;
     NSString * code = self.txCode.text;
     NSString * pwd = self.txPwd.text;

@@ -243,9 +243,10 @@
             [SNetwork request:request block:^(LRequest * request, LResponse * response) {
                 if (!response.status) {
                     btn.userInteractionEnabled = YES;
-                    
+                    [weakSelf.txEmail becomeFirstResponder];
                     return;
                 }
+                [weakSelf.txCode becomeFirstResponder];
                 [btn setTitleColor:kColorDarkGray forState:UIControlStateNormal];
                 __block NSUInteger count = 10;
                 [[[RACSignal interval:1 onScheduler:[RACScheduler mainThreadScheduler]] take:count] subscribeNext:^(NSDate * _Nullable x) {
@@ -324,6 +325,7 @@
         [[_btnRegister rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
             SButton * btn = x;
             btn.userInteractionEnabled = NO;
+            [weakSelf.view endEditing:YES];
             NSString * email = weakSelf.txEmail.text;
             NSString * code = weakSelf.txCode.text;
             NSString * pwd = weakSelf.txPwd.text;
@@ -336,11 +338,10 @@
             request.inviteCode = recommendCode;
             [SNetwork request:request block:^(LRequest * request, LResponse * response) {
                 btn.userInteractionEnabled = YES;
-                if (!response.status) {//注册错误
+                if (!response.status) {
                     [MBProgressHUD showTitleToView:weakSelf.view postion:NHHUDPostionCenten title:response.msg];
                     return;
-                }
-                
+                }                
                 [weakSelf loginByMail:email pwd:pwd];
             }];
         }];
@@ -529,6 +530,10 @@
 }
 
 - (void)updateBtnLogin {
+    self.txEmail.text = @"liqiang01@new4g.cn";
+    self.txPwd.text = @"123456";
+    self.txComfirmPwd.text = @"123456";    
+    
     NSString * email = self.txEmail.text;
     NSString * code = self.txCode.text;
     NSString * pwd = self.txPwd.text;
@@ -549,7 +554,7 @@
     request.email = email;
     request.password = pwd;
     [SNetwork request:request block:^(LRequest * request, LResponse * response) {
-        if (!response.status) {//登录错误
+        if (!response.status) {
             [MBProgressHUD showTitleToView:weakSelf.view postion:NHHUDPostionCenten title:response.msg];
             return;
         }

@@ -7,7 +7,6 @@
 //
 
 #import "AppDelegate.h"
-#import "SLoginByAccountRequest.h"
 #import "SWelcomeController.h"
 
 

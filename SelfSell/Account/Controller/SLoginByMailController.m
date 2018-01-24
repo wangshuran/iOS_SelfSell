@@ -55,6 +55,7 @@
 - (SView *)v0 {
     if (!_v0) {
         _v0 = [self getBlackRect];
+        _v0.backgroundColor = [UIColor clearColor];
         [_v0 addSubview:self.imgLogo];
     }
     
@@ -84,6 +85,7 @@
 - (SView *)v3 {
     if (!_v3) {
         _v3 = [self getBlackRect];
+        _v3.backgroundColor = [UIColor clearColor];
         [_v3 addSubview:self.btnLogin];
     }
     
@@ -93,6 +95,7 @@
 - (SView *)v4 {
     if (!_v4) {
         _v4 = [self getBlackRect];
+        _v4.backgroundColor = [UIColor clearColor];
         [_v4 addSubview:self.btnForgetPwd];
         [_v4 addSubview:self.btnRegister];
     }
@@ -174,6 +177,7 @@
         [[_btnLogin rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
             SButton * btn = x;
             btn.userInteractionEnabled = NO;
+            [weakSelf.view endEditing:YES];
             NSString * email = weakSelf.txEmail.text;
             NSString * pwd = weakSelf.txPwd.text;
 
@@ -182,7 +186,8 @@
             request.password = pwd;
             //request.googleAuthCode = pwd;
             [SNetwork request:request block:^(LRequest * request, LResponse * response) {
-                if (!response.status) {//登录错误
+                if (!response.status) {
+                    btn.userInteractionEnabled = YES;
                     [MBProgressHUD showTitleToView:weakSelf.view postion:NHHUDPostionCenten title:response.msg];
                     return;
                 }
