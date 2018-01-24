@@ -26,7 +26,7 @@ setting0_tuichu = "退出";
 
 
 setting1_title = "设置";
-setting1_xiugaimima = "修改密码";
+setting1_xiugaimima = "更改密码";
 setting1_zhiwen = "指纹";
 setting1_yuyan = "语言";
 setting1_guanyu = "关于";
@@ -40,8 +40,11 @@ language_title = "语言";
 language_ = "xxx";
 
 
-updatepwd_title = "修改密码";
-updatepwd_ = "xxx";
+updatepwd_title = "更改密码";
+updatepwd_jiumima = "旧密码";
+updatepwd_mima = "密码不少于6位";
+updatepwd_querenmima = "确认密码";
+updatepwd_tijiao = "提交";
 
 
 register_title = "注册";

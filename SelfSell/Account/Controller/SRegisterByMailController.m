@@ -51,7 +51,7 @@
 
 @property (nonatomic, strong) STextField * txRecommendCode;
 
-@property (nonatomic, strong) SButton * btnRegister;
+@property (nonatomic, strong) SButton * btnFinish;
 
 @property (nonatomic, strong) SButton * btnLogin;
 
@@ -126,7 +126,7 @@
     if (!_v5) {
         _v5 = [[SView alloc] init];
         _v5.backgroundColor = [UIColor clearColor];
-        [_v5 addSubview:self.btnRegister];
+        [_v5 addSubview:self.btnFinish];
     }
     
     return _v5;
@@ -313,17 +313,14 @@
     return _txRecommendCode;
 }
 
-- (SButton *)btnRegister {
-    if (!_btnRegister) {
+- (SButton *)btnFinish {
+    if (!_btnFinish) {
         __weak typeof(self) weakSelf = self;
-        _btnRegister = [[SButton alloc] init];
-        _btnRegister.titleLabel.font = kBtnFontNormal;
-        _btnRegister.layer.cornerRadius = 5.0f;
-        _btnRegister.layer.masksToBounds = YES;
-        [_btnRegister setTitle:SLocal(@"register_zhuce") forState:UIControlStateNormal];
-        [_btnRegister setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-        [_btnRegister setTitleColor:kColorDarkGray forState:UIControlStateHighlighted];
-        [[_btnRegister rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
+        _btnFinish = [[SButton alloc] init];
+        _btnFinish.layer.cornerRadius = 5.0f;
+        _btnFinish.layer.masksToBounds = YES;
+        [_btnFinish setTitle:SLocal(@"register_zhuce") forState:UIControlStateNormal];
+        [[_btnFinish rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
             SButton * btn = x;
             btn.userInteractionEnabled = NO;
             [weakSelf.view endEditing:YES];
@@ -348,7 +345,7 @@
         }];
     }
     
-    return _btnRegister;
+    return _btnFinish;
 }
 
 - (SButton *)btnLogin {
@@ -503,7 +500,7 @@
         make.top.bottom.right.mas_equalTo(weakSelf.v4);
         make.left.mas_equalTo(weakSelf.imgRecommendCode.mas_right).mas_offset(10.0f);
     }];
-    [self.btnRegister mas_updateConstraints:^(MASConstraintMaker * make) {
+    [self.btnFinish mas_updateConstraints:^(MASConstraintMaker * make) {
         make.top.bottom.left.right.mas_equalTo(weakSelf.v5);
     }];
     [self.btnLogin mas_updateConstraints:^(MASConstraintMaker * make) {
@@ -533,19 +530,18 @@
 - (void)updateBtnLogin {
     self.txEmail.text = @"liqiang01@new4g.cn";
     self.txPwd.text = @"123456";
-    self.txComfirmPwd.text = @"123456";    
+    self.txComfirmPwd.text = @"123456";
     
     NSString * email = self.txEmail.text;
     NSString * code = self.txCode.text;
     NSString * pwd = self.txPwd.text;
     NSString * comfirmPwd = self.txComfirmPwd.text;
     if ([NSString isNullOrEmpty:email] || [NSString isNullOrEmpty:code] || [NSString isNullOrEmpty:pwd] || [NSString isNullOrEmpty:comfirmPwd] || ![pwd isEqualToString:comfirmPwd] || pwd.length < 6) {
-        self.btnRegister.userInteractionEnabled = NO;
-        [self.btnRegister setTitleColor:kColorDarkGray forState:UIControlStateNormal];
+        self.btnFinish.userInteractionEnabled = NO;
+        [self.btnFinish setTitleColor:[kColorBlack alpha:0.5f] forState:UIControlStateNormal];
     }else {
-        self.btnRegister.userInteractionEnabled = YES;
-        [self.btnRegister setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-        [self.btnRegister setTitleColor:kColorDarkGray forState:UIControlStateHighlighted];
+        self.btnFinish.userInteractionEnabled = YES;
+        [self.btnFinish setTitleColor:kColorBlack forState:UIControlStateNormal];
     }
 }
 

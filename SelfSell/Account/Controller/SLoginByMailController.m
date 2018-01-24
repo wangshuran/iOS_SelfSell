@@ -34,7 +34,7 @@
 
 @property (nonatomic, strong) STextField * txPwd;
 
-@property (nonatomic, strong) SButton * btnLogin;
+@property (nonatomic, strong) SButton * btnFinish;
 
 @property (nonatomic, strong) SButton * btnForgetPwd;
 
@@ -86,7 +86,7 @@
     if (!_v3) {
         _v3 = [self getBlackRect];
         _v3.backgroundColor = [UIColor clearColor];
-        [_v3 addSubview:self.btnLogin];
+        [_v3 addSubview:self.btnFinish];
     }
     
     return _v3;
@@ -140,7 +140,7 @@
         _txEmail.textColor = [UIColor whiteColor];
         [_txEmail setPlaceholderColor:[UIColor colorWithRed:92.0f / 255.0f green:92.0f / 255.0f blue:92.0f / 255.0f alpha:1.0f]];
         [_txEmail.rac_textSignal subscribeNext:^(NSString * _Nullable x) {
-            [weakSelf updateBtnLogin];
+            [weakSelf updateBtnFinish];
         }];
     }
     
@@ -157,30 +157,27 @@
         _txPwd.secureTextEntry = YES;
         [_txPwd setPlaceholderColor:[UIColor colorWithRed:92.0f / 255.0f green:92.0f / 255.0f blue:92.0f / 255.0f alpha:1.0f]];
         [_txPwd.rac_textSignal subscribeNext:^(NSString * _Nullable x) {
-            [weakSelf updateBtnLogin];
+            [weakSelf updateBtnFinish];
         }];
     }
     
     return _txPwd;
 }
 
-- (SButton *)btnLogin {
-    if (!_btnLogin) {
+- (SButton *)btnFinish {
+    if (!_btnFinish) {
         __weak typeof(self) weakSelf = self;
-        _btnLogin = [[SButton alloc] init];
-        _btnLogin.layer.cornerRadius = 5.0f;
-        _btnLogin.layer.masksToBounds = YES;
-        _btnLogin.titleLabel.font = kBtnFontNormal;
-        [_btnLogin setTitle:SLocal(@"login_denglu") forState:UIControlStateNormal];
-        [_btnLogin setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-        [_btnLogin setTitleColor:kColorDarkGray forState:UIControlStateHighlighted];
-        [[_btnLogin rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
+        _btnFinish = [[SButton alloc] init];
+        _btnFinish.layer.cornerRadius = 5.0f;
+        _btnFinish.layer.masksToBounds = YES;
+        [_btnFinish setTitle:SLocal(@"login_denglu") forState:UIControlStateNormal];
+        [[_btnFinish rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
             SButton * btn = x;
             btn.userInteractionEnabled = NO;
             [weakSelf.view endEditing:YES];
             NSString * email = weakSelf.txEmail.text;
             NSString * pwd = weakSelf.txPwd.text;
-
+            
             SLoginByMailRequest * request = [[SLoginByMailRequest alloc] init];
             request.email = email;
             request.password = pwd;
@@ -193,7 +190,7 @@
                 }
                 SLoginByMailResponse * model = (SLoginByMailResponse *)response;
                 model.data.pwd = pwd;
-                model.data.loginType = LoginTypeAccount;                
+                model.data.loginType = LoginTypeAccount;
                 model.data.loginTime = [[NSDate date] timeIntervalSince1970];
                 [[AppContext sharedAppContext].accountDao close];
                 [AppContext sharedAppContext].accountDao = nil;
@@ -206,7 +203,7 @@
         }];
     }
     
-    return _btnLogin;
+    return _btnFinish;
 }
 
 - (SButton *)btnForgetPwd {
@@ -332,7 +329,7 @@
         make.top.bottom.right.mas_equalTo(weakSelf.v2);
         make.left.mas_equalTo(weakSelf.imgPwd.mas_right).mas_offset(10.0f);
     }];
-    [self.btnLogin mas_updateConstraints:^(MASConstraintMaker * make) {
+    [self.btnFinish mas_updateConstraints:^(MASConstraintMaker * make) {
         make.top.bottom.left.right.mas_equalTo(weakSelf.v3);
     }];
     CGFloat btnForgetPwdWidth = [self.btnForgetPwd.titleLabel.text boundingRectWithSize:CGSizeZero options:NSStringDrawingUsesLineFragmentOrigin attributes:[NSDictionary dictionaryWithObjectsAndKeys:self.btnForgetPwd.titleLabel.font, NSFontAttributeName, nil] context:nil].size.width + 10.0f;
@@ -366,19 +363,18 @@
     return view;
 }
 
-- (void)updateBtnLogin {
+- (void)updateBtnFinish {
     self.txEmail.text = @"liqiang01@new4g.cn";
     self.txPwd.text = @"123456";
     
     NSString * email = self.txEmail.text;
     NSString * pwd = self.txPwd.text;
     if ([NSString isNullOrEmpty:email] || [NSString isNullOrEmpty:pwd]) {
-        self.btnLogin.userInteractionEnabled = NO;
-        [self.btnLogin setTitleColor:kColorDarkGray forState:UIControlStateNormal];
+        self.btnFinish.userInteractionEnabled = NO;
+        [self.btnFinish setTitleColor:[kColorBlack alpha:0.5f] forState:UIControlStateNormal];
     }else {
-        self.btnLogin.userInteractionEnabled = YES;
-        [self.btnLogin setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-        [self.btnLogin setTitleColor:kColorDarkGray forState:UIControlStateHighlighted];
+        self.btnFinish.userInteractionEnabled = YES;
+        [self.btnFinish setTitleColor:kColorBlack forState:UIControlStateNormal];
     }
 }
 

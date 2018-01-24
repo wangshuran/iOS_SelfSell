@@ -37,6 +37,9 @@
          contextName = "-[SNavigationController navigationBar:didPushItem:]:SNavigationController.m">
       </ContextState>
       <ContextState
+         contextName = "-[UIColor(Category) getR]:UIColor+Category.m">
+      </ContextState>
+      <ContextState
          contextName = "-[TBCheckCell setModel:]:TBCheckCell.m">
       </ContextState>
       <ContextState
@@ -69,9 +72,6 @@
       </ContextState>
       <ContextState
          contextName = "-[SLanguageController viewDidAppear:]:SLanguageController.m">
-      </ContextState>
-      <ContextState
-         contextName = "-[AppDelegate application:didFinishLaunchingWithOptions:]:AppDelegate.m">
       </ContextState>
       <ContextState
          contextName = "-[SSettingController tbTableView]:SSettingController.m">

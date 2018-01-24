@@ -14,7 +14,7 @@
     [super setTitleColor:color forState:state];
     
     if (state == UIControlStateNormal) {
-        [self setTitleColor:[UIColor colorWithRed:[color getR] green:[color getG] blue:[color getB] alpha:[color getA] * 0.5f] forState:UIControlStateHighlighted];
+        [self setTitleColor:[color alpha:0.5f] forState:UIControlStateHighlighted];
     }
 }
 
@@ -23,6 +23,7 @@
 - (void)initialize {
     [super initialize];
     self.titleLabel.font = kBtnFontNormal;
+    [self setTitleColor:kColorBlack forState:UIControlStateNormal];
 }
 
 @end

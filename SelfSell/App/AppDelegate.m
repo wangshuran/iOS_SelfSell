@@ -41,8 +41,6 @@
     [AppContext sharedAppContext].accountModel = accountModel;
     [self initDB];
     
-    
-    
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.rootViewController = [AppContext sharedAppContext].rootVC;
     [self.window makeKeyAndVisible];
@@ -82,17 +80,7 @@
     [self.window.rootViewController present:[[SNavigationController alloc] initWithRootViewController:[[NSClassFromString(@"SLoginByMailController") alloc] init]]];
     //[self.window.rootViewController present:[[SWelcomeController alloc] init] animated:NO completion:nil];
     
-    //NSMutableDictionary * d1 = [[NSMutableDictionary alloc] init];
-    //[d1 setObject:@"token" forKey:@"token"];
-    //[d1 setObject:@"investor" forKey:@"investor"];
-    //[d1 setObject:@"id" forKey:@"id"];
-    //
-    //NSMutableDictionary * d0 = [[NSMutableDictionary alloc] init];
-    //[d0 setObject:@"1" forKey:@"success"];
-    //[d0 setObject:d1 forKey:@"data"];
-    //SLoginByMailResponse * vv = [[SLoginByMailResponse alloc] init];
-    //[vv reflect:d0];
-    //[[[NSClassFromString(@"SLoginByMailRequest") alloc] init] getParameter];
+
     
     return YES;
 }

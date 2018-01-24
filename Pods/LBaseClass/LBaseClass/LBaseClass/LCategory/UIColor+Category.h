@@ -16,6 +16,11 @@
 + (UIColor *)randomColor;
 
 /**
+ 获取指定透明度颜色值
+ */
+- (UIColor *)alpha:(CGFloat)alpha;
+
+/**
  获取R值
  */
 - (CGFloat)getR;

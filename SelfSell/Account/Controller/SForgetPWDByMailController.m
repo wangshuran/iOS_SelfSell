@@ -203,7 +203,7 @@
             [SNetwork request:request block:^(LRequest * request, LResponse * response) {
                 if (!response.status) {
                     btn.userInteractionEnabled = YES;
-                    [weakSelf.txEmail becomeFirstResponder];                    
+                    [weakSelf.txEmail becomeFirstResponder];
                     [MBProgressHUD showTitleToView:weakSelf.view postion:NHHUDPostionCenten title:response.msg];
                     return;
                 }
@@ -265,12 +265,9 @@
     if (!_btnFinish) {
         __weak typeof(self) weakSelf = self;
         _btnFinish = [[SButton alloc] init];
-        _btnFinish.titleLabel.font = kBtnFontNormal;
         _btnFinish.layer.cornerRadius = 5.0f;
         _btnFinish.layer.masksToBounds = YES;
         [_btnFinish setTitle:SLocal(@"forgetpwd_tijiao") forState:UIControlStateNormal];
-        [_btnFinish setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-        [_btnFinish setTitleColor:kColorDarkGray forState:UIControlStateHighlighted];
         [[_btnFinish rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
             SButton * btn = x;
             btn.userInteractionEnabled = NO;
@@ -438,11 +435,10 @@
     NSString * comfirmPwd = self.txComfirmPwd.text;
     if ([NSString isNullOrEmpty:email] || [NSString isNullOrEmpty:code] || [NSString isNullOrEmpty:pwd] || [NSString isNullOrEmpty:comfirmPwd] || ![pwd isEqualToString:comfirmPwd] || pwd.length < 6) {
         self.btnFinish.userInteractionEnabled = NO;
-        [self.btnFinish setTitleColor:kColorDarkGray forState:UIControlStateNormal];
+        [self.btnFinish setTitleColor:[kColorBlack alpha:0.5f] forState:UIControlStateNormal];
     }else {
         self.btnFinish.userInteractionEnabled = YES;
-        [self.btnFinish setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-        [self.btnFinish setTitleColor:kColorDarkGray forState:UIControlStateHighlighted];
+        [self.btnFinish setTitleColor:kColorBlack forState:UIControlStateNormal];
     }
 }
 
