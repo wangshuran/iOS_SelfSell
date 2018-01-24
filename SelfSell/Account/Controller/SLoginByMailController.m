@@ -364,8 +364,8 @@
 }
 
 - (void)updateBtnFinish {
-    self.txEmail.text = @"liqiang01@new4g.cn";
-    self.txPwd.text = @"123456";
+    //self.txEmail.text = @"liqiang01@new4g.cn";
+    //self.txPwd.text = @"123456";
     
     NSString * email = self.txEmail.text;
     NSString * pwd = self.txPwd.text;

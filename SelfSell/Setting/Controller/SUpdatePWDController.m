@@ -247,14 +247,14 @@
 #pragma mark - Private
 
 - (void)updateBtnFinish {
-    self.txOldPwd.text = [AppContext sharedAppContext].accountModel.pwd;
-    self.txPwd.text = [AppContext sharedAppContext].accountModel.pwd;
-    self.txComfirmPwd.text = [AppContext sharedAppContext].accountModel.pwd;
+    //self.txOldPwd.text = [AppContext sharedAppContext].accountModel.pwd;
+    //self.txPwd.text = [AppContext sharedAppContext].accountModel.pwd;
+    //self.txComfirmPwd.text = [AppContext sharedAppContext].accountModel.pwd;
     
     NSString * oldPwd = self.txOldPwd.text;
     NSString * pwd = self.txPwd.text;
     NSString * comfirmPwd = self.txComfirmPwd.text;
-    if ([NSString isNullOrEmpty:oldPwd] || [NSString isNullOrEmpty:pwd] || [NSString isNullOrEmpty:comfirmPwd] || ![oldPwd isEqualToString:[AppContext sharedAppContext].accountModel.pwd] || ![pwd isEqualToString:comfirmPwd]) {
+    if ([NSString isNullOrEmpty:oldPwd] || [NSString isNullOrEmpty:pwd] || [NSString isNullOrEmpty:comfirmPwd] || ![oldPwd isEqualToString:[AppContext sharedAppContext].accountModel.pwd] || ![pwd isEqualToString:comfirmPwd] || comfirmPwd.length < 6) {
         self.btnFinish.userInteractionEnabled = NO;
         [self.btnFinish setTitleColor:[kColorLightGray alpha:0.5f] forState:UIControlStateNormal];
     }else {
