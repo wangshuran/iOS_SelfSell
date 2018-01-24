@@ -17,7 +17,7 @@
 
 @property (nonatomic, strong) TBTableView * tbTableView;
 
-@property (nonatomic, copy) NSString * strSelectLanguage;
+@property (nonatomic, copy) NSString * selectLanguage;
 
 @property (nonatomic, strong) SButton * btnRight;
 
@@ -116,7 +116,7 @@
             item.isCheck = [model.uid isEqualToString:item.uid];
         }
     }
-    self.strSelectLanguage = model.code;
+    self.selectLanguage = model.code;
     
     __weak typeof(self) weakSelf = self;
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.2f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
@@ -129,7 +129,7 @@
 
 - (void)updateRightBtn {
     SLanguage * language = [[SLanguage alloc] init];
-    if ([self.strSelectLanguage isEqualToString:[language getAppCurrentLanguage]]) {
+    if ([self.selectLanguage isEqualToString:[AppContext sharedAppContext].accountModel.languageCode]) {
         [self.btnRight setTitleColor:[UIColor colorWithRed:255.0f / 255.0f green:140.0f / 255.0f blue:0.0f / 255.0f alpha:0.3f] forState:UIControlStateNormal];
         [self.btnRight setTitleColor:[UIColor colorWithRed:255.0f / 255.0f green:140.0f / 255.0f blue:0.0f / 255.0f alpha:0.3f] forState:UIControlStateHighlighted];
     }else {
@@ -139,13 +139,13 @@
 
 - (void)updateLanguage:(SButton *)sender {
     SLanguage * language = [[SLanguage alloc] init];
-    if ([self.strSelectLanguage isEqualToString:[language getAppCurrentLanguage]]) {
+    if ([self.selectLanguage isEqualToString:[AppContext sharedAppContext].accountModel.languageCode]) {
         return;
-    }    
-    if ([language setAppCurrentLanguage:self.strSelectLanguage]) {
-        [self.navigationController popToRootViewControllerAnimated:YES];
-        SPostNotification(kNoticeSwitchLanguage);
     }
+    [AppContext sharedAppContext].accountModel.languageCode = self.selectLanguage;
+    [[AppContext sharedAppContext] updateLoginAccount:[AppContext sharedAppContext].accountModel];
+    [self.navigationController popToRootViewControllerAnimated:YES];
+    SPostNotification(kNoticeSwitchLanguage);
 }
 
 @end

@@ -188,10 +188,11 @@
                 }
                 SLoginByMailResponse * model = (SLoginByMailResponse *)response;
                 model.data.pwd = pwd;
+                model.data.loginType = LoginTypeAccount;                
+                model.data.loginTime = [[NSDate date] timeIntervalSince1970];
                 [[AppContext sharedAppContext].accountDao close];
                 [AppContext sharedAppContext].accountDao = nil;
                 [AppContext sharedAppContext].accountModel = model.data;
-                [AppContext sharedAppContext].loginType = LoginTypeAccount;
                 [[AppContext sharedAppContext] updateLoginAccount:model.data];
                 [weakSelf dismiss];
                 SPostNotification(kNoticeFinishLogin);

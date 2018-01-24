@@ -25,12 +25,12 @@
     AFHTTPSessionManager * manager = [AFHTTPSessionManager manager];
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
     manager.requestSerializer.timeoutInterval = request.timeoutInterval;
-    if ([AppContext sharedAppContext].loginType != LoginTypeNone && ![NSString isNullOrEmpty:[AppContext sharedAppContext].accountModel.token]) {
+    if ([AppContext sharedAppContext].accountModel.loginType != LoginTypeNone && ![NSString isNullOrEmpty:[AppContext sharedAppContext].accountModel.token]) {
         [manager.requestSerializer setValue:[AppContext sharedAppContext].accountModel.token forHTTPHeaderField:@"Authorization"];
     }
-    if ([AppContext sharedAppContext].language == LanguageEN) {
+    if ([AppContext sharedAppContext].accountModel.language == LanguageEN) {
         [manager.requestSerializer setValue:@"en_US" forHTTPHeaderField:@"Lang"];
-    }else if ([AppContext sharedAppContext].language == LanguageSC) {
+    }else if ([AppContext sharedAppContext].accountModel.language == LanguageSC) {
         [manager.requestSerializer setValue:@"zh_CN" forHTTPHeaderField:@"Lang"];
     }
     

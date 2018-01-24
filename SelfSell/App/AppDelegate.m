@@ -33,9 +33,16 @@
         [AppContext sharedAppContext].netStatus = status;
     }];
     [[AppContext sharedAppContext] startMonitoring];//自定义监听
+    SAccountModel * accountModel = [[AppContext sharedAppContext] getLastLoginAccount];
+    if (!accountModel) {
+        accountModel = [[SAccountModel alloc] init];
+        accountModel.loginTime = [[NSDate date] timeIntervalSince1970];
+        [[AppContext sharedAppContext] updateLoginAccount:accountModel];
+    }
+    [AppContext sharedAppContext].accountModel = accountModel;
     [self initDB];
     
-    SAccountModel * accountModel = [[AppContext sharedAppContext] getLastLoginAccount];
+    
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.rootViewController = [AppContext sharedAppContext].rootVC;

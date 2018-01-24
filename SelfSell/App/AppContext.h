@@ -33,24 +33,9 @@ LSingleton_h(AppContext);
 @property (nonatomic, strong) SSetting0Controller * setting0VC;
 
 /**
- 语言类型
- */
-@property (nonatomic, assign, readonly) Language language;
-
-/**
- 语言类型代码
- */
-@property (nonatomic, copy) NSString * languageCode;
-
-/**
  网络状态
  */
 @property (nonatomic, assign) AFNetworkReachabilityStatus netStatus;
-
-/**
- 登录类型
- */
-@property (nonatomic, assign) LoginType loginType;
 
 /**
  用户信息

@@ -20,6 +20,23 @@
  */
 @property (nonatomic, copy) NSString * pwd;
 
+/**
+ 登录类型
+ */
+@property (nonatomic, assign) LoginType loginType;
+
+/**
+ 语言类型
+ */
+@property (nonatomic, assign, readonly) Language language;
+
+/**
+ 语言类型代码
+ */
+@property (nonatomic, copy) NSString * languageCode;
+
+/////////////////////////////////////////////////////
+
 @property (nonatomic, copy) NSString * token;
 
 @property (nonatomic, copy) NSString * id;

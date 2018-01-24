@@ -19,28 +19,6 @@
 
 LSingleton_m(AppContext);
 
-- (void)setLanguageCode:(NSString *)languageCode {
-    SLanguage * language = [[SLanguage alloc] init];
-    NSArray * languages = [language getAppSupportLanguage];
-    
-    for (NSDictionary * language in languages) {
-        if ([languageCode hasPrefix:[language objectForKey:@"code"]]) {
-            NSString * index = [NSString stringWithFormat:@"%@", [language objectForKey:@"index"]];
-            _language = index.intValue;
-            _languageCode = [language objectForKey:@"code"];
-            
-            break;
-        }
-    }
-    
-    if (!_languageCode) {
-        NSDictionary * language = [languages objectAtIndex:0];
-        NSString * index = [NSString stringWithFormat:@"%@", [language objectForKey:@"index"]];
-        _language = index.intValue;
-        _languageCode = [language objectForKey:@"code"];
-    }
-}
-
 - (void)startMonitoring {
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored"-Wundeclared-selector"
@@ -149,9 +127,8 @@ LSingleton_m(AppContext);
 }
 
 - (SDao *)accountDao {
-    if (!_accountDao) {
-        NSString * name = self.loginType == LoginTypeNone ? [[UIDevice currentDevice] uniqueDeviceIdentifier] : self.accountModel.id;
-        name = [name MD5];
+    if (!_accountDao) {        
+        NSString * name = [self.accountModel.id MD5];
         _accountDao = [SDao dbPath:[[self getCurrentAccountSpacePath] stringByAppendingPathComponent:name] secret:name];
     }
     
@@ -172,9 +149,7 @@ LSingleton_m(AppContext);
 - (void)initialize {
     [super initialize];
     
-    self.languageCode = [[[SLanguage alloc] init] getAppCurrentLanguage];
     self.netStatus = AFNetworkReachabilityStatusUnknown;
-    self.loginType = LoginTypeNone;
     self.accountModel = nil;
     _languageCache = [[NSMutableDictionary alloc] initWithCapacity:1024];
     

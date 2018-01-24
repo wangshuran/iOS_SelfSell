@@ -18,11 +18,11 @@
 /**
  获取APP当前语言
  */
-- (NSString *)getAppCurrentLanguage;
+- (NSString *)getAppDefaultLanguage;
 
 /**
  设置当前语言
  */
-- (BOOL)setAppCurrentLanguage:(NSString *)languageCode;
+//- (BOOL)setAppCurrentLanguage:(NSString *)languageCode;
 
 @end

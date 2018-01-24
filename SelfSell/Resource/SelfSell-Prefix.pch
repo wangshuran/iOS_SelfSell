@@ -24,6 +24,12 @@
 #import <NHHUDExtend/MBProgressHUD+NHAdd.h>
 
 
+//--------------------define--------------------
+#import "define.h"
+#import "define_enum.h"
+#import "define_notice.h"
+
+
 //--------------------SModel--------------------
 #import "SObject.h"
 #import "SModel.h"
@@ -72,12 +78,6 @@
 #import "STextField.h"
 #import "SView.h"
 #import "SWebView.h"
-
-
-//--------------------define--------------------
-#import "define.h"
-#import "define_enum.h"
-#import "define_notice.h"
 
 
 //--------------------Context--------------------

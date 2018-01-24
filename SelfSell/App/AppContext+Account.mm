@@ -18,9 +18,7 @@
 #pragma mark - Interface
 
 - (NSString *)getCurrentAccountID {
-    NSString * accountIdentifier = self.loginType == LoginTypeNone ? [[UIDevice currentDevice] uniqueDeviceIdentifier] : self.accountModel.id;
-    
-    return [accountIdentifier MD5];
+    return [self.accountModel.id MD5];
 }
 
 - (NSString *)getCurrentAccountSpacePath {
@@ -50,9 +48,7 @@
         return;
     }
     
-    NSString * accountIdentifier = self.loginType == LoginTypeNone ? [[UIDevice currentDevice] uniqueDeviceIdentifier] : self.accountModel.id;
-    accountIdentifier = [accountIdentifier MD5];
-    
+    NSString * accountIdentifier = [self.accountModel.id MD5];
     NSUserDefaults * userDefaults = [NSUserDefaults standardUserDefaults];
     
     @synchronized(self) {
@@ -75,8 +71,7 @@
         return nil;
     }
     
-    NSString * accountIdentifier = self.loginType == LoginTypeNone ? [[UIDevice currentDevice] uniqueDeviceIdentifier] : self.accountModel.id;
-    accountIdentifier = [accountIdentifier MD5];
+    NSString * accountIdentifier = [self.accountModel.id MD5];
     NSUserDefaults * userDefaults = [NSUserDefaults standardUserDefaults];
     
     @synchronized(self) {
@@ -222,9 +217,7 @@
 /**
  切换语言通知
  */
-- (void)noticeSwitchLanguage:(NSNotification *)notification {
-    self.languageCode = [[[SLanguage alloc] init] getAppCurrentLanguage];
-    
+- (void)noticeSwitchLanguage:(NSNotification *)notification {    
     self.activityNav = nil;
     self.fundNav = nil;
     self.accountNav = nil;

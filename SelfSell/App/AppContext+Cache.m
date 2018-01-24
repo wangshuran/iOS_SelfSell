@@ -29,13 +29,13 @@
  获取本地化语言
  */
 - (NSString *)getLocalValue:(NSString *)key {
-    NSString * k = [self.languageCode stringByAppendingString:key];
+    NSString * k = [self.accountModel.languageCode stringByAppendingString:key];
     NSString * v = [self.languageCache objectForKey:k];
     if (v) {
         return v;
     }
     
-    NSString * path = [[NSBundle mainBundle] pathForResource:self.languageCode ofType:@"lproj"];
+    NSString * path = [[NSBundle mainBundle] pathForResource:self.accountModel.languageCode ofType:@"lproj"];
     v = [[NSBundle bundleWithPath:path] localizedStringForKey:key value:nil table:nil];
     [self.languageCache setObject:v forKey:k];
     
