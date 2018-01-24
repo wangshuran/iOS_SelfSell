@@ -9,23 +9,14 @@
 #import <LBaseClass/LBaseClass.h>
 #import "TBModel.h"
 
-#define kTitleNormalColor [UIColor colorWithRed:0.0f green:0.0f blue:0.0f alpha:1.0f]
-
-#define kTitleSelectColor [UIColor colorWithRed:0.0f green:0.0f blue:0.0f alpha:0.4f]
-
-#define kValueColor [UIColor blackColor]
-
-#define kTitleFont [LFont bold_15]
-
-#define kValueFont [LFont thin_14]
 
 @interface TBCell : LTableViewCell
 
 @property (nonatomic, strong) TBModel * model;
 
-@property (nonatomic, strong) UILabel * lbTitle;
+@property (nonatomic, strong) SLabel * lbTitle;
 
-@property (nonatomic, strong) UILabel * lbValue;
+@property (nonatomic, strong) SLabel * lbValue;
 
 @property (nonatomic, strong) UIView * vBottomLine;
 

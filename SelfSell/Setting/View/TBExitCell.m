@@ -10,7 +10,7 @@
 
 @interface TBExitCell()
 
-@property (nonatomic, strong) UIButton * btnExit;
+@property (nonatomic, strong) SButton * btnExit;
 
 @end
 
@@ -41,27 +41,14 @@
     [self.btnExit setTitle:model.title forState:UIControlStateNormal];
 }
 
-- (void)awakeFromNib {
-    [super awakeFromNib];
-    // Initialization code
-}
-
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
-    
-    // Configure the view for the selected state
-}
-
-- (UIButton *)btnExit {
+- (SButton *)btnExit {
     if (!_btnExit) {
-        _btnExit = [[UIButton alloc] init];
+        _btnExit = [[SButton alloc] init];
         _btnExit.layer.cornerRadius = 5.0f;
         _btnExit.layer.masksToBounds = YES;
         _btnExit.layer.borderColor = [UIColor grayColor].CGColor;
         _btnExit.layer.borderWidth = 0.5f;
-        _btnExit.titleLabel.font = kTitleFont;
-        [_btnExit setTitleColor:kTitleNormalColor forState:UIControlStateNormal];
-        [_btnExit setTitleColor:kTitleSelectColor forState:UIControlStateHighlighted];
+        [_btnExit setTitleColor:kColorBlack forState:UIControlStateNormal];
     }
     
     return _btnExit;

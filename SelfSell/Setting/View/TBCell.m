@@ -21,17 +21,6 @@
     return self;
 }
 
-- (void)awakeFromNib {
-    [super awakeFromNib];
-    // Initialization code
-}
-
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
-    
-    // Configure the view for the selected state
-}
-
 - (void)setModel:(TBModel *)model {
     _model = model;
     
@@ -39,25 +28,21 @@
     self.lbValue.text = model.value;
 }
 
-- (UILabel *)lbTitle {
+- (SLabel *)lbTitle {
     if (!_lbTitle) {
-        _lbTitle = [[UILabel alloc] init];
+        _lbTitle = [[SLabel alloc] init];
         _lbTitle.numberOfLines = 0;
-        _lbTitle.font = kTitleFont;
         _lbTitle.textAlignment = NSTextAlignmentLeft;
-        _lbTitle.textColor = kTitleNormalColor;
     }
     
     return _lbTitle;
 }
 
-- (UILabel *)lbValue {
+- (SLabel *)lbValue {
     if (!_lbValue) {
-        _lbValue = [[UILabel alloc] init];
+        _lbValue = [[SLabel alloc] init];
         _lbValue.numberOfLines = 0;
-        _lbValue.font = kValueFont;
         _lbValue.textAlignment = NSTextAlignmentRight;
-        _lbValue.textColor = kValueColor;
     }
     
     return _lbValue;
