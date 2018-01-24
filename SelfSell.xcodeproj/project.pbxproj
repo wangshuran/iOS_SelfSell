@@ -24,6 +24,10 @@
 		D5029CF91FDF6E180063D82A /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D5029CF81FDF6E180063D82A /* Info.plist */; };
 		D521BAA120186D16000299FC /* SUpdatePwdRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = D521BAA020186D16000299FC /* SUpdatePwdRequest.m */; };
 		D521BAA420186D27000299FC /* SUpdatePwdResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = D521BAA320186D27000299FC /* SUpdatePwdResponse.m */; };
+		D521BAA820187BE7000299FC /* SEnableGoogleAuthRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = D521BAA720187BE7000299FC /* SEnableGoogleAuthRequest.m */; };
+		D521BAAB20187BF8000299FC /* SEnableGoogleAuthResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = D521BAAA20187BF8000299FC /* SEnableGoogleAuthResponse.m */; };
+		D521BAAE20187C17000299FC /* SDisableGoogleAuthRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = D521BAAD20187C17000299FC /* SDisableGoogleAuthRequest.m */; };
+		D521BAB120187C32000299FC /* SDisableGoogleAuthResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = D521BAB020187C32000299FC /* SDisableGoogleAuthResponse.m */; };
 		D53B6B8D1FDF7A77006AEB46 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D53B6B8F1FDF7A77006AEB46 /* Localizable.strings */; };
 		D53B6B981FDF7DAD006AEB46 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D53B6B9A1FDF7DAD006AEB46 /* InfoPlist.strings */; };
 		D540F5421FDF83DF00AECCB7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D540F5411FDF83DF00AECCB7 /* Assets.xcassets */; };
@@ -161,6 +165,14 @@
 		D521BAA020186D16000299FC /* SUpdatePwdRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SUpdatePwdRequest.m; sourceTree = "<group>"; };
 		D521BAA220186D27000299FC /* SUpdatePwdResponse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SUpdatePwdResponse.h; sourceTree = "<group>"; };
 		D521BAA320186D27000299FC /* SUpdatePwdResponse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SUpdatePwdResponse.m; sourceTree = "<group>"; };
+		D521BAA620187BE7000299FC /* SEnableGoogleAuthRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SEnableGoogleAuthRequest.h; sourceTree = "<group>"; };
+		D521BAA720187BE7000299FC /* SEnableGoogleAuthRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SEnableGoogleAuthRequest.m; sourceTree = "<group>"; };
+		D521BAA920187BF8000299FC /* SEnableGoogleAuthResponse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SEnableGoogleAuthResponse.h; sourceTree = "<group>"; };
+		D521BAAA20187BF8000299FC /* SEnableGoogleAuthResponse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SEnableGoogleAuthResponse.m; sourceTree = "<group>"; };
+		D521BAAC20187C17000299FC /* SDisableGoogleAuthRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDisableGoogleAuthRequest.h; sourceTree = "<group>"; };
+		D521BAAD20187C17000299FC /* SDisableGoogleAuthRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDisableGoogleAuthRequest.m; sourceTree = "<group>"; };
+		D521BAAF20187C32000299FC /* SDisableGoogleAuthResponse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDisableGoogleAuthResponse.h; sourceTree = "<group>"; };
+		D521BAB020187C32000299FC /* SDisableGoogleAuthResponse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDisableGoogleAuthResponse.m; sourceTree = "<group>"; };
 		D53B6B931FDF7ABB006AEB46 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D53B6B941FDF7B32006AEB46 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		D53B6B991FDF7DAD006AEB46 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -432,6 +444,10 @@
 		D50297D2200C50CC008375F9 /* Request */ = {
 			isa = PBXGroup;
 			children = (
+				D521BAA620187BE7000299FC /* SEnableGoogleAuthRequest.h */,
+				D521BAA720187BE7000299FC /* SEnableGoogleAuthRequest.m */,
+				D521BAAC20187C17000299FC /* SDisableGoogleAuthRequest.h */,
+				D521BAAD20187C17000299FC /* SDisableGoogleAuthRequest.m */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -439,6 +455,10 @@
 		D50297D5200C50CC008375F9 /* Response */ = {
 			isa = PBXGroup;
 			children = (
+				D521BAA920187BF8000299FC /* SEnableGoogleAuthResponse.h */,
+				D521BAAA20187BF8000299FC /* SEnableGoogleAuthResponse.m */,
+				D521BAAF20187C32000299FC /* SDisableGoogleAuthResponse.h */,
+				D521BAB020187C32000299FC /* SDisableGoogleAuthResponse.m */,
 			);
 			path = Response;
 			sourceTree = "<group>";
@@ -1372,6 +1392,7 @@
 				D5029810200C5A4F008375F9 /* TBTableView.m in Sources */,
 				D5957AF620073B9000F6EE60 /* STabBar.m in Sources */,
 				D521BAA120186D16000299FC /* SUpdatePwdRequest.m in Sources */,
+				D521BAA820187BE7000299FC /* SEnableGoogleAuthRequest.m in Sources */,
 				D5E610D620089546003C847A /* SActivityController.m in Sources */,
 				D54894ED1FF23A9600F2019B /* SCheckVersionRequest.m in Sources */,
 				D50297FA200C56EA008375F9 /* TBSectionModel.m in Sources */,
@@ -1387,6 +1408,7 @@
 				D5DB07441FEA692F00A347B1 /* main.m in Sources */,
 				D554813B20107356003C1D5D /* SGoogleValidateController.m in Sources */,
 				D54894E81FF2388E00F2019B /* test006.m in Sources */,
+				D521BAAE20187C17000299FC /* SDisableGoogleAuthRequest.m in Sources */,
 				D5E610D320089528003C847A /* SFundController.m in Sources */,
 				D5ACA7452015CAB900A6C84F /* UINavigationBarContentView+Margin.m in Sources */,
 				D5709CBA200DAABA007BBD4C /* TBTextModel.m in Sources */,
@@ -1404,6 +1426,7 @@
 				D57ECF0D2018285B007151A3 /* SForgetPwdByMailResponse.m in Sources */,
 				D5957AF920073B9000F6EE60 /* SView.m in Sources */,
 				D5957AFA20073B9000F6EE60 /* SWebView.m in Sources */,
+				D521BAB120187C32000299FC /* SDisableGoogleAuthResponse.m in Sources */,
 				D54894CC1FF22C3E00F2019B /* STalentsController.m in Sources */,
 				D521BAA420186D27000299FC /* SUpdatePwdResponse.m in Sources */,
 				D5ACA7462015CAB900A6C84F /* UINavigationBarContentViewLayout+Margin.m in Sources */,
@@ -1442,6 +1465,7 @@
 				D50297EA200C50CC008375F9 /* SSettingService.mm in Sources */,
 				D5957AF720073B9000F6EE60 /* STableView.m in Sources */,
 				D54894CF1FF22C5300F2019B /* SMarketController.m in Sources */,
+				D521BAAB20187BF8000299FC /* SEnableGoogleAuthResponse.m in Sources */,
 				D5957AE820073B9000F6EE60 /* SNavigationController.m in Sources */,
 				D54483451FED040800D2F681 /* SVersionModel.m in Sources */,
 				D57ECF0A20182849007151A3 /* SForgetPwdByMailRequest.m in Sources */,
