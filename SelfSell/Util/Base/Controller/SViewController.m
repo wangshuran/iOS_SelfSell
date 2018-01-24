@@ -47,6 +47,7 @@
         _btnLeft.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
         _btnLeft.imageEdgeInsets = UIEdgeInsetsMake(0.0f, 10.0f, 0.0f, 0.0f);
         [_btnLeft setImage:[UIImage imageNamed:@"common_fanhui"] forState:UIControlStateNormal];
+        //[_btnLeft setImage:[UIImage imageNamed:@"common_fanhui_white"] forState:UIControlStateHighlighted];
         [_btnLeft addTarget:self action:@selector(pop) forControlEvents:UIControlEventTouchUpInside];
     }
     

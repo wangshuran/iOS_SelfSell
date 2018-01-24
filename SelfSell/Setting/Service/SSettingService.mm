@@ -96,7 +96,7 @@ LCmd * const LCmdGetSetting1 = @"LCmdGetSetting1";
         TBArrowModel * model = [[TBArrowModel alloc] init];
         model.uid = kguanyu;
         model.title = SLocal(@"setting1_guanyu");
-        model.value = [NSString stringWithFormat:@"%@.%@", [LAppInfo CFBundleShortVersionString], [LAppInfo CFBundleVersion]];
+        model.value = [NSString stringWithFormat:@"V %@.%@", [LAppInfo CFBundleShortVersionString], [LAppInfo CFBundleVersion]];
         model.destVCClass = SAboutController.class;
         [data addObject:model];
     }    
