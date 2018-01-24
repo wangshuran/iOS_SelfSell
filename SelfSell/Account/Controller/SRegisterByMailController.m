@@ -244,6 +244,7 @@
                 if (!response.status) {
                     btn.userInteractionEnabled = YES;
                     [weakSelf.txEmail becomeFirstResponder];
+                    [MBProgressHUD showTitleToView:weakSelf.view postion:NHHUDPostionCenten title:response.msg];
                     return;
                 }
                 [weakSelf.txCode becomeFirstResponder];
@@ -341,7 +342,7 @@
                 if (!response.status) {
                     [MBProgressHUD showTitleToView:weakSelf.view postion:NHHUDPostionCenten title:response.msg];
                     return;
-                }                
+                }
                 [weakSelf loginByMail:email pwd:pwd];
             }];
         }];

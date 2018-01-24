@@ -203,7 +203,8 @@
             [SNetwork request:request block:^(LRequest * request, LResponse * response) {
                 if (!response.status) {
                     btn.userInteractionEnabled = YES;
-                    [weakSelf.txEmail becomeFirstResponder];
+                    [weakSelf.txEmail becomeFirstResponder];                    
+                    [MBProgressHUD showTitleToView:weakSelf.view postion:NHHUDPostionCenten title:response.msg];
                     return;
                 }
                 [weakSelf.txCode becomeFirstResponder];
