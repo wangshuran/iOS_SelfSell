@@ -29,7 +29,7 @@
         make.top.mas_equalTo(10.0f);
         make.bottom.mas_equalTo(-10.0f);
         make.left.mas_equalTo(10.0f);
-        make.right.mas_equalTo(-10.0f);
+        make.right.mas_equalTo(0.0f);
         make.height.mas_greaterThanOrEqualTo(30.0f);
     }];
     

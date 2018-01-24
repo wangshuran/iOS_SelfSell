@@ -43,7 +43,7 @@ LCmd * const LCmdGetSetting1 = @"LCmdGetSetting1";
     {
         TBArrowModel * model = [[TBArrowModel alloc] init];
         model.uid = kwodetuijianma;
-        model.title = SLocal(@"setting0_tuijianma");        
+        model.title = SLocal(@"setting0_tuijianma");
         model.value = @"677844";
         [data addObject:model];
     }{
@@ -99,7 +99,8 @@ LCmd * const LCmdGetSetting1 = @"LCmdGetSetting1";
         model.value = [NSString stringWithFormat:@"V %@.%@", [LAppInfo CFBundleShortVersionString], [LAppInfo CFBundleVersion]];
         model.destVCClass = SAboutController.class;
         [data addObject:model];
-    }    
+    }
+    
     TBSectionModel * section = [[TBSectionModel alloc] init];
     section.headerHeight = 20.0f;
     section.items = data;
