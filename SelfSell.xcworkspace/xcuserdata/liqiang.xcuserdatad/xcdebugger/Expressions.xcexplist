@@ -3,6 +3,9 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "-[SSetting0Controller noticeCellEvent:]:SSetting0Controller.m">
+      </ContextState>
+      <ContextState
          contextName = "__34-[SLoginByMailController btnLogin]_block_invoke_2:SLoginByMailController.m">
       </ContextState>
       <ContextState
@@ -115,6 +118,9 @@
       </ContextState>
       <ContextState
          contextName = "::-[SSetting1Controller noticeCellEvent:](NSNotification *):SSetting1Controller.mm">
+      </ContextState>
+      <ContextState
+         contextName = "-[SWelcomeResponse reflect:]:SWelcomeResponse.m">
       </ContextState>
    </ContextStates>
 </VariablesViewState>

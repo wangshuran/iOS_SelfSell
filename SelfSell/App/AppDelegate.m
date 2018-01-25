@@ -34,11 +34,10 @@
     }
     [AppContext sharedAppContext].accountModel = accountModel;
     [[AppContext sharedAppContext] initDB];
-    
     self.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
     self.window.rootViewController = [AppContext sharedAppContext].rootVC;
     [self.window makeKeyAndVisible];
-    
+    [UIViewController present:[[SWelcomeController alloc] init] animated:NO completion:nil];
     
     if (!accountModel.isLogout) {//更新token
         if (accountModel.loginType == LoginTypeAccount) {
@@ -46,6 +45,7 @@
             request.email = accountModel.email;
             request.password = accountModel.pwd;
             //request.googleAuthCode = pwd;
+            __weak typeof(self) weakSelf = self;
             [SNetwork request:request block:^(LRequest * request, LResponse * response) {
                 if (!response.status) {
                     accountModel.isLogout = YES;
@@ -61,14 +61,12 @@
                 [AppContext sharedAppContext].accountModel = accountModel;
                 [[AppContext sharedAppContext] updateLoginAccount:[AppContext sharedAppContext].accountModel];
                 [[AppContext sharedAppContext] initDB];
-                
-                SPostNotification(kNoticeFinishLogin);
                 SPostNotification(kNoticeShowSecurityCheck);//安全检查通知
             }];
         }
+    }else {
+        SPostNotification(kNoticeShowVersionCheck);//版本检查通知
     }
-    
-    SPostNotification(kNoticeShowVersionCheck);//版本检查通知
     
     return YES;
 }

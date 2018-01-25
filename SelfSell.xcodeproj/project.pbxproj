@@ -53,6 +53,11 @@
 		D5515F041FDF5A5500278579 /* SelfSellTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D5515F031FDF5A5500278579 /* SelfSellTests.m */; };
 		D5515F0F1FDF5A5500278579 /* SelfSellUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D5515F0E1FDF5A5500278579 /* SelfSellUITests.m */; };
 		D554813B20107356003C1D5D /* SGoogleValidate01Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = D554813A20107356003C1D5D /* SGoogleValidate01Controller.m */; };
+		D56C8DF72019BCD900DEB9F2 /* SWelcomeRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = D56C8DF62019BCD900DEB9F2 /* SWelcomeRequest.m */; };
+		D56C8DFA2019BCF200DEB9F2 /* SWelcomeResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = D56C8DF92019BCF200DEB9F2 /* SWelcomeResponse.m */; };
+		D56C8DFE2019BD7C00DEB9F2 /* SWelcomeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D56C8DFD2019BD7C00DEB9F2 /* SWelcomeModel.m */; };
+		D56C8E022019C0C600DEB9F2 /* UIImage+LaunchImage.m in Sources */ = {isa = PBXBuildFile; fileRef = D56C8E012019C0C600DEB9F2 /* UIImage+LaunchImage.m */; };
+		D56C8E062019C82D00DEB9F2 /* SWelcomeView.m in Sources */ = {isa = PBXBuildFile; fileRef = D56C8E052019C82D00DEB9F2 /* SWelcomeView.m */; };
 		D5709CBA200DAABA007BBD4C /* TBTextModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D5709CB9200DAABA007BBD4C /* TBTextModel.m */; };
 		D5709CBD200E081B007BBD4C /* SSetting1Controller.mm in Sources */ = {isa = PBXBuildFile; fileRef = D5709CBC200E081B007BBD4C /* SSetting1Controller.mm */; };
 		D5709CC0200EE00B007BBD4C /* SLanguageController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5709CBF200EE00B007BBD4C /* SLanguageController.m */; };
@@ -226,6 +231,16 @@
 		D5515F101FDF5A5500278579 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D554813920107356003C1D5D /* SGoogleValidate01Controller.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SGoogleValidate01Controller.h; sourceTree = "<group>"; };
 		D554813A20107356003C1D5D /* SGoogleValidate01Controller.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SGoogleValidate01Controller.m; sourceTree = "<group>"; };
+		D56C8DF52019BCD900DEB9F2 /* SWelcomeRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWelcomeRequest.h; sourceTree = "<group>"; };
+		D56C8DF62019BCD900DEB9F2 /* SWelcomeRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWelcomeRequest.m; sourceTree = "<group>"; };
+		D56C8DF82019BCF200DEB9F2 /* SWelcomeResponse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWelcomeResponse.h; sourceTree = "<group>"; };
+		D56C8DF92019BCF200DEB9F2 /* SWelcomeResponse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWelcomeResponse.m; sourceTree = "<group>"; };
+		D56C8DFC2019BD7C00DEB9F2 /* SWelcomeModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWelcomeModel.h; sourceTree = "<group>"; };
+		D56C8DFD2019BD7C00DEB9F2 /* SWelcomeModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWelcomeModel.m; sourceTree = "<group>"; };
+		D56C8E002019C0C600DEB9F2 /* UIImage+LaunchImage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+LaunchImage.h"; sourceTree = "<group>"; };
+		D56C8E012019C0C600DEB9F2 /* UIImage+LaunchImage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+LaunchImage.m"; sourceTree = "<group>"; };
+		D56C8E042019C82D00DEB9F2 /* SWelcomeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWelcomeView.h; sourceTree = "<group>"; };
+		D56C8E052019C82D00DEB9F2 /* SWelcomeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWelcomeView.m; sourceTree = "<group>"; };
 		D5709CB8200DAABA007BBD4C /* TBTextModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TBTextModel.h; sourceTree = "<group>"; };
 		D5709CB9200DAABA007BBD4C /* TBTextModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TBTextModel.m; sourceTree = "<group>"; };
 		D5709CBB200E081B007BBD4C /* SSetting1Controller.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSetting1Controller.h; sourceTree = "<group>"; };
@@ -919,6 +934,33 @@
 			path = SelfSellUITests;
 			sourceTree = "<group>";
 		};
+		D56C8DFB2019BD6900DEB9F2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D56C8DFC2019BD7C00DEB9F2 /* SWelcomeModel.h */,
+				D56C8DFD2019BD7C00DEB9F2 /* SWelcomeModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D56C8DFF2019C0B700DEB9F2 /* UIImage+LaunchImage */ = {
+			isa = PBXGroup;
+			children = (
+				D56C8E002019C0C600DEB9F2 /* UIImage+LaunchImage.h */,
+				D56C8E012019C0C600DEB9F2 /* UIImage+LaunchImage.m */,
+			);
+			path = "UIImage+LaunchImage";
+			sourceTree = "<group>";
+		};
+		D56C8E032019C80E00DEB9F2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D56C8E042019C82D00DEB9F2 /* SWelcomeView.h */,
+				D56C8E052019C82D00DEB9F2 /* SWelcomeView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		D5709CD0200F3840007BBD4C /* Language */ = {
 			isa = PBXGroup;
 			children = (
@@ -931,6 +973,7 @@
 		D592E1A720118C7B009B5DF5 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				D56C8DFF2019C0B700DEB9F2 /* UIImage+LaunchImage */,
 				D5ACA7382015CAB900A6C84F /* UINavigationItem+Margin */,
 			);
 			path = Category;
@@ -1158,9 +1201,10 @@
 			isa = PBXGroup;
 			children = (
 				D5E610D92008A651003C847A /* Controller */,
+				D56C8DFB2019BD6900DEB9F2 /* Model */,
 				D5E610DA2008A651003C847A /* Request */,
 				D5E610DB2008A651003C847A /* Response */,
-				D5E610DF2008A69C003C847A /* ViewModel */,
+				D56C8E032019C80E00DEB9F2 /* View */,
 			);
 			path = Welcome;
 			sourceTree = "<group>";
@@ -1177,6 +1221,8 @@
 		D5E610DA2008A651003C847A /* Request */ = {
 			isa = PBXGroup;
 			children = (
+				D56C8DF52019BCD900DEB9F2 /* SWelcomeRequest.h */,
+				D56C8DF62019BCD900DEB9F2 /* SWelcomeRequest.m */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -1184,15 +1230,10 @@
 		D5E610DB2008A651003C847A /* Response */ = {
 			isa = PBXGroup;
 			children = (
+				D56C8DF82019BCF200DEB9F2 /* SWelcomeResponse.h */,
+				D56C8DF92019BCF200DEB9F2 /* SWelcomeResponse.m */,
 			);
 			path = Response;
-			sourceTree = "<group>";
-		};
-		D5E610DF2008A69C003C847A /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1398,6 +1439,7 @@
 				D5957AF620073B9000F6EE60 /* STabBar.m in Sources */,
 				D521BAA120186D16000299FC /* SUpdatePwdRequest.m in Sources */,
 				D521BAA820187BE7000299FC /* SEnableGoogleAuthRequest.m in Sources */,
+				D56C8E022019C0C600DEB9F2 /* UIImage+LaunchImage.m in Sources */,
 				D5E610D620089546003C847A /* SActivityController.m in Sources */,
 				D54894ED1FF23A9600F2019B /* SCheckVersionRequest.m in Sources */,
 				D50297FA200C56EA008375F9 /* TBSectionModel.m in Sources */,
@@ -1415,6 +1457,7 @@
 				D54894E81FF2388E00F2019B /* test006.m in Sources */,
 				D521BAAE20187C17000299FC /* SDisableGoogleAuthRequest.m in Sources */,
 				D5E610D320089528003C847A /* SFundController.m in Sources */,
+				D56C8DFA2019BCF200DEB9F2 /* SWelcomeResponse.m in Sources */,
 				D5ACA7452015CAB900A6C84F /* UINavigationBarContentView+Margin.m in Sources */,
 				D5709CBA200DAABA007BBD4C /* TBTextModel.m in Sources */,
 				D5957AF520073B9000F6EE60 /* SScrollView.m in Sources */,
@@ -1443,6 +1486,7 @@
 				D5029813200C5B41008375F9 /* TBSwitchCell.m in Sources */,
 				D5709CD3200F3852007BBD4C /* SLanguage.m in Sources */,
 				D5ACA74A2015E72200A6C84F /* SSendMailRequest.m in Sources */,
+				D56C8DF72019BCD900DEB9F2 /* SWelcomeRequest.m in Sources */,
 				D502981E200D9127008375F9 /* TBTextCell.m in Sources */,
 				D5957B0E200750FA00F6EE60 /* SCommonModel.mm in Sources */,
 				D5D7D8652016E44A005CBB11 /* SNavigationBar.m in Sources */,
@@ -1468,6 +1512,7 @@
 				D5709CC6200EE03A007BBD4C /* SUpdatePWDController.m in Sources */,
 				D5029803200C578F008375F9 /* TBArrowModel.m in Sources */,
 				D54894E01FF235AD00F2019B /* AppContext+Account.mm in Sources */,
+				D56C8E062019C82D00DEB9F2 /* SWelcomeView.m in Sources */,
 				D50297EA200C50CC008375F9 /* SSettingService.mm in Sources */,
 				D5957AF720073B9000F6EE60 /* STableView.m in Sources */,
 				D54894CF1FF22C5300F2019B /* SMarketController.m in Sources */,
@@ -1478,6 +1523,7 @@
 				D5D7D86F20172BAE005CBB11 /* SLoginByMailRequest.m in Sources */,
 				D5957AF420073B9000F6EE60 /* SLabel.m in Sources */,
 				D5709CCC200EE710007BBD4C /* TBCheckCell.m in Sources */,
+				D56C8DFE2019BD7C00DEB9F2 /* SWelcomeModel.m in Sources */,
 				D54483481FED049300D2F681 /* SVersionService.m in Sources */,
 				D5ACA7502015E84200A6C84F /* SRegisterByMailRequest.m in Sources */,
 				D5957AEB20073B9000F6EE60 /* SViewController.m in Sources */,
