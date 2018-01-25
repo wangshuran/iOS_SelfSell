@@ -140,15 +140,15 @@
         make.top.mas_equalTo(weakSelf.vUser.mas_bottom);
         make.bottom.left.right.mas_equalTo(weakSelf.view);
     }];
-    
-    [self updateUI];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     if (![[AppContext sharedAppContext].accountModel isLoginUser]) {
         SPostNotification(kNoticeToLogin);
-    }
+        return;
+    }    
+    [self updateUI];
 }
 
 #pragma mark - LInitProtocol

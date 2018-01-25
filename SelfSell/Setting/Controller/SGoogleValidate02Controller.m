@@ -89,7 +89,6 @@
                 }
                 [AppContext sharedAppContext].accountModel.googleAuthStatus = @"ON";
                 [[AppContext sharedAppContext] updateLoginAccount:[AppContext sharedAppContext].accountModel];
-                //liqiang要不要刷新页面
                 [weakSelf.navigationController popToRootViewControllerAnimated:YES];
             }];
         }];
