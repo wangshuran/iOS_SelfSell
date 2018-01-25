@@ -35,7 +35,14 @@
 }
 
 - (BOOL)isLoginUser {
-    return !(self.isLogout || self.loginType == LoginTypeNone || [NSString isNullOrEmpty:self.token]);
+    return !self.isLogout && self.loginType != LoginTypeNone && ![NSString isNullOrEmpty:self.token];
+}
+
++ (instancetype)getVisitor {
+    SAccountModel * accountModel = [[SAccountModel alloc] init];
+    accountModel.loginTime = [[NSDate date] timeIntervalSince1970];
+    accountModel.isLogout = YES;
+    return accountModel;
 }
 
 #pragma mark - LInitProtocol

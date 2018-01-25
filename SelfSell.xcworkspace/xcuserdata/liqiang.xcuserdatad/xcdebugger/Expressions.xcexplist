@@ -6,6 +6,9 @@
          contextName = "__34-[SLoginByMailController btnLogin]_block_invoke_2:SLoginByMailController.m">
       </ContextState>
       <ContextState
+         contextName = "__57-[AppDelegate application:didFinishLaunchingWithOptions:]_block_invoke.42:AppDelegate.m">
+      </ContextState>
+      <ContextState
          contextName = "-[SAboutController loadView]:SAboutController.m">
       </ContextState>
       <ContextState
@@ -40,16 +43,24 @@
          contextName = "-[SNavigationController navigationBar:didPushItem:]:SNavigationController.m">
       </ContextState>
       <ContextState
+         contextName = "-[SSetting0Controller viewWillAppear:]:SSetting0Controller.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "[AppContext sharedAppContext].accountModel">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "-[TBCheckCell setModel:]:TBCheckCell.m">
       </ContextState>
       <ContextState
          contextName = "-[SLanguageController viewDidLoad]:SLanguageController.m">
          <PersistentStrings>
             <PersistentString
-               value = "self.navigationItem">
+               value = "self.navigationItem.rightBarButtonItem">
             </PersistentString>
             <PersistentString
-               value = "self.navigationItem.rightBarButtonItem">
+               value = "self.navigationItem">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -60,10 +71,10 @@
          contextName = "-[SViewController viewDidAppear:]:SViewController.m">
          <PersistentStrings>
             <PersistentString
-               value = "view.bounds">
+               value = "stackView.frame">
             </PersistentString>
             <PersistentString
-               value = "stackView.frame">
+               value = "view.bounds">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -82,6 +93,12 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "__35-[SLoginByMailController btnFinish]_block_invoke_2:SLoginByMailController.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[AppDelegate application:didFinishLaunchingWithOptions:]:AppDelegate.m">
+      </ContextState>
+      <ContextState
          contextName = "-[NSObject(MJKeyValue) mj_JSONData]:NSObject+MJKeyValue.m">
       </ContextState>
       <ContextState
@@ -89,6 +106,9 @@
       </ContextState>
       <ContextState
          contextName = "-[SLanguageController loadView]:SLanguageController.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[SAccountModel isLoginUser]:SAccountModel.m">
       </ContextState>
       <ContextState
          contextName = "::-[SSetting1Controller noticeCellEvent:](NSNotification *):SSetting1Controller.mm">

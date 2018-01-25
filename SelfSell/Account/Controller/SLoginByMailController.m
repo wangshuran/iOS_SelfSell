@@ -197,10 +197,10 @@
                 [[AppContext sharedAppContext].accountDao close];
                 [AppContext sharedAppContext].accountDao = nil;
                 [AppContext sharedAppContext].accountModel = model.data;
-                [[AppContext sharedAppContext] updateLoginAccount:model.data];
-                [weakSelf dismiss];
+                [[AppContext sharedAppContext] updateLoginAccount:[AppContext sharedAppContext].accountModel];
                 SPostNotification(kNoticeFinishLogin);
                 btn.userInteractionEnabled = YES;
+                [weakSelf dismiss];
             }];
         }];
     }

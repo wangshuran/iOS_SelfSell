@@ -62,4 +62,9 @@
  */
 - (BOOL)isLoginUser;
 
+/**
+ 获取游客身份
+ */
++ (instancetype)getVisitor;
+
 @end

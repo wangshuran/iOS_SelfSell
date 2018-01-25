@@ -107,6 +107,7 @@
                 }
                 [AppContext sharedAppContext].accountModel.googleAuthStatus = @"OFF";
                 [[AppContext sharedAppContext] updateLoginAccount:[AppContext sharedAppContext].accountModel];
+                //liqiang要不要刷新页面
                 [weakSelf pop];
             }];
         }];

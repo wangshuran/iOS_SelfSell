@@ -29,11 +29,17 @@
     [[AppContext sharedAppContext] startMonitoring];//自定义监听
     __block SAccountModel * accountModel = [[AppContext sharedAppContext] getLastLoginAccount];
     if (!accountModel) {
-        accountModel = [[SAccountModel alloc] init];
-        accountModel.loginTime = [[NSDate date] timeIntervalSince1970];
-        accountModel.isLogout = YES;
+        accountModel = [SAccountModel getVisitor];
         [[AppContext sharedAppContext] updateLoginAccount:accountModel];
     }
+    [AppContext sharedAppContext].accountModel = accountModel;
+    [[AppContext sharedAppContext] initDB];
+    
+    self.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
+    self.window.rootViewController = [AppContext sharedAppContext].rootVC;
+    [self.window makeKeyAndVisible];
+    
+    
     if (!accountModel.isLogout) {//更新token
         if (accountModel.loginType == LoginTypeAccount) {
             SLoginByMailRequest * request = [[SLoginByMailRequest alloc] init];
@@ -45,33 +51,24 @@
                     accountModel.isLogout = YES;
                 }else {
                     SLoginByMailResponse * model = (SLoginByMailResponse *)response;
-                    model.data.loginType = LoginTypeAccount;
+                    model.data.pwd = accountModel.pwd;
+                    model.data.loginType = accountModel.loginType;
                     model.data.loginTime = [[NSDate date] timeIntervalSince1970];
                     accountModel = model.data;
                 }
+                [[AppContext sharedAppContext].accountDao close];
+                [AppContext sharedAppContext].accountDao = nil;
                 [AppContext sharedAppContext].accountModel = accountModel;
-                [[AppContext sharedAppContext] updateLoginAccount:accountModel];
+                [[AppContext sharedAppContext] updateLoginAccount:[AppContext sharedAppContext].accountModel];
                 [[AppContext sharedAppContext] initDB];
                 
-                self.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
-                self.window.rootViewController = [AppContext sharedAppContext].rootVC;
-                [self.window makeKeyAndVisible];
-                
-                SPostNotification(kNoticeShowVersionCheck);//版本检查通知
+                SPostNotification(kNoticeFinishLogin);
                 SPostNotification(kNoticeShowSecurityCheck);//安全检查通知
             }];
         }
-    }else {
-        [AppContext sharedAppContext].accountModel = accountModel;
-        [[AppContext sharedAppContext] initDB];
-        
-        self.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
-        self.window.rootViewController = [AppContext sharedAppContext].rootVC;
-        [self.window makeKeyAndVisible];
-        
-        SPostNotification(kNoticeShowVersionCheck);//版本检查通知
-        SPostNotification(kNoticeShowSecurityCheck);//安全检查通知
     }
+    
+    SPostNotification(kNoticeShowVersionCheck);//版本检查通知
     
     return YES;
 }

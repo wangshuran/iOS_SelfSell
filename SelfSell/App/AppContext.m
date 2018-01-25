@@ -119,7 +119,7 @@ LSingleton_m(AppContext);
 - (SSetting0Controller *)setting0VC {
     if (!_setting0VC) {
         _setting0VC = [[SSetting0Controller alloc] init];
-        _setting0VC.hiddenNavbar = NO;
+        _setting0VC.hiddenNavbar = YES;
         _setting0VC.hiddenTabar = NO;
     }
     

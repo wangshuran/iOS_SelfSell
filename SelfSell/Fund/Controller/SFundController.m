@@ -20,4 +20,11 @@
     return SLocal(@"fund_title");
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    if (![[AppContext sharedAppContext].accountModel isLoginUser]) {
+        SPostNotification(kNoticeToLogin);
+    }
+}
+
 @end
