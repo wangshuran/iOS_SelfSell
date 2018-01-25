@@ -94,7 +94,7 @@
     NSUserDefaults * userDefaults = [NSUserDefaults standardUserDefaults];
     
     @synchronized(self) {
-        NSMutableDictionary * info = [userDefaults objectForKey:identifier];        
+        NSMutableDictionary * info = [userDefaults objectForKey:identifier];
         if (info) {
             info = [info mutableCopy];
         }else {
@@ -117,7 +117,7 @@
             return nil;
         }
         
-        SAccountModel * model = nil;        
+        SAccountModel * model = nil;
         for (NSDictionary * accountInfo in info.allValues) {
             SAccountModel * accountModel = [SAccountModel mj_objectWithKeyValues:accountInfo];
             if (accountModel.loginTime >= model.loginTime) {
@@ -204,7 +204,18 @@
  去登出通知
  */
 - (void)noticeToLogout:(NSNotification *)notification {
-    
+    UIAlertController * vc = [UIAlertController alertControllerWithTitle:SLocal(@"common_tishi") message:SLocal(@"common_querenyaotuichuma") preferredStyle:UIAlertControllerStyleAlert];
+    [vc addAction:[UIAlertAction actionWithTitle:SLocal(@"common_zhuxiao") style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
+        [[AppContext sharedAppContext].accountDao close];
+        [AppContext sharedAppContext].accountDao = nil;
+        [AppContext sharedAppContext].accountModel = [SAccountModel getVisitor];
+        [[AppContext sharedAppContext] updateLoginAccount:[AppContext sharedAppContext].accountModel];
+        [[AppContext sharedAppContext] initDB];
+        [[AppContext sharedAppContext] setSelectVC:[AppContext sharedAppContext].activityNav];
+        SPostNotification(kNoticeFinishLogout);
+    }]];
+    [vc addAction:[UIAlertAction actionWithTitle:SLocal(@"common_quxiao") style:UIAlertActionStyleCancel handler:nil]];
+    [UIViewController present:vc];
 }
 
 /**

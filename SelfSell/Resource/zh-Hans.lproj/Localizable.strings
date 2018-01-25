@@ -8,6 +8,10 @@
 
 
 common_baocun = "保存";
+common_tishi = "提示";
+common_querenyaotuichuma = "确认要注销吗";
+common_zhuxiao = "注销";
+common_quxiao = "取消";
 
 
 activity_title = "活动";

@@ -183,13 +183,7 @@
         [self push:[[((TBArrowModel *)model).destVCClass alloc] init]];
         return;
     }else if ([model isKindOfClass:TBExitModel.class]) {
-        [[AppContext sharedAppContext].accountDao close];
-        [AppContext sharedAppContext].accountDao = nil;
-        [AppContext sharedAppContext].accountModel = [SAccountModel getVisitor];
-        [[AppContext sharedAppContext] updateLoginAccount:[AppContext sharedAppContext].accountModel];
-        [[AppContext sharedAppContext] initDB];
-        SPostNotification(kNoticeFinishLogout);
-        SPostNotification(kNoticeToLogin);
+        SPostNotification(kNoticeToLogout);
         return;
     }
 }
