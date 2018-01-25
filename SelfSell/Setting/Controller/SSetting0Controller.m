@@ -168,19 +168,27 @@
     if (!model) {
         return;
     }
-    //BOOL isExit = NO;
-    //NSArray<TBSectionModel *> * sections = self.tbTableView.data;
-    //for (TBSectionModel * section in sections) {
-    //    if ([section.items containsObject:model]) {
-    //        isExit = YES;
-    //        break;
-    //    }
-    //}
-    //if (!isExit) {
-    //    return;
-    //}
+    BOOL isExit = NO;
+    NSArray<TBSectionModel *> * sections = self.tbTableView.data;
+    for (TBSectionModel * section in sections) {
+        if ([section.items containsObject:model]) {
+            isExit = YES;
+            break;
+        }
+    }
+    if (!isExit) {
+        return;
+    }
+    
     if ([model isKindOfClass:TBArrowModel.class]) {
-        [self push:[[((TBArrowModel *)model).destVCClass alloc] init]];
+        TBArrowModel * arrowModel = (TBArrowModel *)model;
+        if (arrowModel.destVCClass) {
+            [self push:[[arrowModel.destVCClass alloc] init]];
+        }else if ([arrowModel.uid isEqualToString:kwodetuijianma]) {
+            UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
+            pasteboard.string = arrowModel.value;
+            [MBProgressHUD showTitleToView:self.view postion:NHHUDPostionCenten title:SLocal(@"google_fuzhidao")];
+        }
         return;
     }else if ([model isKindOfClass:TBExitModel.class]) {
         SPostNotification(kNoticeToLogout);

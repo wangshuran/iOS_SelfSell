@@ -76,7 +76,6 @@
     SAddObsver(noticeCellEvent:, kNoticeCellEvent)
 }
 
-
 #pragma mark - NSNotification
 
 - (void)noticeCellEvent:(NSNotification *)notification {
