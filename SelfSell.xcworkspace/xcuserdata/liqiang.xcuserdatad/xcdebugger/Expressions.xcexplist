@@ -26,6 +26,9 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "::-[AppContext(Account) updateLoginAccount:](SAccountModel *):AppContext+Account.mm">
+      </ContextState>
+      <ContextState
          contextName = "-[TBTableView tableView:viewForHeaderInSection:]:TBTableView.m">
       </ContextState>
       <ContextState

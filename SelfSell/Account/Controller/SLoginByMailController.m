@@ -252,12 +252,16 @@
 
 - (SNavigationBar *)navigationBar {
     if (!_navigationBar) {
+        __weak typeof(self) weakSelf = self;
         _navigationBar = [[SNavigationBar alloc] init];
         _navigationBar.backgroundColor = [UIColor clearColor];
         _navigationBar.lbTitle.text = self.title;
         _navigationBar.lbTitle.textColor = [UIColor whiteColor];
         [_navigationBar.btnLeft setImage:[UIImage imageNamed:@"common_fanhui_white"] forState:UIControlStateNormal];
-        [_navigationBar.btnLeft addTarget:self action:@selector(dismiss) forControlEvents:UIControlEventTouchUpInside];
+        [[_navigationBar.btnLeft rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
+            [[AppContext sharedAppContext] setSelectVC:[AppContext sharedAppContext].activityNav];
+            [weakSelf dismiss];
+        }];
     }
     
     return _navigationBar;

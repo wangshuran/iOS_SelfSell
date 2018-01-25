@@ -39,7 +39,6 @@
 
 - (void)setIsEnableHeader:(BOOL)isEnableHeader {
     _isEnableHeader = isEnableHeader;
-    
     if (_isEnableHeader) {
         __weak typeof(self) weakSelf = self;
         self.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
@@ -52,7 +51,6 @@
 
 - (void)setIsEnableFooter:(BOOL)isEnableFooter {
     _isEnableFooter = isEnableFooter;
-    
     if (_isEnableFooter) {
         __weak typeof(self) weakSelf = self;
         self.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingBlock:^{

@@ -39,6 +39,10 @@ LSingleton_m(AppContext);
     _rootVC.viewControllers = [NSArray arrayWithObjects:self.activityNav, self.fundNav, self.accountNav, nil];
 }
 
+- (void)setSelectVC:(SNavigationController *)vc {
+    self.rootVC.selectedViewController = vc;
+}
+
 - (STabBarController *)rootVC {
     if (!_rootVC) {
         _rootVC = [[NSClassFromString(@"STabBarController") alloc] init];

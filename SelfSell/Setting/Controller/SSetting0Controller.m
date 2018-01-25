@@ -189,6 +189,7 @@
         [[AppContext sharedAppContext] updateLoginAccount:[AppContext sharedAppContext].accountModel];
         [[AppContext sharedAppContext] initDB];
         SPostNotification(kNoticeFinishLogout);
+        SPostNotification(kNoticeToLogin);
         return;
     }
 }

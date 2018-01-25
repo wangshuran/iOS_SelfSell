@@ -43,12 +43,19 @@
 
 - (SButton *)btnExit {
     if (!_btnExit) {
+        __weak typeof(self) weakSelf = self;
         _btnExit = [[SButton alloc] init];
         _btnExit.layer.cornerRadius = 5.0f;
         _btnExit.layer.masksToBounds = YES;
         _btnExit.layer.borderColor = [UIColor grayColor].CGColor;
         _btnExit.layer.borderWidth = 0.5f;
         [_btnExit setTitleColor:kColorBlack forState:UIControlStateNormal];
+        [[_btnExit rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
+            SButton * btn = x;
+            btn.userInteractionEnabled = NO;
+            [SNotificationCenter postNotificationName:kNoticeCellEvent object:weakSelf];
+            btn.userInteractionEnabled = YES;
+        }];
     }
     
     return _btnExit;

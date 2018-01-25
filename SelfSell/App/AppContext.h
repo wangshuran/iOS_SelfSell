@@ -73,6 +73,11 @@ LSingleton_h(AppContext);
 - (void)reloadRootVC;
 
 /**
+ 设置为激活控制器
+ */
+- (void)setSelectVC:(SNavigationController *)vc;
+
+/**
  初始化数据库
  */
 - (void)initDB;
