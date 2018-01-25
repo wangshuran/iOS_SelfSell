@@ -61,6 +61,7 @@
                 [AppContext sharedAppContext].accountModel = accountModel;
                 [[AppContext sharedAppContext] updateLoginAccount:[AppContext sharedAppContext].accountModel];
                 [[AppContext sharedAppContext] initDB];
+                SPostNotification(kNoticeFinishLogin);//登录完成通知
                 SPostNotification(kNoticeShowSecurityCheck);//安全检查通知
             }];
         }

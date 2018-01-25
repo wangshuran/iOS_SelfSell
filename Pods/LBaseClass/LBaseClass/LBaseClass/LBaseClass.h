@@ -96,6 +96,10 @@
 #import "LSystemInfo.h"
 
 
+//--------------------LTest--------------------
+#import "LTest.h"
+
+
 //--------------------LView--------------------
 #import "LButton.h"
 #import "LImageView.h"

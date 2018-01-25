@@ -87,3 +87,18 @@ google_gugerenzhengma = "谷歌认证码";
 google_kaiqi = "开启";
 google_guanbi = "关闭";
 
+
+reward_title = "SelfSell推荐奖励计划";
+reward_buzhou1 = "Step1";
+reward_huoqutuijianma = "获取推荐码";
+reward_buzhou2 = "Step2";
+reward_yaoqinghaoyou = "邀请好友";
+reward_buzhou3 = "Step3";
+reward_dedaojiangli = "得到奖励";
+reward_jiangli = "奖励";
+reward_ssc = "SSC";
+reward_wodetuijianma = "我的推荐码";
+reward_fuzhi = "复制";
+reward_tuijianhaoyoushuliang = "推荐好友数量";
+reward_jianglijie = "奖励金额";
+reward_jianglijihua = "奖励计划";

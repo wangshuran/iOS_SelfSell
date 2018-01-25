@@ -6,6 +6,14 @@
          contextName = "-[SSetting0Controller noticeCellEvent:]:SSetting0Controller.m">
       </ContextState>
       <ContextState
+         contextName = "+[LTest randomColorView:]:LTest.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "view.subviews">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "__34-[SLoginByMailController btnLogin]_block_invoke_2:SLoginByMailController.m">
       </ContextState>
       <ContextState
@@ -89,6 +97,9 @@
       </ContextState>
       <ContextState
          contextName = "-[SLanguageController viewDidAppear:]:SLanguageController.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[SResponse reflect:]:SResponse.m">
       </ContextState>
       <ContextState
          contextName = "-[SSettingController tbTableView]:SSettingController.m">
