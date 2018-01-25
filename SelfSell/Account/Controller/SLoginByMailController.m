@@ -190,6 +190,7 @@
                     return;
                 }
                 SLoginByMailResponse * model = (SLoginByMailResponse *)response;
+                //判断是否需要验证GoogleCode
                 model.data.pwd = pwd;
                 model.data.loginType = LoginTypeAccount;
                 model.data.loginTime = [[NSDate date] timeIntervalSince1970];

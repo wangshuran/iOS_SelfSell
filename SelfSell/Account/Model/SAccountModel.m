@@ -34,6 +34,9 @@
     }
 }
 
+- (BOOL)isLoginUser {
+    return !(self.isLogout || self.loginType == LoginTypeNone || [NSString isNullOrEmpty:self.token]);
+}
 
 #pragma mark - LInitProtocol
 
@@ -42,6 +45,8 @@
     self.id = [UIDevice currentDevice].uniqueDeviceIdentifier;
     self.loginType = LoginTypeNone;
     self.languageCode = [[[SLanguage alloc] init] getAppDefaultLanguage];
+    self.isLogout = NO;
+    self.googleAuthStatus = @"OFF";
 }
 
 @end

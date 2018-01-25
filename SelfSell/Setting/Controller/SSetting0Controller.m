@@ -65,11 +65,9 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [self setNeedsStatusBarAppearanceUpdate];
-        [UINavigationBar appearance];
-    });
+    if (![[AppContext sharedAppContext].accountModel isLoginUser]) {
+        SPostNotification(kNoticeToLogin);
+    }
 }
 
 #pragma mark - LInitProtocol
@@ -104,8 +102,7 @@
         [self push:[[((TBArrowModel *)model).destVCClass alloc] init]];
         
         return;
-    }
-    
+    }    
 }
 
 @end

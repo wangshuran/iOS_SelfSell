@@ -7,7 +7,7 @@
 //
 
 #import "AppContext+Account.h"
-#import "SLoginController.h"
+#import "SLoginByMailController.h"
 #import "SCheckVersionView.h"
 #import "STouchID.h"
 #import "SDao+Category.h"
@@ -170,11 +170,11 @@
         STouchID * touch = [[STouchID alloc] init];
         if ([touch canPolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics]) {
             //此处最好加独占锁，防止连续发送两次通知，弹出两个登录视图
-            SLoginController * vc = [[SLoginController alloc] init];
-            SNavigationController * nav = [[SNavigationController alloc] initWithRootViewController:vc];
-            [UIViewController present:nav animated:NO completion:^(){
-                
-            }];
+            //SLoginController * vc = [[SLoginController alloc] init];
+            //SNavigationController * nav = [[SNavigationController alloc] initWithRootViewController:vc];
+            //[UIViewController present:nav animated:NO completion:^(){
+            //
+            //}];
         }else {
             
         }
@@ -186,7 +186,7 @@
  */
 - (void)noticeToLogin:(NSNotification *)notification {
     //此处最好加独占锁，防止连续发送两次通知，弹出两个登录视图
-    SLoginController * vc = [[SLoginController alloc] init];
+    SLoginByMailController * vc = [[SLoginByMailController alloc] init];
     SNavigationController * nav = [[SNavigationController alloc] initWithRootViewController:vc];
     [UIViewController present:nav animated:YES completion:^(){
         

@@ -25,7 +25,7 @@
     AFHTTPSessionManager * manager = [AFHTTPSessionManager manager];
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
     manager.requestSerializer.timeoutInterval = request.timeoutInterval;
-    if ([AppContext sharedAppContext].accountModel.loginType != LoginTypeNone && ![NSString isNullOrEmpty:[AppContext sharedAppContext].accountModel.token]) {
+    if ([[AppContext sharedAppContext].accountModel isLoginUser]) {
         [manager.requestSerializer setValue:[AppContext sharedAppContext].accountModel.token forHTTPHeaderField:@"Authorization"];
     }
     if ([AppContext sharedAppContext].accountModel.language == LanguageEN) {

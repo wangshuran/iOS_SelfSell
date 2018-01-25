@@ -41,22 +41,18 @@ LCmd * const LCmdGetSetting1 = @"LCmdGetSetting1";
 - (NSArray<NSArray<TBModel *> *> *)getSetting0 {
     NSMutableArray *data = [[NSMutableArray alloc] init];
     {
-        if ([AppContext sharedAppContext].accountModel.loginType != LoginTypeNone) {
-            TBArrowModel * model = [[TBArrowModel alloc] init];
-            model.uid = kwodetuijianma;
-            model.title = SLocal(@"setting0_tuijianma");
-            model.value = @"677844";
-            [data addObject:model];
-        }
+        TBArrowModel * model = [[TBArrowModel alloc] init];
+        model.uid = kwodetuijianma;
+        model.title = SLocal(@"setting0_tuijianma");
+        model.value = [AppContext sharedAppContext].accountModel.inviteCode;
+        [data addObject:model];
     }{
-        if ([AppContext sharedAppContext].accountModel.loginType != LoginTypeNone) {
-            TBArrowModel * model = [[TBArrowModel alloc] init];
-            model.uid = kgugeyanzheng;
-            model.title = SLocal(@"setting0_gugeyanzheng");
-            model.value = [[AppContext sharedAppContext].accountModel.googleAuthStatus isEqualToString:@"ON"] ? SLocal(@"setting0_gugeyikaiqi") : SLocal(@"setting0_gugeyiguanbi");
-            model.destVCClass = SGoogleValidate01Controller.class;
-            [data addObject:model];
-        }
+        TBArrowModel * model = [[TBArrowModel alloc] init];
+        model.uid = kgugeyanzheng;
+        model.title = SLocal(@"setting0_gugeyanzheng");
+        model.value = [[AppContext sharedAppContext].accountModel.googleAuthStatus isEqualToString:@"ON"] ? SLocal(@"setting0_gugeyikaiqi") : SLocal(@"setting0_gugeyiguanbi");
+        model.destVCClass = SGoogleValidate01Controller.class;
+        [data addObject:model];
     }{
         TBArrowModel * model = [[TBArrowModel alloc] init];
         model.uid = kshezhi;
@@ -64,12 +60,10 @@ LCmd * const LCmdGetSetting1 = @"LCmdGetSetting1";
         model.destVCClass = SSetting1Controller.class;
         [data addObject:model];
     }{
-        if ([AppContext sharedAppContext].accountModel.loginType != LoginTypeNone) {
-            TBExitModel * model = [[TBExitModel alloc] init];
-            model.uid = ktuichu;
-            model.title = SLocal(@"setting0_tuichu");
-            [data addObject:model];
-        }
+        TBExitModel * model = [[TBExitModel alloc] init];
+        model.uid = ktuichu;
+        model.title = SLocal(@"setting0_tuichu");
+        [data addObject:model];
     }
     TBSectionModel * section = [[TBSectionModel alloc] init];
     section.items = data;
@@ -80,22 +74,18 @@ LCmd * const LCmdGetSetting1 = @"LCmdGetSetting1";
 - (NSArray<NSArray<TBModel *> *> *)getSetting1 {
     NSMutableArray *data = [[NSMutableArray alloc] init];
     {
-        if ([AppContext sharedAppContext].accountModel.loginType != LoginTypeNone) {
-            TBArrowModel * model = [[TBArrowModel alloc] init];
-            model.uid = kgenggaimima;
-            model.title = SLocal(@"setting1_xiugaimima");
-            model.destVCClass = SUpdatePWDController.class;
-            [data addObject:model];
-        }
+        TBArrowModel * model = [[TBArrowModel alloc] init];
+        model.uid = kgenggaimima;
+        model.title = SLocal(@"setting1_xiugaimima");
+        model.destVCClass = SUpdatePWDController.class;
+        [data addObject:model];
     }{
-        if ([AppContext sharedAppContext].accountModel.loginType != LoginTypeNone) {
-            TBSwitchModel * model = [[TBSwitchModel alloc] init];
-            model.uid = kzhiwen;
-            model.title = SLocal(@"setting1_zhiwen");
-            SCommonModel * commonModel = (SCommonModel *)[[AppContext sharedAppContext].accountDao getObjectFromTable:[[SCommonModel alloc] init] condition:SCommonModel.key == kIsOpenTouchID];
-            model.isOn = commonModel.value.boolValue;
-            [data addObject:model];
-        }
+        TBSwitchModel * model = [[TBSwitchModel alloc] init];
+        model.uid = kzhiwen;
+        model.title = SLocal(@"setting1_zhiwen");
+        SCommonModel * commonModel = (SCommonModel *)[[AppContext sharedAppContext].accountDao getObjectFromTable:[[SCommonModel alloc] init] condition:SCommonModel.key == kIsOpenTouchID];
+        model.isOn = commonModel.value.boolValue;
+        [data addObject:model];
     }{
         TBArrowModel * model = [[TBArrowModel alloc] init];
         model.uid = kyuyan;

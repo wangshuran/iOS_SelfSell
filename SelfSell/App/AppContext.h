@@ -72,4 +72,9 @@ LSingleton_h(AppContext);
  */
 - (void)reloadRootVC;
 
+/**
+ 初始化数据库
+ */
+- (void)initDB;
+
 @end

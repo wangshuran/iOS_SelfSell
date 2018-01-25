@@ -45,7 +45,7 @@ LSingleton_m(AppContext);
         [self reloadRootVC];
         _rootVC.tabBar.tintColor = kColorOrange;
         _rootVC.tabBar.barTintColor = kColorBlack;
-        _rootVC.selectedViewController = self.accountNav;
+        _rootVC.selectedViewController = self.activityNav;
     }
     
     return _rootVC;
@@ -55,7 +55,7 @@ LSingleton_m(AppContext);
     if (!_fundNav) {
         NSDictionary * normal = [NSDictionary dictionaryWithObjectsAndKeys:kColorDarkGray, NSForegroundColorAttributeName, nil];
         NSDictionary * selected = [NSDictionary dictionaryWithObjectsAndKeys:kColorOrange, NSForegroundColorAttributeName, nil];
-
+        
         _fundNav = [[SNavigationController alloc] initWithRootViewController:self.fundVC];
         _fundNav.tabBarItem.image = [UIImage imageNamed:@"fund_logo_normal"];
         _fundNav.tabBarItem.selectedImage = [UIImage imageNamed:@"fund_logo_select"];
@@ -70,7 +70,7 @@ LSingleton_m(AppContext);
     if (!_activityNav) {
         NSDictionary * normal = [NSDictionary dictionaryWithObjectsAndKeys:kColorDarkGray, NSForegroundColorAttributeName, nil];
         NSDictionary * selected = [NSDictionary dictionaryWithObjectsAndKeys:kColorOrange, NSForegroundColorAttributeName, nil];
-
+        
         _activityNav = [[SNavigationController alloc] initWithRootViewController:self.activityVC];
         _activityNav.tabBarItem.image = [UIImage imageNamed:@"activity_logo_normal"];
         _activityNav.tabBarItem.selectedImage = [UIImage imageNamed:@"activity_logo_select"];
@@ -127,7 +127,7 @@ LSingleton_m(AppContext);
 }
 
 - (SDao *)accountDao {
-    if (!_accountDao) {        
+    if (!_accountDao) {
         NSString * name = [self.accountModel.id MD5];
         _accountDao = [SDao dbPath:[[self getCurrentAccountSpacePath] stringByAppendingPathComponent:name] secret:name];
     }
@@ -142,6 +142,35 @@ LSingleton_m(AppContext);
     }
     
     return _commonDao;
+}
+
+- (void)initDB {
+    [[AppContext sharedAppContext].commonDao createTable:[[SModel alloc] init]];
+    [[AppContext sharedAppContext].commonDao createTable:[[SCommonModel alloc] init]];
+    //[[AppContext sharedAppContext].commonDao createTable:[[SAccountModel alloc] init]];
+    
+    [[AppContext sharedAppContext].accountDao createTable:[[SModel alloc] init]];
+    [[AppContext sharedAppContext].accountDao createTable:[[SCommonModel alloc] init]];
+    //[[AppContext sharedAppContext].accountDao createTable:[[SAccountModel alloc] init]];
+    
+    NSUserDefaults * userDefaults = [NSUserDefaults standardUserDefaults];
+    NSString * lastInitDBVersion = [userDefaults objectForKey:kLastInitDBVersion];
+    if (![lastInitDBVersion isEqualToString:[LAppInfo CFBundleShortVersionString]]) {
+        {
+            SCommonModel * model = [[SCommonModel alloc] init];
+            model.key = kLastWelcomeVersion;
+            model.value = @"";
+            [[AppContext sharedAppContext].commonDao insertObject:model];
+        }{
+            SCommonModel * model = [[SCommonModel alloc] init];
+            model.key = kIsOpenTouchID;
+            model.value = @"0";
+            [[AppContext sharedAppContext].accountDao insertObject:model];
+        }
+        
+        [userDefaults setObject:[LAppInfo CFBundleShortVersionString] forKey:kLastInitDBVersion];
+        [userDefaults synchronize];
+    }
 }
 
 #pragma mark - LInitProtocol

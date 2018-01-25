@@ -37,6 +37,11 @@
     
     NSString * path = [[NSBundle mainBundle] pathForResource:self.accountModel.languageCode ofType:@"lproj"];
     v = [[NSBundle bundleWithPath:path] localizedStringForKey:key value:nil table:nil];
+    
+    //v = [v stringByAppendingString:v];
+    //v = [v stringByAppendingString:v];
+    //v = [v stringByAppendingString:v];
+    
     [self.languageCache setObject:v forKey:k];
     
     return v;
