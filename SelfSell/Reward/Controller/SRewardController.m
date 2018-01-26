@@ -36,9 +36,9 @@
 
 @property (nonatomic, strong) SLabel * lb03;
 
-
-
 @property (nonatomic, strong) SView * vContent1;
+
+@property (nonatomic, strong) SView * vContent1Container;
 
 @property (nonatomic, strong) SView * vContent2;
 
@@ -52,7 +52,21 @@
 
 @property (nonatomic, strong) SView * vContent3;
 
+@property (nonatomic, strong) SButton * btnRecommendFriend;
+
+@property (nonatomic, strong) SImageView * imgRecommendFriend;
+
+@property (nonatomic, strong) SLabel * lbRecommendFriend;
+
+@property (nonatomic, strong) SButton * btnRewardMoney;
+
+@property (nonatomic, strong) SImageView * imgRewardMoney;
+
+@property (nonatomic, strong) SLabel * lbRewardMoney;
+
 @property (nonatomic, strong) SView * vContent4;
+
+@property (nonatomic, strong) SButton * btnRewardPlan;
 
 @end
 
@@ -62,11 +76,7 @@
 //reward_01
 //reward_02
 //reward_03
-//
-//
-//
-//
-//
+
 - (NSString *)title {
     return SLocal(@"reward_title");
 }
@@ -206,14 +216,13 @@
         NSString * textPre = SLocal(@"reward_buzhou1");
         NSString * textSuf = SLocal(@"reward_huoqutuijianma");
         NSString * text = [NSString stringWithFormat:@"%@\n%@", textPre, textSuf];
-        
+        NSMutableAttributedString * attributedText = [[NSMutableAttributedString alloc] initWithString:text];
+        [attributedText addAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[kColorLightGray alpha:0.5f], NSForegroundColorAttributeName, kLbFontSmaller, NSFontAttributeName, nil] range:[text rangeOfString:textPre]];
+        [attributedText addAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[kColorLightGray alpha:0.8f], NSForegroundColorAttributeName, kLbFontNormal, NSFontAttributeName, nil] range:[text rangeOfString:textSuf]];
         _lb01 = [[SLabel alloc] init];
         _lb01.text = text;
         _lb01.textAlignment = NSTextAlignmentCenter;
         _lb01.numberOfLines = 2;
-        NSMutableAttributedString * attributedText = [[NSMutableAttributedString alloc] initWithString:text];
-        [attributedText addAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[kColorLightGray alpha:0.5f], NSForegroundColorAttributeName, kLbFontSmaller, NSFontAttributeName, nil] range:[text rangeOfString:textPre]];
-        [attributedText addAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[kColorLightGray alpha:0.8f], NSForegroundColorAttributeName, kLbFontNormal, NSFontAttributeName, nil] range:[text rangeOfString:textSuf]];
         _lb01.attributedText = attributedText;
     }
     
@@ -225,14 +234,12 @@
         NSString * textPre = SLocal(@"reward_buzhou2");
         NSString * textSuf = SLocal(@"reward_yaoqinghaoyou");
         NSString * text = [NSString stringWithFormat:@"%@\n%@", textPre, textSuf];
-        
-        _lb02 = [[SLabel alloc] init];
-        _lb02.text = text;
-        _lb02.textAlignment = NSTextAlignmentCenter;
-        _lb02.numberOfLines = 2;
         NSMutableAttributedString * attributedText = [[NSMutableAttributedString alloc] initWithString:text];
         [attributedText addAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[kColorLightGray alpha:0.5f], NSForegroundColorAttributeName, kLbFontSmaller, NSFontAttributeName, nil] range:[text rangeOfString:textPre]];
         [attributedText addAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[kColorLightGray alpha:0.8f], NSForegroundColorAttributeName, kLbFontNormal, NSFontAttributeName, nil] range:[text rangeOfString:textSuf]];
+        _lb02 = [[SLabel alloc] init];
+        _lb02.textAlignment = NSTextAlignmentCenter;
+        _lb02.numberOfLines = 2;
         _lb02.attributedText = attributedText;
     }
     
@@ -244,14 +251,12 @@
         NSString * textPre = SLocal(@"reward_buzhou3");
         NSString * textSuf = SLocal(@"reward_dedaojiangli");
         NSString * text = [NSString stringWithFormat:@"%@\n%@", textPre, textSuf];
-        
-        _lb03 = [[SLabel alloc] init];
-        _lb03.text = text;
-        _lb03.textAlignment = NSTextAlignmentCenter;
-        _lb03.numberOfLines = 2;
         NSMutableAttributedString * attributedText = [[NSMutableAttributedString alloc] initWithString:text];
         [attributedText addAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[kColorLightGray alpha:0.5f], NSForegroundColorAttributeName, kLbFontSmaller, NSFontAttributeName, nil] range:[text rangeOfString:textPre]];
         [attributedText addAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[kColorLightGray alpha:0.8f], NSForegroundColorAttributeName, kLbFontNormal, NSFontAttributeName, nil] range:[text rangeOfString:textSuf]];
+        _lb03 = [[SLabel alloc] init];
+        _lb03.textAlignment = NSTextAlignmentCenter;
+        _lb03.numberOfLines = 2;
         _lb03.attributedText = attributedText;
     }
     
@@ -261,14 +266,28 @@
 - (SView *)vContent1 {
     if (!_vContent1) {
         _vContent1 = [[SView alloc] init];
+        _vContent1.backgroundColor = [kColorDarkGray alpha:0.1f];
+        [_vContent1 addSubview:self.vContent1Container];
     }
     
     return _vContent1;
 }
 
+- (SView *)vContent1Container {
+    if (!_vContent1Container) {
+        _vContent1Container = [[SView alloc] init];
+        _vContent1Container.layer.cornerRadius = 5.0f;
+        _vContent1Container.layer.masksToBounds = YES;
+        _vContent1Container.backgroundColor = kColorLightGray;
+    }
+    
+    return _vContent1Container;
+}
+
 - (SView *)vContent2 {
     if (!_vContent2) {
         _vContent2 = [[SView alloc] init];
+        _vContent2.backgroundColor = [kColorDarkGray alpha:0.1f];
         [_vContent2 addSubview:self.vContent2Container];
     }
     
@@ -291,8 +310,14 @@
 
 - (SLabel *)lbRecommendCode {
     if (!_lbRecommendCode) {
+        NSString * textPre = SLocal(@"reward_wodetuijianma");
+        NSString * textSuf = [AppContext sharedAppContext].accountModel.inviteCode;
+        NSString * text = [NSString stringWithFormat:@"%@%@", textPre, textSuf];
+        NSMutableAttributedString * attributedText = [[NSMutableAttributedString alloc] initWithString:text];
+        [attributedText addAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[kColorDarkGray alpha:0.5f], NSForegroundColorAttributeName, kLbFontNormal, NSFontAttributeName, nil] range:[text rangeOfString:textPre]];
+        [attributedText addAttributes:[NSDictionary dictionaryWithObjectsAndKeys:kColorOrange, NSForegroundColorAttributeName, [LFont bold_25], NSFontAttributeName, nil] range:[text rangeOfString:textSuf]];
         _lbRecommendCode = [[SLabel alloc] init];
-        _lbRecommendCode.text = SLocal(@"reward_wodetuijianma");
+        _lbRecommendCode.attributedText = attributedText;
     }
     
     return _lbRecommendCode;
@@ -318,17 +343,113 @@
 - (SView *)vContent3 {
     if (!_vContent3) {
         _vContent3 = [[SView alloc] init];
+        _vContent3.backgroundColor = [kColorDarkGray alpha:0.1f];
+        [_vContent3 addSubview:self.btnRecommendFriend];
+        [_vContent3 addSubview:self.btnRewardMoney];
     }
     
     return _vContent3;
 }
 
+- (SButton *)btnRecommendFriend {
+    if (!_btnRecommendFriend) {
+        _btnRecommendFriend = [[SButton alloc] init];
+        _btnRecommendFriend.layer.cornerRadius = 5.0f;
+        _btnRecommendFriend.layer.masksToBounds = YES;
+        _btnRecommendFriend.backgroundColor = kColorLightGray;
+        [_btnRecommendFriend addSubview:self.imgRecommendFriend];
+        [_btnRecommendFriend addSubview:self.lbRecommendFriend];
+    }
+    
+    return _btnRecommendFriend;
+}
+
+- (SImageView *)imgRecommendFriend {
+    if (!_imgRecommendFriend) {
+        _imgRecommendFriend = [[SImageView alloc] init];
+        _imgRecommendFriend.image = [UIImage imageNamed:@"reward_people"];
+        _imgRecommendFriend.contentMode = UIViewContentModeCenter;
+    }
+    
+    return _imgRecommendFriend;
+}
+
+- (SLabel *)lbRecommendFriend {
+    if (!_lbRecommendFriend) {
+        NSString * textPre = SLocal(@"reward_tuijianhaoyoushuliang");
+        NSString * textSuf = @"0";
+        NSString * text = [NSString stringWithFormat:@"%@\n%@", textPre, textSuf];
+        NSMutableAttributedString * attributedText = [[NSMutableAttributedString alloc] initWithString:text];
+        [attributedText addAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[kColorDarkGray alpha:0.5f], NSForegroundColorAttributeName, kLbFontSmaller, NSFontAttributeName, nil] range:[text rangeOfString:textPre]];
+        [attributedText addAttributes:[NSDictionary dictionaryWithObjectsAndKeys:kColorBlack, NSForegroundColorAttributeName, [LFont thin_25], NSFontAttributeName, nil] range:[text rangeOfString:textSuf]];
+        _lbRecommendFriend = [[SLabel alloc] init];
+        _lbRecommendFriend.numberOfLines = 2;
+        _lbRecommendFriend.attributedText = attributedText;
+    }
+    
+    return _lbRecommendFriend;
+}
+
+- (SButton *)btnRewardMoney {
+    if (!_btnRewardMoney) {
+        _btnRewardMoney = [[SButton alloc] init];
+        _btnRewardMoney.layer.cornerRadius = 5.0f;
+        _btnRewardMoney.layer.masksToBounds = YES;
+        _btnRewardMoney.backgroundColor = kColorLightGray;
+        [_btnRewardMoney addSubview:self.imgRewardMoney];
+        [_btnRewardMoney addSubview:self.lbRewardMoney];
+    }
+    
+    return _btnRewardMoney;
+}
+
+- (SImageView *)imgRewardMoney {
+    if (!_imgRewardMoney) {
+        _imgRewardMoney = [[SImageView alloc] init];
+        _imgRewardMoney.image = [UIImage imageNamed:@"reward_finace"];
+        _imgRewardMoney.contentMode = UIViewContentModeCenter;
+    }
+    
+    return _imgRewardMoney;
+}
+
+- (SLabel *)lbRewardMoney {
+    if (!_lbRewardMoney) {
+        NSString * textPre = SLocal(@"reward_jianglijie");
+        NSString * textMid = @"0";
+        NSString * textSuf = @"SSC";
+        NSString * text = [NSString stringWithFormat:@"%@\n%@%@", textPre, textMid, textSuf];
+        NSMutableAttributedString * attributedText = [[NSMutableAttributedString alloc] initWithString:text];
+        [attributedText addAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[kColorDarkGray alpha:0.5f], NSForegroundColorAttributeName, kLbFontSmaller, NSFontAttributeName, nil] range:[text rangeOfString:textPre]];
+        [attributedText addAttributes:[NSDictionary dictionaryWithObjectsAndKeys:kColorBlack, NSForegroundColorAttributeName, [LFont thin_25], NSFontAttributeName, nil] range:[text rangeOfString:textMid]];
+        [attributedText addAttributes:[NSDictionary dictionaryWithObjectsAndKeys:kColorBlack, NSForegroundColorAttributeName, kLbFontSmaller, NSFontAttributeName, nil] range:[text rangeOfString:textSuf]];
+        _lbRewardMoney = [[SLabel alloc] init];
+        _lbRewardMoney.numberOfLines = 2;
+        _lbRewardMoney.attributedText = attributedText;
+    }
+    
+    return _lbRewardMoney;
+}
+
 - (SView *)vContent4 {
     if (!_vContent4) {
         _vContent4 = [[SView alloc] init];
+        _vContent4.backgroundColor = [kColorDarkGray alpha:0.1f];
+        [_vContent4 addSubview:self.btnRewardPlan];
     }
     
     return _vContent4;
+}
+
+- (SButton *)btnRewardPlan {
+    if (!_btnRewardPlan) {
+        _btnRewardPlan = [[SButton alloc] init];
+        _btnRewardPlan.backgroundColor = kColorLightGray;
+        [_btnRewardPlan setTitleColor:kColorDarkGray forState:UIControlStateNormal];
+        [_btnRewardPlan setTitle:SLocal(@"reward_jianglijihua") forState:UIControlStateNormal];
+    }
+    
+    return _btnRewardPlan;
 }
 
 - (void)loadView {
@@ -337,6 +458,7 @@
     [self.view addSubview:self.navigationBar];
     [self.view addSubview:self.scrollView];
     CGFloat navHeight = isIPhoneX ? 84.0f : 64.0f;
+    CGFloat width = CGRectGetWidth(self.view.bounds);
     
     [self.navigationBar mas_updateConstraints:^(MASConstraintMaker * make) {
         make.top.left.right.mas_equalTo(weakSelf.view);
@@ -401,52 +523,90 @@
         make.height.mas_equalTo(50.0f);
         make.width.mas_equalTo(100.0f);
     }];
-    
-    
-    
-    
-    
-    
-    
     [self.vContent1 mas_updateConstraints:^(MASConstraintMaker * make) {
         make.top.mas_equalTo(weakSelf.vContent0.mas_bottom);
         make.left.right.mas_equalTo(weakSelf.scrollContainer);
-        make.height.mas_equalTo(400.0f);
+        make.height.mas_equalTo(145.0f);
+    }];
+    [self.vContent1Container mas_updateConstraints:^(MASConstraintMaker * make) {
+        make.top.mas_equalTo(weakSelf.vContent1).mas_offset(-40.0f);
+        make.left.mas_equalTo(weakSelf.vContent1).mas_offset(10.0f);
+        make.right.mas_equalTo(weakSelf.vContent1).mas_offset(-10.0f);
+        make.height.mas_equalTo(180.0f);
     }];
     [self.vContent2 mas_updateConstraints:^(MASConstraintMaker * make) {
-        make.top.mas_equalTo(weakSelf.vContent1.mas_bottom).mas_offset(10.0f);
+        make.top.mas_equalTo(weakSelf.vContent1.mas_bottom);
         make.left.right.mas_equalTo(weakSelf.scrollContainer);
-        make.height.mas_equalTo(50.0f);
+        make.height.mas_equalTo(70.0f);
     }];
     [self.vContent2Container mas_updateConstraints:^(MASConstraintMaker *make) {
-        make.top.bottom.mas_equalTo(weakSelf.vContent2);
+        make.top.mas_equalTo(weakSelf.vContent2).mas_offset(5.0f);
+        make.bottom.mas_equalTo(weakSelf.vContent2).mas_offset(-5.0f);
         make.left.mas_equalTo(weakSelf.vContent2).mas_offset(10.0f);
         make.right.mas_equalTo(weakSelf.vContent2).mas_offset(-10.0f);
     }];
     [self.lbRecommendCode mas_updateConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(weakSelf.vContent2Container).mas_offset(10.0f);
-        make.top.bottom.mas_equalTo(weakSelf.vContent2Container);
+        make.top.mas_equalTo(weakSelf.vContent2Container).mas_offset(5.0f);
+        make.bottom.mas_equalTo(weakSelf.vContent2Container).mas_offset(-5.0f);
         make.right.mas_equalTo(weakSelf.btnShare.mas_left);
     }];
-//    [self.btnCopy mas_updateConstraints:^(MASConstraintMaker *make) {
-//        make.top.bottom.left.right.mas_equalTo(weakSelf.vContent2);
-//    }];
+    //    [self.btnCopy mas_updateConstraints:^(MASConstraintMaker *make) {
+    //        make.top.bottom.left.right.mas_equalTo(weakSelf.vContent2);
+    //    }];
     [self.btnShare mas_updateConstraints:^(MASConstraintMaker *make) {
-        //make.right.mas_equalTo(weakSelf.vContent2Container).mas_offset(-10.0f);
-        make.top.bottom.right.mas_equalTo(weakSelf.vContent2Container);
+        make.top.mas_equalTo(weakSelf.vContent2Container).mas_offset(5.0f);
+        make.bottom.mas_equalTo(weakSelf.vContent2Container).mas_offset(-5.0f);
+        make.right.mas_equalTo(weakSelf.vContent2Container);
         make.width.mas_equalTo(weakSelf.vContent2Container.mas_height);
     }];
-    
-    
     [self.vContent3 mas_updateConstraints:^(MASConstraintMaker * make) {
         make.top.mas_equalTo(weakSelf.vContent2.mas_bottom);
         make.left.right.mas_equalTo(weakSelf.scrollContainer);
-        make.height.mas_equalTo(400.0f);
+        make.height.mas_equalTo(weakSelf.scrollContainer.mas_width).multipliedBy(0.5f);
+    }];
+    [self.btnRecommendFriend mas_updateConstraints:^(MASConstraintMaker * make) {
+        make.top.mas_equalTo(weakSelf.vContent3.mas_top).mas_offset(5.0f);
+        make.bottom.mas_equalTo(weakSelf.vContent3.mas_bottom).mas_equalTo(-5.0f);
+        make.left.mas_equalTo(weakSelf.vContent3).mas_offset(10.0f);
+        make.width.mas_equalTo(weakSelf.vContent3.mas_width).multipliedBy(0.5f).mas_equalTo(-15.0f);
+    }];
+    [self.imgRecommendFriend mas_updateConstraints:^(MASConstraintMaker * make) {
+        make.top.mas_equalTo(width / 8.0f);
+        make.left.mas_equalTo(width / 8.0f);
+        make.height.width.mas_equalTo(30.0f);
+    }];
+    [self.lbRecommendFriend mas_updateConstraints:^(MASConstraintMaker * make) {
+        make.top.mas_equalTo(weakSelf.imgRecommendFriend.mas_bottom).mas_offset(5.0f);
+        make.left.mas_equalTo(weakSelf.imgRecommendFriend.mas_left);
+        make.right.mas_equalTo(weakSelf.btnRecommendFriend).mas_offset(-10.0f);
+        make.height.mas_equalTo(60.0f);
+    }];
+    [self.btnRewardMoney mas_updateConstraints:^(MASConstraintMaker * make) {
+        make.top.mas_equalTo(weakSelf.vContent3.mas_top).mas_offset(5.0f);
+        make.bottom.mas_equalTo(weakSelf.vContent3.mas_bottom).mas_equalTo(-5.0f);
+        make.right.mas_equalTo(weakSelf.vContent3).mas_offset(-10.0f);
+        make.width.mas_equalTo(weakSelf.vContent3.mas_width).multipliedBy(0.5f).mas_offset(-15.0f);
+    }];
+    [self.imgRewardMoney mas_updateConstraints:^(MASConstraintMaker * make) {
+        make.top.mas_equalTo(width / 8.0f);
+        make.left.mas_equalTo(width / 8.0f);
+        make.height.width.mas_equalTo(30.0f);
+    }];
+    [self.lbRewardMoney mas_updateConstraints:^(MASConstraintMaker * make) {
+        make.top.mas_equalTo(weakSelf.imgRewardMoney.mas_bottom).mas_offset(5.0f);
+        make.left.mas_equalTo(weakSelf.imgRewardMoney.mas_left);
+        make.right.mas_equalTo(weakSelf.btnRewardMoney).mas_offset(-10.0f);
+        make.height.mas_equalTo(60.0f);
     }];
     [self.vContent4 mas_updateConstraints:^(MASConstraintMaker * make) {
         make.top.mas_equalTo(weakSelf.vContent3.mas_bottom);
         make.left.right.mas_equalTo(weakSelf.scrollContainer);
-        make.height.mas_equalTo(400.0f);
+        make.height.mas_equalTo(65.0f);
+    }];
+    [self.btnRewardPlan mas_updateConstraints:^(MASConstraintMaker * make) {
+        make.top.mas_equalTo(weakSelf.vContent4).mas_offset(5.0f);
+        make.bottom.left.right.mas_equalTo(weakSelf.vContent4);
     }];
     // 设置过渡视图的底边距（此设置将影响到scrollView的contentSize）
     [self.scrollContainer mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -459,12 +619,9 @@
 }
 
 //reward_jiangli = "奖励";
-//reward_ssc = "SSC";
-// = "我的推荐码";
 //reward_fuzhi = "复制";
-//reward_tuijianhaoyoushuliang = "推荐好友数量";
-//reward_jianglijie = "奖励金额";
-//reward_jianglijihua = "奖励计划";
+// = "推荐好友数量";
+// = "奖励金额";
 
 #pragma mark - UIScrollViewDelegate
 
