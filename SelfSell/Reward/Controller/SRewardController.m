@@ -112,7 +112,6 @@
         _scrollView.delegate = self;
         _scrollView.showsVerticalScrollIndicator = NO;
         _scrollView.showsHorizontalScrollIndicator = NO;
-        _scrollView.backgroundColor = [kColorBlack alpha:0.8f];
         _scrollView.backgroundColor = [kColorDarkGray alpha:0.1f];
         _scrollView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
             [weakSelf loadData];
