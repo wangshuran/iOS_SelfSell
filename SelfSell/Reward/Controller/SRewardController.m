@@ -10,7 +10,7 @@
 #import "SRewardRequest.h"
 #import "SNavigationBar.h"
 
-@interface SRewardController ()
+@interface SRewardController ()<UIScrollViewDelegate>
 
 @property (nonatomic, strong) SNavigationBar * navigationBar;
 
@@ -66,7 +66,7 @@
 //
 //
 //
-//reward_share
+//
 - (NSString *)title {
     return SLocal(@"reward_title");
 }
@@ -80,7 +80,6 @@
         __weak typeof(self) weakSelf = self;
         _navigationBar = [[SNavigationBar alloc] init];
         _navigationBar.backgroundColor = [kColorBlack alpha:0.8f];
-        _navigationBar.backgroundColor = kColorBlack;
         [_navigationBar.btnLeft setImage:[UIImage imageNamed:@"common_fanhui_white"] forState:UIControlStateNormal];
         _navigationBar.lbTitle.text = self.title;
         _navigationBar.lbTitle.textColor = [UIColor whiteColor];
@@ -94,9 +93,15 @@
 
 - (SScrollView *)scrollView {
     if (!_scrollView) {
+        __weak typeof(self) weakSelf = self;
         _scrollView = [[SScrollView alloc] init];
+        _scrollView.delegate = self;
         _scrollView.showsVerticalScrollIndicator = NO;
         _scrollView.showsHorizontalScrollIndicator = NO;
+        _scrollView.backgroundColor = [kColorBlack alpha:0.8f];
+        _scrollView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+            [weakSelf.scrollView.mj_header endRefreshing];
+        }];
         [_scrollView addSubview:self.scrollContainer];
     }
     
@@ -106,7 +111,7 @@
 - (SView *)scrollContainer {
     if (!_scrollContainer) {
         _scrollContainer = [[SView alloc] init];
-        _scrollContainer.backgroundColor = [kColorBlack alpha:0.8f];
+        _scrollContainer.backgroundColor = kColorLightGray;
         [_scrollContainer addSubview:self.vContent0];
         [_scrollContainer addSubview:self.vContent1];
         [_scrollContainer addSubview:self.vContent2];
@@ -139,7 +144,7 @@
         _imgContent01 = [[SImageView alloc] init];
         _imgContent01.layer.cornerRadius = 25.0f;
         _imgContent01.layer.masksToBounds = YES;
-        _imgContent01.layer.borderWidth = 0.5f;
+        _imgContent01.layer.borderWidth = 1.0f;
         _imgContent01.layer.borderColor = kColorOrange.CGColor;
         _imgContent01.contentMode = UIViewContentModeCenter;
         _imgContent01.image = [UIImage imageNamed:@"reward_04"];
@@ -163,7 +168,7 @@
         _imgContent03 = [[SImageView alloc] init];
         _imgContent03.layer.cornerRadius = 25.0f;
         _imgContent03.layer.masksToBounds = YES;
-        _imgContent03.layer.borderWidth = 0.5f;
+        _imgContent03.layer.borderWidth = 1.0f;
         _imgContent03.layer.borderColor = kColorOrange.CGColor;
         _imgContent03.contentMode = UIViewContentModeCenter;
         _imgContent03.image = [UIImage imageNamed:@"reward_people"];
@@ -187,7 +192,7 @@
         _imgContent05 = [[SImageView alloc] init];
         _imgContent05.layer.cornerRadius = 25.0f;
         _imgContent05.layer.masksToBounds = YES;
-        _imgContent05.layer.borderWidth = 0.5f;
+        _imgContent05.layer.borderWidth = 1.0f;
         _imgContent05.layer.borderColor = kColorOrange.CGColor;
         _imgContent05.contentMode = UIViewContentModeCenter;
         _imgContent05.image = [UIImage imageNamed:@"reward_finace"];
@@ -253,8 +258,6 @@
     return _lb03;
 }
 
-
-
 - (SView *)vContent1 {
     if (!_vContent1) {
         _vContent1 = [[SView alloc] init];
@@ -277,6 +280,7 @@
         _vContent2Container = [[SView alloc] init];
         _vContent2Container.layer.cornerRadius = 5.0f;
         _vContent2Container.layer.masksToBounds = YES;
+        _vContent2Container.backgroundColor = kColorLightGray;
         [_vContent2Container addSubview:self.lbRecommendCode];
         [_vContent2Container addSubview:self.btnCopy];
         [_vContent2Container addSubview:self.btnShare];
@@ -288,6 +292,7 @@
 - (SLabel *)lbRecommendCode {
     if (!_lbRecommendCode) {
         _lbRecommendCode = [[SLabel alloc] init];
+        _lbRecommendCode.text = SLocal(@"reward_wodetuijianma");
     }
     
     return _lbRecommendCode;
@@ -304,6 +309,7 @@
 - (SButton *)btnShare {
     if (!_btnShare) {
         _btnShare = [[SButton alloc] init];
+        [_btnShare setImage:[UIImage imageNamed:@"reward_share"] forState:UIControlStateNormal];
     }
     
     return _btnShare;
@@ -348,7 +354,7 @@
     [self.vContent0 mas_updateConstraints:^(MASConstraintMaker * make) {
         make.top.mas_equalTo(0.0f);
         make.left.right.mas_equalTo(weakSelf.scrollContainer);
-        make.height.mas_equalTo(400.0f);
+        make.height.mas_equalTo(200.0f);
     }];
     [self.imgContent01 mas_updateConstraints:^(MASConstraintMaker *make) {
         make.height.width.mas_equalTo(50.0f);
@@ -377,7 +383,6 @@
         make.centerY.mas_equalTo(weakSelf.imgContent03);
         make.left.mas_equalTo(weakSelf.imgContent04.mas_right).mas_offset(10.0f);
     }];
-    
     [self.lb01 mas_updateConstraints:^(MASConstraintMaker *make) {
         make.top.mas_equalTo(weakSelf.imgContent01.mas_bottom);
         make.centerX.mas_equalTo(weakSelf.imgContent01);
@@ -409,27 +414,30 @@
         make.height.mas_equalTo(400.0f);
     }];
     [self.vContent2 mas_updateConstraints:^(MASConstraintMaker * make) {
-        make.top.mas_equalTo(weakSelf.vContent1.mas_bottom);
+        make.top.mas_equalTo(weakSelf.vContent1.mas_bottom).mas_offset(10.0f);
         make.left.right.mas_equalTo(weakSelf.scrollContainer);
-        make.height.mas_equalTo(400.0f);
+        make.height.mas_equalTo(50.0f);
     }];
     [self.vContent2Container mas_updateConstraints:^(MASConstraintMaker *make) {
-        make.top.bottom.left.right.mas_equalTo(weakSelf.vContent2);
+        make.top.bottom.mas_equalTo(weakSelf.vContent2);
+        make.left.mas_equalTo(weakSelf.vContent2).mas_offset(10.0f);
+        make.right.mas_equalTo(weakSelf.vContent2).mas_offset(-10.0f);
     }];
     [self.lbRecommendCode mas_updateConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(weakSelf.vContent2Container).mas_offset(10.0f);
-        make.top.bottom.left.right.mas_equalTo(weakSelf.vContent2);
-        
+        make.top.bottom.mas_equalTo(weakSelf.vContent2Container);
+        make.right.mas_equalTo(weakSelf.btnShare.mas_left);
     }];
-    [self.btnCopy mas_updateConstraints:^(MASConstraintMaker *make) {
-        make.top.bottom.left.right.mas_equalTo(weakSelf.vContent2);
-        
-    }];
+//    [self.btnCopy mas_updateConstraints:^(MASConstraintMaker *make) {
+//        make.top.bottom.left.right.mas_equalTo(weakSelf.vContent2);
+//    }];
     [self.btnShare mas_updateConstraints:^(MASConstraintMaker *make) {
-        make.right.mas_equalTo(weakSelf.vContent2Container).mas_offset(-10.0f);
-        make.centerY.mas_equalTo(weakSelf.vContent2Container);
-        make.height.width.mas_equalTo(30.0f);
+        //make.right.mas_equalTo(weakSelf.vContent2Container).mas_offset(-10.0f);
+        make.top.bottom.right.mas_equalTo(weakSelf.vContent2Container);
+        make.width.mas_equalTo(weakSelf.vContent2Container.mas_height);
     }];
+    
+    
     [self.vContent3 mas_updateConstraints:^(MASConstraintMaker * make) {
         make.top.mas_equalTo(weakSelf.vContent2.mas_bottom);
         make.left.right.mas_equalTo(weakSelf.scrollContainer);
@@ -447,17 +455,25 @@
     
     
     //[LTest randomColorView:self.scrollView];
+    //[self.scrollView.mj_header beginRefreshing];
 }
-
-// = "SelfSell推荐奖励计划";
 
 //reward_jiangli = "奖励";
 //reward_ssc = "SSC";
-//reward_wodetuijianma = "我的推荐码";
+// = "我的推荐码";
 //reward_fuzhi = "复制";
 //reward_tuijianhaoyoushuliang = "推荐好友数量";
 //reward_jianglijie = "奖励金额";
 //reward_jianglijihua = "奖励计划";
+
+#pragma mark - UIScrollViewDelegate
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    if (scrollView.contentOffset.y >= scrollView.contentSize.height - scrollView.frame.size.height) {
+        scrollView.contentOffset = CGPointMake(0.0f, scrollView.contentSize.height - scrollView.frame.size.height);
+        return;
+    }
+}
 
 #pragma mark - LInitProtocol
 
@@ -472,9 +488,7 @@
             [MBProgressHUD showTitleToView:weakSelf.view postion:NHHUDPostionCenten title:response.msg];
             return;
         }
-        
     }];
 }
-
 
 @end
