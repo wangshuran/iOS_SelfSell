@@ -240,7 +240,6 @@
         NSMutableAttributedString * attributedText = [[NSMutableAttributedString alloc] initWithString:text];
         [attributedText addAttribute:NSForegroundColorAttributeName value:[UIColor colorWithRed:142.0f / 255.0f green:142.0f / 255.0f blue:142.0f / 255.0f alpha:1.0f] range:[text rangeOfString:textPre]];
         [attributedText addAttribute:NSForegroundColorAttributeName value:kColorOrange range:[text rangeOfString:textSuf]];
-        [_btnRegister setTitle:text forState:UIControlStateNormal];
         [_btnRegister setAttributedTitle:attributedText forState:UIControlStateNormal];
         [[_btnRegister rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
             [weakSelf push:[[SRegisterByMailController alloc] init]];

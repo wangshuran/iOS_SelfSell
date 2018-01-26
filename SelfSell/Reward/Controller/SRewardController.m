@@ -53,7 +53,7 @@
 
 @property (nonatomic, strong) SView * vContent2Container;
 
-@property (nonatomic, strong) SLabel * lbRecommendCode;
+@property (nonatomic, strong) SButton * btnRecommendCode;
 
 @property (nonatomic, strong) SButton * btnShare;
 
@@ -342,15 +342,16 @@
         _vContent2Container.layer.cornerRadius = 5.0f;
         _vContent2Container.layer.masksToBounds = YES;
         _vContent2Container.backgroundColor = kColorLightGray;
-        [_vContent2Container addSubview:self.lbRecommendCode];
+        [_vContent2Container addSubview:self.btnRecommendCode];
         [_vContent2Container addSubview:self.btnShare];
     }
     
     return _vContent2Container;
 }
 
-- (SLabel *)lbRecommendCode {
-    if (!_lbRecommendCode) {
+- (SButton *)btnRecommendCode {
+    if (!_btnRecommendCode) {
+        __weak typeof(self) weakSelf = self;
         NSString * textPre = SLocal(@"reward_wodetuijianma");
         NSString * textMid = [AppContext sharedAppContext].accountModel.inviteCode;
         NSString * textSuf = SLocal(@"reward_fuzhi");
@@ -359,11 +360,17 @@
         [attributedText addAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[kColorDarkGray alpha:0.5f], NSForegroundColorAttributeName, kLbFontNormal, NSFontAttributeName, nil] range:[text rangeOfString:textPre]];
         [attributedText addAttributes:[NSDictionary dictionaryWithObjectsAndKeys:kColorOrange, NSForegroundColorAttributeName, [LFont bold_25], NSFontAttributeName, nil] range:[text rangeOfString:textMid]];
         [attributedText addAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[kColorDarkGray alpha:0.5f], NSForegroundColorAttributeName, kLbFontNormal, NSFontAttributeName, nil] range:[text rangeOfString:textSuf]];
-        _lbRecommendCode = [[SLabel alloc] init];
-        _lbRecommendCode.attributedText = attributedText;
+        _btnRecommendCode = [[SButton alloc] init];
+        _btnRecommendCode.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
+        [_btnRecommendCode setAttributedTitle:attributedText forState:UIControlStateNormal];
+        [[_btnRecommendCode rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
+            UIPasteboard * pasteboard = [UIPasteboard generalPasteboard];
+            pasteboard.string = [AppContext sharedAppContext].accountModel.inviteCode;
+            [MBProgressHUD showTitleToView:weakSelf.view postion:NHHUDPostionCenten title:SLocal(@"google_fuzhidao")];
+        }];
     }
     
-    return _lbRecommendCode;
+    return _btnRecommendCode;
 }
 
 - (SButton *)btnShare {
@@ -498,53 +505,53 @@
     [self.vContent0 mas_updateConstraints:^(MASConstraintMaker * make) {
         make.top.mas_equalTo(0.0f);
         make.left.right.mas_equalTo(weakSelf.scrollContainer);
-        make.height.mas_equalTo(200.0f);
+        make.height.mas_equalTo(170.0f);
     }];
     [self.vContent0Container mas_updateConstraints:^(MASConstraintMaker * make) {
         make.bottom.mas_equalTo(weakSelf.scrollView.mas_top);
         make.left.right.mas_equalTo(weakSelf.scrollView);
         make.height.mas_equalTo(height);
     }];
-    [self.imgContent01 mas_updateConstraints:^(MASConstraintMaker *make) {
+    [self.imgContent01 mas_updateConstraints:^(MASConstraintMaker * make) {
         make.height.width.mas_equalTo(50.0f);
         make.centerY.mas_equalTo(weakSelf.imgContent03);
         make.right.mas_equalTo(weakSelf.imgContent02.mas_left).mas_offset(-10.0f);
     }];
-    [self.imgContent02 mas_updateConstraints:^(MASConstraintMaker *make) {
+    [self.imgContent02 mas_updateConstraints:^(MASConstraintMaker * make) {
         make.height.mas_equalTo(20.0f);
         make.width.mas_equalTo(50.0f);
         make.centerY.mas_equalTo(weakSelf.imgContent03);
         make.right.mas_equalTo(weakSelf.imgContent03.mas_left).mas_offset(-10.0f);
     }];
-    [self.imgContent03 mas_updateConstraints:^(MASConstraintMaker *make) {
+    [self.imgContent03 mas_updateConstraints:^(MASConstraintMaker * make) {
         make.height.width.mas_equalTo(50.0f);
         make.top.mas_equalTo(weakSelf.vContent0).mas_offset(10.0f);
         make.centerX.mas_equalTo(weakSelf.vContent0);
     }];
-    [self.imgContent04 mas_updateConstraints:^(MASConstraintMaker *make) {
+    [self.imgContent04 mas_updateConstraints:^(MASConstraintMaker * make) {
         make.height.mas_equalTo(20.0f);
         make.width.mas_equalTo(50.0f);
         make.centerY.mas_equalTo(weakSelf.imgContent03);
         make.left.mas_equalTo(weakSelf.imgContent03.mas_right).mas_offset(10.0f);
     }];
-    [self.imgContent05 mas_updateConstraints:^(MASConstraintMaker *make) {
+    [self.imgContent05 mas_updateConstraints:^(MASConstraintMaker * make) {
         make.height.width.mas_equalTo(50.0f);
         make.centerY.mas_equalTo(weakSelf.imgContent03);
         make.left.mas_equalTo(weakSelf.imgContent04.mas_right).mas_offset(10.0f);
     }];
-    [self.lb01 mas_updateConstraints:^(MASConstraintMaker *make) {
+    [self.lb01 mas_updateConstraints:^(MASConstraintMaker * make) {
         make.top.mas_equalTo(weakSelf.imgContent01.mas_bottom);
         make.centerX.mas_equalTo(weakSelf.imgContent01);
         make.height.mas_equalTo(50.0f);
         make.width.mas_equalTo(100.0f);
     }];
-    [self.lb02 mas_updateConstraints:^(MASConstraintMaker *make) {
+    [self.lb02 mas_updateConstraints:^(MASConstraintMaker * make) {
         make.top.mas_equalTo(weakSelf.imgContent03.mas_bottom);
         make.centerX.mas_equalTo(weakSelf.imgContent03);
         make.height.mas_equalTo(50.0f);
         make.width.mas_equalTo(100.0f);
     }];
-    [self.lb03 mas_updateConstraints:^(MASConstraintMaker *make) {
+    [self.lb03 mas_updateConstraints:^(MASConstraintMaker * make) {
         make.top.mas_equalTo(weakSelf.imgContent05.mas_bottom);
         make.centerX.mas_equalTo(weakSelf.imgContent05);
         make.height.mas_equalTo(50.0f);
@@ -581,19 +588,19 @@
         make.left.right.mas_equalTo(weakSelf.scrollContainer);
         make.height.mas_equalTo(70.0f);
     }];
-    [self.vContent2Container mas_updateConstraints:^(MASConstraintMaker *make) {
+    [self.vContent2Container mas_updateConstraints:^(MASConstraintMaker * make) {
         make.top.mas_equalTo(weakSelf.vContent2).mas_offset(5.0f);
         make.bottom.mas_equalTo(weakSelf.vContent2).mas_offset(-5.0f);
         make.left.mas_equalTo(weakSelf.vContent2).mas_offset(10.0f);
         make.right.mas_equalTo(weakSelf.vContent2).mas_offset(-10.0f);
     }];
-    [self.lbRecommendCode mas_updateConstraints:^(MASConstraintMaker *make) {
+    [self.btnRecommendCode mas_updateConstraints:^(MASConstraintMaker * make) {
         make.left.mas_equalTo(weakSelf.vContent2Container).mas_offset(10.0f);
         make.top.mas_equalTo(weakSelf.vContent2Container).mas_offset(5.0f);
         make.bottom.mas_equalTo(weakSelf.vContent2Container).mas_offset(-5.0f);
         make.right.mas_equalTo(weakSelf.btnShare.mas_left);
     }];
-    [self.btnShare mas_updateConstraints:^(MASConstraintMaker *make) {
+    [self.btnShare mas_updateConstraints:^(MASConstraintMaker * make) {
         make.top.mas_equalTo(weakSelf.vContent2Container).mas_offset(5.0f);
         make.bottom.mas_equalTo(weakSelf.vContent2Container).mas_offset(-5.0f);
         make.right.mas_equalTo(weakSelf.vContent2Container);
@@ -648,7 +655,7 @@
         make.bottom.left.right.mas_equalTo(weakSelf.vContent4);
     }];
     // 设置过渡视图的底边距（此设置将影响到scrollView的contentSize）
-    [self.scrollContainer mas_makeConstraints:^(MASConstraintMaker *make) {
+    [self.scrollContainer mas_makeConstraints:^(MASConstraintMaker * make) {
         make.bottom.mas_equalTo(weakSelf.vContent4.mas_bottom);
     }];
     [self.scrollView sendSubviewToBack:self.vContent0Container];
