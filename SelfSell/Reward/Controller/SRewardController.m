@@ -55,8 +55,6 @@
 
 @property (nonatomic, strong) SLabel * lbRecommendCode;
 
-@property (nonatomic, strong) SButton * btnCopy;
-
 @property (nonatomic, strong) SButton * btnShare;
 
 @property (nonatomic, strong) SView * vContent3;
@@ -345,7 +343,6 @@
         _vContent2Container.layer.masksToBounds = YES;
         _vContent2Container.backgroundColor = kColorLightGray;
         [_vContent2Container addSubview:self.lbRecommendCode];
-        [_vContent2Container addSubview:self.btnCopy];
         [_vContent2Container addSubview:self.btnShare];
     }
     
@@ -355,24 +352,18 @@
 - (SLabel *)lbRecommendCode {
     if (!_lbRecommendCode) {
         NSString * textPre = SLocal(@"reward_wodetuijianma");
-        NSString * textSuf = [AppContext sharedAppContext].accountModel.inviteCode;
-        NSString * text = [NSString stringWithFormat:@"%@%@", textPre, textSuf];
+        NSString * textMid = [AppContext sharedAppContext].accountModel.inviteCode;
+        NSString * textSuf = SLocal(@"reward_fuzhi");
+        NSString * text = [NSString stringWithFormat:@"%@ %@ %@", textPre, textMid, textSuf];
         NSMutableAttributedString * attributedText = [[NSMutableAttributedString alloc] initWithString:text];
         [attributedText addAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[kColorDarkGray alpha:0.5f], NSForegroundColorAttributeName, kLbFontNormal, NSFontAttributeName, nil] range:[text rangeOfString:textPre]];
-        [attributedText addAttributes:[NSDictionary dictionaryWithObjectsAndKeys:kColorOrange, NSForegroundColorAttributeName, [LFont bold_25], NSFontAttributeName, nil] range:[text rangeOfString:textSuf]];
+        [attributedText addAttributes:[NSDictionary dictionaryWithObjectsAndKeys:kColorOrange, NSForegroundColorAttributeName, [LFont bold_25], NSFontAttributeName, nil] range:[text rangeOfString:textMid]];
+        [attributedText addAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[kColorDarkGray alpha:0.5f], NSForegroundColorAttributeName, kLbFontNormal, NSFontAttributeName, nil] range:[text rangeOfString:textSuf]];
         _lbRecommendCode = [[SLabel alloc] init];
         _lbRecommendCode.attributedText = attributedText;
     }
     
     return _lbRecommendCode;
-}
-
-- (SButton *)btnCopy {
-    if (!_btnCopy) {
-        _btnCopy = [[SButton alloc] init];
-    }
-    
-    return _btnCopy;
 }
 
 - (SButton *)btnShare {
@@ -602,9 +593,6 @@
         make.bottom.mas_equalTo(weakSelf.vContent2Container).mas_offset(-5.0f);
         make.right.mas_equalTo(weakSelf.btnShare.mas_left);
     }];
-    //    [self.btnCopy mas_updateConstraints:^(MASConstraintMaker *make) {
-    //        make.top.bottom.left.right.mas_equalTo(weakSelf.vContent2);
-    //    }];
     [self.btnShare mas_updateConstraints:^(MASConstraintMaker *make) {
         make.top.mas_equalTo(weakSelf.vContent2Container).mas_offset(5.0f);
         make.bottom.mas_equalTo(weakSelf.vContent2Container).mas_offset(-5.0f);
@@ -664,12 +652,7 @@
         make.bottom.mas_equalTo(weakSelf.vContent4.mas_bottom);
     }];
     [self.scrollView sendSubviewToBack:self.vContent0Container];
-    
-    //[LTest randomColorView:self.scrollView];
-    //[self.scrollView.mj_header beginRefreshing];
 }
-
-//reward_fuzhi = "复制";
 
 #pragma mark - UIScrollViewDelegate
 
