@@ -21,6 +21,8 @@
 
 @property (nonatomic, strong) SView * vContent0;
 
+@property (nonatomic, strong) SView * vContent0Container;
+
 @property (nonatomic, strong) SImageView * imgContent01;
 
 @property (nonatomic, strong) SImageView * imgContent02;
@@ -80,9 +82,6 @@
 @implementation SRewardController
 
 #pragma mark - Interface
-//reward_01
-//reward_02
-//reward_03
 
 - (NSString *)title {
     return SLocal(@"reward_title");
@@ -116,9 +115,11 @@
         _scrollView.showsVerticalScrollIndicator = NO;
         _scrollView.showsHorizontalScrollIndicator = NO;
         _scrollView.backgroundColor = [kColorBlack alpha:0.8f];
+        _scrollView.backgroundColor = [kColorDarkGray alpha:0.1f];
         _scrollView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
             [weakSelf loadData];
         }];
+        [_scrollView addSubview:self.vContent0Container];
         [_scrollView addSubview:self.scrollContainer];
     }
     
@@ -154,6 +155,15 @@
     }
     
     return _vContent0;
+}
+
+- (SView *)vContent0Container {
+    if (!_vContent0Container) {
+        _vContent0Container = [[SView alloc] init];
+        _vContent0Container.backgroundColor = [kColorBlack alpha:0.8f];
+    }
+
+    return _vContent0Container;
 }
 
 - (SImageView *)imgContent01 {
@@ -479,6 +489,7 @@
     [self.view addSubview:self.scrollView];
     CGFloat navHeight = isIPhoneX ? 84.0f : 64.0f;
     CGFloat width = CGRectGetWidth(self.view.bounds);
+    CGFloat height = CGRectGetHeight(self.view.bounds);
     
     [self.navigationBar mas_updateConstraints:^(MASConstraintMaker * make) {
         make.top.left.right.mas_equalTo(weakSelf.view);
@@ -497,6 +508,11 @@
         make.top.mas_equalTo(0.0f);
         make.left.right.mas_equalTo(weakSelf.scrollContainer);
         make.height.mas_equalTo(200.0f);
+    }];
+    [self.vContent0Container mas_updateConstraints:^(MASConstraintMaker * make) {
+        make.bottom.mas_equalTo(weakSelf.scrollView.mas_top);
+        make.left.right.mas_equalTo(weakSelf.scrollView);
+        make.height.mas_equalTo(height);
     }];
     [self.imgContent01 mas_updateConstraints:^(MASConstraintMaker *make) {
         make.height.width.mas_equalTo(50.0f);
@@ -647,16 +663,13 @@
     [self.scrollContainer mas_makeConstraints:^(MASConstraintMaker *make) {
         make.bottom.mas_equalTo(weakSelf.vContent4.mas_bottom);
     }];
-    
+    [self.scrollView sendSubviewToBack:self.vContent0Container];
     
     //[LTest randomColorView:self.scrollView];
     //[self.scrollView.mj_header beginRefreshing];
 }
 
-// = "奖励";
 //reward_fuzhi = "复制";
-// = "推荐好友数量";
-// = "奖励金额";
 
 #pragma mark - UIScrollViewDelegate
 
@@ -672,6 +685,7 @@
 - (void)initialize {
     [super initialize];
     self.hiddenNavbar = YES;
+    self.view.backgroundColor = kColorLightGray;
     [self loadData];
 }
 
@@ -794,7 +808,7 @@
                 make.left.right.mas_equalTo(weakSelf.scrollContainer);
                 make.height.mas_equalTo(5.0f);
             }];
-        }        
+        }
         [weakSelf.scrollView.mj_header endRefreshing];
     }];
 }
@@ -827,4 +841,5 @@
     self.lbRewardMoney.attributedText = attributedText;
     
 }
+
 @end
