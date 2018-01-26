@@ -55,7 +55,7 @@
 - (SView *)v0 {
     if (!_v0) {
         _v0 = [self getBlackRect];
-        _v0.backgroundColor = [UIColor clearColor];
+        _v0.backgroundColor = kColorClear;
         [_v0 addSubview:self.imgLogo];
     }
     
@@ -85,7 +85,7 @@
 - (SView *)v3 {
     if (!_v3) {
         _v3 = [self getBlackRect];
-        _v3.backgroundColor = [UIColor clearColor];
+        _v3.backgroundColor = kColorClear;
         [_v3 addSubview:self.btnFinish];
     }
     
@@ -95,7 +95,7 @@
 - (SView *)v4 {
     if (!_v4) {
         _v4 = [self getBlackRect];
-        _v4.backgroundColor = [UIColor clearColor];
+        _v4.backgroundColor = kColorClear;
         [_v4 addSubview:self.btnForgetPwd];
         [_v4 addSubview:self.btnRegister];
     }
@@ -135,9 +135,9 @@
         __weak typeof(self) weakSelf = self;
         _txEmail = [[STextField alloc] init];
         _txEmail.placeholder = SLocal(@"register_youxiang");
-        _txEmail.backgroundColor = [UIColor clearColor];
+        _txEmail.backgroundColor = kColorClear;
         _txEmail.keyboardType = UIKeyboardTypeEmailAddress;
-        _txEmail.textColor = [UIColor whiteColor];
+        _txEmail.textColor = kColorWhite250;
         [_txEmail setPlaceholderColor:kColorWhite100];
         [_txEmail.rac_textSignal subscribeNext:^(NSString * _Nullable x) {
             [weakSelf updateBtnFinish];
@@ -152,8 +152,8 @@
         __weak typeof(self) weakSelf = self;
         _txPwd = [[STextField alloc] init];
         _txPwd.placeholder = SLocal(@"login_mima");
-        _txPwd.backgroundColor = [UIColor clearColor];
-        _txPwd.textColor = [UIColor whiteColor];
+        _txPwd.backgroundColor = kColorClear;
+        _txPwd.textColor = kColorWhite250;
         _txPwd.secureTextEntry = YES;
         [_txPwd setPlaceholderColor:kColorWhite100];
         [_txPwd.rac_textSignal subscribeNext:^(NSString * _Nullable x) {
@@ -212,7 +212,7 @@
     if (!_btnForgetPwd) {
         __weak typeof(self) weakSelf = self;
         _btnForgetPwd = [[SButton alloc] init];
-        _btnForgetPwd.backgroundColor = [UIColor clearColor];
+        _btnForgetPwd.backgroundColor = kColorClear;
         _btnForgetPwd.layer.cornerRadius = 5.0f;
         _btnForgetPwd.layer.masksToBounds = YES;
         _btnForgetPwd.titleLabel.textAlignment = NSTextAlignmentLeft;
@@ -231,7 +231,7 @@
     if (!_btnRegister) {
         __weak typeof(self) weakSelf = self;
         _btnRegister = [[SButton alloc] init];
-        _btnRegister.backgroundColor = [UIColor clearColor];
+        _btnRegister.backgroundColor = kColorClear;
         _btnRegister.titleLabel.textAlignment = NSTextAlignmentRight;
         _btnRegister.titleLabel.font = kBtnFontSmaller;
         NSString * textPre = SLocal(@"login_meiyouzhanghu");
@@ -253,9 +253,9 @@
     if (!_navigationBar) {
         __weak typeof(self) weakSelf = self;
         _navigationBar = [[SNavigationBar alloc] init];
-        _navigationBar.backgroundColor = [UIColor clearColor];
+        _navigationBar.backgroundColor = kColorClear;
         _navigationBar.lbTitle.text = self.title;
-        _navigationBar.lbTitle.textColor = [UIColor whiteColor];
+        _navigationBar.lbTitle.textColor = kColorWhite250;
         [_navigationBar.btnLeft setImage:[UIImage imageNamed:@"common_fanhui_white"] forState:UIControlStateNormal];
         [[_navigationBar.btnLeft rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
             [[AppContext sharedAppContext] setSelectVC:[AppContext sharedAppContext].activityNav];

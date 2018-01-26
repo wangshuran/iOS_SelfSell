@@ -43,7 +43,7 @@
     if (!_navigationBar) {
         _navigationBar = [[SNavigationBar alloc] init];
         _navigationBar.lbTitle.text = self.title;
-        _navigationBar.lbTitle.textColor = [UIColor whiteColor];
+        _navigationBar.lbTitle.textColor = kColorWhite250;
         _navigationBar.vLeft.hidden = YES;
         _navigationBar.backgroundColor = kColorWhite70;
     }
@@ -155,7 +155,7 @@
 
 - (void)initialize {
     [super initialize];
-    self.view.backgroundColor = [UIColor whiteColor];
+    self.view.backgroundColor = kColorWhite250;
     SAddObsver(noticeCellEvent:, kNoticeCellEvent)
     SAddObsver(noticeFinishLogin:, kNoticeFinishLogin);
 }

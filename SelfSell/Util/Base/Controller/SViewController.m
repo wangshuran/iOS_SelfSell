@@ -42,7 +42,7 @@
 - (SButton *)btnLeft {
     if (!_btnLeft) {
         _btnLeft = [[SButton alloc] init];
-        _btnLeft.backgroundColor = [UIColor clearColor];
+        _btnLeft.backgroundColor = kColorClear;
         _btnLeft.frame = CGRectMake(0.0f, 0.0f, 64.0f, 44.0f);
         _btnLeft.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
         _btnLeft.imageEdgeInsets = UIEdgeInsetsMake(0.0f, 10.0f, 0.0f, 0.0f);
@@ -57,7 +57,7 @@
 - (SView *)vNavLeft {
     if (!_vNavLeft) {
         _vNavLeft = [[SView alloc] init];
-        _vNavLeft.backgroundColor = [UIColor clearColor];
+        _vNavLeft.backgroundColor = kColorClear;
         _vNavLeft.frame = CGRectMake(0.0f, 0.0f, 64.0f, 44.0f);
         [_vNavLeft addSubview:self.btnLeft];
     }
@@ -68,7 +68,7 @@
 - (SView *)vNavRight {
     if (!_vNavRight) {
         _vNavRight = [[SView alloc] init];
-        _vNavRight.backgroundColor = [UIColor clearColor];
+        _vNavRight.backgroundColor = kColorClear;
         _vNavRight.frame = CGRectMake(0.0f, 0.0f, 64.0f, 44.0f);
     }
     

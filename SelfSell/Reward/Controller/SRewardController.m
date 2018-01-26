@@ -96,7 +96,7 @@
         _navigationBar.backgroundColor = kColorWhite70;
         [_navigationBar.btnLeft setImage:[UIImage imageNamed:@"common_fanhui_white"] forState:UIControlStateNormal];
         _navigationBar.lbTitle.text = self.title;
-        _navigationBar.lbTitle.textColor = [UIColor whiteColor];
+        _navigationBar.lbTitle.textColor = kColorWhite250;
         [[_navigationBar.btnLeft rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
             [weakSelf pop];
         }];
@@ -125,7 +125,6 @@
 - (SView *)scrollContainer {
     if (!_scrollContainer) {
         _scrollContainer = [[SView alloc] init];
-        //_scrollContainer.backgroundColor = kColorWhite220;
         [_scrollContainer addSubview:self.vContent0];
         [_scrollContainer addSubview:self.vContent1];
         [_scrollContainer addSubview:self.vContent2];
@@ -673,7 +672,7 @@
 - (void)initialize {
     [super initialize];
     self.hiddenNavbar = YES;
-    self.view.backgroundColor = [UIColor whiteColor];
+    self.view.backgroundColor = kColorWhite250;
     [self loadData];
 }
 

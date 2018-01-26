@@ -32,6 +32,8 @@
 #define kLastWelcomeVersion @"kLastWelcomeVersion"//最后显示欢迎页的版本
 
 
+
+#define kColorClear [UIColor clearColor]
 #define kColorOrange [UIColor colorWithRed:239.0f / 255.0f green:143.0f / 255.0f blue:16.0f / 255.0f alpha:1.0f]
 #define kColorWhite10 [UIColor colorWithRed:10.0f / 255.0f green:10.0f / 255.0f blue:10.0f / 255.0f alpha:1.0f]
 #define kColorWhite40 [UIColor colorWithRed:40.0f / 255.0f green:40.0f / 255.0f blue:40.0f / 255.0f alpha:1.0f]

@@ -33,7 +33,7 @@
         _lbTitle = [[SLabel alloc] init];
         _lbTitle.numberOfLines = 0;
         _lbTitle.textAlignment = NSTextAlignmentLeft;
-        _lbTitle.backgroundColor = [UIColor clearColor];
+        _lbTitle.backgroundColor = kColorClear;
         _lbTitle.font = kBtnFontNormal;
     }
     
@@ -45,7 +45,7 @@
         _lbValue = [[SLabel alloc] init];
         _lbValue.numberOfLines = 0;
         _lbValue.textAlignment = NSTextAlignmentRight;        
-        _lbValue.backgroundColor = [UIColor clearColor];
+        _lbValue.backgroundColor = kColorClear;
         _lbValue.font = kLbFontSmaller;
     }
     

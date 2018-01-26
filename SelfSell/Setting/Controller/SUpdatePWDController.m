@@ -44,7 +44,7 @@
 - (SView *)v0 {
     if (!_v0) {
         _v0 = [[SView alloc] init];
-        _v0.backgroundColor = [UIColor whiteColor];
+        _v0.backgroundColor = kColorWhite250;
         [_v0 addSubview:self.txOldPwd];
         [_v0 addSubview:self.vLine0];
     }
@@ -55,7 +55,7 @@
 - (SView *)v1 {
     if (!_v1) {
         _v1 = [[SView alloc] init];
-        _v1.backgroundColor = [UIColor whiteColor];
+        _v1.backgroundColor = kColorWhite250;
         [_v1 addSubview:self.txPwd];
         [_v1 addSubview:self.vLine1];
     }
@@ -66,7 +66,7 @@
 - (SView *)v2 {
     if (!_v2) {
         _v2 = [[SView alloc] init];
-        _v2.backgroundColor = [UIColor whiteColor];
+        _v2.backgroundColor = kColorWhite250;
         [_v2 addSubview:self.txComfirmPwd];
     }
     
@@ -76,7 +76,7 @@
 - (SView *)v3 {
     if (!_v3) {
         _v3 = [[SView alloc] init];
-        _v3.backgroundColor = [UIColor clearColor];
+        _v3.backgroundColor = kColorClear;
         [_v3 addSubview:self.btnFinish];
     }
     
@@ -106,7 +106,7 @@
         __weak typeof(self) weakSelf = self;
         _txOldPwd = [[STextField alloc] init];
         _txOldPwd.placeholder = SLocal(@"updatepwd_jiumima");
-        _txOldPwd.backgroundColor = [UIColor clearColor];
+        _txOldPwd.backgroundColor = kColorClear;
         _txOldPwd.secureTextEntry = YES;
         [_txOldPwd.rac_textSignal subscribeNext:^(NSString * _Nullable x) {
             [weakSelf updateBtnFinish];
@@ -121,7 +121,7 @@
         __weak typeof(self) weakSelf = self;
         _txPwd = [[STextField alloc] init];
         _txPwd.placeholder = SLocal(@"updatepwd_mima");
-        _txPwd.backgroundColor = [UIColor clearColor];
+        _txPwd.backgroundColor = kColorClear;
         _txPwd.secureTextEntry = YES;
         [_txPwd.rac_textSignal subscribeNext:^(NSString * _Nullable x) {
             [weakSelf updateBtnFinish];
@@ -136,7 +136,7 @@
         __weak typeof(self) weakSelf = self;
         _txComfirmPwd = [[STextField alloc] init];
         _txComfirmPwd.placeholder = SLocal(@"updatepwd_querenmima");
-        _txComfirmPwd.backgroundColor = [UIColor clearColor];
+        _txComfirmPwd.backgroundColor = kColorClear;
         _txComfirmPwd.secureTextEntry = YES;
         [_txComfirmPwd.rac_textSignal subscribeNext:^(NSString * _Nullable x) {
             [weakSelf updateBtnFinish];
@@ -154,7 +154,7 @@
         _btnFinish.layer.masksToBounds = YES;
         _btnFinish.backgroundColor = kColorWhite10;
         [_btnFinish setTitle:SLocal(@"updatepwd_tijiao") forState:UIControlStateNormal];
-        [_btnFinish setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        [_btnFinish setTitleColor:kColorWhite250 forState:UIControlStateNormal];
         [[_btnFinish rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
             SButton * btn = x;
             btn.userInteractionEnabled = NO;

@@ -104,7 +104,7 @@
 - (SView *)v4 {
     if (!_v4) {
         _v4 = [self getBlackRect];
-        _v4.backgroundColor = [UIColor clearColor];
+        _v4.backgroundColor = kColorClear;
         [_v4 addSubview:self.btnFinish];
     }
     
@@ -152,9 +152,9 @@
         __weak typeof(self) weakSelf = self;
         _txEmail = [[STextField alloc] init];
         _txEmail.placeholder = SLocal(@"register_youxiang");
-        _txEmail.backgroundColor = [UIColor clearColor];
+        _txEmail.backgroundColor = kColorClear;
         _txEmail.keyboardType = UIKeyboardTypeEmailAddress;
-        _txEmail.textColor = [UIColor whiteColor];
+        _txEmail.textColor = kColorWhite250;
         [_txEmail setPlaceholderColor:kColorWhite100];
         [_txEmail.rac_textSignal subscribeNext:^(NSString * _Nullable x) {
             [weakSelf updateBtnFinish];
@@ -169,8 +169,8 @@
         __weak typeof(self) weakSelf = self;
         _txCode = [[STextField alloc] init];
         _txCode.placeholder = SLocal(@"register_youxiangrenzhengma");
-        _txCode.backgroundColor = [UIColor clearColor];
-        _txCode.textColor = [UIColor whiteColor];
+        _txCode.backgroundColor = kColorClear;
+        _txCode.textColor = kColorWhite250;
         [_txCode setPlaceholderColor:kColorWhite100];
         [_txCode.rac_textSignal subscribeNext:^(NSString * _Nullable x) {
             [weakSelf updateBtnFinish];
@@ -184,7 +184,7 @@
     if (!_btnCode) {
         __weak typeof(self) weakSelf = self;
         _btnCode = [[SButton alloc] init];
-        _btnCode.backgroundColor = [UIColor clearColor];
+        _btnCode.backgroundColor = kColorClear;
         _btnCode.titleLabel.font = kBtnFontSmaller;
         [_btnCode setTitle:SLocal(@"register_huoqurenzhengma") forState:UIControlStateNormal];
         [_btnCode setTitleColor:kColorOrange forState:UIControlStateNormal];
@@ -232,8 +232,8 @@
         __weak typeof(self) weakSelf = self;
         _txPwd = [[STextField alloc] init];
         _txPwd.placeholder = SLocal(@"register_mima");
-        _txPwd.backgroundColor = [UIColor clearColor];
-        _txPwd.textColor = [UIColor whiteColor];
+        _txPwd.backgroundColor = kColorClear;
+        _txPwd.textColor = kColorWhite250;
         _txPwd.secureTextEntry = YES;
         [_txPwd setPlaceholderColor:kColorWhite100];
         [_txPwd.rac_textSignal subscribeNext:^(NSString * _Nullable x) {
@@ -249,8 +249,8 @@
         __weak typeof(self) weakSelf = self;
         _txComfirmPwd = [[STextField alloc] init];
         _txComfirmPwd.placeholder = SLocal(@"register_querenmiam");
-        _txComfirmPwd.backgroundColor = [UIColor clearColor];
-        _txComfirmPwd.textColor = [UIColor whiteColor];
+        _txComfirmPwd.backgroundColor = kColorClear;
+        _txComfirmPwd.textColor = kColorWhite250;
         _txComfirmPwd.secureTextEntry = YES;
         [_txComfirmPwd setPlaceholderColor:kColorWhite100];
         [_txComfirmPwd.rac_textSignal subscribeNext:^(NSString * _Nullable x) {
@@ -299,9 +299,9 @@
     if (!_navigationBar) {
         __weak typeof(self) weakSelf = self;
         _navigationBar = [[SNavigationBar alloc] init];
-        _navigationBar.backgroundColor = [UIColor clearColor];
+        _navigationBar.backgroundColor = kColorClear;
         _navigationBar.lbTitle.text = self.title;
-        _navigationBar.lbTitle.textColor = [UIColor whiteColor];
+        _navigationBar.lbTitle.textColor = kColorWhite250;
         [_navigationBar.btnLeft setImage:[UIImage imageNamed:@"common_fanhui_white"] forState:UIControlStateNormal];
         [[_navigationBar.btnLeft rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
             [weakSelf pop];

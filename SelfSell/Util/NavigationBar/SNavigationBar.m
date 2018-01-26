@@ -16,7 +16,7 @@
 - (SView *)vLeft {
     if (!_vLeft) {
         _vLeft = [[SView alloc] init];
-        _vLeft.backgroundColor = [UIColor clearColor];
+        _vLeft.backgroundColor = kColorClear;
         [_vLeft addSubview:self.btnLeft];
     }
     
@@ -26,7 +26,7 @@
 - (SButton *)btnLeft {
     if (!_btnLeft) {
         _btnLeft = [[SButton alloc] init];
-        _btnLeft.backgroundColor = [UIColor clearColor];
+        _btnLeft.backgroundColor = kColorClear;
         _btnLeft.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
         _btnLeft.imageEdgeInsets = UIEdgeInsetsMake(0.0f, 10.0f, 0.0f, 0.0f);
         [_btnLeft setImage:[UIImage imageNamed:@"common_fanhui"] forState:UIControlStateNormal];
@@ -38,7 +38,7 @@
 - (SView *)vTitle {
     if (!_vTitle) {
         _vTitle = [[SView alloc] init];
-        _vTitle.backgroundColor = [UIColor clearColor];
+        _vTitle.backgroundColor = kColorClear;
         [_vTitle addSubview:self.lbTitle];
     }
     
@@ -48,7 +48,7 @@
 - (SLabel *)lbTitle {
     if (!_lbTitle) {
         _lbTitle = [[SLabel alloc] init];
-        _lbTitle.backgroundColor = [UIColor clearColor];
+        _lbTitle.backgroundColor = kColorClear;
         _lbTitle.textAlignment = NSTextAlignmentCenter;
         _lbTitle.font = kBtnFontNormal;
     }
@@ -59,7 +59,7 @@
 - (SView *)vRight {
     if (!_vRight) {
         _vRight = [[SView alloc] init];
-        _vRight.backgroundColor = [UIColor clearColor];
+        _vRight.backgroundColor = kColorClear;
     }
     
     return _vRight;
