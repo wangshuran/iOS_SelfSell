@@ -9,6 +9,7 @@
 #import "SRewardController.h"
 #import "SRewardRequest.h"
 #import "SNavigationBar.h"
+#import "SRewardRankingCell.h"
 
 @interface SRewardController ()<UIScrollViewDelegate>
 
@@ -39,6 +40,12 @@
 @property (nonatomic, strong) SView * vContent1;
 
 @property (nonatomic, strong) SView * vContent1Container;
+
+@property (nonatomic, strong) SRewardRankingCell * rewardRankingCell01;
+
+@property (nonatomic, strong) SRewardRankingCell * rewardRankingCell02;
+
+@property (nonatomic, strong) SRewardRankingCell * rewardRankingCell03;
 
 @property (nonatomic, strong) SView * vContent2;
 
@@ -110,7 +117,7 @@
         _scrollView.showsHorizontalScrollIndicator = NO;
         _scrollView.backgroundColor = [kColorBlack alpha:0.8f];
         _scrollView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
-            [weakSelf.scrollView.mj_header endRefreshing];
+            [weakSelf loadData];
         }];
         [_scrollView addSubview:self.scrollContainer];
     }
@@ -279,9 +286,36 @@
         _vContent1Container.layer.cornerRadius = 5.0f;
         _vContent1Container.layer.masksToBounds = YES;
         _vContent1Container.backgroundColor = kColorLightGray;
+        [_vContent1Container addSubview:self.rewardRankingCell01];
+        [_vContent1Container addSubview:self.rewardRankingCell02];
+        [_vContent1Container addSubview:self.rewardRankingCell03];
     }
     
     return _vContent1Container;
+}
+
+- (SRewardRankingCell *)rewardRankingCell01 {
+    if (!_rewardRankingCell01) {
+        _rewardRankingCell01 = [[SRewardRankingCell alloc] init];
+    }
+    
+    return _rewardRankingCell01;
+}
+
+- (SRewardRankingCell *)rewardRankingCell02 {
+    if (!_rewardRankingCell02) {
+        _rewardRankingCell02 = [[SRewardRankingCell alloc] init];
+    }
+    
+    return _rewardRankingCell02;
+}
+
+- (SRewardRankingCell *)rewardRankingCell03 {
+    if (!_rewardRankingCell03) {
+        _rewardRankingCell03 = [[SRewardRankingCell alloc] init];
+    }
+    
+    return _rewardRankingCell03;
 }
 
 - (SView *)vContent2 {
@@ -376,15 +410,9 @@
 
 - (SLabel *)lbRecommendFriend {
     if (!_lbRecommendFriend) {
-        NSString * textPre = SLocal(@"reward_tuijianhaoyoushuliang");
-        NSString * textSuf = @"0";
-        NSString * text = [NSString stringWithFormat:@"%@\n%@", textPre, textSuf];
-        NSMutableAttributedString * attributedText = [[NSMutableAttributedString alloc] initWithString:text];
-        [attributedText addAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[kColorDarkGray alpha:0.5f], NSForegroundColorAttributeName, kLbFontSmaller, NSFontAttributeName, nil] range:[text rangeOfString:textPre]];
-        [attributedText addAttributes:[NSDictionary dictionaryWithObjectsAndKeys:kColorBlack, NSForegroundColorAttributeName, [LFont thin_25], NSFontAttributeName, nil] range:[text rangeOfString:textSuf]];
         _lbRecommendFriend = [[SLabel alloc] init];
         _lbRecommendFriend.numberOfLines = 2;
-        _lbRecommendFriend.attributedText = attributedText;
+        [self updateRecommendFriend:@"0"];
     }
     
     return _lbRecommendFriend;
@@ -415,17 +443,9 @@
 
 - (SLabel *)lbRewardMoney {
     if (!_lbRewardMoney) {
-        NSString * textPre = SLocal(@"reward_jianglijie");
-        NSString * textMid = @"0";
-        NSString * textSuf = @"SSC";
-        NSString * text = [NSString stringWithFormat:@"%@\n%@%@", textPre, textMid, textSuf];
-        NSMutableAttributedString * attributedText = [[NSMutableAttributedString alloc] initWithString:text];
-        [attributedText addAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[kColorDarkGray alpha:0.5f], NSForegroundColorAttributeName, kLbFontSmaller, NSFontAttributeName, nil] range:[text rangeOfString:textPre]];
-        [attributedText addAttributes:[NSDictionary dictionaryWithObjectsAndKeys:kColorBlack, NSForegroundColorAttributeName, [LFont thin_25], NSFontAttributeName, nil] range:[text rangeOfString:textMid]];
-        [attributedText addAttributes:[NSDictionary dictionaryWithObjectsAndKeys:kColorBlack, NSForegroundColorAttributeName, kLbFontSmaller, NSFontAttributeName, nil] range:[text rangeOfString:textSuf]];
         _lbRewardMoney = [[SLabel alloc] init];
         _lbRewardMoney.numberOfLines = 2;
-        _lbRewardMoney.attributedText = attributedText;
+        [self updateRewardMoney:@"0"];
     }
     
     return _lbRewardMoney;
@@ -534,6 +554,21 @@
         make.right.mas_equalTo(weakSelf.vContent1).mas_offset(-10.0f);
         make.height.mas_equalTo(180.0f);
     }];
+    [self.rewardRankingCell01 mas_updateConstraints:^(MASConstraintMaker * make) {
+        make.top.mas_equalTo(weakSelf.vContent1Container);
+        make.left.right.mas_equalTo(weakSelf.vContent1Container);
+        make.height.mas_equalTo(60.0f);
+    }];
+    [self.rewardRankingCell02 mas_updateConstraints:^(MASConstraintMaker * make) {
+        make.top.mas_equalTo(weakSelf.rewardRankingCell01.mas_bottom);
+        make.left.right.mas_equalTo(weakSelf.vContent1Container);
+        make.height.mas_equalTo(60.0f);
+    }];
+    [self.rewardRankingCell03 mas_updateConstraints:^(MASConstraintMaker * make) {
+        make.top.mas_equalTo(weakSelf.rewardRankingCell02.mas_bottom);
+        make.left.right.mas_equalTo(weakSelf.vContent1Container);
+        make.height.mas_equalTo(60.0f);
+    }];
     [self.vContent2 mas_updateConstraints:^(MASConstraintMaker * make) {
         make.top.mas_equalTo(weakSelf.vContent1.mas_bottom);
         make.left.right.mas_equalTo(weakSelf.scrollContainer);
@@ -618,34 +653,178 @@
     //[self.scrollView.mj_header beginRefreshing];
 }
 
-//reward_jiangli = "奖励";
+// = "奖励";
 //reward_fuzhi = "复制";
 // = "推荐好友数量";
 // = "奖励金额";
 
 #pragma mark - UIScrollViewDelegate
 
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-    if (scrollView.contentOffset.y >= scrollView.contentSize.height - scrollView.frame.size.height) {
-        scrollView.contentOffset = CGPointMake(0.0f, scrollView.contentSize.height - scrollView.frame.size.height);
-        return;
-    }
-}
+//- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+//    if (scrollView.contentOffset.y >= scrollView.contentSize.height - scrollView.frame.size.height) {
+//        scrollView.contentOffset = CGPointMake(0.0f, scrollView.contentSize.height - scrollView.frame.size.height);
+//        return;
+//    }
+//}
 
 #pragma mark - LInitProtocol
 
 - (void)initialize {
     [super initialize];
     self.hiddenNavbar = YES;
+    [self loadData];
+}
+
+#pragma mark - Private
+
+- (void)loadData {
     __weak typeof(self) weakSelf = self;
     SRewardRequest * request = [[SRewardRequest alloc] init];
     request.id = [AppContext sharedAppContext].accountModel.id;
     [SNetwork request:request block:^(LRequest * request, LResponse * response) {
         if (!response.status) {
+            [weakSelf.scrollView.mj_header endRefreshing];
             [MBProgressHUD showTitleToView:weakSelf.view postion:NHHUDPostionCenten title:response.msg];
             return;
         }
+        SRewardResponse * model = (SRewardResponse *)response;
+        [weakSelf updateRecommendFriend:model.inviteNum];
+        [weakSelf updateRewardMoney:model.reward];
+        NSArray<SRewardRankingModel *> * models = model.rewardRankList;
+        if (models.count > 2) {
+            SRewardRankingModel * model1 = [models objectAtIndex:0];
+            SRewardRankingModel * model2 = [models objectAtIndex:1];
+            SRewardRankingModel * model3 = [models objectAtIndex:2];
+            model1.imageName = @"reward_01";
+            model2.imageName = @"reward_02";
+            model3.imageName = @"reward_03";
+            weakSelf.rewardRankingCell01.model = model1;
+            weakSelf.rewardRankingCell02.model = model2;
+            weakSelf.rewardRankingCell03.model = model3;
+            [weakSelf.vContent1 addSubview:weakSelf.vContent1Container];
+            [weakSelf.vContent1Container addSubview:weakSelf.rewardRankingCell01];
+            [weakSelf.vContent1Container addSubview:weakSelf.rewardRankingCell02];
+            [weakSelf.vContent1Container addSubview:weakSelf.rewardRankingCell03];
+            [weakSelf.vContent1 mas_updateConstraints:^(MASConstraintMaker * make) {
+                make.top.mas_equalTo(weakSelf.vContent0.mas_bottom);
+                make.left.right.mas_equalTo(weakSelf.scrollContainer);
+                make.height.mas_equalTo(145.0f);
+            }];
+            [self.vContent1Container mas_updateConstraints:^(MASConstraintMaker * make) {
+                make.top.mas_equalTo(weakSelf.vContent1).mas_offset(-40.0f);
+                make.left.mas_equalTo(weakSelf.vContent1).mas_offset(10.0f);
+                make.right.mas_equalTo(weakSelf.vContent1).mas_offset(-10.0f);
+                make.height.mas_equalTo(180.0f);
+            }];
+            [self.rewardRankingCell01 mas_updateConstraints:^(MASConstraintMaker * make) {
+                make.top.mas_equalTo(weakSelf.vContent1Container);
+                make.left.right.mas_equalTo(weakSelf.vContent1Container);
+                make.height.mas_equalTo(60.0f);
+            }];
+            [self.rewardRankingCell02 mas_updateConstraints:^(MASConstraintMaker * make) {
+                make.top.mas_equalTo(weakSelf.rewardRankingCell01.mas_bottom);
+                make.left.right.mas_equalTo(weakSelf.vContent1Container);
+                make.height.mas_equalTo(60.0f);
+            }];
+            [self.rewardRankingCell03 mas_updateConstraints:^(MASConstraintMaker * make) {
+                make.top.mas_equalTo(weakSelf.rewardRankingCell02.mas_bottom);
+                make.left.right.mas_equalTo(weakSelf.vContent1Container);
+                make.height.mas_equalTo(60.0f);
+            }];
+        }else if (models.count == 2) {
+            SRewardRankingModel * model1 = [models objectAtIndex:0];
+            SRewardRankingModel * model2 = [models objectAtIndex:1];
+            model1.imageName = @"reward_01";
+            model2.imageName = @"reward_02";
+            weakSelf.rewardRankingCell01.model = model1;
+            weakSelf.rewardRankingCell02.model = model2;
+            [weakSelf.vContent1 addSubview:weakSelf.vContent1Container];
+            [weakSelf.vContent1Container addSubview:weakSelf.rewardRankingCell01];
+            [weakSelf.vContent1Container addSubview:weakSelf.rewardRankingCell02];
+            [weakSelf.rewardRankingCell03 removeFromSuperview];
+            [weakSelf.vContent1 mas_updateConstraints:^(MASConstraintMaker * make) {
+                make.top.mas_equalTo(weakSelf.vContent0.mas_bottom);
+                make.left.right.mas_equalTo(weakSelf.scrollContainer);
+                make.height.mas_equalTo(85.0f);
+            }];
+            [self.vContent1Container mas_updateConstraints:^(MASConstraintMaker * make) {
+                make.top.mas_equalTo(weakSelf.vContent1).mas_offset(-40.0f);
+                make.left.mas_equalTo(weakSelf.vContent1).mas_offset(10.0f);
+                make.right.mas_equalTo(weakSelf.vContent1).mas_offset(-10.0f);
+                make.height.mas_equalTo(120.0f);
+            }];
+            [self.rewardRankingCell01 mas_updateConstraints:^(MASConstraintMaker * make) {
+                make.top.mas_equalTo(weakSelf.vContent1Container);
+                make.left.right.mas_equalTo(weakSelf.vContent1Container);
+                make.height.mas_equalTo(60.0f);
+            }];
+            [self.rewardRankingCell02 mas_updateConstraints:^(MASConstraintMaker * make) {
+                make.top.mas_equalTo(weakSelf.rewardRankingCell01.mas_bottom);
+                make.left.right.mas_equalTo(weakSelf.vContent1Container);
+                make.height.mas_equalTo(60.0f);
+            }];
+        }else if (models.count == 1) {
+            SRewardRankingModel * model1 = [models objectAtIndex:0];
+            model1.imageName = @"reward_01";
+            weakSelf.rewardRankingCell01.model = model1;
+            [weakSelf.vContent1 addSubview:weakSelf.vContent1Container];
+            [weakSelf.vContent1Container addSubview:weakSelf.rewardRankingCell01];
+            [weakSelf.rewardRankingCell02 removeFromSuperview];
+            [weakSelf.rewardRankingCell03 removeFromSuperview];
+            [weakSelf.vContent1 mas_updateConstraints:^(MASConstraintMaker * make) {
+                make.top.mas_equalTo(weakSelf.vContent0.mas_bottom);
+                make.left.right.mas_equalTo(weakSelf.scrollContainer);
+                make.height.mas_equalTo(25.0f);
+            }];
+            [self.vContent1Container mas_updateConstraints:^(MASConstraintMaker * make) {
+                make.top.mas_equalTo(weakSelf.vContent1).mas_offset(-40.0f);
+                make.left.mas_equalTo(weakSelf.vContent1).mas_offset(10.0f);
+                make.right.mas_equalTo(weakSelf.vContent1).mas_offset(-10.0f);
+                make.height.mas_equalTo(60.0f);
+            }];
+            [self.rewardRankingCell01 mas_updateConstraints:^(MASConstraintMaker * make) {
+                make.top.mas_equalTo(weakSelf.vContent1Container);
+                make.left.right.mas_equalTo(weakSelf.vContent1Container);
+                make.height.mas_equalTo(60.0f);
+            }];
+        }else {
+            [weakSelf.vContent1Container removeFromSuperview];
+            [self.vContent1 mas_updateConstraints:^(MASConstraintMaker * make) {
+                make.top.mas_equalTo(weakSelf.vContent0.mas_bottom);
+                make.left.right.mas_equalTo(weakSelf.scrollContainer);
+                make.height.mas_equalTo(5.0f);
+            }];
+        }        
+        [weakSelf.scrollView.mj_header endRefreshing];
     }];
 }
 
+- (void)updateRecommendFriend:(NSString *)num {
+    if ([NSString isNullOrEmpty:num]) {
+        num = @"0";
+    }
+    NSString * textPre = SLocal(@"reward_tuijianhaoyoushuliang");
+    NSString * textSuf = num;
+    NSString * text = [NSString stringWithFormat:@"%@\n%@", textPre, textSuf];
+    NSMutableAttributedString * attributedText = [[NSMutableAttributedString alloc] initWithString:text];
+    [attributedText addAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[kColorDarkGray alpha:0.5f], NSForegroundColorAttributeName, kLbFontSmaller, NSFontAttributeName, nil] range:[text rangeOfString:textPre]];
+    [attributedText addAttributes:[NSDictionary dictionaryWithObjectsAndKeys:kColorBlack, NSForegroundColorAttributeName, [LFont thin_25], NSFontAttributeName, nil] range:[text rangeOfString:textSuf]];
+    self.lbRecommendFriend.attributedText = attributedText;
+}
+
+- (void)updateRewardMoney:(NSString *)money {
+    if ([NSString isNullOrEmpty:money]) {
+        money = @"0";
+    }
+    NSString * textPre = SLocal(@"reward_jianglijie");
+    NSString * textMid = money;
+    NSString * textSuf = @"SSC";
+    NSString * text = [NSString stringWithFormat:@"%@\n%@%@", textPre, textMid, textSuf];
+    NSMutableAttributedString * attributedText = [[NSMutableAttributedString alloc] initWithString:text];
+    [attributedText addAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[kColorDarkGray alpha:0.5f], NSForegroundColorAttributeName, kLbFontSmaller, NSFontAttributeName, nil] range:[text rangeOfString:textPre]];
+    [attributedText addAttributes:[NSDictionary dictionaryWithObjectsAndKeys:kColorBlack, NSForegroundColorAttributeName, [LFont thin_25], NSFontAttributeName, nil] range:[text rangeOfString:textMid]];
+    [attributedText addAttributes:[NSDictionary dictionaryWithObjectsAndKeys:kColorBlack, NSForegroundColorAttributeName, kLbFontSmaller, NSFontAttributeName, nil] range:[text rangeOfString:textSuf]];
+    self.lbRewardMoney.attributedText = attributedText;
+    
+}
 @end

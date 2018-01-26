@@ -107,6 +107,7 @@
 		D5ACA7532015E85700A6C84F /* SRegisterByMailResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = D5ACA7522015E85700A6C84F /* SRegisterByMailResponse.m */; };
 		D5ACA7562015E89000A6C84F /* SRegisterByMailController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5ACA7552015E89000A6C84F /* SRegisterByMailController.m */; };
 		D5ACA75A2015F28900A6C84F /* LGetTextFiled.m in Sources */ = {isa = PBXBuildFile; fileRef = D5ACA7592015F28900A6C84F /* LGetTextFiled.m */; };
+		D5D56EBB201AEC730099502E /* SRewardRankingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D5D56EBA201AEC730099502E /* SRewardRankingCell.m */; };
 		D5D7D8652016E44A005CBB11 /* SNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = D5D7D8642016E44A005CBB11 /* SNavigationBar.m */; };
 		D5D7D86820170962005CBB11 /* SLoginByMailController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5D7D86720170962005CBB11 /* SLoginByMailController.m */; };
 		D5D7D86B201717F2005CBB11 /* SForgetPWDByMailController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5D7D86A201717F2005CBB11 /* SForgetPWDByMailController.m */; };
@@ -345,6 +346,8 @@
 		D5ACA7552015E89000A6C84F /* SRegisterByMailController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SRegisterByMailController.m; sourceTree = "<group>"; };
 		D5ACA7582015F28900A6C84F /* LGetTextFiled.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LGetTextFiled.h; sourceTree = "<group>"; };
 		D5ACA7592015F28900A6C84F /* LGetTextFiled.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LGetTextFiled.m; sourceTree = "<group>"; };
+		D5D56EB9201AEC730099502E /* SRewardRankingCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SRewardRankingCell.h; sourceTree = "<group>"; };
+		D5D56EBA201AEC730099502E /* SRewardRankingCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SRewardRankingCell.m; sourceTree = "<group>"; };
 		D5D7D8632016E44A005CBB11 /* SNavigationBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SNavigationBar.h; sourceTree = "<group>"; };
 		D5D7D8642016E44A005CBB11 /* SNavigationBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SNavigationBar.m; sourceTree = "<group>"; };
 		D5D7D86620170962005CBB11 /* SLoginByMailController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLoginByMailController.h; sourceTree = "<group>"; };
@@ -1025,6 +1028,8 @@
 		D56C8E0D2019D6D700DEB9F2 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D5D56EB9201AEC730099502E /* SRewardRankingCell.h */,
+				D5D56EBA201AEC730099502E /* SRewardRankingCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1587,6 +1592,7 @@
 				D56C8E062019C82D00DEB9F2 /* SWelcomeView.m in Sources */,
 				D50297EA200C50CC008375F9 /* SSettingService.mm in Sources */,
 				D5957AF720073B9000F6EE60 /* STableView.m in Sources */,
+				D5D56EBB201AEC730099502E /* SRewardRankingCell.m in Sources */,
 				D54894CF1FF22C5300F2019B /* SMarketController.m in Sources */,
 				D521BAAB20187BF8000299FC /* SEnableGoogleAuthResponse.m in Sources */,
 				D5957AE820073B9000F6EE60 /* SNavigationController.m in Sources */,

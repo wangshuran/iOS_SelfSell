@@ -10,6 +10,11 @@
 
 @interface SRewardRankingModel : SModel
 
+/**
+ 图标名称
+ */
+@property (nonatomic, copy) NSString * imageName;
+
 @property (nonatomic, copy) NSString * email;
 
 @property (nonatomic, copy) NSString * reward;
