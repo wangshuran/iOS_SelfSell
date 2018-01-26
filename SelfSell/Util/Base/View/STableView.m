@@ -14,7 +14,7 @@
 //
 //- (void)initialize {
 //    [super initialize];
-//    self.backgroundColor = kColorLightGray;
+//    self.backgroundColor = kColorWhite220;
 //}
 
 @end

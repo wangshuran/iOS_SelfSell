@@ -48,7 +48,7 @@ LSingleton_m(AppContext);
         _rootVC = [[NSClassFromString(@"STabBarController") alloc] init];
         [self reloadRootVC];
         _rootVC.tabBar.tintColor = kColorOrange;
-        _rootVC.tabBar.barTintColor = kColorBlack;
+        _rootVC.tabBar.barTintColor = kColorWhite10;
         _rootVC.selectedViewController = self.activityNav;
     }
     
@@ -57,7 +57,7 @@ LSingleton_m(AppContext);
 
 - (SNavigationController *)fundNav {
     if (!_fundNav) {
-        NSDictionary * normal = [NSDictionary dictionaryWithObjectsAndKeys:kColorDarkGray, NSForegroundColorAttributeName, nil];
+        NSDictionary * normal = [NSDictionary dictionaryWithObjectsAndKeys:kColorWhite100, NSForegroundColorAttributeName, nil];
         NSDictionary * selected = [NSDictionary dictionaryWithObjectsAndKeys:kColorOrange, NSForegroundColorAttributeName, nil];
         
         _fundNav = [[SNavigationController alloc] initWithRootViewController:self.fundVC];
@@ -72,7 +72,7 @@ LSingleton_m(AppContext);
 
 - (SNavigationController *)activityNav {
     if (!_activityNav) {
-        NSDictionary * normal = [NSDictionary dictionaryWithObjectsAndKeys:kColorDarkGray, NSForegroundColorAttributeName, nil];
+        NSDictionary * normal = [NSDictionary dictionaryWithObjectsAndKeys:kColorWhite100, NSForegroundColorAttributeName, nil];
         NSDictionary * selected = [NSDictionary dictionaryWithObjectsAndKeys:kColorOrange, NSForegroundColorAttributeName, nil];
         
         _activityNav = [[SNavigationController alloc] initWithRootViewController:self.activityVC];
@@ -87,7 +87,7 @@ LSingleton_m(AppContext);
 
 - (SNavigationController *)accountNav {
     if (!_accountNav) {
-        NSDictionary * normal = [NSDictionary dictionaryWithObjectsAndKeys:kColorDarkGray, NSForegroundColorAttributeName, nil];
+        NSDictionary * normal = [NSDictionary dictionaryWithObjectsAndKeys:kColorWhite100, NSForegroundColorAttributeName, nil];
         NSDictionary * selected = [NSDictionary dictionaryWithObjectsAndKeys:kColorOrange, NSForegroundColorAttributeName, nil];
         
         _accountNav = [[SNavigationController alloc] initWithRootViewController:self.setting0VC];

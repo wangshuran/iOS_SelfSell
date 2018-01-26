@@ -49,7 +49,7 @@
         _btnExit.layer.masksToBounds = YES;
         _btnExit.layer.borderColor = [UIColor grayColor].CGColor;
         _btnExit.layer.borderWidth = 0.5f;
-        [_btnExit setTitleColor:kColorBlack forState:UIControlStateNormal];
+        [_btnExit setTitleColor:kColorWhite10 forState:UIControlStateNormal];
         [[_btnExit rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
             SButton * btn = x;
             btn.userInteractionEnabled = NO;

@@ -155,7 +155,7 @@
         _txEmail.backgroundColor = [UIColor clearColor];
         _txEmail.keyboardType = UIKeyboardTypeEmailAddress;
         _txEmail.textColor = [UIColor whiteColor];
-        [_txEmail setPlaceholderColor:[UIColor colorWithRed:92.0f / 255.0f green:92.0f / 255.0f blue:92.0f / 255.0f alpha:1.0f]];
+        [_txEmail setPlaceholderColor:kColorWhite100];
         [_txEmail.rac_textSignal subscribeNext:^(NSString * _Nullable x) {
             [weakSelf updateBtnFinish];
         }];
@@ -171,7 +171,7 @@
         _txCode.placeholder = SLocal(@"register_youxiangrenzhengma");
         _txCode.backgroundColor = [UIColor clearColor];
         _txCode.textColor = [UIColor whiteColor];
-        [_txCode setPlaceholderColor:[UIColor colorWithRed:92.0f / 255.0f green:92.0f / 255.0f blue:92.0f / 255.0f alpha:1.0f]];
+        [_txCode setPlaceholderColor:kColorWhite100];
         [_txCode.rac_textSignal subscribeNext:^(NSString * _Nullable x) {
             [weakSelf updateBtnFinish];
         }];
@@ -208,7 +208,7 @@
                     return;
                 }
                 [weakSelf.txCode becomeFirstResponder];
-                [btn setTitleColor:kColorDarkGray forState:UIControlStateNormal];
+                [btn setTitleColor:kColorWhite100 forState:UIControlStateNormal];
                 __block NSUInteger count = 10;
                 [[[RACSignal interval:1 onScheduler:[RACScheduler mainThreadScheduler]] take:count] subscribeNext:^(NSDate * _Nullable x) {
                     count--;
@@ -235,7 +235,7 @@
         _txPwd.backgroundColor = [UIColor clearColor];
         _txPwd.textColor = [UIColor whiteColor];
         _txPwd.secureTextEntry = YES;
-        [_txPwd setPlaceholderColor:[UIColor colorWithRed:92.0f / 255.0f green:92.0f / 255.0f blue:92.0f / 255.0f alpha:1.0f]];
+        [_txPwd setPlaceholderColor:kColorWhite100];
         [_txPwd.rac_textSignal subscribeNext:^(NSString * _Nullable x) {
             [weakSelf updateBtnFinish];
         }];
@@ -252,7 +252,7 @@
         _txComfirmPwd.backgroundColor = [UIColor clearColor];
         _txComfirmPwd.textColor = [UIColor whiteColor];
         _txComfirmPwd.secureTextEntry = YES;
-        [_txComfirmPwd setPlaceholderColor:[UIColor colorWithRed:92.0f / 255.0f green:92.0f / 255.0f blue:92.0f / 255.0f alpha:1.0f]];
+        [_txComfirmPwd setPlaceholderColor:kColorWhite100];
         [_txComfirmPwd.rac_textSignal subscribeNext:^(NSString * _Nullable x) {
             [weakSelf updateBtnFinish];
         }];
@@ -265,7 +265,7 @@
     if (!_btnFinish) {
         __weak typeof(self) weakSelf = self;
         _btnFinish = [[SButton alloc] init];
-        _btnFinish.backgroundColor = kColorLightGray;
+        _btnFinish.backgroundColor = kColorWhite220;
         _btnFinish.layer.cornerRadius = 5.0f;
         _btnFinish.layer.masksToBounds = YES;
         [_btnFinish setTitle:SLocal(@"forgetpwd_tijiao") forState:UIControlStateNormal];
@@ -414,14 +414,14 @@
 - (void)initialize {
     [super initialize];
     self.hiddenNavbar = YES;
-    self.view.backgroundColor = [UIColor colorWithRed:26.0f / 255.0f green:26.0f / 255.0f blue:26.0f / 255.0f alpha:1.0f];
+    self.view.backgroundColor = kColorWhite70;
 }
 
 #pragma mark - Private
 
 - (SView *)getBlackRect {
     SView * view = [[SView alloc] init];
-    view.backgroundColor = kColorBlack;
+    view.backgroundColor = kColorWhite10;
     view.layer.cornerRadius = 2.0f;
     view.layer.masksToBounds = YES;
     
@@ -439,10 +439,10 @@
     NSString * comfirmPwd = self.txComfirmPwd.text;
     if ([NSString isNullOrEmpty:email] || [NSString isNullOrEmpty:code] || [NSString isNullOrEmpty:pwd] || [NSString isNullOrEmpty:comfirmPwd] || ![pwd isEqualToString:comfirmPwd] || pwd.length < 6) {
         self.btnFinish.userInteractionEnabled = NO;
-        [self.btnFinish setTitleColor:[kColorBlack alpha:0.5f] forState:UIControlStateNormal];
+        [self.btnFinish setTitleColor:kColorWhite70 forState:UIControlStateNormal];
     }else {
         self.btnFinish.userInteractionEnabled = YES;
-        [self.btnFinish setTitleColor:kColorBlack forState:UIControlStateNormal];
+        [self.btnFinish setTitleColor:kColorWhite10 forState:UIControlStateNormal];
     }
 }
 

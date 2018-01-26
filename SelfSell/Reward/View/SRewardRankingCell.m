@@ -43,7 +43,7 @@
     if (!_lbEmail) {
         _lbEmail = [[SLabel alloc] init];
         _lbEmail.textAlignment = NSTextAlignmentLeft;
-        _lbEmail.textColor = [kColorDarkGray alpha:0.5f];
+        _lbEmail.textColor = kColorWhite190;
         _lbEmail.font = kLbFontBigger;
         [self updateEmail:@"***@***.com"];
     }
@@ -120,9 +120,9 @@
     NSString * textSuf = @"SSC";
     NSString * text = [NSString stringWithFormat:@"%@ %@ %@", textPre, textMid, textSuf];
     NSMutableAttributedString * attributedText = [[NSMutableAttributedString alloc] initWithString:text];
-    [attributedText addAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[kColorDarkGray alpha:0.5f], NSForegroundColorAttributeName, kLbFontNormal, NSFontAttributeName, nil] range:[text rangeOfString:textPre]];
+    [attributedText addAttributes:[NSDictionary dictionaryWithObjectsAndKeys:kColorWhite190, NSForegroundColorAttributeName, kLbFontNormal, NSFontAttributeName, nil] range:[text rangeOfString:textPre]];
     [attributedText addAttributes:[NSDictionary dictionaryWithObjectsAndKeys:kColorOrange, NSForegroundColorAttributeName, [LFont bold_25], NSFontAttributeName, nil] range:[text rangeOfString:textMid]];
-    [attributedText addAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[kColorDarkGray alpha:0.5f], NSForegroundColorAttributeName, kLbFontNormal, NSFontAttributeName, nil] range:[text rangeOfString:textSuf]];
+    [attributedText addAttributes:[NSDictionary dictionaryWithObjectsAndKeys:kColorWhite190, NSForegroundColorAttributeName, kLbFontNormal, NSFontAttributeName, nil] range:[text rangeOfString:textSuf]];
     self.lbReward.attributedText = attributedText;
 }
 

@@ -45,7 +45,7 @@
         _navigationBar.lbTitle.text = self.title;
         _navigationBar.lbTitle.textColor = [UIColor whiteColor];
         _navigationBar.vLeft.hidden = YES;
-        _navigationBar.backgroundColor = [kColorBlack alpha:0.8f];
+        _navigationBar.backgroundColor = kColorWhite70;
     }
     
     return _navigationBar;
@@ -54,7 +54,7 @@
 - (SView *)vUser {
     if (!_vUser) {
         _vUser = [[SView alloc] init];
-        _vUser.backgroundColor = [kColorBlack alpha:0.8f];
+        _vUser.backgroundColor = kColorWhite70;
         [_vUser addSubview:self.btnLogo];
         [_vUser addSubview:self.btnUser];
     }
@@ -78,7 +78,7 @@
         _btnUser = [[SButton alloc] init];
         _btnUser.userInteractionEnabled = NO;
         _btnUser.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
-        [_btnUser setTitleColor:kColorLightGray forState:UIControlStateNormal];
+        [_btnUser setTitleColor:kColorWhite220 forState:UIControlStateNormal];
     }
     
     return _btnUser;
@@ -155,7 +155,7 @@
 
 - (void)initialize {
     [super initialize];
-    
+    self.view.backgroundColor = [UIColor whiteColor];
     SAddObsver(noticeCellEvent:, kNoticeCellEvent)
     SAddObsver(noticeFinishLogin:, kNoticeFinishLogin);
 }

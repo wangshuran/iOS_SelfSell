@@ -89,9 +89,9 @@
         _btnClose = [[SButton alloc] init];
         _btnClose.layer.cornerRadius = 5.0f;
         _btnClose.layer.masksToBounds = YES;
-        _btnClose.backgroundColor = kColorBlack;
+        _btnClose.backgroundColor = kColorWhite10;
         [_btnClose setTitle:SLocal(@"google_guanbi") forState:UIControlStateNormal];
-        [_btnClose setTitleColor:kColorLightGray forState:UIControlStateNormal];
+        [_btnClose setTitleColor:kColorWhite220 forState:UIControlStateNormal];
         [[_btnClose rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
             SButton * btn = x;
             btn.userInteractionEnabled = NO;
@@ -158,7 +158,7 @@
 - (SLabel *)lbInfo {
     if (!_lbInfo) {
         _lbInfo = [[SLabel alloc] init];
-        _lbInfo.textColor = [kColorBlack alpha:0.5f];
+        _lbInfo.textColor = kColorWhite70;
         _lbInfo.font = kLbFontSmaller;
         if ([[AppContext sharedAppContext].accountModel.googleAuthStatus isEqualToString:@"ON"]) {
             _lbInfo.text = SLocal(@"google_xinxi");
@@ -178,9 +178,9 @@
         _btnCopy = [[SButton alloc] init];
         _btnCopy.layer.cornerRadius = 5.0f;
         _btnCopy.layer.masksToBounds = YES;
-        _btnCopy.backgroundColor = kColorBlack;
+        _btnCopy.backgroundColor = kColorWhite10;
         [_btnCopy setTitle:SLocal(@"google_kaobeimiyao") forState:UIControlStateNormal];
-        [_btnCopy setTitleColor:kColorLightGray forState:UIControlStateNormal];
+        [_btnCopy setTitleColor:kColorWhite220 forState:UIControlStateNormal];
         [[_btnCopy rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
             NSString * googleAuth = self.lbGoogleAuth.text;
             if (![NSString isNullOrEmpty:googleAuth]) {
@@ -200,9 +200,9 @@
         _btnOpen = [[SButton alloc] init];
         _btnOpen.layer.cornerRadius = 5.0f;
         _btnOpen.layer.masksToBounds = YES;
-        _btnOpen.backgroundColor = kColorBlack;
+        _btnOpen.backgroundColor = kColorWhite10;
         [_btnOpen setTitle:SLocal(@"google_xiayibu") forState:UIControlStateNormal];
-        [_btnOpen setTitleColor:kColorLightGray forState:UIControlStateNormal];
+        [_btnOpen setTitleColor:kColorWhite220 forState:UIControlStateNormal];
         [[_btnOpen rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
             [weakSelf push:[[SGoogleValidate02Controller alloc] init]];
         }];
@@ -307,10 +307,10 @@
     NSString * googleCode = self.txGoogleCode.text;
     if ([NSString isNullOrEmpty:googleCode]) {
         self.btnClose.userInteractionEnabled = NO;
-        [self.btnClose setTitleColor:[kColorLightGray alpha:0.5f] forState:UIControlStateNormal];
+        [self.btnClose setTitleColor:kColorWhite100 forState:UIControlStateNormal];
     }else {
         self.btnClose.userInteractionEnabled = YES;
-        [self.btnClose setTitleColor:kColorLightGray forState:UIControlStateNormal];
+        [self.btnClose setTitleColor:kColorWhite220 forState:UIControlStateNormal];
     }
 }
 

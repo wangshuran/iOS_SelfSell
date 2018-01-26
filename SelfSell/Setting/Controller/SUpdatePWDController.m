@@ -86,7 +86,7 @@
 - (SView *)vLine0 {
     if (!_vLine0) {
         _vLine0 = [[SView alloc] init];
-        _vLine0.backgroundColor = kColorLightGray;
+        _vLine0.backgroundColor = kColorWhite220;
     }
     
     return _vLine0;
@@ -95,7 +95,7 @@
 - (SView *)vLine1 {
     if (!_vLine1) {
         _vLine1 = [[SView alloc] init];
-        _vLine1.backgroundColor = kColorLightGray;
+        _vLine1.backgroundColor = kColorWhite220;
     }
     
     return _vLine1;
@@ -152,7 +152,7 @@
         _btnFinish = [[SButton alloc] init];
         _btnFinish.layer.cornerRadius = 5.0f;
         _btnFinish.layer.masksToBounds = YES;
-        _btnFinish.backgroundColor = kColorBlack;
+        _btnFinish.backgroundColor = kColorWhite10;
         [_btnFinish setTitle:SLocal(@"updatepwd_tijiao") forState:UIControlStateNormal];
         [_btnFinish setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [[_btnFinish rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
@@ -243,7 +243,7 @@
 
 - (void)initialize {
     [super initialize];
-    self.view.backgroundColor = kColorLightGray;
+    self.view.backgroundColor = kColorWhite220;
 }
 
 #pragma mark - Private
@@ -258,10 +258,10 @@
     NSString * comfirmPwd = self.txComfirmPwd.text;
     if ([NSString isNullOrEmpty:oldPwd] || [NSString isNullOrEmpty:pwd] || [NSString isNullOrEmpty:comfirmPwd] || ![oldPwd isEqualToString:[AppContext sharedAppContext].accountModel.pwd] || ![pwd isEqualToString:comfirmPwd] || comfirmPwd.length < 6) {
         self.btnFinish.userInteractionEnabled = NO;
-        [self.btnFinish setTitleColor:[kColorLightGray alpha:0.5f] forState:UIControlStateNormal];
+        [self.btnFinish setTitleColor:kColorWhite100 forState:UIControlStateNormal];
     }else {
         self.btnFinish.userInteractionEnabled = YES;
-        [self.btnFinish setTitleColor:kColorLightGray forState:UIControlStateNormal];
+        [self.btnFinish setTitleColor:kColorWhite220 forState:UIControlStateNormal];
     }
 }
 

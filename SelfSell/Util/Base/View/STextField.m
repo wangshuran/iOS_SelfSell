@@ -14,7 +14,7 @@
 //
 //- (void)initialize {
 //    [super initialize];
-//    [self setPlaceholderColor:kColorLightGray];
+//    [self setPlaceholderColor:kColorWhite220];
 //}
 
 @end

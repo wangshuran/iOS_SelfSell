@@ -23,7 +23,7 @@
 - (void)initialize {
     [super initialize];
     self.titleLabel.font = kBtnFontNormal;
-    [self setTitleColor:kColorBlack forState:UIControlStateNormal];
+    [self setTitleColor:kColorWhite10 forState:UIControlStateNormal];
 }
 
 @end

@@ -33,8 +33,14 @@
 
 
 #define kColorOrange [UIColor colorWithRed:239.0f / 255.0f green:143.0f / 255.0f blue:16.0f / 255.0f alpha:1.0f]
-#define kColorDarkGray [UIColor colorWithRed:100.0f / 255.0f green:100.0f / 255.0f blue:100.0f / 255.0f alpha:1.0f]
-#define kColorLightGray [UIColor colorWithRed:242.0f / 255.0f green:242.0f / 255.0f blue:242.0f / 255.0f alpha:1.0f]
-#define kColorBlack [UIColor colorWithRed:12.0f / 255.0f green:12.0f / 255.0f blue:12.0f / 255.0f alpha:1.0f]
+#define kColorWhite10 [UIColor colorWithRed:10.0f / 255.0f green:10.0f / 255.0f blue:10.0f / 255.0f alpha:1.0f]
+#define kColorWhite40 [UIColor colorWithRed:40.0f / 255.0f green:40.0f / 255.0f blue:40.0f / 255.0f alpha:1.0f]
+#define kColorWhite70 [UIColor colorWithRed:70.0f / 255.0f green:70.0f / 255.0f blue:70.0f / 255.0f alpha:1.0f]
+#define kColorWhite100 [UIColor colorWithRed:100.0f / 255.0f green:100.0f / 255.0f blue:100.0f / 255.0f alpha:1.0f]
+#define kColorWhite130 [UIColor colorWithRed:130.0f / 255.0f green:130.0f / 255.0f blue:130.0f / 255.0f alpha:1.0f]
+#define kColorWhite160 [UIColor colorWithRed:160.0f / 255.0f green:160.0f / 255.0f blue:160.0f / 255.0f alpha:1.0f]
+#define kColorWhite190 [UIColor colorWithRed:190.0f / 255.0f green:190.0f / 255.0f blue:190.0f / 255.0f alpha:1.0f]
+#define kColorWhite220 [UIColor colorWithRed:220.0f / 255.0f green:220.0f / 255.0f blue:220.0f / 255.0f alpha:1.0f]
+#define kColorWhite250 [UIColor colorWithRed:250.0f / 255.0f green:250.0f / 255.0f blue:250.0f / 255.0f alpha:1.0f]
 
 #endif /* define_h */

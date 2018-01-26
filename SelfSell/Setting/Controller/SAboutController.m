@@ -37,7 +37,7 @@
     if (!_lbVersion) {
         _lbVersion = [[SLabel alloc] init];
         _lbVersion.text = [NSString stringWithFormat:@"V %@.%@", [LAppInfo CFBundleShortVersionString], [LAppInfo CFBundleVersion]];
-        _lbVersion.textColor = kColorDarkGray;
+        _lbVersion.textColor = kColorWhite100;
     }
     
     return _lbVersion;

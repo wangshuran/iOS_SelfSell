@@ -15,7 +15,7 @@
 - (void)initialize {
     [super initialize];
     self.font = kLbFontNormal;
-    self.textColor = kColorBlack;
+    self.textColor = kColorWhite10;
 }
 
 @end

@@ -61,8 +61,8 @@
         _btnRight = [[SButton alloc] init];
         _btnRight.frame = CGRectMake(0.0f, 0.0f, 64.0f, 44.0f);
         [_btnRight setTitle:SLocal(@"common_baocun") forState:UIControlStateNormal];
-        [_btnRight setTitleColor:[UIColor colorWithRed:255.0f / 255.0f green:140.0f / 255.0f blue:0.0f / 255.0f alpha:0.3f] forState:UIControlStateNormal];
-        [_btnRight setTitleColor:[UIColor colorWithRed:255.0f / 255.0f green:140.0f / 255.0f blue:0.0f / 255.0f alpha:0.3f] forState:UIControlStateHighlighted];
+        [_btnRight setTitleColor:[kColorOrange alpha:0.5f] forState:UIControlStateNormal];
+        [_btnRight setTitleColor:[kColorOrange alpha:0.5f] forState:UIControlStateHighlighted];
         [_btnRight addTarget:self action:@selector(updateLanguage:) forControlEvents:UIControlEventTouchUpInside];
     }
     
@@ -130,10 +130,10 @@
 - (void)updateRightBtn {
     SLanguage * language = [[SLanguage alloc] init];
     if ([self.selectLanguage isEqualToString:[AppContext sharedAppContext].accountModel.languageCode]) {
-        [self.btnRight setTitleColor:[UIColor colorWithRed:255.0f / 255.0f green:140.0f / 255.0f blue:0.0f / 255.0f alpha:0.3f] forState:UIControlStateNormal];
-        [self.btnRight setTitleColor:[UIColor colorWithRed:255.0f / 255.0f green:140.0f / 255.0f blue:0.0f / 255.0f alpha:0.3f] forState:UIControlStateHighlighted];
+        [self.btnRight setTitleColor:[kColorOrange alpha:0.5f] forState:UIControlStateNormal];
+        [self.btnRight setTitleColor:[kColorOrange alpha:0.5f] forState:UIControlStateHighlighted];
     }else {
-        [self.btnRight setTitleColor:[UIColor colorWithRed:255.0f / 255.0f green:140.0f / 255.0f blue:0.0f / 255.0f alpha:1.0f] forState:UIControlStateNormal];
+        [self.btnRight setTitleColor:kColorOrange forState:UIControlStateNormal];
     }
 }
 

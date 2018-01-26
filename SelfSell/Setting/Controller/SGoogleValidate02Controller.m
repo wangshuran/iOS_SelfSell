@@ -34,7 +34,7 @@
         _lbInfo = [[SLabel alloc] init];
         _lbInfo.text = SLocal(@"google_xinxi");
         _lbInfo.font = kLbFontSmaller;
-        _lbInfo.textColor = [kColorBlack alpha:0.5f];
+        _lbInfo.textColor = kColorWhite70;
     }
     
     return _lbInfo;
@@ -70,9 +70,9 @@
         _btnFinish = [[SButton alloc] init];
         _btnFinish.layer.cornerRadius = 5.0f;
         _btnFinish.layer.masksToBounds = YES;
-        _btnFinish.backgroundColor = kColorBlack;
+        _btnFinish.backgroundColor = kColorWhite10;
         [_btnFinish setTitle:SLocal(@"google_kaiqi") forState:UIControlStateNormal];
-        [_btnFinish setTitleColor:kColorLightGray forState:UIControlStateNormal];
+        [_btnFinish setTitleColor:kColorWhite220 forState:UIControlStateNormal];
         [[_btnFinish rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
             SButton * btn = x;
             btn.userInteractionEnabled = NO;
@@ -134,10 +134,10 @@
     NSString * googleCode = self.txGoogleCode.text;
     if ([NSString isNullOrEmpty:googleCode]) {
         self.btnFinish.userInteractionEnabled = NO;
-        [self.btnFinish setTitleColor:[kColorLightGray alpha:0.5f] forState:UIControlStateNormal];
+        [self.btnFinish setTitleColor:kColorWhite100 forState:UIControlStateNormal];
     }else {
         self.btnFinish.userInteractionEnabled = YES;
-        [self.btnFinish setTitleColor:kColorLightGray forState:UIControlStateNormal];
+        [self.btnFinish setTitleColor:kColorWhite220 forState:UIControlStateNormal];
     }
 }
 

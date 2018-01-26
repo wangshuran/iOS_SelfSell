@@ -138,7 +138,7 @@
         _txEmail.backgroundColor = [UIColor clearColor];
         _txEmail.keyboardType = UIKeyboardTypeEmailAddress;
         _txEmail.textColor = [UIColor whiteColor];
-        [_txEmail setPlaceholderColor:[UIColor colorWithRed:92.0f / 255.0f green:92.0f / 255.0f blue:92.0f / 255.0f alpha:1.0f]];
+        [_txEmail setPlaceholderColor:kColorWhite100];
         [_txEmail.rac_textSignal subscribeNext:^(NSString * _Nullable x) {
             [weakSelf updateBtnFinish];
         }];
@@ -155,7 +155,7 @@
         _txPwd.backgroundColor = [UIColor clearColor];
         _txPwd.textColor = [UIColor whiteColor];
         _txPwd.secureTextEntry = YES;
-        [_txPwd setPlaceholderColor:[UIColor colorWithRed:92.0f / 255.0f green:92.0f / 255.0f blue:92.0f / 255.0f alpha:1.0f]];
+        [_txPwd setPlaceholderColor:kColorWhite100];
         [_txPwd.rac_textSignal subscribeNext:^(NSString * _Nullable x) {
             [weakSelf updateBtnFinish];
         }];
@@ -168,7 +168,7 @@
     if (!_btnFinish) {
         __weak typeof(self) weakSelf = self;
         _btnFinish = [[SButton alloc] init];
-        _btnFinish.backgroundColor = kColorLightGray;
+        _btnFinish.backgroundColor = kColorWhite220;
         _btnFinish.layer.cornerRadius = 5.0f;
         _btnFinish.layer.masksToBounds = YES;
         [_btnFinish setTitle:SLocal(@"login_denglu") forState:UIControlStateNormal];
@@ -238,7 +238,7 @@
         NSString * textSuf = SLocal(@"login_zhuce");
         NSString * text = [textPre stringByAppendingString:textSuf];
         NSMutableAttributedString * attributedText = [[NSMutableAttributedString alloc] initWithString:text];
-        [attributedText addAttribute:NSForegroundColorAttributeName value:[UIColor colorWithRed:142.0f / 255.0f green:142.0f / 255.0f blue:142.0f / 255.0f alpha:1.0f] range:[text rangeOfString:textPre]];
+        [attributedText addAttribute:NSForegroundColorAttributeName value:kColorWhite100 range:[text rangeOfString:textPre]];
         [attributedText addAttribute:NSForegroundColorAttributeName value:kColorOrange range:[text rangeOfString:textSuf]];
         [_btnRegister setAttributedTitle:attributedText forState:UIControlStateNormal];
         [[_btnRegister rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
@@ -354,14 +354,14 @@
 - (void)initialize {
     [super initialize];
     self.hiddenNavbar = YES;
-    self.view.backgroundColor = [UIColor colorWithRed:26.0f / 255.0f green:26.0f / 255.0f blue:26.0f / 255.0f alpha:1.0f];
+    self.view.backgroundColor = kColorWhite70;
 }
 
 #pragma mark - Private
 
 - (SView *)getBlackRect {
     SView * view = [[SView alloc] init];
-    view.backgroundColor = kColorBlack;
+    view.backgroundColor = kColorWhite10;
     view.layer.cornerRadius = 2.0f;
     view.layer.masksToBounds = YES;
     
@@ -376,10 +376,10 @@
     NSString * pwd = self.txPwd.text;
     if ([NSString isNullOrEmpty:email] || [NSString isNullOrEmpty:pwd]) {
         self.btnFinish.userInteractionEnabled = NO;
-        [self.btnFinish setTitleColor:[kColorBlack alpha:0.5f] forState:UIControlStateNormal];
+        [self.btnFinish setTitleColor:kColorWhite70 forState:UIControlStateNormal];
     }else {
         self.btnFinish.userInteractionEnabled = YES;
-        [self.btnFinish setTitleColor:kColorBlack forState:UIControlStateNormal];
+        [self.btnFinish setTitleColor:kColorWhite10 forState:UIControlStateNormal];
     }
 }
 
