@@ -121,7 +121,7 @@
     NSString * text = [NSString stringWithFormat:@"%@ %@ %@", textPre, textMid, textSuf];
     NSMutableAttributedString * attributedText = [[NSMutableAttributedString alloc] initWithString:text];
     [attributedText addAttributes:[NSDictionary dictionaryWithObjectsAndKeys:kColorWhite190, NSForegroundColorAttributeName, kLbFontNormal, NSFontAttributeName, nil] range:[text rangeOfString:textPre]];
-    [attributedText addAttributes:[NSDictionary dictionaryWithObjectsAndKeys:kColorOrange, NSForegroundColorAttributeName, [LFont bold_25], NSFontAttributeName, nil] range:[text rangeOfString:textMid]];
+    [attributedText addAttributes:[NSDictionary dictionaryWithObjectsAndKeys:kColorWhite40, NSForegroundColorAttributeName, [LFont bold_20], NSFontAttributeName, nil] range:[text rangeOfString:textMid]];
     [attributedText addAttributes:[NSDictionary dictionaryWithObjectsAndKeys:kColorWhite190, NSForegroundColorAttributeName, kLbFontNormal, NSFontAttributeName, nil] range:[text rangeOfString:textSuf]];
     self.lbReward.attributedText = attributedText;
 }

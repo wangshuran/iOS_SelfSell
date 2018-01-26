@@ -230,7 +230,7 @@
         NSString * text = [NSString stringWithFormat:@"%@\n%@", textPre, textSuf];
         NSMutableAttributedString * attributedText = [[NSMutableAttributedString alloc] initWithString:text];
         [attributedText addAttributes:[NSDictionary dictionaryWithObjectsAndKeys:kColorWhite100, NSForegroundColorAttributeName, kLbFontSmaller, NSFontAttributeName, nil] range:[text rangeOfString:textPre]];
-        [attributedText addAttributes:[NSDictionary dictionaryWithObjectsAndKeys:kColorWhite190, NSForegroundColorAttributeName, kLbFontNormal, NSFontAttributeName, nil] range:[text rangeOfString:textSuf]];
+        [attributedText addAttributes:[NSDictionary dictionaryWithObjectsAndKeys:kColorWhite220, NSForegroundColorAttributeName, kLbFontNormal, NSFontAttributeName, nil] range:[text rangeOfString:textSuf]];
         _lb01 = [[SLabel alloc] init];
         _lb01.text = text;
         _lb01.textAlignment = NSTextAlignmentCenter;
@@ -248,7 +248,7 @@
         NSString * text = [NSString stringWithFormat:@"%@\n%@", textPre, textSuf];
         NSMutableAttributedString * attributedText = [[NSMutableAttributedString alloc] initWithString:text];
         [attributedText addAttributes:[NSDictionary dictionaryWithObjectsAndKeys:kColorWhite100, NSForegroundColorAttributeName, kLbFontSmaller, NSFontAttributeName, nil] range:[text rangeOfString:textPre]];
-        [attributedText addAttributes:[NSDictionary dictionaryWithObjectsAndKeys:kColorWhite190, NSForegroundColorAttributeName, kLbFontNormal, NSFontAttributeName, nil] range:[text rangeOfString:textSuf]];
+        [attributedText addAttributes:[NSDictionary dictionaryWithObjectsAndKeys:kColorWhite220, NSForegroundColorAttributeName, kLbFontNormal, NSFontAttributeName, nil] range:[text rangeOfString:textSuf]];
         _lb02 = [[SLabel alloc] init];
         _lb02.textAlignment = NSTextAlignmentCenter;
         _lb02.numberOfLines = 2;
@@ -265,7 +265,7 @@
         NSString * text = [NSString stringWithFormat:@"%@\n%@", textPre, textSuf];
         NSMutableAttributedString * attributedText = [[NSMutableAttributedString alloc] initWithString:text];
         [attributedText addAttributes:[NSDictionary dictionaryWithObjectsAndKeys:kColorWhite100, NSForegroundColorAttributeName, kLbFontSmaller, NSFontAttributeName, nil] range:[text rangeOfString:textPre]];
-        [attributedText addAttributes:[NSDictionary dictionaryWithObjectsAndKeys:kColorWhite190, NSForegroundColorAttributeName, kLbFontNormal, NSFontAttributeName, nil] range:[text rangeOfString:textSuf]];
+        [attributedText addAttributes:[NSDictionary dictionaryWithObjectsAndKeys:kColorWhite220, NSForegroundColorAttributeName, kLbFontNormal, NSFontAttributeName, nil] range:[text rangeOfString:textSuf]];
         _lb03 = [[SLabel alloc] init];
         _lb03.textAlignment = NSTextAlignmentCenter;
         _lb03.numberOfLines = 2;
@@ -278,7 +278,7 @@
 - (SView *)vContent1 {
     if (!_vContent1) {
         _vContent1 = [[SView alloc] init];
-        _vContent1.backgroundColor = kColorWhite190;
+        _vContent1.backgroundColor = kColorWhite220;
         [_vContent1 addSubview:self.vContent1Container];
     }
     
@@ -290,7 +290,7 @@
         _vContent1Container = [[SView alloc] init];
         _vContent1Container.layer.cornerRadius = 5.0f;
         _vContent1Container.layer.masksToBounds = YES;
-        _vContent1Container.backgroundColor = kColorWhite220;
+        _vContent1Container.backgroundColor = kColorWhite250;
         [_vContent1Container addSubview:self.rewardRankingCell01];
         [_vContent1Container addSubview:self.rewardRankingCell02];
         [_vContent1Container addSubview:self.rewardRankingCell03];
@@ -326,7 +326,7 @@
 - (SView *)vContent2 {
     if (!_vContent2) {
         _vContent2 = [[SView alloc] init];
-        _vContent2.backgroundColor = kColorWhite190;
+        _vContent2.backgroundColor = kColorWhite220;
         [_vContent2 addSubview:self.vContent2Container];
     }
     
@@ -338,7 +338,7 @@
         _vContent2Container = [[SView alloc] init];
         _vContent2Container.layer.cornerRadius = 5.0f;
         _vContent2Container.layer.masksToBounds = YES;
-        _vContent2Container.backgroundColor = kColorWhite220;
+        _vContent2Container.backgroundColor = kColorWhite250;
         [_vContent2Container addSubview:self.btnRecommendCode];
         [_vContent2Container addSubview:self.btnShare];
     }
@@ -382,7 +382,7 @@
 - (SView *)vContent3 {
     if (!_vContent3) {
         _vContent3 = [[SView alloc] init];
-        _vContent3.backgroundColor = kColorWhite190;
+        _vContent3.backgroundColor = kColorWhite220;
         [_vContent3 addSubview:self.btnRecommendFriend];
         [_vContent3 addSubview:self.btnRewardMoney];
     }
@@ -395,7 +395,7 @@
         _btnRecommendFriend = [[SButton alloc] init];
         _btnRecommendFriend.layer.cornerRadius = 5.0f;
         _btnRecommendFriend.layer.masksToBounds = YES;
-        _btnRecommendFriend.backgroundColor = kColorWhite220;
+        _btnRecommendFriend.backgroundColor = kColorWhite250;
         [_btnRecommendFriend addSubview:self.imgRecommendFriend];
         [_btnRecommendFriend addSubview:self.lbRecommendFriend];
     }
@@ -428,7 +428,7 @@
         _btnRewardMoney = [[SButton alloc] init];
         _btnRewardMoney.layer.cornerRadius = 5.0f;
         _btnRewardMoney.layer.masksToBounds = YES;
-        _btnRewardMoney.backgroundColor = kColorWhite220;
+        _btnRewardMoney.backgroundColor = kColorWhite250;
         [_btnRewardMoney addSubview:self.imgRewardMoney];
         [_btnRewardMoney addSubview:self.lbRewardMoney];
     }
@@ -459,7 +459,7 @@
 - (SView *)vContent4 {
     if (!_vContent4) {
         _vContent4 = [[SView alloc] init];
-        _vContent4.backgroundColor = kColorWhite190;
+        _vContent4.backgroundColor = kColorWhite220;
         [_vContent4 addSubview:self.btnRewardPlan];
     }
     
@@ -469,7 +469,7 @@
 - (SButton *)btnRewardPlan {
     if (!_btnRewardPlan) {
         _btnRewardPlan = [[SButton alloc] init];
-        _btnRewardPlan.backgroundColor = kColorWhite220;
+        _btnRewardPlan.backgroundColor = kColorWhite250;
         [_btnRewardPlan setTitleColor:kColorWhite100 forState:UIControlStateNormal];
         [_btnRewardPlan setTitle:SLocal(@"reward_jianglijihua") forState:UIControlStateNormal];
     }
@@ -672,7 +672,7 @@
 - (void)initialize {
     [super initialize];
     self.hiddenNavbar = YES;
-    self.view.backgroundColor = kColorWhite250;
+    self.view.backgroundColor = kColorWhite220;
     [self loadData];
 }
 
@@ -809,7 +809,7 @@
     NSString * text = [NSString stringWithFormat:@"%@\n%@", textPre, textSuf];
     NSMutableAttributedString * attributedText = [[NSMutableAttributedString alloc] initWithString:text];
     [attributedText addAttributes:[NSDictionary dictionaryWithObjectsAndKeys:kColorWhite190, NSForegroundColorAttributeName, kLbFontSmaller, NSFontAttributeName, nil] range:[text rangeOfString:textPre]];
-    [attributedText addAttributes:[NSDictionary dictionaryWithObjectsAndKeys:kColorWhite10, NSForegroundColorAttributeName, [LFont thin_25], NSFontAttributeName, nil] range:[text rangeOfString:textSuf]];
+    [attributedText addAttributes:[NSDictionary dictionaryWithObjectsAndKeys:kColorWhite10, NSForegroundColorAttributeName, [LFont bold_25], NSFontAttributeName, nil] range:[text rangeOfString:textSuf]];
     self.lbRecommendFriend.attributedText = attributedText;
 }
 
@@ -823,7 +823,7 @@
     NSString * text = [NSString stringWithFormat:@"%@\n%@%@", textPre, textMid, textSuf];
     NSMutableAttributedString * attributedText = [[NSMutableAttributedString alloc] initWithString:text];
     [attributedText addAttributes:[NSDictionary dictionaryWithObjectsAndKeys:kColorWhite190, NSForegroundColorAttributeName, kLbFontSmaller, NSFontAttributeName, nil] range:[text rangeOfString:textPre]];
-    [attributedText addAttributes:[NSDictionary dictionaryWithObjectsAndKeys:kColorWhite10, NSForegroundColorAttributeName, [LFont thin_25], NSFontAttributeName, nil] range:[text rangeOfString:textMid]];
+    [attributedText addAttributes:[NSDictionary dictionaryWithObjectsAndKeys:kColorWhite10, NSForegroundColorAttributeName, [LFont bold_25], NSFontAttributeName, nil] range:[text rangeOfString:textMid]];
     [attributedText addAttributes:[NSDictionary dictionaryWithObjectsAndKeys:kColorWhite10, NSForegroundColorAttributeName, kLbFontSmaller, NSFontAttributeName, nil] range:[text rangeOfString:textSuf]];
     self.lbRewardMoney.attributedText = attributedText;
     
