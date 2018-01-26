@@ -194,7 +194,7 @@
         _txEmail.placeholder = SLocal(@"register_youxiang");
         _txEmail.backgroundColor = kColorClear;
         _txEmail.keyboardType = UIKeyboardTypeEmailAddress;
-        _txEmail.textColor = kColorWhite250;
+        _txEmail.textColor = kColorWhite220;
         [_txEmail setPlaceholderColor:kColorWhite100];
         [_txEmail.rac_textSignal subscribeNext:^(NSString * _Nullable x) {
             [weakSelf updateBtnFinish];
@@ -210,7 +210,7 @@
         _txCode = [[STextField alloc] init];
         _txCode.placeholder = SLocal(@"register_youxiangrenzhengma");
         _txCode.backgroundColor = kColorClear;
-        _txCode.textColor = kColorWhite250;
+        _txCode.textColor = kColorWhite220;
         [_txCode setPlaceholderColor:kColorWhite100];
         [_txCode.rac_textSignal subscribeNext:^(NSString * _Nullable x) {
             [weakSelf updateBtnFinish];
@@ -248,7 +248,7 @@
                     return;
                 }
                 [weakSelf.txCode becomeFirstResponder];
-                [btn setTitleColor:kColorWhite100 forState:UIControlStateNormal];
+                [btn setTitleColor:kColorWhite70 forState:UIControlStateNormal];
                 __block NSUInteger count = 10;
                 [[[RACSignal interval:1 onScheduler:[RACScheduler mainThreadScheduler]] take:count] subscribeNext:^(NSDate * _Nullable x) {
                     count--;
@@ -273,7 +273,7 @@
         _txPwd = [[STextField alloc] init];
         _txPwd.placeholder = SLocal(@"register_mima");
         _txPwd.backgroundColor = kColorClear;
-        _txPwd.textColor = kColorWhite250;
+        _txPwd.textColor = kColorWhite220;
         _txPwd.secureTextEntry = YES;
         [_txPwd setPlaceholderColor:kColorWhite100];
         [_txPwd.rac_textSignal subscribeNext:^(NSString * _Nullable x) {
@@ -290,7 +290,7 @@
         _txComfirmPwd = [[STextField alloc] init];
         _txComfirmPwd.placeholder = SLocal(@"register_querenmiam");
         _txComfirmPwd.backgroundColor = kColorClear;
-        _txComfirmPwd.textColor = kColorWhite250;
+        _txComfirmPwd.textColor = kColorWhite220;
         _txComfirmPwd.secureTextEntry = YES;
         [_txComfirmPwd setPlaceholderColor:kColorWhite100];
         [_txComfirmPwd.rac_textSignal subscribeNext:^(NSString * _Nullable x) {
@@ -306,7 +306,7 @@
         _txRecommendCode = [[STextField alloc] init];
         _txRecommendCode.placeholder = SLocal(@"register_tuijianma");
         _txRecommendCode.backgroundColor = kColorClear;
-        _txRecommendCode.textColor = kColorWhite250;
+        _txRecommendCode.textColor = kColorWhite220;
         [_txRecommendCode setPlaceholderColor:kColorWhite100];
     }
     
@@ -377,7 +377,7 @@
         _navigationBar.backgroundColor = kColorClear;
         [_navigationBar.btnLeft setImage:[UIImage imageNamed:@"common_fanhui_white"] forState:UIControlStateNormal];
         _navigationBar.lbTitle.text = self.title;
-        _navigationBar.lbTitle.textColor = kColorWhite250;
+        _navigationBar.lbTitle.textColor = kColorWhite220;
         [[_navigationBar.btnLeft rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
             [weakSelf pop];
         }];
@@ -516,7 +516,11 @@
 - (void)initialize {
     [super initialize];
     self.hiddenNavbar = YES;
-    self.view.backgroundColor = kColorWhite70;
+    self.view.backgroundColor = kColorWhite40;
+    
+    self.txEmail.text = @"liqiang01@new4g.cn";
+    self.txPwd.text = @"123456";
+    self.txComfirmPwd.text = @"123456";
 }
 
 #pragma mark - Private
@@ -531,20 +535,16 @@
 }
 
 - (void)updateBtnFinish {
-    //self.txEmail.text = @"liqiang01@new4g.cn";
-    //self.txPwd.text = @"123456";
-    //self.txComfirmPwd.text = @"123456";
-    
     NSString * email = self.txEmail.text;
     NSString * code = self.txCode.text;
     NSString * pwd = self.txPwd.text;
     NSString * comfirmPwd = self.txComfirmPwd.text;
     if ([NSString isNullOrEmpty:email] || [NSString isNullOrEmpty:code] || [NSString isNullOrEmpty:pwd] || [NSString isNullOrEmpty:comfirmPwd] || ![pwd isEqualToString:comfirmPwd] || pwd.length < 6) {
         self.btnFinish.userInteractionEnabled = NO;
-        [self.btnFinish setTitleColor:kColorWhite70 forState:UIControlStateNormal];
+        [self.btnFinish setTitleColor:[kColorWhite40 alpha:0.5f] forState:UIControlStateNormal];
     }else {
         self.btnFinish.userInteractionEnabled = YES;
-        [self.btnFinish setTitleColor:kColorWhite10 forState:UIControlStateNormal];
+        [self.btnFinish setTitleColor:kColorWhite40 forState:UIControlStateNormal];
     }
 }
 

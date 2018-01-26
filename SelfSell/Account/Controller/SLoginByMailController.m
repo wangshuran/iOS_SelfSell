@@ -137,8 +137,8 @@
         _txEmail.placeholder = SLocal(@"register_youxiang");
         _txEmail.backgroundColor = kColorClear;
         _txEmail.keyboardType = UIKeyboardTypeEmailAddress;
-        _txEmail.textColor = kColorWhite250;
-        [_txEmail setPlaceholderColor:kColorWhite100];
+        _txEmail.textColor = kColorWhite220;
+        [_txEmail setPlaceholderColor:kColorWhite70];
         [_txEmail.rac_textSignal subscribeNext:^(NSString * _Nullable x) {
             [weakSelf updateBtnFinish];
         }];
@@ -153,9 +153,9 @@
         _txPwd = [[STextField alloc] init];
         _txPwd.placeholder = SLocal(@"login_mima");
         _txPwd.backgroundColor = kColorClear;
-        _txPwd.textColor = kColorWhite250;
+        _txPwd.textColor = kColorWhite220;
         _txPwd.secureTextEntry = YES;
-        [_txPwd setPlaceholderColor:kColorWhite100];
+        [_txPwd setPlaceholderColor:kColorWhite70];
         [_txPwd.rac_textSignal subscribeNext:^(NSString * _Nullable x) {
             [weakSelf updateBtnFinish];
         }];
@@ -255,7 +255,7 @@
         _navigationBar = [[SNavigationBar alloc] init];
         _navigationBar.backgroundColor = kColorClear;
         _navigationBar.lbTitle.text = self.title;
-        _navigationBar.lbTitle.textColor = kColorWhite250;
+        _navigationBar.lbTitle.textColor = kColorWhite220;
         [_navigationBar.btnLeft setImage:[UIImage imageNamed:@"common_fanhui_white"] forState:UIControlStateNormal];
         [[_navigationBar.btnLeft rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
             [[AppContext sharedAppContext] setSelectVC:[AppContext sharedAppContext].activityNav];
@@ -354,7 +354,10 @@
 - (void)initialize {
     [super initialize];
     self.hiddenNavbar = YES;
-    self.view.backgroundColor = kColorWhite70;
+    self.view.backgroundColor = kColorWhite40;
+    
+    self.txEmail.text = @"liqiang01@new4g.cn";
+    self.txPwd.text = @"123456";
 }
 
 #pragma mark - Private
@@ -369,17 +372,14 @@
 }
 
 - (void)updateBtnFinish {
-    self.txEmail.text = @"liqiang01@new4g.cn";
-    self.txPwd.text = @"123456";
-    
     NSString * email = self.txEmail.text;
     NSString * pwd = self.txPwd.text;
     if ([NSString isNullOrEmpty:email] || [NSString isNullOrEmpty:pwd]) {
         self.btnFinish.userInteractionEnabled = NO;
-        [self.btnFinish setTitleColor:kColorWhite70 forState:UIControlStateNormal];
+        [self.btnFinish setTitleColor:[kColorWhite40 alpha:0.5f] forState:UIControlStateNormal];
     }else {
         self.btnFinish.userInteractionEnabled = YES;
-        [self.btnFinish setTitleColor:kColorWhite10 forState:UIControlStateNormal];
+        [self.btnFinish setTitleColor:kColorWhite40 forState:UIControlStateNormal];
     }
 }
 
