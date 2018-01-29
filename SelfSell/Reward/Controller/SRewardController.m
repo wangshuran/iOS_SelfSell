@@ -674,7 +674,6 @@
 - (void)initialize {
     [super initialize];
     self.hiddenNavbar = YES;
-    self.view.backgroundColor = kColorWhite220;
     [self loadData];
 }
 

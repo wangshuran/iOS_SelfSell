@@ -153,7 +153,8 @@
 
 - (void)initialize {
     [super initialize];
-    self.view.backgroundColor = kColorWhite250;
+    self.hiddenNavbar = YES;
+    self.hiddenTabar = NO;
     SAddObsver(noticeCellEvent:, kNoticeCellEvent)
     SAddObsver(noticeFinishLogin:, kNoticeFinishLogin);
 }

@@ -20,4 +20,12 @@
     return SLocal(@"activity_title");
 }
 
+#pragma mark - LInitProtocol
+
+- (void)initialize {
+    [super initialize];
+    self.hiddenNavbar = NO;
+    self.hiddenTabar = NO;
+}
+
 @end

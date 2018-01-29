@@ -243,7 +243,6 @@
 
 - (void)initialize {
     [super initialize];
-    self.view.backgroundColor = kColorWhite250;
 }
 
 #pragma mark - Private
