@@ -56,8 +56,8 @@
 - (UISwitch *)btnSwitch {
     if (!_btnSwitch) {
         _btnSwitch = [[UISwitch alloc] init];
-        _btnSwitch.onTintColor = [UIColor greenColor];
-        _btnSwitch.tintColor = [UIColor grayColor];
+        _btnSwitch.onTintColor = kColorOrange;
+        _btnSwitch.tintColor = kColorWhite220;
         //[[_btnSwitch rac_newOnChannel] subscribeNext:^(NSNumber * x) {
         //[SNotificationCenter postNotificationName:kNoticeCellEvent object:weakSelf];
         //}];

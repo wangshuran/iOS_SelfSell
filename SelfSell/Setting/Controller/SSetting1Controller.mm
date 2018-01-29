@@ -107,18 +107,23 @@
         TBSwitchCell * switchCell = (TBSwitchCell *)cell;
         TBSwitchModel * switchModel = (TBSwitchModel *)model;
         if ([switchModel.uid isEqualToString:kzhiwen]) {
-            //if (switchCell.btnSwitch.on) {
-            //    STouchID * touchID = [[STouchID alloc] init];
-            //    if (![touchID canPolicy]) {
-            //        switchCell.btnSwitch.on = NO;
-            //
-            //        return;
-            //    }
-            //}
-            //
-            //SCommonModel * commonModel = (SCommonModel *)[[AppContext sharedAppContext].accountDao getObjectFromTable:[[SCommonModel alloc] init] condition:SCommonModel.key == kIsOpenTouchID];
-            //commonModel.value = switchCell.btnSwitch.on ? @"1" : @"0";
-            //[[AppContext sharedAppContext].accountDao updateObject:commonModel property:SCommonModel.value];
+            if (switchCell.btnSwitch.on) {
+                __weak typeof(self) weakSelf = self;
+                STouchID * touchID = [[STouchID alloc] init];
+                if (![touchID canPolicy]) {
+                    switchModel.isOn = NO;
+                    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                        [weakSelf.tbTableView reloadData];
+                    });
+                    [MBProgressHUD showTitleToView:weakSelf.view postion:NHHUDPostionCenten title:SLocal(@"setting1_kaiqitouchid")];
+                    
+                    return;
+                }
+            }
+            
+            SCommonModel * commonModel = (SCommonModel *)[[AppContext sharedAppContext].accountDao getObjectFromTable:[[SCommonModel alloc] init] condition:SCommonModel.key == kIsOpenTouchID];
+            commonModel.value = switchCell.btnSwitch.on ? @"1" : @"0";
+            [[AppContext sharedAppContext].accountDao updateObject:commonModel property:SCommonModel.value];
             
             return;
         }

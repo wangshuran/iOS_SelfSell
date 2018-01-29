@@ -34,6 +34,7 @@ setting1_xiugaimima = "更改密码";
 setting1_zhiwen = "指纹";
 setting1_yuyan = "语言";
 setting1_guanyu = "关于";
+setting1_kaiqitouchid = "请在系统设置中开启TouchID";
 
 
 about_title = "关于";
