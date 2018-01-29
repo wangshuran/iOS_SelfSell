@@ -9,11 +9,11 @@
 #import "SService.h"
 #import "TBSectionModel.h"
 #import "TBModel.h"
+#import "FundAddPlanModel.h"
 #import "FundBalanceModel.h"
-
-
-#define kwodetuijianma @"kwodetuijianma"
-
+#import "FundPlanModel.h"
+#import "FundTradeDetailModel.h"
+#import "FundTradeTitleModel.h"
 
 @interface SFundService : SService
 

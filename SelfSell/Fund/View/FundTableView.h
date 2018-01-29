@@ -7,7 +7,11 @@
 //
 
 #import "TBTableView.h"
+#import "FundAddPlanCell.h"
 #import "FundBalanceCell.h"
+#import "FundPlanCell.h"
+#import "FundTradeDetailCell.h"
+#import "FundTradeTitleCell.h"
 
 @interface FundTableView : TBTableView
 

@@ -33,6 +33,23 @@
     {
         FundBalanceModel * model = [[FundBalanceModel alloc] init];
         [data addObject:model];
+    }{
+        FundPlanModel * model = [[FundPlanModel alloc] init];
+        [data addObject:model];
+    }{
+        FundPlanModel * model = [[FundPlanModel alloc] init];
+        [data addObject:model];
+    }{
+        FundAddPlanModel * model = [[FundAddPlanModel alloc] init];
+        [data addObject:model];
+    }{
+        FundTradeTitleModel * model = [[FundTradeTitleModel alloc] init];
+        [data addObject:model];
+    }{
+        for (int ii = 0; ii < 10; ii++) {
+            FundTradeDetailModel * model = [[FundTradeDetailModel alloc] init];
+            [data addObject:model];
+        }
     }
     TBSectionModel * section = [[TBSectionModel alloc] init];
     section.items = data;
