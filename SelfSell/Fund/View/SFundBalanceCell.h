@@ -7,7 +7,7 @@
 //
 
 #import "TBCell.h"
-#import "FundBalanceModel.h"
+#import "SFundBalanceModel.h"
 
 @interface SFundBalanceCell : TBCell
 

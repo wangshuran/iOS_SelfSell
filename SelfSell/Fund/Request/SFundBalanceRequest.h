@@ -7,7 +7,10 @@
 //
 
 #import "SRequest.h"
+#import "SFundBalanceResponse.h"
 
 @interface SFundBalanceRequest : SRequest
+
+@property (nonatomic, copy) NSString * id;
 
 @end

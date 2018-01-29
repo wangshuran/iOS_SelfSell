@@ -7,7 +7,7 @@
 //
 
 #import "TBCell.h"
-#import "FundAddPlanModel.h"
+#import "SFundAddPlanModel.h"
 
 @interface SFundAddPlanCell : TBCell
 

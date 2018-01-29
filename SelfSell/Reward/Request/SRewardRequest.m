@@ -17,7 +17,8 @@
     
     self.method = HttpMethodPost;
     self.url = [[AppContext sharedAppContext].host stringByAppendingString:@"/invite/info"];
-    self.responseClass = SRewardResponse.class;
+    self.responseClass = SRewardResponse.class;    
+    self.id = [AppContext sharedAppContext].accountModel.id;
 }
 
 @end

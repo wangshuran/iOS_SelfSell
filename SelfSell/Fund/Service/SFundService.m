@@ -31,23 +31,23 @@
 - (NSArray<NSArray<TBModel *> *> *)getLastPage {
     NSMutableArray *data = [[NSMutableArray alloc] init];
     {
-        FundBalanceModel * model = [[FundBalanceModel alloc] init];
+        SFundBalanceModel * model = [[SFundBalanceModel alloc] init];
         [data addObject:model];
     }{
-        FundPlanModel * model = [[FundPlanModel alloc] init];
+        SFundPlanModel * model = [[SFundPlanModel alloc] init];
         [data addObject:model];
     }{
-        FundPlanModel * model = [[FundPlanModel alloc] init];
+        SFundPlanModel * model = [[SFundPlanModel alloc] init];
         [data addObject:model];
     }{
-        FundAddPlanModel * model = [[FundAddPlanModel alloc] init];
+        SFundAddPlanModel * model = [[SFundAddPlanModel alloc] init];
         [data addObject:model];
     }{
-        FundTradeTitleModel * model = [[FundTradeTitleModel alloc] init];
+        SFundTradeTitleModel * model = [[SFundTradeTitleModel alloc] init];
         [data addObject:model];
     }{
         for (int ii = 0; ii < 10; ii++) {
-            FundTradeDetailModel * model = [[FundTradeDetailModel alloc] init];
+            SFundTradeDetailModel * model = [[SFundTradeDetailModel alloc] init];
             [data addObject:model];
         }
     }

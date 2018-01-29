@@ -10,6 +10,7 @@
 #import "SNavigationBar.h"
 #import "SFundTableView.h"
 #import "SFundService.h"
+#import "SFundBalanceRequest.h"
 
 @interface SFundController ()
 
@@ -36,6 +37,17 @@
     }
     
     [self.fundService execute:[LCmdTransfer cmd:LCmdGetLastPage value:nil]];
+    
+    
+    {
+        SFundBalanceRequest * request = [[SFundBalanceRequest alloc] init];
+        [SNetwork request:request block:^(LRequest * request, LResponse * response) {
+            if (!response.status) {
+                return;
+            }
+            SFundBalanceResponse * model = (SFundBalanceResponse *)response;
+        }];
+    }
 }
 
 - (UIStatusBarStyle)preferredStatusBarStyle {

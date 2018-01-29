@@ -9,11 +9,11 @@
 #import "SService.h"
 #import "TBSectionModel.h"
 #import "TBModel.h"
-#import "FundAddPlanModel.h"
-#import "FundBalanceModel.h"
-#import "FundPlanModel.h"
-#import "FundTradeDetailModel.h"
-#import "FundTradeTitleModel.h"
+#import "SFundAddPlanModel.h"
+#import "SFundBalanceModel.h"
+#import "SFundPlanModel.h"
+#import "SFundTradeDetailModel.h"
+#import "SFundTradeTitleModel.h"
 
 @interface SFundService : SService
 

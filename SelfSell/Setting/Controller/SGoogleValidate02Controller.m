@@ -77,7 +77,6 @@
             btn.userInteractionEnabled = NO;
             NSString * googleCode = weakSelf.txGoogleCode.text;
             SEnableGoogleAuthRequest * request = [[SEnableGoogleAuthRequest alloc] init];
-            request.id = [AppContext sharedAppContext].accountModel.id;
             request.step = @"1";
             request.googleAuthCode = googleCode;
             [SNetwork request:request block:^(LRequest * request, LResponse * response) {

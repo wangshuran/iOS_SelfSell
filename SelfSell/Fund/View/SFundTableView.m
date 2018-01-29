@@ -14,11 +14,11 @@
 
 - (instancetype)initWithFrame:(CGRect)frame style:(UITableViewStyle)style {
     self = [super initWithFrame:frame style:style];
-    [self registerClass:SFundBalanceCell.class forCellReuseIdentifier:NSStringFromClass(FundBalanceModel.class)];
-    [self registerClass:SFundPlanCell.class forCellReuseIdentifier:NSStringFromClass(FundPlanModel.class)];
-    [self registerClass:SFundAddPlanCell.class forCellReuseIdentifier:NSStringFromClass(FundAddPlanModel.class)];
-    [self registerClass:SFundTradeDetailCell.class forCellReuseIdentifier:NSStringFromClass(FundTradeDetailModel.class)];
-    [self registerClass:SFundTradeTitleCell.class forCellReuseIdentifier:NSStringFromClass(FundTradeTitleModel.class)];
+    [self registerClass:SFundBalanceCell.class forCellReuseIdentifier:NSStringFromClass(SFundBalanceModel.class)];
+    [self registerClass:SFundPlanCell.class forCellReuseIdentifier:NSStringFromClass(SFundPlanModel.class)];
+    [self registerClass:SFundAddPlanCell.class forCellReuseIdentifier:NSStringFromClass(SFundAddPlanModel.class)];
+    [self registerClass:SFundTradeDetailCell.class forCellReuseIdentifier:NSStringFromClass(SFundTradeDetailModel.class)];
+    [self registerClass:SFundTradeTitleCell.class forCellReuseIdentifier:NSStringFromClass(SFundTradeTitleModel.class)];
     
     return self;
 }

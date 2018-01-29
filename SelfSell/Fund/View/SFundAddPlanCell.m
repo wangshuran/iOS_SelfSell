@@ -40,7 +40,7 @@
 - (void)setModel:(TBModel *)model {
     [super setModel:model];
     
-    FundAddPlanModel * addPlanModel = (FundAddPlanModel *)model;
+    SFundAddPlanModel * addPlanModel = (SFundAddPlanModel *)model;
 }
 
 - (SView *)vBackground {

@@ -69,7 +69,7 @@
 - (void)setModel:(TBModel *)model {
     [super setModel:model];
     
-    FundTradeTitleModel * tradeTitleModel = (FundTradeTitleModel *)model;
+    SFundTradeTitleModel * tradeTitleModel = (SFundTradeTitleModel *)model;
 }
 
 - (SLabel *)lbHistory {

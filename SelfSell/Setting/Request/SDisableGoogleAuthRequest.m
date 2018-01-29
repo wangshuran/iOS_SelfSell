@@ -18,6 +18,7 @@
     self.method = HttpMethodPost;
     self.url = [[AppContext sharedAppContext].host stringByAppendingString:@"/investor/disable/googleauth"];
     self.responseClass = SDisableGoogleAuthResponse.class;
+    self.id = [AppContext sharedAppContext].accountModel.id;
 }
 
 @end

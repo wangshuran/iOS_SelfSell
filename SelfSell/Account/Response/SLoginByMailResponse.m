@@ -13,14 +13,14 @@
 - (BOOL)reflect:(NSDictionary *)obj {
     [super reflect:obj];
     NSDictionary * data = [obj objectForKey:@"data"];
-    if (data) {
-        SAccountModel * model = [[SAccountModel alloc] init];
-        [model reflect:data];
+    if (data && ![data isEqual:[NSNull null]]) {
         NSDictionary * investor = [data objectForKey:@"investor"];
-        if (investor) {
+        if (investor && ![investor isEqual:[NSNull null]]) {
+            SAccountModel * model = [[SAccountModel alloc] init];
+            [model reflect:data];
             [model reflect:investor];
+            self.data = model;
         }
-        self.data = model;
     }
     return YES;
 }

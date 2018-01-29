@@ -17,7 +17,8 @@
     
     self.method = HttpMethodPost;
     self.url = [[AppContext sharedAppContext].host stringByAppendingString:@"/investor/enable/googleauth"];
-    self.responseClass = SEnableGoogleAuthResponse.class;
+    self.responseClass = SEnableGoogleAuthResponse.class;    
+    self.id = [AppContext sharedAppContext].accountModel.id;
 }
 
 @end

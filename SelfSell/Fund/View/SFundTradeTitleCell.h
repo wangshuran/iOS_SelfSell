@@ -7,7 +7,7 @@
 //
 
 #import "TBCell.h"
-#import "FundTradeTitleModel.h"
+#import "SFundTradeTitleModel.h"
 
 @interface SFundTradeTitleCell : TBCell
 

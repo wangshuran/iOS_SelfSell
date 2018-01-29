@@ -10,4 +10,16 @@
 
 @implementation SFundBalanceRequest
 
+
+#pragma mark - LInitProtocol
+
+- (void)initialize {
+    [super initialize];
+    
+    self.method = HttpMethodPost;
+    self.url = [[AppContext sharedAppContext].host stringByAppendingString:@"/fund/info"];
+    self.responseClass = SFundBalanceResponse.class;
+    self.id = [AppContext sharedAppContext].accountModel.id;
+}
+
 @end

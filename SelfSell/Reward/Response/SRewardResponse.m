@@ -13,17 +13,19 @@
 - (BOOL)reflect:(NSDictionary *)obj {
     [super reflect:obj];
     NSDictionary * data = [obj objectForKey:@"data"];
-    if (data) {
+    if (data && ![data isEqual:[NSNull null]]) {
         NSArray * rewardRankList = [data objectForKey:@"rewardRankList"];
-        NSMutableArray * models = [[NSMutableArray alloc] initWithCapacity:rewardRankList.count];
-        if (rewardRankList) {
+        if (rewardRankList && ![rewardRankList isEqual:[NSNull null]]) {
+            NSMutableArray * models = [[NSMutableArray alloc] initWithCapacity:rewardRankList.count];
             for (NSDictionary * rewardRank in rewardRankList) {
-                SRewardRankingModel * model = [[SRewardRankingModel alloc] init];
-                [model reflect:rewardRank];
-                [models addObject:model];
+                if (rewardRank && ![rewardRank isEqual:[NSNull null]]) {
+                    SRewardRankingModel * model = [[SRewardRankingModel alloc] init];
+                    [model reflect:rewardRank];
+                    [models addObject:model];
+                }
             }
+            self.rewardRankList = models.count > 0 ? models : nil;
         }
-        self.rewardRankList = models;
     }
     return YES;
 }

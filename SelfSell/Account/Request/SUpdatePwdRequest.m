@@ -17,7 +17,8 @@
     
     self.method = HttpMethodPost;
     self.url = [[AppContext sharedAppContext].host stringByAppendingString:@"/investor/modify/password"];
-    self.responseClass = SUpdatePwdResponse.class;
+    self.responseClass = SUpdatePwdResponse.class;    
+    self.id = [AppContext sharedAppContext].accountModel.id;
 }
 
 

@@ -13,14 +13,16 @@
 - (BOOL)reflect:(NSDictionary *)obj {
     [super reflect:obj];
     NSArray * data = [obj objectForKey:@"data"];
-    if (data) {
+    if (data && ![data isEqual:[NSNull null]]) {
         NSMutableArray * models = [[NSMutableArray alloc] initWithCapacity:data.count];
         for (NSDictionary * welcome in data) {
-            SWelcomeModel * model = [[SWelcomeModel alloc] init];
-            [model reflect:welcome];
-            [models addObject:model];
+            if (welcome && ![welcome isEqual:[NSNull null]]) {
+                SWelcomeModel * model = [[SWelcomeModel alloc] init];
+                [model reflect:welcome];
+                [models addObject:model];
+            }
         }
-        self.data = models;
+        self.data = models.count > 0 ? models : nil;
     }
     return YES;
 }

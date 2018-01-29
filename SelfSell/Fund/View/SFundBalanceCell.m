@@ -63,7 +63,7 @@
 - (void)setModel:(TBModel *)model {
     [super setModel:model];
     
-    FundBalanceModel * balanceModel = (FundBalanceModel *)model;
+    SFundBalanceModel * balanceModel = (SFundBalanceModel *)model;
 }
 
 - (SView *)vBackground {

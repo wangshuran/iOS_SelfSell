@@ -682,7 +682,6 @@
 - (void)loadData {
     __weak typeof(self) weakSelf = self;
     SRewardRequest * request = [[SRewardRequest alloc] init];
-    request.id = [AppContext sharedAppContext].accountModel.id;
     [SNetwork request:request block:^(LRequest * request, LResponse * response) {
         if (!response.status) {
             [weakSelf.scrollView.mj_header endRefreshing];

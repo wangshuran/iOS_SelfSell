@@ -1,5 +1,5 @@
 //
-//  FundTradeTitleModel.h
+//  SFundBalanceModel.h
 //  SelfSell
 //
 //  Created by liqiang on 2018/1/29.
@@ -8,6 +8,6 @@
 
 #import "TBModel.h"
 
-@interface FundTradeTitleModel : TBModel
+@interface SFundBalanceModel : TBModel
 
 @end

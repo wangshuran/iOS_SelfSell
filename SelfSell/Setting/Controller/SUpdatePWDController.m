@@ -161,7 +161,6 @@
             NSString * oldPwd = self.txOldPwd.text;
             NSString * pwd = self.txPwd.text;
             SUpdatePwdRequest * request = [[SUpdatePwdRequest alloc] init];
-            request.id = [AppContext sharedAppContext].accountModel.id;
             request.password = oldPwd;
             request.passwordNew = pwd;
             [SNetwork request:request block:^(LRequest * request, LResponse * response) {
