@@ -17,7 +17,7 @@
 
 @property (nonatomic, strong) SSettingService * settingService;
 
-@property (nonatomic, strong) TBTableView * tbTableView;
+@property (nonatomic, strong) TBTableView * tableView;
 
 @end
 
@@ -36,31 +36,31 @@
         [_settingService subscribeNext:LCmdGetSetting1 nextBlock:^(LCmdTransfer * transfer) {
             NSArray<TBSectionModel *> * model = transfer.value;
             
-            weakSelf.tbTableView.data = model;
-            [weakSelf.tbTableView reloadData];
+            weakSelf.tableView.data = model;
+            [weakSelf.tableView reloadData];
         }];
     }
     
     return _settingService;
 }
 
-- (TBTableView *)tbTableView {
-    if (!_tbTableView) {
-        _tbTableView = [[SettingTableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
-        _tbTableView.isEnableHeader = NO;
-        _tbTableView.isEnableFooter = NO;
+- (TBTableView *)tableView {
+    if (!_tableView) {
+        _tableView = [[SettingTableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
+        _tableView.isEnableHeader = NO;
+        _tableView.isEnableFooter = NO;
     }
     
-    return _tbTableView;
+    return _tableView;
 }
 
 - (void)loadView {
     [super loadView];
     __weak typeof(self) weakSelf = self;
     
-    [self.view addSubview:self.tbTableView];
+    [self.view addSubview:self.tableView];
     
-    [self.tbTableView mas_updateConstraints:^(MASConstraintMaker * make) {
+    [self.tableView mas_updateConstraints:^(MASConstraintMaker * make) {
         make.top.bottom.left.right.mas_equalTo(weakSelf.view);
     }];
     
@@ -85,7 +85,7 @@
         return;
     }
     BOOL isExit = NO;
-    NSArray<TBSectionModel *> * sections = self.tbTableView.data;
+    NSArray<TBSectionModel *> * sections = self.tableView.data;
     for (TBSectionModel * section in sections) {
         if ([section.items containsObject:model]) {
             isExit = YES;
@@ -113,7 +113,7 @@
                 if (![touchID canPolicy]) {
                     switchModel.isOn = NO;
                     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                        [weakSelf.tbTableView reloadData];
+                        [weakSelf.tableView reloadData];
                     });
                     [MBProgressHUD showTitleToView:weakSelf.view postion:NHHUDPostionCenten title:SLocal(@"setting1_kaiqitouchid")];
                     

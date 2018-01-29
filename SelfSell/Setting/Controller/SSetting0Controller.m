@@ -23,7 +23,7 @@
 
 @property (nonatomic, strong) SButton * btnUser;
 
-@property (nonatomic, strong) TBTableView * tbTableView;
+@property (nonatomic, strong) TBTableView * tableView;
 
 @end
 
@@ -91,22 +91,22 @@
         [_settingService subscribeNext:LCmdGetSetting0 nextBlock:^(LCmdTransfer * transfer) {
             NSArray<TBSectionModel *> * model = transfer.value;
             
-            weakSelf.tbTableView.data = model;
-            [weakSelf.tbTableView reloadData];
+            weakSelf.tableView.data = model;
+            [weakSelf.tableView reloadData];
         }];
     }
     
     return _settingService;
 }
 
-- (TBTableView *)tbTableView {
-    if (!_tbTableView) {
-        _tbTableView = [[SettingTableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
-        _tbTableView.isEnableHeader = NO;
-        _tbTableView.isEnableFooter = NO;
+- (TBTableView *)tableView {
+    if (!_tableView) {
+        _tableView = [[SettingTableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
+        _tableView.isEnableHeader = NO;
+        _tableView.isEnableFooter = NO;
     }
     
-    return _tbTableView;
+    return _tableView;
 }
 
 - (void)loadView {
@@ -114,7 +114,7 @@
     __weak typeof(self) weakSelf = self;
     [self.view addSubview:self.navigationBar];
     [self.view addSubview:self.vUser];
-    [self.view addSubview:self.tbTableView];
+    [self.view addSubview:self.tableView];
     [self.navigationBar mas_updateConstraints:^(MASConstraintMaker * make) {
         make.top.left.right.mas_equalTo(weakSelf.view);
         make.height.mas_equalTo(kNavHeight);
@@ -134,7 +134,7 @@
         make.bottom.mas_equalTo(weakSelf.vUser).mas_offset(-5.0f);
         make.top.right.mas_equalTo(weakSelf.vUser);
     }];
-    [self.tbTableView mas_updateConstraints:^(MASConstraintMaker * make) {
+    [self.tableView mas_updateConstraints:^(MASConstraintMaker * make) {
         make.top.mas_equalTo(weakSelf.vUser.mas_bottom);
         make.bottom.left.right.mas_equalTo(weakSelf.view);
     }];
@@ -168,7 +168,7 @@
         return;
     }
     BOOL isExit = NO;
-    NSArray<TBSectionModel *> * sections = self.tbTableView.data;
+    NSArray<TBSectionModel *> * sections = self.tableView.data;
     for (TBSectionModel * section in sections) {
         if ([section.items containsObject:model]) {
             isExit = YES;

@@ -15,7 +15,7 @@
 
 @property (nonatomic, strong) SLanguageService * languageService;
 
-@property (nonatomic, strong) TBTableView * tbTableView;
+@property (nonatomic, strong) TBTableView * tableView;
 
 @property (nonatomic, copy) NSString * selectLanguage;
 
@@ -38,22 +38,22 @@
         [_languageService subscribeNext:LCmdGetAll nextBlock:^(LCmdTransfer * transfer) {
             NSArray<TBSectionModel *> * model = transfer.value;
             
-            weakSelf.tbTableView.data = model;
-            [weakSelf.tbTableView reloadData];
+            weakSelf.tableView.data = model;
+            [weakSelf.tableView reloadData];
         }];
     }
     
     return _languageService;
 }
 
-- (TBTableView *)tbTableView {
-    if (!_tbTableView) {
-        _tbTableView = [[SettingTableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
-        _tbTableView.isEnableFooter = NO;
-        _tbTableView.isEnableHeader = NO;
+- (TBTableView *)tableView {
+    if (!_tableView) {
+        _tableView = [[SettingTableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
+        _tableView.isEnableFooter = NO;
+        _tableView.isEnableHeader = NO;
     }
     
-    return _tbTableView;
+    return _tableView;
 }
 
 - (SButton *)btnRight {
@@ -74,8 +74,8 @@
     
     __weak typeof(self) weakSelf = self;
     [self.vNavRight addSubview:self.btnRight];
-    [self.view addSubview:self.tbTableView];
-    [self.tbTableView mas_updateConstraints:^(MASConstraintMaker * make) {
+    [self.view addSubview:self.tableView];
+    [self.tableView mas_updateConstraints:^(MASConstraintMaker * make) {
         make.top.bottom.left.right.mas_equalTo(weakSelf.view);
     }];
     
@@ -99,7 +99,7 @@
         return;
     }
     BOOL isExit = NO;
-    NSArray<TBSectionModel *> * sections = self.tbTableView.data;
+    NSArray<TBSectionModel *> * sections = self.tableView.data;
     for (TBSectionModel * section in sections) {
         if ([section.items containsObject:model]) {
             isExit = YES;
@@ -110,7 +110,7 @@
         return;
     }
     
-    sections = self.tbTableView.data;
+    sections = self.tableView.data;
     for (TBSectionModel * section in sections) {
         for (TBCheckModel * item in section.items) {
             item.isCheck = [model.uid isEqualToString:item.uid];
@@ -120,7 +120,7 @@
     
     __weak typeof(self) weakSelf = self;
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.2f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [weakSelf.tbTableView reloadData];
+        [weakSelf.tableView reloadData];
         [weakSelf updateRightBtn];
     });
 }
