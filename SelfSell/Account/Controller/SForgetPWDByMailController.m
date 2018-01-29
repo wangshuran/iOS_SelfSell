@@ -208,7 +208,7 @@
                     return;
                 }
                 [weakSelf.txCode becomeFirstResponder];
-                [btn setTitleColor:kColorWhite70 forState:UIControlStateNormal];
+                [btn setTitleColor:kColorWhite100 forState:UIControlStateNormal];
                 __block NSUInteger count = 10;
                 [[[RACSignal interval:1 onScheduler:[RACScheduler mainThreadScheduler]] take:count] subscribeNext:^(NSDate * _Nullable x) {
                     count--;
