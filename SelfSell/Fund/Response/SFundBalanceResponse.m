@@ -12,6 +12,8 @@
 
 - (BOOL)reflect:(NSDictionary *)obj {
     [super reflect:obj];
+    SFundBalanceModel * model = [[SFundBalanceModel alloc] init];
+    [model reflect:obj];
     NSDictionary * data = [obj objectForKey:@"data"];
     if (data && ![data isEqual:[NSNull null]]) {
         NSArray * fundDetail = [data objectForKey:@"fundDetail"];
@@ -19,14 +21,16 @@
             NSMutableArray * models = [[NSMutableArray alloc] initWithCapacity:fundDetail.count];
             for (NSDictionary * fund in fundDetail) {
                 if (fund && ![fund isEqual:[NSNull null]]) {
-                    SFundPlanModel * model = [[SFundPlanModel alloc] init];
+                    SFundMyPlanModel * model = [[SFundMyPlanModel alloc] init];
                     [model reflect:fund];
                     [models addObject:model];
                 }
             }
-            self.fundDetail = models.count > 0 ? models : nil;;
+            model.fundDetail = models.count > 0 ? models : nil;;
         }
     }
+    self.balanceModel = model;
+    
     return YES;
 }
 

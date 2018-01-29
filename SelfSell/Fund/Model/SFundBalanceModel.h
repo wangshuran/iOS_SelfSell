@@ -7,7 +7,16 @@
 //
 
 #import "TBModel.h"
+#import "SFundMyPlanModel.h"
 
 @interface SFundBalanceModel : TBModel
+
+@property (nonatomic, copy) NSString * totalSSC;
+
+@property (nonatomic, copy) NSString * totalPrice;
+
+@property (nonatomic, copy) NSString * availableSSC;
+
+@property (nonatomic, strong) NSArray<SFundMyPlanModel *> * fundDetail;
 
 @end

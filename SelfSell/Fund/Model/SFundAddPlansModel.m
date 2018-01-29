@@ -1,14 +1,13 @@
 //
-//  SFundPlanCell.h
+//  SFundAddPlansModel.m
 //  SelfSell
 //
 //  Created by liqiang on 2018/1/29.
 //  Copyright © 2018年 Goopal. All rights reserved.
 //
 
-#import "TBCell.h"
-#import "SFundPlanModel.h"
+#import "SFundAddPlansModel.h"
 
-@interface SFundPlanCell : TBCell
+@implementation SFundAddPlansModel
 
 @end

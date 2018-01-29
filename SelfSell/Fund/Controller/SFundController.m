@@ -1,3 +1,4 @@
+
 //
 //  SFundController.m
 //  SelfSell
@@ -11,6 +12,8 @@
 #import "SFundTableView.h"
 #import "SFundService.h"
 #import "SFundBalanceRequest.h"
+#import "SFundAddPlanRequest.h"
+#import "SFundSectionModel.h"
 
 @interface SFundController ()
 
@@ -19,6 +22,8 @@
 @property (nonatomic, strong) SFundTableView * tableView;
 
 @property (nonatomic, strong) SFundService * fundService;
+
+@property (nonatomic, strong) SFundSectionModel * data;
 
 @end
 
@@ -40,12 +45,31 @@
     
     
     {
+        __weak typeof(self) weakSelf = self;
         SFundBalanceRequest * request = [[SFundBalanceRequest alloc] init];
         [SNetwork request:request block:^(LRequest * request, LResponse * response) {
             if (!response.status) {
                 return;
             }
             SFundBalanceResponse * model = (SFundBalanceResponse *)response;
+            weakSelf.data.balanceModel = model.balanceModel;
+            weakSelf.data.myPlanModels = model.balanceModel.fundDetail;
+            [weakSelf.data reloadData];
+            [weakSelf.tableView reloadData];
+        }];
+    }{
+        __weak typeof(self) weakSelf = self;
+        SFundAddPlanRequest * request = [[SFundAddPlanRequest alloc] init];
+        [SNetwork request:request block:^(LRequest * request, LResponse * response) {
+            if (!response.status) {
+                return;
+            }
+            SFundAddPlanResponse * model = (SFundAddPlanResponse *)response;
+            SFundAddPlansModel * plans = [[SFundAddPlansModel alloc] init];
+            plans.plans = model.plans;
+            weakSelf.data.addPlansModel = plans;
+            [weakSelf.data reloadData];
+            [weakSelf.tableView reloadData];
         }];
     }
 }
@@ -86,8 +110,8 @@
         __weak typeof(self) weakSelf = self;
         _fundService = [[SFundService alloc] init];
         [_fundService subscribeNext:LCmdGetLastPage nextBlock:^(LCmdTransfer * transfer) {
-            NSArray<TBSectionModel *> * model = transfer.value;
-            weakSelf.tableView.data = model;
+            //NSArray<TBSectionModel *> * model = transfer.value;
+            //weakSelf.tableView.data = model;
             [weakSelf.tableView reloadData];
             [weakSelf.tableView.mj_header endRefreshing];
         }];
@@ -97,6 +121,14 @@
     }
     
     return _fundService;
+}
+
+- (SFundSectionModel *)data {
+    if (!_data) {
+        _data = [[SFundSectionModel alloc] init];
+    }
+    
+    return _data;
 }
 
 - (void)loadView {

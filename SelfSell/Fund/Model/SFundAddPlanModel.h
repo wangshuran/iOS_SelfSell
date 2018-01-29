@@ -10,4 +10,18 @@
 
 @interface SFundAddPlanModel : TBModel
 
+@property (nonatomic, copy) NSString * id;
+
+@property (nonatomic, copy) NSString * iconUrl;
+
+@property (nonatomic, copy) NSString * annualRate;
+
+@property (nonatomic, copy) NSString * term;
+
+@property (nonatomic, copy) NSString * termUnit;
+
+@property (nonatomic, copy) NSString * title;
+
+@property (nonatomic, copy) NSString * remark;
+
 @end

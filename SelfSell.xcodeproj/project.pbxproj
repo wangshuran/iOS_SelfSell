@@ -35,9 +35,9 @@
 		D52903C4201EE95F0017A3CC /* SFundService.m in Sources */ = {isa = PBXBuildFile; fileRef = D52903C3201EE95F0017A3CC /* SFundService.m */; };
 		D52903C7201EEBEC0017A3CC /* SFundBalanceModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D52903C6201EEBEC0017A3CC /* SFundBalanceModel.m */; };
 		D52903CA201EEC320017A3CC /* SFundBalanceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D52903C9201EEC320017A3CC /* SFundBalanceCell.m */; };
-		D52903CD201F0A490017A3CC /* SFundPlanCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D52903CC201F0A490017A3CC /* SFundPlanCell.m */; };
-		D52903D0201F0A9E0017A3CC /* SFundPlanModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D52903CF201F0A9E0017A3CC /* SFundPlanModel.m */; };
-		D52903D3201F0D5E0017A3CC /* SFundAddPlanCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D52903D2201F0D5E0017A3CC /* SFundAddPlanCell.m */; };
+		D52903CD201F0A490017A3CC /* SFundMyPlanCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D52903CC201F0A490017A3CC /* SFundMyPlanCell.m */; };
+		D52903D0201F0A9E0017A3CC /* SFundMyPlanModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D52903CF201F0A9E0017A3CC /* SFundMyPlanModel.m */; };
+		D52903D3201F0D5E0017A3CC /* SFundAddPlansCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D52903D2201F0D5E0017A3CC /* SFundAddPlansCell.m */; };
 		D52903D6201F0D8A0017A3CC /* SFundAddPlanModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D52903D5201F0D8A0017A3CC /* SFundAddPlanModel.m */; };
 		D52903D9201F11200017A3CC /* SFundTradeDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D52903D8201F11200017A3CC /* SFundTradeDetailCell.m */; };
 		D52903DC201F11340017A3CC /* SFundTradeTitleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D52903DB201F11340017A3CC /* SFundTradeTitleCell.m */; };
@@ -45,6 +45,10 @@
 		D52903E2201F116E0017A3CC /* SFundTradeDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D52903E1201F116E0017A3CC /* SFundTradeDetailModel.m */; };
 		D52903E5201F1BEC0017A3CC /* SFundBalanceRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = D52903E4201F1BEC0017A3CC /* SFundBalanceRequest.m */; };
 		D52903E8201F1BFE0017A3CC /* SFundBalanceResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = D52903E7201F1BFE0017A3CC /* SFundBalanceResponse.m */; };
+		D52903EB201F2BD40017A3CC /* SFundAddPlanRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = D52903EA201F2BD40017A3CC /* SFundAddPlanRequest.m */; };
+		D52903EE201F2BE60017A3CC /* SFundAddPlanResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = D52903ED201F2BE50017A3CC /* SFundAddPlanResponse.m */; };
+		D52903F7201F38430017A3CC /* SFundAddPlansModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D52903F6201F38430017A3CC /* SFundAddPlansModel.m */; };
+		D5290400201F3F780017A3CC /* SFundSectionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D52903FF201F3F780017A3CC /* SFundSectionModel.m */; };
 		D53B6B8D1FDF7A77006AEB46 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D53B6B8F1FDF7A77006AEB46 /* Localizable.strings */; };
 		D53B6B981FDF7DAD006AEB46 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D53B6B9A1FDF7DAD006AEB46 /* InfoPlist.strings */; };
 		D540F5421FDF83DF00AECCB7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D540F5411FDF83DF00AECCB7 /* Assets.xcassets */; };
@@ -213,12 +217,12 @@
 		D52903C6201EEBEC0017A3CC /* SFundBalanceModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SFundBalanceModel.m; sourceTree = "<group>"; };
 		D52903C8201EEC320017A3CC /* SFundBalanceCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SFundBalanceCell.h; sourceTree = "<group>"; };
 		D52903C9201EEC320017A3CC /* SFundBalanceCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SFundBalanceCell.m; sourceTree = "<group>"; };
-		D52903CB201F0A490017A3CC /* SFundPlanCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SFundPlanCell.h; sourceTree = "<group>"; };
-		D52903CC201F0A490017A3CC /* SFundPlanCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SFundPlanCell.m; sourceTree = "<group>"; };
-		D52903CE201F0A9E0017A3CC /* SFundPlanModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SFundPlanModel.h; sourceTree = "<group>"; };
-		D52903CF201F0A9E0017A3CC /* SFundPlanModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SFundPlanModel.m; sourceTree = "<group>"; };
-		D52903D1201F0D5E0017A3CC /* SFundAddPlanCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SFundAddPlanCell.h; sourceTree = "<group>"; };
-		D52903D2201F0D5E0017A3CC /* SFundAddPlanCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SFundAddPlanCell.m; sourceTree = "<group>"; };
+		D52903CB201F0A490017A3CC /* SFundMyPlanCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SFundMyPlanCell.h; sourceTree = "<group>"; };
+		D52903CC201F0A490017A3CC /* SFundMyPlanCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SFundMyPlanCell.m; sourceTree = "<group>"; };
+		D52903CE201F0A9E0017A3CC /* SFundMyPlanModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SFundMyPlanModel.h; sourceTree = "<group>"; };
+		D52903CF201F0A9E0017A3CC /* SFundMyPlanModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SFundMyPlanModel.m; sourceTree = "<group>"; };
+		D52903D1201F0D5E0017A3CC /* SFundAddPlansCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SFundAddPlansCell.h; sourceTree = "<group>"; };
+		D52903D2201F0D5E0017A3CC /* SFundAddPlansCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SFundAddPlansCell.m; sourceTree = "<group>"; };
 		D52903D4201F0D8A0017A3CC /* SFundAddPlanModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SFundAddPlanModel.h; sourceTree = "<group>"; };
 		D52903D5201F0D8A0017A3CC /* SFundAddPlanModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SFundAddPlanModel.m; sourceTree = "<group>"; };
 		D52903D7201F11200017A3CC /* SFundTradeDetailCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SFundTradeDetailCell.h; sourceTree = "<group>"; };
@@ -233,6 +237,14 @@
 		D52903E4201F1BEC0017A3CC /* SFundBalanceRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SFundBalanceRequest.m; sourceTree = "<group>"; };
 		D52903E6201F1BFE0017A3CC /* SFundBalanceResponse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SFundBalanceResponse.h; sourceTree = "<group>"; };
 		D52903E7201F1BFE0017A3CC /* SFundBalanceResponse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SFundBalanceResponse.m; sourceTree = "<group>"; };
+		D52903E9201F2BD40017A3CC /* SFundAddPlanRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SFundAddPlanRequest.h; sourceTree = "<group>"; };
+		D52903EA201F2BD40017A3CC /* SFundAddPlanRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SFundAddPlanRequest.m; sourceTree = "<group>"; };
+		D52903EC201F2BE50017A3CC /* SFundAddPlanResponse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SFundAddPlanResponse.h; sourceTree = "<group>"; };
+		D52903ED201F2BE50017A3CC /* SFundAddPlanResponse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SFundAddPlanResponse.m; sourceTree = "<group>"; };
+		D52903F5201F38430017A3CC /* SFundAddPlansModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SFundAddPlansModel.h; sourceTree = "<group>"; };
+		D52903F6201F38430017A3CC /* SFundAddPlansModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SFundAddPlansModel.m; sourceTree = "<group>"; };
+		D52903FE201F3F780017A3CC /* SFundSectionModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SFundSectionModel.h; sourceTree = "<group>"; };
+		D52903FF201F3F780017A3CC /* SFundSectionModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SFundSectionModel.m; sourceTree = "<group>"; };
 		D53B6B931FDF7ABB006AEB46 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D53B6B941FDF7B32006AEB46 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		D53B6B991FDF7DAD006AEB46 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -599,10 +611,14 @@
 			children = (
 				D52903D4201F0D8A0017A3CC /* SFundAddPlanModel.h */,
 				D52903D5201F0D8A0017A3CC /* SFundAddPlanModel.m */,
+				D52903F5201F38430017A3CC /* SFundAddPlansModel.h */,
+				D52903F6201F38430017A3CC /* SFundAddPlansModel.m */,
 				D52903C5201EEBEC0017A3CC /* SFundBalanceModel.h */,
 				D52903C6201EEBEC0017A3CC /* SFundBalanceModel.m */,
-				D52903CE201F0A9E0017A3CC /* SFundPlanModel.h */,
-				D52903CF201F0A9E0017A3CC /* SFundPlanModel.m */,
+				D52903CE201F0A9E0017A3CC /* SFundMyPlanModel.h */,
+				D52903CF201F0A9E0017A3CC /* SFundMyPlanModel.m */,
+				D52903FE201F3F780017A3CC /* SFundSectionModel.h */,
+				D52903FF201F3F780017A3CC /* SFundSectionModel.m */,
 				D52903E0201F116E0017A3CC /* SFundTradeDetailModel.h */,
 				D52903E1201F116E0017A3CC /* SFundTradeDetailModel.m */,
 				D52903DD201F115F0017A3CC /* SFundTradeTitleModel.h */,
@@ -614,12 +630,12 @@
 		D5265E59201EC279000C4A8D /* View */ = {
 			isa = PBXGroup;
 			children = (
-				D52903D1201F0D5E0017A3CC /* SFundAddPlanCell.h */,
-				D52903D2201F0D5E0017A3CC /* SFundAddPlanCell.m */,
+				D52903D1201F0D5E0017A3CC /* SFundAddPlansCell.h */,
+				D52903D2201F0D5E0017A3CC /* SFundAddPlansCell.m */,
 				D52903C8201EEC320017A3CC /* SFundBalanceCell.h */,
 				D52903C9201EEC320017A3CC /* SFundBalanceCell.m */,
-				D52903CB201F0A490017A3CC /* SFundPlanCell.h */,
-				D52903CC201F0A490017A3CC /* SFundPlanCell.m */,
+				D52903CB201F0A490017A3CC /* SFundMyPlanCell.h */,
+				D52903CC201F0A490017A3CC /* SFundMyPlanCell.m */,
 				D52903B7201ED0E30017A3CC /* SFundTableView.h */,
 				D52903B8201ED0E30017A3CC /* SFundTableView.m */,
 				D52903D7201F11200017A3CC /* SFundTradeDetailCell.h */,
@@ -1364,6 +1380,8 @@
 			children = (
 				D52903E3201F1BEC0017A3CC /* SFundBalanceRequest.h */,
 				D52903E4201F1BEC0017A3CC /* SFundBalanceRequest.m */,
+				D52903E9201F2BD40017A3CC /* SFundAddPlanRequest.h */,
+				D52903EA201F2BD40017A3CC /* SFundAddPlanRequest.m */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -1373,6 +1391,8 @@
 			children = (
 				D52903E6201F1BFE0017A3CC /* SFundBalanceResponse.h */,
 				D52903E7201F1BFE0017A3CC /* SFundBalanceResponse.m */,
+				D52903EC201F2BE50017A3CC /* SFundAddPlanResponse.h */,
+				D52903ED201F2BE50017A3CC /* SFundAddPlanResponse.m */,
 			);
 			path = Response;
 			sourceTree = "<group>";
@@ -1618,6 +1638,7 @@
 				D5957AF820073B9000F6EE60 /* STextField.m in Sources */,
 				D5957AF620073B9000F6EE60 /* STabBar.m in Sources */,
 				D521BAA120186D16000299FC /* SUpdatePwdRequest.m in Sources */,
+				D52903EB201F2BD40017A3CC /* SFundAddPlanRequest.m in Sources */,
 				D521BAA820187BE7000299FC /* SEnableGoogleAuthRequest.m in Sources */,
 				D56C8E022019C0C600DEB9F2 /* UIImage+LaunchImage.m in Sources */,
 				D5E610D620089546003C847A /* SActivityController.m in Sources */,
@@ -1625,7 +1646,7 @@
 				D50297FA200C56EA008375F9 /* TBSectionModel.m in Sources */,
 				D52903B9201ED0E30017A3CC /* SFundTableView.m in Sources */,
 				D5957B072007466C00F6EE60 /* SDao+Category.mm in Sources */,
-				D52903D0201F0A9E0017A3CC /* SFundPlanModel.m in Sources */,
+				D52903D0201F0A9E0017A3CC /* SFundMyPlanModel.m in Sources */,
 				D5ACA7442015CAB900A6C84F /* Swizzle.m in Sources */,
 				D5709CC0200EE00B007BBD4C /* SLanguageController.m in Sources */,
 				D54894C61FF22C1400F2019B /* SVotesController.m in Sources */,
@@ -1635,6 +1656,7 @@
 				D5709CC9200EE60B007BBD4C /* SLanguageService.m in Sources */,
 				D5957AE720073B9000F6EE60 /* SCache.m in Sources */,
 				D56C8E162019D81600DEB9F2 /* SRewardRequest.m in Sources */,
+				D5290400201F3F780017A3CC /* SFundSectionModel.m in Sources */,
 				D5957AEA20073B9000F6EE60 /* STableViewController.m in Sources */,
 				D5DB07441FEA692F00A347B1 /* main.m in Sources */,
 				D554813B20107356003C1D5D /* SGoogleValidate01Controller.m in Sources */,
@@ -1673,6 +1695,7 @@
 				D5E451CA2018A9C000F6CC07 /* SGoogleValidate02Controller.m in Sources */,
 				D54894DF1FF235AD00F2019B /* AppContext+Cache.m in Sources */,
 				D52903AF201ECF1B0017A3CC /* THeaderView.m in Sources */,
+				D52903F7201F38430017A3CC /* SFundAddPlansModel.m in Sources */,
 				D5709CD3200F3852007BBD4C /* SLanguage.m in Sources */,
 				D5ACA74A2015E72200A6C84F /* SSendMailRequest.m in Sources */,
 				D56C8DF72019BCD900DEB9F2 /* SWelcomeRequest.m in Sources */,
@@ -1690,7 +1713,7 @@
 				D548950D1FF2536D00F2019B /* SNetwork.m in Sources */,
 				D54894621FF0938400F2019B /* test002.m in Sources */,
 				D5E610DE2008A669003C847A /* SWelcomeController.mm in Sources */,
-				D52903D3201F0D5E0017A3CC /* SFundAddPlanCell.m in Sources */,
+				D52903D3201F0D5E0017A3CC /* SFundAddPlansCell.m in Sources */,
 				D5ACA7472015CAB900A6C84F /* UINavigationItem+Margin.m in Sources */,
 				D5709CBD200E081B007BBD4C /* SSetting1Controller.mm in Sources */,
 				D5D7D87220172BED005CBB11 /* SLoginByMailResponse.m in Sources */,
@@ -1714,12 +1737,13 @@
 				D56C8E062019C82D00DEB9F2 /* SWelcomeView.m in Sources */,
 				D50297EA200C50CC008375F9 /* SSettingService.mm in Sources */,
 				D5957AF720073B9000F6EE60 /* STableView.m in Sources */,
+				D52903EE201F2BE60017A3CC /* SFundAddPlanResponse.m in Sources */,
 				D5D56EBB201AEC730099502E /* SRewardRankingCell.m in Sources */,
 				D54894CF1FF22C5300F2019B /* SMarketController.m in Sources */,
 				D521BAAB20187BF8000299FC /* SEnableGoogleAuthResponse.m in Sources */,
 				D5957AE820073B9000F6EE60 /* SNavigationController.m in Sources */,
 				D54483451FED040800D2F681 /* SVersionModel.m in Sources */,
-				D52903CD201F0A490017A3CC /* SFundPlanCell.m in Sources */,
+				D52903CD201F0A490017A3CC /* SFundMyPlanCell.m in Sources */,
 				D57ECF0A20182849007151A3 /* SForgetPwdByMailRequest.m in Sources */,
 				D5D7D86F20172BAE005CBB11 /* SLoginByMailRequest.m in Sources */,
 				D5957AF420073B9000F6EE60 /* SLabel.m in Sources */,

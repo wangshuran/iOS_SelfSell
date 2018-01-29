@@ -34,13 +34,13 @@
         SFundBalanceModel * model = [[SFundBalanceModel alloc] init];
         [data addObject:model];
     }{
-        SFundPlanModel * model = [[SFundPlanModel alloc] init];
+        SFundMyPlanModel * model = [[SFundMyPlanModel alloc] init];
         [data addObject:model];
     }{
-        SFundPlanModel * model = [[SFundPlanModel alloc] init];
+        SFundMyPlanModel * model = [[SFundMyPlanModel alloc] init];
         [data addObject:model];
     }{
-        SFundAddPlanModel * model = [[SFundAddPlanModel alloc] init];
+        SFundAddPlansModel * model = [[SFundAddPlansModel alloc] init];
         [data addObject:model];
     }{
         SFundTradeTitleModel * model = [[SFundTradeTitleModel alloc] init];

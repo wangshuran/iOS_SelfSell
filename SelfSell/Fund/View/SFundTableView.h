@@ -7,9 +7,9 @@
 //
 
 #import "TBTableView.h"
-#import "SFundAddPlanCell.h"
+#import "SFundAddPlansCell.h"
 #import "SFundBalanceCell.h"
-#import "SFundPlanCell.h"
+#import "SFundMyPlanCell.h"
 #import "SFundTradeDetailCell.h"
 #import "SFundTradeTitleCell.h"
 

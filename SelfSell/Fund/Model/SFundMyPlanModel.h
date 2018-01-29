@@ -1,5 +1,5 @@
 //
-//  SFundPlanModel.h
+//  SFundMyPlanModel.h
 //  SelfSell
 //
 //  Created by liqiang on 2018/1/29.
@@ -8,7 +8,7 @@
 
 #import "TBModel.h"
 
-@interface SFundPlanModel : TBModel
+@interface SFundMyPlanModel : TBModel
 
 @property (nonatomic, copy) NSString * planId;
 

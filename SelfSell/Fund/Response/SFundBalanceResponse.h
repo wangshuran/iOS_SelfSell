@@ -7,16 +7,10 @@
 //
 
 #import "SResponse.h"
-#import "SFundPlanModel.h"
+#import "SFundBalanceModel.h"
 
 @interface SFundBalanceResponse : SResponse
 
-@property (nonatomic, copy) NSString * totalSSC;
-
-@property (nonatomic, copy) NSString * totalPrice;
-
-@property (nonatomic, copy) NSString * availableSSC;
-
-@property (nonatomic, strong) NSArray<SFundPlanModel *> * fundDetail;
+@property (nonatomic, strong) SFundBalanceModel * balanceModel;
 
 @end

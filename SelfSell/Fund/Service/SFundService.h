@@ -9,9 +9,9 @@
 #import "SService.h"
 #import "TBSectionModel.h"
 #import "TBModel.h"
-#import "SFundAddPlanModel.h"
+#import "SFundAddPlansModel.h"
 #import "SFundBalanceModel.h"
-#import "SFundPlanModel.h"
+#import "SFundMyPlanModel.h"
 #import "SFundTradeDetailModel.h"
 #import "SFundTradeTitleModel.h"
 
