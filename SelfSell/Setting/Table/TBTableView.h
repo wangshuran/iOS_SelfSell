@@ -7,7 +7,6 @@
 //
 
 #import <LBaseClass/LBaseClass.h>
-#import "THeaderView.h"
 #import "TBSectionModel.h"
 #import "TBArrowCell.h"
 #import "TBCell.h"
@@ -15,6 +14,7 @@
 #import "TBExitCell.h"
 #import "TBSwitchCell.h"
 #import "TBTextCell.h"
+#import "THeaderView.h"
 
 @interface TBTableView : STableView
 

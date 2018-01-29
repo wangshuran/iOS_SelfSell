@@ -569,8 +569,6 @@
 		D529039E201ECF1B0017A3CC /* Table */ = {
 			isa = PBXGroup;
 			children = (
-				D529039F201ECF1B0017A3CC /* THeaderView.h */,
-				D52903A0201ECF1B0017A3CC /* THeaderView.m */,
 				D52903A1201ECF1B0017A3CC /* TBArrowCell.h */,
 				D52903A2201ECF1B0017A3CC /* TBArrowCell.m */,
 				D52903A3201ECF1B0017A3CC /* TBCell.h */,
@@ -585,6 +583,8 @@
 				D52903AC201ECF1B0017A3CC /* TBTableView.m */,
 				D52903AD201ECF1B0017A3CC /* TBTextCell.h */,
 				D52903AE201ECF1B0017A3CC /* TBTextCell.m */,
+				D529039F201ECF1B0017A3CC /* THeaderView.h */,
+				D52903A0201ECF1B0017A3CC /* THeaderView.m */,
 			);
 			path = Table;
 			sourceTree = "<group>";
