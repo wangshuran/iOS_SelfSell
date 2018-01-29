@@ -114,7 +114,7 @@
     __weak typeof(self) weakSelf = self;
     [self.view addSubview:self.navigationBar];
     [self.view addSubview:self.vUser];
-    [self.view addSubview:self.tbTableView];    
+    [self.view addSubview:self.tbTableView];
     [self.navigationBar mas_updateConstraints:^(MASConstraintMaker * make) {
         make.top.left.right.mas_equalTo(weakSelf.view);
         make.height.mas_equalTo(kNavHeight);
