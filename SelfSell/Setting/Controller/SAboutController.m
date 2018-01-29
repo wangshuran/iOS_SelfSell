@@ -56,7 +56,7 @@
         width = maxWidth;
     }
     [self.imgLogo mas_updateConstraints:^(MASConstraintMaker * make) {
-        make.top.mas_equalTo(150.0f);
+        make.top.mas_equalTo(kNavHeight + 100.0f);
         make.height.mas_equalTo(100.0f);
         make.centerX.mas_equalTo(weakSelf.view.mas_centerX);
     }];

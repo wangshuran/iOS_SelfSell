@@ -6,7 +6,7 @@
          contextName = "-[SSetting0Controller noticeCellEvent:]:SSetting0Controller.m">
       </ContextState>
       <ContextState
-         contextName = "-[SWelcomeResponse reflect:]:SWelcomeResponse.m">
+         contextName = "::-[SSetting1Controller noticeCellEvent:](NSNotification *):SSetting1Controller.mm">
       </ContextState>
       <ContextState
          contextName = "__34-[SLoginByMailController btnLogin]_block_invoke_2:SLoginByMailController.m">
@@ -25,11 +25,6 @@
       </ContextState>
       <ContextState
          contextName = "-[SLanguageController updateLanguage:]:SLanguageController.m">
-         <PersistentStrings>
-            <PersistentString
-               value = "[AppContext sharedAppContext].accountModel">
-            </PersistentString>
-         </PersistentStrings>
       </ContextState>
       <ContextState
          contextName = "::-[AppContext(Account) updateLoginAccount:](SAccountModel *):AppContext+Account.mm">
@@ -66,10 +61,10 @@
          contextName = "-[SLanguageController viewDidLoad]:SLanguageController.m">
          <PersistentStrings>
             <PersistentString
-               value = "self.navigationItem">
+               value = "self.navigationItem.rightBarButtonItem">
             </PersistentString>
             <PersistentString
-               value = "self.navigationItem.rightBarButtonItem">
+               value = "self.navigationItem">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -80,15 +75,26 @@
          contextName = "-[SViewController viewDidAppear:]:SViewController.m">
          <PersistentStrings>
             <PersistentString
-               value = "view.bounds">
+               value = "stackView.frame">
             </PersistentString>
             <PersistentString
-               value = "stackView.frame">
+               value = "view.bounds">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "__57-[AppDelegate application:didFinishLaunchingWithOptions:]_block_invoke.69:AppDelegate.m">
+      </ContextState>
+      <ContextState
          contextName = "::-[AppContext(Account) getLastLoginAccount]():AppContext+Account.mm">
+      </ContextState>
+      <ContextState
+         contextName = "-[AppContext(Cache) getLocalValue:]:AppContext+Cache.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.accountModel">
+            </PersistentString>
+         </PersistentStrings>
       </ContextState>
       <ContextState
          contextName = "-[SLanguageController viewDidAppear:]:SLanguageController.m">
@@ -106,9 +112,6 @@
       </ContextState>
       <ContextState
          contextName = "__35-[SLoginByMailController btnFinish]_block_invoke_2:SLoginByMailController.m">
-      </ContextState>
-      <ContextState
-         contextName = "-[AppDelegate application:didFinishLaunchingWithOptions:]:AppDelegate.m">
       </ContextState>
       <ContextState
          contextName = "-[NSObject(MJKeyValue) mj_JSONData]:NSObject+MJKeyValue.m">
@@ -131,7 +134,7 @@
          contextName = "-[SAccountModel isLoginUser]:SAccountModel.m">
       </ContextState>
       <ContextState
-         contextName = "::-[SSetting1Controller noticeCellEvent:](NSNotification *):SSetting1Controller.mm">
+         contextName = "-[SWelcomeResponse reflect:]:SWelcomeResponse.m">
       </ContextState>
    </ContextStates>
 </VariablesViewState>

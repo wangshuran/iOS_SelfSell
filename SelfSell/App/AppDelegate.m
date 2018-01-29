@@ -55,6 +55,7 @@
                     model.data.pwd = accountModel.pwd;
                     model.data.loginType = accountModel.loginType;
                     model.data.loginTime = [[NSDate date] timeIntervalSince1970];
+                    model.data.languageCode = accountModel.languageCode;
                     accountModel = model.data;
                 }
                 [[AppContext sharedAppContext].accountDao close];
