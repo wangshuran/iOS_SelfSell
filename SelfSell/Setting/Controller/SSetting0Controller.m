@@ -8,7 +8,7 @@
 
 #import "SSetting0Controller.h"
 #import "SSettingService.h"
-#import "TBTableView.h"
+#import "SettingTableView.h"
 #import "SNavigationBar.h"
 
 @interface SSetting0Controller ()
@@ -101,7 +101,7 @@
 
 - (TBTableView *)tbTableView {
     if (!_tbTableView) {
-        _tbTableView = [[TBTableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
+        _tbTableView = [[SettingTableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
         _tbTableView.isEnableHeader = NO;
         _tbTableView.isEnableFooter = NO;
     }

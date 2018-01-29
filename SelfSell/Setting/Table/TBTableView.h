@@ -7,6 +7,7 @@
 //
 
 #import <LBaseClass/LBaseClass.h>
+#import "THeaderView.h"
 #import "TBSectionModel.h"
 #import "TBArrowCell.h"
 #import "TBCell.h"

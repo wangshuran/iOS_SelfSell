@@ -8,7 +8,7 @@
 
 #import "SSetting1Controller.h"
 #import "SSettingService.h"
-#import "TBTableView.h"
+#import "SettingTableView.h"
 #import "STouchID.h"
 #import "SDao+Category.h"
 #import "SCommonModel+WCTTableCoding.h"
@@ -46,7 +46,7 @@
 
 - (TBTableView *)tbTableView {
     if (!_tbTableView) {
-        _tbTableView = [[TBTableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
+        _tbTableView = [[SettingTableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
         _tbTableView.isEnableHeader = NO;
         _tbTableView.isEnableFooter = NO;
     }

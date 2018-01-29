@@ -1,5 +1,5 @@
 //
-//  SHeaderView.h
+//  THeaderView.h
 //  SelfSell
 //
 //  Created by liqiang on 2018/1/19.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SHeaderView : UITableViewHeaderFooterView
+@interface THeaderView : UITableViewHeaderFooterView
 
 @end

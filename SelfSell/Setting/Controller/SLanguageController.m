@@ -8,7 +8,7 @@
 
 #import "SLanguageController.h"
 #import "SLanguageService.h"
-#import "TBTableView.h"
+#import "SettingTableView.h"
 #import "SLanguage.h"
 
 @interface SLanguageController ()
@@ -48,7 +48,7 @@
 
 - (TBTableView *)tbTableView {
     if (!_tbTableView) {
-        _tbTableView = [[TBTableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
+        _tbTableView = [[SettingTableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
         _tbTableView.isEnableFooter = NO;
         _tbTableView.isEnableHeader = NO;
     }
