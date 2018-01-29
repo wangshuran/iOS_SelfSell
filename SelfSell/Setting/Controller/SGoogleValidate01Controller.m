@@ -219,7 +219,7 @@
         [self.view addSubview:self.v0];
         [self.view addSubview:self.btnClose];
         [self.lbInfo mas_updateConstraints:^(MASConstraintMaker * make) {
-            make.top.mas_equalTo(weakSelf.view).mas_offset(84.0f);
+            make.top.mas_equalTo(weakSelf.view).mas_offset(kNavHeight + 20.0f);
             make.left.mas_equalTo(weakSelf.view).mas_offset(10.0f);
             make.right.mas_equalTo(weakSelf.view).mas_offset(-10.0f);
             make.height.mas_equalTo(30.0f);

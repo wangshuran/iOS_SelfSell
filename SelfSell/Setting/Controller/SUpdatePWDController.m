@@ -188,7 +188,7 @@
     [self.view addSubview:self.v2];
     [self.view addSubview:self.v3];
     [self.v0 mas_updateConstraints:^(MASConstraintMaker * make) {
-        make.top.mas_equalTo(84.0f);
+        make.top.mas_equalTo(kNavHeight + 20.0f);
         make.left.right.mas_equalTo(weakSelf.view);
         make.height.mas_equalTo(50.0f);
     }];

@@ -275,11 +275,9 @@
     [self.view addSubview:self.v2];
     [self.view addSubview:self.v3];
     [self.view addSubview:self.v4];
-    CGFloat navHeight = isIPhoneX ? 84.0f : 64.0f;
-    
     [self.navigationBar mas_updateConstraints:^(MASConstraintMaker * make) {
         make.top.left.right.mas_equalTo(weakSelf.view);
-        make.height.mas_equalTo(navHeight);
+        make.height.mas_equalTo(kNavHeight);
     }];
     [self.v0 mas_updateConstraints:^(MASConstraintMaker * make) {
         make.top.mas_equalTo(64.0f);

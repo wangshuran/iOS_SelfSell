@@ -486,13 +486,11 @@
     __weak typeof(self) weakSelf = self;
     [self.view addSubview:self.navigationBar];
     [self.view addSubview:self.scrollView];
-    CGFloat navHeight = isIPhoneX ? 84.0f : 64.0f;
     CGFloat width = CGRectGetWidth(self.view.bounds);
-    CGFloat height = CGRectGetHeight(self.view.bounds);
-    
+    CGFloat height = CGRectGetHeight(self.view.bounds);    
     [self.navigationBar mas_updateConstraints:^(MASConstraintMaker * make) {
         make.top.left.right.mas_equalTo(weakSelf.view);
-        make.height.mas_equalTo(navHeight);
+        make.height.mas_equalTo(kNavHeight);
     }];
     [self.scrollView mas_updateConstraints:^(MASConstraintMaker * make) {
         make.top.mas_equalTo(weakSelf.navigationBar.mas_bottom);

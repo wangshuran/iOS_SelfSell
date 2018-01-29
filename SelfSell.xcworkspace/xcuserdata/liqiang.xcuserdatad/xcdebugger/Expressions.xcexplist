@@ -6,12 +6,7 @@
          contextName = "-[SSetting0Controller noticeCellEvent:]:SSetting0Controller.m">
       </ContextState>
       <ContextState
-         contextName = "+[LTest randomColorView:]:LTest.m">
-         <PersistentStrings>
-            <PersistentString
-               value = "view.subviews">
-            </PersistentString>
-         </PersistentStrings>
+         contextName = "-[SWelcomeResponse reflect:]:SWelcomeResponse.m">
       </ContextState>
       <ContextState
          contextName = "__34-[SLoginByMailController btnLogin]_block_invoke_2:SLoginByMailController.m">
@@ -54,9 +49,6 @@
          contextName = "-[UIColor(Category) getR]:UIColor+Category.m">
       </ContextState>
       <ContextState
-         contextName = "-[SNavigationController navigationBar:didPushItem:]:SNavigationController.m">
-      </ContextState>
-      <ContextState
          contextName = "-[SSetting0Controller viewWillAppear:]:SSetting0Controller.m">
          <PersistentStrings>
             <PersistentString
@@ -65,16 +57,19 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "-[SNavigationController navigationBar:didPushItem:]:SNavigationController.m">
+      </ContextState>
+      <ContextState
          contextName = "-[TBCheckCell setModel:]:TBCheckCell.m">
       </ContextState>
       <ContextState
          contextName = "-[SLanguageController viewDidLoad]:SLanguageController.m">
          <PersistentStrings>
             <PersistentString
-               value = "self.navigationItem.rightBarButtonItem">
+               value = "self.navigationItem">
             </PersistentString>
             <PersistentString
-               value = "self.navigationItem">
+               value = "self.navigationItem.rightBarButtonItem">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -85,10 +80,10 @@
          contextName = "-[SViewController viewDidAppear:]:SViewController.m">
          <PersistentStrings>
             <PersistentString
-               value = "stackView.frame">
+               value = "view.bounds">
             </PersistentString>
             <PersistentString
-               value = "view.bounds">
+               value = "stackView.frame">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -122,6 +117,14 @@
          contextName = "__26+[SNetwork request:block:]_block_invoke.82:SNetwork.m">
       </ContextState>
       <ContextState
+         contextName = "+[LTest randomColorView:]:LTest.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "view.subviews">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "-[SLanguageController loadView]:SLanguageController.m">
       </ContextState>
       <ContextState
@@ -129,9 +132,6 @@
       </ContextState>
       <ContextState
          contextName = "::-[SSetting1Controller noticeCellEvent:](NSNotification *):SSetting1Controller.mm">
-      </ContextState>
-      <ContextState
-         contextName = "-[SWelcomeResponse reflect:]:SWelcomeResponse.m">
       </ContextState>
    </ContextStates>
 </VariablesViewState>
