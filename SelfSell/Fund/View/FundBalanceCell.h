@@ -1,14 +1,14 @@
 //
-//  FundTableView.h
+//  FundBalanceCell.h
 //  SelfSell
 //
 //  Created by liqiang on 2018/1/29.
 //  Copyright © 2018年 Goopal. All rights reserved.
 //
 
-#import "TBTableView.h"
-#import "FundBalanceCell.h"
+#import "TBCell.h"
+#import "FundBalanceModel.h"
 
-@interface FundTableView : TBTableView
+@interface FundBalanceCell : TBCell
 
 @end

@@ -90,7 +90,6 @@
         _settingService = [[SSettingService alloc] init];
         [_settingService subscribeNext:LCmdGetSetting0 nextBlock:^(LCmdTransfer * transfer) {
             NSArray<TBSectionModel *> * model = transfer.value;
-            
             weakSelf.tableView.data = model;
             [weakSelf.tableView reloadData];
         }];
@@ -145,7 +144,7 @@
     if (![[AppContext sharedAppContext].accountModel isLoginUser]) {
         SPostNotification(kNoticeToLogin);
         return;
-    }    
+    }
     [self updateUI];
 }
 

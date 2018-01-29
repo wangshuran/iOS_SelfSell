@@ -32,6 +32,9 @@
 		D52903B6201ECF1B0017A3CC /* TBTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D52903AE201ECF1B0017A3CC /* TBTextCell.m */; };
 		D52903B9201ED0E30017A3CC /* FundTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = D52903B8201ED0E30017A3CC /* FundTableView.m */; };
 		D52903BF201ED2C50017A3CC /* TBBtnCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D52903BD201ED2C50017A3CC /* TBBtnCell.m */; };
+		D52903C4201EE95F0017A3CC /* SFundService.m in Sources */ = {isa = PBXBuildFile; fileRef = D52903C3201EE95F0017A3CC /* SFundService.m */; };
+		D52903C7201EEBEC0017A3CC /* FundBalanceModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D52903C6201EEBEC0017A3CC /* FundBalanceModel.m */; };
+		D52903CA201EEC320017A3CC /* FundBalanceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D52903C9201EEC320017A3CC /* FundBalanceCell.m */; };
 		D53B6B8D1FDF7A77006AEB46 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D53B6B8F1FDF7A77006AEB46 /* Localizable.strings */; };
 		D53B6B981FDF7DAD006AEB46 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D53B6B9A1FDF7DAD006AEB46 /* InfoPlist.strings */; };
 		D540F5421FDF83DF00AECCB7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D540F5411FDF83DF00AECCB7 /* Assets.xcassets */; };
@@ -194,6 +197,12 @@
 		D52903B8201ED0E30017A3CC /* FundTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FundTableView.m; sourceTree = "<group>"; };
 		D52903BD201ED2C50017A3CC /* TBBtnCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBBtnCell.m; sourceTree = "<group>"; };
 		D52903BE201ED2C50017A3CC /* TBBtnCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBBtnCell.h; sourceTree = "<group>"; };
+		D52903C2201EE95F0017A3CC /* SFundService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SFundService.h; sourceTree = "<group>"; };
+		D52903C3201EE95F0017A3CC /* SFundService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SFundService.m; sourceTree = "<group>"; };
+		D52903C5201EEBEC0017A3CC /* FundBalanceModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FundBalanceModel.h; sourceTree = "<group>"; };
+		D52903C6201EEBEC0017A3CC /* FundBalanceModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FundBalanceModel.m; sourceTree = "<group>"; };
+		D52903C8201EEC320017A3CC /* FundBalanceCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FundBalanceCell.h; sourceTree = "<group>"; };
+		D52903C9201EEC320017A3CC /* FundBalanceCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FundBalanceCell.m; sourceTree = "<group>"; };
 		D53B6B931FDF7ABB006AEB46 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D53B6B941FDF7B32006AEB46 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		D53B6B991FDF7DAD006AEB46 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -428,12 +437,12 @@
 		D50297CB200C50CC008375F9 /* Setting */ = {
 			isa = PBXGroup;
 			children = (
-				D529039E201ECF1B0017A3CC /* Table */,
 				D50297CC200C50CC008375F9 /* Controller */,
 				D50297CF200C50CC008375F9 /* Model */,
 				D50297D2200C50CC008375F9 /* Request */,
 				D50297D5200C50CC008375F9 /* Response */,
 				D50297D8200C50CC008375F9 /* Service */,
+				D529039E201ECF1B0017A3CC /* Table */,
 				D50297DB200C50CC008375F9 /* View */,
 				D50297DE200C50CC008375F9 /* ViewManager */,
 				D50297E1200C50CC008375F9 /* ViewModel */,
@@ -558,6 +567,8 @@
 		D5265E58201EC279000C4A8D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D52903C5201EEBEC0017A3CC /* FundBalanceModel.h */,
+				D52903C6201EEBEC0017A3CC /* FundBalanceModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -565,6 +576,8 @@
 		D5265E59201EC279000C4A8D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D52903C8201EEC320017A3CC /* FundBalanceCell.h */,
+				D52903C9201EEC320017A3CC /* FundBalanceCell.m */,
 				D52903B7201ED0E30017A3CC /* FundTableView.h */,
 				D52903B8201ED0E30017A3CC /* FundTableView.m */,
 			);
@@ -592,6 +605,15 @@
 				D52903A0201ECF1B0017A3CC /* THeaderView.m */,
 			);
 			path = Table;
+			sourceTree = "<group>";
+		};
+		D52903C1201EE94C0017A3CC /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				D52903C2201EE95F0017A3CC /* SFundService.h */,
+				D52903C3201EE95F0017A3CC /* SFundService.m */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 		D54483391FED037D00D2F681 /* Version */ = {
@@ -1276,6 +1298,7 @@
 				D5265E58201EC279000C4A8D /* Model */,
 				D5E610CF200894B6003C847A /* Request */,
 				D5E610D0200894B6003C847A /* Response */,
+				D52903C1201EE94C0017A3CC /* Service */,
 				D5265E59201EC279000C4A8D /* View */,
 			);
 			path = Fund;
@@ -1556,6 +1579,7 @@
 				D5709CC0200EE00B007BBD4C /* SLanguageController.m in Sources */,
 				D54894C61FF22C1400F2019B /* SVotesController.m in Sources */,
 				D54894F01FF23AAB00F2019B /* SCheckVersionResponse.m in Sources */,
+				D52903CA201EEC320017A3CC /* FundBalanceCell.m in Sources */,
 				D5709CC9200EE60B007BBD4C /* SLanguageService.m in Sources */,
 				D5957AE720073B9000F6EE60 /* SCache.m in Sources */,
 				D56C8E162019D81600DEB9F2 /* SRewardRequest.m in Sources */,
@@ -1589,6 +1613,7 @@
 				D521BAA420186D27000299FC /* SUpdatePwdResponse.m in Sources */,
 				D5ACA7462015CAB900A6C84F /* UINavigationBarContentViewLayout+Margin.m in Sources */,
 				D5ACA7532015E85700A6C84F /* SRegisterByMailResponse.m in Sources */,
+				D52903C7201EEBEC0017A3CC /* FundBalanceModel.m in Sources */,
 				D5957AEF20073B9000F6EE60 /* SRequest.m in Sources */,
 				D5709CC3200EE021007BBD4C /* SAboutController.m in Sources */,
 				D5E451CA2018A9C000F6CC07 /* SGoogleValidate02Controller.m in Sources */,
@@ -1625,6 +1650,7 @@
 				D5709CC6200EE03A007BBD4C /* SUpdatePWDController.m in Sources */,
 				D52903B1201ECF1B0017A3CC /* TBCell.m in Sources */,
 				D5029803200C578F008375F9 /* TBArrowModel.m in Sources */,
+				D52903C4201EE95F0017A3CC /* SFundService.m in Sources */,
 				D54894E01FF235AD00F2019B /* AppContext+Account.mm in Sources */,
 				D56C8E062019C82D00DEB9F2 /* SWelcomeView.m in Sources */,
 				D50297EA200C50CC008375F9 /* SSettingService.mm in Sources */,

@@ -14,7 +14,8 @@
 
 - (instancetype)initWithFrame:(CGRect)frame style:(UITableViewStyle)style {
     self = [super initWithFrame:frame style:style];
-    
+    [self registerClass:FundBalanceCell.class forCellReuseIdentifier:NSStringFromClass(FundBalanceModel.class)];
+
     return self;
 }
 

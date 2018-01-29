@@ -49,7 +49,7 @@ LSingleton_m(AppContext);
         [self reloadRootVC];
         _rootVC.tabBar.tintColor = kColorOrange;
         _rootVC.tabBar.barTintColor = kColorWhite10;
-        _rootVC.selectedViewController = self.activityNav;
+        _rootVC.selectedViewController = self.fundNav;
     }
     
     return _rootVC;
