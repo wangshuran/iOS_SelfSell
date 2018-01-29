@@ -1,14 +1,14 @@
 //
-//  FundTradeTitleCell.m
+//  SFundTradeTitleCell.m
 //  SelfSell
 //
 //  Created by liqiang on 2018/1/29.
 //  Copyright © 2018年 Goopal. All rights reserved.
 //
 
-#import "FundTradeTitleCell.h"
+#import "SFundTradeTitleCell.h"
 
-@interface FundTradeTitleCell()
+@interface SFundTradeTitleCell()
 
 @property (nonatomic, strong) SLabel * lbHistory;
 
@@ -22,7 +22,7 @@
 
 @end
 
-@implementation FundTradeTitleCell
+@implementation SFundTradeTitleCell
 
 #pragma mark - Interface
 

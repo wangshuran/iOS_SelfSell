@@ -1,14 +1,14 @@
 //
-//  FundBalanceCell.m
+//  SFundBalanceCell.m
 //  SelfSell
 //
 //  Created by liqiang on 2018/1/29.
 //  Copyright © 2018年 Goopal. All rights reserved.
 //
 
-#import "FundBalanceCell.h"
+#import "SFundBalanceCell.h"
 
-@interface FundBalanceCell()
+@interface SFundBalanceCell()
 
 @property (nonatomic, strong) SView * vBackground;
 
@@ -20,7 +20,7 @@
 
 @end
 
-@implementation FundBalanceCell
+@implementation SFundBalanceCell
 
 #pragma mark - Interface
 

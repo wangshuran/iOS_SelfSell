@@ -1,5 +1,5 @@
 //
-//  FundAddPlanCell.h
+//  SFundTradeDetailCell.h
 //  SelfSell
 //
 //  Created by liqiang on 2018/1/29.
@@ -7,8 +7,8 @@
 //
 
 #import "TBCell.h"
-#import "FundAddPlanModel.h"
+#import "FundTradeDetailModel.h"
 
-@interface FundAddPlanCell : TBCell
+@interface SFundTradeDetailCell : TBCell
 
 @end

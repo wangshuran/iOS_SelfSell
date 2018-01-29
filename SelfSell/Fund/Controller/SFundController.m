@@ -8,14 +8,14 @@
 
 #import "SFundController.h"
 #import "SNavigationBar.h"
-#import "FundTableView.h"
+#import "SFundTableView.h"
 #import "SFundService.h"
 
 @interface SFundController ()
 
 @property (nonatomic, strong) SNavigationBar * navigationBar;
 
-@property (nonatomic, strong) FundTableView * tableView;
+@property (nonatomic, strong) SFundTableView * tableView;
 
 @property (nonatomic, strong) SFundService * fundService;
 
@@ -54,10 +54,10 @@
     return _navigationBar;
 }
 
-- (FundTableView *)tableView {
+- (SFundTableView *)tableView {
     if (!_tableView) {
         __weak typeof(self) weakSelf = self;
-        _tableView = [[FundTableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
+        _tableView = [[SFundTableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
         _tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
             [weakSelf.fundService execute:[LCmdTransfer cmd:LCmdGetLastPage value:nil]];
         }];

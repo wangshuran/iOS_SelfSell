@@ -1,20 +1,20 @@
 //
-//  FundAddPlanCell.m
+//  SFundAddPlanCell.m
 //  SelfSell
 //
 //  Created by liqiang on 2018/1/29.
 //  Copyright © 2018年 Goopal. All rights reserved.
 //
 
-#import "FundAddPlanCell.h"
+#import "SFundAddPlanCell.h"
 
-@interface FundAddPlanCell()
+@interface SFundAddPlanCell()
 
 @property (nonatomic, strong) SView * vBackground;
 
 @end
 
-@implementation FundAddPlanCell
+@implementation SFundAddPlanCell
 
 #pragma mark - Interface
 
