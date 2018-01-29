@@ -107,18 +107,18 @@
         TBSwitchCell * switchCell = (TBSwitchCell *)cell;
         TBSwitchModel * switchModel = (TBSwitchModel *)model;
         if ([switchModel.uid isEqualToString:kzhiwen]) {
-            if (switchCell.btnSwitch.on) {
-                STouchID * touchID = [[STouchID alloc] init];
-                if (![touchID canPolicy]) {
-                    switchCell.btnSwitch.on = NO;
-                    
-                    return;
-                }
-            }
-            
-            SCommonModel * commonModel = (SCommonModel *)[[AppContext sharedAppContext].accountDao getObjectFromTable:[[SCommonModel alloc] init] condition:SCommonModel.key == kIsOpenTouchID];
-            commonModel.value = switchCell.btnSwitch.on ? @"1" : @"0";
-            [[AppContext sharedAppContext].accountDao updateObject:commonModel property:SCommonModel.value];
+            //if (switchCell.btnSwitch.on) {
+            //    STouchID * touchID = [[STouchID alloc] init];
+            //    if (![touchID canPolicy]) {
+            //        switchCell.btnSwitch.on = NO;
+            //
+            //        return;
+            //    }
+            //}
+            //
+            //SCommonModel * commonModel = (SCommonModel *)[[AppContext sharedAppContext].accountDao getObjectFromTable:[[SCommonModel alloc] init] condition:SCommonModel.key == kIsOpenTouchID];
+            //commonModel.value = switchCell.btnSwitch.on ? @"1" : @"0";
+            //[[AppContext sharedAppContext].accountDao updateObject:commonModel property:SCommonModel.value];
             
             return;
         }

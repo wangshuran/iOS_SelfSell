@@ -103,7 +103,7 @@
 
 - (void)initialize {
     [super initialize];
-    self.view.backgroundColor = kColorWhite220;
+    self.view.backgroundColor = kColorWhite250;
 }
 
 @end

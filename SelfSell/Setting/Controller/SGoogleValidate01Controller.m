@@ -62,7 +62,7 @@
 - (SView *)v0 {
     if (!_v0) {
         _v0 = [[SView alloc] init];
-        _v0.backgroundColor = kColorWhite250;
+        _v0.backgroundColor = kColorWhite255;
         [_v0 addSubview:self.txGoogleCode];
     }
     

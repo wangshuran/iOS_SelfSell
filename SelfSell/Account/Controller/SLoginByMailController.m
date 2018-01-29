@@ -358,6 +358,7 @@
     
     self.txEmail.text = @"liqiang01@new4g.cn";
     self.txPwd.text = @"123456";
+    [self updateBtnFinish];
 }
 
 #pragma mark - Private

@@ -44,7 +44,7 @@
 - (SView *)v0 {
     if (!_v0) {
         _v0 = [[SView alloc] init];
-        _v0.backgroundColor = kColorWhite250;
+        _v0.backgroundColor = kColorWhite255;
         [_v0 addSubview:self.txOldPwd];
         [_v0 addSubview:self.vLine0];
     }
@@ -55,7 +55,7 @@
 - (SView *)v1 {
     if (!_v1) {
         _v1 = [[SView alloc] init];
-        _v1.backgroundColor = kColorWhite250;
+        _v1.backgroundColor = kColorWhite255;
         [_v1 addSubview:self.txPwd];
         [_v1 addSubview:self.vLine1];
     }
@@ -66,7 +66,7 @@
 - (SView *)v2 {
     if (!_v2) {
         _v2 = [[SView alloc] init];
-        _v2.backgroundColor = kColorWhite250;
+        _v2.backgroundColor = kColorWhite255;
         [_v2 addSubview:self.txComfirmPwd];
     }
     
@@ -243,7 +243,7 @@
 
 - (void)initialize {
     [super initialize];
-    self.view.backgroundColor = kColorWhite220;
+    self.view.backgroundColor = kColorWhite250;
 }
 
 #pragma mark - Private

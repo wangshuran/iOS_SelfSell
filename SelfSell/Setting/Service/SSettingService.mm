@@ -54,6 +54,7 @@ LCmd * const LCmdGetSetting1 = @"LCmdGetSetting1";
         model.uid = kgugeyanzheng;
         model.title = SLocal(@"setting0_gugeyanzheng");
         model.value = [[AppContext sharedAppContext].accountModel.googleAuthStatus isEqualToString:@"ON"] ? SLocal(@"setting0_gugeyikaiqi") : SLocal(@"setting0_gugeyiguanbi");
+        model.destVCClass = SGoogleValidate01Controller.class;
         [data addObject:model];
     }{
         TBArrowModel * model = [[TBArrowModel alloc] init];
@@ -107,7 +108,7 @@ LCmd * const LCmdGetSetting1 = @"LCmdGetSetting1";
     section.headerHeight = 20.0f;
     section.items = data;
     
-    return [NSArray arrayWithObjects:section, section, section, section, section, section, section, section, section, section, section, section, section, section, section, section, section, section, section, section, section, section, section, section, section, section, section, section, section, section, section, section, section, section, section, section, section, section, section, section, section, section, section, section, section, section, section, nil];
+    return [NSArray arrayWithObjects:section, nil];
 }
 
 @end
