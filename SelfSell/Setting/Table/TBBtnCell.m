@@ -1,20 +1,20 @@
 //
-//  SettingExitCell.m
+//  TBBtnCell.m
 //  SelfSell
 //
 //  Created by liqiang on 2018/1/15.
 //  Copyright © 2018年 Goopal. All rights reserved.
 //
 
-#import "SettingExitCell.h"
+#import "TBBtnCell.h"
 
-@interface SettingExitCell()
+@interface TBBtnCell()
 
 @property (nonatomic, strong) SButton * btnExit;
 
 @end
 
-@implementation SettingExitCell
+@implementation TBBtnCell
 
 #pragma mark - Interface
 

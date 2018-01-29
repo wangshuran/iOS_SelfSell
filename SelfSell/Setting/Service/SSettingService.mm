@@ -63,7 +63,7 @@ LCmd * const LCmdGetSetting1 = @"LCmdGetSetting1";
         model.destVCClass = SSetting1Controller.class;
         [data addObject:model];
     }{
-        TBExitModel * model = [[TBExitModel alloc] init];
+        TBBtnModel * model = [[TBBtnModel alloc] init];
         model.uid = ktuichu;
         model.title = SLocal(@"setting0_tuichu");
         [data addObject:model];

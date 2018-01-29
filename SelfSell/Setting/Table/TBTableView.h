@@ -9,9 +9,9 @@
 #import <LBaseClass/LBaseClass.h>
 #import "TBSectionModel.h"
 #import "TBArrowCell.h"
+#import "TBBtnCell.h"
 #import "TBCell.h"
 #import "TBCheckCell.h"
-#import "SettingExitCell.h"
 #import "TBSwitchCell.h"
 #import "TBTextCell.h"
 #import "THeaderView.h"

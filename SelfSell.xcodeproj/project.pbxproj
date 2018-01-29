@@ -14,7 +14,7 @@
 		D50297FD200C570D008375F9 /* TBModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D50297FC200C570D008375F9 /* TBModel.m */; };
 		D5029800200C5770008375F9 /* TBSwitchModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D50297FF200C5770008375F9 /* TBSwitchModel.m */; };
 		D5029803200C578F008375F9 /* TBArrowModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D5029802200C578F008375F9 /* TBArrowModel.m */; };
-		D5029806200C57B7008375F9 /* TBExitModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D5029805200C57B7008375F9 /* TBExitModel.m */; };
+		D5029806200C57B7008375F9 /* TBBtnModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D5029805200C57B7008375F9 /* TBBtnModel.m */; };
 		D5029CF91FDF6E180063D82A /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D5029CF81FDF6E180063D82A /* Info.plist */; };
 		D521BAA120186D16000299FC /* SUpdatePwdRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = D521BAA020186D16000299FC /* SUpdatePwdRequest.m */; };
 		D521BAA420186D27000299FC /* SUpdatePwdResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = D521BAA320186D27000299FC /* SUpdatePwdResponse.m */; };
@@ -31,7 +31,7 @@
 		D52903B5201ECF1B0017A3CC /* TBTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = D52903AC201ECF1B0017A3CC /* TBTableView.m */; };
 		D52903B6201ECF1B0017A3CC /* TBTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D52903AE201ECF1B0017A3CC /* TBTextCell.m */; };
 		D52903B9201ED0E30017A3CC /* FundTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = D52903B8201ED0E30017A3CC /* FundTableView.m */; };
-		D52903BC201ED23B0017A3CC /* SettingExitCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D52903BB201ED23B0017A3CC /* SettingExitCell.m */; };
+		D52903BF201ED2C50017A3CC /* TBBtnCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D52903BD201ED2C50017A3CC /* TBBtnCell.m */; };
 		D53B6B8D1FDF7A77006AEB46 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D53B6B8F1FDF7A77006AEB46 /* Localizable.strings */; };
 		D53B6B981FDF7DAD006AEB46 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D53B6B9A1FDF7DAD006AEB46 /* InfoPlist.strings */; };
 		D540F5421FDF83DF00AECCB7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D540F5411FDF83DF00AECCB7 /* Assets.xcassets */; };
@@ -156,8 +156,8 @@
 		D50297FF200C5770008375F9 /* TBSwitchModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TBSwitchModel.m; sourceTree = "<group>"; };
 		D5029801200C578F008375F9 /* TBArrowModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TBArrowModel.h; sourceTree = "<group>"; };
 		D5029802200C578F008375F9 /* TBArrowModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TBArrowModel.m; sourceTree = "<group>"; };
-		D5029804200C57B7008375F9 /* TBExitModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TBExitModel.h; sourceTree = "<group>"; };
-		D5029805200C57B7008375F9 /* TBExitModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TBExitModel.m; sourceTree = "<group>"; };
+		D5029804200C57B7008375F9 /* TBBtnModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TBBtnModel.h; sourceTree = "<group>"; };
+		D5029805200C57B7008375F9 /* TBBtnModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TBBtnModel.m; sourceTree = "<group>"; };
 		D5029CF71FDF6D6B0063D82A /* SelfSell-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SelfSell-Prefix.pch"; sourceTree = "<group>"; };
 		D5029CF81FDF6E180063D82A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D519D34F1FDF683A00D4C9FD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -192,8 +192,8 @@
 		D52903AE201ECF1B0017A3CC /* TBTextCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBTextCell.m; sourceTree = "<group>"; };
 		D52903B7201ED0E30017A3CC /* FundTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FundTableView.h; sourceTree = "<group>"; };
 		D52903B8201ED0E30017A3CC /* FundTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FundTableView.m; sourceTree = "<group>"; };
-		D52903BA201ED23B0017A3CC /* SettingExitCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingExitCell.h; sourceTree = "<group>"; };
-		D52903BB201ED23B0017A3CC /* SettingExitCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingExitCell.m; sourceTree = "<group>"; };
+		D52903BD201ED2C50017A3CC /* TBBtnCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBBtnCell.m; sourceTree = "<group>"; };
+		D52903BE201ED2C50017A3CC /* TBBtnCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBBtnCell.h; sourceTree = "<group>"; };
 		D53B6B931FDF7ABB006AEB46 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D53B6B941FDF7B32006AEB46 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		D53B6B991FDF7DAD006AEB46 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -467,10 +467,10 @@
 			children = (
 				D5029801200C578F008375F9 /* TBArrowModel.h */,
 				D5029802200C578F008375F9 /* TBArrowModel.m */,
+				D5029804200C57B7008375F9 /* TBBtnModel.h */,
+				D5029805200C57B7008375F9 /* TBBtnModel.m */,
 				D5709CCD200EE73A007BBD4C /* TBCheckModel.h */,
 				D5709CCE200EE73A007BBD4C /* TBCheckModel.m */,
-				D5029804200C57B7008375F9 /* TBExitModel.h */,
-				D5029805200C57B7008375F9 /* TBExitModel.m */,
 				D50297FB200C570D008375F9 /* TBModel.h */,
 				D50297FC200C570D008375F9 /* TBModel.m */,
 				D50297F8200C56EA008375F9 /* TBSectionModel.h */,
@@ -519,8 +519,6 @@
 		D50297DB200C50CC008375F9 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				D52903BA201ED23B0017A3CC /* SettingExitCell.h */,
-				D52903BB201ED23B0017A3CC /* SettingExitCell.m */,
 				D5290384201ECE7B0017A3CC /* SettingTableView.h */,
 				D5290385201ECE7B0017A3CC /* SettingTableView.m */,
 			);
@@ -578,6 +576,8 @@
 			children = (
 				D52903A1201ECF1B0017A3CC /* TBArrowCell.h */,
 				D52903A2201ECF1B0017A3CC /* TBArrowCell.m */,
+				D52903BE201ED2C50017A3CC /* TBBtnCell.h */,
+				D52903BD201ED2C50017A3CC /* TBBtnCell.m */,
 				D52903A3201ECF1B0017A3CC /* TBCell.h */,
 				D52903A4201ECF1B0017A3CC /* TBCell.m */,
 				D52903A5201ECF1B0017A3CC /* TBCheckCell.h */,
@@ -1555,7 +1555,6 @@
 				D5ACA7442015CAB900A6C84F /* Swizzle.m in Sources */,
 				D5709CC0200EE00B007BBD4C /* SLanguageController.m in Sources */,
 				D54894C61FF22C1400F2019B /* SVotesController.m in Sources */,
-				D52903BC201ED23B0017A3CC /* SettingExitCell.m in Sources */,
 				D54894F01FF23AAB00F2019B /* SCheckVersionResponse.m in Sources */,
 				D5709CC9200EE60B007BBD4C /* SLanguageService.m in Sources */,
 				D5957AE720073B9000F6EE60 /* SCache.m in Sources */,
@@ -1598,10 +1597,11 @@
 				D5709CD3200F3852007BBD4C /* SLanguage.m in Sources */,
 				D5ACA74A2015E72200A6C84F /* SSendMailRequest.m in Sources */,
 				D56C8DF72019BCD900DEB9F2 /* SWelcomeRequest.m in Sources */,
+				D52903BF201ED2C50017A3CC /* TBBtnCell.m in Sources */,
 				D52903B6201ECF1B0017A3CC /* TBTextCell.m in Sources */,
 				D5957B0E200750FA00F6EE60 /* SCommonModel.mm in Sources */,
 				D5D7D8652016E44A005CBB11 /* SNavigationBar.m in Sources */,
-				D5029806200C57B7008375F9 /* TBExitModel.m in Sources */,
+				D5029806200C57B7008375F9 /* TBBtnModel.m in Sources */,
 				D56C8E192019D82700DEB9F2 /* SRewardResponse.m in Sources */,
 				D5290386201ECE7B0017A3CC /* SettingTableView.m in Sources */,
 				D52903B2201ECF1B0017A3CC /* TBCheckCell.m in Sources */,

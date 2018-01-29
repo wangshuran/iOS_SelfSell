@@ -189,7 +189,7 @@
             [MBProgressHUD showTitleToView:self.view postion:NHHUDPostionCenten title:SLocal(@"google_fuzhidao")];
         }
         return;
-    }else if ([model isKindOfClass:TBExitModel.class]) {
+    }else if ([model isKindOfClass:TBBtnModel.class]) {
         SPostNotification(kNoticeToLogout);
         return;
     }

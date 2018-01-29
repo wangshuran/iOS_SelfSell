@@ -14,8 +14,7 @@
 
 - (instancetype)initWithFrame:(CGRect)frame style:(UITableViewStyle)style {
     self = [super initWithFrame:frame style:style];
-    [self registerClass:SettingExitCell.class forCellReuseIdentifier:NSStringFromClass(TBExitModel.class)];
-
+    
     return self;
 }
 

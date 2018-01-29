@@ -25,13 +25,13 @@
     self.estimatedRowHeight = 60.0f;
     self.rowHeight = UITableViewAutomaticDimension;
     self.separatorStyle = UITableViewCellSeparatorStyleNone;
-    [self registerClass:THeaderView.class forHeaderFooterViewReuseIdentifier:NSStringFromClass(TBSectionModel.class)];
     [self registerClass:TBArrowCell.class forCellReuseIdentifier:NSStringFromClass(TBArrowModel.class)];
+    [self registerClass:TBBtnCell.class forCellReuseIdentifier:NSStringFromClass(TBBtnModel.class)];
     [self registerClass:TBCell.class forCellReuseIdentifier:NSStringFromClass(TBModel.class)];
     [self registerClass:TBCheckCell.class forCellReuseIdentifier:NSStringFromClass(TBCheckModel.class)];
-    [self registerClass:SettingExitCell.class forCellReuseIdentifier:NSStringFromClass(TBExitModel.class)];
     [self registerClass:TBSwitchCell.class forCellReuseIdentifier:NSStringFromClass(TBSwitchModel.class)];
     [self registerClass:TBTextCell.class forCellReuseIdentifier:NSStringFromClass(TBTextModel.class)];
+    [self registerClass:THeaderView.class forHeaderFooterViewReuseIdentifier:NSStringFromClass(TBSectionModel.class)];
     
     return self;
 }
