@@ -27,10 +27,11 @@
 		D52903B0201ECF1B0017A3CC /* TBArrowCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D52903A2201ECF1B0017A3CC /* TBArrowCell.m */; };
 		D52903B1201ECF1B0017A3CC /* TBCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D52903A4201ECF1B0017A3CC /* TBCell.m */; };
 		D52903B2201ECF1B0017A3CC /* TBCheckCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D52903A6201ECF1B0017A3CC /* TBCheckCell.m */; };
-		D52903B3201ECF1B0017A3CC /* TBExitCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D52903A8201ECF1B0017A3CC /* TBExitCell.m */; };
 		D52903B4201ECF1B0017A3CC /* TBSwitchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D52903AA201ECF1B0017A3CC /* TBSwitchCell.m */; };
 		D52903B5201ECF1B0017A3CC /* TBTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = D52903AC201ECF1B0017A3CC /* TBTableView.m */; };
 		D52903B6201ECF1B0017A3CC /* TBTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D52903AE201ECF1B0017A3CC /* TBTextCell.m */; };
+		D52903B9201ED0E30017A3CC /* FundTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = D52903B8201ED0E30017A3CC /* FundTableView.m */; };
+		D52903BC201ED23B0017A3CC /* SettingExitCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D52903BB201ED23B0017A3CC /* SettingExitCell.m */; };
 		D53B6B8D1FDF7A77006AEB46 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D53B6B8F1FDF7A77006AEB46 /* Localizable.strings */; };
 		D53B6B981FDF7DAD006AEB46 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D53B6B9A1FDF7DAD006AEB46 /* InfoPlist.strings */; };
 		D540F5421FDF83DF00AECCB7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D540F5411FDF83DF00AECCB7 /* Assets.xcassets */; };
@@ -183,14 +184,16 @@
 		D52903A4201ECF1B0017A3CC /* TBCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBCell.m; sourceTree = "<group>"; };
 		D52903A5201ECF1B0017A3CC /* TBCheckCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBCheckCell.h; sourceTree = "<group>"; };
 		D52903A6201ECF1B0017A3CC /* TBCheckCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBCheckCell.m; sourceTree = "<group>"; };
-		D52903A7201ECF1B0017A3CC /* TBExitCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBExitCell.h; sourceTree = "<group>"; };
-		D52903A8201ECF1B0017A3CC /* TBExitCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBExitCell.m; sourceTree = "<group>"; };
 		D52903A9201ECF1B0017A3CC /* TBSwitchCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBSwitchCell.h; sourceTree = "<group>"; };
 		D52903AA201ECF1B0017A3CC /* TBSwitchCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBSwitchCell.m; sourceTree = "<group>"; };
 		D52903AB201ECF1B0017A3CC /* TBTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBTableView.h; sourceTree = "<group>"; };
 		D52903AC201ECF1B0017A3CC /* TBTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBTableView.m; sourceTree = "<group>"; };
 		D52903AD201ECF1B0017A3CC /* TBTextCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBTextCell.h; sourceTree = "<group>"; };
 		D52903AE201ECF1B0017A3CC /* TBTextCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBTextCell.m; sourceTree = "<group>"; };
+		D52903B7201ED0E30017A3CC /* FundTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FundTableView.h; sourceTree = "<group>"; };
+		D52903B8201ED0E30017A3CC /* FundTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FundTableView.m; sourceTree = "<group>"; };
+		D52903BA201ED23B0017A3CC /* SettingExitCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingExitCell.h; sourceTree = "<group>"; };
+		D52903BB201ED23B0017A3CC /* SettingExitCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingExitCell.m; sourceTree = "<group>"; };
 		D53B6B931FDF7ABB006AEB46 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D53B6B941FDF7B32006AEB46 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		D53B6B991FDF7DAD006AEB46 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -516,6 +519,8 @@
 		D50297DB200C50CC008375F9 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D52903BA201ED23B0017A3CC /* SettingExitCell.h */,
+				D52903BB201ED23B0017A3CC /* SettingExitCell.m */,
 				D5290384201ECE7B0017A3CC /* SettingTableView.h */,
 				D5290385201ECE7B0017A3CC /* SettingTableView.m */,
 			);
@@ -562,6 +567,8 @@
 		D5265E59201EC279000C4A8D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D52903B7201ED0E30017A3CC /* FundTableView.h */,
+				D52903B8201ED0E30017A3CC /* FundTableView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -575,8 +582,6 @@
 				D52903A4201ECF1B0017A3CC /* TBCell.m */,
 				D52903A5201ECF1B0017A3CC /* TBCheckCell.h */,
 				D52903A6201ECF1B0017A3CC /* TBCheckCell.m */,
-				D52903A7201ECF1B0017A3CC /* TBExitCell.h */,
-				D52903A8201ECF1B0017A3CC /* TBExitCell.m */,
 				D52903A9201ECF1B0017A3CC /* TBSwitchCell.h */,
 				D52903AA201ECF1B0017A3CC /* TBSwitchCell.m */,
 				D52903AB201ECF1B0017A3CC /* TBTableView.h */,
@@ -1545,10 +1550,12 @@
 				D5E610D620089546003C847A /* SActivityController.m in Sources */,
 				D54894ED1FF23A9600F2019B /* SCheckVersionRequest.m in Sources */,
 				D50297FA200C56EA008375F9 /* TBSectionModel.m in Sources */,
+				D52903B9201ED0E30017A3CC /* FundTableView.m in Sources */,
 				D5957B072007466C00F6EE60 /* SDao+Category.mm in Sources */,
 				D5ACA7442015CAB900A6C84F /* Swizzle.m in Sources */,
 				D5709CC0200EE00B007BBD4C /* SLanguageController.m in Sources */,
 				D54894C61FF22C1400F2019B /* SVotesController.m in Sources */,
+				D52903BC201ED23B0017A3CC /* SettingExitCell.m in Sources */,
 				D54894F01FF23AAB00F2019B /* SCheckVersionResponse.m in Sources */,
 				D5709CC9200EE60B007BBD4C /* SLanguageService.m in Sources */,
 				D5957AE720073B9000F6EE60 /* SCache.m in Sources */,
@@ -1630,7 +1637,6 @@
 				D57ECF0A20182849007151A3 /* SForgetPwdByMailRequest.m in Sources */,
 				D5D7D86F20172BAE005CBB11 /* SLoginByMailRequest.m in Sources */,
 				D5957AF420073B9000F6EE60 /* SLabel.m in Sources */,
-				D52903B3201ECF1B0017A3CC /* TBExitCell.m in Sources */,
 				D56C8DFE2019BD7C00DEB9F2 /* SWelcomeModel.m in Sources */,
 				D54483481FED049300D2F681 /* SVersionService.m in Sources */,
 				D5ACA7502015E84200A6C84F /* SRegisterByMailRequest.m in Sources */,

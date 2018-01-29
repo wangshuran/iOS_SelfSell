@@ -1,5 +1,5 @@
 //
-//  TBExitCell.h
+//  SettingExitCell.h
 //  SelfSell
 //
 //  Created by liqiang on 2018/1/15.
@@ -9,6 +9,6 @@
 #import "TBCell.h"
 #import "TBExitModel.h"
 
-@interface TBExitCell : TBCell
+@interface SettingExitCell : TBCell
 
 @end

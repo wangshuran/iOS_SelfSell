@@ -11,7 +11,7 @@
 #import "TBArrowCell.h"
 #import "TBCell.h"
 #import "TBCheckCell.h"
-#import "TBExitCell.h"
+#import "SettingExitCell.h"
 #import "TBSwitchCell.h"
 #import "TBTextCell.h"
 #import "THeaderView.h"
