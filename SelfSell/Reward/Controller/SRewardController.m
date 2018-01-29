@@ -372,8 +372,12 @@
 
 - (SButton *)btnShare {
     if (!_btnShare) {
+        __weak typeof(self) weakSelf = self;
         _btnShare = [[SButton alloc] init];
         [_btnShare setImage:[UIImage imageNamed:@"reward_share"] forState:UIControlStateNormal];
+        [[_btnShare rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
+            [MBProgressHUD showTitleToView:weakSelf.view postion:NHHUDPostionCenten title:@"分享需要等待第三方开发账号申请完毕再实现"];
+        }];
     }
     
     return _btnShare;
