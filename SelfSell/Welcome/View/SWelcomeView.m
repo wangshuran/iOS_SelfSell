@@ -7,7 +7,6 @@
 //
 
 #import "SWelcomeView.h"
-#import <SDWebImage/UIImageView+WebCache.h>
 
 @interface SWelcomeView()
 
@@ -36,7 +35,6 @@
 
 - (void)setModel:(SWelcomeModel *)model {
     _model = model;
-    model.imgUrl = @"http://g.hiphotos.baidu.com/image/pic/item/c8ea15ce36d3d539f09733493187e950342ab095.jpg";
     [self.imgLogo sd_setImageWithURL:[NSURL URLWithString:model.imgUrl]];
 }
 

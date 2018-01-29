@@ -562,6 +562,20 @@
 			path = Resource;
 			sourceTree = "<group>";
 		};
+		D5265E58201EC279000C4A8D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D5265E59201EC279000C4A8D /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		D54483391FED037D00D2F681 /* Version */ = {
 			isa = PBXGroup;
 			children = (
@@ -1241,8 +1255,10 @@
 			isa = PBXGroup;
 			children = (
 				D5E610CE200894B6003C847A /* Controller */,
+				D5265E58201EC279000C4A8D /* Model */,
 				D5E610CF200894B6003C847A /* Request */,
 				D5E610D0200894B6003C847A /* Response */,
+				D5265E59201EC279000C4A8D /* View */,
 			);
 			path = Fund;
 			sourceTree = "<group>";

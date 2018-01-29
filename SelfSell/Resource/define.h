@@ -17,7 +17,7 @@
 
 
 #define kIsIPhoneX (CGRectGetWidth(UIScreen.mainScreen.bounds) == 375.0f)//是否是iPhoneX
-#define kNavHeight (kIsIPhoneX ? 84.0f : 64.0f)
+#define kNavHeight (kIsIPhoneX ? 84.0f : 64.0f)//导航栏高度
 
 #define kBtnFontBigger [LFont bold_18]//按钮大字体
 #define kBtnFontNormal [LFont bold_16]//按钮正常字体

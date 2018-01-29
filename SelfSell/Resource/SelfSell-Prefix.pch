@@ -22,6 +22,7 @@
 #import <LBaseClass/LBaseClass.h>
 #import <NHHUDExtend/MBProgressHUD_NHExtend.h>
 #import <NHHUDExtend/MBProgressHUD+NHAdd.h>
+#import <SDWebImage/UIImageView+WebCache.h>
 
 
 //--------------------define--------------------
