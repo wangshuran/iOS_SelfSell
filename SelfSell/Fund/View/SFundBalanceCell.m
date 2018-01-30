@@ -88,9 +88,12 @@
 - (SButton *)btnTurnOut {
     if (!_btnTurnOut) {
         _btnTurnOut = [[SButton alloc] init];
-        [_btnTurnOut setTitle:SLocal(@"fund_zhuanru") forState:UIControlStateNormal];
-        [_btnTurnOut setImage:[UIImage imageNamed:@"fund_zhuanru"] forState:UIControlStateNormal];
+        [_btnTurnOut setTitle:[@"  " stringByAppendingString:SLocal(@"fund_zhuanchu")] forState:UIControlStateNormal];
+        [_btnTurnOut setImage:[UIImage imageNamed:@"fund_zhuanchu"] forState:UIControlStateNormal];
         [_btnTurnOut setTitleColor:kColorWhite220 forState:UIControlStateNormal];
+        [[_btnTurnOut rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
+            SPostNotification(kNoticeCoinTurnOut);
+        }];
     }
     
     return _btnTurnOut;
@@ -99,9 +102,12 @@
 - (SButton *)btnTurnInto {
     if (!_btnTurnInto) {
         _btnTurnInto = [[SButton alloc] init];
-        [_btnTurnInto setTitle:SLocal(@"fund_zhuanru") forState:UIControlStateNormal];
+        [_btnTurnInto setTitle:[@"  " stringByAppendingString:SLocal(@"fund_zhuanru")] forState:UIControlStateNormal];
         [_btnTurnInto setImage:[UIImage imageNamed:@"fund_zhuanru"] forState:UIControlStateNormal];
         [_btnTurnInto setTitleColor:kColorWhite220 forState:UIControlStateNormal];
+        [[_btnTurnInto rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
+            SPostNotification(kNoticeCoinTurnInto);
+        }];
     }
     
     return _btnTurnInto;

@@ -15,7 +15,7 @@
 
 @property (nonatomic, strong) SLanguageService * languageService;
 
-@property (nonatomic, strong) TBTableView * tableView;
+@property (nonatomic, strong) SettingTableView * tableView;
 
 @property (nonatomic, copy) NSString * selectLanguage;
 
@@ -46,7 +46,7 @@
     return _languageService;
 }
 
-- (TBTableView *)tableView {
+- (SettingTableView *)tableView {
     if (!_tableView) {
         _tableView = [[SettingTableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
         _tableView.isEnableFooter = NO;

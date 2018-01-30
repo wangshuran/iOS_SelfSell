@@ -24,5 +24,10 @@
 #define kNoticeShowSecurityCheck @"kNoticeShowSecurityCheck"//显示安全检查通知
 #define kNoticeSwitchLanguage @"kNoticeSwitchLanguage"//切换语言通知
 #define kNoticeCellEvent @"kNoticeCellEvent"//单元格各类事件通知
+#define kNoticeCoinTurnOut @"kNoticeCoinTurnOut"//转出代币通知
+#define kNoticeCoinTurnInto @"kNoticeCoinTurnInto"//转入代币通知
+#define kNoticeRefreshFund @"kNoticeRefreshFund"//刷新资金信息通知
+#define kNoticeAddPlan @"kNoticeAddPlan"//立即加入SSC持有计划通知
+#define kNoticeSelectPlan @"kNoticeSelectPlan"//选择的SSC加入计划通知
 
 #endif /* define_notice_h */

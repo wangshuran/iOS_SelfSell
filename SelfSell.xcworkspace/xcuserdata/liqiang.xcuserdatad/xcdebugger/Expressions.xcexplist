@@ -3,34 +3,36 @@
    version = "1.0">
    <ContextStates>
       <ContextState
-         contextName = "-[SSetting0Controller noticeCellEvent:]:SSetting0Controller.m">
+         contextName = "::-[AppContext(Account) getLastLoginAccount]():AppContext+Account.mm">
       </ContextState>
       <ContextState
-         contextName = "::-[SSetting1Controller noticeCellEvent:](NSNotification *):SSetting1Controller.mm">
+         contextName = "-[SWelcomeResponse reflect:]:SWelcomeResponse.m">
       </ContextState>
       <ContextState
-         contextName = "__34-[SLoginByMailController btnLogin]_block_invoke_2:SLoginByMailController.m">
+         contextName = "__26+[SNetwork request:block:]_block_invoke.82:SNetwork.m">
       </ContextState>
       <ContextState
-         contextName = "__57-[AppDelegate application:didFinishLaunchingWithOptions:]_block_invoke.42:AppDelegate.m">
-      </ContextState>
-      <ContextState
-         contextName = "-[SAboutController loadView]:SAboutController.m">
-      </ContextState>
-      <ContextState
-         contextName = "-[LObject init]:LObject.m">
+         contextName = "__57-[AppDelegate application:didFinishLaunchingWithOptions:]_block_invoke.69:AppDelegate.m">
       </ContextState>
       <ContextState
          contextName = "__38-[SLanguageController languageService]_block_invoke:SLanguageController.m">
       </ContextState>
       <ContextState
-         contextName = "-[SLanguageController updateLanguage:]:SLanguageController.m">
+         contextName = "-[SSettingController tbTableView]:SSettingController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "_tbTableView">
+            </PersistentString>
+         </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "::-[AppContext(Account) updateLoginAccount:](SAccountModel *):AppContext+Account.mm">
+         contextName = "-[SSetting0Controller noticeCellEvent:]:SSetting0Controller.m">
       </ContextState>
       <ContextState
-         contextName = "-[TBTableView tableView:viewForHeaderInSection:]:TBTableView.m">
+         contextName = "-[SLanguageController viewDidAppear:]:SLanguageController.m">
+      </ContextState>
+      <ContextState
+         contextName = "__34-[SFundController viewWillAppear:]_block_invoke_2:SFundController.m">
       </ContextState>
       <ContextState
          contextName = "-[SSettingController test1]:SSettingController.m">
@@ -39,23 +41,6 @@
                value = "_test1">
             </PersistentString>
          </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "-[UIColor(Category) getR]:UIColor+Category.m">
-      </ContextState>
-      <ContextState
-         contextName = "-[SSetting0Controller viewWillAppear:]:SSetting0Controller.m">
-         <PersistentStrings>
-            <PersistentString
-               value = "[AppContext sharedAppContext].accountModel">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "-[SNavigationController navigationBar:didPushItem:]:SNavigationController.m">
-      </ContextState>
-      <ContextState
-         contextName = "-[TBCheckCell setModel:]:TBCheckCell.m">
       </ContextState>
       <ContextState
          contextName = "-[SLanguageController viewDidLoad]:SLanguageController.m">
@@ -69,7 +54,52 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "-[LViewController viewWillAppear:]:LViewController.m">
+         contextName = "-[LObject init]:LObject.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[SLanguageController updateLanguage:]:SLanguageController.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[AppContext(Cache) getLocalValue:]:AppContext+Cache.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.accountModel">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "::-[SSetting1Controller noticeCellEvent:](NSNotification *):SSetting1Controller.mm">
+      </ContextState>
+      <ContextState
+         contextName = "-[TBTableView numberOfSectionsInTableView:]:TBTableView.m">
+      </ContextState>
+      <ContextState
+         contextName = "+[LTest randomColorView:]:LTest.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "view.subviews">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[TBTableView tableView:viewForHeaderInSection:]:TBTableView.m">
+      </ContextState>
+      <ContextState
+         contextName = "__32-[SFundController updateBalance]_block_invoke:SFundController.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[SSetting0Controller viewWillAppear:]:SSetting0Controller.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "[AppContext sharedAppContext].accountModel">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[SResponse reflect:]:SResponse.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[SAccountModel isLoginUser]:SAccountModel.m">
       </ContextState>
       <ContextState
          contextName = "-[SViewController viewDidAppear:]:SViewController.m">
@@ -83,58 +113,64 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "__57-[AppDelegate application:didFinishLaunchingWithOptions:]_block_invoke.69:AppDelegate.m">
+         contextName = "__30-[SFundController fundService]_block_invoke:SFundController.m">
       </ContextState>
       <ContextState
-         contextName = "::-[AppContext(Account) getLastLoginAccount]():AppContext+Account.mm">
-      </ContextState>
-      <ContextState
-         contextName = "-[AppContext(Cache) getLocalValue:]:AppContext+Cache.m">
-         <PersistentStrings>
-            <PersistentString
-               value = "self.accountModel">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "-[SLanguageController viewDidAppear:]:SLanguageController.m">
-      </ContextState>
-      <ContextState
-         contextName = "-[SResponse reflect:]:SResponse.m">
-      </ContextState>
-      <ContextState
-         contextName = "-[SSettingController tbTableView]:SSettingController.m">
-         <PersistentStrings>
-            <PersistentString
-               value = "_tbTableView">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "__35-[SLoginByMailController btnFinish]_block_invoke_2:SLoginByMailController.m">
+         contextName = "-[SFundAddPlansCell setModel:]:SFundAddPlansCell.m">
       </ContextState>
       <ContextState
          contextName = "-[NSObject(MJKeyValue) mj_JSONData]:NSObject+MJKeyValue.m">
       </ContextState>
       <ContextState
-         contextName = "__26+[SNetwork request:block:]_block_invoke.82:SNetwork.m">
+         contextName = "::-[AppContext(Account) updateLoginAccount:](SAccountModel *):AppContext+Account.mm">
       </ContextState>
       <ContextState
-         contextName = "+[LTest randomColorView:]:LTest.m">
-         <PersistentStrings>
-            <PersistentString
-               value = "view.subviews">
-            </PersistentString>
-         </PersistentStrings>
+         contextName = "__34-[SFundController viewWillAppear:]_block_invoke.49:SFundController.m">
+      </ContextState>
+      <ContextState
+         contextName = "__32-[SFundController updateAddPlan]_block_invoke:SFundController.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[SFundPlanButton layoutSubviews]:SFundPlanButton.m">
+      </ContextState>
+      <ContextState
+         contextName = "__34-[SLoginByMailController btnLogin]_block_invoke_2:SLoginByMailController.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[LViewController viewWillAppear:]:LViewController.m">
+      </ContextState>
+      <ContextState
+         contextName = "__35-[SLoginByMailController btnFinish]_block_invoke_2:SLoginByMailController.m">
       </ContextState>
       <ContextState
          contextName = "-[SLanguageController loadView]:SLanguageController.m">
       </ContextState>
       <ContextState
-         contextName = "-[SAccountModel isLoginUser]:SAccountModel.m">
+         contextName = "-[TBCheckCell setModel:]:TBCheckCell.m">
       </ContextState>
       <ContextState
-         contextName = "-[SWelcomeResponse reflect:]:SWelcomeResponse.m">
+         contextName = "-[TBCell setModel:]:TBCell.m">
+      </ContextState>
+      <ContextState
+         contextName = "__57-[AppDelegate application:didFinishLaunchingWithOptions:]_block_invoke.42:AppDelegate.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[SFundPlanResponse reflect:]:SFundPlanResponse.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[UIColor(Category) getR]:UIColor+Category.m">
+      </ContextState>
+      <ContextState
+         contextName = "__34-[SFundController viewWillAppear:]_block_invoke:SFundController.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[SFundSectionModel reloadData]:SFundSectionModel.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[SAboutController loadView]:SAboutController.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[SNavigationController navigationBar:didPushItem:]:SNavigationController.m">
       </ContextState>
    </ContextStates>
 </VariablesViewState>

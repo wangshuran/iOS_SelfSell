@@ -414,9 +414,9 @@
     self.hiddenNavbar = YES;
     self.view.backgroundColor = kColorWhite40;
     
-    self.txEmail.text = @"liqiang01@new4g.cn";
-    self.txPwd.text = @"123456";
-    self.txComfirmPwd.text = @"123456";
+    //self.txEmail.text = @"liqiang01@new4g.cn";
+    //self.txPwd.text = @"123456";
+    //self.txComfirmPwd.text = @"123456";
     [self updateBtnFinish];
 }
 

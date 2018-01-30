@@ -16,6 +16,15 @@
 		D5029803200C578F008375F9 /* TBArrowModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D5029802200C578F008375F9 /* TBArrowModel.m */; };
 		D5029806200C57B7008375F9 /* TBBtnModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D5029805200C57B7008375F9 /* TBBtnModel.m */; };
 		D5029CF91FDF6E180063D82A /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D5029CF81FDF6E180063D82A /* Info.plist */; };
+		D5164F5F2020057100B9A803 /* STurnOutController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5164F5D2020057100B9A803 /* STurnOutController.m */; };
+		D5164F622020108100B9A803 /* SAddPlanController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5164F612020108100B9A803 /* SAddPlanController.m */; };
+		D5164F652020127900B9A803 /* SSelectPlanView.m in Sources */ = {isa = PBXBuildFile; fileRef = D5164F642020127900B9A803 /* SSelectPlanView.m */; };
+		D5164F6B2020233300B9A803 /* SSelectTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = D5164F6A2020233300B9A803 /* SSelectTableView.m */; };
+		D5164F6E2020236900B9A803 /* SSelectPlanCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D5164F6D2020236900B9A803 /* SSelectPlanCell.m */; };
+		D5164F7120203B9600B9A803 /* SSelectPlanTitleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D5164F7020203B9600B9A803 /* SSelectPlanTitleCell.m */; };
+		D5164F742020412000B9A803 /* SAddPlanService.m in Sources */ = {isa = PBXBuildFile; fileRef = D5164F732020412000B9A803 /* SAddPlanService.m */; };
+		D5164F772020460E00B9A803 /* SAddPlanSectionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D5164F762020460E00B9A803 /* SAddPlanSectionModel.m */; };
+		D5164F7F20204AAE00B9A803 /* SPwdValidateController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5164F7E20204AAE00B9A803 /* SPwdValidateController.m */; };
 		D521BAA120186D16000299FC /* SUpdatePwdRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = D521BAA020186D16000299FC /* SUpdatePwdRequest.m */; };
 		D521BAA420186D27000299FC /* SUpdatePwdResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = D521BAA320186D27000299FC /* SUpdatePwdResponse.m */; };
 		D521BAA820187BE7000299FC /* SEnableGoogleAuthRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = D521BAA720187BE7000299FC /* SEnableGoogleAuthRequest.m */; };
@@ -32,7 +41,6 @@
 		D52903B6201ECF1B0017A3CC /* TBTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D52903AE201ECF1B0017A3CC /* TBTextCell.m */; };
 		D52903B9201ED0E30017A3CC /* SFundTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = D52903B8201ED0E30017A3CC /* SFundTableView.m */; };
 		D52903BF201ED2C50017A3CC /* TBBtnCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D52903BD201ED2C50017A3CC /* TBBtnCell.m */; };
-		D52903C4201EE95F0017A3CC /* SFundService.m in Sources */ = {isa = PBXBuildFile; fileRef = D52903C3201EE95F0017A3CC /* SFundService.m */; };
 		D52903C7201EEBEC0017A3CC /* SFundBalanceModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D52903C6201EEBEC0017A3CC /* SFundBalanceModel.m */; };
 		D52903CA201EEC320017A3CC /* SFundBalanceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D52903C9201EEC320017A3CC /* SFundBalanceCell.m */; };
 		D52903CD201F0A490017A3CC /* SFundMyPlanCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D52903CC201F0A490017A3CC /* SFundMyPlanCell.m */; };
@@ -49,6 +57,8 @@
 		D52903EE201F2BE60017A3CC /* SFundAddPlanResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = D52903ED201F2BE50017A3CC /* SFundAddPlanResponse.m */; };
 		D52903F7201F38430017A3CC /* SFundAddPlansModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D52903F6201F38430017A3CC /* SFundAddPlansModel.m */; };
 		D5290400201F3F780017A3CC /* SFundSectionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D52903FF201F3F780017A3CC /* SFundSectionModel.m */; };
+		D5290403201F4F970017A3CC /* SFundPlanButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D5290402201F4F970017A3CC /* SFundPlanButton.m */; };
+		D52D3E35202003E40098729B /* STurnIntoController.m in Sources */ = {isa = PBXBuildFile; fileRef = D52D3E34202003E40098729B /* STurnIntoController.m */; };
 		D53B6B8D1FDF7A77006AEB46 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D53B6B8F1FDF7A77006AEB46 /* Localizable.strings */; };
 		D53B6B981FDF7DAD006AEB46 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D53B6B9A1FDF7DAD006AEB46 /* InfoPlist.strings */; };
 		D540F5421FDF83DF00AECCB7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D540F5411FDF83DF00AECCB7 /* Assets.xcassets */; };
@@ -177,6 +187,24 @@
 		D5029805200C57B7008375F9 /* TBBtnModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TBBtnModel.m; sourceTree = "<group>"; };
 		D5029CF71FDF6D6B0063D82A /* SelfSell-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SelfSell-Prefix.pch"; sourceTree = "<group>"; };
 		D5029CF81FDF6E180063D82A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D5164F5D2020057100B9A803 /* STurnOutController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STurnOutController.m; sourceTree = "<group>"; };
+		D5164F5E2020057100B9A803 /* STurnOutController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STurnOutController.h; sourceTree = "<group>"; };
+		D5164F602020108100B9A803 /* SAddPlanController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SAddPlanController.h; sourceTree = "<group>"; };
+		D5164F612020108100B9A803 /* SAddPlanController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SAddPlanController.m; sourceTree = "<group>"; };
+		D5164F632020127900B9A803 /* SSelectPlanView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSelectPlanView.h; sourceTree = "<group>"; };
+		D5164F642020127900B9A803 /* SSelectPlanView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSelectPlanView.m; sourceTree = "<group>"; };
+		D5164F692020233300B9A803 /* SSelectTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSelectTableView.h; sourceTree = "<group>"; };
+		D5164F6A2020233300B9A803 /* SSelectTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSelectTableView.m; sourceTree = "<group>"; };
+		D5164F6C2020236900B9A803 /* SSelectPlanCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSelectPlanCell.h; sourceTree = "<group>"; };
+		D5164F6D2020236900B9A803 /* SSelectPlanCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSelectPlanCell.m; sourceTree = "<group>"; };
+		D5164F6F20203B9600B9A803 /* SSelectPlanTitleCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSelectPlanTitleCell.h; sourceTree = "<group>"; };
+		D5164F7020203B9600B9A803 /* SSelectPlanTitleCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSelectPlanTitleCell.m; sourceTree = "<group>"; };
+		D5164F722020412000B9A803 /* SAddPlanService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SAddPlanService.h; sourceTree = "<group>"; };
+		D5164F732020412000B9A803 /* SAddPlanService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SAddPlanService.m; sourceTree = "<group>"; };
+		D5164F752020460E00B9A803 /* SAddPlanSectionModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SAddPlanSectionModel.h; sourceTree = "<group>"; };
+		D5164F762020460E00B9A803 /* SAddPlanSectionModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SAddPlanSectionModel.m; sourceTree = "<group>"; };
+		D5164F7D20204AAE00B9A803 /* SPwdValidateController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPwdValidateController.h; sourceTree = "<group>"; };
+		D5164F7E20204AAE00B9A803 /* SPwdValidateController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPwdValidateController.m; sourceTree = "<group>"; };
 		D519D34F1FDF683A00D4C9FD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D519D3501FDF684600D4C9FD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D521BA9F20186D16000299FC /* SUpdatePwdRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SUpdatePwdRequest.h; sourceTree = "<group>"; };
@@ -211,8 +239,6 @@
 		D52903B8201ED0E30017A3CC /* SFundTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SFundTableView.m; sourceTree = "<group>"; };
 		D52903BD201ED2C50017A3CC /* TBBtnCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBBtnCell.m; sourceTree = "<group>"; };
 		D52903BE201ED2C50017A3CC /* TBBtnCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBBtnCell.h; sourceTree = "<group>"; };
-		D52903C2201EE95F0017A3CC /* SFundService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SFundService.h; sourceTree = "<group>"; };
-		D52903C3201EE95F0017A3CC /* SFundService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SFundService.m; sourceTree = "<group>"; };
 		D52903C5201EEBEC0017A3CC /* SFundBalanceModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SFundBalanceModel.h; sourceTree = "<group>"; };
 		D52903C6201EEBEC0017A3CC /* SFundBalanceModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SFundBalanceModel.m; sourceTree = "<group>"; };
 		D52903C8201EEC320017A3CC /* SFundBalanceCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SFundBalanceCell.h; sourceTree = "<group>"; };
@@ -245,6 +271,10 @@
 		D52903F6201F38430017A3CC /* SFundAddPlansModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SFundAddPlansModel.m; sourceTree = "<group>"; };
 		D52903FE201F3F780017A3CC /* SFundSectionModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SFundSectionModel.h; sourceTree = "<group>"; };
 		D52903FF201F3F780017A3CC /* SFundSectionModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SFundSectionModel.m; sourceTree = "<group>"; };
+		D5290401201F4F970017A3CC /* SFundPlanButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SFundPlanButton.h; sourceTree = "<group>"; };
+		D5290402201F4F970017A3CC /* SFundPlanButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SFundPlanButton.m; sourceTree = "<group>"; };
+		D52D3E33202003E40098729B /* STurnIntoController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STurnIntoController.h; sourceTree = "<group>"; };
+		D52D3E34202003E40098729B /* STurnIntoController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STurnIntoController.m; sourceTree = "<group>"; };
 		D53B6B931FDF7ABB006AEB46 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D53B6B941FDF7B32006AEB46 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		D53B6B991FDF7DAD006AEB46 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -606,9 +636,44 @@
 			path = Resource;
 			sourceTree = "<group>";
 		};
+		D5164F78202049B000B9A803 /* PwdValidate */ = {
+			isa = PBXGroup;
+			children = (
+				D5164F79202049B000B9A803 /* Controller */,
+				D5164F7A202049B000B9A803 /* Model */,
+				D5164F7B202049B000B9A803 /* View */,
+			);
+			path = PwdValidate;
+			sourceTree = "<group>";
+		};
+		D5164F79202049B000B9A803 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D5164F7D20204AAE00B9A803 /* SPwdValidateController.h */,
+				D5164F7E20204AAE00B9A803 /* SPwdValidateController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D5164F7A202049B000B9A803 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D5164F7B202049B000B9A803 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		D5265E58201EC279000C4A8D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D5164F752020460E00B9A803 /* SAddPlanSectionModel.h */,
+				D5164F762020460E00B9A803 /* SAddPlanSectionModel.m */,
 				D52903D4201F0D8A0017A3CC /* SFundAddPlanModel.h */,
 				D52903D5201F0D8A0017A3CC /* SFundAddPlanModel.m */,
 				D52903F5201F38430017A3CC /* SFundAddPlansModel.h */,
@@ -636,12 +701,22 @@
 				D52903C9201EEC320017A3CC /* SFundBalanceCell.m */,
 				D52903CB201F0A490017A3CC /* SFundMyPlanCell.h */,
 				D52903CC201F0A490017A3CC /* SFundMyPlanCell.m */,
+				D5290401201F4F970017A3CC /* SFundPlanButton.h */,
+				D5290402201F4F970017A3CC /* SFundPlanButton.m */,
 				D52903B7201ED0E30017A3CC /* SFundTableView.h */,
 				D52903B8201ED0E30017A3CC /* SFundTableView.m */,
 				D52903D7201F11200017A3CC /* SFundTradeDetailCell.h */,
 				D52903D8201F11200017A3CC /* SFundTradeDetailCell.m */,
 				D52903DA201F11340017A3CC /* SFundTradeTitleCell.h */,
 				D52903DB201F11340017A3CC /* SFundTradeTitleCell.m */,
+				D5164F6C2020236900B9A803 /* SSelectPlanCell.h */,
+				D5164F6D2020236900B9A803 /* SSelectPlanCell.m */,
+				D5164F6F20203B9600B9A803 /* SSelectPlanTitleCell.h */,
+				D5164F7020203B9600B9A803 /* SSelectPlanTitleCell.m */,
+				D5164F632020127900B9A803 /* SSelectPlanView.h */,
+				D5164F642020127900B9A803 /* SSelectPlanView.m */,
+				D5164F692020233300B9A803 /* SSelectTableView.h */,
+				D5164F6A2020233300B9A803 /* SSelectTableView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -672,8 +747,8 @@
 		D52903C1201EE94C0017A3CC /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				D52903C2201EE95F0017A3CC /* SFundService.h */,
-				D52903C3201EE95F0017A3CC /* SFundService.m */,
+				D5164F722020412000B9A803 /* SAddPlanService.h */,
+				D5164F732020412000B9A803 /* SAddPlanService.m */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -1035,6 +1110,7 @@
 				D54894D61FF235AD00F2019B /* App */,
 				D5E610CD200894B6003C847A /* Fund */,
 				D54894AB1FF22BE400F2019B /* Market */,
+				D5164F78202049B000B9A803 /* PwdValidate */,
 				D5029CE91FDF6B370063D82A /* Resource */,
 				D56C8E082019D6D700DEB9F2 /* Reward */,
 				D50297CB200C50CC008375F9 /* Setting */,
@@ -1369,8 +1445,14 @@
 		D5E610CE200894B6003C847A /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				D5164F602020108100B9A803 /* SAddPlanController.h */,
+				D5164F612020108100B9A803 /* SAddPlanController.m */,
 				D5E610D120089528003C847A /* SFundController.h */,
 				D5E610D220089528003C847A /* SFundController.m */,
+				D52D3E33202003E40098729B /* STurnIntoController.h */,
+				D52D3E34202003E40098729B /* STurnIntoController.m */,
+				D5164F5E2020057100B9A803 /* STurnOutController.h */,
+				D5164F5D2020057100B9A803 /* STurnOutController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1634,6 +1716,7 @@
 				D5957AEC20073B9000F6EE60 /* SDao.mm in Sources */,
 				D54894E21FF235AD00F2019B /* AppDelegate.m in Sources */,
 				D5029800200C5770008375F9 /* TBSwitchModel.m in Sources */,
+				D5164F652020127900B9A803 /* SSelectPlanView.m in Sources */,
 				D52903B0201ECF1B0017A3CC /* TBArrowCell.m in Sources */,
 				D5957AF820073B9000F6EE60 /* STextField.m in Sources */,
 				D5957AF620073B9000F6EE60 /* STabBar.m in Sources */,
@@ -1651,6 +1734,7 @@
 				D5709CC0200EE00B007BBD4C /* SLanguageController.m in Sources */,
 				D54894C61FF22C1400F2019B /* SVotesController.m in Sources */,
 				D54894F01FF23AAB00F2019B /* SCheckVersionResponse.m in Sources */,
+				D5164F742020412000B9A803 /* SAddPlanService.m in Sources */,
 				D52903E2201F116E0017A3CC /* SFundTradeDetailModel.m in Sources */,
 				D52903CA201EEC320017A3CC /* SFundBalanceCell.m in Sources */,
 				D5709CC9200EE60B007BBD4C /* SLanguageService.m in Sources */,
@@ -1684,6 +1768,7 @@
 				D57ECF0D2018285B007151A3 /* SForgetPwdByMailResponse.m in Sources */,
 				D5957AF920073B9000F6EE60 /* SView.m in Sources */,
 				D5957AFA20073B9000F6EE60 /* SWebView.m in Sources */,
+				D5290403201F4F970017A3CC /* SFundPlanButton.m in Sources */,
 				D521BAB120187C32000299FC /* SDisableGoogleAuthResponse.m in Sources */,
 				D54894CC1FF22C3E00F2019B /* STalentsController.m in Sources */,
 				D521BAA420186D27000299FC /* SUpdatePwdResponse.m in Sources */,
@@ -1700,14 +1785,18 @@
 				D5ACA74A2015E72200A6C84F /* SSendMailRequest.m in Sources */,
 				D56C8DF72019BCD900DEB9F2 /* SWelcomeRequest.m in Sources */,
 				D52903BF201ED2C50017A3CC /* TBBtnCell.m in Sources */,
+				D5164F772020460E00B9A803 /* SAddPlanSectionModel.m in Sources */,
 				D52903DC201F11340017A3CC /* SFundTradeTitleCell.m in Sources */,
 				D52903B6201ECF1B0017A3CC /* TBTextCell.m in Sources */,
 				D5957B0E200750FA00F6EE60 /* SCommonModel.mm in Sources */,
 				D5D7D8652016E44A005CBB11 /* SNavigationBar.m in Sources */,
+				D52D3E35202003E40098729B /* STurnIntoController.m in Sources */,
 				D5029806200C57B7008375F9 /* TBBtnModel.m in Sources */,
 				D56C8E192019D82700DEB9F2 /* SRewardResponse.m in Sources */,
+				D5164F5F2020057100B9A803 /* STurnOutController.m in Sources */,
 				D5290386201ECE7B0017A3CC /* SettingTableView.m in Sources */,
 				D52903B2201ECF1B0017A3CC /* TBCheckCell.m in Sources */,
+				D5164F7F20204AAE00B9A803 /* SPwdValidateController.m in Sources */,
 				D5D7D86820170962005CBB11 /* SLoginByMailController.m in Sources */,
 				D5D7D86B201717F2005CBB11 /* SForgetPWDByMailController.m in Sources */,
 				D548950D1FF2536D00F2019B /* SNetwork.m in Sources */,
@@ -1721,9 +1810,11 @@
 				D56C8E132019D70000DEB9F2 /* SRewardController.m in Sources */,
 				D5957AF320073B9000F6EE60 /* SImageView.m in Sources */,
 				D52903E5201F1BEC0017A3CC /* SFundBalanceRequest.m in Sources */,
+				D5164F6E2020236900B9A803 /* SSelectPlanCell.m in Sources */,
 				D5ACA75A2015F28900A6C84F /* LGetTextFiled.m in Sources */,
 				D54894D51FF22CAD00F2019B /* SAccountModel.m in Sources */,
 				D52903D9201F11200017A3CC /* SFundTradeDetailCell.m in Sources */,
+				D5164F6B2020233300B9A803 /* SSelectTableView.m in Sources */,
 				D5957AF220073B9000F6EE60 /* SButton.m in Sources */,
 				D5ACA74D2015E73900A6C84F /* SSendMailResponse.m in Sources */,
 				D52903B4201ECF1B0017A3CC /* TBSwitchCell.m in Sources */,
@@ -1731,8 +1822,8 @@
 				D5709CC6200EE03A007BBD4C /* SUpdatePWDController.m in Sources */,
 				D52903B1201ECF1B0017A3CC /* TBCell.m in Sources */,
 				D5029803200C578F008375F9 /* TBArrowModel.m in Sources */,
-				D52903C4201EE95F0017A3CC /* SFundService.m in Sources */,
 				D54894E01FF235AD00F2019B /* AppContext+Account.mm in Sources */,
+				D5164F7120203B9600B9A803 /* SSelectPlanTitleCell.m in Sources */,
 				D52903D6201F0D8A0017A3CC /* SFundAddPlanModel.m in Sources */,
 				D56C8E062019C82D00DEB9F2 /* SWelcomeView.m in Sources */,
 				D50297EA200C50CC008375F9 /* SSettingService.mm in Sources */,
@@ -1751,6 +1842,7 @@
 				D54483481FED049300D2F681 /* SVersionService.m in Sources */,
 				D5ACA7502015E84200A6C84F /* SRegisterByMailRequest.m in Sources */,
 				D5957AEB20073B9000F6EE60 /* SViewController.m in Sources */,
+				D5164F622020108100B9A803 /* SAddPlanController.m in Sources */,
 				D5957AF120073B9000F6EE60 /* SService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

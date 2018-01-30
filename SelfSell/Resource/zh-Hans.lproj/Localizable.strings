@@ -1,10 +1,10 @@
 /* 
-  Localizable.strings
-  SelfSell
-
-  Created by liqiang on 2017/12/12.
-  Copyright © 2017年 Goopal. All rights reserved.
-*/
+ Localizable.strings
+ SelfSell
+ 
+ Created by liqiang on 2017/12/12.
+ Copyright © 2017年 Goopal. All rights reserved.
+ */
 
 
 common_baocun = "保存";
@@ -26,13 +26,39 @@ fund_daibi = "代币";
 fund_shuliang = "数量";
 fund_lishi = "历史";
 fund_jiaruchiyoujihua = "立即加入SSC持有计划";
+fund_shouyilv = "年化收益";
 fund_ = "xxx";
 fund_ = "xxx";
 fund_ = "xxx";
 fund_ = "xxx";
 fund_ = "xxx";
 fund_ = "xxx";
-fund_ = "xxx";
+
+
+turninto_title = "转入";
+turninto_ssczhuanrudizhi = "SSC 转入地址";
+turninto_kaobeidizhi = "拷贝地址";
+
+
+turnout_title = "转出";
+turnout_dizhi = "地址";
+turnout_shurudizhi = "输入地址";
+turnout_shuliang = "数量";
+turnout_shurushuliang = "输入数量";
+turnout_shouxufei = "手续费";
+turnout_shurushouxufei = "输入手续费";
+turnout_zhuanchu = "转出";
+
+
+addplan_title = "加入SSC持有计划";
+addplan_xuanzejihua = "选择计划";
+addplan_qingxuanze = "请选择";
+addplan_shuliang = "数量";
+addplan_qingshurujiarushuliang = "请输入加入数量";
+addplan_googlerenzhengma = "谷歌认证码";
+addplan_qingshurugooglerenzhengma = "请输入谷歌认证码";
+addplan_queding = "确定";
+addplan_xuanzesscchiyoujihua = "选择SSC持有计划";
 
 
 setting0_title = "账户";

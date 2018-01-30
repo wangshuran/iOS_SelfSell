@@ -7,8 +7,9 @@
 //
 
 #import "TBModel.h"
+#import "TBCheckModel.h"
 
-@interface SFundAddPlanModel : TBModel
+@interface SFundAddPlanModel : TBCheckModel
 
 @property (nonatomic, copy) NSString * id;
 

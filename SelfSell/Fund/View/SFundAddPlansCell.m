@@ -8,6 +8,7 @@
 
 #import "SFundAddPlansCell.h"
 #import <SDWebImage/UIButton+WebCache.h>
+#import "SFundPlanButton.h"
 
 @interface SFundAddPlansCell()
 
@@ -30,12 +31,11 @@
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     self.selectionStyle = UITableViewCellSelectionStyleNone;
+    self.contentView.backgroundColor = kColorWhite250;
     [self.vBackground addSubview:self.scrollView];
     [self.vBackground addSubview:self.btnAdd];
     [self.contentView addSubview:self.vBackground];
     CGFloat btnAddheight = 50.0f;
-    [LTest randomColorView:self];
-    
     __weak typeof(self) weakSelf = self;
     [self.vBackground mas_updateConstraints:^(MASConstraintMaker * make) {
         make.top.mas_equalTo(weakSelf.contentView).mas_offset(10.0f);
@@ -65,22 +65,30 @@
     NSArray<SFundAddPlanModel *> * plans = addPlansModel.plans;
     for (NSUInteger i = 0; i < plans.count; i++) {
         SFundAddPlanModel * plan = [plans objectAtIndex:i];
-        
-        
-        SButton * cell = [[SButton alloc] init];
-        cell.frame = CGRectMake(i * self.planWidth, 0.0f, self.planWidth, self.planWidth);
+        NSString * textPre = plan.remark;
+        NSString * textSuf = [NSString stringWithFormat:@"%@%@%@", SLocal(@"fund_shouyilv"), plan.annualRate, @"%"];
+        NSString * text = [NSString stringWithFormat:@"%@\n%@", textPre, textSuf];
+        NSMutableAttributedString * attributedText = [[NSMutableAttributedString alloc] initWithString:text];
+        [attributedText addAttributes:[NSDictionary dictionaryWithObjectsAndKeys:kColorWhite70, NSForegroundColorAttributeName, kLbFontNormal, NSFontAttributeName, nil] range:[text rangeOfString:textPre]];
+        [attributedText addAttributes:[NSDictionary dictionaryWithObjectsAndKeys:kColorWhite190, NSForegroundColorAttributeName, kLbFontSmaller, NSFontAttributeName, nil] range:[text rangeOfString:textSuf]];
+        SFundPlanButton * cell = [[SFundPlanButton alloc] init];
         cell.tag = i;
-        //cell setAttributedTitle:<#(nullable NSAttributedString *)#> forState:<#(UIControlState)#>
-        [cell sd_setImageWithURL:[NSURL URLWithString:plan.iconUrl] forState:UIControlStateNormal];
+        cell.frame = CGRectMake(i * self.planWidth, 0.0f, self.planWidth, self.planWidth);
+        cell.titleLabel.numberOfLines = 2;
+        [cell setAttributedTitle:attributedText forState:UIControlStateNormal];
+        [cell sd_setImageWithURL:[NSURL URLWithString:plan.iconUrl] forState:UIControlStateNormal placeholderImage:[UIImage imageNamed:@"fund_logo_normal"] completed:nil];
         [self.scrollView addSubview:cell];
     }
     self.scrollView.contentSize = CGSizeMake(self.planWidth * plans.count, self.planWidth);
+    
+    //liqiang
+    //[LTest randomColorView:self];
 }
 
 - (SView *)vBackground {
     if (!_vBackground) {
         _vBackground = [[SView alloc] init];
-        _vBackground.backgroundColor = kColorWhite250;
+        _vBackground.backgroundColor = kColorWhite255;
     }
     
     return _vBackground;
@@ -89,6 +97,8 @@
 - (SScrollView *)scrollView {
     if (!_scrollView) {
         _scrollView = [[SScrollView alloc] init];
+        _scrollView.showsVerticalScrollIndicator = NO;
+        _scrollView.showsHorizontalScrollIndicator = NO;
     }
     
     return _scrollView;
@@ -111,6 +121,9 @@
         _btnAdd.layer.borderWidth = 1.0f;
         [_btnAdd setTitle:SLocal(@"fund_jiaruchiyoujihua") forState:UIControlStateNormal];
         [_btnAdd setTitleColor:kColorOrange forState:UIControlStateNormal];
+        [[_btnAdd rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
+            SPostNotification(kNoticeAddPlan);
+        }];
     }
     
     return _btnAdd;
@@ -120,7 +133,7 @@
 
 - (void)initialize {
     [super initialize];
-    self.planWidth = CGRectGetWidth(UIScreen.mainScreen.bounds) / 3.0f;
+    self.planWidth = (CGRectGetWidth(UIScreen.mainScreen.bounds) - 20.0f) / 3.0f;
 }
 
 @end

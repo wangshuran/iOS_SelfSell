@@ -17,7 +17,7 @@
 
 @property (nonatomic, strong) SSettingService * settingService;
 
-@property (nonatomic, strong) TBTableView * tableView;
+@property (nonatomic, strong) SettingTableView * tableView;
 
 @end
 
@@ -44,7 +44,7 @@
     return _settingService;
 }
 
-- (TBTableView *)tableView {
+- (SettingTableView *)tableView {
     if (!_tableView) {
         _tableView = [[SettingTableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
         _tableView.isEnableHeader = NO;

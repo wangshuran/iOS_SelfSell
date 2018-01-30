@@ -10,18 +10,18 @@
 #import "SFundController.h"
 #import "SNavigationBar.h"
 #import "SFundTableView.h"
-#import "SFundService.h"
 #import "SFundBalanceRequest.h"
 #import "SFundAddPlanRequest.h"
 #import "SFundSectionModel.h"
+#import "STurnOutController.h"
+#import "STurnIntoController.h"
+#import "SAddPlanController.h"
 
 @interface SFundController ()
 
 @property (nonatomic, strong) SNavigationBar * navigationBar;
 
 @property (nonatomic, strong) SFundTableView * tableView;
-
-@property (nonatomic, strong) SFundService * fundService;
 
 @property (nonatomic, strong) SFundSectionModel * data;
 
@@ -39,38 +39,7 @@
     [super viewWillAppear:animated];
     if (![[AppContext sharedAppContext].accountModel isLoginUser]) {
         SPostNotification(kNoticeToLogin);
-    }
-    
-    [self.fundService execute:[LCmdTransfer cmd:LCmdGetLastPage value:nil]];
-    
-    
-    {
-        __weak typeof(self) weakSelf = self;
-        SFundBalanceRequest * request = [[SFundBalanceRequest alloc] init];
-        [SNetwork request:request block:^(LRequest * request, LResponse * response) {
-            if (!response.status) {
-                return;
-            }
-            SFundBalanceResponse * model = (SFundBalanceResponse *)response;
-            weakSelf.data.balanceModel = model.balanceModel;
-            weakSelf.data.myPlanModels = model.balanceModel.fundDetail;
-            [weakSelf.data reloadData];
-            [weakSelf.tableView reloadData];
-        }];
-    }{
-        __weak typeof(self) weakSelf = self;
-        SFundAddPlanRequest * request = [[SFundAddPlanRequest alloc] init];
-        [SNetwork request:request block:^(LRequest * request, LResponse * response) {
-            if (!response.status) {
-                return;
-            }
-            SFundAddPlanResponse * model = (SFundAddPlanResponse *)response;
-            SFundAddPlansModel * plans = [[SFundAddPlansModel alloc] init];
-            plans.plans = model.plans;
-            weakSelf.data.addPlansModel = plans;
-            [weakSelf.data reloadData];
-            [weakSelf.tableView reloadData];
-        }];
+        return;
     }
 }
 
@@ -95,32 +64,15 @@
         __weak typeof(self) weakSelf = self;
         _tableView = [[SFundTableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
         _tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
-            [weakSelf.fundService execute:[LCmdTransfer cmd:LCmdGetLastPage value:nil]];
+            [weakSelf updateBalance];
+            [weakSelf updateAddPlan];
         }];
         _tableView.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingBlock:^{
-            [weakSelf.fundService execute:[LCmdTransfer cmd:LCmdGetNextPage value:nil]];
-        }];
-    }
-    
-    return _tableView;
-}
-
-- (SFundService *)fundService {
-    if (!_fundService) {
-        __weak typeof(self) weakSelf = self;
-        _fundService = [[SFundService alloc] init];
-        [_fundService subscribeNext:LCmdGetLastPage nextBlock:^(LCmdTransfer * transfer) {
-            //NSArray<TBSectionModel *> * model = transfer.value;
-            //weakSelf.tableView.data = model;
-            [weakSelf.tableView reloadData];
-            [weakSelf.tableView.mj_header endRefreshing];
-        }];
-        [_fundService subscribeNext:LCmdGetNextPage nextBlock:^(LCmdTransfer * transfer) {
             [weakSelf.tableView.mj_footer endRefreshing];
         }];
     }
     
-    return _fundService;
+    return _tableView;
 }
 
 - (SFundSectionModel *)data {
@@ -153,6 +105,25 @@
     //[self updateUI];
 }
 
+- (void)noticeCoinTurnOut:(NSNotification *)notification {
+    [self push:[[STurnOutController alloc] init]];
+}
+
+- (void)noticeCoinTurnInto:(NSNotification *)notification {
+    [self push:[[STurnIntoController alloc] init]];
+}
+
+- (void)noticeRefreshFund:(NSNotification *)notification {
+    [self.tableView.mj_header beginRefreshing];
+}
+
+- (void)noticeAddPlan:(NSNotification *)notification {
+    //[self push:[[SAddPlanController alloc] init]];
+    //[UIViewController present:[[SNavigationController alloc] initWithRootViewController:[[NSClassFromString(@"SPwdValidateController") alloc] init]]];
+    //[UIViewController present:[[NSClassFromString(@"SPwdValidateController") alloc] init]];
+    [self push:[[NSClassFromString(@"SPwdValidateController") alloc] init]];
+}
+
 #pragma mark - LInitProtocol
 
 - (void)initialize {
@@ -160,6 +131,58 @@
     self.hiddenNavbar = YES;
     self.hiddenTabar = NO;
     SAddObsver(noticeFinishLogin:, kNoticeFinishLogin);
+    SAddObsver(noticeCoinTurnInto:, kNoticeCoinTurnInto);
+    SAddObsver(noticeCoinTurnOut:, kNoticeCoinTurnOut);
+    SAddObsver(noticeRefreshFund:, kNoticeRefreshFund);
+    SAddObsver(noticeAddPlan:, kNoticeAddPlan);
+    
+    
+    SPostNotification(kNoticeRefreshFund);
+}
+
+#pragma mark - Private
+
+- (void)updateBalance {
+    __weak typeof(self) weakSelf = self;
+    SFundBalanceRequest * request = [[SFundBalanceRequest alloc] init];
+    [SNetwork request:request block:^(LRequest * request, LResponse * response) {
+        [weakSelf.tableView.mj_header endRefreshing];
+        if (!response.status) {
+            return;
+        }
+        dispatch_async(dispatch_get_global_queue(0, 0), ^{
+            SFundBalanceResponse * model = (SFundBalanceResponse *)response;
+            weakSelf.data.balanceModel = model.balanceModel;
+            weakSelf.data.myPlanModels = model.balanceModel.fundDetail;
+            [weakSelf.data reloadData];
+            weakSelf.tableView.data = [NSArray arrayWithObject:weakSelf.data];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [weakSelf.tableView reloadData];
+            });
+        });
+    }];
+}
+
+- (void)updateAddPlan {
+    __weak typeof(self) weakSelf = self;
+    SFundAddPlanRequest * request = [[SFundAddPlanRequest alloc] init];
+    [SNetwork request:request block:^(LRequest * request, LResponse * response) {
+        [weakSelf.tableView.mj_header endRefreshing];
+        if (!response.status) {
+            return;
+        }
+        dispatch_async(dispatch_get_global_queue(0, 0), ^{
+            SFundAddPlanResponse * model = (SFundAddPlanResponse *)response;
+            SFundAddPlansModel * plans = [[SFundAddPlansModel alloc] init];
+            plans.plans = model.plans;
+            weakSelf.data.addPlansModel = plans;
+            [weakSelf.data reloadData];
+            weakSelf.tableView.data = [NSArray arrayWithObject:weakSelf.data];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [weakSelf.tableView reloadData];
+            });
+        });
+    }];
 }
 
 @end

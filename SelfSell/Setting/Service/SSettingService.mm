@@ -56,6 +56,15 @@ LCmd * const LCmdGetSetting1 = @"LCmdGetSetting1";
         model.value = [[AppContext sharedAppContext].accountModel.googleAuthStatus isEqualToString:@"ON"] ? SLocal(@"setting0_gugeyikaiqi") : SLocal(@"setting0_gugeyiguanbi");
         model.destVCClass = SGoogleValidate01Controller.class;
         [data addObject:model];
+        
+        
+    }{
+        TBArrowModel * model = [[TBArrowModel alloc] init];
+        model.uid = kgugeyanzheng;
+        model.title = SLocal(@"setting0_gugeyanzheng");
+        model.value = [[AppContext sharedAppContext].accountModel.googleAuthStatus isEqualToString:@"ON"] ? SLocal(@"setting0_gugeyikaiqi") : SLocal(@"setting0_gugeyiguanbi");
+        model.destVCClass = SGoogleValidate01Controller.class;
+        [data addObject:model];
     }{
         TBArrowModel * model = [[TBArrowModel alloc] init];
         model.uid = kshezhi;

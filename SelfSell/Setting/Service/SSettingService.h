@@ -20,6 +20,7 @@ FOUNDATION_EXPORT LCmd * const LCmdGetSetting1;
 
 
 #define kwodetuijianma @"kwodetuijianma"
+#define kzijinmima @"kzijinmima"
 #define kgugeyanzheng @"kgugeyanzheng"
 #define kshezhi @"kshezhi"
 #define ktuichu @"ktuichu"
